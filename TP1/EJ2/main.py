@@ -3,6 +3,43 @@ import time
 from scipy import signal
 import matplotlib.pyplot as plt
 
+class bodePlots():
+    def __init__(self):
+        self.bodePlotsList = []
+        plt.figure("bodeGain")
+        plt.figure("bodePhase")
+
+    def addBodePlot (self,bodePlot):
+        self.bodePlotsList.append(bodePlot)
+
+    def removeBodePlot(self,bodePlot):
+        self.bodePlotsList.remove(bodePlot)
+
+    def updatePlot (self):
+        plt.figure("bodeGain")
+        plt.semilogx(self.bodePlotsList[-1].w, self.bodePlotsList[-1].mag)
+        plt.figure("bodePhase")
+        plt.semilogx(self.bodePlotsList[-1].w, self.bodePlotsList[-1].phase)
+        plt.draw()
+        plt.show()
+
+
+class bodeFunction:
+    # https://docs.scipy.org/doc/scipy/reference/generated/scipy.signal.bode.html
+    def __init__(self,transferNumerator, transferDenominator):
+        self.transferFunction = signal.TransferFunction(transferNumerator, transferDenominator)
+        #signal.bode
+        # Returns
+        # w 1D ndarray
+        # Frequency array [rad/s]
+        #
+        # mag 1D ndarray
+        # Magnitude array [dB]
+        #
+        # phase 1D ndarray
+        # Phase array [deg]
+
+        self.w, self.mag, self.phase = signal.bode(self.transferFunction)
 
 #####################################################################################################
 # transferNumerator is a list which represents the values of each polynomial coefficient of NUM     #
@@ -40,32 +77,30 @@ def bodePlotter(transferNumerator, transferDenominator):
 
 
 def main():
+    #plt.ion()
     END = False
     myBodePlots = bodePlots()
     transferNumerator = [1]
     transferDenominator = [1, 1]
+
+    transferNumerator2 = [2]
+    transferDenominator2 = [3, 1]
     myFirstBode = bodeFunction(transferNumerator, transferDenominator)
-    while (END == False):
-        plt.pause(0.00001)
+    mySecondBode = bodeFunction(transferNumerator2, transferDenominator2)
 
+    myBodePlots.addBodePlot(myFirstBode)
+    myBodePlots.updatePlot()
+    #plt.show()
 
+    #while (END == False):
+    #   plt.pause(0.00001)
+
+    myBodePlots.addBodePlot(mySecondBode)
+    myBodePlots.updatePlot()
 if __name__ == '__main__':
     main()
 
-class bodePlots():
-    def __init__(self):
-        self.bodePlotsList = []
-        plt.figure("GAIN")
-        plt.figure("PHASE")
 
-    def addBodePlot (self,bodePlot):
-        self.bodePlotsList.append(bodePlot)
-
-    def removeBodePlot(self,bodePlot):
-        self.bodePlotsList.remove(bodePlot)
-
-    def updatePlot (self):
-        plt.draw()
 
 
 
@@ -86,21 +121,4 @@ class bodePlots():
 #
 # The best solution turned out to be to run the draw() at the figure.canvas level instead of the axes or plot level.
 
-
-class bodeFunction(transferNumerator, transferDenominator):
-    # https://docs.scipy.org/doc/scipy/reference/generated/scipy.signal.bode.html
-    def __init__(self):
-        self.transferFunction = signal.TransferFunction(transferNumerator, transferDenominator)
-        #signal.bode
-        # Returns
-        # w 1D ndarray
-        # Frequency array [rad/s]
-        #
-        # mag 1D ndarray
-        # Magnitude array [dB]
-        #
-        # phase 1D ndarray
-        # Phase array [deg]
-
-        self.w, self.mag, self.phase = signal.bode(self.transferFunction)
 
