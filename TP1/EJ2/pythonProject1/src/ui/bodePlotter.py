@@ -9,7 +9,6 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-from PyQt5.QtWidgets import QMainWindow
 
 
 class Ui_bodePlotterWindow(object):
@@ -51,6 +50,24 @@ class Ui_bodePlotterWindow(object):
         self.groupTextLabel = QtWidgets.QLabel(self.centralwidget)
         self.groupTextLabel.setGeometry(QtCore.QRect(350, 20, 151, 20))
         self.groupTextLabel.setObjectName("groupTextLabel")
+        self.plotTableGain = QtWidgets.QStackedWidget(self.centralwidget)
+        self.plotTableGain.setGeometry(QtCore.QRect(270, 50, 271, 191))
+        self.plotTableGain.setObjectName("plotTableGain")
+        self.page = QtWidgets.QWidget()
+        self.page.setObjectName("page")
+        self.plotTableGain.addWidget(self.page)
+        self.page_2 = QtWidgets.QWidget()
+        self.page_2.setObjectName("page_2")
+        self.plotTableGain.addWidget(self.page_2)
+        self.plotTablePhase = QtWidgets.QStackedWidget(self.centralwidget)
+        self.plotTablePhase.setGeometry(QtCore.QRect(260, 240, 271, 191))
+        self.plotTablePhase.setObjectName("plotTablePhase")
+        self.page_3 = QtWidgets.QWidget()
+        self.page_3.setObjectName("page_3")
+        self.plotTablePhase.addWidget(self.page_3)
+        self.page_4 = QtWidgets.QWidget()
+        self.page_4.setObjectName("page_4")
+        self.plotTablePhase.addWidget(self.page_4)
         bodePlotterWindow.setCentralWidget(self.centralwidget)
         self.statusbar = QtWidgets.QStatusBar(bodePlotterWindow)
         self.statusbar.setObjectName("statusbar")

@@ -113,6 +113,30 @@
      <string>Plot Tool - Grupo 6</string>
     </property>
    </widget>
+   <widget class="QStackedWidget" name="plotTableGain">
+    <property name="geometry">
+     <rect>
+      <x>270</x>
+      <y>50</y>
+      <width>271</width>
+      <height>191</height>
+     </rect>
+    </property>
+    <widget class="QWidget" name="page"/>
+    <widget class="QWidget" name="page_2"/>
+   </widget>
+   <widget class="QStackedWidget" name="plotTablePhase">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>240</y>
+      <width>271</width>
+      <height>191</height>
+     </rect>
+    </property>
+    <widget class="QWidget" name="page_3"/>
+    <widget class="QWidget" name="page_4"/>
+   </widget>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
