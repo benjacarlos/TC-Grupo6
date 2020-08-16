@@ -3,8 +3,6 @@ from PyQt5.QtWidgets import QWidget, QMainWindow
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtWidgets import*
 
-
-
 from src.ui.transferFunctionPopUp import Ui_transferFunctionInput
 from src.ui.LTSpicePopUp import Ui_LTSpiceInput
 from src.ui.csvPopUp import Ui_CSVInput
@@ -18,7 +16,10 @@ class myPlot(QMainWindow, Ui_bodePlotterWindow):
     def __init__(self):
         super(myPlot, self).__init__()
         self.setupUi(self)
-        self.transferFunctionAction.clicked.connect(self.on_plot_update)
+        self.bodes = bode.bodes()
+        self.transferFunctionAction.clicked.connect(self.showTransferFunctionInput)
+        self.removePlotsAction.clicked.connect(self.removePlots)
+        self.saveTransferFunction.clicked.connect(self.getTransferFunctionInput)
         self.phaseUpdateLabel.clicked.connect(self.updatePhaseLabel)
         self.gainUpdateLabel.clicked.connect(self.updateGainLabel)
         self.spiceAction.clicked.connect(self.openLTSpiceWindow)
@@ -46,18 +47,31 @@ class myPlot(QMainWindow, Ui_bodePlotterWindow):
     @pyqtSlot()
     def on_plot_update(self):
 
-        myBode = bode.bodeFunction([1], [1, 1])
-
         self.plotTableGain.canvas.axes.clear()
-        self.plotTableGain.canvas.axes.semilogx(myBode.w, myBode.mag)
-        self.plotTableGain.canvas.axes.grid(True,which="both")
-        self.plotTableGain.canvas.axes.title.set_text('Diagrama de BODE - MAGNITUD')
-        self.plotTableGain.canvas.draw()
         self.plotTablePhase.canvas.axes.clear()
-        self.plotTablePhase.canvas.axes.semilogx(myBode.w, myBode.phase)
-        self.plotTablePhase.canvas.axes.grid(True,which="both")
+        self.plotTableGain.canvas.axes.title.set_text('Diagrama de BODE - MAGNITUD')
         self.plotTablePhase.canvas.axes.title.set_text('Diagrama de BODE - FASE')
+        self.plotTableGain.canvas.draw()
         self.plotTablePhase.canvas.draw()
+
+        for myBode in self.bodes.bodesList:
+            self.plotTableGain.canvas.axes.semilogx(myBode.w, myBode.mag)
+            self.plotTableGain.canvas.axes.grid(True,which="both")
+            self.plotTableGain.canvas.draw()
+            self.plotTablePhase.canvas.axes.semilogx(myBode.w, myBode.phase)
+            self.plotTablePhase.canvas.axes.grid(True,which="both")
+            self.plotTablePhase.canvas.draw()
+
+    def showTransferFunctionInput(self):
+        self.transferFunction.setCurrentWidget(self.transferFunctionInput)
+
+    def getTransferFunctionInput(self):
+        numerator = [int(x) for x in self.transferFunctionNumInput.text().split(',')]
+        denominator = [int(x) for x in self.transferFunctionDenInput.text().split(',')]
+        self.myBode = bode.bodeFunction(numerator, denominator)
+        self.bodes.addBodePlot(self.myBode)
+        self.on_plot_update()
+        self.transferFunction.setCurrentWidget(self.transferFunctionOption)
 
 
     def updateGainLabel(self):
@@ -70,6 +84,9 @@ class myPlot(QMainWindow, Ui_bodePlotterWindow):
         self.plotTablePhase.canvas.axes.axes.set_ylabel(self.yLabelInput.text())
         self.plotTablePhase.canvas.draw()
 
+    def removePlots(self):
+        self.bodes.bodesList.clear()
+        self.on_plot_update()
 
 
 class mytransferFunctionPopUp(QWidget, Ui_transferFunctionInput):

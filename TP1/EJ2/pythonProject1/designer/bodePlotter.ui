@@ -14,46 +14,6 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QWidget" name="verticalLayoutWidget">
-    <property name="geometry">
-     <rect>
-      <x>40</x>
-      <y>130</y>
-      <width>141</width>
-      <height>581</height>
-     </rect>
-    </property>
-    <layout class="QVBoxLayout" name="verticalLayout">
-     <item>
-      <widget class="QPushButton" name="transferFunctionAction">
-       <property name="text">
-        <string>H(S)</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QPushButton" name="spiceAction">
-       <property name="text">
-        <string>SPICE</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QPushButton" name="csvAction">
-       <property name="text">
-        <string>Medición</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QPushButton" name="removePlotsAction">
-       <property name="text">
-        <string>Borrar Gráficos</string>
-       </property>
-      </widget>
-     </item>
-    </layout>
-   </widget>
    <widget class="QLabel" name="xLabelText">
     <property name="geometry">
      <rect>
@@ -158,6 +118,179 @@
     <property name="text">
      <string>Magnitud</string>
     </property>
+   </widget>
+   <widget class="QPushButton" name="removePlotsAction">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>660</y>
+      <width>139</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Borrar Gráficos</string>
+    </property>
+   </widget>
+   <widget class="QStackedWidget" name="transferFunction">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>150</y>
+      <width>181</width>
+      <height>141</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="transferFunctionOption">
+     <widget class="QPushButton" name="transferFunctionAction">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>60</y>
+        <width>139</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>H(S)</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="transferFunctionInput">
+     <widget class="QLabel" name="transferFunctionMsg">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>181</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Ingrese la Funcion de Transferencia</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="transferFunctionNumLabel">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>40</y>
+        <width>61</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Numerador</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="transferFunctionDenLabel">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>80</y>
+        <width>71</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Denominador</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="transferFunctionNumInput">
+      <property name="geometry">
+       <rect>
+        <x>82</x>
+        <y>40</y>
+        <width>91</width>
+        <height>20</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="transferFunctionDenInput">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>80</y>
+        <width>91</width>
+        <height>20</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="saveTransferFunction">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>110</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Ingresar</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QStackedWidget" name="spiceFunction">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>300</y>
+      <width>181</width>
+      <height>151</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="spiceOption">
+     <widget class="QPushButton" name="spiceAction">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>60</y>
+        <width>139</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>SPICE</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="spiceInput"/>
+   </widget>
+   <widget class="QStackedWidget" name="csvFunction">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>460</y>
+      <width>181</width>
+      <height>161</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="csvOption">
+     <widget class="QPushButton" name="csvAction">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>60</y>
+        <width>139</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Medición</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="csvInput"/>
    </widget>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
