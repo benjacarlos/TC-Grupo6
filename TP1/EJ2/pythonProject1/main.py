@@ -4,14 +4,13 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtWidgets import QFileDialog
 from PyQt5.QtWidgets import*
 import pandas as pd
+import os
 
-
-# from src.ui.transferFunctionPopUp import Ui_transferFunctionInput
-# from src.ui.LTSpicePopUp import Ui_LTSpiceInput
-# from src.ui.csvPopUp import Ui_CSVInput
 
 from PyQt5.QtWidgets import*
 from PyQt5.Qt import pyqtSlot
+from matplotlib.pyplot import gca
+
 import src.package.bodeFunctions as bode
 from src.ui.bodePlotter import Ui_bodePlotterWindow
 
@@ -32,6 +31,8 @@ class myPlot(QMainWindow, Ui_bodePlotterWindow):
         self.saveCsvFunction.clicked.connect(self.getCsvInput)
         self.returnCsvFunction.clicked.connect(self.returnToCsvFunction)
         self.csvAction.clicked.connect(self.showCsvFunctionInput)
+        #Contador de labels para graficos sin nombre
+        self.label_num=0
 
 
     @pyqtSlot()
@@ -41,16 +42,29 @@ class myPlot(QMainWindow, Ui_bodePlotterWindow):
         self.plotTablePhase.canvas.axes.clear()
         self.plotTableGain.canvas.axes.title.set_text('Diagrama de BODE - MAGNITUD')
         self.plotTablePhase.canvas.axes.title.set_text('Diagrama de BODE - FASE')
+        ax = gca()
+        ax.legend_ = None
         self.plotTableGain.canvas.draw()
         self.plotTablePhase.canvas.draw()
 
         for myBode in self.bodes.bodesList:
-            self.plotTableGain.canvas.axes.semilogx(myBode.w, myBode.mag)
+    #        self.plotTableGain.canvas.axes.semilogx(myBode.w, myBode.mag, label=myBode.label, loc='upper right', shadow=True, fontsize='small')
+            self.plotTableGain.canvas.axes.semilogx(myBode.w, myBode.mag, label=myBode.label)
             self.plotTableGain.canvas.axes.grid(True,which="both")
-            self.plotTableGain.canvas.draw()
-            self.plotTablePhase.canvas.axes.semilogx(myBode.w, myBode.phase)
+            self.plotTablePhase.canvas.axes.semilogx(myBode.w, myBode.phase, label=myBode.label)
+    #        self.plotTablePhase.canvas.axes.semilogx(myBode.w, myBode.phase, label=myBode.label, loc='upper right', shadow=True, fontsize='small')
             self.plotTablePhase.canvas.axes.grid(True,which="both")
+
+
+            self.plotTableGain.canvas.axes.minorticks_on()  # Necesitamos esto para usar los ticks menores!
+            self.plotTablePhase.canvas.axes.minorticks_on()  # Necesitamos esto para usar los ticks menores!
+            self.plotTablePhase.canvas.figure.tight_layout()
+            self.plotTableGain.canvas.figure.tight_layout()
+            self.plotTablePhase.canvas.figure.legend()
+            self.plotTableGain.canvas.figure.legend()
+
             self.plotTablePhase.canvas.draw()
+            self.plotTableGain.canvas.draw()
 
     def showTransferFunctionInput(self):
         self.transferFunction.setCurrentWidget(self.transferFunctionInput)
@@ -64,12 +78,21 @@ class myPlot(QMainWindow, Ui_bodePlotterWindow):
     def getTransferFunctionInput(self):
         numerator = [int(x) for x in self.transferFunctionNumInput.text().split(',')]
         denominator = [int(x) for x in self.transferFunctionDenInput.text().split(',')]
+
         self.myBode = bode.bodeFunction("key_values", None, numerator, denominator)
+
+        if self.transferFunctionNameInput.text() == "":
+            self.myBode.label= "H($) N°" +  str(self.label_num)
+            self.label_num+=1
+        else:
+            self.myBode.label= self.transferFunctionNameInput.text()
+
         self.bodes.addBodePlot(self.myBode)
         self.on_plot_update()
         self.transferFunction.setCurrentWidget(self.transferFunctionOption)
         self.transferFunctionNumInput.clear()
         self.transferFunctionDenInput.clear()
+        self.transferFunctionNameInput.clear()
 
     def getSpiceInput(self):
         ltspice_file = QFileDialog.getOpenFileName(self, 'Open file', filter="*.txt")[0]
@@ -78,6 +101,12 @@ class myPlot(QMainWindow, Ui_bodePlotterWindow):
             raw_file = open(ltspice_file, 'r')
             lines = raw_file.readlines()
             self.myBode = bode.bodeFunction("ltspice", self.bodes.plot_from_ltspice(lines), None, None)
+
+            if self.LTSpiceNameInput.text() == "":
+                self.myBode.label = os.path.splitext(os.path.basename(raw_file.name))[0]
+            else:
+                self.myBode.label = self.LTSpiceNameInput.text()
+
             self.bodes.addBodePlot(self.myBode)
             self.on_plot_update()
 
@@ -85,7 +114,7 @@ class myPlot(QMainWindow, Ui_bodePlotterWindow):
             msgWrongExtention = QMessageBox()
             msgWrongExtention.setIcon(QMessageBox.Warning)
             msgWrongExtention.setWindowTitle('Error')
-            msgWrongExtention.setText("Extensión Incorrecta")
+            msgWrongExtention.setText("No se seleccionó ningún archivo")
             msgWrongExtention.exec()
 
     def getCsvInput(self):
@@ -95,6 +124,12 @@ class myPlot(QMainWindow, Ui_bodePlotterWindow):
             raw_file = open(csv_file, 'r')
             data = pd.read_csv(raw_file, sep = ';')
             self.myBode = bode.bodeFunction("mesaured_values", data, None, None)
+
+            if self.CSVNameInput.text() == "":
+                self.myBode.label = os.path.splitext(os.path.basename(raw_file.name))[0]
+            else:
+                self.myBode.label = self.CSVNameInput.text()
+
             self.bodes.addBodePlot(self.myBode)
             self.on_plot_update()
 
@@ -102,7 +137,7 @@ class myPlot(QMainWindow, Ui_bodePlotterWindow):
             msgWrongExtention = QMessageBox()
             msgWrongExtention.setIcon(QMessageBox.Warning)
             msgWrongExtention.setWindowTitle('Error')
-            msgWrongExtention.setText("Extensión Incorrecta")
+            msgWrongExtention.setText("No se seleccionó ningún archivo")
             msgWrongExtention.exec()
 
 
