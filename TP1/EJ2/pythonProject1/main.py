@@ -107,6 +107,8 @@ class myPlot(QMainWindow, Ui_bodePlotterWindow):
 
             self.bodes.addBodePlot(self.myBode)
             self.on_plot_update()
+            self.spiceFunction.setCurrentWidget(self.spiceOption)
+            self.LTSpiceNameInput.clear()
 
         else:
             msgWrongExtention = QMessageBox()
@@ -130,6 +132,8 @@ class myPlot(QMainWindow, Ui_bodePlotterWindow):
 
             self.bodes.addBodePlot(self.myBode)
             self.on_plot_update()
+            self.csvFunction.setCurrentWidget(self.csvOption)
+            self.CSVNameInput.clear()
 
         else:
             msgWrongExtention = QMessageBox()

@@ -181,7 +181,7 @@ class Ui_bodePlotterWindow(object):
 
         self.retranslateUi(bodePlotterWindow)
         self.transferFunction.setCurrentIndex(0)
-        self.spiceFunction.setCurrentIndex(1)
+        self.spiceFunction.setCurrentIndex(0)
         self.csvFunction.setCurrentIndex(1)
         QtCore.QMetaObject.connectSlotsByName(bodePlotterWindow)
 
