@@ -42,8 +42,6 @@ class myPlot(QMainWindow, Ui_bodePlotterWindow):
         self.plotTablePhase.canvas.axes.clear()
         self.plotTableGain.canvas.axes.title.set_text('Diagrama de BODE - MAGNITUD')
         self.plotTablePhase.canvas.axes.title.set_text('Diagrama de BODE - FASE')
-        ax = gca()
-        ax.legend_ = None
         self.plotTableGain.canvas.draw()
         self.plotTablePhase.canvas.draw()
 
