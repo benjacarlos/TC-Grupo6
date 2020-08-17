@@ -1,27 +1,15 @@
-import time
 
 from scipy import signal
-import matplotlib.pyplot as plt
 
 class bodes():
     def __init__(self):
         self.bodesList = []
-        plt.figure("bodeGain")
-        plt.figure("bodePhase")
 
     def addBodePlot (self,bodePlot):
         self.bodesList.append(bodePlot)
 
     def removeBodePlot(self,bodePlot):
         self.bodesList.remove(bodePlot)
-
-    def updatePlot (self):
-        plt.figure("bodeGain")
-        plt.semilogx(self.bodesList[-1].w, self.bodesList[-1].mag)
-        plt.figure("bodePhase")
-        plt.semilogx(self.bodesList[-1].w, self.bodesList[-1].phase)
-        plt.draw()
-        plt.show()
 
 
 class bodeFunction:
