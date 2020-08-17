@@ -1,7 +1,10 @@
 from PyQt5.QtWidgets import QApplication
 from PyQt5.QtWidgets import QWidget, QMainWindow
 from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt5.QtWidgets import QFileDialog
 from PyQt5.QtWidgets import*
+import pandas as pd
+
 
 from src.ui.transferFunctionPopUp import Ui_transferFunctionInput
 from src.ui.LTSpicePopUp import Ui_LTSpiceInput
@@ -31,17 +34,6 @@ class myPlot(QMainWindow, Ui_bodePlotterWindow):
         self.ui.setupUi(self.window)
         self.window.show()
 
-    def openLTSpiceWindow(self):
-        self.window = QtWidgets.QWidget()
-        self.ui = myLTSpicePopUp()
-        self.ui.setupUi(self.window)
-        self.window.show()
-
-    def openCSVWindow(self):
-        self.window = QtWidgets.QWidget()
-        self.ui = Ui_CSVInput()
-        self.ui.setupUi(self.window)
-        self.window.show()
 
 
     @pyqtSlot()
@@ -68,18 +60,39 @@ class myPlot(QMainWindow, Ui_bodePlotterWindow):
     def getTransferFunctionInput(self):
         numerator = [int(x) for x in self.transferFunctionNumInput.text().split(',')]
         denominator = [int(x) for x in self.transferFunctionDenInput.text().split(',')]
-        self.myBode = bode.bodeFunction(numerator, denominator)
+        self.myBode = bode.bodeFunction("key_values", None, numerator, denominator)
         self.bodes.addBodePlot(self.myBode)
         self.on_plot_update()
         self.transferFunction.setCurrentWidget(self.transferFunctionOption)
 
+    def openLTSpiceWindow(self):
+        ltspice_file, _ = QFileDialog.getOpenFileName(filter="*.txt")
+        raw_file = open(ltspice_file, 'r')
+        lines = raw_file.readlines()
+        self.myBode = bode.bodeFunction("ltspice", self.bodes.plot_from_ltspice(lines), None, None)
+        self.bodes.addBodePlot(self.myBode)
+        self.on_plot_update()
+
+
+    def openCSVWindow(self):
+        csv_file, _ = QFileDialog.getOpenFileName(filter="*.csv")
+        raw_file = open(csv_file, 'r')
+        data = pd.read_csv(raw_file, sep = ';')
+        self.myBode = bode.bodeFunction("mesaured_values", data, None, None)
+        self.bodes.addBodePlot(self.myBode)
+        self.on_plot_update()
+
+        # self.window = QtWidgets.QWidget()
+        # self.ui = Ui_CSVInput()
+        # self.ui.setupUi(self.window)
+        # self.window.show()
 
     def updateGainLabel(self):
         self.plotTableGain.canvas.axes.axes.set_xlabel(self.xLabelInput.text())
         self.plotTableGain.canvas.axes.axes.set_ylabel(self.yLabelInput.text())
         self.plotTableGain.canvas.draw()
 
-    def updatePhaseLabel(self):
+    def updatePhaseLabel(self):  # Cambia el nombre del eje, corregir
         self.plotTablePhase.canvas.axes.axes.set_xlabel(self.xLabelInput.text())
         self.plotTablePhase.canvas.axes.axes.set_ylabel(self.yLabelInput.text())
         self.plotTablePhase.canvas.draw()
@@ -104,6 +117,7 @@ class myLTSpicePopUp (QWidget, Ui_LTSpiceInput):
     def __init__(self):
         super(myLTSpicePopUp, self).__init__()
         self.setupUi(self)
+
 
 
 class myCSVPopUp (QWidget, Ui_CSVInput):
