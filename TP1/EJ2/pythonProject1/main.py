@@ -6,9 +6,9 @@ from PyQt5.QtWidgets import*
 import pandas as pd
 
 
-from src.ui.transferFunctionPopUp import Ui_transferFunctionInput
-from src.ui.LTSpicePopUp import Ui_LTSpiceInput
-from src.ui.csvPopUp import Ui_CSVInput
+# from src.ui.transferFunctionPopUp import Ui_transferFunctionInput
+# from src.ui.LTSpicePopUp import Ui_LTSpiceInput
+# from src.ui.csvPopUp import Ui_CSVInput
 
 from PyQt5.QtWidgets import*
 from PyQt5.Qt import pyqtSlot
@@ -72,11 +72,14 @@ class myPlot(QMainWindow, Ui_bodePlotterWindow):
         self.transferFunctionDenInput.clear()
 
     def getSpiceInput(self):
-        spiceFileName = QFileDialog.getOpenFileName(self, 'Open file', '/home')[0]
-        if spiceFileName.endswith('.txt'):
-            spiceFile = open(spiceFileName, 'r')
+        ltspice_file = QFileDialog.getOpenFileName(self, 'Open file', filter="*.txt")[0]
+        if ltspice_file.endswith('.txt'):
 
-        ####ACA IRIA LA MAGIA DE LT SPICE #############
+            raw_file = open(ltspice_file, 'r')
+            lines = raw_file.readlines()
+            self.myBode = bode.bodeFunction("ltspice", self.bodes.plot_from_ltspice(lines), None, None)
+            self.bodes.addBodePlot(self.myBode)
+            self.on_plot_update()
 
         else:
             msgWrongExtention = QMessageBox()
@@ -86,11 +89,14 @@ class myPlot(QMainWindow, Ui_bodePlotterWindow):
             msgWrongExtention.exec()
 
     def getCsvInput(self):
-        csvFileName = QFileDialog.getOpenFileName(self, 'Open file', '/home')[0]
-        if csvFileName.endswith('.csv'):
-            csvFile = open(csvFileName,'r')
+        csv_file = QFileDialog.getOpenFileName(self, 'Open file', filter="*.csv")[0]
+        if csv_file.endswith('.csv'):
 
-        ####ACA IRIA LA MAGIA DE CSV  #############
+            raw_file = open(csv_file, 'r')
+            data = pd.read_csv(raw_file, sep = ';')
+            self.myBode = bode.bodeFunction("mesaured_values", data, None, None)
+            self.bodes.addBodePlot(self.myBode)
+            self.on_plot_update()
 
         else:
             msgWrongExtention = QMessageBox()
@@ -100,27 +106,27 @@ class myPlot(QMainWindow, Ui_bodePlotterWindow):
             msgWrongExtention.exec()
 
 
-    def openLTSpiceWindow(self):
-        ltspice_file, _ = QFileDialog.getOpenFileName(filter="*.txt")
-        raw_file = open(ltspice_file, 'r')
-        lines = raw_file.readlines()
-        self.myBode = bode.bodeFunction("ltspice", self.bodes.plot_from_ltspice(lines), None, None)
-        self.bodes.addBodePlot(self.myBode)
-        self.on_plot_update()
+    # def openLTSpiceWindow(self):
+    #     ltspice_file, _ = QFileDialog.getOpenFileName(filter="*.txt")
+    #     raw_file = open(ltspice_file, 'r')
+    #     lines = raw_file.readlines()
+    #     self.myBode = bode.bodeFunction("ltspice", self.bodes.plot_from_ltspice(lines), None, None)
+    #     self.bodes.addBodePlot(self.myBode)
+    #     self.on_plot_update()
 
 
-    def openCSVWindow(self):
-        csv_file, _ = QFileDialog.getOpenFileName(filter="*.csv")
-        raw_file = open(csv_file, 'r')
-        data = pd.read_csv(raw_file, sep = ';')
-        self.myBode = bode.bodeFunction("mesaured_values", data, None, None)
-        self.bodes.addBodePlot(self.myBode)
-        self.on_plot_update()
-
-        # self.window = QtWidgets.QWidget()
-        # self.ui = Ui_CSVInput()
-        # self.ui.setupUi(self.window)
-        # self.window.show()
+    # def openCSVWindow(self):
+    #     csv_file, _ = QFileDialog.getOpenFileName(filter="*.csv")
+    #     raw_file = open(csv_file, 'r')
+    #     data = pd.read_csv(raw_file, sep = ';')
+    #     self.myBode = bode.bodeFunction("mesaured_values", data, None, None)
+    #     self.bodes.addBodePlot(self.myBode)
+    #     self.on_plot_update()
+    #
+    #     # self.window = QtWidgets.QWidget()
+    #     # self.ui = Ui_CSVInput()
+    #     # self.ui.setupUi(self.window)
+    #     # self.window.show()
 
     def updateGainLabel(self):
         self.plotTableGain.canvas.axes.axes.set_xlabel(self.xLabelInput.text())
@@ -142,13 +148,16 @@ class myPlot(QMainWindow, Ui_bodePlotterWindow):
     def returnToSpiceFunction(self):
         self.spiceFunction.setCurrentWidget(self.spiceOption)
 
-
-class myCSVPopUp (QWidget, Ui_CSVInput):
-    def __init__(self):
-        super(myCSVPopUp, self).__init__()
-        self.setupUi(self)
     def returnToCsvFunction(self):
         self.csvFunction.setCurrentWidget(self.csvOption)
+
+
+# class myCSVPopUp (QWidget, Ui_CSVInput):
+#     def __init__(self):
+#         super(myCSVPopUp, self).__init__()
+#         self.setupUi(self)
+#     def returnToCsvFunction(self):
+#         self.csvFunction.setCurrentWidget(self.csvOption)
 
 
 if __name__ == "__main__":
