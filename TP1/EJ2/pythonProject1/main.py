@@ -15,16 +15,18 @@ import src.package.bodeFunctions as bode
 import src.package.signalFunctions as sr
 from src.ui.bodePlotter import Ui_bodePlotterWindow
 
-def printFunction(numberList):
+def printTransferFunctionInput(numberList):
     myNumString = ""
     unicodes = ['', '', '\u00B2', '\u00B3', '\u2074', '\u2075', '\u2076', '\u2077', '\u2078', '\u2079']
     for i in range(len(numberList)):
-        if (numberList[i]) > 0 and i == 0:
+        if (numberList[i]) > 0 and i == 0 and len(numberList) == 1:
+            myNumString += (str(numberList[i]))
+        elif (numberList[i]) > 0 and i == 0:
             myNumString += (str(numberList[i]) + "S" + str(unicodes[len(numberList) - i - 1]))
         elif (numberList[i] > 0) and i == (len(numberList) - 1):
             myNumString += ("+" + str(numberList[i]))
         elif (numberList[i] < 0) and i == (len(numberList) - 1):
-            myNumString += ("-" + str(numberList[i]))
+            myNumString += ( str(numberList[i]))
         elif (numberList[i]) > 0 and i != 0:
             myNumString += ("+" + str(numberList[i]) + "S" + str(unicodes[len(numberList) - i - 1]))
         elif numberList[i] < 0:
@@ -163,16 +165,30 @@ class myPlot(QMainWindow, Ui_bodePlotterWindow):
 
 
     def showValueTransferFunctionInput (self):
-        self.numerator = [int(x) for x in self.transferFunctionNumInput.text().split(',')]
-        self.denominator = [int(x) for x in self.transferFunctionDenInput.text().split(',')]
+        self.transferFunctionNumInput.text().lower()
+        self.transferFunctionDenInput.text().lower()
+        msgWrongInput = QMessageBox()
+        msgWrongInput.setIcon(QMessageBox.Warning)
+        msgWrongInput.setWindowTitle('Error')
 
-        self.bodes.addTransferFunction((self.numerator, self.denominator))
-
-        printedNumerator = printFunction(self.numerator)
-        printedDenominator = printFunction(self.denominator)
-        self.transferFunction.setCurrentWidget(self.transferFunctionDisplay)
-        self.transferFunctionNumDisplay.setText(str(printedNumerator))
-        self.transferFunctionDenDisplay.setText(str(printedDenominator))
+        if self.transferFunctionNumInput.text() == "" or self.transferFunctionDenInput.text() == "":
+            msgWrongInput.setText("Complete el numerador y denominador con números separados por \" ,\" ")
+            msgWrongInput.exec()
+        elif self.transferFunctionNumInput.text() == "0" or self.transferFunctionDenInput.text() == "0":
+            msgWrongInput.setText("No está permitido agregar solo \" 0\" ")
+            msgWrongInput.exec()
+        elif self.transferFunctionNumInput.text().islower() or self.transferFunctionDenInput.text().islower():
+            msgWrongInput.setText("Solo están permitidos números separados por \" ,\" ")
+            msgWrongInput.exec()
+        else:
+            self.numerator = [int(x) for x in self.transferFunctionNumInput.text().split(',')]
+            self.denominator = [int(x) for x in self.transferFunctionDenInput.text().split(',')]
+            self.bodes.addTransferFunction((self.numerator, self.denominator))
+            printedNumerator = printTransferFunctionInput(self.numerator)
+            printedDenominator = printTransferFunctionInput(self.denominator)
+            self.transferFunction.setCurrentWidget(self.transferFunctionDisplay)
+            self.transferFunctionNumDisplay.setText(printedNumerator)
+            self.transferFunctionDenDisplay.setText(printedDenominator)
 
     def getTransferFunctionInput(self):
         self.myBode = bode.bodeFunction("key_values", None, self.numerator, self.denominator)
@@ -371,7 +387,30 @@ if __name__ == "__main__":
 
     app = QApplication([])
     myMainWindow = QMainWindow()
+
+    #############################################
+    # Applying CSS StyleSheet                   #
+    #############################################
+
+    with open ("src/style/style.qss", "r") as f:
+        stylesheet = f.read()
+    app.setStyleSheet(stylesheet)
+
+    #############################################
+
     widget = myPlot()
+
+    #############################################
+    # Window Center in the middle of the screen #
+    #############################################
+
+    qr = widget.frameGeometry()
+    centerPoint = QDesktopWidget().availableGeometry().center()
+    qr.moveCenter(centerPoint)
+    widget.move(qr.topLeft())
+
+    #############################################
+
     widget.setWindowTitle("Plot Tool - Grupo 6 - Teoría de Circuitos")
     widget.show()
     app.exec()

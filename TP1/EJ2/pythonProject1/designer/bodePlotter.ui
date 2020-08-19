@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1060</width>
-    <height>873</height>
+    <width>1165</width>
+    <height>915</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -38,7 +38,7 @@
       <x>60</x>
       <y>60</y>
       <width>141</width>
-      <height>16</height>
+      <height>20</height>
      </rect>
     </property>
     <property name="font">
@@ -53,8 +53,8 @@
    <widget class="QLabel" name="groupTextLabel">
     <property name="geometry">
      <rect>
-      <x>430</x>
-      <y>0</y>
+      <x>950</x>
+      <y>90</y>
       <width>251</width>
       <height>31</height>
      </rect>
@@ -74,7 +74,7 @@
       <x>280</x>
       <y>430</y>
       <width>651</width>
-      <height>381</height>
+      <height>401</height>
      </rect>
     </property>
    </widget>
@@ -145,32 +145,69 @@
      </font>
     </property>
     <property name="text">
-     <string>| H(jw)|</string>
+     <string>| H(S)|</string>
     </property>
    </widget>
    <widget class="QPushButton" name="removePlotsAction">
     <property name="geometry">
      <rect>
-      <x>80</x>
-      <y>810</y>
-      <width>61</width>
-      <height>31</height>
+      <x>980</x>
+      <y>140</y>
+      <width>151</width>
+      <height>91</height>
      </rect>
+    </property>
+    <property name="palette">
+     <palette>
+      <active>
+       <colorrole role="ButtonText">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>197</red>
+          <green>0</green>
+          <blue>0</blue>
+         </color>
+        </brush>
+       </colorrole>
+      </active>
+      <inactive>
+       <colorrole role="ButtonText">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>197</red>
+          <green>0</green>
+          <blue>0</blue>
+         </color>
+        </brush>
+       </colorrole>
+      </inactive>
+      <disabled>
+       <colorrole role="ButtonText">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>120</red>
+          <green>120</green>
+          <blue>120</blue>
+         </color>
+        </brush>
+       </colorrole>
+      </disabled>
+     </palette>
     </property>
     <property name="font">
      <font>
-      <pointsize>10</pointsize>
+      <pointsize>20</pointsize>
      </font>
     </property>
     <property name="text">
-     <string>Borrar</string>
+     <string>Borrar Todo</string>
     </property>
    </widget>
    <widget class="QStackedWidget" name="transferFunction">
     <property name="geometry">
      <rect>
-      <x>30</x>
-      <y>130</y>
+      <x>40</x>
+      <y>140</y>
       <width>181</width>
       <height>161</height>
      </rect>
@@ -335,7 +372,7 @@
       <property name="geometry">
        <rect>
         <x>40</x>
-        <y>90</y>
+        <y>84</y>
         <width>131</width>
         <height>20</height>
        </rect>
@@ -405,9 +442,9 @@
       <property name="geometry">
        <rect>
         <x>40</x>
-        <y>70</y>
+        <y>79</y>
         <width>141</width>
-        <height>16</height>
+        <height>3</height>
        </rect>
       </property>
       <property name="font">
@@ -420,7 +457,7 @@
        <string>_______________________</string>
       </property>
       <property name="alignment">
-       <set>Qt::AlignCenter</set>
+       <set>Qt::AlignBottom|Qt::AlignHCenter</set>
       </property>
      </widget>
     </widget>
@@ -526,13 +563,13 @@
     <property name="geometry">
      <rect>
       <x>30</x>
-      <y>450</y>
+      <y>470</y>
       <width>181</width>
       <height>121</height>
      </rect>
     </property>
     <property name="currentIndex">
-     <number>1</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="csvOption">
      <widget class="QPushButton" name="csvAction">
@@ -660,7 +697,7 @@
     <property name="geometry">
      <rect>
       <x>90</x>
-      <y>570</y>
+      <y>610</y>
       <width>70</width>
       <height>17</height>
      </rect>
@@ -675,23 +712,23 @@
    <widget class="QStackedWidget" name="signalResponse">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>590</y>
+      <x>30</x>
+      <y>630</y>
       <width>211</width>
-      <height>221</height>
+      <height>211</height>
      </rect>
     </property>
     <property name="currentIndex">
-     <number>2</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="signalFunctionOption">
      <widget class="QPushButton" name="signalFunctionAction">
       <property name="geometry">
        <rect>
-        <x>30</x>
+        <x>20</x>
         <y>60</y>
-        <width>141</width>
-        <height>71</height>
+        <width>151</width>
+        <height>91</height>
        </rect>
       </property>
       <property name="font">
@@ -1278,8 +1315,8 @@
    <widget class="QCheckBox" name="signalResponseCheckBox">
     <property name="geometry">
      <rect>
-      <x>230</x>
-      <y>820</y>
+      <x>90</x>
+      <y>840</y>
       <width>70</width>
       <height>17</height>
      </rect>
@@ -1294,9 +1331,9 @@
    <widget class="QLabel" name="itbaLogo">
     <property name="geometry">
      <rect>
-      <x>830</x>
-      <y>0</y>
-      <width>211</width>
+      <x>940</x>
+      <y>20</y>
+      <width>221</width>
       <height>71</height>
      </rect>
     </property>
