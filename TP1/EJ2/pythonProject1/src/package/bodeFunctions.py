@@ -121,8 +121,8 @@ class bodes():
 class bodeFunction:
     # https://docs.scipy.org/doc/scipy/reference/generated/scipy.signal.bode.html
     def __init__(self, mode, data, transferNumerator, transferDenominator):
-
-        if mode=="key_values":
+        self.bodeGraph = True
+        if mode =="key_values":
             self.transferFunction = signal.TransferFunction(transferNumerator, transferDenominator)
             #signal.bode
             # Returns
@@ -136,12 +136,20 @@ class bodeFunction:
             # Phase array [deg]
 
             self.w, self.mag, self.phase = signal.bode(self.transferFunction)
+            self.bodeType = "transferFunction"
 
         if mode=="ltspice":
             self.w, self.mag, self.phase = data["w"], data["mag"] , data["phase"]
+            self.bodeType = "spiceFunction"
 
         if mode=="mesaured_values":
             self.mag = np.asarray(data['MAG'])
             self.w = np.asarray(data['frequency'])
             self.phase = np.asarray(data['PHA'])
+            self.bodeType = "csvFunction"
+
+
+
+
+
 

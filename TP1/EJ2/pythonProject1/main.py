@@ -14,6 +14,23 @@ from matplotlib.pyplot import gca
 import src.package.bodeFunctions as bode
 from src.ui.bodePlotter import Ui_bodePlotterWindow
 
+def printFunction(numberList):
+    myNumString = ""
+    unicodes = ['', '', '\u00B2', '\u00B3', '\u2074', '\u2075', '\u2076', '\u2077', '\u2078', '\u2079']
+    for i in range(len(numberList)):
+        if (numberList[i]) > 0 and i == 0:
+            myNumString += (str(numberList[i]) + "S" + str(unicodes[len(numberList) - i - 1]))
+        elif (numberList[i] > 0) and i == (len(numberList) - 1):
+            myNumString += ("+" + str(numberList[i]))
+        elif (numberList[i] < 0) and i == (len(numberList) - 1):
+            myNumString += ("-" + str(numberList[i]))
+        elif (numberList[i]) > 0 and i != 0:
+            myNumString += ("+" + str(numberList[i]) + "S" + str(unicodes[len(numberList) - i - 1]))
+        elif numberList[i] < 0:
+            myNumString += (str(numberList[i]) + "S" + str(unicodes[len(numberList) - i - 1]))
+
+    return str(myNumString)
+
 class myPlot(QMainWindow, Ui_bodePlotterWindow):
     def __init__(self):
         super(myPlot, self).__init__()
@@ -22,7 +39,7 @@ class myPlot(QMainWindow, Ui_bodePlotterWindow):
         self.transferFunctionAction.clicked.connect(self.showTransferFunctionInput)
         self.returnTransferFunction.clicked.connect(self.returnToTransferFunction)
         self.removePlotsAction.clicked.connect(self.removePlots)
-        self.saveTransferFunction.clicked.connect(self.getTransferFunctionInput)
+        self.saveTransferFunction.clicked.connect(self.showValueTransferFunctionInput)
         self.phaseUpdateLabel.clicked.connect(self.updatePhaseLabel)
         self.gainUpdateLabel.clicked.connect(self.updateGainLabel)
         self.spiceAction.clicked.connect(self.showSpiceFunctionInput)
@@ -33,7 +50,11 @@ class myPlot(QMainWindow, Ui_bodePlotterWindow):
         self.csvAction.clicked.connect(self.showCsvFunctionInput)
         #Contador de labels para graficos sin nombre
         self.label_num=0
-
+        self.transferFunctionCheckBox.stateChanged.connect(lambda: self.removeOrAddBodeTransferFunction("transferFunction"))
+        self.spiceFunctionCheckBox.stateChanged.connect(lambda: self.removeOrAddBodeTransferFunction("spiceFunction"))
+        self.csvFunctionCheckBox.stateChanged.connect(lambda: self.removeOrAddBodeTransferFunction("csvFunction"))
+        self.acceptTransferFunction.clicked.connect(self.getTransferFunctionInput)
+        self.returnTransferFunctionInput.clicked.connect(self.showTransferFunctionInput)
 
     @pyqtSlot()
     def on_plot_update(self):
@@ -46,26 +67,26 @@ class myPlot(QMainWindow, Ui_bodePlotterWindow):
         self.plotTablePhase.canvas.draw()
 
         for myBode in self.bodes.bodesList:
+            if myBode.bodeGraph == True:
     #        self.plotTableGain.canvas.axes.semilogx(myBode.w, myBode.mag, label=myBode.label, loc='upper right', shadow=True, fontsize='small')
-            self.plotTableGain.canvas.axes.semilogx(myBode.w, myBode.mag, label=myBode.label)
-            self.plotTableGain.canvas.axes.grid(True,which="both")
-            self.plotTablePhase.canvas.axes.semilogx(myBode.w, myBode.phase, label=myBode.label)
+                self.plotTableGain.canvas.axes.semilogx(myBode.w, myBode.mag, label=myBode.label)
+                self.plotTableGain.canvas.axes.grid(True,which="both")
+                self.plotTablePhase.canvas.axes.semilogx(myBode.w, myBode.phase, label=myBode.label)
     #        self.plotTablePhase.canvas.axes.semilogx(myBode.w, myBode.phase, label=myBode.label, loc='upper right', shadow=True, fontsize='small')
-            self.plotTablePhase.canvas.axes.grid(True,which="both")
+                self.plotTablePhase.canvas.axes.grid(True,which="both")
+                self.plotTableGain.canvas.axes.minorticks_on()  # Necesitamos esto para usar los ticks menores!
+                self.plotTablePhase.canvas.axes.minorticks_on()  # Necesitamos esto para usar los ticks menores!
+                self.plotTablePhase.canvas.figure.tight_layout()
+                self.plotTableGain.canvas.figure.tight_layout()
+                self.plotTablePhase.canvas.figure.legend()
+                self.plotTableGain.canvas.figure.legend()
 
-
-            self.plotTableGain.canvas.axes.minorticks_on()  # Necesitamos esto para usar los ticks menores!
-            self.plotTablePhase.canvas.axes.minorticks_on()  # Necesitamos esto para usar los ticks menores!
-            self.plotTablePhase.canvas.figure.tight_layout()
-            self.plotTableGain.canvas.figure.tight_layout()
-            self.plotTablePhase.canvas.figure.legend()
-            self.plotTableGain.canvas.figure.legend()
-
-            self.plotTablePhase.canvas.draw()
-            self.plotTableGain.canvas.draw()
+                self.plotTablePhase.canvas.draw()
+                self.plotTableGain.canvas.draw()
 
     def showTransferFunctionInput(self):
         self.transferFunction.setCurrentWidget(self.transferFunctionInput)
+
 
     def showSpiceFunctionInput(self):
         self.spiceFunction.setCurrentWidget(self.spiceInput)
@@ -73,11 +94,17 @@ class myPlot(QMainWindow, Ui_bodePlotterWindow):
     def showCsvFunctionInput(self):
         self.csvFunction.setCurrentWidget(self.csvInput)
 
-    def getTransferFunctionInput(self):
-        numerator = [int(x) for x in self.transferFunctionNumInput.text().split(',')]
-        denominator = [int(x) for x in self.transferFunctionDenInput.text().split(',')]
+    def showValueTransferFunctionInput (self):
+        self.numerator = [int(x) for x in self.transferFunctionNumInput.text().split(',')]
+        self.denominator = [int(x) for x in self.transferFunctionDenInput.text().split(',')]
+        printedNumerator = printFunction(self.numerator)
+        printedDenominator = printFunction(self.denominator)
+        self.transferFunction.setCurrentWidget(self.transferFunctionDisplay)
+        self.transferFunctionNumDisplay.setText(str(printedNumerator))
+        self.transferFunctionDenDisplay.setText(str(printedDenominator))
 
-        self.myBode = bode.bodeFunction("key_values", None, numerator, denominator)
+    def getTransferFunctionInput(self):
+        self.myBode = bode.bodeFunction("key_values", None, self.numerator, self.denominator)
 
         if self.transferFunctionNameInput.text() == "":
             self.myBode.label= "H($) N°" +  str(self.label_num)
@@ -91,6 +118,7 @@ class myPlot(QMainWindow, Ui_bodePlotterWindow):
         self.transferFunctionNumInput.clear()
         self.transferFunctionDenInput.clear()
         self.transferFunctionNameInput.clear()
+
 
     def getSpiceInput(self):
         ltspice_file = QFileDialog.getOpenFileName(self, 'Open file', filter="*.txt")[0]
@@ -141,6 +169,23 @@ class myPlot(QMainWindow, Ui_bodePlotterWindow):
             msgWrongExtention.setWindowTitle('Error')
             msgWrongExtention.setText("No se seleccionó ningún archivo")
             msgWrongExtention.exec()
+
+    def removeOrAddBodeTransferFunction(self,myBodeType):
+        for myBode in self.bodes.bodesList:
+            print (myBode.bodeType)
+            if myBode.bodeType == myBodeType and myBode.bodeGraph == True:
+                    myBode.bodeGraph = False
+            elif myBode.bodeType == myBodeType and myBode.bodeGraph == False:
+                    myBode.bodeGraph = True
+        self.on_plot_update()
+
+
+
+
+
+
+
+
 
 
     # def openLTSpiceWindow(self):
@@ -198,6 +243,7 @@ class myPlot(QMainWindow, Ui_bodePlotterWindow):
 
 
 if __name__ == "__main__":
+
     app = QApplication([])
     myMainWindow = QMainWindow()
     widget = myPlot()

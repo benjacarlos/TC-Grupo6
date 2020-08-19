@@ -1,0 +1,5 @@
+<RCC>
+  <qresource prefix="prefijoNuevo">
+    <file>itbaLogo.png</file>
+  </qresource>
+</RCC>
