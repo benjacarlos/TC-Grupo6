@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>633</width>
-    <height>760</height>
+    <width>1060</width>
+    <height>873</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -53,10 +53,10 @@
    <widget class="QLabel" name="groupTextLabel">
     <property name="geometry">
      <rect>
-      <x>460</x>
+      <x>430</x>
       <y>0</y>
-      <width>241</width>
-      <height>20</height>
+      <width>251</width>
+      <height>31</height>
      </rect>
     </property>
     <property name="font">
@@ -151,15 +151,15 @@
    <widget class="QPushButton" name="removePlotsAction">
     <property name="geometry">
      <rect>
-      <x>50</x>
-      <y>622</y>
-      <width>139</width>
-      <height>81</height>
+      <x>80</x>
+      <y>810</y>
+      <width>61</width>
+      <height>31</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <pointsize>20</pointsize>
+      <pointsize>10</pointsize>
      </font>
     </property>
     <property name="text">
@@ -169,8 +169,8 @@
    <widget class="QStackedWidget" name="transferFunction">
     <property name="geometry">
      <rect>
-      <x>40</x>
-      <y>170</y>
+      <x>30</x>
+      <y>130</y>
       <width>181</width>
       <height>161</height>
      </rect>
@@ -183,8 +183,8 @@
       <property name="geometry">
        <rect>
         <x>10</x>
-        <y>40</y>
-        <width>141</width>
+        <y>30</y>
+        <width>151</width>
         <height>91</height>
        </rect>
       </property>
@@ -308,12 +308,128 @@
       </property>
      </widget>
     </widget>
+    <widget class="QWidget" name="transferFunctionDisplay">
+     <widget class="QLabel" name="transferFunctionNumDisplay">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>60</y>
+        <width>131</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="transferFunctionDenDisplay">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>90</y>
+        <width>131</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="contextMenuPolicy">
+       <enum>Qt::DefaultContextMenu</enum>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_3">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>70</y>
+        <width>31</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>H(S)=</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="acceptTransferFunction">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>120</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Aceptar</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="returnTransferFunctionInput">
+      <property name="geometry">
+       <rect>
+        <x>100</x>
+        <y>120</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Volver</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_4">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>70</y>
+        <width>141</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>_______________________</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </widget>
    </widget>
    <widget class="QStackedWidget" name="spiceFunction">
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>360</y>
+      <y>320</y>
       <width>191</width>
       <height>101</height>
      </rect>
@@ -327,8 +443,8 @@
        <rect>
         <x>30</x>
         <y>10</y>
-        <width>139</width>
-        <height>81</height>
+        <width>151</width>
+        <height>91</height>
        </rect>
       </property>
       <property name="font">
@@ -345,14 +461,14 @@
      <widget class="QLabel" name="spiceFunctionMsg">
       <property name="geometry">
        <rect>
-        <x>10</x>
+        <x>20</x>
         <y>0</y>
-        <width>181</width>
+        <width>141</width>
         <height>16</height>
        </rect>
       </property>
       <property name="text">
-       <string>Seleccione el archivo de LTSpice</string>
+       <string>Busque el archivo de LTSpice</string>
       </property>
      </widget>
      <widget class="QPushButton" name="saveSpiceFunction">
@@ -410,7 +526,7 @@
     <property name="geometry">
      <rect>
       <x>30</x>
-      <y>470</y>
+      <y>450</y>
       <width>181</width>
       <height>121</height>
      </rect>
@@ -424,8 +540,8 @@
        <rect>
         <x>20</x>
         <y>20</y>
-        <width>139</width>
-        <height>81</height>
+        <width>151</width>
+        <height>91</height>
        </rect>
       </property>
       <property name="font">
@@ -442,9 +558,9 @@
      <widget class="QLabel" name="csvFunctionMsg">
       <property name="geometry">
        <rect>
-        <x>10</x>
+        <x>20</x>
         <y>20</y>
-        <width>181</width>
+        <width>151</width>
         <height>16</height>
        </rect>
       </property>
@@ -454,7 +570,7 @@
        </font>
       </property>
       <property name="text">
-       <string>Seleccione el archivo con las mediciones</string>
+       <string>Busque el archivo con las mediciones</string>
       </property>
      </widget>
      <widget class="QPushButton" name="saveCsvFunction">
@@ -508,6 +624,689 @@
      </widget>
     </widget>
    </widget>
+   <widget class="QCheckBox" name="transferFunctionCheckBox">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>300</y>
+      <width>70</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Incluir </string>
+    </property>
+    <property name="checked">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="spiceFunctionCheckBox">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>440</y>
+      <width>70</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Incluir </string>
+    </property>
+    <property name="checked">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="csvFunctionCheckBox">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>570</y>
+      <width>70</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Incluir </string>
+    </property>
+    <property name="checked">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QStackedWidget" name="signalResponse">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>590</y>
+      <width>211</width>
+      <height>221</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>2</number>
+    </property>
+    <widget class="QWidget" name="signalFunctionOption">
+     <widget class="QPushButton" name="signalFunctionAction">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>60</y>
+        <width>141</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>20</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Señales</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="signalFunctionMenu">
+     <widget class="QWidget" name="layoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>10</y>
+        <width>111</width>
+        <height>191</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <widget class="QPushButton" name="impulseSignalAction">
+         <property name="text">
+          <string>Impulso</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="stepSignalAction">
+         <property name="text">
+          <string>Escalón</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="sineSignalAction">
+         <property name="text">
+          <string>Senoidal</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="squareSignalAction">
+         <property name="text">
+          <string>Cuadrada</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="triangleSignalAction">
+         <property name="text">
+          <string>Triangular</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="returnSignalFunctionMenu">
+         <property name="text">
+          <string>Volver</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="impulseSignalInput">
+     <widget class="QPushButton" name="returnImpulseSignal">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>138</y>
+        <width>93</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Volver</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="impulseAmplitudeLabel">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>60</y>
+        <width>50</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Amplitud</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="saveImpulseSignal">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>103</y>
+        <width>93</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Ingresar</string>
+      </property>
+     </widget>
+     <widget class="QDoubleSpinBox" name="impulseAmplitudeInput">
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>50</y>
+        <width>62</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="maximum">
+       <double>100000.000000000000000</double>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="stepSignalInput">
+     <widget class="QDoubleSpinBox" name="stepAmplitudeInput">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>40</y>
+        <width>62</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="maximum">
+       <double>100000.000000000000000</double>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="returnStepSignal">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>130</y>
+        <width>93</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Volver</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="stepLabel">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>50</y>
+        <width>50</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Amplitud</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="saveStepSignal">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>90</y>
+        <width>93</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Ingresar</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="sineSignalInput">
+     <widget class="QLabel" name="sineAmplitudLabel">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>50</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Amplitud</string>
+      </property>
+     </widget>
+     <widget class="QDoubleSpinBox" name="sineAmplitudInput">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>10</y>
+        <width>81</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="maximum">
+       <double>10000.000000000000000</double>
+      </property>
+      <property name="stepType">
+       <enum>QAbstractSpinBox::DefaultStepType</enum>
+      </property>
+     </widget>
+     <widget class="QLabel" name="sineFrequencyLabel">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>40</y>
+        <width>90</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Frecuencia (Hz)</string>
+      </property>
+     </widget>
+     <widget class="QDoubleSpinBox" name="sineFrequencyInput">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>40</y>
+        <width>71</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="maximum">
+       <double>10000000.000000000000000</double>
+      </property>
+     </widget>
+     <widget class="QLabel" name="sinePhaneLabel">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>70</y>
+        <width>47</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Fase (°)</string>
+      </property>
+     </widget>
+     <widget class="QDoubleSpinBox" name="sinePhaseInput">
+      <property name="geometry">
+       <rect>
+        <x>90</x>
+        <y>70</y>
+        <width>91</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="minimum">
+       <double>-360.000000000000000</double>
+      </property>
+      <property name="maximum">
+       <double>360.000000000000000</double>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="saveSineSignal">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>130</y>
+        <width>93</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Ingresar</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="returnSineSignal">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>160</y>
+        <width>93</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Volver</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="sineDCLevelLabel">
+      <property name="geometry">
+       <rect>
+        <x>16</x>
+        <y>100</y>
+        <width>61</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>DC Level</string>
+      </property>
+     </widget>
+     <widget class="QDoubleSpinBox" name="sineDCLevelInput">
+      <property name="geometry">
+       <rect>
+        <x>90</x>
+        <y>100</y>
+        <width>91</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="minimum">
+       <double>-360.000000000000000</double>
+      </property>
+      <property name="maximum">
+       <double>360.000000000000000</double>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="squareSignalInput">
+     <widget class="QDoubleSpinBox" name="squareAmplitudInput">
+      <property name="geometry">
+       <rect>
+        <x>100</x>
+        <y>10</y>
+        <width>62</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="maximum">
+       <double>100000.000000000000000</double>
+      </property>
+     </widget>
+     <widget class="QDoubleSpinBox" name="squareFrequencyInput">
+      <property name="geometry">
+       <rect>
+        <x>120</x>
+        <y>50</y>
+        <width>62</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="maximum">
+       <double>10000000.000000000000000</double>
+      </property>
+     </widget>
+     <widget class="QDoubleSpinBox" name="squareDutyInput">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>80</y>
+        <width>62</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="maximum">
+       <double>100.000000000000000</double>
+      </property>
+     </widget>
+     <widget class="QLabel" name="squareAmplitudLabel">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>20</y>
+        <width>50</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Amplitud</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="squareFrequencyLabel">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>50</y>
+        <width>90</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Frecuencia (Hz)</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="squareDutyLabel">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>80</y>
+        <width>51</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Duty (%)</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="saveSquareSignal">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>135</y>
+        <width>93</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Ingresar</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="returnSquareSignal">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>160</y>
+        <width>93</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Volver</string>
+      </property>
+     </widget>
+     <widget class="QDoubleSpinBox" name="squareDCLevelInput">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>110</y>
+        <width>62</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="maximum">
+       <double>100.000000000000000</double>
+      </property>
+     </widget>
+     <widget class="QLabel" name="squareDCLevelLabel">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>110</y>
+        <width>61</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>DC level</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="triangleSignalInput">
+     <widget class="QLabel" name="triangleAmplitudLabel">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>20</y>
+        <width>50</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Amplitud</string>
+      </property>
+     </widget>
+     <widget class="QDoubleSpinBox" name="triangleAmplitudInput">
+      <property name="geometry">
+       <rect>
+        <x>100</x>
+        <y>10</y>
+        <width>62</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="maximum">
+       <double>100000.000000000000000</double>
+      </property>
+     </widget>
+     <widget class="QLabel" name="triangleFrequencyLabel">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>50</y>
+        <width>90</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Frecuencia (Hz)</string>
+      </property>
+     </widget>
+     <widget class="QDoubleSpinBox" name="triangleFrequencyInput">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>40</y>
+        <width>62</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="maximum">
+       <double>10000000.000000000000000</double>
+      </property>
+     </widget>
+     <widget class="QLabel" name="triangleSymetryLabel">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>80</y>
+        <width>73</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Symetry (%)</string>
+      </property>
+     </widget>
+     <widget class="QDoubleSpinBox" name="triangleSymetryInput">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>80</y>
+        <width>62</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="maximum">
+       <double>100.000000000000000</double>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="saveTriangleSignal">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>140</y>
+        <width>93</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Ingresar</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="returnTriangleSignal">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>169</y>
+        <width>93</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Volver</string>
+      </property>
+     </widget>
+     <widget class="QDoubleSpinBox" name="triangleDCLevelInput">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>110</y>
+        <width>62</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="maximum">
+       <double>100.000000000000000</double>
+      </property>
+     </widget>
+     <widget class="QLabel" name="triangleDCLevelLabel">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>110</y>
+        <width>73</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>DC level</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="arbitrarySignalInput"/>
+   </widget>
+   <widget class="QCheckBox" name="signalResponseCheckBox">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>820</y>
+      <width>70</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Incluir </string>
+    </property>
+    <property name="checked">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="itbaLogo">
+    <property name="geometry">
+     <rect>
+      <x>830</x>
+      <y>0</y>
+      <width>211</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="../resources/itbaLogo.qrc">:/prefijoNuevo/itbaLogo.png</pixmap>
+    </property>
+   </widget>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
@@ -525,6 +1324,8 @@
    <container>1</container>
   </customwidget>
  </customwidgets>
- <resources/>
+ <resources>
+  <include location="../resources/itbaLogo.qrc"/>
+ </resources>
  <connections/>
 </ui>

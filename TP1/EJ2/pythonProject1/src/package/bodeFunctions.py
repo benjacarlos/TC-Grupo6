@@ -7,6 +7,7 @@ import matplotlib.pyplot as plt
 class bodes():
     def __init__(self):
         self.bodesList = []
+        self.transferFunctionList = []
         plt.figure("bodeGain")
         plt.figure("bodePhase")
         plt.ion()
@@ -16,6 +17,13 @@ class bodes():
 
     def removeBodePlot(self,bodePlot):
         self.bodesList.remove(bodePlot)
+
+    def addTransferFunction (self,transferFunction):
+        self.transferFunctionList.append(transferFunction)
+
+
+    def removeTransferFunction (self,transferFunction):
+        self.transferFunctionList.remove(transferFunction)
 
     def updatePlot (self):
         plt.figure("bodeGain")
@@ -121,8 +129,8 @@ class bodes():
 class bodeFunction:
     # https://docs.scipy.org/doc/scipy/reference/generated/scipy.signal.bode.html
     def __init__(self, mode, data, transferNumerator, transferDenominator):
-
-        if mode=="key_values":
+        self.bodeGraph = True
+        if mode =="key_values":
             self.transferFunction = signal.TransferFunction(transferNumerator, transferDenominator)
             #signal.bode
             # Returns
@@ -136,12 +144,20 @@ class bodeFunction:
             # Phase array [deg]
 
             self.w, self.mag, self.phase = signal.bode(self.transferFunction)
+            self.bodeType = "transferFunction"
 
         if mode=="ltspice":
             self.w, self.mag, self.phase = data["w"], data["mag"] , data["phase"]
+            self.bodeType = "spiceFunction"
 
         if mode=="mesaured_values":
             self.mag = np.asarray(data['MAG'])
             self.w = np.asarray(data['frequency'])
             self.phase = np.asarray(data['PHA'])
+            self.bodeType = "csvFunction"
+
+
+
+
+
 
