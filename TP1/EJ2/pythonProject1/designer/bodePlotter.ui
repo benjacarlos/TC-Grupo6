@@ -532,7 +532,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>1</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="csvOption">
      <widget class="QPushButton" name="csvAction">
@@ -682,7 +682,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>2</number>
+     <number>1</number>
     </property>
     <widget class="QWidget" name="signalFunctionOption">
      <widget class="QPushButton" name="signalFunctionAction">
@@ -893,9 +893,6 @@
       </property>
       <property name="maximum">
        <double>10000.000000000000000</double>
-      </property>
-      <property name="stepType">
-       <enum>QAbstractSpinBox::DefaultStepType</enum>
       </property>
      </widget>
      <widget class="QLabel" name="sineFrequencyLabel">
@@ -1305,6 +1302,19 @@
     </property>
     <property name="pixmap">
      <pixmap resource="../resources/itbaLogo.qrc">:/prefijoNuevo/itbaLogo.png</pixmap>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="Same_plot_checkbox">
+    <property name="geometry">
+     <rect>
+      <x>340</x>
+      <y>820</y>
+      <width>151</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Plotear en el mismo gráfico</string>
     </property>
    </widget>
   </widget>

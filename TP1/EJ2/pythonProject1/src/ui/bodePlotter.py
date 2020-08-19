@@ -308,7 +308,6 @@ class Ui_bodePlotterWindow(object):
         self.sineAmplitudInput = QtWidgets.QDoubleSpinBox(self.sineSignalInput)
         self.sineAmplitudInput.setGeometry(QtCore.QRect(80, 10, 81, 24))
         self.sineAmplitudInput.setMaximum(10000.0)
-        self.sineAmplitudInput.setStepType(QtWidgets.QAbstractSpinBox.DefaultStepType)
         self.sineAmplitudInput.setObjectName("sineAmplitudInput")
         self.sineFrequencyLabel = QtWidgets.QLabel(self.sineSignalInput)
         self.sineFrequencyLabel.setGeometry(QtCore.QRect(10, 40, 90, 16))
@@ -426,6 +425,9 @@ class Ui_bodePlotterWindow(object):
         self.itbaLogo.setText("")
         self.itbaLogo.setPixmap(QtGui.QPixmap(":/prefijoNuevo/itbaLogo.png"))
         self.itbaLogo.setObjectName("itbaLogo")
+        self.Same_plot_checkbox = QtWidgets.QCheckBox(self.centralwidget)
+        self.Same_plot_checkbox.setGeometry(QtCore.QRect(340, 820, 151, 17))
+        self.Same_plot_checkbox.setObjectName("Same_plot_checkbox")
         bodePlotterWindow.setCentralWidget(self.centralwidget)
         self.statusbar = QtWidgets.QStatusBar(bodePlotterWindow)
         self.statusbar.setObjectName("statusbar")
@@ -434,8 +436,8 @@ class Ui_bodePlotterWindow(object):
         self.retranslateUi(bodePlotterWindow)
         self.transferFunction.setCurrentIndex(0)
         self.spiceFunction.setCurrentIndex(0)
-        self.csvFunction.setCurrentIndex(1)
-        self.signalResponse.setCurrentIndex(2)
+        self.csvFunction.setCurrentIndex(0)
+        self.signalResponse.setCurrentIndex(1)
         QtCore.QMetaObject.connectSlotsByName(bodePlotterWindow)
 
     def retranslateUi(self, bodePlotterWindow):
@@ -503,6 +505,7 @@ class Ui_bodePlotterWindow(object):
         self.returnTriangleSignal.setText(_translate("bodePlotterWindow", "Volver"))
         self.triangleDCLevelLabel.setText(_translate("bodePlotterWindow", "DC level"))
         self.signalResponseCheckBox.setText(_translate("bodePlotterWindow", "Incluir "))
+        self.Same_plot_checkbox.setText(_translate("bodePlotterWindow", "Plotear en el mismo gráfico"))
 from src.ui.plottablegain import plotTableGain
 from src.ui.plottablephase import plotTablePhase
 from src.resources import itbaLogo_rc
