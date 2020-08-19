@@ -7,6 +7,7 @@ import matplotlib.pyplot as plt
 class bodes():
     def __init__(self):
         self.bodesList = []
+        self.transferFunctionList = []
         plt.figure("bodeGain")
         plt.figure("bodePhase")
         plt.ion()
@@ -16,6 +17,13 @@ class bodes():
 
     def removeBodePlot(self,bodePlot):
         self.bodesList.remove(bodePlot)
+
+    def addTransferFunction (self,transferFunction):
+        self.transferFunctionList.append(transferFunction)
+
+
+    def removeTransferFunction (self,transferFunction):
+        self.transferFunctionList.remove(transferFunction)
 
     def updatePlot (self):
         plt.figure("bodeGain")
