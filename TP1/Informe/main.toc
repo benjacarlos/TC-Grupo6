@@ -1,3 +1,17 @@
 \contentsline {section}{\numberline {1}Ejercicio 1}{2}{section.1}%
 \contentsline {subsection}{\numberline {1.1}Diseño del Circuito}{2}{subsection.1.1}%
 \contentsline {subsection}{\numberline {1.2}Análisis de Resultados}{3}{subsection.1.2}%
+\contentsline {section}{\numberline {2}Ejercicio 2}{4}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Introducción a la G.U.I.}{4}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Manual de Uso}{4}{subsection.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.1}Etiquetas para Ejes $X$ e $Y$ de los Diagramas de BODE}{4}{subsubsection.2.2.1}%
+\contentsline {subsubsection}{\numberline {2.2.2}Grafico de Diagramas de BODE mediante ingreso manual}{4}{subsubsection.2.2.2}%
+\contentsline {paragraph}{Ejemplo 1}{5}{section*.5}%
+\contentsline {paragraph}{Ejemplo 2}{5}{section*.6}%
+\contentsline {paragraph}{Ejemplo 3}{5}{section*.7}%
+\contentsline {subsubsection}{\numberline {2.2.3}Gráfico de Diagramas de BODE mediante carga de archivo de LTSpice}{5}{subsubsection.2.2.3}%
+\contentsline {subsubsection}{\numberline {2.2.4}Gráfico de Diagramas de BODE mediante carga de archivos de extensión CSV}{5}{subsubsection.2.2.4}%
+\contentsline {subsubsection}{\numberline {2.2.5}Representación de Diagramas de BODE de varias funciones transferencia en simultaneo}{5}{subsubsection.2.2.5}%
+\contentsline {subsubsection}{\numberline {2.2.6}Representación de Diagramas de BODE de un solo tipo}{6}{subsubsection.2.2.6}%
+\contentsline {subsubsection}{\numberline {2.2.7}Eliminar los Diagramas de BODE de todas las funciones transferencia}{6}{subsubsection.2.2.7}%
+\contentsline {subsubsection}{\numberline {2.2.8}Modos de Representación de Diagramas de BODE}{6}{subsubsection.2.2.8}%
