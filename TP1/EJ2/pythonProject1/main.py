@@ -279,7 +279,6 @@ class myPlot(QMainWindow, Ui_bodePlotterWindow):
     def getTransferFunctionInput(self):
         self.myBode = bode.bodeFunction("key_values", None, self.numerator, self.denominator)
         self.myBode.w = ((self.myBode.w)/6.28138)
-        print(self.myBode.w)
         if self.transferFunctionNameInput.text() == "":
             self.myBode.label= "H($) N°" +  str(self.label_num)
             self.label_num+=1
