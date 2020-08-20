@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1165</width>
+    <width>1158</width>
     <height>915</height>
    </rect>
   </property>
@@ -151,10 +151,10 @@
    <widget class="QPushButton" name="removePlotsAction">
     <property name="geometry">
      <rect>
-      <x>980</x>
+      <x>950</x>
       <y>140</y>
-      <width>151</width>
-      <height>91</height>
+      <width>181</width>
+      <height>111</height>
      </rect>
     </property>
     <property name="palette">
@@ -715,7 +715,7 @@
       <x>30</x>
       <y>630</y>
       <width>211</width>
-      <height>211</height>
+      <height>221</height>
      </rect>
     </property>
     <property name="currentIndex">
@@ -748,7 +748,7 @@
         <x>50</x>
         <y>10</y>
         <width>111</width>
-        <height>191</height>
+        <height>205</height>
        </rect>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout">
@@ -801,8 +801,8 @@
      <widget class="QPushButton" name="returnImpulseSignal">
       <property name="geometry">
        <rect>
-        <x>60</x>
-        <y>138</y>
+        <x>110</x>
+        <y>170</y>
         <width>93</width>
         <height>28</height>
        </rect>
@@ -814,7 +814,7 @@
      <widget class="QLabel" name="impulseAmplitudeLabel">
       <property name="geometry">
        <rect>
-        <x>50</x>
+        <x>40</x>
         <y>60</y>
         <width>50</width>
         <height>16</height>
@@ -827,8 +827,8 @@
      <widget class="QPushButton" name="saveImpulseSignal">
       <property name="geometry">
        <rect>
-        <x>60</x>
-        <y>103</y>
+        <x>10</x>
+        <y>170</y>
         <width>93</width>
         <height>28</height>
        </rect>
@@ -840,7 +840,7 @@
      <widget class="QDoubleSpinBox" name="impulseAmplitudeInput">
       <property name="geometry">
        <rect>
-        <x>130</x>
+        <x>110</x>
         <y>50</y>
         <width>62</width>
         <height>24</height>
@@ -848,6 +848,35 @@
       </property>
       <property name="maximum">
        <double>100000.000000000000000</double>
+      </property>
+     </widget>
+     <widget class="QDoubleSpinBox" name="impulseFinalTimeInput">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>120</y>
+        <width>62</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="maximum">
+       <double>1000.000000000000000</double>
+      </property>
+      <property name="singleStep">
+       <double>1.000000000000000</double>
+      </property>
+     </widget>
+     <widget class="QLabel" name="impulseFinalTimeLabel">
+      <property name="geometry">
+       <rect>
+        <x>22</x>
+        <y>120</y>
+        <width>81</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Tiempo final</string>
       </property>
      </widget>
     </widget>
@@ -868,8 +897,8 @@
      <widget class="QPushButton" name="returnStepSignal">
       <property name="geometry">
        <rect>
-        <x>50</x>
-        <y>130</y>
+        <x>110</x>
+        <y>170</y>
         <width>93</width>
         <height>28</height>
        </rect>
@@ -894,14 +923,43 @@
      <widget class="QPushButton" name="saveStepSignal">
       <property name="geometry">
        <rect>
-        <x>50</x>
-        <y>90</y>
+        <x>10</x>
+        <y>170</y>
         <width>93</width>
         <height>28</height>
        </rect>
       </property>
       <property name="text">
        <string>Ingresar</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="stepFinalTimeLabel">
+      <property name="geometry">
+       <rect>
+        <x>42</x>
+        <y>120</y>
+        <width>81</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Tiempo final</string>
+      </property>
+     </widget>
+     <widget class="QDoubleSpinBox" name="stepFinalTimeInput">
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>120</y>
+        <width>62</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="maximum">
+       <double>1000.000000000000000</double>
+      </property>
+      <property name="singleStep">
+       <double>1.000000000000000</double>
       </property>
      </widget>
     </widget>
@@ -993,8 +1051,8 @@
      <widget class="QPushButton" name="saveSineSignal">
       <property name="geometry">
        <rect>
-        <x>50</x>
-        <y>130</y>
+        <x>0</x>
+        <y>180</y>
         <width>93</width>
         <height>28</height>
        </rect>
@@ -1006,8 +1064,8 @@
      <widget class="QPushButton" name="returnSineSignal">
       <property name="geometry">
        <rect>
-        <x>50</x>
-        <y>160</y>
+        <x>100</x>
+        <y>180</y>
         <width>93</width>
         <height>28</height>
        </rect>
@@ -1043,6 +1101,35 @@
       </property>
       <property name="maximum">
        <double>360.000000000000000</double>
+      </property>
+     </widget>
+     <widget class="QLabel" name="sineFinalTimeLabel">
+      <property name="geometry">
+       <rect>
+        <x>22</x>
+        <y>140</y>
+        <width>81</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Tiempo final</string>
+      </property>
+     </widget>
+     <widget class="QDoubleSpinBox" name="sineFinalTimeInput">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>140</y>
+        <width>62</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="maximum">
+       <double>1000.000000000000000</double>
+      </property>
+      <property name="singleStep">
+       <double>1.000000000000000</double>
       </property>
      </widget>
     </widget>
@@ -1128,8 +1215,8 @@
      <widget class="QPushButton" name="saveSquareSignal">
       <property name="geometry">
        <rect>
-        <x>50</x>
-        <y>135</y>
+        <x>10</x>
+        <y>190</y>
         <width>93</width>
         <height>28</height>
        </rect>
@@ -1141,8 +1228,8 @@
      <widget class="QPushButton" name="returnSquareSignal">
       <property name="geometry">
        <rect>
-        <x>50</x>
-        <y>160</y>
+        <x>110</x>
+        <y>190</y>
         <width>93</width>
         <height>28</height>
        </rect>
@@ -1175,6 +1262,35 @@
       </property>
       <property name="text">
        <string>DC level</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="squareFinalTimeLabel">
+      <property name="geometry">
+       <rect>
+        <x>22</x>
+        <y>150</y>
+        <width>81</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Tiempo final</string>
+      </property>
+     </widget>
+     <widget class="QDoubleSpinBox" name="squareFinalTimeInput">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>150</y>
+        <width>62</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="maximum">
+       <double>1000.000000000000000</double>
+      </property>
+      <property name="singleStep">
+       <double>1.000000000000000</double>
       </property>
      </widget>
     </widget>
@@ -1260,8 +1376,8 @@
      <widget class="QPushButton" name="saveTriangleSignal">
       <property name="geometry">
        <rect>
-        <x>60</x>
-        <y>140</y>
+        <x>10</x>
+        <y>190</y>
         <width>93</width>
         <height>28</height>
        </rect>
@@ -1273,8 +1389,8 @@
      <widget class="QPushButton" name="returnTriangleSignal">
       <property name="geometry">
        <rect>
-        <x>60</x>
-        <y>169</y>
+        <x>110</x>
+        <y>190</y>
         <width>93</width>
         <height>28</height>
        </rect>
@@ -1309,14 +1425,43 @@
        <string>DC level</string>
       </property>
      </widget>
+     <widget class="QLabel" name="triangleFinalTimeLabel">
+      <property name="geometry">
+       <rect>
+        <x>22</x>
+        <y>140</y>
+        <width>81</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Tiempo final</string>
+      </property>
+     </widget>
+     <widget class="QDoubleSpinBox" name="triangleFinalTimeInput">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>140</y>
+        <width>62</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="maximum">
+       <double>1000.000000000000000</double>
+      </property>
+      <property name="singleStep">
+       <double>1.000000000000000</double>
+      </property>
+     </widget>
     </widget>
-    <widget class="QWidget" name="arbitrarySignalInput"/>
+    <widget class="QWidget" name="timeInput"/>
    </widget>
    <widget class="QCheckBox" name="signalResponseCheckBox">
     <property name="geometry">
      <rect>
-      <x>90</x>
-      <y>840</y>
+      <x>100</x>
+      <y>860</y>
       <width>70</width>
       <height>17</height>
      </rect>
@@ -1363,6 +1508,7 @@
  </customwidgets>
  <resources>
   <include location="../resources/itbaLogo.qrc"/>
+  <include location="../../../../../../../../.designer/resources/itbaLogo.qrc"/>
  </resources>
  <connections/>
 </ui>

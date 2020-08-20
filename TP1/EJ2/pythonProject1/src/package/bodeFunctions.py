@@ -18,13 +18,6 @@ class bodes():
     def removeBodePlot(self,bodePlot):
         self.bodesList.remove(bodePlot)
 
-    def addTransferFunction (self,transferFunction):
-        self.transferFunctionList.append(transferFunction)
-
-
-    def removeTransferFunction (self,transferFunction):
-        self.transferFunctionList.remove(transferFunction)
-
     def updatePlot (self):
         plt.figure("bodeGain")
         plt.semilogx(self.bodesList[-1].w, self.bodesList[-1].mag)
