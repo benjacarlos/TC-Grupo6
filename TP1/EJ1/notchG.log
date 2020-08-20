@@ -1,18 +1,21 @@
-Circuit: * E:\WK\Google Drive - ITBA\ITBA - Me\2020B\Teoria de Circuitos\git\TC-Grupo6\TP1\EJ1\notchG.asc
+Circuit: * E:\WK\Google Drive - ITBA\ITBA - Me\2020B\Teoria de Circuitos\TP\git\TC-Grupo6\TP1\EJ1\notchG.asc
 
+.OP point found by inspection.
 
-Date: Wed Aug 19 22:31:22 2020
-Total elapsed time: 0.750 seconds.
+Date: Thu Aug 20 17:42:00 2020
+Total elapsed time: 0.125 seconds.
 
 tnom = 27
 temp = 27
-method = trap
-totiter = 0
-traniter = 0
-tranpoints = 0
-accept = 0
-rejected = 0
+method = modified trap
+totiter = 2244
+traniter = 2244
+tranpoints = 1123
+accept = 1112
+rejected = 11
 matrix size = 5
-fillins = 2
+fillins = 1
 solver = Normal
+Matrix Compiler1: 276 bytes object code size  0.1/0.1/[0.1]
+Matrix Compiler2: off  [0.1]/0.1/0.1
 
