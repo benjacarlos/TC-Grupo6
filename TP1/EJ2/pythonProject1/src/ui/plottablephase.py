@@ -1,10 +1,12 @@
-from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtWidgets import QWidget, QVBoxLayout
-#from matplotlib.backends.backend_template import FigureCanvas
 from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas
 from matplotlib.figure import Figure
 from matplotlib.backends.backend_qt5agg import (NavigationToolbar2QT as NavigationToolbar)
 
+#############################################
+# Funcionalidad:                            #
+# - Clase Principal el gráfico de FASE      #
+#############################################
 
 class plotTablePhase(QWidget):
 

@@ -1,21 +1,21 @@
-# import time
-
-from scipy import signal
 import numpy as np
-import matplotlib.pyplot as plt
-from matplotlib import pyplot as plt
+from scipy import signal
 
 
+#############################################
+# Funcionalidad:                            #
+# - Clase Principal para los BODEs indepen- #
+#   temente de su INPUT                     #
+#############################################
 
 class bodes():
     def __init__(self):
+
+        # Lista que contiene cada elemento de tipo BODE#
         self.bodesList = []
         self.transferFunctionList = []
         self.colors_ = "bgrcmykw"
         self.color_index = 0
-        plt.figure("bodeGain")
-        plt.figure("bodePhase")
-        plt.ion()
 
     def addBodePlot (self,bodePlot):
         self.bodesList.append(bodePlot)
@@ -26,39 +26,16 @@ class bodes():
     def addTransferFunction (self,transferFunction):
         self.transferFunctionList.append(transferFunction)
 
-
     def removeTransferFunction (self,transferFunction):
         self.transferFunctionList.remove(transferFunction)
 
-    def updatePlot (self):
-        plt.figure("bodeGain")
-        plt.semilogx(self.bodesList[-1].w, self.bodesList[-1].mag)
-        plt.figure("bodePhase")
-        plt.semilogx(self.bodesList[-1].w, self.bodesList[-1].phase)
-        plt.draw()
-        plt.show()
-
-    # def plot_from_CSV(self, data):
-    #
-    #     plt.figure("bodeGain")
-    #     plt.semilogx(data["f"], data["abs"])
-    #     plt.figure("bodePhase")
-    #     plt.semilogx(data["f"], data["pha"])
-    #     plt.draw()
-    #     plt.show()
-
     def __read_file_ltspice__(self, lines):
-        # ltspice_file, _ = QFileDialog.getOpenFileName(filter="*.txt")
-        # raw_file = open(ltspice_file, 'r')
-        # lines = raw_file.readlines()
-
 
         data = dict()
 
         data["w"] = []
         data["mag"] = []
         data["phase"] = []
-        # print(lines)
 
         for i in range(1, len(lines)):
             pnt = 0
@@ -124,21 +101,26 @@ class bodes():
         data = self.__read_file_ltspice__(lines)
         return data
 
-        # self.myBode = (data["f"], data["abs"], data["pha"])
-        # self.addBodePlot(self.myBode)
-        # self.plot_from_CSV(data)
-
-
-
+#############################################
+# Funcionalidad:                            #
+# - Clase Principal un BODE                 #
+#   Cada BODE tiene asociado de dónde pro-  #
+#   viene y w, fase y magnitud              #
+#   Además contiene la definición de si debe#
+#   ser graficado o no.                     #
+#############################################
 
 class bodeFunction:
-    # https://docs.scipy.org/doc/scipy/reference/generated/scipy.signal.bode.html
+
     def __init__(self, mode, data, transferNumerator, transferDenominator):
         self.bodeGraph = True
         self.color= None
+
+        # Según cada input se crea el BODE para que sea consistente independientemente del tipo #
+
         if mode =="key_values":
             self.transferFunction = signal.TransferFunction(transferNumerator, transferDenominator)
-            #signal.bode
+
             # Returns
             # w 1D ndarray
             # Frequency array [rad/s]

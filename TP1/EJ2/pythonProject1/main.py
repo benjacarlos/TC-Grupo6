@@ -1,33 +1,37 @@
-from PyQt5.QtWidgets import QApplication
-from PyQt5.QtWidgets import QWidget, QMainWindow
-from PyQt5 import QtCore, QtGui, QtWidgets
-from PyQt5.QtWidgets import QFileDialog
-from PyQt5.QtWidgets import*
-import matplotlib.pyplot as plt
-import pandas as pd
-import numpy as np
-import os
-
-
-from PyQt5.QtWidgets import*
-from PyQt5.Qt import pyqtSlot
-from matplotlib.pyplot import gca
 from enum import Enum
-import src.package.bodeFunctions as bode
-
-
-import src.package.signalFunctions as sr
+from PyQt5 import QtCore
+from PyQt5.Qt import pyqtSlot
+from PyQt5.QtWidgets import *
+from PyQt5.QtWidgets import QFileDialog
 from src.ui.bodePlotter import Ui_bodePlotterWindow
 
+import os
+import pandas as pd
+import src.package.bodeFunctions as bode
+import src.package.signalFunctions as sr
 
+#############################################
+# Funcionalidad:                            #
+#                                           #
+#############################################
 
 class PlottingMode(Enum):
     SingleGraph = 1
     DoubleGraph = 2
 
+#############################################
+# Funcionalidad:                            #
+# - Recibe una Lista de Numeros             #
+# - Retorna un string con numeros elevados a#
+# una determinada potencia segun su ubica-  #
+# en la lista.                              #
+#############################################
 
 def printTransferFunctionInput(numberList):
     myNumString = ""
+
+    # Representación en unicode para potencias de 2,3,4,5,6,7,8,9 #
+
     unicodes = ['', '', '\u00B2', '\u00B3', '\u2074', '\u2075', '\u2076', '\u2077', '\u2078', '\u2079']
     for i in range(len(numberList)):
         if (numberList[i]) > 0 and i == 0 and len(numberList) == 1:
@@ -44,6 +48,12 @@ def printTransferFunctionInput(numberList):
             myNumString += (str(numberList[i]) + "S" + str(unicodes[len(numberList) - i - 1]))
     return str(myNumString)
 
+#############################################
+# Funcionalidad:                            #
+# - Clase Principal de la aplicación Plot   #
+#   Tool                                    #
+#############################################
+
 class myPlot(QMainWindow, Ui_bodePlotterWindow):
     def __init__(self):
         super(myPlot, self).__init__()
@@ -55,8 +65,14 @@ class myPlot(QMainWindow, Ui_bodePlotterWindow):
         self.x_phase_label=""
         self.y_phase_label=""
 
+        # Contador de labels para graficos sin nombre #
+
+        self.label_num = 0
         self.sResponse = sr.SignalResponse()
         self.plotting_mode = PlottingMode.DoubleGraph
+
+        # Mapeo de botones interactivos y sus respectivas funciones #
+
         self.transferFunctionAction.clicked.connect(self.showTransferFunctionInput)
         self.returnTransferFunction.clicked.connect(self.returnToTransferFunction)
         self.removePlotsAction.clicked.connect(self.removePlots)
@@ -69,8 +85,6 @@ class myPlot(QMainWindow, Ui_bodePlotterWindow):
         self.saveCsvFunction.clicked.connect(self.getCsvInput)
         self.returnCsvFunction.clicked.connect(self.returnToCsvFunction)
         self.csvAction.clicked.connect(self.showCsvFunctionInput)
-        #Contador de labels para graficos sin nombre
-        self.label_num=0
         self.transferFunctionCheckBox.stateChanged.connect(lambda: self.removeOrAddBodeTransferFunction("transferFunction"))
         self.spiceFunctionCheckBox.stateChanged.connect(lambda: self.removeOrAddBodeTransferFunction("spiceFunction"))
         self.csvFunctionCheckBox.stateChanged.connect(lambda: self.removeOrAddBodeTransferFunction("csvFunction"))
@@ -78,7 +92,6 @@ class myPlot(QMainWindow, Ui_bodePlotterWindow):
         self.Same_plot_checkbox.stateChanged.connect(lambda: self.ChangePlotMode())
         self.acceptTransferFunction.clicked.connect(self.getTransferFunctionInput)
         self.returnTransferFunctionInput.clicked.connect(self.showTransferFunctionInput)
-
         self.signalFunctionAction.clicked.connect(self.showSignalFunctionMenu) #QStackedWidget Signals
         self.impulseSignalAction.clicked.connect(self.showImpulseSignalInput)
         self.stepSignalAction.clicked.connect(self.showStepSignalInput)
@@ -95,9 +108,14 @@ class myPlot(QMainWindow, Ui_bodePlotterWindow):
         self.saveStepSignal.clicked.connect(self.getStepSignalInput)
         self.saveSquareSignal.clicked.connect(self.getSquareSignalInput)
         self.saveTriangleSignal.clicked.connect(self.getTriangleSignalInput)
-        self.saveImpulseSignal.clicked.connect(self.getImpulseSignalInput)  
+        self.saveImpulseSignal.clicked.connect(self.getImpulseSignalInput)
 
-
+    #############################################
+    # Funcionalidad:                            #
+    # - Mapea hacia las funciones adecuadas en  #
+    #   base a la elección del usuario para gra-#
+    #   ficar en uno o dos plots                #
+    #############################################
 
     @pyqtSlot()
     def on_plot_update(self):
@@ -106,6 +124,12 @@ class myPlot(QMainWindow, Ui_bodePlotterWindow):
             self.plot_double_graph()
         else:
             self.plot_single_graph()
+
+    #############################################
+    # Funcionalidad:                            #
+    # - Grafica todos los plots en un solo gra- #
+    #  fico                                     #
+    #############################################
 
     def plot_single_graph(self):
         self.plotTableGain.canvas.axes.clear()
@@ -116,9 +140,13 @@ class myPlot(QMainWindow, Ui_bodePlotterWindow):
         for myBode in self.bodes.bodesList:
             if myBode.bodeGraph == True:
                 if myBode.color ==None:
-                    # Generates a rand color
+
+                    # Genera color aleatorio #
+
                     myBode.color= self.bodes.colors_[self.bodes.color_index]
                     self.bodes.color_index += 1
+
+                    # Grafica apropiadamente según cada caso de Input #
 
                 if myBode.bodeType == "csvFunction":
                     self.plotTableGain.canvas.axes.plot(myBode.w, myBode.mag, '-o', color=myBode.color, label="|"+myBode.label+"|")
@@ -133,16 +161,22 @@ class myPlot(QMainWindow, Ui_bodePlotterWindow):
                 self.plotTableGain.canvas.figure.tight_layout()
 
 
-                # legend management
+                # Administración de Labels #
+
                 myBode.gain_legend = self.plotTableGain.canvas.axes.legend(fancybox=True, framealpha=0.5, fontsize='small')
 
-                # #refresh
+        # Refresca el gráfico #
 
         self.plotTableGain.canvas.axes.axes.set_xlabel(self.x_gain_label)
         self.plotTableGain.canvas.axes.axes.set_ylabel(self.y_gain_label)
         self.plotTableGain.canvas.figure.tight_layout()
         self.plotTableGain.canvas.draw()
 
+    #############################################
+    # Funcionalidad:                            #
+    # - Grafica todos los plots en dos graficos #
+    #   Uno de magnitud y otro de fase          #
+    #############################################
 
     def plot_double_graph(self):
 
@@ -156,9 +190,14 @@ class myPlot(QMainWindow, Ui_bodePlotterWindow):
             if myBode.bodeGraph == True:
 
                 if myBode.color == None:
-                    # Generates a rand color
+
+                    # Genera color aleatorio #
+
                     myBode.color = self.bodes.colors_[self.bodes.color_index]
                     self.bodes.color_index += 1
+
+                # Grafica apropiadamente según cada caso de Input #
+
                 if myBode.bodeType=="csvFunction":
                    self.plotTableGain.canvas.axes.plot(myBode.w, myBode.mag, '-o', color=myBode.color, label=myBode.label)
                    self.plotTableGain.canvas.axes.set_xscale('log')
@@ -175,9 +214,12 @@ class myPlot(QMainWindow, Ui_bodePlotterWindow):
                 self.plotTablePhase.canvas.figure.tight_layout()
                 self.plotTableGain.canvas.figure.tight_layout()
 
-                # legend management
+                # Administración de Labels #
+
                 myBode.phase_legend = self.plotTablePhase.canvas.axes.legend(fancybox=True, framealpha=0.5)
                 myBode.gain_legend = self.plotTableGain.canvas.axes.legend(fancybox=True, framealpha=0.5)
+
+        # Refresca el gráfico #
 
         self.plotTableGain.canvas.axes.axes.set_xlabel(self.x_gain_label)
         self.plotTableGain.canvas.axes.axes.set_ylabel(self.y_gain_label)
@@ -214,6 +256,8 @@ class myPlot(QMainWindow, Ui_bodePlotterWindow):
         self.plotTablePhase.canvas.draw()
         self.plotTableGain.canvas.draw()
 
+    # Los siguientes métodos se utilizan para mapear PushButtons con cambios de Widgets #
+
     def showTransferFunctionInput(self):
         self.transferFunction.setCurrentWidget(self.transferFunctionInput)
 
@@ -241,13 +285,41 @@ class myPlot(QMainWindow, Ui_bodePlotterWindow):
     def showTriangleSignalInput(self):
         self.signalResponse.setCurrentWidget(self.triangleSignalInput)
 
+    def returnToTransferFunction(self):
+        self.transferFunction.setCurrentWidget(self.transferFunctionOption)
+
+    def returnToSpiceFunction(self):
+        self.spiceFunction.setCurrentWidget(self.spiceOption)
+
+    def returnToCsvFunction(self):
+        self.csvFunction.setCurrentWidget(self.csvOption)
+
+    def returnToSignalFunction(self):
+        self.signalResponse.setCurrentWidget(self.signalFunctionOption)
+
+    def returnToSignalFunctionMenu(self):
+        self.signalResponse.setCurrentWidget(self.signalFunctionMenu)
+
+    #########################################################################
+
+    #############################################
+    # Funcionalidad:                            #
+    # - Muestra al usuario la función transfe-  #
+    #   cia ingresada en formato cociente de po-#
+    #   linomios                                #
+    #############################################
 
     def showValueTransferFunctionInput (self):
+
+
         self.transferFunctionNumInput.text().lower()
         self.transferFunctionDenInput.text().lower()
         msgWrongInput = QMessageBox()
         msgWrongInput.setIcon(QMessageBox.Warning)
         msgWrongInput.setWindowTitle('Error')
+
+        # Se analiza que el input este en el formato num,num,num,...,n #
+        # Caso contrario se muestra un mensaje de error pertinente     #
 
         if self.transferFunctionNumInput.text() == "" or self.transferFunctionDenInput.text() == "":
             msgWrongInput.setText("Complete el numerador y denominador con números separados por \" ,\" ")
@@ -258,19 +330,37 @@ class myPlot(QMainWindow, Ui_bodePlotterWindow):
         elif self.transferFunctionNumInput.text().islower() or self.transferFunctionDenInput.text().islower():
             msgWrongInput.setText("Solo están permitidos números separados por \" ,\" ")
             msgWrongInput.exec()
+
         else:
             self.numerator = [int(x) for x in self.transferFunctionNumInput.text().split(',')]
             self.denominator = [int(x) for x in self.transferFunctionDenInput.text().split(',')]
             self.bodes.addTransferFunction((self.numerator, self.denominator))
+
+            # Se procesa el input para graficarlo en formato de cociente de polinomios #
+
             printedNumerator = printTransferFunctionInput(self.numerator)
             printedDenominator = printTransferFunctionInput(self.denominator)
             self.transferFunction.setCurrentWidget(self.transferFunctionDisplay)
             self.transferFunctionNumDisplay.setText(printedNumerator)
             self.transferFunctionDenDisplay.setText(printedDenominator)
 
+    #############################################
+    # Funcionalidad:                            #
+    # - Crea la función BODE de magnitud y fase #
+    #   una vez que el input MANUAL fue validado#
+    #   y grafica dicha función                 #
+    #############################################
+
     def getTransferFunctionInput(self):
+
         self.myBode = bode.bodeFunction("key_values", None, self.numerator, self.denominator)
+
+        # Paso de frecuencia a angular a frecuencia #
+
         self.myBode.w = ((self.myBode.w)/6.28138)
+
+        # Se crea el label para la nueva función transferencia #
+
         if self.transferFunctionNameInput.text() == "":
             self.myBode.label= "H($) N°" +  str(self.label_num)
             self.label_num+=1
@@ -284,9 +374,18 @@ class myPlot(QMainWindow, Ui_bodePlotterWindow):
         self.transferFunctionDenInput.clear()
         self.transferFunctionNameInput.clear()
 
+    #############################################
+    # Funcionalidad:                            #
+    # - Crea la función BODE de magnitud y fase #
+    #   una vez que el input del output de SPICE#
+    #   fue validado y grafica dicha función    #
+    #############################################
 
     def getSpiceInput(self):
         ltspice_file = QFileDialog.getOpenFileName(self, 'Open file', filter="*.txt")[0]
+
+        # Se verifica la extension correcta del archivo #
+
         if ltspice_file.endswith('.txt'):
 
             raw_file = open(ltspice_file, 'r')
@@ -304,13 +403,19 @@ class myPlot(QMainWindow, Ui_bodePlotterWindow):
                 self.spiceFunction.setCurrentWidget(self.spiceOption)
                 self.LTSpiceNameInput.clear()
             except:
+
+                # Se imprime mensaje de error en caso de que el archivo sea invalido #
+
                 msgWrongExtention = QMessageBox()
                 msgWrongExtention.setIcon(QMessageBox.Warning)
                 msgWrongExtention.setWindowTitle('Error')
-                msgWrongExtention.setText("El formato del archivo .csv no es válido")
+                msgWrongExtention.setText("El formato del archivo .txt no es válido")
                 msgWrongExtention.exec()
 
         else:
+
+            # Se imprime mensaje de Error si ningún archivo es ingresado #
+
             msgWrongExtention = QMessageBox()
             msgWrongExtention.setIcon(QMessageBox.Warning)
             msgWrongExtention.setWindowTitle('Error')
@@ -318,8 +423,19 @@ class myPlot(QMainWindow, Ui_bodePlotterWindow):
             msgWrongExtention.exec()
             app.exec()
 
+    #############################################
+    # Funcionalidad:                            #
+    # - Crea la función BODE de magnitud y fase #
+    #   una vez que el input por archivo csv    #
+    #   fue validado y grafica dicha función    #
+    #############################################
+
+
     def getCsvInput(self):
         csv_file = QFileDialog.getOpenFileName(self, 'Open file', filter="*.csv")[0]
+
+        # Se verifica la extension correcta del archivo #
+
         if csv_file.endswith('.csv'):
 
             raw_file = open(csv_file, 'r')
@@ -337,12 +453,16 @@ class myPlot(QMainWindow, Ui_bodePlotterWindow):
                 self.csvFunction.setCurrentWidget(self.csvOption)
                 self.CSVNameInput.clear()
 
+            # Se imprime mensaje de error en caso de que el archivo sea invalido #
+
             except:
                 msgWrongExtention = QMessageBox()
                 msgWrongExtention.setIcon(QMessageBox.Warning)
                 msgWrongExtention.setWindowTitle('Error')
                 msgWrongExtention.setText("El formato del archivo .csv no es válido")
                 msgWrongExtention.exec()
+
+        # Se imprime mensaje de Error si ningún archivo es ingresado #
 
         else:
             msgWrongExtention = QMessageBox()
@@ -396,15 +516,30 @@ class myPlot(QMainWindow, Ui_bodePlotterWindow):
         self.triangleSymetryInput.clear()
         self.triangleDCLevelInput.clear()
 
+    #############################################
+    # Funcionalidad:                            #
+    # - Setea si una funcion debe ser graficada #
+    #   o no según lo que el usuario haya che-  #
+    #   ado por TIPO de input                   #
+    #############################################
 
     def removeOrAddBodeTransferFunction(self,myBodeType):
+
+        # Se recorren los elementos BODES y se togglea su estado #
+
         for myBode in self.bodes.bodesList:
-            print (myBode.bodeType)
             if myBode.bodeType == myBodeType and myBode.bodeGraph == True:
                     myBode.bodeGraph = False
             elif myBode.bodeType == myBodeType and myBode.bodeGraph == False:
                     myBode.bodeGraph = True
         self.on_plot_update()
+
+    #############################################
+    # Funcionalidad:                            #
+    # - Realiza las acciones necesarias para    #
+    #   ficar apropiadamente en uno o dos gráfi-#
+    #   cos.                                    #
+    #############################################
 
     def ChangePlotMode(self):
 
@@ -425,6 +560,13 @@ class myPlot(QMainWindow, Ui_bodePlotterWindow):
             self.gainUpdateLabel.setText("|H(jw)|")
             self.on_plot_update()
 
+    #############################################
+    # Funcionalidad:                            #
+    # - Actualizar el valor de los labels de X  #
+    #   e Y según el input del usuario para grá-#
+    #   fico de MAGNITUD                        #
+    #############################################
+
     def updateGainLabel(self):
         self.x_gain_label = self.xLabelInput.text()
         self.y_gain_label = self.yLabelInput.text()
@@ -435,8 +577,14 @@ class myPlot(QMainWindow, Ui_bodePlotterWindow):
         self.plotTableGain.canvas.figure.tight_layout()
         self.plotTableGain.canvas.draw()
 
+    #############################################
+    # Funcionalidad:                            #
+    # - Actualizar el valor de los labels de X  #
+    #   e Y según el input del usuario para grá-#
+    #   fico de FASE                            #
+    #############################################
 
-    def updatePhaseLabel(self):  # Cambia el nombre del eje, corregir
+    def updatePhaseLabel(self):
         self.x_phase_label = self.xLabelInput.text()
         self.y_phase_label = self.yLabelInput.text()
         self.xLabelInput.clear()
@@ -446,6 +594,12 @@ class myPlot(QMainWindow, Ui_bodePlotterWindow):
         self.plotTablePhase.canvas.figure.tight_layout()
         self.plotTablePhase.canvas.draw()
 
+    #############################################
+    # Funcionalidad:                            #
+    # - Remover todos los gráficos ingresados   #
+    #   Todos los inputs son eliminados         #
+    #############################################
+
     def removePlots(self):
         self.bodes.bodesList.clear()
         self.bodes.transferFunctionList.clear()
@@ -453,21 +607,12 @@ class myPlot(QMainWindow, Ui_bodePlotterWindow):
         self.bodes.color_index=0
         self.on_plot_update()
 
-    def returnToTransferFunction(self):
-        self.transferFunction.setCurrentWidget(self.transferFunctionOption)
 
-    def returnToSpiceFunction(self):
-        self.spiceFunction.setCurrentWidget(self.spiceOption)
-
-    def returnToCsvFunction(self):
-        self.csvFunction.setCurrentWidget(self.csvOption)
-
-    def returnToSignalFunction(self):
-        self.signalResponse.setCurrentWidget(self.signalFunctionOption)
-
-    def returnToSignalFunctionMenu(self):
-        self.signalResponse.setCurrentWidget(self.signalFunctionMenu) 
-
+#############################################
+# Funcionalidad:                            #
+# - Definición de Main con inicialización de#
+#   la aplicación                           #
+#############################################
 
 if __name__ == "__main__":
 
@@ -475,7 +620,7 @@ if __name__ == "__main__":
     myMainWindow = QMainWindow()
 
     #############################################
-    # Applying CSS StyleSheet                   #
+    # Se aplican estilos según CSS StyleSheet   #
     #############################################
 
     with open ("src/style/style.qss", "r") as f:
@@ -487,7 +632,7 @@ if __name__ == "__main__":
     widget = myPlot()
 
     #############################################
-    # Window Center in the middle of the screen #
+    # Centralización de pantalla de aplicación  #
     #############################################
 
     qr = widget.frameGeometry()
