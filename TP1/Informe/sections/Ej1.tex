@@ -37,11 +37,13 @@ Por lo que la función de transferencia sera igual a:
 $$\frac{Vout}{Vin} = \frac{X_C^2 + R^2}{R^2 + 4RX_c + X_C^2} \hspace{0.5cm}\Rightarrow \hspace{0.5cm} H(s) = \frac{s^2C^2R^2 + 1}{s^2R^2C^2 + s4RC + 1}$$
 
 Pues entonces $$\omega_0 = \frac{1}{RC} \hspace{0.5cm} \Rightarrow \hspace{0.5cm} f_0 = \frac{1}{2\pi RC}$$. De acuerdo a esto y considerando que solo tenemos resistencias y capacitores comerciables, para que $f_0 = 18.9kHz$ seleccionamos utilizar las siguientes:
-$$R = 1.2K\Omega \hspace{1cm} C = 6.8nF$$ que resultaria en una un filtro rechaza banda de segundo orden con $f_0 = 19.5kHz$ en teoria. Cabe notar que al tomar mencionados valores de los componentes consecuentemente el valor de $R3 = 560\Omega$ y $C3 = 15nF$ que son los componentes comerciales mas aproximados la relacion inicial planteada.
+$$R = 1.2K\Omega \hspace{1cm} C = 6.8nF$$ que resultaría en una un filtro rechaza banda de segundo orden con $f_0 = 19.5kHz$ en teoría. Cabe notar que al tomar mencionados valores de los componentes consecuentemente el valor de $R3 = 560\Omega$ y $C3 = 15nF$ que son los componentes comerciales mas aproximados la relación inicial planteada.
 
-Puesto los valores mencionados de R y C, podriamos caracterizar el sistema por su respuesta impulsiva realizando la antitrasformada de Laplace de la respuesta en frecuencia obtenida resultando en:
+Puesto los valores mencionados de R y C, podríamos caracterizar el sistema por su respuesta impulsiva realizando la antitrasformada de Laplace de la respuesta en frecuencia obtenida resultando en:
 
 $$h(t) = \delta (t) - 528113e^{-457359t}u(t) + 37916e^{-32836t}u(t)$$
+
+
 
 \subsection{Análisis de Resultados}
 
@@ -50,16 +52,16 @@ Con la ecuación de la respuesta en frecuencia $H(s)$ con $s=jw$ podemos realiza
 
 %figura de los 2 bodes
 
-Observamos que a grandes rasgos ambas curvas son similares teniendo la teórica su $f_{0teo} \approx $ y $f_{0sim} \approx $. Existe una diferencia pequeña debido a que en los cálculos teóricos asumimos que $R = R1 = R2 = 2 \cdot R3$ y $C = C1 = C2 = \frac{C3}{2}$, que al cabo de seleccionar los componentes notamos que, si bien se comportan aproximadamente a la relación mencionada, en la simulación la relación establecida fue: $\frac{R}{R3} \approx 2.14$ y $\frac{C}{C3} \approx 0.45$, por lo que significaría que $i_2 = i_5$ no es totalmente acertado. Ademas en la practica debemos tener en cuenta que los componentes no son perfectos, estas tienen tolerancias de un $10\%$ por lo que en un experimento estas curvas presentaran mas divergencia. 
+Observamos que a grandes rasgos ambas curvas son similares teniendo la teórica su $f_{0teo} \approx $ y $f_{0sim} \approx $. Existe una diferencia pequeña debido a que en los cálculos teóricos asumimos que $R = R1 = R2 = 2 \cdot R3$ y $C = C1 = C2 = \frac{C3}{2}$, que al cabo de seleccionar los componentes notamos que, si bien se comportan aproximadamente a la relación mencionada, en la simulación la relación establecida fue: $\frac{R}{R3} \approx 2.14$ y $\frac{C}{C3} \approx 0.45$, por lo que significaría que $i_2 = i_5$ no es totalmente acertado. Además en la practica debemos tener en cuenta que los componentes no son perfectos, estas tienen tolerancias de un $10\%$ por lo que en un experimento estas curvas presentaran mas divergencia.
 
-Por otra parte, podemos analizar su respuesta al escalón para caracterizar el circuito, cuyo respuesta calculada es: $$u(t) + 1.1547e^{-457359t}u(t) - 1.1547e^{-32836t}u(t)$$. Realizando una simulacion de la misma observamos lo siguiente:
+Por otra parte, podemos analizar su respuesta al escalón para caracterizar el circuito, cuyo respuesta calculada es: $$v_{out}(t) = u(t) + 1.1547e^{-457359t}u(t) - 1.1547e^{-32836t}u(t)$$
+Realizando una simulación de la misma observamos lo siguiente:
 
-
-\begin{figure}
+\begin{figure}[h]
 	\centering
-	\includegraphics[scale=0.4]{../EJ1/RElaqueva.png}
-	\caption{Respuesta al Escalon}
+	\includegraphics[width=0.8\textwidth, height = 7cm]{../EJ1/RElaqueva.png}
+	\caption{Respuesta al Escalón}
 	\label{ej1_3}
 \end{figure}
 
-
+De la figura notamos que tiene cualidad de un oscilador críticamente amortiguado al notar solo un valor critico realizando la derivada en $t_{teo} = 6.2044\mu s$. A si mismo, en la simulación realizada, el mínimo absoluto encontrado fue en $t_{sim} \approx 6 \mu s$ que coincide con lo esperado. 
