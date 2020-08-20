@@ -42,7 +42,6 @@ def printTransferFunctionInput(numberList):
             myNumString += ("+" + str(numberList[i]) + "S" + str(unicodes[len(numberList) - i - 1]))
         elif numberList[i] < 0:
             myNumString += (str(numberList[i]) + "S" + str(unicodes[len(numberList) - i - 1]))
-
     return str(myNumString)
 
 class myPlot(QMainWindow, Ui_bodePlotterWindow):
@@ -112,11 +111,10 @@ class myPlot(QMainWindow, Ui_bodePlotterWindow):
         self.plotTableGain.canvas.axes.clear()
         self.plotTablePhase.canvas.axes.clear()
         self.plotTableGain.canvas.axes.title.set_text('Diagrama de BODE - MAGNITUD y FASE')
-        # self.plotTablePhase.canvas.axes.title.set_text('Diagrama de BODE - FASE')
+
 
         for myBode in self.bodes.bodesList:
             if myBode.bodeGraph == True:
-                #        self.plotTableGain.canvas.axes.semilogx(myBode.w, myBode.mag, label=myBode.label, loc='upper right', shadow=True, fontsize='small')
                 if myBode.color ==None:
                     # Generates a rand color
                     myBode.color= self.bodes.colors_[self.bodes.color_index]
@@ -139,8 +137,7 @@ class myPlot(QMainWindow, Ui_bodePlotterWindow):
                 myBode.gain_legend = self.plotTableGain.canvas.axes.legend(fancybox=True, framealpha=0.5, fontsize='small')
 
                 # #refresh
-                # self.plotTablePhase.canvas.draw()
-                # self.plotTableGain.canvas.draw()
+
         self.plotTableGain.canvas.axes.axes.set_xlabel(self.x_gain_label)
         self.plotTableGain.canvas.axes.axes.set_ylabel(self.y_gain_label)
         self.plotTableGain.canvas.figure.tight_layout()
@@ -162,7 +159,6 @@ class myPlot(QMainWindow, Ui_bodePlotterWindow):
                     # Generates a rand color
                     myBode.color = self.bodes.colors_[self.bodes.color_index]
                     self.bodes.color_index += 1
-    #        self.plotTableGain.canvas.axes.semilogx(myBode.w, myBode.mag, label=myBode.label, loc='upper right', shadow=True, fontsize='small')
                 if myBode.bodeType=="csvFunction":
                    self.plotTableGain.canvas.axes.plot(myBode.w, myBode.mag, '-o', color=myBode.color, label=myBode.label)
                    self.plotTableGain.canvas.axes.set_xscale('log')
@@ -183,10 +179,6 @@ class myPlot(QMainWindow, Ui_bodePlotterWindow):
                 myBode.phase_legend = self.plotTablePhase.canvas.axes.legend(fancybox=True, framealpha=0.5)
                 myBode.gain_legend = self.plotTableGain.canvas.axes.legend(fancybox=True, framealpha=0.5)
 
-
-                # #refresh
-                # self.plotTablePhase.canvas.draw()
-                # self.plotTableGain.canvas.draw()
         self.plotTableGain.canvas.axes.axes.set_xlabel(self.x_gain_label)
         self.plotTableGain.canvas.axes.axes.set_ylabel(self.y_gain_label)
         self.plotTablePhase.canvas.axes.axes.set_xlabel(self.x_gain_label)
@@ -428,43 +420,10 @@ class myPlot(QMainWindow, Ui_bodePlotterWindow):
             self.plotting_mode = PlottingMode.DoubleGraph
             self.plotTablePhase.setVisible(True)
             self.plotTableGain.setGeometry(QtCore.QRect(280, 30, 651, 401))
-            # self.plotTablePhase.setGeometry(QtCore.QRect(280, 430, 651, 381))
             self.phaseUpdateLabel.setVisible(True)
             self.gainUpdateLabel.setGeometry(QtCore.QRect(60, 110, 61, 23))
             self.gainUpdateLabel.setText("|H(jw)|")
             self.on_plot_update()
-
-
-
-
-
-
-
-
-
-
-
-    # def openLTSpiceWindow(self):
-    #     ltspice_file, _ = QFileDialog.getOpenFileName(filter="*.txt")
-    #     raw_file = open(ltspice_file, 'r')
-    #     lines = raw_file.readlines()
-    #     self.myBode = bode.bodeFunction("ltspice", self.bodes.plot_from_ltspice(lines), None, None)
-    #     self.bodes.addBodePlot(self.myBode)
-    #     self.on_plot_update()
-
-
-    # def openCSVWindow(self):
-    #     csv_file, _ = QFileDialog.getOpenFileName(filter="*.csv")
-    #     raw_file = open(csv_file, 'r')
-    #     data = pd.read_csv(raw_file, sep = ';')
-    #     self.myBode = bode.bodeFunction("mesaured_values", data, None, None)
-    #     self.bodes.addBodePlot(self.myBode)
-    #     self.on_plot_update()
-    #
-    #     # self.window = QtWidgets.QWidget()
-    #     # self.ui = Ui_CSVInput()
-    #     # self.ui.setupUi(self.window)
-    #     # self.window.show()
 
     def updateGainLabel(self):
         self.x_gain_label = self.xLabelInput.text()
@@ -508,14 +467,6 @@ class myPlot(QMainWindow, Ui_bodePlotterWindow):
 
     def returnToSignalFunctionMenu(self):
         self.signalResponse.setCurrentWidget(self.signalFunctionMenu) 
-
-
-# class myCSVPopUp (QWidget, Ui_CSVInput):
-#     def __init__(self):
-#         super(myCSVPopUp, self).__init__()
-#         self.setupUi(self)
-#     def returnToCsvFunction(self):
-#         self.csvFunction.setCurrentWidget(self.csvOption)
 
 
 if __name__ == "__main__":
