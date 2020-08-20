@@ -41,13 +41,25 @@ $$R = 1.2K\Omega \hspace{1cm} C = 6.8nF$$ que resultaria en una un filtro rechaz
 
 Puesto los valores mencionados de R y C, podriamos caracterizar el sistema por su respuesta impulsiva realizando la antitrasformada de Laplace de la respuesta en frecuencia obtenida resultando en:
 
-$$h(t) = \delta (t) - 528113e^{-457359t} + 37916e^{-32836t}$$
+$$h(t) = \delta (t) - 528113e^{-457359t}u(t) + 37916e^{-32836t}u(t)$$
 
 \subsection{Análisis de Resultados}
 
-Con la ecuacion de la respusta en frecuencia $H(s)$ con $s=jw$ podemos realizar un diagramade de Bode teorico; a su vez si simulamos el diseno en LTSpice podemos observar otra respuesta en frecuencia que difiere un poco. Concatenando ambos diagramas obtenemos lo siguente:
+Con la ecuación de la respuesta en frecuencia $H(s)$ con $s=jw$ podemos realizar un diagrama de Bode teórico; a su vez si simulamos el diseño en LTSpice podemos observar otra respuesta en frecuencia que difiere un poco. Concatenando ambos diagramas obtenemos lo siguiente:
 
 
 %figura de los 2 bodes
 
-Observamos que a grandes razgos ambas curvas son similares teniendo la teorica su $f_{0teo} \approx $ y $f_{0sim} \approx $. Existe una diferencia pequeña debido a que en los calculos teoricos asumimos que $R = R1 = R2 = 2 \cdot R3$ y $C = C1 = C2 = \frac{C3}{2}$, que al cabo de seleccionar los componentes notamos que, si bien se comportan aproximadamente a la relación mencionada, en la simulacion la relacion establecida fue: $\frac{R}{R3} \approx 2.14$ y $\frac{C}{C3} \approx 0.45$. Ademas en la practica debemos tener en cuenta que los componentes no son perfectos, estas tienen tolerancias de un $10\%$ por lo que en un experimento estas curvas presentaran mas divergencia. 
+Observamos que a grandes rasgos ambas curvas son similares teniendo la teórica su $f_{0teo} \approx $ y $f_{0sim} \approx $. Existe una diferencia pequeña debido a que en los cálculos teóricos asumimos que $R = R1 = R2 = 2 \cdot R3$ y $C = C1 = C2 = \frac{C3}{2}$, que al cabo de seleccionar los componentes notamos que, si bien se comportan aproximadamente a la relación mencionada, en la simulación la relación establecida fue: $\frac{R}{R3} \approx 2.14$ y $\frac{C}{C3} \approx 0.45$, por lo que significaría que $i_2 = i_5$ no es totalmente acertado. Ademas en la practica debemos tener en cuenta que los componentes no son perfectos, estas tienen tolerancias de un $10\%$ por lo que en un experimento estas curvas presentaran mas divergencia. 
+
+Por otra parte, podemos analizar su respuesta al escalón para caracterizar el circuito, cuyo respuesta calculada es: $$u(t) + 1.1547e^{-457359t}u(t) - 1.1547e^{-32836t}u(t)$$. Realizando una simulacion de la misma observamos lo siguiente:
+
+
+\begin{figure}
+	\centering
+	\includegraphics[scale=0.4]{../EJ1/RElaqueva.png}
+	\caption{Respuesta al Escalon}
+	\label{ej1_3}
+\end{figure}
+
+
