@@ -57,7 +57,7 @@ class myPlot(QMainWindow, Ui_bodePlotterWindow):
         self.transferFunctionCheckBox.stateChanged.connect(lambda: self.removeOrAddBodeTransferFunction("transferFunction"))
         self.spiceFunctionCheckBox.stateChanged.connect(lambda: self.removeOrAddBodeTransferFunction("spiceFunction"))
         self.csvFunctionCheckBox.stateChanged.connect(lambda: self.removeOrAddBodeTransferFunction("csvFunction"))
-        self.signalResponseCheckBox.stateChanged.connect(lambda: self.removeOrAddBodeTransferFunction("signalResponse"))
+        self.signalResponseCheckBox.stateChanged.connect(lambda: self.checkboxSignalResponse())
         self.acceptTransferFunction.clicked.connect(self.getTransferFunctionInput)
         self.returnTransferFunctionInput.clicked.connect(self.showTransferFunctionInput)
 
@@ -110,25 +110,28 @@ class myPlot(QMainWindow, Ui_bodePlotterWindow):
                 self.plotTableGain.canvas.draw()
 
     @pyqtSlot()
-    def on_plotSignal_update(self, signal, labelH):
+    def on_plotSignal_update(self):
 
 
         for mySignal in self.sgList.signalList:
+
             if mySignal.signalGraph == True:
-                self.plotTableGain.canvas.axes.title.set_text('Señal ' + signal)
-                self.plotTablePhase.canvas.axes.title.set_text('Respuesta a ' + signal)
-                self.plotTableGain.canvas.axes.plot(mySignal.t, mySignal.u)
-                self.plotTableGain.canvas.axes.grid(True,which="both")
-                self.plotTablePhase.canvas.axes.plot(mySignal.tout, mySignal.yout, label = labelH)
-                self.plotTablePhase.canvas.axes.grid(True,which="both")
-                self.plotTableGain.canvas.axes.minorticks_on()  # Necesitamos esto para usar los ticks menores!
-                self.plotTablePhase.canvas.axes.minorticks_on()  # Necesitamos esto para usar los ticks menores!
-                self.plotTablePhase.canvas.figure.tight_layout()
-                self.plotTableGain.canvas.figure.tight_layout()
-                self.plotTablePhase.canvas.figure.legend()
-                self.plotTableGain.canvas.figure.legend()
-                self.plotTablePhase.canvas.draw()
-                self.plotTableGain.canvas.draw()
+                if mySignal.plotCheck == True:
+                    self.plotTableGain.canvas.axes.title.set_text('Señal ' + mySignal.signalType)
+                    self.plotTablePhase.canvas.axes.title.set_text('Respuesta a señal ' + mySignal.signalType)
+                    self.plotTableGain.canvas.axes.plot(mySignal.t, mySignal.u, label = None)
+                    self.plotTableGain.canvas.axes.grid(True,which="both")
+                    self.plotTablePhase.canvas.axes.plot(mySignal.tout, mySignal.yout, label = mySignal.labelH)
+                    self.plotTablePhase.canvas.axes.grid(True,which="both")
+                    self.plotTableGain.canvas.axes.minorticks_on()  # Necesitamos esto para usar los ticks menores!
+                    self.plotTablePhase.canvas.axes.minorticks_on()  # Necesitamos esto para usar los ticks menores!
+                    self.plotTablePhase.canvas.figure.tight_layout()
+                    self.plotTableGain.canvas.figure.tight_layout()
+                    self.plotTablePhase.canvas.figure.legend()
+                    self.plotTableGain.canvas.figure.legend()
+                    self.plotTablePhase.canvas.draw()
+                    self.plotTableGain.canvas.draw()
+                    mySignal.plotCheck == False
 
 
     def showTransferFunctionInput(self):
@@ -257,66 +260,22 @@ class myPlot(QMainWindow, Ui_bodePlotterWindow):
         self.plotTableGain.canvas.axes.clear()
         self.plotTablePhase.canvas.axes.clear()
         self.sgList.signalList.clear()        
-        msgWrongInput = QMessageBox()
-        msgWrongInput.setIcon(QMessageBox.Warning)
-        msgWrongInput.setWindowTitle('Error')
-
         self.amplitude = float(self.impulseAmplitudeInput.value())
-        self.tf = int(self.impulseFinalTimeInput.value())
-
-        aux = 0
-        for myBode in self.bodes.bodesList:
-            if myBode.bodeType == "transferFunction":
-                aux += 1
-                self.H = myBode.transferFunction
-                self.mySignal = sr.SignalResponse("impulse", self.H, self.amplitude, None, None, None, None, self.tf)
-                self.sgList.addSignalList(self.mySignal)
-                self.on_plotSignal_update("impulso", myBode.label)
-
-            elif (myBody.bodeType == "spiceFunction" and myBode.bodeGraph == True) or (myBody.bodeType == "csvFunction" and myBode.bodeGraph ==  True):
-                self.on_plot_update()
-                msgWrongInput.setText("Opción valida con H(s)\nDesactive las demás funciones")
-                msgWrongInput.exec()
-
-        if aux == 0:
-            self.on_plot_update()
-            msgWrongInput.setText("Introduzca una H(s)")
-            msgWrongInput.exec()
-
-        self.impulseAmplitudeInput.clear()
-        self.signalResponse.setCurrentWidget(self.signalFunctionOption)
+        self.tf = float(self.impulseFinalTimeInput.value())
+        self.callSignal("impulse", self.amplitude, None, None, None, None, self.tf)
+        self.impulseAmplitudeInput.setValue(0.000000)
+        self.impulseFinalTimeInput.setValue(0.000000)
 
     def getStepSignalInput(self):
 
         self.plotTableGain.canvas.axes.clear()
         self.plotTablePhase.canvas.axes.clear()
-        self.sgList.signalList.clear() 
-        msgWrongInput = QMessageBox()
-        msgWrongInput.setIcon(QMessageBox.Warning)
-        msgWrongInput.setWindowTitle('Error')
-        
+        self.sgList.signalList.clear()   
         self.amplitude = float(self.stepAmplitudeInput.value())
-        self.tf = int(self.stepFinalTimeInput.value())
-        aux = 0
-        for myBode in self.bodes.bodesList:
-            if myBode.bodeType == "transferFunction":
-                aux += 1
-                self.H = myBode.transferFunction
-                self.mySignal = sr.SignalResponse("step", self.H, self.amplitude, None, None, None, None, self.tf)
-                self.sgList.addSignalList(self.mySignal)
-                self.on_plotSignal_update("señal escalón", myBode.label)
-
-            elif (myBody.bodeType == "spiceFunction" and myBode.bodeGraph == True) or (myBody.bodeType == "csvFunction" and myBode.bodeGraph ==  True):
-                self.on_plot_update()
-                msgWrongInput.setText("Opción valida con H(s)\nDesactive las demás funciones")
-                msgWrongInput.exec()
-        if aux == 0:
-            self.on_plot_update()
-            msgWrongInput.setText("Introduzca una H(s)")
-            msgWrongInput.exec()
-
-        self.stepAmplitudeInput.clear()
-        self.signalResponse.setCurrentWidget(self.signalFunctionOption)
+        self.tf = float(self.stepFinalTimeInput.value())
+        self.callSignal("step", self.amplitude, None, None, None, None, self.tf)
+        self.stepAmplitudeInput.setValue(0.000000)
+        self.stepFinalTimeInput.setValue(0.000000)
       
 
     def getSineSignalInput(self):
@@ -324,114 +283,51 @@ class myPlot(QMainWindow, Ui_bodePlotterWindow):
         self.plotTableGain.canvas.axes.clear()
         self.plotTablePhase.canvas.axes.clear()
         self.sgList.signalList.clear() 
-        msgWrongInput = QMessageBox()
-        msgWrongInput.setIcon(QMessageBox.Warning)
-        msgWrongInput.setWindowTitle('Error')
-
         self.amplitude = float(self.sineAmplitudInput.value())
         self.freq = float(self.sineFrequencyInput.value())
         self.phase = float(self.sinePhaseInput.value())
         self.DClevel = float(self.sineDCLevelInput.value())
-        self.tf = int(self.sineFinalTimeInput.value())
-        aux = 0
-        for myBode in self.bodes.bodesList:
-            if myBode.bodeType == "transferFunction":
-                aux += 1
-                self.H = myBode.transferFunction
-                self.mySignal = sr.SignalResponse("sine", self.H, self.amplitude, self.freq, self.phase, self.DClevel, None, self.tf)
-                self.sgList.addSignalList(self.mySignal)
-                self.on_plotSignal_update("senoidal", myBode.label)
-
-            elif (myBody.bodeType == "spiceFunction" and myBode.bodeGraph == True) or (myBody.bodeType == "csvFunction" and myBode.bodeGraph ==  True):
-                self.on_plot_update()
-                msgWrongInput.setText("Opción valida con H(s)\nDesactive las demás funciones")
-                msgWrongInput.exec()
-        if aux == 0:
-            self.on_plot_update()
-            msgWrongInput.setText("Introduzca una H(s)")
-            msgWrongInput.exec()
-
-        self.sineAmplitudInput.clear()
-        self.sineFrequencyInput.clear() 
-        self.sinePhaseInput.clear()
-        self.sineDCLevelInput.clear()
-        self.signalResponse.setCurrentWidget(self.signalFunctionOption)
+        self.tf = float(self.sineFinalTimeInput.value())
+        self.callSignal("sine", self.amplitude, self.freq, self.phase, self.DClevel, None, self.tf)
+        self.sineAmplitudInput.setValue(0.000000)
+        self.sineFrequencyInput.setValue(0.000000)
+        self.sinePhaseInput.setValue(0.000000) 
+        self.sineDCLevelInput.setValue(0.000000)
+        self.sineFinalTimeInput.setValue(0.000000)
 
     def getSquareSignalInput(self):
 
         self.plotTableGain.canvas.axes.clear()
         self.plotTablePhase.canvas.axes.clear()
         self.sgList.signalList.clear()  
-        msgWrongInput = QMessageBox()
-        msgWrongInput.setIcon(QMessageBox.Warning)
-        msgWrongInput.setWindowTitle('Error')
-
         self.amplitude = float(self.squareAmplitudInput.value())
         self.freq = float(self.squareFrequencyInput.value())
         self.duty = float(self.squareDutyInput.value())
         self.DClevel = float(self.squareDCLevelInput.value()) 
-        self.tf = int(self.squareFinalTimeInput.value())
-        aux = 0
-        for myBode in self.bodes.bodesList:
-            if myBode.bodeType == "transferFunction":
-                aux += 1
-                self.H = myBode.transferFunction
-                self.mySignal = sr.SignalResponse("square", self.H, self.amplitude, self.freq, None, self.DClevel, self.duty, self.tf)
-                self.sgList.addSignalList(self.mySignal)
-                self.on_plotSignal_update("señal cuadrada", myBode.label)
-
-            elif (myBody.bodeType == "spiceFunction" and myBode.bodeGraph == True) or (myBody.bodeType == "csvFunction" and myBode.bodeGraph ==  True):
-                self.on_plot_update()
-                msgWrongInput.setText("Opción valida con H(s)\nDesactive las demás funciones")
-                msgWrongInput.exec()
-        if aux == 0:
-            self.on_plot_update()
-            msgWrongInput.setText("Introduzca una H(s)")
-            msgWrongInput.exec()
-
-        self.squareAmplitudInput.clear()
-        self.squareFrequencyInput.clear()
-        self.squareDutyInput.clear()
-        self.squareDCLevelInput.clear()
-        self.signalResponse.setCurrentWidget(self.signalFunctionOption)
+        self.tf = float(self.squareFinalTimeInput.value())
+        self.callSignal("square", self.amplitude, self.freq, None, self.DClevel, self.duty, self.tf)
+        self.squareAmplitudInput.setValue(0.000000)
+        self.squareFrequencyInput.setValue(0.000000)
+        self.squareDutyInput.setValue(0.000000)
+        self.squareDCLevelInput.setValue(0.000000)
+        self.squareFinalTimeInput.setValue(0.000000)
 
     def getTriangleSignalInput(self):
 
         self.plotTableGain.canvas.axes.clear()
         self.plotTablePhase.canvas.axes.clear()
         self.sgList.signalList.clear() 
-        msgWrongInput = QMessageBox()
-        msgWrongInput.setIcon(QMessageBox.Warning)
-        msgWrongInput.setWindowTitle('Error')
-
         self.amplitude = float(self.triangleAmplitudInput.value())
         self.freq = float(self.triangleFrequencyInput.value())
         self.symetry = float(self.triangleSymetryInput.value())
         self.DClevel = float(self.triangleDCLevelInput.value()) 
-        self.tf = int(self.triangleFinalTimeInput.value())
-        aux = 0
-        for myBode in self.bodes.bodesList:
-            if myBode.bodeType == "transferFunction":
-                aux += 1
-                self.H = myBode.transferFunction
-                self.mySignal = sr.SignalResponse("triangular", self.H, self.amplitude, self.freq, None, self.DClevel, self.symetry, self.tf)
-                self.sgList.addSignalList(self.mySignal)
-                self.on_plotSignal_update("señal triangular", myBode.label)
-
-            elif (myBody.bodeType == "spiceFunction" and myBode.bodeGraph == True) or (myBody.bodeType == "csvFunction" and myBode.bodeGraph ==  True):
-                self.on_plot_update()
-                msgWrongInput.setText("Opción valida con H(s)\nDesactive las demás funciones")
-                msgWrongInput.exec()
-        if aux == 0:
-            self.on_plot_update()
-            msgWrongInput.setText("Introduzca una H(s)")
-            msgWrongInput.exec()
-
-        self.triangleAmplitudInput.clear()
-        self.triangleFrequencyInput.clear()
-        self.triangleSymetryInput.clear()
-        self.triangleDCLevelInput.clear()
-        self.signalResponse.setCurrentWidget(self.signalFunctionOption)
+        self.tf = float(self.triangleFinalTimeInput.value())
+        self.callSignal("triangle", self.amplitude, self.freq, None, self.DClevel, self.symetry, self.tf)
+        self.triangleAmplitudInput.setValue(0.000000)
+        self.triangleFrequencyInput.setValue(0.000000)
+        self.triangleSymetryInput.setValue(0.000000)
+        self.triangleDCLevelInput.setValue(0.000000)
+        self.triangleFinalTimeInput.setValue(0.000000)
 
     def removeOrAddBodeTransferFunction(self,myBodeType):
         for myBode in self.bodes.bodesList:
@@ -442,6 +338,43 @@ class myPlot(QMainWindow, Ui_bodePlotterWindow):
                     myBode.bodeGraph = True
         self.on_plot_update()
 
+    def checkboxSignalResponse(self):
+        
+        self.plotTableGain.canvas.axes.clear()
+        self.plotTablePhase.canvas.axes.clear()
+
+        for mySignal in self.sgList.signalList:
+            if mySignal.signalGraph == True:
+                mySignal.signalGraph = False
+                self.on_plot_update()
+            elif mySignal.signalGraph == False:
+                mySignal.signalGraph = True
+                mySignal.plotCheck = True 
+                self.on_plotSignal_update()
+
+    def callSignal(self, mode, amp, freq, phase, DClevel, DutyOrSym, tf):
+        
+        msgWrongInput = QMessageBox()
+        msgWrongInput.setIcon(QMessageBox.Warning)
+        msgWrongInput.setWindowTitle('Error')
+        aux = 0
+
+        for myBode in self.bodes.bodesList:
+            if myBode.bodeType == "transferFunction":
+                aux += 1
+                H = myBode.transferFunction
+                self.mySignal = sr.SignalResponse(mode, H, amp, freq, phase, DClevel, DutyOrSym, tf, myBode.label)
+                self.sgList.addSignalList(self.mySignal)
+                self.on_plotSignal_update()
+
+            elif (myBody.bodeType == "spiceFunction" and myBode.bodeGraph == True) or (myBody.bodeType == "csvFunction" and myBode.bodeGraph ==  True):
+                self.on_plot_update()
+                msgWrongInput.setText("Opción valida con H(s)\nDesactive las demás funciones")
+                msgWrongInput.exec()
+        if aux == 0:
+            self.on_plot_update()
+            msgWrongInput.setText("Introduzca una H(s)")
+            msgWrongInput.exec()
 
 
 
@@ -521,11 +454,11 @@ if __name__ == "__main__":
     #############################################
     # Applying CSS StyleSheet                   #
     #############################################
-
+    """
     with open ("src/style/style.qss", "r") as f:
         stylesheet = f.read()
     app.setStyleSheet(stylesheet)
-    
+    """
     #############################################
 
     widget = myPlot()

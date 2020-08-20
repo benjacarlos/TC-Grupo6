@@ -16,11 +16,6 @@ class sgList():
     def addSignalList(self, function):
         self.signalList.append(function)
 
-        #print(self.signalList)
-        #print('\n')
-        #print('AAAAAAAAAAAAAAAAAAAAAAAA')
-        #print('\n')
-
     def removeSignalList(self, function):
         self.signalList.remove(function)
 
@@ -29,39 +24,58 @@ class sgList():
 
 class SignalResponse():
 
-    def __init__(self, mode, H, amp, freq, phase, DClevel, DutyOrSym, tf):
+    def __init__(self, mode, H, amp, freq, phase, DClevel, DutyOrSym, tf, labelH):
 
         self.signalGraph = True
+        self.plotCheck = True
+
         if mode == "sine":
-            self.t = np.linspace(0, tf, tf*200)
+            self.t = np.linspace(0, tf, 2000, dtype='float64')
             self.u = amp*np.sin(2*np.pi*freq*self.t + np.radians(phase)) + DClevel
             self.tout, self.yout, self.xout = signal.lsim(H, U = self.u, T = self.t) 
             self.signalType = "senoidal"
+            self.labelH = labelH
 
         if mode == "step":
-            self.t = np.linspace(0, tf, tf*200)
+            self.t = np.linspace(0, tf, 2000, dtype='float64')
             self.u = amp * np.heaviside(self.t, 0.5)
             self.tout, self.yout, self.xout = signal.lsim(H, U = self.u, T = self.t)
-            self.signalType = "step"
+            self.signalType = "escalón"
+            self.labelH = labelH
 
         if mode == "square":
 
-            self.t = np.linspace(0, tf, tf*200)
+            self.t = np.linspace(0, tf, 2000, dtype='float64')
             self.u = amp * signal.square(2*np.pi*freq*self.t, DutyOrSym/100) + DClevel
             self.tout, self.yout, self.xout = signal.lsim(H, U = self.u, T = self.t)
-            self.signalType = "square"
+            self.signalType = "cuadrada"
+            self.labelH = labelH
 
         if mode == "impulse":
-            self.t = np.linspace(0, tf, tf*200)
-            self.u = amp * signal.unit_impulse((tf-t0)*200, None)
+            self.t = np.linspace(0, tf, 2000, dtype='float64')
+            self.u = amp * signal.unit_impulse(2000, None)
             self.tout, self.yout, self.xout = signal.lsim(H, U = self.u, T = self.t)
-            self.signalType = "impulse"
+            self.signalType = "impulso"
+            self.labelH = labelH
 
         if mode == "triangle":
-            self.t = np.linspace(0, tf, tf*200)
+            self.t = np.linspace(0, tf, 2000, dtype='float64')
             self.u = amp * signal.sawtooth(2*np.pi*freq*self.t, DutyOrSym/100) + DClevel
+            print(self.u)
+            print('\n')
+            print('AAAAAAAAAAAAAAAAAA')
+            print('\n')
             self.tout, self.yout, self.xout = signal.lsim(H, U = self.u, T = self.t)
-            self.signalType = "triangle"
+            print(self.yout)
+            print('\n')
+            print('AAAAAAAAAAAAAAAAAA')
+            print('\n')
+            self.signalType = "triangular"
+            print(self.signalType)
+            print('\n')
+            print('AAAAAAAAAAAAAAAAAA')
+            print('\n')
+            self.labelH = labelH
 
     
 
