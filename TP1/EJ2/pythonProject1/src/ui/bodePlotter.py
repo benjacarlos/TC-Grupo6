@@ -437,7 +437,7 @@ class Ui_bodePlotterWindow(object):
         self.itbaLogo.setPixmap(QtGui.QPixmap(":/prefijoNuevo/itbaLogo.png"))
         self.itbaLogo.setObjectName("itbaLogo")
         self.Same_plot_checkbox = QtWidgets.QCheckBox(self.centralwidget)
-        self.Same_plot_checkbox.setGeometry(QtCore.QRect(340, 820, 151, 17))
+        self.Same_plot_checkbox.setGeometry(QtCore.QRect(540, 840, 151, 17))
         self.Same_plot_checkbox.setObjectName("Same_plot_checkbox")
         bodePlotterWindow.setCentralWidget(self.centralwidget)
         self.statusbar = QtWidgets.QStatusBar(bodePlotterWindow)

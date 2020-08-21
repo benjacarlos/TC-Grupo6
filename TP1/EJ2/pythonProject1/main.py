@@ -332,8 +332,8 @@ class myPlot(QMainWindow, Ui_bodePlotterWindow):
             msgWrongInput.exec()
 
         else:
-            self.numerator = [int(x) for x in self.transferFunctionNumInput.text().split(',')]
-            self.denominator = [int(x) for x in self.transferFunctionDenInput.text().split(',')]
+            self.numerator = [float(x) for x in self.transferFunctionNumInput.text().split(',')]
+            self.denominator = [float(x) for x in self.transferFunctionDenInput.text().split(',')]
             self.bodes.addTransferFunction((self.numerator, self.denominator))
 
             # Se procesa el input para graficarlo en formato de cociente de polinomios #
