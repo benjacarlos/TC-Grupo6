@@ -5,8 +5,9 @@
     "\\TP1\\EJ2",
     "\\TP1\\EJ2\\pythonProject1",
     "\\TP1\\EJ2\\pythonProject1\\src",
-    "\\TP1\\EJ2\\pythonProject1\\src\\package"
+    "\\TP1\\EJ2\\pythonProject1\\src\\package",
+    "\\TP1\\EJ2\\pythonProject1\\src\\ui"
   ],
-  "SelectedNode": "\\TP1\\EJ2\\pythonProject1\\main.py",
+  "SelectedNode": "\\TP1\\EJ2\\pythonProject1\\src\\ui\\bodePlotter.py",
   "PreviewInSolutionExplorer": false
 }

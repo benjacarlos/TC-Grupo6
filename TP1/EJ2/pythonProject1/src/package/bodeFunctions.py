@@ -23,11 +23,6 @@ class bodes():
     def removeBodePlot(self,bodePlot):
         self.bodesList.remove(bodePlot)
 
-    def addTransferFunction (self,transferFunction):
-        self.transferFunctionList.append(transferFunction)
-
-    def removeTransferFunction (self,transferFunction):
-        self.transferFunctionList.remove(transferFunction)
 
     def __read_file_ltspice__(self, lines):
 
@@ -120,6 +115,8 @@ class bodeFunction:
 
         if mode =="key_values":
             self.transferFunction = signal.TransferFunction(transferNumerator, transferDenominator)
+            self.transferNumerator = transferNumerator
+            self.transferDenominator = transferDenominator
 
             # Returns
             # w 1D ndarray

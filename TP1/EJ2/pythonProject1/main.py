@@ -68,7 +68,6 @@ class myPlot(QMainWindow, Ui_bodePlotterWindow):
         # Contador de labels para graficos sin nombre #
 
         self.label_num = 0
-        self.sResponse = sr.SignalResponse()
         self.plotting_mode = PlottingMode.DoubleGraph
 
         # Mapeo de botones interactivos y sus respectivas funciones #
@@ -88,27 +87,27 @@ class myPlot(QMainWindow, Ui_bodePlotterWindow):
         self.transferFunctionCheckBox.stateChanged.connect(lambda: self.removeOrAddBodeTransferFunction("transferFunction"))
         self.spiceFunctionCheckBox.stateChanged.connect(lambda: self.removeOrAddBodeTransferFunction("spiceFunction"))
         self.csvFunctionCheckBox.stateChanged.connect(lambda: self.removeOrAddBodeTransferFunction("csvFunction"))
-        self.signalResponseCheckBox.stateChanged.connect(lambda: self.removeOrAddBodeTransferFunction("signalResponse"))
+        self.signalResponseCheckBox.stateChanged.connect(lambda: self.checkboxSignalResponse())
         self.Same_plot_checkbox.stateChanged.connect(lambda: self.ChangePlotMode())
         self.acceptTransferFunction.clicked.connect(self.getTransferFunctionInput)
         self.returnTransferFunctionInput.clicked.connect(self.showTransferFunctionInput)
-        self.signalFunctionAction.clicked.connect(self.showSignalFunctionMenu) #QStackedWidget Signals
+        self.signalFunctionAction.clicked.connect(self.showSignalFunctionMenu) 
         self.impulseSignalAction.clicked.connect(self.showImpulseSignalInput)
         self.stepSignalAction.clicked.connect(self.showStepSignalInput)
         self.sineSignalAction.clicked.connect(self.showSineSignalInput)
         self.squareSignalAction.clicked.connect(self.showSquareSignalInput)
         self.triangleSignalAction.clicked.connect(self.showTriangleSignalInput)
-        self.returnSignalFunctionMenu.clicked.connect(self.returnToSignalFunction) #return buttons QStackedWidget Signals
+        self.returnSignalFunctionMenu.clicked.connect(self.returnToSignalFunction)
         self.returnStepSignal.clicked.connect(self.returnToSignalFunctionMenu) 
         self.returnSineSignal.clicked.connect(self.returnToSignalFunctionMenu)
         self.returnSquareSignal.clicked.connect(self.returnToSignalFunctionMenu)
         self.returnTriangleSignal.clicked.connect(self.returnToSignalFunctionMenu)
         self.returnImpulseSignal.clicked.connect(self.returnToSignalFunctionMenu)
-        self.saveSineSignal.clicked.connect(self.getSineSignalInput)    #save buttons QStackedWidget Signals
+        self.saveSineSignal.clicked.connect(self.getSineSignalInput)    
         self.saveStepSignal.clicked.connect(self.getStepSignalInput)
         self.saveSquareSignal.clicked.connect(self.getSquareSignalInput)
         self.saveTriangleSignal.clicked.connect(self.getTriangleSignalInput)
-        self.saveImpulseSignal.clicked.connect(self.getImpulseSignalInput)
+        self.saveImpulseSignal.clicked.connect(self.getImpulseSignalInput)  
 
     #############################################
     # Funcionalidad:                            #
@@ -230,31 +229,45 @@ class myPlot(QMainWindow, Ui_bodePlotterWindow):
         self.plotTableGain.canvas.draw()
         self.plotTablePhase.canvas.draw()
 
+    #############################################
+    # Funcionalidad:                            #
+    # - Grafica señal y respuesta a señal de   -#
+    #   funciones transferencia introducidas    #
+    #############################################
+
     @pyqtSlot()
-    def on_plotSignal_update(self, signal):
+    def on_plotSignal_update(self):
 
-        self.plotTablePhase.canvas.axes.clear()
         self.plotTableGain.canvas.axes.clear()
-        print(self.sResponse.sgl.signalList)
-        self.plotTableGain.canvas.axes.title.set_text('Señal ' + signal)
-        self.plotTablePhase.canvas.axes.title.set_text('Respuesta a ' + signal)
-        self.plotTableGain.canvas.draw()
-        self.plotTablePhase.canvas.draw()
+        self.plotTablePhase.canvas.axes.clear()
 
-        #for Signal in self.sResponse.sgl.signalList:
-        self.plotTableGain.canvas.axes.plot(self.sResponse.sgl.signalList[0][0], self.sResponse.sgl.signalList[0][1])
-        self.plotTableGain.canvas.axes.grid(True,which="both")
-        self.plotTablePhase.canvas.axes.plot(self.sResponse.sgl.signalList[0][2], self.sResponse.sgl.signalList[0][3])
-        self.plotTablePhase.canvas.axes.grid(True,which="both")
-        self.plotTableGain.canvas.axes.minorticks_on()  # Necesitamos esto para usar los ticks menores!
-        self.plotTablePhase.canvas.axes.minorticks_on()  # Necesitamos esto para usar los ticks menores!
-        self.plotTablePhase.canvas.figure.tight_layout()
+        for mySignal in self.sgList.signalList:
+
+            if mySignal.signalGraph == True:
+                if mySignal.plotCheck == True:
+                    self.plotTableGain.canvas.axes.title.set_text('Señal ' + mySignal.signalType)
+                    self.plotTablePhase.canvas.axes.title.set_text('Respuesta a señal ' + mySignal.signalType)
+                    self.plotTableGain.canvas.axes.plot(mySignal.t, mySignal.u, label = None)
+                    self.plotTableGain.canvas.axes.grid(True,which="both")
+                    self.plotTablePhase.canvas.axes.plot(mySignal.tout, mySignal.yout, color=mySignal.color, label = mySignal.labelH)
+                    self.plotTablePhase.canvas.axes.grid(True,which="both")
+                    self.plotTableGain.canvas.axes.minorticks_on()  # Necesitamos esto para usar los ticks menores!
+                    self.plotTablePhase.canvas.axes.minorticks_on()  # Necesitamos esto para usar los ticks menores!
+                    self.plotTablePhase.canvas.figure.tight_layout()
+                    self.plotTableGain.canvas.figure.tight_layout()
+                    mySignal.phase_legend = self.plotTablePhase.canvas.axes.legend(fancybox=True, framealpha=0.5)
+                    mySignal.plotCheck == False
+
+
+            # Refresca el gráfico #
+        self.plotTableGain.canvas.axes.axes.set_xlabel(self.x_gain_label)
+        self.plotTableGain.canvas.axes.axes.set_ylabel(self.y_gain_label)
+        self.plotTablePhase.canvas.axes.axes.set_xlabel(self.x_gain_label)
+        self.plotTablePhase.canvas.axes.axes.set_ylabel(self.y_gain_label)
         self.plotTableGain.canvas.figure.tight_layout()
-        self.plotTablePhase.canvas.figure.legend()
-        self.plotTableGain.canvas.figure.legend()
-
-        self.plotTablePhase.canvas.draw()
+        self.plotTablePhase.canvas.figure.tight_layout()
         self.plotTableGain.canvas.draw()
+        self.plotTablePhase.canvas.draw()
 
     # Los siguientes métodos se utilizan para mapear PushButtons con cambios de Widgets #
 
@@ -298,7 +311,7 @@ class myPlot(QMainWindow, Ui_bodePlotterWindow):
         self.signalResponse.setCurrentWidget(self.signalFunctionOption)
 
     def returnToSignalFunctionMenu(self):
-        self.signalResponse.setCurrentWidget(self.signalFunctionMenu)
+        self.signalResponse.setCurrentWidget(self.signalFunctionMenu) 
 
     #########################################################################
 
@@ -334,7 +347,6 @@ class myPlot(QMainWindow, Ui_bodePlotterWindow):
         else:
             self.numerator = [float(x) for x in self.transferFunctionNumInput.text().split(',')]
             self.denominator = [float(x) for x in self.transferFunctionDenInput.text().split(',')]
-            self.bodes.addTransferFunction((self.numerator, self.denominator))
 
             # Se procesa el input para graficarlo en formato de cociente de polinomios #
 
@@ -471,50 +483,194 @@ class myPlot(QMainWindow, Ui_bodePlotterWindow):
             msgWrongExtention.setText("No se seleccionó ningún archivo")
             msgWrongExtention.exec()
 
+    #############################################
+    # Funcionalidad:                            #
+    # - Recibe y gestiona los datos ingresados  #
+    #   por el usuario para la respuesta a señal#
+    #                                           #
+    #############################################
+
+        ## Respuesta a señal impulso ##
+
     def getImpulseSignalInput(self):
-        pass
+
+        # Se limpian inicialmente los graficos y la lista de señales #
+
+        self.plotTableGain.canvas.axes.clear()
+        self.plotTablePhase.canvas.axes.clear()
+        self.sgList.signalList.clear()  
+
+        # Se reciben los datos ingresados por el usuario y se pasa a la función que los gestiona #
+
+        tf = float(self.impulseFinalTimeInput.value())
+        if tf > 0.0000:
+            amplitude = float(self.impulseAmplitudeInput.value())
+            timeUnit = self.impulseTimeComboBox.currentText()
+            self.callSignal("impulse", amplitude, None, None, None, None, tf, timeUnit, None)
+
+        # Se limpian las casillas de ingreso de datos #
+
+        self.impulseAmplitudeInput.setValue(0.000000)
+        self.impulseFinalTimeInput.setValue(0.000000)
+
+
+        ## Respuesta a señal escalón ##
 
     def getStepSignalInput(self):
-        self.amplitude = float(self.stepAmplitudeInput.value())
-        self.sResponse.step(self.amplitude)
-        self.on_plotSignal_update("escalón")
-        self.stepAmplitudeInput.clear()
+
+        self.plotTableGain.canvas.axes.clear()
+        self.plotTablePhase.canvas.axes.clear()
+        self.sgList.signalList.clear()   
+        tf = float(self.stepFinalTimeInput.value())
+        if tf > 0.0000:
+            amplitude = float(self.stepAmplitudeInput.value())
+            timeUnit = self.stepTimeComboBox.currentText()
+            self.callSignal("step", amplitude, None, None, None, None, tf, timeUnit, None)
+        self.stepAmplitudeInput.setValue(0.000000)
+        self.stepFinalTimeInput.setValue(0.000000)
+   
+        ## Respuesta a señal senoidal ##
 
     def getSineSignalInput(self):
-        self.amplitude = float(self.sineAmplitudInput.value())
-        self.freq = float(self.sineFrequencyInput.value())
-        self.phase = float(self.sinePhaseInput.value())
-        self.DCLevel = float(self.sineDCLevelInput.value()) 
-        self.sResponse.sine(self.amplitude, self.freq, self.phase, self.DCLevel)
-        self.on_plotSignal_update("senoidal")
-        self.sineAmplitudInput.clear()
-        self.sineFrequencyInput.clear()
-        self.sinePhaseInput.clear()
-        self.sineDCLevelInput.clear()
+
+        self.plotTableGain.canvas.axes.clear()
+        self.plotTablePhase.canvas.axes.clear()
+        self.sgList.signalList.clear() 
+        tf = float(self.sineFinalTimeInput.value())
+        if tf > 0.0000:
+            amplitude = float(self.sineAmplitudInput.value())
+            freq = float(self.sineFrequencyInput.value())
+            phase = float(self.sinePhaseInput.value())
+            DClevel = float(self.sineDCLevelInput.value())
+            timeUnit = self.sineTimeComboBox.currentText()
+            freqUnit = self.sineFreqComboBox.currentText()
+            self.callSignal("sine", amplitude, freq, phase, DClevel, None, tf, timeUnit, freqUnit)
+        self.sineAmplitudInput.setValue(0.000000)
+        self.sineFrequencyInput.setValue(0.000000)
+        self.sinePhaseInput.setValue(0.000000) 
+        self.sineDCLevelInput.setValue(0.000000)
+        self.sineFinalTimeInput.setValue(0.000000)
+
+        ## Respuesta a señal cuadrada ##
 
     def getSquareSignalInput(self):
-        self.amplitude = float(self.squareAmplitudInput.value())
-        self.freq = float(self.squareFrequencyInput.value())
-        self.duty = float(self.squareDutyInput.value())
-        self.DClevel = float(self.squareDCLevelInput.value()) 
-        self.sResponse.sine(self.amplitude, self.freq, self.duty, self.DClevel)
-        self.on_plotSignal_update("cuadrada")
-        self.squareAmplitudInput.clear()
-        self.squareFrequencyInput.clear()
-        self.squareDutyInput.clear()
-        self.squareDCLevelInput.clear()
+
+        self.plotTableGain.canvas.axes.clear()
+        self.plotTablePhase.canvas.axes.clear()
+        self.sgList.signalList.clear()  
+        tf = float(self.squareFinalTimeInput.value())
+        if tf > 0.0000:
+            amplitude = float(self.squareAmplitudInput.value())
+            freq = float(self.squareFrequencyInput.value())
+            duty = float(self.squareDutyInput.value())
+            DClevel = float(self.squareDCLevelInput.value()) 
+            tf = float(self.squareFinalTimeInput.value())
+            timeUnit = self.squareTimeComboBox.currentText()
+            freqUnit = self.squareFreqComboBox.currentText()
+            self.callSignal("square", amplitude, freq, None, DClevel, duty, tf, timeUnit, freqUnit)
+        self.squareAmplitudInput.setValue(0.000000)
+        self.squareFrequencyInput.setValue(0.000000)
+        self.squareDutyInput.setValue(0.000000)
+        self.squareDCLevelInput.setValue(0.000000)
+        self.squareFinalTimeInput.setValue(0.000000)
+
+        ## Respuesta a señal triangular ##
 
     def getTriangleSignalInput(self):
-        self.amplitude = float(self.triangleAmplitudInput.value())
-        self.freq = float(self.triangleFrequencyInput.value())
-        self.symetry = float(self.triangleSymetryInput.value())
-        self.DClevel = float(self.triangleDCLevelInput.value()) 
-        self.sResponse.sine(self.amplitude, self.freq, self.duty, self.DCLevel)
-        self.on_plotSignal_update("triangular")
-        self.triangleAmplitudInput.clear()
-        self.triangleFrequencyInput.clear()
-        self.triangleSymetryInput.clear()
-        self.triangleDCLevelInput.clear()
+
+        self.plotTableGain.canvas.axes.clear()
+        self.plotTablePhase.canvas.axes.clear()
+        self.sgList.signalList.clear() 
+        tf = float(self.triangleFinalTimeInput.value())
+        if tf > 0.0000:
+            amplitude = float(self.triangleAmplitudInput.value())
+            freq = float(self.triangleFrequencyInput.value())
+            symetry = float(self.triangleSymetryInput.value())
+            DClevel = float(self.triangleDCLevelInput.value()) 
+            timeUnit = self.triangleTimeComboBox.currentText()
+            freqUnit = self.triangleFreqComboBox.currentText()
+            self.callSignal("triangle", amplitude, freq, None, DClevel, symetry, tf, timeUnit, freqUnit)
+        self.triangleAmplitudInput.setValue(0.000000)
+        self.triangleFrequencyInput.setValue(0.000000)
+        self.triangleSymetryInput.setValue(0.000000)
+        self.triangleDCLevelInput.setValue(0.000000)
+        self.triangleFinalTimeInput.setValue(0.000000)
+
+    #############################################
+    # Funcionalidad:                            #
+    # - Valida los datos ingresados, envía      #
+    #   mensajes de error y crea las instancias #
+    #   para los graficos de señales.           #
+    #############################################
+
+    def callSignal(self, mode, amp, freq, phase, DClevel, DutyOrSym, tf, timeUnit, freqUnit):
+
+        # Se prepara ventana de eror #
+      
+        msgWrongInput = QMessageBox()
+        msgWrongInput.setIcon(QMessageBox.Warning)
+        msgWrongInput.setWindowTitle('Error')
+        auxTransferCont = 0
+
+        # Valida la función de transferencia y pasa los datos ingresados #
+
+        for myBode in self.bodes.bodesList:
+
+            if myBode.bodeType == "transferFunction":
+                
+               # Se exige la condición que el grado del denominador sea mayor # 
+               # o igual al numerador. Sino, se envía mensaje de error        #      
+                if len(myBode.transferDenominator) < len(myBode.transferNumerator):
+                    msgWrongInput.setText("Error: grado de numerador mayor a denominador")
+                    msgWrongInput.exec()
+                    self.on_plot_update()
+                    aux = 1
+                    break
+
+                # De ser válida la H(s), se pasan los parámetros para el cálculo de la señal y se la grafica #
+
+                auxTransferCont += 1
+                H = myBode.transferFunction
+                self.mySignal = sr.SignalResponse(mode, H, amp, freq, phase, DClevel, DutyOrSym, tf, myBode.label, timeUnit, freqUnit)
+                self.sgList.addSignalList(self.mySignal)
+                self.on_plotSignal_update()
+
+            # En caso de haberse introducido un archivo de LTSpice o medición, se envía mensaje de error #
+
+            elif (myBody.bodeType == "spiceFunction" and myBode.bodeGraph == True) or (myBody.bodeType == "csvFunction" and myBode.bodeGraph ==  True):
+                msgWrongInput.setText("Opción valida con H(s)\nDesactive las demás funciones")
+                msgWrongInput.exec()
+                self.on_plot_update()
+
+        #De no haberse introducido función transferencia, se envía mensaje de error#
+
+        if auxTransferCont == 0:
+            msgWrongInput.setText("Introduzca una H(s)")
+            msgWrongInput.exec()
+            self.on_plot_update()
+
+    #############################################
+    # Funcionalidad:                            #
+    # - Activa y desactiva gráfico al presionar #
+    #   el checkbox de señales.                 #
+    #############################################
+
+    def checkboxSignalResponse(self):
+        
+        self.plotTableGain.canvas.axes.clear()
+        self.plotTablePhase.canvas.axes.clear()
+
+        #Muestra o elimina cada uno de los gráficos de señales#
+
+        for mySignal in self.sgList.signalList:
+            if mySignal.signalGraph == True:
+                mySignal.signalGraph = False
+                self.on_plot_update()
+            elif mySignal.signalGraph == False:
+                mySignal.signalGraph = True
+                mySignal.plotCheck = True 
+                self.on_plotSignal_update()
+
 
     #############################################
     # Funcionalidad:                            #
@@ -601,9 +757,9 @@ class myPlot(QMainWindow, Ui_bodePlotterWindow):
     #############################################
 
     def removePlots(self):
+
         self.bodes.bodesList.clear()
-        self.bodes.transferFunctionList.clear()
-        self.sResponse.sgl.signalList.clear()
+        self.sgList.signalList.clear()        
         self.bodes.color_index=0
         self.on_plot_update()
 

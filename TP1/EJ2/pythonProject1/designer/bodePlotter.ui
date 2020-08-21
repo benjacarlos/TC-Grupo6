@@ -6,9 +6,15 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1165</width>
-    <height>915</height>
+    <width>1300</width>
+    <height>900</height>
    </rect>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1300</width>
+    <height>900</height>
+   </size>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
@@ -35,9 +41,9 @@
    <widget class="QLabel" name="yLabelText">
     <property name="geometry">
      <rect>
-      <x>60</x>
+      <x>50</x>
       <y>60</y>
-      <width>141</width>
+      <width>151</width>
       <height>20</height>
      </rect>
     </property>
@@ -48,44 +54,6 @@
     </property>
     <property name="text">
      <string>Etiqueta EJE Y</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="groupTextLabel">
-    <property name="geometry">
-     <rect>
-      <x>950</x>
-      <y>90</y>
-      <width>251</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>18</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>Plot Tool - Grupo 6</string>
-    </property>
-   </widget>
-   <widget class="plotTablePhase" name="plotTablePhase" native="true">
-    <property name="geometry">
-     <rect>
-      <x>280</x>
-      <y>430</y>
-      <width>651</width>
-      <height>401</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="plotTableGain" name="plotTableGain" native="true">
-    <property name="geometry">
-     <rect>
-      <x>280</x>
-      <y>30</y>
-      <width>651</width>
-      <height>401</height>
-     </rect>
     </property>
    </widget>
    <widget class="QLineEdit" name="xLabelInput">
@@ -148,67 +116,12 @@
      <string>| H(S)|</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="removePlotsAction">
-    <property name="geometry">
-     <rect>
-      <x>980</x>
-      <y>140</y>
-      <width>151</width>
-      <height>91</height>
-     </rect>
-    </property>
-    <property name="palette">
-     <palette>
-      <active>
-       <colorrole role="ButtonText">
-        <brush brushstyle="SolidPattern">
-         <color alpha="255">
-          <red>197</red>
-          <green>0</green>
-          <blue>0</blue>
-         </color>
-        </brush>
-       </colorrole>
-      </active>
-      <inactive>
-       <colorrole role="ButtonText">
-        <brush brushstyle="SolidPattern">
-         <color alpha="255">
-          <red>197</red>
-          <green>0</green>
-          <blue>0</blue>
-         </color>
-        </brush>
-       </colorrole>
-      </inactive>
-      <disabled>
-       <colorrole role="ButtonText">
-        <brush brushstyle="SolidPattern">
-         <color alpha="255">
-          <red>120</red>
-          <green>120</green>
-          <blue>120</blue>
-         </color>
-        </brush>
-       </colorrole>
-      </disabled>
-     </palette>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>20</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>Borrar Todo</string>
-    </property>
-   </widget>
    <widget class="QStackedWidget" name="transferFunction">
     <property name="geometry">
      <rect>
-      <x>40</x>
+      <x>30</x>
       <y>140</y>
-      <width>181</width>
+      <width>211</width>
       <height>161</height>
      </rect>
     </property>
@@ -219,8 +132,8 @@
      <widget class="QPushButton" name="transferFunctionAction">
       <property name="geometry">
        <rect>
-        <x>10</x>
-        <y>30</y>
+        <x>20</x>
+        <y>40</y>
         <width>151</width>
         <height>91</height>
        </rect>
@@ -239,60 +152,14 @@
      <widget class="QLabel" name="transferFunctionMsg">
       <property name="geometry">
        <rect>
-        <x>10</x>
-        <y>10</y>
-        <width>181</width>
+        <x>0</x>
+        <y>20</y>
+        <width>211</width>
         <height>16</height>
        </rect>
       </property>
       <property name="text">
        <string>Ingrese la Funcion de Transferencia</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="transferFunctionNumLabel">
-      <property name="geometry">
-       <rect>
-        <x>20</x>
-        <y>40</y>
-        <width>61</width>
-        <height>16</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Numerador</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="transferFunctionDenLabel">
-      <property name="geometry">
-       <rect>
-        <x>20</x>
-        <y>60</y>
-        <width>71</width>
-        <height>16</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Denominador</string>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="transferFunctionNumInput">
-      <property name="geometry">
-       <rect>
-        <x>90</x>
-        <y>40</y>
-        <width>91</width>
-        <height>20</height>
-       </rect>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="transferFunctionDenInput">
-      <property name="geometry">
-       <rect>
-        <x>90</x>
-        <y>60</y>
-        <width>91</width>
-        <height>20</height>
-       </rect>
       </property>
      </widget>
      <widget class="QPushButton" name="saveTransferFunction">
@@ -321,28 +188,55 @@
        <string>Volver</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="transferFunctionNameInput">
-      <property name="geometry">
-       <rect>
-        <x>90</x>
-        <y>80</y>
-        <width>91</width>
-        <height>20</height>
-       </rect>
-      </property>
-     </widget>
-     <widget class="QLabel" name="transferFunctionNameLabel">
+     <widget class="QWidget" name="">
       <property name="geometry">
        <rect>
         <x>20</x>
-        <y>80</y>
-        <width>71</width>
-        <height>16</height>
+        <y>40</y>
+        <width>171</width>
+        <height>71</height>
        </rect>
       </property>
-      <property name="text">
-       <string>Nombre</string>
-      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_47">
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_24">
+         <item>
+          <widget class="QLabel" name="transferFunctionNumLabel">
+           <property name="text">
+            <string>Numerador</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="transferFunctionDenLabel">
+           <property name="text">
+            <string>Denominador</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="transferFunctionNameLabel">
+           <property name="text">
+            <string>Nombre</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_22">
+         <item>
+          <widget class="QLineEdit" name="transferFunctionNumInput"/>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="transferFunctionDenInput"/>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="transferFunctionNameInput"/>
+         </item>
+        </layout>
+       </item>
+      </layout>
      </widget>
     </widget>
     <widget class="QWidget" name="transferFunctionDisplay">
@@ -465,9 +359,9 @@
    <widget class="QStackedWidget" name="spiceFunction">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>320</y>
-      <width>191</width>
+      <x>30</x>
+      <y>330</y>
+      <width>211</width>
       <height>101</height>
      </rect>
     </property>
@@ -478,7 +372,7 @@
      <widget class="QPushButton" name="spiceAction">
       <property name="geometry">
        <rect>
-        <x>30</x>
+        <x>20</x>
         <y>10</y>
         <width>151</width>
         <height>91</height>
@@ -499,8 +393,8 @@
       <property name="geometry">
        <rect>
         <x>20</x>
-        <y>0</y>
-        <width>141</width>
+        <y>10</y>
+        <width>181</width>
         <height>16</height>
        </rect>
       </property>
@@ -534,28 +428,24 @@
        <string>Volver</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="LTSpiceNameInput">
-      <property name="geometry">
-       <rect>
-        <x>90</x>
-        <y>20</y>
-        <width>81</width>
-        <height>21</height>
-       </rect>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label">
+     <widget class="QSplitter" name="splitter">
       <property name="geometry">
        <rect>
         <x>20</x>
-        <y>20</y>
-        <width>47</width>
-        <height>13</height>
+        <y>30</y>
+        <width>155</width>
+        <height>24</height>
        </rect>
       </property>
-      <property name="text">
-       <string>Nombre</string>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
       </property>
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string>Nombre</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="LTSpiceNameInput"/>
      </widget>
     </widget>
    </widget>
@@ -564,7 +454,7 @@
      <rect>
       <x>30</x>
       <y>470</y>
-      <width>181</width>
+      <width>211</width>
       <height>121</height>
      </rect>
     </property>
@@ -595,10 +485,10 @@
      <widget class="QLabel" name="csvFunctionMsg">
       <property name="geometry">
        <rect>
-        <x>20</x>
-        <y>20</y>
-        <width>151</width>
-        <height>16</height>
+        <x>0</x>
+        <y>30</y>
+        <width>201</width>
+        <height>20</height>
        </rect>
       </property>
       <property name="font">
@@ -636,86 +526,37 @@
        <string>Volver</string>
       </property>
      </widget>
-     <widget class="QLabel" name="label_2">
+     <widget class="QWidget" name="">
       <property name="geometry">
        <rect>
-        <x>20</x>
-        <y>50</y>
-        <width>47</width>
-        <height>13</height>
+        <x>10</x>
+        <y>60</y>
+        <width>164</width>
+        <height>26</height>
        </rect>
       </property>
-      <property name="text">
-       <string>Nombre</string>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="CSVNameInput">
-      <property name="geometry">
-       <rect>
-        <x>90</x>
-        <y>50</y>
-        <width>71</width>
-        <height>20</height>
-       </rect>
-      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_46">
+       <item>
+        <widget class="QLabel" name="label_2">
+         <property name="text">
+          <string>Nombre</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="CSVNameInput"/>
+       </item>
+      </layout>
      </widget>
     </widget>
-   </widget>
-   <widget class="QCheckBox" name="transferFunctionCheckBox">
-    <property name="geometry">
-     <rect>
-      <x>90</x>
-      <y>300</y>
-      <width>70</width>
-      <height>17</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Incluir </string>
-    </property>
-    <property name="checked">
-     <bool>true</bool>
-    </property>
-   </widget>
-   <widget class="QCheckBox" name="spiceFunctionCheckBox">
-    <property name="geometry">
-     <rect>
-      <x>90</x>
-      <y>440</y>
-      <width>70</width>
-      <height>17</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Incluir </string>
-    </property>
-    <property name="checked">
-     <bool>true</bool>
-    </property>
-   </widget>
-   <widget class="QCheckBox" name="csvFunctionCheckBox">
-    <property name="geometry">
-     <rect>
-      <x>90</x>
-      <y>610</y>
-      <width>70</width>
-      <height>17</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Incluir </string>
-    </property>
-    <property name="checked">
-     <bool>true</bool>
-    </property>
    </widget>
    <widget class="QStackedWidget" name="signalResponse">
     <property name="geometry">
      <rect>
       <x>30</x>
-      <y>630</y>
-      <width>211</width>
-      <height>211</height>
+      <y>620</y>
+      <width>231</width>
+      <height>221</height>
      </rect>
     </property>
     <property name="currentIndex">
@@ -742,617 +583,1587 @@
      </widget>
     </widget>
     <widget class="QWidget" name="signalFunctionMenu">
-     <widget class="QWidget" name="layoutWidget">
+     <widget class="QWidget" name="">
       <property name="geometry">
        <rect>
-        <x>50</x>
+        <x>10</x>
         <y>10</y>
-        <width>111</width>
-        <height>191</height>
+        <width>191</width>
+        <height>207</height>
        </rect>
       </property>
-      <layout class="QVBoxLayout" name="verticalLayout">
+      <layout class="QHBoxLayout" name="horizontalLayout">
        <item>
-        <widget class="QPushButton" name="impulseSignalAction">
-         <property name="text">
-          <string>Impulso</string>
+        <spacer name="horizontalSpacer_2">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
          </property>
-        </widget>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
        </item>
        <item>
-        <widget class="QPushButton" name="stepSignalAction">
-         <property name="text">
-          <string>Escalón</string>
-         </property>
-        </widget>
+        <layout class="QVBoxLayout" name="verticalLayout">
+         <item>
+          <widget class="QPushButton" name="impulseSignalAction">
+           <property name="text">
+            <string>Impulso</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="stepSignalAction">
+           <property name="text">
+            <string>Escalón</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="sineSignalAction">
+           <property name="text">
+            <string>Senoidal</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="squareSignalAction">
+           <property name="text">
+            <string>Cuadrada</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="triangleSignalAction">
+           <property name="text">
+            <string>Triangular</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="returnSignalFunctionMenu">
+           <property name="text">
+            <string>Volver</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
        </item>
        <item>
-        <widget class="QPushButton" name="sineSignalAction">
-         <property name="text">
-          <string>Senoidal</string>
+        <spacer name="horizontalSpacer">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
          </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="squareSignalAction">
-         <property name="text">
-          <string>Cuadrada</string>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
          </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="triangleSignalAction">
-         <property name="text">
-          <string>Triangular</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="returnSignalFunctionMenu">
-         <property name="text">
-          <string>Volver</string>
-         </property>
-        </widget>
+        </spacer>
        </item>
       </layout>
      </widget>
     </widget>
     <widget class="QWidget" name="impulseSignalInput">
-     <widget class="QPushButton" name="returnImpulseSignal">
+     <widget class="QWidget" name="">
       <property name="geometry">
        <rect>
-        <x>60</x>
-        <y>138</y>
-        <width>93</width>
-        <height>28</height>
+        <x>0</x>
+        <y>30</y>
+        <width>221</width>
+        <height>161</height>
        </rect>
       </property>
-      <property name="text">
-       <string>Volver</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="impulseAmplitudeLabel">
-      <property name="geometry">
-       <rect>
-        <x>50</x>
-        <y>60</y>
-        <width>50</width>
-        <height>16</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Amplitud</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="saveImpulseSignal">
-      <property name="geometry">
-       <rect>
-        <x>60</x>
-        <y>103</y>
-        <width>93</width>
-        <height>28</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Ingresar</string>
-      </property>
-     </widget>
-     <widget class="QDoubleSpinBox" name="impulseAmplitudeInput">
-      <property name="geometry">
-       <rect>
-        <x>130</x>
-        <y>50</y>
-        <width>62</width>
-        <height>24</height>
-       </rect>
-      </property>
-      <property name="maximum">
-       <double>100000.000000000000000</double>
-      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <item>
+        <spacer name="verticalSpacer_3">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_2">
+         <item>
+          <widget class="QLabel" name="impulseAmplitudeLabel">
+           <property name="text">
+            <string>Amplitud</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer_3">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>78</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QDoubleSpinBox" name="impulseAmplitudeInput">
+           <property name="decimals">
+            <number>12</number>
+           </property>
+           <property name="maximum">
+            <double>100000.000000000000000</double>
+           </property>
+           <property name="stepType">
+            <enum>QAbstractSpinBox::AdaptiveDecimalStepType</enum>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <spacer name="verticalSpacer_2">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_3">
+         <item>
+          <widget class="QLabel" name="impulseFinalTimeLabel">
+           <property name="text">
+            <string>Tiempo final</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer_4">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QDoubleSpinBox" name="impulseFinalTimeInput">
+           <property name="suffix">
+            <string/>
+           </property>
+           <property name="decimals">
+            <number>4</number>
+           </property>
+           <property name="maximum">
+            <double>1000.000000000000000</double>
+           </property>
+           <property name="singleStep">
+            <double>0.000001000000000</double>
+           </property>
+           <property name="stepType">
+            <enum>QAbstractSpinBox::AdaptiveDecimalStepType</enum>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QComboBox" name="impulseTimeComboBox">
+           <item>
+            <property name="text">
+             <string>s</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>ms</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>us</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>ns</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <spacer name="verticalSpacer">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_4">
+         <item>
+          <widget class="QPushButton" name="saveImpulseSignal">
+           <property name="text">
+            <string>Ingresar</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="returnImpulseSignal">
+           <property name="text">
+            <string>Volver</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
      </widget>
     </widget>
     <widget class="QWidget" name="stepSignalInput">
-     <widget class="QDoubleSpinBox" name="stepAmplitudeInput">
+     <widget class="QWidget" name="">
       <property name="geometry">
        <rect>
-        <x>110</x>
-        <y>40</y>
-        <width>62</width>
-        <height>24</height>
+        <x>0</x>
+        <y>28</y>
+        <width>221</width>
+        <height>191</height>
        </rect>
       </property>
-      <property name="maximum">
-       <double>100000.000000000000000</double>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="returnStepSignal">
-      <property name="geometry">
-       <rect>
-        <x>50</x>
-        <y>130</y>
-        <width>93</width>
-        <height>28</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Volver</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="stepLabel">
-      <property name="geometry">
-       <rect>
-        <x>40</x>
-        <y>50</y>
-        <width>50</width>
-        <height>16</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Amplitud</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="saveStepSignal">
-      <property name="geometry">
-       <rect>
-        <x>50</x>
-        <y>90</y>
-        <width>93</width>
-        <height>28</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Ingresar</string>
-      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_13">
+       <item>
+        <spacer name="verticalSpacer_4">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_7">
+         <item>
+          <widget class="QLabel" name="stepLabel">
+           <property name="text">
+            <string>Amplitud</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer_9">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QDoubleSpinBox" name="stepAmplitudeInput">
+           <property name="decimals">
+            <number>12</number>
+           </property>
+           <property name="maximum">
+            <double>100000.000000000000000</double>
+           </property>
+           <property name="stepType">
+            <enum>QAbstractSpinBox::AdaptiveDecimalStepType</enum>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <spacer name="verticalSpacer_5">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_6">
+         <item>
+          <widget class="QLabel" name="stepFinalTimeLabel">
+           <property name="text">
+            <string>Tiempo final</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QDoubleSpinBox" name="stepFinalTimeInput">
+           <property name="suffix">
+            <string/>
+           </property>
+           <property name="decimals">
+            <number>4</number>
+           </property>
+           <property name="maximum">
+            <double>1000.000000000000000</double>
+           </property>
+           <property name="singleStep">
+            <double>1.000000000000000</double>
+           </property>
+           <property name="stepType">
+            <enum>QAbstractSpinBox::AdaptiveDecimalStepType</enum>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QComboBox" name="stepTimeComboBox">
+           <item>
+            <property name="text">
+             <string>s</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>ms</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>us</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>ns</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <spacer name="verticalSpacer_13">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_8">
+         <item>
+          <widget class="QPushButton" name="saveStepSignal">
+           <property name="text">
+            <string>Ingresar</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="returnStepSignal">
+           <property name="text">
+            <string>Volver</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
      </widget>
     </widget>
     <widget class="QWidget" name="sineSignalInput">
-     <widget class="QLabel" name="sineAmplitudLabel">
+     <widget class="QWidget" name="">
       <property name="geometry">
        <rect>
-        <x>10</x>
+        <x>0</x>
         <y>10</y>
-        <width>50</width>
-        <height>16</height>
+        <width>221</width>
+        <height>211</height>
        </rect>
       </property>
-      <property name="text">
-       <string>Amplitud</string>
-      </property>
-     </widget>
-     <widget class="QDoubleSpinBox" name="sineAmplitudInput">
-      <property name="geometry">
-       <rect>
-        <x>80</x>
-        <y>10</y>
-        <width>81</width>
-        <height>24</height>
-       </rect>
-      </property>
-      <property name="maximum">
-       <double>10000.000000000000000</double>
-      </property>
-     </widget>
-     <widget class="QLabel" name="sineFrequencyLabel">
-      <property name="geometry">
-       <rect>
-        <x>10</x>
-        <y>40</y>
-        <width>90</width>
-        <height>16</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Frecuencia (Hz)</string>
-      </property>
-     </widget>
-     <widget class="QDoubleSpinBox" name="sineFrequencyInput">
-      <property name="geometry">
-       <rect>
-        <x>110</x>
-        <y>40</y>
-        <width>71</width>
-        <height>24</height>
-       </rect>
-      </property>
-      <property name="maximum">
-       <double>10000000.000000000000000</double>
-      </property>
-     </widget>
-     <widget class="QLabel" name="sinePhaneLabel">
-      <property name="geometry">
-       <rect>
-        <x>20</x>
-        <y>70</y>
-        <width>47</width>
-        <height>16</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Fase (°)</string>
-      </property>
-     </widget>
-     <widget class="QDoubleSpinBox" name="sinePhaseInput">
-      <property name="geometry">
-       <rect>
-        <x>90</x>
-        <y>70</y>
-        <width>91</width>
-        <height>24</height>
-       </rect>
-      </property>
-      <property name="minimum">
-       <double>-360.000000000000000</double>
-      </property>
-      <property name="maximum">
-       <double>360.000000000000000</double>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="saveSineSignal">
-      <property name="geometry">
-       <rect>
-        <x>50</x>
-        <y>130</y>
-        <width>93</width>
-        <height>28</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Ingresar</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="returnSineSignal">
-      <property name="geometry">
-       <rect>
-        <x>50</x>
-        <y>160</y>
-        <width>93</width>
-        <height>28</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Volver</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="sineDCLevelLabel">
-      <property name="geometry">
-       <rect>
-        <x>16</x>
-        <y>100</y>
-        <width>61</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>DC Level</string>
-      </property>
-     </widget>
-     <widget class="QDoubleSpinBox" name="sineDCLevelInput">
-      <property name="geometry">
-       <rect>
-        <x>90</x>
-        <y>100</y>
-        <width>91</width>
-        <height>24</height>
-       </rect>
-      </property>
-      <property name="minimum">
-       <double>-360.000000000000000</double>
-      </property>
-      <property name="maximum">
-       <double>360.000000000000000</double>
-      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_7">
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_12">
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_4">
+           <item>
+            <widget class="QLabel" name="sineAmplitudLabel">
+             <property name="text">
+              <string>Amplitud</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="sinePhaneLabel">
+             <property name="text">
+              <string>Fase (°)</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="sineDCLevelLabel">
+             <property name="text">
+              <string>DC Level</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="sineFrequencyLabel">
+             <property name="text">
+              <string>Frecuencia</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="sineFinalTimeLabel">
+             <property name="text">
+              <string>Tiempo final</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_6">
+           <item>
+            <layout class="QVBoxLayout" name="verticalLayout_5">
+             <item>
+              <widget class="QDoubleSpinBox" name="sineAmplitudInput">
+               <property name="decimals">
+                <number>12</number>
+               </property>
+               <property name="maximum">
+                <double>10000000.000000000000000</double>
+               </property>
+               <property name="stepType">
+                <enum>QAbstractSpinBox::AdaptiveDecimalStepType</enum>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QDoubleSpinBox" name="sinePhaseInput">
+               <property name="suffix">
+                <string>°</string>
+               </property>
+               <property name="decimals">
+                <number>6</number>
+               </property>
+               <property name="minimum">
+                <double>-360.000000000000000</double>
+               </property>
+               <property name="maximum">
+                <double>360.000000000000000</double>
+               </property>
+               <property name="stepType">
+                <enum>QAbstractSpinBox::AdaptiveDecimalStepType</enum>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QDoubleSpinBox" name="sineDCLevelInput">
+               <property name="suffix">
+                <string>%</string>
+               </property>
+               <property name="decimals">
+                <number>6</number>
+               </property>
+               <property name="minimum">
+                <double>-1000.000000000000000</double>
+               </property>
+               <property name="maximum">
+                <double>1000.000000000000000</double>
+               </property>
+               <property name="stepType">
+                <enum>QAbstractSpinBox::AdaptiveDecimalStepType</enum>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_10">
+             <item>
+              <widget class="QDoubleSpinBox" name="sineFrequencyInput">
+               <property name="decimals">
+                <number>4</number>
+               </property>
+               <property name="maximum">
+                <double>10000.000000000000000</double>
+               </property>
+               <property name="stepType">
+                <enum>QAbstractSpinBox::AdaptiveDecimalStepType</enum>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QComboBox" name="sineFreqComboBox">
+               <item>
+                <property name="text">
+                 <string>Hz</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>kHz</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>GHz</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>MHz</string>
+                </property>
+               </item>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_11">
+             <item>
+              <widget class="QDoubleSpinBox" name="sineFinalTimeInput">
+               <property name="suffix">
+                <string/>
+               </property>
+               <property name="decimals">
+                <number>4</number>
+               </property>
+               <property name="maximum">
+                <double>1000.000000000000000</double>
+               </property>
+               <property name="singleStep">
+                <double>1.000000000000000</double>
+               </property>
+               <property name="stepType">
+                <enum>QAbstractSpinBox::AdaptiveDecimalStepType</enum>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QComboBox" name="sineTimeComboBox">
+               <item>
+                <property name="text">
+                 <string>s</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>ms</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>us</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>ns</string>
+                </property>
+               </item>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <spacer name="verticalSpacer_7">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_9">
+         <item>
+          <widget class="QPushButton" name="saveSineSignal">
+           <property name="text">
+            <string>Ingresar</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="returnSineSignal">
+           <property name="text">
+            <string>Volver</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
      </widget>
     </widget>
     <widget class="QWidget" name="squareSignalInput">
-     <widget class="QDoubleSpinBox" name="squareAmplitudInput">
+     <widget class="QWidget" name="">
       <property name="geometry">
        <rect>
-        <x>100</x>
+        <x>0</x>
         <y>10</y>
-        <width>62</width>
-        <height>24</height>
+        <width>221</width>
+        <height>201</height>
        </rect>
       </property>
-      <property name="maximum">
-       <double>100000.000000000000000</double>
-      </property>
-     </widget>
-     <widget class="QDoubleSpinBox" name="squareFrequencyInput">
-      <property name="geometry">
-       <rect>
-        <x>120</x>
-        <y>50</y>
-        <width>62</width>
-        <height>24</height>
-       </rect>
-      </property>
-      <property name="maximum">
-       <double>10000000.000000000000000</double>
-      </property>
-     </widget>
-     <widget class="QDoubleSpinBox" name="squareDutyInput">
-      <property name="geometry">
-       <rect>
-        <x>110</x>
-        <y>80</y>
-        <width>62</width>
-        <height>24</height>
-       </rect>
-      </property>
-      <property name="maximum">
-       <double>100.000000000000000</double>
-      </property>
-     </widget>
-     <widget class="QLabel" name="squareAmplitudLabel">
-      <property name="geometry">
-       <rect>
-        <x>20</x>
-        <y>20</y>
-        <width>50</width>
-        <height>16</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Amplitud</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="squareFrequencyLabel">
-      <property name="geometry">
-       <rect>
-        <x>20</x>
-        <y>50</y>
-        <width>90</width>
-        <height>16</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Frecuencia (Hz)</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="squareDutyLabel">
-      <property name="geometry">
-       <rect>
-        <x>20</x>
-        <y>80</y>
-        <width>51</width>
-        <height>16</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Duty (%)</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="saveSquareSignal">
-      <property name="geometry">
-       <rect>
-        <x>50</x>
-        <y>135</y>
-        <width>93</width>
-        <height>28</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Ingresar</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="returnSquareSignal">
-      <property name="geometry">
-       <rect>
-        <x>50</x>
-        <y>160</y>
-        <width>93</width>
-        <height>28</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Volver</string>
-      </property>
-     </widget>
-     <widget class="QDoubleSpinBox" name="squareDCLevelInput">
-      <property name="geometry">
-       <rect>
-        <x>110</x>
-        <y>110</y>
-        <width>62</width>
-        <height>24</height>
-       </rect>
-      </property>
-      <property name="maximum">
-       <double>100.000000000000000</double>
-      </property>
-     </widget>
-     <widget class="QLabel" name="squareDCLevelLabel">
-      <property name="geometry">
-       <rect>
-        <x>10</x>
-        <y>110</y>
-        <width>61</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>DC level</string>
-      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_19">
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_18">
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_15">
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_27">
+             <item>
+              <widget class="QLabel" name="squareAmplitudLabel">
+               <property name="text">
+                <string>Amplitud</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer_12">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="QDoubleSpinBox" name="squareAmplitudInput">
+               <property name="decimals">
+                <number>12</number>
+               </property>
+               <property name="maximum">
+                <double>100000.000000000000000</double>
+               </property>
+               <property name="stepType">
+                <enum>QAbstractSpinBox::AdaptiveDecimalStepType</enum>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_28">
+             <item>
+              <widget class="QLabel" name="squareDutyLabel">
+               <property name="text">
+                <string>Duty (%)</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer_11">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="QDoubleSpinBox" name="squareDutyInput">
+               <property name="suffix">
+                <string>%</string>
+               </property>
+               <property name="decimals">
+                <number>6</number>
+               </property>
+               <property name="maximum">
+                <double>100.000000000000000</double>
+               </property>
+               <property name="stepType">
+                <enum>QAbstractSpinBox::AdaptiveDecimalStepType</enum>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_29">
+             <item>
+              <widget class="QLabel" name="squareDCLevelLabel">
+               <property name="text">
+                <string>DC level</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer_10">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="QDoubleSpinBox" name="squareDCLevelInput">
+               <property name="decimals">
+                <number>12</number>
+               </property>
+               <property name="minimum">
+                <double>-1000.000000000000000</double>
+               </property>
+               <property name="maximum">
+                <double>1000.000000000000000</double>
+               </property>
+               <property name="stepType">
+                <enum>QAbstractSpinBox::AdaptiveDecimalStepType</enum>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_14">
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_25">
+             <item>
+              <widget class="QLabel" name="squareFrequencyLabel">
+               <property name="text">
+                <string>Frecuencia </string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QDoubleSpinBox" name="squareFrequencyInput">
+               <property name="decimals">
+                <number>4</number>
+               </property>
+               <property name="maximum">
+                <double>10000.000000000000000</double>
+               </property>
+               <property name="stepType">
+                <enum>QAbstractSpinBox::AdaptiveDecimalStepType</enum>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QComboBox" name="squareFreqComboBox">
+               <item>
+                <property name="text">
+                 <string>Hz</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>kHz</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>GHz</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>MHz</string>
+                </property>
+               </item>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_26">
+             <item>
+              <widget class="QLabel" name="squareFinalTimeLabel">
+               <property name="text">
+                <string>Tiempo final</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QDoubleSpinBox" name="squareFinalTimeInput">
+               <property name="suffix">
+                <string/>
+               </property>
+               <property name="decimals">
+                <number>4</number>
+               </property>
+               <property name="maximum">
+                <double>1000.000000000000000</double>
+               </property>
+               <property name="singleStep">
+                <double>1.000000000000000</double>
+               </property>
+               <property name="stepType">
+                <enum>QAbstractSpinBox::AdaptiveDecimalStepType</enum>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QComboBox" name="squareTimeComboBox">
+               <item>
+                <property name="text">
+                 <string>s</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>ms</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>us</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>ns</string>
+                </property>
+               </item>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_30">
+         <item>
+          <widget class="QPushButton" name="saveSquareSignal">
+           <property name="text">
+            <string>Ingresar</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="returnSquareSignal">
+           <property name="text">
+            <string>Volver</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
      </widget>
     </widget>
     <widget class="QWidget" name="triangleSignalInput">
-     <widget class="QLabel" name="triangleAmplitudLabel">
-      <property name="geometry">
-       <rect>
-        <x>20</x>
-        <y>20</y>
-        <width>50</width>
-        <height>16</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Amplitud</string>
-      </property>
-     </widget>
-     <widget class="QDoubleSpinBox" name="triangleAmplitudInput">
-      <property name="geometry">
-       <rect>
-        <x>100</x>
-        <y>10</y>
-        <width>62</width>
-        <height>24</height>
-       </rect>
-      </property>
-      <property name="maximum">
-       <double>100000.000000000000000</double>
-      </property>
-     </widget>
-     <widget class="QLabel" name="triangleFrequencyLabel">
+     <widget class="QWidget" name="">
       <property name="geometry">
        <rect>
         <x>10</x>
-        <y>50</y>
-        <width>90</width>
-        <height>16</height>
+        <y>10</y>
+        <width>221</width>
+        <height>201</height>
        </rect>
       </property>
-      <property name="text">
-       <string>Frecuencia (Hz)</string>
-      </property>
-     </widget>
-     <widget class="QDoubleSpinBox" name="triangleFrequencyInput">
-      <property name="geometry">
-       <rect>
-        <x>110</x>
-        <y>40</y>
-        <width>62</width>
-        <height>24</height>
-       </rect>
-      </property>
-      <property name="maximum">
-       <double>10000000.000000000000000</double>
-      </property>
-     </widget>
-     <widget class="QLabel" name="triangleSymetryLabel">
-      <property name="geometry">
-       <rect>
-        <x>20</x>
-        <y>80</y>
-        <width>73</width>
-        <height>16</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Symetry (%)</string>
-      </property>
-     </widget>
-     <widget class="QDoubleSpinBox" name="triangleSymetryInput">
-      <property name="geometry">
-       <rect>
-        <x>110</x>
-        <y>80</y>
-        <width>62</width>
-        <height>24</height>
-       </rect>
-      </property>
-      <property name="maximum">
-       <double>100.000000000000000</double>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="saveTriangleSignal">
-      <property name="geometry">
-       <rect>
-        <x>60</x>
-        <y>140</y>
-        <width>93</width>
-        <height>28</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Ingresar</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="returnTriangleSignal">
-      <property name="geometry">
-       <rect>
-        <x>60</x>
-        <y>169</y>
-        <width>93</width>
-        <height>28</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Volver</string>
-      </property>
-     </widget>
-     <widget class="QDoubleSpinBox" name="triangleDCLevelInput">
-      <property name="geometry">
-       <rect>
-        <x>110</x>
-        <y>110</y>
-        <width>62</width>
-        <height>24</height>
-       </rect>
-      </property>
-      <property name="maximum">
-       <double>100.000000000000000</double>
-      </property>
-     </widget>
-     <widget class="QLabel" name="triangleDCLevelLabel">
-      <property name="geometry">
-       <rect>
-        <x>20</x>
-        <y>110</y>
-        <width>73</width>
-        <height>16</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>DC level</string>
-      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_21">
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_20">
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_34">
+           <item>
+            <widget class="QLabel" name="triangleAmplitudLabel">
+             <property name="text">
+              <string>Amplitud</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_14">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <widget class="QDoubleSpinBox" name="triangleAmplitudInput">
+             <property name="decimals">
+              <number>12</number>
+             </property>
+             <property name="maximum">
+              <double>100000.000000000000000</double>
+             </property>
+             <property name="stepType">
+              <enum>QAbstractSpinBox::AdaptiveDecimalStepType</enum>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_35">
+           <item>
+            <widget class="QLabel" name="triangleSymetryLabel">
+             <property name="text">
+              <string>Symetry (%)</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_15">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <widget class="QDoubleSpinBox" name="triangleSymetryInput">
+             <property name="suffix">
+              <string>%</string>
+             </property>
+             <property name="decimals">
+              <number>6</number>
+             </property>
+             <property name="maximum">
+              <double>100.000000000000000</double>
+             </property>
+             <property name="stepType">
+              <enum>QAbstractSpinBox::AdaptiveDecimalStepType</enum>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_36">
+           <item>
+            <widget class="QLabel" name="triangleDCLevelLabel">
+             <property name="text">
+              <string>DC level</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_16">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <widget class="QDoubleSpinBox" name="triangleDCLevelInput">
+             <property name="decimals">
+              <number>12</number>
+             </property>
+             <property name="minimum">
+              <double>-1000.000000000000000</double>
+             </property>
+             <property name="maximum">
+              <double>1000.000000000000000</double>
+             </property>
+             <property name="stepType">
+              <enum>QAbstractSpinBox::AdaptiveDecimalStepType</enum>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_37">
+           <item>
+            <widget class="QLabel" name="triangleFrequencyLabel">
+             <property name="text">
+              <string>Frecuencia </string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QDoubleSpinBox" name="triangleFrequencyInput">
+             <property name="decimals">
+              <number>4</number>
+             </property>
+             <property name="maximum">
+              <double>10000.000000000000000</double>
+             </property>
+             <property name="stepType">
+              <enum>QAbstractSpinBox::AdaptiveDecimalStepType</enum>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QComboBox" name="triangleFreqComboBox">
+             <item>
+              <property name="text">
+               <string>Hz</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>kHz</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>GHz</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>MHz</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_38">
+           <item>
+            <widget class="QLabel" name="triangleFinalTimeLabel">
+             <property name="text">
+              <string>Tiempo final</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QDoubleSpinBox" name="triangleFinalTimeInput">
+             <property name="suffix">
+              <string/>
+             </property>
+             <property name="decimals">
+              <number>4</number>
+             </property>
+             <property name="maximum">
+              <double>1000.000000000000000</double>
+             </property>
+             <property name="singleStep">
+              <double>1.000000000000000</double>
+             </property>
+             <property name="stepType">
+              <enum>QAbstractSpinBox::AdaptiveDecimalStepType</enum>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QComboBox" name="triangleTimeComboBox">
+             <item>
+              <property name="text">
+               <string>s</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>ms</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>us</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>ns</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <spacer name="verticalSpacer_14">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_39">
+         <item>
+          <widget class="QPushButton" name="saveTriangleSignal">
+           <property name="text">
+            <string>Ingresar</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="returnTriangleSignal">
+           <property name="text">
+            <string>Volver</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
      </widget>
     </widget>
-    <widget class="QWidget" name="arbitrarySignalInput"/>
+    <widget class="QWidget" name="timeInput"/>
    </widget>
-   <widget class="QCheckBox" name="signalResponseCheckBox">
+   <widget class="Line" name="line">
     <property name="geometry">
      <rect>
-      <x>90</x>
-      <y>840</y>
-      <width>70</width>
-      <height>17</height>
+      <x>270</x>
+      <y>0</y>
+      <width>20</width>
+      <height>891</height>
      </rect>
     </property>
-    <property name="text">
-     <string>Incluir </string>
-    </property>
-    <property name="checked">
-     <bool>true</bool>
+    <property name="orientation">
+     <enum>Qt::Vertical</enum>
     </property>
    </widget>
-   <widget class="QLabel" name="itbaLogo">
+   <widget class="QWidget" name="">
     <property name="geometry">
      <rect>
-      <x>940</x>
+      <x>1020</x>
+      <y>10</y>
+      <width>277</width>
+      <height>222</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_23">
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_44">
+       <item>
+        <widget class="QLabel" name="itbaLogo">
+         <property name="text">
+          <string/>
+         </property>
+         <property name="pixmap">
+          <pixmap resource="../resources/itbaLogo.qrc">:/prefijoNuevo/itbaLogo.png</pixmap>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer_28">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <widget class="QLabel" name="groupTextLabel">
+       <property name="font">
+        <font>
+         <pointsize>18</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Plot Tool - Grupo 6</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="removePlotsAction">
+       <property name="palette">
+        <palette>
+         <active>
+          <colorrole role="ButtonText">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>197</red>
+             <green>0</green>
+             <blue>0</blue>
+            </color>
+           </brush>
+          </colorrole>
+         </active>
+         <inactive>
+          <colorrole role="ButtonText">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>197</red>
+             <green>0</green>
+             <blue>0</blue>
+            </color>
+           </brush>
+          </colorrole>
+         </inactive>
+         <disabled>
+          <colorrole role="ButtonText">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>120</red>
+             <green>120</green>
+             <blue>120</blue>
+            </color>
+           </brush>
+          </colorrole>
+         </disabled>
+        </palette>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>20</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Borrar Todo</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>590</y>
+      <width>163</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_41">
+     <item>
+      <spacer name="horizontalSpacer_17">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QCheckBox" name="csvFunctionCheckBox">
+       <property name="text">
+        <string>Incluir </string>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer_18">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </widget>
+   <widget class="plotTableGain" name="plotTableGain" native="true">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
       <y>20</y>
-      <width>221</width>
-      <height>71</height>
+      <width>721</width>
+      <height>401</height>
      </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="pixmap">
-     <pixmap resource="../resources/itbaLogo.qrc">:/prefijoNuevo/itbaLogo.png</pixmap>
     </property>
    </widget>
-   <widget class="QCheckBox" name="Same_plot_checkbox">
+   <widget class="plotTablePhase" name="plotTablePhase" native="true">
     <property name="geometry">
      <rect>
-      <x>540</x>
-      <y>840</y>
-      <width>151</width>
-      <height>17</height>
+      <x>290</x>
+      <y>420</y>
+      <width>721</width>
+      <height>411</height>
      </rect>
     </property>
-    <property name="text">
-     <string>Plotear en el mismo gráfico</string>
+   </widget>
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>2</width>
+      <height>2</height>
+     </rect>
     </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_15"/>
+   </widget>
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>2</width>
+      <height>2</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_17"/>
+   </widget>
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>850</y>
+      <width>163</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_40">
+     <item>
+      <spacer name="horizontalSpacer_19">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QCheckBox" name="signalResponseCheckBox">
+       <property name="text">
+        <string>Incluir </string>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer_20">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>440</y>
+      <width>163</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_42">
+     <item>
+      <spacer name="horizontalSpacer_21">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QCheckBox" name="spiceFunctionCheckBox">
+       <property name="text">
+        <string>Incluir </string>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer_22">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>300</y>
+      <width>163</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_43">
+     <item>
+      <spacer name="horizontalSpacer_23">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QCheckBox" name="transferFunctionCheckBox">
+       <property name="text">
+        <string>Incluir </string>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer_24">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>490</x>
+      <y>840</y>
+      <width>281</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_45">
+     <item>
+      <spacer name="horizontalSpacer_25">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QCheckBox" name="Same_plot_checkbox">
+       <property name="text">
+        <string>Plotear en el mismo gráfico</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer_26">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
    </widget>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
