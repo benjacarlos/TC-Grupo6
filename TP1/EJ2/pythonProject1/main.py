@@ -1,15 +1,16 @@
+import os
 from enum import Enum
-from PyQt5 import QtCore
+
+import pandas as pd
+from PyQt5 import QtCore, QtWidgets
 from PyQt5.Qt import pyqtSlot
 from PyQt5.QtWidgets import *
 from PyQt5.QtWidgets import QFileDialog
-from src.ui.bodePlotter import Ui_bodePlotterWindow
-from PyQt5 import QtCore, QtGui, QtWidgets
 
-import os
-import pandas as pd
 import src.package.bodeFunctions as bode
 import src.package.signalFunctions as sr
+from src.ui.bodePlotter import Ui_bodePlotterWindow
+
 
 #############################################
 # Funcionalidad:                            #
@@ -353,7 +354,7 @@ class myPlot(QMainWindow, Ui_bodePlotterWindow):
         elif self.transferFunctionNumInput.text() == "0" or self.transferFunctionDenInput.text() == "0":
             msgWrongInput.setText("No está permitido agregar solo \" 0\" ")
             msgWrongInput.exec()
-        elif (self.transferFunctionNumInput.text().islower() or self.transferFunctionDenInput.text().islower()) and ("e-" not in self.transferFunctionNumInput.text()):
+        elif (self.transferFunctionNumInput.text().islower() or self.transferFunctionDenInput.text().islower()) and ("e-" not in self.transferFunctionNumInput.text() or "e-" not in self.transferFunctionDenInput.text()):
             msgWrongInput.setText("Solo están permitidos números separados por \" ,\" ")
             msgWrongInput.exec()
 
