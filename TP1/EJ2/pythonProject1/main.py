@@ -340,7 +340,7 @@ class myPlot(QMainWindow, Ui_bodePlotterWindow):
         elif self.transferFunctionNumInput.text() == "0" or self.transferFunctionDenInput.text() == "0":
             msgWrongInput.setText("No está permitido agregar solo \" 0\" ")
             msgWrongInput.exec()
-        elif self.transferFunctionNumInput.text().islower() or self.transferFunctionDenInput.text().islower():
+        elif (self.transferFunctionNumInput.text().islower() or self.transferFunctionDenInput.text().islower()) and ("e-" not in self.transferFunctionNumInput.text()):
             msgWrongInput.setText("Solo están permitidos números separados por \" ,\" ")
             msgWrongInput.exec()
 
@@ -637,7 +637,6 @@ class myPlot(QMainWindow, Ui_bodePlotterWindow):
 
             # En caso de haberse introducido un archivo de LTSpice o medición, se envía mensaje de error #
 
-            elif (myBody.bodeType == "spiceFunction" and myBode.bodeGraph == True) or (myBody.bodeType == "csvFunction" and myBode.bodeGraph ==  True):
             elif (myBode.bodeType == "spiceFunction" and myBode.bodeGraph == True) or (myBode.bodeType == "csvFunction" and myBode.bodeGraph ==  True):
                 msgWrongInput.setText("Opción valida con H(s)\nDesactive las demás funciones")
                 msgWrongInput.exec()
