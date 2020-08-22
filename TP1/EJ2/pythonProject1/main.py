@@ -731,6 +731,7 @@ class myPlot(QMainWindow, Ui_bodePlotterWindow):
         else:
             self.plotting_mode = PlottingMode.DoubleGraph
             self.plotTableGain.canvas.aux_axes.axis('off')
+            self.plotTableGain.canvas.aux_axes.clear
             self.plotTableGain.canvas.aux_axes.remove()
             self.plotTablePhase.setVisible(True)
             self.plotTableGain.setGeometry(QtCore.QRect(290, 20, 721, 401))
@@ -790,6 +791,7 @@ class myPlot(QMainWindow, Ui_bodePlotterWindow):
             self.plotTableGain.canvas.aux_axes.axis('off')
             self.plotTableGain.canvas.aux_axes.clear
             self.plotTableGain.canvas.aux_axes.remove()
+
 
         self.bodes.bodesList.clear()
         self.sgList.signalList.clear()        
