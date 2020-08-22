@@ -4,6 +4,7 @@ from PyQt5.Qt import pyqtSlot
 from PyQt5.QtWidgets import *
 from PyQt5.QtWidgets import QFileDialog
 from src.ui.bodePlotter import Ui_bodePlotterWindow
+from PyQt5 import QtCore, QtGui, QtWidgets
 
 import os
 import pandas as pd
@@ -64,6 +65,7 @@ class myPlot(QMainWindow, Ui_bodePlotterWindow):
         self.y_gain_label=""
         self.x_phase_label=""
         self.y_phase_label=""
+        self.y_aux_phase_label=""
 
         # Contador de labels para graficos sin nombre #
 
@@ -94,6 +96,10 @@ class myPlot(QMainWindow, Ui_bodePlotterWindow):
         self.signalFunctionAction.clicked.connect(self.showSignalFunctionMenu) 
         self.impulseSignalAction.clicked.connect(self.showImpulseSignalInput)
         self.stepSignalAction.clicked.connect(self.showStepSignalInput)
+        self.y_aux_LabelInput = QtWidgets.QLineEdit(self.centralwidget)
+        self.y_aux_LabelInput.setObjectName("y_aux_LabelInput")
+        self.y_aux_LabelInput.setGeometry(QtCore.QRect(135, 80, 75, 21))
+        self.y_aux_LabelInput.setVisible(False)
         self.sineSignalAction.clicked.connect(self.showSineSignalInput)
         self.squareSignalAction.clicked.connect(self.showSquareSignalInput)
         self.triangleSignalAction.clicked.connect(self.showTriangleSignalInput)
@@ -134,6 +140,8 @@ class myPlot(QMainWindow, Ui_bodePlotterWindow):
         self.plotTableGain.canvas.axes.clear()
         self.plotTablePhase.canvas.axes.clear()
         self.plotTableGain.canvas.axes.title.set_text('Diagrama de BODE - MAGNITUD y FASE')
+        self.plotTableGain.canvas.aux_axes = self.plotTableGain.canvas.axes.twinx()
+
 
 
         for myBode in self.bodes.bodesList:
@@ -147,13 +155,14 @@ class myPlot(QMainWindow, Ui_bodePlotterWindow):
 
                     # Grafica apropiadamente según cada caso de Input #
 
+
                 if myBode.bodeType == "csvFunction":
                     self.plotTableGain.canvas.axes.plot(myBode.w, myBode.mag, '-o', color=myBode.color, label="|"+myBode.label+"|")
-                    self.plotTableGain.canvas.axes.plot(myBode.w, myBode.phase, '-o', color=myBode.color,label="Fase "+myBode.label)
+                    self.plotTableGain.canvas.aux_axes.scatter(myBode.w, myBode.phase, color=myBode.color,label="Fase " + myBode.label)
                     self.plotTableGain.canvas.axes.set_xscale('log')
                 else:
                     self.plotTableGain.canvas.axes.semilogx(myBode.w, myBode.mag, color=myBode.color ,label="|"+myBode.label+"|")
-                    self.plotTableGain.canvas.axes.plot(myBode.w, myBode.phase, color=myBode.color, linestyle='dashed', label="Fase "+myBode.label)
+                    self.plotTableGain.canvas.aux_axes.plot(myBode.w, myBode.phase, '--', color=myBode.color, label="Fase " + myBode.label)
 
                 self.plotTableGain.canvas.axes.grid(True, which="both")
                 self.plotTableGain.canvas.axes.minorticks_on()  # Necesitamos esto para usar los ticks menores!
@@ -161,15 +170,17 @@ class myPlot(QMainWindow, Ui_bodePlotterWindow):
 
 
                 # Administración de Labels #
-
+                myBode.phase_legend = self.plotTablePhase.canvas.axes.legend(fancybox=True, framealpha=1)
                 myBode.gain_legend = self.plotTableGain.canvas.axes.legend(fancybox=True, framealpha=0.5, fontsize='small')
 
         # Refresca el gráfico #
 
         self.plotTableGain.canvas.axes.axes.set_xlabel(self.x_gain_label)
         self.plotTableGain.canvas.axes.axes.set_ylabel(self.y_gain_label)
+        self.plotTableGain.canvas.aux_axes.axes.set_ylabel(self.y_aux_phase_label)
         self.plotTableGain.canvas.figure.tight_layout()
         self.plotTableGain.canvas.draw()
+
 
     #############################################
     # Funcionalidad:                            #
@@ -637,7 +648,7 @@ class myPlot(QMainWindow, Ui_bodePlotterWindow):
 
             # En caso de haberse introducido un archivo de LTSpice o medición, se envía mensaje de error #
 
-            elif (myBody.bodeType == "spiceFunction" and myBode.bodeGraph == True) or (myBody.bodeType == "csvFunction" and myBode.bodeGraph ==  True):
+            elif (myBode.bodeType == "spiceFunction" and myBode.bodeGraph == True) or (myBode.bodeType == "csvFunction" and myBode.bodeGraph ==  True):
                 msgWrongInput.setText("Opción valida con H(s)\nDesactive las demás funciones")
                 msgWrongInput.exec()
                 self.on_plot_update()
@@ -702,18 +713,29 @@ class myPlot(QMainWindow, Ui_bodePlotterWindow):
         if self.plotting_mode == PlottingMode.DoubleGraph:
             self.plotting_mode = PlottingMode.SingleGraph
             self.plotTablePhase.setVisible(False)
-            self.plotTableGain.setGeometry(QtCore.QRect(280, 280, 651, 401))
+            self.plotTableGain.setGeometry(QtCore.QRect(290, 280, 721, 401))
             self.phaseUpdateLabel.setVisible(False)
             self.gainUpdateLabel.setGeometry(QtCore.QRect(90, 110, 61, 23))
             self.gainUpdateLabel.setText("H(jw)")
+
+            self.y_aux_LabelInput.setVisible(True)
+            self.yLabelInput.setGeometry(QtCore.QRect(40, 80, 75, 21))
+
             self.on_plot_update()
+
+
+
         else:
             self.plotting_mode = PlottingMode.DoubleGraph
+            self.plotTableGain.canvas.aux_axes.axis('off')
+            self.plotTableGain.canvas.aux_axes.remove()
             self.plotTablePhase.setVisible(True)
-            self.plotTableGain.setGeometry(QtCore.QRect(280, 30, 651, 401))
+            self.plotTableGain.setGeometry(QtCore.QRect(290, 20, 721, 401))
             self.phaseUpdateLabel.setVisible(True)
             self.gainUpdateLabel.setGeometry(QtCore.QRect(60, 110, 61, 23))
             self.gainUpdateLabel.setText("|H(jw)|")
+            self.y_aux_LabelInput.setVisible(False)
+            self.yLabelInput.setGeometry(QtCore.QRect(40, 80, 171, 21))
             self.on_plot_update()
 
     #############################################
@@ -728,6 +750,12 @@ class myPlot(QMainWindow, Ui_bodePlotterWindow):
         self.y_gain_label = self.yLabelInput.text()
         self.xLabelInput.clear()
         self.yLabelInput.clear()
+
+        if self.plotting_mode==PlottingMode.SingleGraph:
+            self.y_aux_phase_label = self.y_aux_LabelInput.text()
+            self.y_aux_LabelInput.clear()
+            self.plotTableGain.canvas.aux_axes.axes.set_ylabel(self.y_aux_phase_label)
+
         self.plotTableGain.canvas.axes.axes.set_xlabel(self.x_gain_label)
         self.plotTableGain.canvas.axes.axes.set_ylabel(self.y_gain_label)
         self.plotTableGain.canvas.figure.tight_layout()
@@ -743,8 +771,6 @@ class myPlot(QMainWindow, Ui_bodePlotterWindow):
     def updatePhaseLabel(self):
         self.x_phase_label = self.xLabelInput.text()
         self.y_phase_label = self.yLabelInput.text()
-        self.xLabelInput.clear()
-        self.yLabelInput.clear()
         self.plotTablePhase.canvas.axes.axes.set_xlabel(self.x_gain_label)
         self.plotTablePhase.canvas.axes.axes.set_ylabel(self.y_gain_label)
         self.plotTablePhase.canvas.figure.tight_layout()
