@@ -170,8 +170,10 @@ class myPlot(QMainWindow, Ui_bodePlotterWindow):
 
 
                 # Administración de Labels #
-                myBode.phase_legend = self.plotTablePhase.canvas.axes.legend(fancybox=True, framealpha=1)
-                myBode.gain_legend = self.plotTableGain.canvas.axes.legend(fancybox=True, framealpha=0.5, fontsize='small')
+                myBode.phase_legend = self.plotTableGain.canvas.aux_axes.legend(fancybox=True, framealpha=0.5, loc='best', fontsize='small')
+                # myBode.phase_legend_aux = self.plotTableGain.canvas.aux_axes.legend(fancybox=True, framealpha=1)
+                myBode.gain_legend = self.plotTableGain.canvas.axes.legend(fancybox=True, framealpha=0.5, loc='best', fontsize='small')
+                # myBode.phase_legend_aux = self.plotTableGain.canvas.aux_axes.legend(fancybox=True, framealpha=1)
 
         # Refresca el gráfico #
 
