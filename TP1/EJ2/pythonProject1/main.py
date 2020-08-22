@@ -638,6 +638,7 @@ class myPlot(QMainWindow, Ui_bodePlotterWindow):
             # En caso de haberse introducido un archivo de LTSpice o medición, se envía mensaje de error #
 
             elif (myBody.bodeType == "spiceFunction" and myBode.bodeGraph == True) or (myBody.bodeType == "csvFunction" and myBode.bodeGraph ==  True):
+            elif (myBode.bodeType == "spiceFunction" and myBode.bodeGraph == True) or (myBode.bodeType == "csvFunction" and myBode.bodeGraph ==  True):
                 msgWrongInput.setText("Opción valida con H(s)\nDesactive las demás funciones")
                 msgWrongInput.exec()
                 self.on_plot_update()
