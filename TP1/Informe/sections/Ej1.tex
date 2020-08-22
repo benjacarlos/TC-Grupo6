@@ -50,7 +50,18 @@ $$h(t) = \delta (t) - 528113e^{-457359t}u(t) + 37916e^{-32836t}u(t)$$
 Con la ecuación de la respuesta en frecuencia $H(s)$ con $s=jw$ podemos realizar un diagrama de Bode teórico; a su vez si simulamos el diseño en LTSpice podemos observar otra respuesta en frecuencia que difiere un poco. Concatenando ambos diagramas obtenemos lo siguiente:
 
 
-%figura de los 2 bodes
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.7]{Bode Magnitud.jpeg}
+\caption{Comparación en magnitud}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.7]{Bode Fase.jpeg}
+\caption{Comparación en fase}
+\end{figure}
+
 
 Observamos que a grandes rasgos ambas curvas son similares teniendo la teórica su $f_{0teo} \approx $ y $f_{0sim} \approx $. Existe una diferencia pequeña debido a que en los cálculos teóricos asumimos que $R = R1 = R2 = 2 \cdot R3$ y $C = C1 = C2 = \frac{C3}{2}$, que al cabo de seleccionar los componentes notamos que, si bien se comportan aproximadamente a la relación mencionada, en la simulación la relación establecida fue: $\frac{R}{R3} \approx 2.14$ y $\frac{C}{C3} \approx 0.45$, por lo que significaría que $i_2 = i_5$ no es totalmente acertado. Además en la practica debemos tener en cuenta que los componentes no son perfectos, estas tienen tolerancias de un $10\%$ por lo que en un experimento estas curvas presentaran mas divergencia.
 
