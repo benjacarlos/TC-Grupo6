@@ -785,8 +785,10 @@ class myPlot(QMainWindow, Ui_bodePlotterWindow):
     #############################################
 
     def removePlots(self):
-        self.plotTableGain.canvas.aux_axes.axis('off')
-        self.plotTableGain.canvas.aux_axes.remove()
+        if self.plotting_mode == PlottingMode.SingleGraph:
+            self.plotTableGain.canvas.aux_axes.axis('off')
+            self.plotTableGain.canvas.aux_axes.remove()
+
         self.bodes.bodesList.clear()
         self.sgList.signalList.clear()        
         self.bodes.color_index=0
