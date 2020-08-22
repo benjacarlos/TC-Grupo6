@@ -1,15 +1,16 @@
+import os
 from enum import Enum
-from PyQt5 import QtCore
+
+import pandas as pd
+from PyQt5 import QtCore, QtWidgets
 from PyQt5.Qt import pyqtSlot
 from PyQt5.QtWidgets import *
 from PyQt5.QtWidgets import QFileDialog
-from src.ui.bodePlotter import Ui_bodePlotterWindow
-from PyQt5 import QtCore, QtGui, QtWidgets
 
-import os
-import pandas as pd
 import src.package.bodeFunctions as bode
 import src.package.signalFunctions as sr
+from src.ui.bodePlotter import Ui_bodePlotterWindow
+
 
 #############################################
 # Funcionalidad:                            #
