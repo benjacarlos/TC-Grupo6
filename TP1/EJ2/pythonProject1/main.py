@@ -353,7 +353,7 @@ class myPlot(QMainWindow, Ui_bodePlotterWindow):
         elif self.transferFunctionNumInput.text() == "0" or self.transferFunctionDenInput.text() == "0":
             msgWrongInput.setText("No está permitido agregar solo \" 0\" ")
             msgWrongInput.exec()
-        elif (self.transferFunctionNumInput.text().islower() or self.transferFunctionDenInput.text().islower()) and ("e-" not in self.transferFunctionNumInput.text()):
+        elif (self.transferFunctionNumInput.text().islower() or self.transferFunctionDenInput.text().islower()) and ("e-" not in self.transferFunctionNumInput.text() or "e-" not in self.transferFunctionDenInput.text()):
             msgWrongInput.setText("Solo están permitidos números separados por \" ,\" ")
             msgWrongInput.exec()
 
