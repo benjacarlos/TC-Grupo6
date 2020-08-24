@@ -67,6 +67,53 @@ class bodes():
 
         return data
 
+    def __read_file_ltspice__from_wf(self, lines):
+
+        data = dict()
+
+        data["w"] = []
+        data["mag"] = []
+        data["phase"] = []
+
+        for i in range(1, len(lines)):
+            pnt = 0
+            c1 = ""
+            c2 = ""
+            c3 = ""
+            while lines[i][pnt] != '\t':
+                c1 += lines[i][pnt]
+                pnt += 1
+
+            while self.__not_num__(lines[i][pnt]):
+                if lines[i][pnt] == 'n':
+                    return data
+                pnt += 1
+
+            while lines[i][pnt] != '\t':
+                c2 += lines[i][pnt]
+                pnt += 1
+
+
+
+            while self.__not_num__(lines[i][pnt]):
+                pnt += 1
+
+            while lines[i][pnt] != '\n':
+                c3 += lines[i][pnt]
+                pnt += 1
+
+            c1 = float(c1)
+            c2 = float(c2)
+            c3 = float(c3)
+            #       if(c3<360):
+            #            c3=c3-360
+
+            data["w"].append(c1)
+            data["mag"].append(c2)
+            data["phase"].append(c3)
+
+        return data
+
     def __not_num__(self, content):
         if content == "0":
             return 0
@@ -93,7 +140,10 @@ class bodes():
         return 1
 
     def plot_from_ltspice(self, lines):
-        data = self.__read_file_ltspice__(lines)
+        try:
+            data = self.__read_file_ltspice__(lines)
+        except:
+            data = self.__read_file_ltspice__from_wf(lines)
         return data
 
 #############################################
