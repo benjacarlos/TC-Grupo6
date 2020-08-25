@@ -186,7 +186,89 @@ Se podrá seleccionar/desseleccionar uno, dos o los tres tipos con los efectos c
     \label{fig:checkBoxPlotTool}
 \end{figure}
 
+\subsubsection{Graficos de señal de entrada y respuesta a señal}
 
+Se presenta la posibilidad de obtener un gráfico de una señal introducida y la respuesta temporal a ésta de uno o varios sistemas introducidos previamente.
+Para poder graficar correctamente la respuesta a una señal, se debe primeramente ingresar al menos una función transferencia, tal como se detalla en la sección $2.2.2$. Posteriormente, se debe seleccionar la opción de $Señales$ en la ventana principal (Figura 14), accediendo a un menú en el cual se puede escoger entre distintas señales, tal como se visualizan en la (Figura 23). Al presionar el botón correspondiente a una señal de entrada, aparecen los campos donde introducir sus parámetros. Presionando $Ingresar$ se obtienen en pantalla los gráficos de la señal y la respuesta a ella. En el gráfico superior se visualiza la señal de entrada (en la correspondiente al gráfico de Magnitud en el gráfico de BODE) y en la parte inferior la/s respuesta/s a la señal (correspondiente al gráfico de Fase en el gráfico de BODE). Se pueden ingresar las etiquetas de los ejes X e Y, como se detalla en la sección $2.2.1$.
+
+\begin{figure}[!htb] 
+    \centering 
+    \includegraphics  [scale=0.8]{../EJ2/LatexScreenshots/signalsoption.png} 
+    \caption{Opción Señales en ventana principal}
+    \label{fig:signalsoption}
+\end{figure}
+
+\begin{figure}[!htb] 
+    \centering 
+    \includegraphics  [scale=0.8]{../EJ2/LatexScreenshots/signalsmenu.png} 
+    \caption{Menú de señales}
+    \label{fig:signalsmenu}
+\end{figure}
+
+La señal introducida es aplicada sobre todas las funciones transferencia almacenadas. Tener en cuenta la condición que el grado del denominador de la $H(s)$ debe ser mayor o igual al del numerador. En caso contrario, aparecerá en pantalla una notificación de error. De no haber ingresado una función H(s), se solicitará al usuario mediante una notificación. Del mismo modo, de haber introducido un archivo LTSpice o de extensión 'csv', como se detallan en las secciones $2.2.3$ y $2.2.4$ respectivamente, saltará un error.
+
+En todo momento, se puede regresar inmediatamente a la sección anterior mediante el botón $Volver$.
+
+Cada uno de los parámetros se puede ingresar con distinta cantidad de cifras significativas. Al confirmar los valores, se limpian las casillas. 
+
+Todas las señales introducidas parten de un tiempo inicial igual a cero segundos. Común a todas es el parámetro a ingresar $Tiempo final$, donde se debe detallar el tiempo hasta el cual se desea ver la respuesta temporal. Se tiene junto a la casilla una opción de unidades para brindar mayor facilidad (segundos ‘s’, milisegundos ‘ms’, microsegundos ‘us’ y nanosegundos ‘ns’). 
+
+Se detallan los parámetros requeridos para cada una de las señales:
+
+
+
+
+
+\begin{itemize}
+    \item Impulso: $Amplitud$ y el $Tiempo final$. Ver Figura 16. 
+\end{itemize}
+
+\begin{itemize}
+    \item Escalón: ídem Impulso.
+\end{itemize}
+
+
+\begin{figure}[!htb] 
+    \centering 
+    \includegraphics  [scale=0.8] {../EJ2/LatexScreenshots/impulse.png} 
+    \caption{Parámetros de señal impulso y escalón}
+    \label{fig:impulse}
+    \end{figure}
+
+\begin{itemize}
+    \item Senoidal: $Amplitud$; $Fase$ (entre -360 y 360); Nivel de continua ($DC Level$); $Frecuencia$ (con posibilidad de escoger entre Hz, kHz, MHz y GHz), y $Tiempo final$.
+\end{itemize}
+
+\begin{figure}[!htb] 
+    \centering 
+    \includegraphics  [scale=0.8] {../EJ2/LatexScreenshots/senoidal.png} 
+    \caption{Parámetros de señal senoidal}
+    \label{fig:senoidal}
+\end{figure}
+
+\begin{itemize}
+    \item Onda cuadrada: $Amplitud$; $Duty Cycle$ (en \%); Nivel de continua ($DC Level$); Frecuencia (en Hz, kHz, MHz y GHz), y Tiempo final.
+\end{itemize}
+
+\begin{figure}[!htb] 
+    \centering 
+    \includegraphics  [scale=0.8]{../EJ2/LatexScreenshots/square.png} 
+    \caption{Parámetros de señal Onda cuadrada}
+    \label{fig:square}
+\end{figure}
+
+\begin{itemize}
+    \item Onda triangular: $Amplitud$; $Simetría$ (en \%); Nivel de continua ($DC Level$); $Frecuencia$ (en Hz, kHz, MHz y GHz), y $Tiempo final$. Ver figura.
+  \end{itemize}
+La opción Señales cuenta con un checkbox el cual permite habilitar o deshabilitar los gráficos. 
+Seleccionando la opción ‘Borrar Todo’ se eliminan las funciones transferencia y con ello los gráficos de señales (ver sección $2.2.7$).
+
+\begin{figure}[!htb] 
+    \centering 
+    \includegraphics  [scale=0.8]{../EJ2/LatexScreenshots/triangle.png} 
+    \caption{Parámetros de señal Onda triangular}
+    \label{fig:triangle}
+\end{figure}
 
 \subsubsection{Eliminar los Diagramas de BODE de todas las funciones transferencia}
 

@@ -15,6 +15,7 @@
 \contentsline {subsubsection}{\numberline {2.2.4}Gráfico de Diagramas de BODE mediante carga de archivos de extensión CSV}{9}{subsubsection.2.2.4}%
 \contentsline {subsubsection}{\numberline {2.2.5}Representación de Diagramas de BODE de varias funciones transferencia en simultaneo}{10}{subsubsection.2.2.5}%
 \contentsline {subsubsection}{\numberline {2.2.6}Representación de Diagramas de BODE de un solo tipo}{10}{subsubsection.2.2.6}%
-\contentsline {subsubsection}{\numberline {2.2.7}Eliminar los Diagramas de BODE de todas las funciones transferencia}{11}{subsubsection.2.2.7}%
-\contentsline {subsubsection}{\numberline {2.2.8}Modos de Representación de Diagramas de BODE}{11}{subsubsection.2.2.8}%
-\contentsline {subsubsection}{\numberline {2.2.9}Nota al Ejercicio 2}{13}{subsubsection.2.2.9}%
+\contentsline {subsubsection}{\numberline {2.2.7}Graficos de señal de entrada y respuesta a señal}{11}{subsubsection.2.2.7}%
+\contentsline {subsubsection}{\numberline {2.2.8}Eliminar los Diagramas de BODE de todas las funciones transferencia}{14}{subsubsection.2.2.8}%
+\contentsline {subsubsection}{\numberline {2.2.9}Modos de Representación de Diagramas de BODE}{14}{subsubsection.2.2.9}%
+\contentsline {subsubsection}{\numberline {2.2.10}Nota al Ejercicio 2}{14}{subsubsection.2.2.10}%
