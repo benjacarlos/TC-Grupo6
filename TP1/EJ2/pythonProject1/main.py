@@ -140,7 +140,7 @@ class myPlot(QMainWindow, Ui_bodePlotterWindow):
     def plot_single_graph(self):
         self.plotTableGain.canvas.axes.clear()
         self.plotTablePhase.canvas.axes.clear()
-        self.plotTableGain.canvas.axes.title.set_text('Diagrama de BODE - MAGNITUD y FASE')
+        self.plotTableGain.canvas.axes.title.set_text('Diagrama de Bode - Magnitud y Fase')
         self.plotTableGain.canvas.aux_axes = self.plotTableGain.canvas.axes.twinx()
 
 
@@ -195,8 +195,8 @@ class myPlot(QMainWindow, Ui_bodePlotterWindow):
 
         self.plotTableGain.canvas.axes.clear()
         self.plotTablePhase.canvas.axes.clear()
-        self.plotTableGain.canvas.axes.title.set_text('Diagrama de BODE - MAGNITUD')
-        self.plotTablePhase.canvas.axes.title.set_text('Diagrama de BODE - FASE')
+        self.plotTableGain.canvas.axes.title.set_text('Diagrama de Bode - Magnitud')
+        self.plotTablePhase.canvas.axes.title.set_text('Diagrama de Bode - Fase')
 
 
         for myBode in self.bodes.bodesList:
@@ -348,27 +348,27 @@ class myPlot(QMainWindow, Ui_bodePlotterWindow):
         # Se analiza que el input este en el formato num,num,num,...,n #
         # Caso contrario se muestra un mensaje de error pertinente     #
 
-        if self.transferFunctionNumInput.text() == "" or self.transferFunctionDenInput.text() == "":
-            msgWrongInput.setText("Complete el numerador y denominador con números separados por \" ,\" ")
-            msgWrongInput.exec()
-        elif self.transferFunctionNumInput.text() == "0" or self.transferFunctionDenInput.text() == "0":
-            msgWrongInput.setText("No está permitido agregar solo \" 0\" ")
-            msgWrongInput.exec()
-        elif (self.transferFunctionNumInput.text().islower() or self.transferFunctionDenInput.text().islower()) and ("e-" not in self.transferFunctionNumInput.text() or "e-" not in self.transferFunctionDenInput.text()):
-            msgWrongInput.setText("Solo están permitidos números separados por \" ,\" ")
-            msgWrongInput.exec()
-
-        else:
-            self.numerator = [float(x) for x in self.transferFunctionNumInput.text().split(',')]
-            self.denominator = [float(x) for x in self.transferFunctionDenInput.text().split(',')]
+        # if self.transferFunctionNumInput.text() == "" or self.transferFunctionDenInput.text() == "":
+        #     msgWrongInput.setText("Complete el numerador y denominador con números separados por \" ,\" ")
+        #     msgWrongInput.exec()
+        # elif self.transferFunctionNumInput.text() == "0" or self.transferFunctionDenInput.text() == "0":
+        #     msgWrongInput.setText("No está permitido agregar solo \" 0\" ")
+        #     msgWrongInput.exec()
+        # elif (self.transferFunctionNumInput.text().islower() or self.transferFunctionDenInput.text().islower()) and ("e-" not in self.transferFunctionNumInput.text() or "e-" not in self.transferFunctionDenInput.text()):
+        #     msgWrongInput.setText("Solo están permitidos números separados por \" ,\" ")
+        #     msgWrongInput.exec()
+        #
+        # else:
+        self.numerator = [float(x) for x in self.transferFunctionNumInput.text().split(',')]
+        self.denominator = [float(x) for x in self.transferFunctionDenInput.text().split(',')]
 
             # Se procesa el input para graficarlo en formato de cociente de polinomios #
 
-            printedNumerator = printTransferFunctionInput(self.numerator)
-            printedDenominator = printTransferFunctionInput(self.denominator)
-            self.transferFunction.setCurrentWidget(self.transferFunctionDisplay)
-            self.transferFunctionNumDisplay.setText(printedNumerator)
-            self.transferFunctionDenDisplay.setText(printedDenominator)
+        printedNumerator = printTransferFunctionInput(self.numerator)
+        printedDenominator = printTransferFunctionInput(self.denominator)
+        self.transferFunction.setCurrentWidget(self.transferFunctionDisplay)
+        self.transferFunctionNumDisplay.setText(printedNumerator)
+        self.transferFunctionDenDisplay.setText(printedDenominator)
 
     #############################################
     # Funcionalidad:                            #
