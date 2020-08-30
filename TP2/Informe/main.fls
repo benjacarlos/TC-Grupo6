@@ -2,12 +2,12 @@ PWD d:\Disco HDD\Documentos\Facultad\ITBA\4° año\2° cuatri\22.01 - Teoría de
 INPUT C:\Users\germa\AppData\Local\MiKTeX\2.9\miktex\data\le\pdftex\pdflatex.fmt
 INPUT d:\Disco HDD\Documentos\Facultad\ITBA\4° año\2° cuatri\22.01 - Teoría de Circuitos\Cursada\Trabajos Prácticos\TC-Grupo6\TP2\Informe\main.tex
 OUTPUT d:\Disco HDD\Documentos\Facultad\ITBA\4° año\2° cuatri\22.01 - Teoría de Circuitos\Cursada\Trabajos Prácticos\TC-Grupo6\TP2\Informe\main.log
+INPUT d:\Disco HDD\Documentos\Facultad\ITBA\4° año\2° cuatri\22.01 - Teoría de Circuitos\Cursada\Trabajos Prácticos\TC-Grupo6\TP2\Informe\preamble.tex
+INPUT d:\Disco HDD\Documentos\Facultad\ITBA\4° año\2° cuatri\22.01 - Teoría de Circuitos\Cursada\Trabajos Prácticos\TC-Grupo6\TP2\Informe\preamble.tex
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\base\article.cls
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\base\article.cls
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\base\size10.clo
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\base\size10.clo
-INPUT preamble.tex
-INPUT preamble.tex
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\base\inputenc.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\base\inputenc.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\generic\babel\babel.sty
@@ -313,8 +313,14 @@ INPUT C:\Program Files\MiKTeX 2.9\tex\latex\refcount\refcount.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\refcount\refcount.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\generic\gettitlestring\gettitlestring.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\generic\gettitlestring\gettitlestring.sty
-OUTPUT d:\Disco HDD\Documentos\Facultad\ITBA\4° año\2° cuatri\22.01 - Teoría de Circuitos\Cursada\Trabajos Prácticos\TC-Grupo6\TP2\Informe\main.out
+INPUT d:\Disco HDD\Documentos\Facultad\ITBA\4° año\2° cuatri\22.01 - Teoría de Circuitos\Cursada\Trabajos Prácticos\TC-Grupo6\TP2\Informe\main.out
+INPUT d:\Disco HDD\Documentos\Facultad\ITBA\4° año\2° cuatri\22.01 - Teoría de Circuitos\Cursada\Trabajos Prácticos\TC-Grupo6\TP2\Informe\main.out
+INPUT d:\Disco HDD\Documentos\Facultad\ITBA\4° año\2° cuatri\22.01 - Teoría de Circuitos\Cursada\Trabajos Prácticos\TC-Grupo6\TP2\Informe\main.out
+INPUT d:\Disco HDD\Documentos\Facultad\ITBA\4° año\2° cuatri\22.01 - Teoría de Circuitos\Cursada\Trabajos Prácticos\TC-Grupo6\TP2\Informe\main.out
 OUTPUT d:\Disco HDD\Documentos\Facultad\ITBA\4° año\2° cuatri\22.01 - Teoría de Circuitos\Cursada\Trabajos Prácticos\TC-Grupo6\TP2\Informe\main.pdf
+INPUT d:\Disco HDD\Documentos\Facultad\ITBA\4° año\2° cuatri\22.01 - Teoría de Circuitos\Cursada\Trabajos Prácticos\TC-Grupo6\TP2\Informe\main.out
+INPUT d:\Disco HDD\Documentos\Facultad\ITBA\4° año\2° cuatri\22.01 - Teoría de Circuitos\Cursada\Trabajos Prácticos\TC-Grupo6\TP2\Informe\main.out
+OUTPUT d:\Disco HDD\Documentos\Facultad\ITBA\4° año\2° cuatri\22.01 - Teoría de Circuitos\Cursada\Trabajos Prácticos\TC-Grupo6\TP2\Informe\main.out
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\base\textcomp.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\base\textcomp.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1enc.def
@@ -323,8 +329,6 @@ INPUT C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1enc.dfu
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1enc.dfu
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\translator\translator-basic-dictionary-English.dict
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\translator\translator-basic-dictionary-English.dict
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\translator\translator-basic-dictionary-Spanish.dict
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\translator\translator-basic-dictionary-Spanish.dict
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\siunitx\siunitx-abbreviations.cfg
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\siunitx\siunitx-abbreviations.cfg
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
@@ -381,13 +385,19 @@ INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmti12.tfm
 INPUT C:\Users\germa\AppData\Local\MiKTeX\2.9\pdftex\config\pdftex.map
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmr12.tfm
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmbx12.tfm
-OUTPUT d:\Disco HDD\Documentos\Facultad\ITBA\4° año\2° cuatri\22.01 - Teoría de Circuitos\Cursada\Trabajos Prácticos\TC-Grupo6\TP2\Informe\main.toc
-INPUT d:\Disco HDD\Documentos\Facultad\ITBA\4° año\2° cuatri\22.01 - Teoría de Circuitos\Cursada\Trabajos Prácticos\TC-Grupo6\TP2\Informe\sections\Ej1.tex
-INPUT d:\Disco HDD\Documentos\Facultad\ITBA\4° año\2° cuatri\22.01 - Teoría de Circuitos\Cursada\Trabajos Prácticos\TC-Grupo6\TP2\Informe\sections\Ej1.tex
-INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmbx12.tfm
-INPUT d:\Disco HDD\Documentos\Facultad\ITBA\4° año\2° cuatri\22.01 - Teoría de Circuitos\Cursada\Trabajos Prácticos\TC-Grupo6\TP2\Informe\sections\Ej2.tex
-INPUT d:\Disco HDD\Documentos\Facultad\ITBA\4° año\2° cuatri\22.01 - Teoría de Circuitos\Cursada\Trabajos Prácticos\TC-Grupo6\TP2\Informe\sections\Ej2.tex
+INPUT d:\Disco HDD\Documentos\Facultad\ITBA\4° año\2° cuatri\22.01 - Teoría de Circuitos\Cursada\Trabajos Prácticos\TC-Grupo6\TP2\Informe\main.toc
+INPUT d:\Disco HDD\Documentos\Facultad\ITBA\4° año\2° cuatri\22.01 - Teoría de Circuitos\Cursada\Trabajos Prácticos\TC-Grupo6\TP2\Informe\main.toc
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmbx10.tfm
+OUTPUT d:\Disco HDD\Documentos\Facultad\ITBA\4° año\2° cuatri\22.01 - Teoría de Circuitos\Cursada\Trabajos Prácticos\TC-Grupo6\TP2\Informe\main.toc
+INPUT ..\Ejercicio1-CaracterizaciondeOpamps\Ejercicio-1.tex
+INPUT ..\Ejercicio1-CaracterizaciondeOpamps\Ejercicio-1.tex
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmbx12.tfm
+INPUT ..\Ejercicio2-MediciondeBias\Ejercicio-2.tex
+INPUT ..\Ejercicio2-MediciondeBias\Ejercicio-2.tex
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Ejercicio-3.tex
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Ejercicio-3.tex
+INPUT ..\Ejercicio4-CircuitodeAplicacion\Ejercicio-4.tex
+INPUT ..\Ejercicio4-CircuitodeAplicacion\Ejercicio-4.tex
 INPUT d:\Disco HDD\Documentos\Facultad\ITBA\4° año\2° cuatri\22.01 - Teoría de Circuitos\Cursada\Trabajos Prácticos\TC-Grupo6\TP2\Informe\main.aux
 INPUT d:\Disco HDD\Documentos\Facultad\ITBA\4° año\2° cuatri\22.01 - Teoría de Circuitos\Cursada\Trabajos Prácticos\TC-Grupo6\TP2\Informe\main.out
 INPUT d:\Disco HDD\Documentos\Facultad\ITBA\4° año\2° cuatri\22.01 - Teoría de Circuitos\Cursada\Trabajos Prácticos\TC-Grupo6\TP2\Informe\main.out
@@ -397,29 +407,13 @@ INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmbx12.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmbx12.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmcsc10.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmcsc10.pfb
-INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmmi10.pfb
-INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmmi10.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmmi12.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmmi12.pfb
-INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmmi7.pfb
-INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmmi7.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmmi8.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmmi8.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr10.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr10.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr12.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr12.pfb
-INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr7.pfb
-INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr7.pfb
-INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr8.pfb
-INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr8.pfb
-INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmsy10.pfb
-INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmsy10.pfb
-INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmsy7.pfb
-INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmsy7.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmti12.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmti12.pfb
-INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmtt10.pfb
-INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmtt10.pfb
-INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\symbols\msam10.pfb
-INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\symbols\msam10.pfb
