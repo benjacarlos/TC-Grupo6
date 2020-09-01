@@ -1,12 +1,10 @@
-\section{Ejercicio 2}
-
 \subsection{Corriente de Bias y Tensión de Offset}
 
 En un amplificador operacional ideal la impedancia de entrada es infinita, por lo que no habría corriente por la que pase por ella. Sin embargo, se debe reconocer que en un modelo real de un amplificador operacional su impedancia de entrada no es infinita, lo que significa la existencia de corrientes de entrada y tensión de offset. 
 
 \begin{figure}[h]
     \centering
-    \includegraphics[scale = 0.4]{modeloopamp.png}
+    \includegraphics[scale = 0.4]{../Ejercicio2-MediciondeBias/Informe/modeloopamp.png}
     \caption{Modelo Real del Amplificador Operacional}
     \label{ej2opamp}
 \end{figure}
@@ -18,7 +16,7 @@ En un amplificador operacional ideal la impedancia de entrada es infinita, por l
     
     \begin{minipage}{.45\textwidth}
         \centering
-        \includegraphics[scale = 0.5]{inversopamp.png}
+        \includegraphics[scale = 0.5]{../Ejercicio2-MediciondeBias/Informe/inversopamp.png}
     \end{minipage}
     \begin{minipage}{.45\textwidth}
         $$H(s) = \frac{Vout}{Vin} = -\frac{R2}{R1}$$
@@ -45,7 +43,7 @@ Se realiza las mediciones de las $Ib$, $Ioff$ y de $Voff$ sobre el siguiente cir
 
 \begin{figure}[h]
     \centering
-    \includegraphics[scale = 0.65]{circuito.png}
+    \includegraphics[scale = 0.65]{../Ejercicio2-MediciondeBias/Informe/circuito.png}
     \caption{Circuito de Medición de Corrientes y Tensiones de Offset}
     \label{ej2cir}
 \end{figure}
@@ -58,7 +56,7 @@ Para conocer la operatividad del circuito se debe introducir el concepto de real
 
 \begin{figure}[h]
     \centering
-    \includegraphics[scale = 1.5]{realimentacion.png}
+    \includegraphics[scale = 1.5]{../Ejercicio2-MediciondeBias/Informe/realimentacion.png}
     \caption{Modelo de Realimentación}
     \label{ej2reali}
 \end{figure}
@@ -103,7 +101,7 @@ Teniendo 2 estapas dentro del circuito, comenzamos primeramente por la etapa de 
 
 \begin{minipage}{.55\textwidth}
     \begin{center}
-        \includegraphics[scale = 0.5]{etapa2.png}
+        \includegraphics[scale = 0.5]{../Ejercicio2-MediciondeBias/Informe/etapa2.png}
         \captionof{figure}{Etapa de Salida: Amplificación Inversa}
         \label{ej2et1}    
     \end{center}
@@ -121,7 +119,7 @@ Luego, en la etapa de entrada:
 
 \begin{minipage}{.55\textwidth}
     \begin{center}
-        \includegraphics[scale = 0.5]{etapa1.png}
+        \includegraphics[scale = 0.5]{../Ejercicio2-MediciondeBias/Informe/etapa1.png}
         \captionof{figure}{Etapa de Entrada: Amplificación No Inversa}
         \label{ej2et2}
     \end{center}
@@ -312,7 +310,7 @@ Siendo $\omega_0\xi > {\omega_0}\sqrt{\xi^2-1}$ en ambos circuitos con los difer
     
     \begin{minipage}{.4\textwidth}
     \begin{center}
-        \includegraphics[width = 0.5\textwidth, height = 4cm]{comptl081.png}
+        \includegraphics[width = 0.5\textwidth, height = 4cm]{../Ejercicio2-MediciondeBias/Informe/comptl081.png}
         \captionsetup{justification=centering}
         \captionof{figure}{Compensación de offset del TL081 con $R = 100k\Omega$}
         \label{ej2comp081} 
@@ -321,7 +319,7 @@ Siendo $\omega_0\xi > {\omega_0}\sqrt{\xi^2-1}$ en ambos circuitos con los difer
     \hspace{0.5cm}
     \begin{minipage}{.4\textwidth}
     \begin{center}
-        \includegraphics[width = 0.5\textwidth, height = 4cm]{complm365.png}
+        \includegraphics[width = 0.5\textwidth, height = 4cm]{../Ejercicio2-MediciondeBias/Informe/complm365.png}
         \captionsetup{justification=centering}
         \captionof{figure}{Compensación de offset del LF365 con $R = 25k\Omega$}
         \label{ej2comp365} 
@@ -332,7 +330,7 @@ Siendo $\omega_0\xi > {\omega_0}\sqrt{\xi^2-1}$ en ambos circuitos con los difer
     
     \begin{center}
         \begin{minipage}{0.7\textwidth}
-            \includegraphics[scale = 0.4]{compib.png}
+            \includegraphics[scale = 0.4]{../Ejercicio2-MediciondeBias/Informe/compib.png}
         \captionsetup{justification=centering}
         \captionof{figure}{Compensación de Corriente de Bias}
         \label{ej2compib}

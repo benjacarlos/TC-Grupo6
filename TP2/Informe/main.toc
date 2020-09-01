@@ -2,13 +2,21 @@
 \contentsline {section}{\numberline {1}Caracterización de Amplificadores Operacionales}{2}{section.1}%
 \contentsline {subsection}{\numberline {1.1}Introducción}{2}{subsection.1.1}%
 \contentsline {section}{\numberline {2}Medición de Bias}{3}{section.2}%
-\contentsline {subsection}{\numberline {2.1}Introducción}{3}{subsection.2.1}%
-\contentsline {section}{\numberline {3}Circuito Integradores y Derivadores}{4}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Circuito Derivador}{4}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Circuito Integrador}{4}{subsection.3.2}%
-\contentsline {subsubsection}{\numberline {3.2.1}Introducción}{4}{subsubsection.3.2.1}%
-\contentsline {subsubsection}{\numberline {3.2.2}Análisis de la Transferencia del Circuito Integrador - OPAMP ideal}{4}{subsubsection.3.2.2}%
-\contentsline {subsubsection}{\numberline {3.2.3}Análisis de la Transferencia del Circuito Integrador - OPAMP con A finito}{5}{subsubsection.3.2.3}%
-\contentsline {subsubsection}{\numberline {3.2.4}Análisis de la Transferencia del Circuito Integrador - OPAMP con $A_{vol}(w)$}{6}{subsubsection.3.2.4}%
-\contentsline {section}{\numberline {4}Circuito de Aplicación}{7}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Introducción}{7}{subsection.4.1}%
+\contentsline {subsection}{\numberline {2.1}Corriente de Bias y Tensión de Offset}{3}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Análisis del Circuito}{4}{subsection.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.1}Circuito de Realimentación}{4}{subsubsection.2.2.1}%
+\contentsline {subsubsection}{\numberline {2.2.2}Funcionamiento del Circuito}{5}{subsubsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.3}Estudio de Resultados}{6}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Evaluación del Circuito}{7}{subsection.2.4}%
+\contentsline {subsubsection}{\numberline {2.4.1}Capacitor en Uso}{7}{subsubsection.2.4.1}%
+\contentsline {subsubsection}{\numberline {2.4.2}Estabilidad del Circuito}{8}{subsubsection.2.4.2}%
+\contentsline {subsubsection}{\numberline {2.4.3}Configuraciones}{8}{subsubsection.2.4.3}%
+\contentsline {section}{\numberline {3}Circuito Integradores y Derivadores}{10}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Circuito Derivador}{10}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Circuito Integrador}{10}{subsection.3.2}%
+\contentsline {subsubsection}{\numberline {3.2.1}Introducción}{10}{subsubsection.3.2.1}%
+\contentsline {subsubsection}{\numberline {3.2.2}Análisis de la Transferencia del Circuito Integrador - OPAMP ideal}{10}{subsubsection.3.2.2}%
+\contentsline {subsubsection}{\numberline {3.2.3}Análisis de la Transferencia del Circuito Integrador - OPAMP con A finito}{11}{subsubsection.3.2.3}%
+\contentsline {subsubsection}{\numberline {3.2.4}Análisis de la Transferencia del Circuito Integrador - OPAMP con $A_{vol}(w)$}{12}{subsubsection.3.2.4}%
+\contentsline {section}{\numberline {4}Circuito de Aplicación}{13}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Introducción}{13}{subsection.4.1}%
