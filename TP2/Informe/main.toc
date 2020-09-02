@@ -2,9 +2,23 @@
 \contentsline {section}{\numberline {1}Caracterizaci\IeC {\'o}n de Amplificadores Operacionales}{2}{section.1}% 
 \contentsline {subsection}{\numberline {1.1}Introducci\IeC {\'o}n}{2}{subsection.1.1}% 
 \contentsline {section}{\numberline {2}Medici\IeC {\'o}n de Bias}{3}{section.2}% 
-\contentsline {subsection}{\numberline {2.1}Introducci\IeC {\'o}n}{3}{subsection.2.1}% 
-\contentsline {section}{\numberline {3}Circuito Integradores y Derivadores}{4}{section.3}% 
-\contentsline {subsection}{\numberline {3.1}Consideraciones generales}{4}{subsection.3.1}% 
-\contentsline {subsection}{\numberline {3.2}Circuito Derivador}{4}{subsection.3.2}% 
-\contentsline {section}{\numberline {4}Circuito de Aplicaci\IeC {\'o}n}{7}{section.4}% 
-\contentsline {subsection}{\numberline {4.1}Introducci\IeC {\'o}n}{7}{subsection.4.1}% 
+\contentsline {subsection}{\numberline {2.1}Corriente de Bias y Tensi\IeC {\'o}n de Offset}{3}{subsection.2.1}% 
+\contentsline {subsection}{\numberline {2.2}An\IeC {\'a}lisis del Circuito}{4}{subsection.2.2}% 
+\contentsline {subsubsection}{\numberline {2.2.1}Circuito de Realimentaci\IeC {\'o}n}{4}{subsubsection.2.2.1}% 
+\contentsline {subsubsection}{\numberline {2.2.2}Funcionamiento del Circuito}{5}{subsubsection.2.2.2}% 
+\contentsline {subsection}{\numberline {2.3}Estudio de Resultados}{6}{subsection.2.3}% 
+\contentsline {subsection}{\numberline {2.4}Evaluaci\IeC {\'o}n del Circuito}{7}{subsection.2.4}% 
+\contentsline {subsubsection}{\numberline {2.4.1}Capacitor en Uso}{7}{subsubsection.2.4.1}% 
+\contentsline {subsubsection}{\numberline {2.4.2}Estabilidad del Circuito}{8}{subsubsection.2.4.2}% 
+\contentsline {subsubsection}{\numberline {2.4.3}Configuraciones}{8}{subsubsection.2.4.3}% 
+\contentsline {section}{\numberline {3}Circuito Integradores y Derivadores}{10}{section.3}% 
+\contentsline {subsection}{\numberline {3.1}Consideraciones generales}{10}{subsection.3.1}% 
+\contentsline {subsection}{\numberline {3.2}Circuito Derivador}{10}{subsection.3.2}% 
+\contentsline {subsection}{\numberline {3.3}Circuito Integrador}{12}{subsection.3.3}% 
+\contentsline {subsubsection}{\numberline {3.3.1}Introducci\IeC {\'o}n}{12}{subsubsection.3.3.1}% 
+\contentsline {subsubsection}{\numberline {3.3.2}An\IeC {\'a}lisis de la Transferencia del Circuito Integrador - OPAMP ideal}{12}{subsubsection.3.3.2}% 
+\contentsline {subsubsection}{\numberline {3.3.3}An\IeC {\'a}lisis de la Transferencia del Circuito Integrador - OPAMP con A finito}{14}{subsubsection.3.3.3}% 
+\contentsline {subsubsection}{\numberline {3.3.4}An\IeC {\'a}lisis de la Transferencia del Circuito Integrador - OPAMP con $A_{vol}(w)$}{16}{subsubsection.3.3.4}% 
+\contentsline {subsubsection}{\numberline {3.3.5}An\IeC {\'a}lisis de Impedancia de Entrada al Circuito Integrador}{18}{subsubsection.3.3.5}% 
+\contentsline {section}{\numberline {4}Circuito de Aplicaci\IeC {\'o}n}{19}{section.4}% 
+\contentsline {subsection}{\numberline {4.1}Introducci\IeC {\'o}n}{19}{subsection.4.1}% 

@@ -385,9 +385,57 @@ INPUT ..\Ejercicio1-CaracterizaciondeOpamps\Ejercicio-1.tex
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmbx12.tfm
 INPUT ..\Ejercicio2-MediciondeBias\Ejercicio-2.tex
 INPUT ..\Ejercicio2-MediciondeBias\Ejercicio-2.tex
-INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Ejercicio-3.tex
-INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Ejercicio-3.tex
+INPUT ..\Ejercicio2-MediciondeBias\Informe\modeloopamp.png
+INPUT ..\Ejercicio2-MediciondeBias\Informe\modeloopamp.png
+INPUT ..\Ejercicio2-MediciondeBias\Informe\modeloopamp.png
+INPUT ..\Ejercicio2-MediciondeBias\Informe\modeloopamp.png
+INPUT ..\Ejercicio2-MediciondeBias\Informe\modeloopamp.png
+INPUT ..\Ejercicio2-MediciondeBias\Informe\inversopamp.png
+INPUT ..\Ejercicio2-MediciondeBias\Informe\inversopamp.png
+INPUT ..\Ejercicio2-MediciondeBias\Informe\inversopamp.png
+INPUT ..\Ejercicio2-MediciondeBias\Informe\inversopamp.png
+INPUT ..\Ejercicio2-MediciondeBias\Informe\inversopamp.png
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmbx10.tfm
+INPUT ..\Ejercicio2-MediciondeBias\Informe\circuito.png
+INPUT ..\Ejercicio2-MediciondeBias\Informe\circuito.png
+INPUT ..\Ejercicio2-MediciondeBias\Informe\circuito.png
+INPUT ..\Ejercicio2-MediciondeBias\Informe\circuito.png
+INPUT ..\Ejercicio2-MediciondeBias\Informe\circuito.png
+INPUT ..\Ejercicio2-MediciondeBias\Informe\realimentacion.png
+INPUT ..\Ejercicio2-MediciondeBias\Informe\realimentacion.png
+INPUT ..\Ejercicio2-MediciondeBias\Informe\realimentacion.png
+INPUT ..\Ejercicio2-MediciondeBias\Informe\realimentacion.png
+INPUT ..\Ejercicio2-MediciondeBias\Informe\realimentacion.png
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1cmr.fd
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1cmr.fd
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\jknappen\ec\tcrm1000.tfm
+INPUT ..\Ejercicio2-MediciondeBias\Informe\etapa2.png
+INPUT ..\Ejercicio2-MediciondeBias\Informe\etapa2.png
+INPUT ..\Ejercicio2-MediciondeBias\Informe\etapa2.png
+INPUT ..\Ejercicio2-MediciondeBias\Informe\etapa2.png
+INPUT ..\Ejercicio2-MediciondeBias\Informe\etapa2.png
+INPUT ..\Ejercicio2-MediciondeBias\Informe\etapa1.png
+INPUT ..\Ejercicio2-MediciondeBias\Informe\etapa1.png
+INPUT ..\Ejercicio2-MediciondeBias\Informe\etapa1.png
+INPUT ..\Ejercicio2-MediciondeBias\Informe\etapa1.png
+INPUT ..\Ejercicio2-MediciondeBias\Informe\etapa1.png
+INPUT ..\Ejercicio2-MediciondeBias\Informe\comptl081.png
+INPUT ..\Ejercicio2-MediciondeBias\Informe\comptl081.png
+INPUT ..\Ejercicio2-MediciondeBias\Informe\comptl081.png
+INPUT ..\Ejercicio2-MediciondeBias\Informe\comptl081.png
+INPUT ..\Ejercicio2-MediciondeBias\Informe\comptl081.png
+INPUT ..\Ejercicio2-MediciondeBias\Informe\complm365.png
+INPUT ..\Ejercicio2-MediciondeBias\Informe\complm365.png
+INPUT ..\Ejercicio2-MediciondeBias\Informe\complm365.png
+INPUT ..\Ejercicio2-MediciondeBias\Informe\complm365.png
+INPUT ..\Ejercicio2-MediciondeBias\Informe\complm365.png
+INPUT ..\Ejercicio2-MediciondeBias\Informe\compib.png
+INPUT ..\Ejercicio2-MediciondeBias\Informe\compib.png
+INPUT ..\Ejercicio2-MediciondeBias\Informe\compib.png
+INPUT ..\Ejercicio2-MediciondeBias\Informe\compib.png
+INPUT ..\Ejercicio2-MediciondeBias\Informe\compib.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Ejercicio-3.tex
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Ejercicio-3.tex
 INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\Derivador\bode_derivador magnitud.png
 INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\Derivador\bode_derivador magnitud.png
 INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\Derivador\bode_derivador magnitud.png
@@ -397,23 +445,79 @@ INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\Derivador\bode_der
 INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\Derivador\bode_derivador_fase.png
 INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\Derivador\bode_derivador_fase.png
 INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\Derivador\bode_derivador_fase.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\diagrama-integrador.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\diagrama-integrador.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\diagrama-integrador.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\diagrama-integrador.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\diagrama-integrador.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\diagrama-integrador-corrientes.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\diagrama-integrador-corrientes.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\diagrama-integrador-corrientes.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\diagrama-integrador-corrientes.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\diagrama-integrador-corrientes.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\diagrama-bode-ideal-amplitud.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\diagrama-bode-ideal-amplitud.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\diagrama-bode-ideal-amplitud.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\diagrama-bode-ideal-amplitud.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\diagrama-bode-ideal-amplitud.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\diagrama-bode-ideal-fase.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\diagrama-bode-ideal-fase.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\diagrama-bode-ideal-fase.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\diagrama-bode-ideal-fase.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\diagrama-bode-ideal-fase.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\diagrama-bode-cideal-amplitud.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\diagrama-bode-cideal-amplitud.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\diagrama-bode-cideal-amplitud.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\diagrama-bode-cideal-amplitud.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\diagrama-bode-cideal-amplitud.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\diagrama-bode-cideal-fase.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\diagrama-bode-cideal-fase.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\diagrama-bode-cideal-fase.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\diagrama-bode-cideal-fase.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\diagrama-bode-cideal-fase.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\diagrama-bode-noideal-amplitud.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\diagrama-bode-noideal-amplitud.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\diagrama-bode-noideal-amplitud.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\diagrama-bode-noideal-amplitud.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\diagrama-bode-noideal-amplitud.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\diagrama-bode-noideal-fase.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\diagrama-bode-noideal-fase.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\diagrama-bode-noideal-fase.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\diagrama-bode-noideal-fase.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\diagrama-bode-noideal-fase.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\comparativo-magnitud.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\comparativo-magnitud.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\comparativo-magnitud.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\comparativo-magnitud.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\comparativo-magnitud.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\comparativo-fase.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\comparativo-fase.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\comparativo-fase.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\comparativo-fase.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\comparativo-fase.png
 INPUT ..\Ejercicio4-CircuitodeAplicacion\Ejercicio-4.tex
 INPUT ..\Ejercicio4-CircuitodeAplicacion\Ejercicio-4.tex
 INPUT d:\Disco HDD\Documentos\Facultad\ITBA\4° año\2° cuatri\22.01 - Teoría de Circuitos\Cursada\Trabajos Prácticos\TC-Grupo6\TP2\Informe\main.aux
 INPUT d:\Disco HDD\Documentos\Facultad\ITBA\4° año\2° cuatri\22.01 - Teoría de Circuitos\Cursada\Trabajos Prácticos\TC-Grupo6\TP2\Informe\main.out
 INPUT d:\Disco HDD\Documentos\Facultad\ITBA\4° año\2° cuatri\22.01 - Teoría de Circuitos\Cursada\Trabajos Prácticos\TC-Grupo6\TP2\Informe\main.out
+INPUT C:\Users\germa\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1000.pk
+INPUT C:\Users\germa\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1000.pk
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmbx10.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmbx10.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmbx12.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmbx12.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmcsc10.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmcsc10.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmex10.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmex10.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmmi10.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmmi10.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmmi12.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmmi12.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmmi5.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmmi5.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmmi6.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmmi6.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmmi7.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmmi7.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmmi8.pfb
@@ -430,6 +534,8 @@ INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr8.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr8.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmsy10.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmsy10.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmsy5.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmsy5.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmsy7.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmsy7.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmti12.pfb
