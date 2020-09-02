@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.8.20)  30 AUG 2020 17:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.8.20)  1 SEP 2020 23:15
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -715,6 +715,30 @@ LaTeX Info: Redefining \% on input line 20.
 
 LaTeX Warning: Label `fig:emptyPlotTool' multiply defined.
 
+
+LaTeX Warning: Label `fig:emptyPlotTool' multiply defined.
+
+
+LaTeX Warning: Label `fig:emptyPlotTool' multiply defined.
+
+
+LaTeX Warning: Label `fig:emptyPlotTool' multiply defined.
+
+
+LaTeX Warning: Label `fig:emptyPlotTool' multiply defined.
+
+
+LaTeX Warning: Label `fig:emptyPlotTool' multiply defined.
+
+
+LaTeX Warning: Label `fig:emptyPlotTool' multiply defined.
+
+
+LaTeX Warning: Label `fig:emptyPlotTool' multiply defined.
+
+
+LaTeX Warning: Label `fig:emptyPlotTool' multiply defined.
+
 )
 \openout1 = `main.aux'.
 
@@ -838,30 +862,75 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has b
                    \relax 
 l.11 \newpage
               [1] (/Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/../Ejercicio1-CaracterizaciondeOpamps/Ejercicio-1.tex) [2] (/Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/../Ejercicio2-MediciondeBias/Ejercicio-2.tex) [3] (/Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/../Ejercicio3-CircuitoIntegradoresyDerivadores/Ejercicio-3.tex
-<../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-integrador.png, id=99, 514.92375pt x 292.09125pt>
+<../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-integrador.png, id=104, 514.92375pt x 292.09125pt>
 File: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-integrador.png Graphic file (type png)
 <use ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-integrador.png>
 Package pdftex.def Info: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-integrador.png  used on input line 24.
 (pdftex.def)             Requested size: 257.46124pt x 146.04526pt.
-<../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-integrador-corrientes.png, id=101, 514.92375pt x 322.20375pt>
+<../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-integrador-corrientes.png, id=106, 514.92375pt x 322.20375pt>
 File: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-integrador-corrientes.png Graphic file (type png)
 <use ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-integrador-corrientes.png>
 Package pdftex.def Info: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-integrador-corrientes.png  used on input line 45.
 (pdftex.def)             Requested size: 257.46124pt x 161.10147pt.
- [4 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-integrador.png>] [5 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-integrador-corrientes.png>]
+ [4 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-integrador.png>]
+<../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-bode-ideal-amplitud.png, id=117, 508.0581pt x 245.718pt>
+File: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-bode-ideal-amplitud.png Graphic file (type png)
+<use ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-bode-ideal-amplitud.png>
+Package pdftex.def Info: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-bode-ideal-amplitud.png  used on input line 82.
+(pdftex.def)             Requested size: 508.05685pt x 245.71739pt.
+ [5 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-integrador-corrientes.png>]
+<../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-bode-ideal-fase.png, id=126, 508.0581pt x 252.945pt>
+File: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-bode-ideal-fase.png Graphic file (type png)
+<use ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-bode-ideal-fase.png>
+Package pdftex.def Info: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-bode-ideal-fase.png  used on input line 89.
+(pdftex.def)             Requested size: 508.05685pt x 252.94438pt.
+ [6 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-bode-ideal-amplitud.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-bode-ideal-fase.png>]
+<../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-bode-cideal-amplitud.png, id=136, 508.0581pt x 245.718pt>
+File: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-bode-cideal-amplitud.png Graphic file (type png)
+<use ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-bode-cideal-amplitud.png>
+Package pdftex.def Info: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-bode-cideal-amplitud.png  used on input line 131.
+(pdftex.def)             Requested size: 508.05685pt x 245.71739pt.
+<../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-bode-cideal-fase.png, id=137, 508.0581pt x 252.945pt>
+File: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-bode-cideal-fase.png Graphic file (type png)
+<use ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-bode-cideal-fase.png>
+Package pdftex.def Info: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-bode-cideal-fase.png  used on input line 138.
+(pdftex.def)             Requested size: 508.05685pt x 252.94438pt.
+ [7 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-bode-cideal-amplitud.png>]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 112.
+(hyperref)                removing `math shift' on input line 143.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 112.
+(hyperref)                removing `subscript' on input line 143.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 112.
+(hyperref)                removing `math shift' on input line 143.
 
-) [6] (/Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/../Ejercicio4-CircuitodeAplicacion/Ejercicio-4.tex) [7]
+<../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-bode-noideal-amplitud.png, id=146, 508.0581pt x 245.718pt>
+File: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-bode-noideal-amplitud.png Graphic file (type png)
+<use ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-bode-noideal-amplitud.png>
+Package pdftex.def Info: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-bode-noideal-amplitud.png  used on input line 161.
+(pdftex.def)             Requested size: 508.05685pt x 245.71739pt.
+[8 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-bode-cideal-fase.png>]
+<../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-bode-noideal-fase.png, id=153, 508.0581pt x 252.945pt>
+File: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-bode-noideal-fase.png Graphic file (type png)
+<use ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-bode-noideal-fase.png>
+Package pdftex.def Info: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-bode-noideal-fase.png  used on input line 168.
+(pdftex.def)             Requested size: 508.05685pt x 252.94438pt.
+<../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/comparativo-magnitud.png, id=154, 508.0581pt x 245.718pt>
+File: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/comparativo-magnitud.png Graphic file (type png)
+<use ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/comparativo-magnitud.png>
+Package pdftex.def Info: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/comparativo-magnitud.png  used on input line 177.
+(pdftex.def)             Requested size: 508.05685pt x 245.71739pt.
+ [9 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-bode-noideal-amplitud.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-bode-noideal-fase.png>]
+<../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/comparativo-fase.png, id=163, 508.0581pt x 252.945pt>
+File: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/comparativo-fase.png Graphic file (type png)
+<use ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/comparativo-fase.png>
+Package pdftex.def Info: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/comparativo-fase.png  used on input line 184.
+(pdftex.def)             Requested size: 508.05685pt x 252.94438pt.
+) [10 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/comparativo-magnitud.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/comparativo-fase.png>] (/Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/../Ejercicio4-CircuitodeAplicacion/Ejercicio-4.tex) [11]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 34.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 34.
  (/Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/main.aux
@@ -871,7 +940,7 @@ LaTeX Info: Redefining \% on input line 20.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 34.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 34.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 27102F35773BE0A7D0DDA9F4AC1120E3;1073.
+(rerunfilecheck)             Checksum: D291FEC9907909ABB9597004D8297DAF;1192.
 
 
 LaTeX Warning: There were multiply-defined labels.
@@ -879,18 +948,18 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 34.
  ) 
 Here is how much of TeX's memory you used:
- 34144 strings out of 480608
- 795030 string characters out of 5903630
- 1179423 words of memory out of 5000000
- 49472 multiletter control sequences out of 15000+600000
+ 34206 strings out of 480608
+ 798998 string characters out of 5903630
+ 1175427 words of memory out of 5000000
+ 49513 multiletter control sequences out of 15000+600000
  544880 words of font info for 73 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 71i,13n,73p,511b,804s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on /Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/main.pdf (8 pages, 213595 bytes).
+ 71i,12n,73p,511b,804s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on /Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/main.pdf (12 pages, 381435 bytes).
 PDF statistics:
- 192 PDF objects out of 1000 (max. 8388607)
- 159 compressed objects within 2 object streams
- 24 named destinations out of 1000 (max. 500000)
- 127 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 246 PDF objects out of 1000 (max. 8388607)
+ 192 compressed objects within 2 object streams
+ 37 named destinations out of 1000 (max. 500000)
+ 175 words of extra memory for PDF output out of 10000 (max. 10000000)
 

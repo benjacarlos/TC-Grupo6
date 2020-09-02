@@ -73,7 +73,23 @@ $$ \frac{V_{in}}{R} = - (\frac{V_{out}}{X_c}) \Longrightarrow \frac{V_{out}}{V_{
 $$ H(S) = - \frac{1}{SRC}$$
 
 Claramente se puede apreciar que este circuito se comportará como un integrador, ya que si antitransformamos la función de transferencia
-obtenida implicará que para obtener $v_{out}(t)$ habrá que integrar $v_{in}(t)$ en el dominio del tiempo. 
+obtenida implicará que para obtener $v_{out}(t)$ habrá que integrar $v_{in}(t)$ en el dominio del tiempo.
+
+En las siguientes figuras, se puede apreciar el Diagrama de Bode para este caso.
+
+\begin{figure}[H]
+    \centering 
+    \includegraphics [scale=1] {../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-bode-ideal-amplitud.png} 
+    \caption{Diagrama de BODE de Amplitud para OPAMP ideal}
+    \label{fig:emptyPlotTool}
+\end{figure}
+
+\begin{figure}[H]
+    \centering 
+    \includegraphics [scale=1] {../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-bode-ideal-fase.png} 
+    \caption{Diagrama de BODE de Fase para OPAMP ideal}
+    \label{fig:emptyPlotTool}
+\end{figure}
 
 \subsubsection{Análisis de la Transferencia del Circuito Integrador - OPAMP con A finito}
 
@@ -87,7 +103,7 @@ entre el amplificador operaciones ideal y éste será:
 Utilizando las mismas relaciones mencionadas en el apartado anterior, podemos observar ahora que:
 
 
-$V_{out}=-A_{vol}.V^{-} \Longrightarrow V^{-} = \frac{-V_{out}}{A_{vol}}$ 
+$$V_{out}=-A_{vol}.V^{-} \Longrightarrow V^{-} = \frac{-V_{out}}{A_{vol}}$$ 
 
 
 Por lo tanto:
@@ -108,20 +124,69 @@ $$H(S)= \frac{1}{SCR(1+\frac{1}{A_{vol}})+\frac{1}{A_{vol}}}$$
 
 Es importante notar que siendo la ganancia para el caso ideal (GI) $- \frac{1}{SRC}$,  la funcion
 transferencia se puede representar como $H(S) = GI. \frac{1}{SCR(1+\frac{1}{A_{vol}})+\frac{1}{A_{vol}}}$
+Si $A_{vol}$ es lo suficientemente grande, tendremos una función transferencia ideal nuevamente.
+
+\begin{figure}[H]
+    \centering 
+    \includegraphics [scale=1] {../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-bode-cideal-amplitud.png} 
+    \caption{Diagrama de BODE de Amplitud para OPAMP con $A_{vol}$ finito}
+    \label{fig:emptyPlotTool}
+\end{figure}
+
+\begin{figure}[H]
+    \centering 
+    \includegraphics [scale=1] {../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-bode-cideal-fase.png} 
+    \caption{Diagrama de BODE de Fase para OPAMP con $A_{vol}$ finito}
+    \label{fig:emptyPlotTool}
+\end{figure}
 
 \subsubsection{Análisis de la Transferencia del Circuito Integrador - OPAMP con $A_{vol}(w)$}
 
 En este ultimo caso de analisis, $A_{vol}$ no es constante sino que es función de la frecuencia según:
 
-$$A_{vol}=\frac{1}{1+\frac{S}{w_b}}$$
+$$A_{vol}=\frac{A_0}{1+\frac{S}{w_b}}$$
 
 Por lo cual la expresion para la funcion transferencia calculada en el caso anterior, quedara denominada por:
 
-$$H(S)= \frac{1}{SCR(1+\frac{1+\frac{1}{SCR}}{A_{vol}})}\Longrightarrow H(S)= \frac{1}{SCR(1+\frac{1+\frac{1}{SCR}}{\frac{1}{1+\frac{S}{w_b}}})}$$ 
+$$H(S)= \frac{1}{SCR(1+\frac{1+\frac{1}{SCR}}{A_{vol}})}\Longrightarrow H(S)= \frac{1}{SCR(1+\frac{1+\frac{1}{SCR}}{\frac{A_0}{1+\frac{S}{w_b}}})}$$ 
 
 Reacomodando algebraicamente:
 
-$$H(S)=- \frac{1}{S^2\frac{W_b}{A_oCR}+SCR(1 + \frac{1}{A_o}+\frac{W_b}{CRA_o}) + \frac{1}{A_0}}$$
+$$H(S)=- \frac{1}{S^2\frac{CR}{A_oW_b}+SCR(1 + \frac{1}{A_o}+\frac{1}{W_bA_oCR}) + \frac{1}{A_0}}$$
 
 Podemos observar que si $A_o$ es muy grande, nuevamente estaremos en el caso donde la ganancia que obtendremos será la ideal para este circuito.
+
+\begin{figure}[H]
+    \centering 
+    \includegraphics [scale=1] {../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-bode-noideal-amplitud.png} 
+    \caption{Diagrama de BODE de Amplitud para OPAMP con $A_{vol}(w)$ finito}
+    \label{fig:emptyPlotTool}
+\end{figure}
+
+\begin{figure}[H]
+    \centering 
+    \includegraphics [scale=1] {../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-bode-noideal-fase.png} 
+    \caption{Diagrama de BODE de Fase para OPAMP con $A_{vol}(w)$ }
+    \label{fig:emptyPlotTool}
+\end{figure}
+
+Comparando los tres casos, podemos observar que en determinadas frecuencias el comportamiento es identico:
+
+\begin{figure}[H]
+    \centering 
+    \includegraphics [scale=1] {../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/comparativo-magnitud.png} 
+    \caption{Diagrama de BODE de Amplitud para OPAMP comparativo }
+    \label{fig:emptyPlotTool}
+\end{figure}
+
+\begin{figure}[H]
+    \centering 
+    \includegraphics [scale=1] {../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/comparativo-fase.png} 
+    \caption{Diagrama de BODE de Fase para OPAMP comparativo }
+    \label{fig:emptyPlotTool}
+\end{figure}
+
+\subsubsection{Análisis de Impedancia de Entrada al Circuito Integrador}
+
+Para poder calcular teoricamente, la impedancia de entrada, $Z_{in}$, se utilizó el teorema de Miller tal que:
 
