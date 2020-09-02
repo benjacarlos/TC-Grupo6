@@ -190,3 +190,39 @@ Comparando los tres casos, podemos observar que en determinadas frecuencias el c
 
 Para poder calcular teoricamente, la impedancia de entrada, $Z_{in}$, se utilizó el teorema de Miller tal que:
 
+$$ V_{out}=-A_{vol}.V^-$$
+
+Como para este caso, $K=-A_{vol}$, el circuito integrador con el amplificador operacional, queda expresado como:
+
+\begin{figure}[H]
+    \centering 
+    \includegraphics [scale=0.7] {../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/miller-integrador.png} 
+    \caption{Diagrama de BODE de Fase para OPAMP comparativo }
+    \label{fig:emptyPlotTool}
+\end{figure}
+
+Como nos interesa $Z_{in}=\frac{V_{in}}{i_1}$, es muy sencillo ver que a la entrada del amplificador operacional no inversora no ingresa corriente,
+por lo cual utilizando la ley de tensiones de Kirchoff:
+
+$$ V_{in} = i_1.R + i_1.\frac{X_c}{1+A_{vol}} \longrightarrow \frac{V_{in}}{i_1}= R + \frac{X_c}{1+A_{vol}} \longrightarrow Z_{in}=R+\frac{1}{SC(1+A_0)}$$
+
+Dicha impedancia puede verse expresada en las siguientes figuras:
+
+\begin{figure}[H]
+    \centering 
+    \includegraphics [scale=1] {../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/zin-magnitud.png} 
+    \caption{Diagrama de BODE de Fase para OPAMP comparativo }
+    \label{fig:emptyPlotTool}
+\end{figure}
+
+\begin{figure}[H]
+    \centering 
+    \includegraphics [scale=1] {../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/zin-fase.png} 
+    \caption{Diagrama de BODE de Fase para OPAMP comparativo }
+    \label{fig:emptyPlotTool}
+\end{figure}
+
+Se puede observar que a frecuencias notablemente bajas, la impedancia tiende a aumentar ya que $Z_{in}$ es inversamente proporcional al valor de la frecuencia.
+A frecuencias del orden de los miliHz en adelante se puede observar como el efecto del capacitor se reduce, dejando unicamente la componente de la R. Por lo cual 
+podemos afirmar que $Z_{in}$ es aproximadamente $R$ para esos casos, ademas del efecto que genera $A_0$.
+Lo mismo se puede observar con la fase que tiende a 0, ya que la componente compleja que aporta la capacitancia se ve reducida conforme aumenta la frecuencia.
