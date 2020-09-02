@@ -313,14 +313,8 @@ INPUT C:\Program Files\MiKTeX 2.9\tex\latex\refcount\refcount.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\refcount\refcount.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\generic\gettitlestring\gettitlestring.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\generic\gettitlestring\gettitlestring.sty
-INPUT d:\Disco HDD\Documentos\Facultad\ITBA\4° año\2° cuatri\22.01 - Teoría de Circuitos\Cursada\Trabajos Prácticos\TC-Grupo6\TP2\Informe\main.out
-INPUT d:\Disco HDD\Documentos\Facultad\ITBA\4° año\2° cuatri\22.01 - Teoría de Circuitos\Cursada\Trabajos Prácticos\TC-Grupo6\TP2\Informe\main.out
-INPUT d:\Disco HDD\Documentos\Facultad\ITBA\4° año\2° cuatri\22.01 - Teoría de Circuitos\Cursada\Trabajos Prácticos\TC-Grupo6\TP2\Informe\main.out
-INPUT d:\Disco HDD\Documentos\Facultad\ITBA\4° año\2° cuatri\22.01 - Teoría de Circuitos\Cursada\Trabajos Prácticos\TC-Grupo6\TP2\Informe\main.out
-OUTPUT d:\Disco HDD\Documentos\Facultad\ITBA\4° año\2° cuatri\22.01 - Teoría de Circuitos\Cursada\Trabajos Prácticos\TC-Grupo6\TP2\Informe\main.pdf
-INPUT d:\Disco HDD\Documentos\Facultad\ITBA\4° año\2° cuatri\22.01 - Teoría de Circuitos\Cursada\Trabajos Prácticos\TC-Grupo6\TP2\Informe\main.out
-INPUT d:\Disco HDD\Documentos\Facultad\ITBA\4° año\2° cuatri\22.01 - Teoría de Circuitos\Cursada\Trabajos Prácticos\TC-Grupo6\TP2\Informe\main.out
 OUTPUT d:\Disco HDD\Documentos\Facultad\ITBA\4° año\2° cuatri\22.01 - Teoría de Circuitos\Cursada\Trabajos Prácticos\TC-Grupo6\TP2\Informe\main.out
+OUTPUT d:\Disco HDD\Documentos\Facultad\ITBA\4° año\2° cuatri\22.01 - Teoría de Circuitos\Cursada\Trabajos Prácticos\TC-Grupo6\TP2\Informe\main.pdf
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\base\textcomp.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\base\textcomp.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1enc.def
@@ -385,9 +379,6 @@ INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmti12.tfm
 INPUT C:\Users\germa\AppData\Local\MiKTeX\2.9\pdftex\config\pdftex.map
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmr12.tfm
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmbx12.tfm
-INPUT d:\Disco HDD\Documentos\Facultad\ITBA\4° año\2° cuatri\22.01 - Teoría de Circuitos\Cursada\Trabajos Prácticos\TC-Grupo6\TP2\Informe\main.toc
-INPUT d:\Disco HDD\Documentos\Facultad\ITBA\4° año\2° cuatri\22.01 - Teoría de Circuitos\Cursada\Trabajos Prácticos\TC-Grupo6\TP2\Informe\main.toc
-INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmbx10.tfm
 OUTPUT d:\Disco HDD\Documentos\Facultad\ITBA\4° año\2° cuatri\22.01 - Teoría de Circuitos\Cursada\Trabajos Prácticos\TC-Grupo6\TP2\Informe\main.toc
 INPUT ..\Ejercicio1-CaracterizaciondeOpamps\Ejercicio-1.tex
 INPUT ..\Ejercicio1-CaracterizaciondeOpamps\Ejercicio-1.tex
@@ -396,6 +387,16 @@ INPUT ..\Ejercicio2-MediciondeBias\Ejercicio-2.tex
 INPUT ..\Ejercicio2-MediciondeBias\Ejercicio-2.tex
 INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Ejercicio-3.tex
 INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Ejercicio-3.tex
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmbx10.tfm
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\Derivador\bode_derivador magnitud.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\Derivador\bode_derivador magnitud.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\Derivador\bode_derivador magnitud.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\Derivador\bode_derivador magnitud.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\Derivador\bode_derivador_fase.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\Derivador\bode_derivador_fase.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\Derivador\bode_derivador_fase.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\Derivador\bode_derivador_fase.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\Derivador\bode_derivador_fase.png
 INPUT ..\Ejercicio4-CircuitodeAplicacion\Ejercicio-4.tex
 INPUT ..\Ejercicio4-CircuitodeAplicacion\Ejercicio-4.tex
 INPUT d:\Disco HDD\Documentos\Facultad\ITBA\4° año\2° cuatri\22.01 - Teoría de Circuitos\Cursada\Trabajos Prácticos\TC-Grupo6\TP2\Informe\main.aux
@@ -407,13 +408,31 @@ INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmbx12.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmbx12.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmcsc10.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmcsc10.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmmi10.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmmi10.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmmi12.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmmi12.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmmi5.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmmi5.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmmi7.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmmi7.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmmi8.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmmi8.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr10.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr10.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr12.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr12.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr5.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr5.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr7.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr7.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr8.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr8.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmsy10.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmsy10.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmsy7.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmsy7.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmti12.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmti12.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmtt10.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmtt10.pfb
