@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.8.20)  3 SEP 2020 00:21
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.8.20)  3 SEP 2020 00:22
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -900,16 +900,15 @@ LaTeX Warning: Reference `ej2FT' on page 7 undefined on input line 264.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-
-LaTeX Warning: Reference `ej2FT' on page 7 undefined on input line 288.
-
 [7]
+
+LaTeX Warning: Reference `ej2FT' on page 8 undefined on input line 288.
+
 <../Ejercicio2-MediciondeBias/Informe/comptl081.png, id=85, 284.06125pt x 255.95625pt>
 File: ../Ejercicio2-MediciondeBias/Informe/comptl081.png Graphic file (type png)
 <use ../Ejercicio2-MediciondeBias/Informe/comptl081.png>
 Package pdftex.def Info: ../Ejercicio2-MediciondeBias/Informe/comptl081.png  used on input line 313.
 (pdftex.def)             Requested size: 102.42667pt x 113.80838pt.
-
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 315.
@@ -937,164 +936,169 @@ See the caption package documentation for explanation.
 
 [8 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/../Ejercicio2-MediciondeBias/Informe/comptl081.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/../Ejercicio2-MediciondeBias/Informe/complm365.png>]) [9 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/../Ejercicio2-MediciondeBias/Informe/compib.png>] (/Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/../Ejercicio3-CircuitoIntegradoresyDerivadores/Ejercicio-3.tex
 
-LaTeX Warning: File `../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/circuito-derivador.png' not found on input line 17.
+LaTeX Warning: File `../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/circuito-derivador.png' not found on input line 18.
 
 
-/Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/../Ejercicio3-CircuitoIntegradoresyDerivadores/Ejercicio-3.tex:17: Package pdftex.def Error: File `../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/circuito-derivador.png' not found: using draft setting.
+/Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/../Ejercicio3-CircuitoIntegradoresyDerivadores/Ejercicio-3.tex:18: Package pdftex.def Error: File `../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/circuito-derivador.png' not found: using draft setting.
 
 See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.17 ...rivadores/Imagenes/circuito-derivador.png}
+l.18 ...rivadores/Imagenes/circuito-derivador.png}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
+<../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/Derivador/circuito_derivador.png, id=106, 480.29437pt x 255.20343pt>
+File: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/Derivador/circuito_derivador.png Graphic file (type png)
+<use ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/Derivador/circuito_derivador.png>
+Package pdftex.def Info: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/Derivador/circuito_derivador.png  used on input line 20.
+(pdftex.def)             Requested size: 307.29288pt x 163.2829pt.
 
-LaTeX Warning: Reference `eq_opamp' on page 10 undefined on input line 25.
+LaTeX Warning: Reference `eq_opamp' on page 10 undefined on input line 29.
 
+[10 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/Derivador/circuito_derivador.png>]
 
-LaTeX Warning: Reference `eq_avol_ideal' on page 10 undefined on input line 49.
-
-[10]
-
-LaTeX Warning: Reference `eq_opamp' on page 11 undefined on input line 58.
-
-
-LaTeX Warning: Reference `eq_avol_noideal' on page 11 undefined on input line 58.
-
-
-LaTeX Warning: Reference `trans_ideal' on page 11 undefined on input line 68.
+LaTeX Warning: Reference `eq_avol_ideal' on page 11 undefined on input line 53.
 
 
-LaTeX Warning: Reference `a_vol_frec' on page 11 undefined on input line 81.
+LaTeX Warning: Reference `eq_opamp' on page 11 undefined on input line 62.
 
 
-LaTeX Warning: Reference `trans_no_ideal' on page 11 undefined on input line 81.
+LaTeX Warning: Reference `eq_avol_noideal' on page 11 undefined on input line 62.
+
+
+LaTeX Warning: Reference `trans_ideal' on page 11 undefined on input line 72.
+
+
+LaTeX Warning: Reference `a_vol_frec' on page 11 undefined on input line 85.
+
+
+LaTeX Warning: Reference `trans_no_ideal' on page 11 undefined on input line 85.
 
 <../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/Derivador/bode_derivador magnitud.png, id=118, 508.0581pt x 245.718pt>
 File: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/Derivador/bode_derivador magnitud.png Graphic file (type png)
 <use ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/Derivador/bode_derivador magnitud.png>
-Package pdftex.def Info: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/Derivador/bode_derivador magnitud.png  used on input line 104.
+Package pdftex.def Info: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/Derivador/bode_derivador magnitud.png  used on input line 108.
 (pdftex.def)             Requested size: 307.29288pt x 148.62422pt.
 <../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/Derivador/bode_derivador_fase.png, id=119, 508.0581pt x 252.945pt>
 File: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/Derivador/bode_derivador_fase.png Graphic file (type png)
 <use ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/Derivador/bode_derivador_fase.png>
-Package pdftex.def Info: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/Derivador/bode_derivador_fase.png  used on input line 109.
+Package pdftex.def Info: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/Derivador/bode_derivador_fase.png  used on input line 113.
 (pdftex.def)             Requested size: 307.29288pt x 152.99553pt.
-[11 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/Derivador/bode_derivador magnitud.png>]
-<../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-integrador.png, id=129, 514.92375pt x 292.09125pt>
+[11]
+<../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-integrador.png, id=128, 514.92375pt x 292.09125pt>
 File: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-integrador.png Graphic file (type png)
 <use ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-integrador.png>
-Package pdftex.def Info: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-integrador.png  used on input line 143.
+Package pdftex.def Info: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-integrador.png  used on input line 147.
 (pdftex.def)             Requested size: 257.46124pt x 146.04526pt.
-<../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-integrador-corrientes.png, id=130, 514.92375pt x 322.20375pt>
+ [12 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/Derivador/bode_derivador magnitud.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/Derivador/bode_derivador_fase.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-integrador.png>]
+<../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-integrador-corrientes.png, id=142, 514.92375pt x 322.20375pt>
 File: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-integrador-corrientes.png Graphic file (type png)
 <use ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-integrador-corrientes.png>
-Package pdftex.def Info: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-integrador-corrientes.png  used on input line 164.
+Package pdftex.def Info: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-integrador-corrientes.png  used on input line 168.
 (pdftex.def)             Requested size: 257.46124pt x 161.10147pt.
- [12 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/Derivador/bode_derivador_fase.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-integrador.png>]
 <../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-bode-ideal-amplitud.png, id=143, 508.0581pt x 245.718pt>
 File: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-bode-ideal-amplitud.png Graphic file (type png)
 <use ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-bode-ideal-amplitud.png>
-Package pdftex.def Info: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-bode-ideal-amplitud.png  used on input line 201.
+Package pdftex.def Info: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-bode-ideal-amplitud.png  used on input line 205.
 (pdftex.def)             Requested size: 508.05685pt x 245.71739pt.
  [13 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-integrador-corrientes.png>]
-<../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-bode-ideal-fase.png, id=151, 508.0581pt x 252.945pt>
+<../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-bode-ideal-fase.png, id=152, 508.0581pt x 252.945pt>
 File: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-bode-ideal-fase.png Graphic file (type png)
 <use ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-bode-ideal-fase.png>
-Package pdftex.def Info: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-bode-ideal-fase.png  used on input line 208.
+Package pdftex.def Info: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-bode-ideal-fase.png  used on input line 212.
 (pdftex.def)             Requested size: 508.05685pt x 252.94438pt.
  [14 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-bode-ideal-amplitud.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-bode-ideal-fase.png>]
-<../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-bode-cideal-amplitud.png, id=161, 508.0581pt x 245.718pt>
+<../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-bode-cideal-amplitud.png, id=162, 508.0581pt x 245.718pt>
 File: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-bode-cideal-amplitud.png Graphic file (type png)
 <use ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-bode-cideal-amplitud.png>
-Package pdftex.def Info: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-bode-cideal-amplitud.png  used on input line 250.
+Package pdftex.def Info: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-bode-cideal-amplitud.png  used on input line 254.
 (pdftex.def)             Requested size: 508.05685pt x 245.71739pt.
-<../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-bode-cideal-fase.png, id=162, 508.0581pt x 252.945pt>
+<../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-bode-cideal-fase.png, id=163, 508.0581pt x 252.945pt>
 File: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-bode-cideal-fase.png Graphic file (type png)
 <use ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-bode-cideal-fase.png>
-Package pdftex.def Info: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-bode-cideal-fase.png  used on input line 257.
+Package pdftex.def Info: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-bode-cideal-fase.png  used on input line 261.
 (pdftex.def)             Requested size: 508.05685pt x 252.94438pt.
  [15 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-bode-cideal-amplitud.png>]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 262.
+(hyperref)                removing `math shift' on input line 266.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 262.
+(hyperref)                removing `subscript' on input line 266.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 262.
+(hyperref)                removing `math shift' on input line 266.
 
-<../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-bode-noideal-amplitud.png, id=170, 508.0581pt x 245.718pt>
+<../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-bode-noideal-amplitud.png, id=171, 508.0581pt x 245.718pt>
 File: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-bode-noideal-amplitud.png Graphic file (type png)
 <use ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-bode-noideal-amplitud.png>
-Package pdftex.def Info: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-bode-noideal-amplitud.png  used on input line 280.
+Package pdftex.def Info: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-bode-noideal-amplitud.png  used on input line 284.
 (pdftex.def)             Requested size: 508.05685pt x 245.71739pt.
 [16 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-bode-cideal-fase.png>]
-<../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-bode-noideal-fase.png, id=179, 508.0581pt x 252.945pt>
+<../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-bode-noideal-fase.png, id=180, 508.0581pt x 252.945pt>
 File: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-bode-noideal-fase.png Graphic file (type png)
 <use ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-bode-noideal-fase.png>
-Package pdftex.def Info: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-bode-noideal-fase.png  used on input line 287.
+Package pdftex.def Info: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-bode-noideal-fase.png  used on input line 291.
 (pdftex.def)             Requested size: 508.05685pt x 252.94438pt.
-<../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/comparativo-magnitud.png, id=180, 508.0581pt x 245.718pt>
+<../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/comparativo-magnitud.png, id=181, 508.0581pt x 245.718pt>
 File: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/comparativo-magnitud.png Graphic file (type png)
 <use ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/comparativo-magnitud.png>
-Package pdftex.def Info: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/comparativo-magnitud.png  used on input line 296.
+Package pdftex.def Info: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/comparativo-magnitud.png  used on input line 300.
 (pdftex.def)             Requested size: 508.05685pt x 245.71739pt.
  [17 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-bode-noideal-amplitud.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-bode-noideal-fase.png>]
-<../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/comparativo-fase.png, id=189, 508.0581pt x 252.945pt>
+<../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/comparativo-fase.png, id=190, 508.0581pt x 252.945pt>
 File: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/comparativo-fase.png Graphic file (type png)
 <use ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/comparativo-fase.png>
-Package pdftex.def Info: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/comparativo-fase.png  used on input line 303.
+Package pdftex.def Info: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/comparativo-fase.png  used on input line 307.
 (pdftex.def)             Requested size: 508.05685pt x 252.94438pt.
-<../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/senoidal - 100.png, id=190, 1205.50375pt x 626.34pt>
+<../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/senoidal - 100.png, id=191, 1205.50375pt x 626.34pt>
 File: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/senoidal - 100.png Graphic file (type png)
 <use ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/senoidal - 100.png>
-Package pdftex.def Info: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/senoidal - 100.png  used on input line 319.
+Package pdftex.def Info: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/senoidal - 100.png  used on input line 323.
 (pdftex.def)             Requested size: 482.19296pt x 250.53156pt.
  [18 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/comparativo-magnitud.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/comparativo-fase.png>]
-<../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/senoidal - 1000.png, id=201, 1203.49625pt x 621.32124pt>
+<../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/senoidal - 1000.png, id=202, 1203.49625pt x 621.32124pt>
 File: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/senoidal - 1000.png Graphic file (type png)
 <use ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/senoidal - 1000.png>
-Package pdftex.def Info: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/senoidal - 1000.png  used on input line 326.
+Package pdftex.def Info: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/senoidal - 1000.png  used on input line 330.
 (pdftex.def)             Requested size: 481.38997pt x 248.5241pt.
-<../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/senoidal - 10000.png, id=202, 1206.5075pt x 627.34375pt>
+<../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/senoidal - 10000.png, id=203, 1206.5075pt x 627.34375pt>
 File: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/senoidal - 10000.png Graphic file (type png)
 <use ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/senoidal - 10000.png>
-Package pdftex.def Info: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/senoidal - 10000.png  used on input line 333.
+Package pdftex.def Info: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/senoidal - 10000.png  used on input line 337.
 (pdftex.def)             Requested size: 482.59445pt x 250.93304pt.
  [19 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/senoidal - 100.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/senoidal - 1000.png>]
-<../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/entrada-senoidal-amplitud.png, id=211, 508.0581pt x 245.718pt>
+<../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/entrada-senoidal-amplitud.png, id=212, 508.0581pt x 245.718pt>
 File: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/entrada-senoidal-amplitud.png Graphic file (type png)
 <use ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/entrada-senoidal-amplitud.png>
-Package pdftex.def Info: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/entrada-senoidal-amplitud.png  used on input line 347.
+Package pdftex.def Info: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/entrada-senoidal-amplitud.png  used on input line 351.
 (pdftex.def)             Requested size: 508.05685pt x 245.71739pt.
-<../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/entrada-senoidal-fase.png, id=212, 508.0581pt x 252.945pt>
+<../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/entrada-senoidal-fase.png, id=213, 508.0581pt x 252.945pt>
 File: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/entrada-senoidal-fase.png Graphic file (type png)
 <use ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/entrada-senoidal-fase.png>
-Package pdftex.def Info: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/entrada-senoidal-fase.png  used on input line 354.
+Package pdftex.def Info: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/entrada-senoidal-fase.png  used on input line 358.
 (pdftex.def)             Requested size: 508.05685pt x 252.94438pt.
  [20 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/senoidal - 10000.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/entrada-senoidal-amplitud.png>]
-<../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/miller-integrador.png, id=221, 523.9575pt x 212.795pt>
+<../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/miller-integrador.png, id=222, 523.9575pt x 212.795pt>
 File: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/miller-integrador.png Graphic file (type png)
 <use ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/miller-integrador.png>
-Package pdftex.def Info: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/miller-integrador.png  used on input line 372.
+Package pdftex.def Info: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/miller-integrador.png  used on input line 376.
 (pdftex.def)             Requested size: 366.76775pt x 148.95547pt.
-<../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/zin-magnitud.png, id=222, 462.528pt x 346.896pt>
+<../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/zin-magnitud.png, id=223, 462.528pt x 346.896pt>
 File: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/zin-magnitud.png Graphic file (type png)
 <use ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/zin-magnitud.png>
-Package pdftex.def Info: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/zin-magnitud.png  used on input line 386.
+Package pdftex.def Info: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/zin-magnitud.png  used on input line 390.
 (pdftex.def)             Requested size: 462.52686pt x 346.89514pt.
  [21 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/entrada-senoidal-fase.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/miller-integrador.png>]
-<../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/zin-fase.png, id=233, 462.528pt x 346.896pt>
+<../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/zin-fase.png, id=234, 462.528pt x 346.896pt>
 File: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/zin-fase.png Graphic file (type png)
 <use ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/zin-fase.png>
-Package pdftex.def Info: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/zin-fase.png  used on input line 393.
+Package pdftex.def Info: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/zin-fase.png  used on input line 397.
 (pdftex.def)             Requested size: 462.52686pt x 346.89514pt.
  [22 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/zin-magnitud.png>]) [23 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/zin-fase.png>] (/Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/../Ejercicio4-CircuitodeAplicacion/Ejercicio-4.tex) [24]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 33.
@@ -1123,18 +1127,18 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 33.
  ) 
 Here is how much of TeX's memory you used:
- 34412 strings out of 480608
- 807998 string characters out of 5903630
- 1184200 words of memory out of 5000000
- 49629 multiletter control sequences out of 15000+600000
+ 34418 strings out of 480608
+ 808479 string characters out of 5903630
+ 1183200 words of memory out of 5000000
+ 49634 multiletter control sequences out of 15000+600000
  545215 words of font info for 74 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  71i,16n,73p,909b,866s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on /Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/main.pdf (25 pages, 956031 bytes).
+Output written on /Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/main.pdf (25 pages, 967334 bytes).
 PDF statistics:
- 342 PDF objects out of 1000 (max. 8388607)
+ 343 PDF objects out of 1000 (max. 8388607)
  239 compressed objects within 3 object streams
  92 named destinations out of 1000 (max. 500000)
- 158 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 163 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -16,7 +16,7 @@
 \contentsline {subsection}{\numberline {3.2}Circuito Derivador}{10}{subsection.3.2}%
 \contentsline {subsection}{\numberline {3.3}Circuito Integrador}{12}{subsection.3.3}%
 \contentsline {subsubsection}{\numberline {3.3.1}Introducción}{12}{subsubsection.3.3.1}%
-\contentsline {subsubsection}{\numberline {3.3.2}Análisis de la Transferencia del Circuito Integrador - OPAMP ideal}{12}{subsubsection.3.3.2}%
+\contentsline {subsubsection}{\numberline {3.3.2}Análisis de la Transferencia del Circuito Integrador - OPAMP ideal}{13}{subsubsection.3.3.2}%
 \contentsline {subsubsection}{\numberline {3.3.3}Análisis de la Transferencia del Circuito Integrador - OPAMP con A finito}{14}{subsubsection.3.3.3}%
 \contentsline {subsubsection}{\numberline {3.3.4}Análisis de la Transferencia del Circuito Integrador - OPAMP con $A_{vol}(w)$}{16}{subsubsection.3.3.4}%
 \contentsline {subsubsection}{\numberline {3.3.5}Análisis de Entrada Senoidal al circuito}{18}{subsubsection.3.3.5}%
