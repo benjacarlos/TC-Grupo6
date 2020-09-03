@@ -281,8 +281,14 @@ INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/refcount/refcount.sty
 INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/refcount/refcount.sty
 INPUT /usr/local/texlive/2020/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 INPUT /usr/local/texlive/2020/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
-OUTPUT /Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/main.out
+INPUT /Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/main.out
+INPUT /Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/main.out
+INPUT /Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/main.out
+INPUT /Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/main.out
 OUTPUT /Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/main.pdf
+INPUT /Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/main.out
+INPUT /Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/main.out
+OUTPUT /Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/main.out
 INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/translator/translator-basic-dictionary-English.dict
 INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/translator/translator-basic-dictionary-English.dict
 INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/siunitx/siunitx-abbreviations.cfg
@@ -342,6 +348,9 @@ INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmti12.tfm
 INPUT /usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
+INPUT /Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/main.toc
+INPUT /Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/main.toc
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm
 OUTPUT /Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/main.toc
 INPUT /Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/../Ejercicio1-CaracterizaciondeOpamps/Ejercicio-1.tex
 INPUT /Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/../Ejercicio1-CaracterizaciondeOpamps/Ejercicio-1.tex
@@ -354,7 +363,6 @@ INPUT /Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/../Ejercicio
 INPUT /Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/../Ejercicio2-MediciondeBias/Informe/inversopamp.png
 INPUT /Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/../Ejercicio2-MediciondeBias/Informe/inversopamp.png
 INPUT /Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/../Ejercicio2-MediciondeBias/Informe/inversopamp.png
-INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm
 INPUT /Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/../Ejercicio2-MediciondeBias/Informe/circuito.png
 INPUT /Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/../Ejercicio2-MediciondeBias/Informe/circuito.png
 INPUT /Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/../Ejercicio2-MediciondeBias/Informe/circuito.png
@@ -379,6 +387,9 @@ INPUT /Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/../Ejercicio
 INPUT /Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/../Ejercicio2-MediciondeBias/Informe/compib.png
 INPUT /Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/../Ejercicio3-CircuitoIntegradoresyDerivadores/Ejercicio-3.tex
 INPUT /Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/../Ejercicio3-CircuitoIntegradoresyDerivadores/Ejercicio-3.tex
+INPUT /Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/Derivador/circuito_derivador.png
+INPUT /Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/Derivador/circuito_derivador.png
+INPUT /Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/Derivador/circuito_derivador.png
 INPUT /Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/Derivador/bode_derivador magnitud.png
 INPUT /Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/Derivador/bode_derivador magnitud.png
 INPUT /Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/Derivador/bode_derivador magnitud.png
@@ -464,5 +475,4 @@ INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.p
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb
-INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb
