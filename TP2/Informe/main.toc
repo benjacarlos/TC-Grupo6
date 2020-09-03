@@ -18,7 +18,7 @@
 \contentsline {subsubsection}{\numberline {3.3.1}Introducción}{12}{subsubsection.3.3.1}%
 \contentsline {subsubsection}{\numberline {3.3.2}Análisis de la Transferencia del Circuito Integrador - OPAMP ideal}{12}{subsubsection.3.3.2}%
 \contentsline {subsubsection}{\numberline {3.3.3}Análisis de la Transferencia del Circuito Integrador - OPAMP con A finito}{14}{subsubsection.3.3.3}%
-\contentsline {subsubsection}{\numberline {3.3.4}Análisis de la Transferencia del Circuito Integrador - OPAMP con $A_{vol}(w)$}{16}{subsubsection.3.3.4}%
-\contentsline {subsubsection}{\numberline {3.3.5}Análisis de Impedancia de Entrada al Circuito Integrador}{18}{subsubsection.3.3.5}%
-\contentsline {section}{\numberline {4}Circuito de Aplicación}{21}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Introducción}{21}{subsection.4.1}%
+\contentsline {subsubsection}{\numberline {3.3.4}Análisis de la Transferencia del Circuito Integrador - OPAMP con $A_{vol}(w)$}{15}{subsubsection.3.3.4}%
+\contentsline {subsubsection}{\numberline {3.3.5}Análisis de Impedancia de Entrada al Circuito Integrador}{17}{subsubsection.3.3.5}%
+\contentsline {section}{\numberline {4}Circuito de Aplicación}{20}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Introducción}{20}{subsection.4.1}%
