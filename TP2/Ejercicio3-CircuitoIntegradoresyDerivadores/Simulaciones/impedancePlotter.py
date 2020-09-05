@@ -1,4 +1,5 @@
 import cmath, math, numpy
+import math
 import matplotlib.pyplot as plt
 
 ######################################################
@@ -25,6 +26,7 @@ def myImpedanceCalculatorIntegrator(fStart,fEnd):
     phases = []
     for phase in impedances:
         phases.append (numpy.degrees (cmath.phase(phase)))
+
     return myrange,magnitudes,phases
 
 def myImpedanceCalculatorDerivator(fStart,fEnd):
@@ -43,21 +45,18 @@ def myImpedanceCalculatorDerivator(fStart,fEnd):
         phases.append (numpy.degrees (cmath.phase(phase)))
     return myrange,magnitudes,phases
 
-def plotInLog (xlabel,ylabel,theTitle, frange,logPlot,ax):
-    ax.semilogx(frange, logPlot)
-    ax.set_xscale('log')
-    ax.grid(True, which="both")
-    ax.minorticks_on()
-    ax.set_title(theTitle)
-    ax.set_xlabel(xlabel)
-    ax.set_ylabel(ylabel)
-    #plt.show()
+def plotInLog (frange,logPlot,myLabel):
+
+    plt.semilogx(frange, logPlot,label=myLabel)
+    plt.xscale('log')
+    plt.grid(True, which="both")
+    plt.minorticks_on()
+
 
 
 def readLT (fileName):
-    ltSpiceTXT = open(r"C:\Users\Nicolas Mestanza\Desktop\Draft5.txt", "r")
+    ltSpiceTXT = open(fileName, "r")
     EachLine = ltSpiceTXT.readlines()
-    print (EachLine)
     myLTImpedance = dict()
     myLTImpedance['f']=[]
     myLTImpedance['magnitude'] = []
@@ -82,31 +81,46 @@ def readLT (fileName):
         myComplexImpedance = complex (float (real),float(imaginary))
         myLTImpedance['f'].append(float(frequency))
         myLTImpedance['magnitude'].append(abs(myComplexImpedance))
-        myLTImpedance['phase'].append(numpy.degrees(cmath.phase(myComplexImpedance)))
+        myLTImpedance['phase'].append(math.atan(myComplexImpedance.imag/myComplexImpedance.real)*pi/180)
     return (myLTImpedance)
 
+
 if __name__ == '__main__':
-    mySpiceImpedance = readLT ("Draft5")
-    fig, ax = plt.subplots()
+
+    ######################################################
+    # Definir cual es el path al archivo de LT Spice     #
+    ######################################################
+
+    mySpiceImpedance = readLT(r"C:\Users\Nicolas Mestanza\Desktop\Draft3.txt")
+
     ######################################################
     # Definir desde que a que frecuencia quiero graficar #
     ######################################################
 
     fStart = 1e-2
     fEnd = 10000
+    myrange, myMagnitude, myPhase = myImpedanceCalculatorIntegrator(fStart, fEnd)
 
     ######################################################
-    # Grafico                                            #
+    # Grafico Magnitudes                                 #
     ######################################################
 
-    myrange, myMagnitude,myPhase = myImpedanceCalculatorIntegrator(fStart,fEnd)
-    #myrange, myMagnitude,myPhase = myImpedanceCalculatorDerivator(fStart,fEnd)
+    #plotInLog(myrange, myMagnitude,"Teórica")
+    #plotInLog(mySpiceImpedance['f'],mySpiceImpedance['magnitude'],"Simulada")
+    #plt.ylabel("|Zin|")
 
-    plotInLog ("Frecuencia (Hz)","|Zin|","Impedancia de Entrada",mySpiceImpedance['f'],mySpiceImpedance['magnitude'],ax)
+    ######################################################
+    # Grafico Fases                                      #
+    ######################################################
 
-    plotInLog ("Frecuencia (Hz)","|Zin|","Impedancia de Entrada",myrange,myMagnitude,ax)
-    fig.tight_layout()
-    #plotInLog("Frecuencia (Hz)", "Fase Zin", "Impedancia de Entrada", myrange, myPhase)
+    plotInLog(myrange, myPhase, "Teórica")
+    plotInLog(mySpiceImpedance['f'],mySpiceImpedance['phase'],"Simulada")
+    plt.ylabel("Fase Zin")
+
+
+    plt.xlabel("Frecuencia (Hz)")
+    plt.title("Impedancia de Entrada")
+    plt.legend()
     plt.show()
 
 
