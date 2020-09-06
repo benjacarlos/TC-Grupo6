@@ -23,5 +23,5 @@
 \contentsline {subsubsection}{\numberline {3.3.6}Análisis de Entrada Cuadrada al Circuito Integrador}{21}{subsubsection.3.3.6}%
 \contentsline {subsubsection}{\numberline {3.3.7}Análisis de Impedancia de Entrada al Circuito Integrador}{26}{subsubsection.3.3.7}%
 \contentsline {subsubsection}{\numberline {3.3.8}Compensación/Limitación del Circuito Integrador con una $R$ adicional}{28}{subsubsection.3.3.8}%
-\contentsline {section}{\numberline {4}Circuito de Aplicación}{29}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Introducción}{29}{subsection.4.1}%
+\contentsline {section}{\numberline {4}Circuito de Aplicación}{31}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Introducción}{31}{subsection.4.1}%

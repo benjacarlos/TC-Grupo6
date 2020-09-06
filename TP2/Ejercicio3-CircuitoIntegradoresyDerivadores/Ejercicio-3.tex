@@ -514,3 +514,87 @@ Como conclusión entonces, para $f \geq 1Hz$ :
 $$Z_{in} \approx R$$
 
 \subsubsection{Compensación/Limitación del Circuito Integrador con una $R$ adicional}
+
+Como se ha explicado previamente, para el circuito integrador con el amplificador operacional, en frecuencias bajas, se interrumpe el ciclo de retroalimentación,
+ya que debido a la alta impedancia, en dichas frecuencias, del componente reactivo del circuito, se "abre" el  circuito entre los terminales donde está conectado el capacitor.
+
+Para limitar ese efecto en las bajas frecuencias, es conveniente conectar una resistencia en paralelo al capacitor. El efecto que se logrará es que eligiendo conveniente esa resistencia,
+a la que llamaremos $R_c$, se subsanará el efecto de circuito abierto entre las  terminales del capacitor a bajas frecuencias. Cuando se "abra" el circuito, la corriente de retroalimentación
+aun podrá circular por dicha $R_c$ aunque a su vez, la ganancia del circuito ya no será cada vez mayor a medida que la frecuencia baja, sino que estará limitada por la relación 
+$\frac{R_c}{R}$. 
+
+Se pudo observar previamente que la ganancia tendía a $\infty$ conforme la frecuencia disminuía, ahora en ese rango de frecuencias, la ganancia estará limitada. Por ello, podemos
+afirmar que el efecto de agregar la $R_c$ en paralelo al capacitor tendrá un efecto compensatorio para el efecto del capacitor en bajas frecuencias y a su vez limitador en cuanto a la 
+ganancia. 
+
+\begin{figure}[H]
+    \centering 
+    \includegraphics [scale=1] {../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-integrador-compensado.png} 
+    \caption{Diagrama del circuito integrador compensado}
+    \label{fig:emptyPlotTool}
+\end{figure}
+
+Es conveniente analizar, como será el efecto de esta nueva resistencia introducida en las representaciones de las funciones transferencia para los tres
+casos analizados anteriormente. Para ello, simplificaremos el diagrama definiendo a $Z=\frac{X_c.R_c}{X_c+R_c}=\frac{R_c}{SR_cC+1}$
+
+\begin{figure}[H]
+    \centering 
+    \includegraphics [scale=1] {../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-integrador-compensado-resumido.png} 
+    \caption{Diagrama del circuito integrador compensado con impedancia equivalente para $R_c$ y $C$}
+    \label{fig:emptyPlotTool}
+\end{figure}
+
+Si $A_{vol} = \infty$:
+
+\begin{itemize}
+	\item $i1 = -i2$
+	\item $i1 = \frac{V_{in}}{R} $
+	\item $i2 = \frac{V_{out}}{Z}$
+\end{itemize}
+
+Entonces:
+
+$$ \frac{V_{in}}{R} = - (\frac{V_{out}}{Z}) \Longrightarrow \frac{V_{out}}{V_{in}} = -\frac{Z}{R} = - \frac{R_c}{R}.\frac{1}{SCR_c+1}$$
+
+$$ H(S) = - \frac{R_c}{R}.(\frac{1}{SCR_c+1})$$
+
+Para el caso donde $A_{vol}$ es finito, utilizando las relaciones descriptas en el análisis sin $R_c$:
+
+\begin{itemize}
+	\item $i1 = \frac {V_{in}-V^{-}}{R} =  \frac {V_{in} + \frac{V_{out}}{A_{vol}}}{R}$
+	\item $i2 = \frac {V_{out}-V^{-}}{Z} = \frac {V_{out} + \frac{V_{out}}{A_{vol}}}{Z}$
+\end{itemize}
+
+Siendo entonces:
+
+$$ \frac {V_{in} + \frac{V_{out}}{A_{vol}}}{R} = -(\frac {V_{out} + \frac{V_{out}}{A_{vol}}}{Z})
+\Longrightarrow \frac{V_{out}}{V_{in}} = \frac{-1}{(SCR_c+1)\frac{R}{R_c}(1+\frac{1}{A_{vol}})+\frac{1}{A_{vol}}} = 
+-\frac{R_c}{R}\frac{1}{(SCR_c+1)(1+\frac{1}{A_{vol}})+\frac{R_c}{RA_{vol}}} $$
+
+Por lo tanto:
+
+$$H(S)= -\frac{R_c}{R}\frac{1}{(SCR_c+1)(1+\frac{1}{A_{vol}})+\frac{R_c}{RA_{vol}}} $$
+
+Para finalizar este análisis, se calculará la función transferencia cuando $A_{vol}(w)$, siendo esta:
+
+$$H(S)=-\frac{R_c}{R}\frac{1}{S^2(\frac{CR_c}{W_bA_0})+SCR_c(1+\frac{1}{A_0}+\frac{1}{W_bA_0CR_c}+\frac{1}{W_bA_0CR})+1+\frac{1}{A_0}+\frac{R_c}{RA_0}}$$
+
+Se puede observar que para los últimos dos casos, nuevamente si $A_{vol}$ es mas y mas grande, estaremos en el caso de la ganancia ideal con el circuito compensado
+por $R_c$.
+
+A continuación se comparan las tres funciones transferencia desarrolladas.
+
+
+%INSERTAR GRAFICO COMPARATIVO
+
+Para poder conocer cuál es la $R_c$ a emplear, se buscará poder obtener un desfasaje de $90^o$ entre la señal de entrada y salida en frecuencias lo más baja posible.
+Para poder encontrar ese valor, y partiendo del caso ideal $ H(S) = - \frac{R_c}{R}.(\frac{1}{SCR_c+1})$, podemos observar que al introducir la resistencia $R_c$
+en paralelo contamos con un nuevo polo en donde el desfasaje cambiará a $90^o$  que dependerá de la frecuencia que nosotros consideremos como baja y el valor de $R_c$ empleado.
+A su vez, podemos observar que para la función de transferencia ideal, contamos con la expresion de un filtro pasa-bajos pasivo como el analizado en la primera experiencia
+de laboratorio. Entonces la frecuencia de corte considerada para tal puede ser expresada como:
+
+$$f_0 = \frac{1}{2\pi R_cC}$$
+
+Entonces eligiendo la frecuencia podremos obtener el valor la resistencia $R_c$ a emplear como limitadora/compensadora. Se ele
+
+frecuencia, y ese polo te va a cambiar la fase 90° entonces te aseguras de que ese polo este en bajas frecuencias cosa de que en un rango meido de frecuencias vuelvas a tener la fase en 90°, es algo medio rebuscado y parece poco preciso peeero anda bien. Eso te pone un limite para la R de compensacion, despues otro limite lo podes sacar determinando la ganancia que quieras tener
