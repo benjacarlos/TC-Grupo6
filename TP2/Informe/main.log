@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.8.20)  6 SEP 2020 19:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.8.20)  7 SEP 2020 00:26
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -792,6 +792,30 @@ LaTeX Warning: Label `fig:emptyPlotTool' multiply defined.
 
 LaTeX Warning: Label `fig:emptyPlotTool' multiply defined.
 
+
+LaTeX Warning: Label `fig:emptyPlotTool' multiply defined.
+
+
+LaTeX Warning: Label `fig:emptyPlotTool' multiply defined.
+
+
+LaTeX Warning: Label `fig:emptyPlotTool' multiply defined.
+
+
+LaTeX Warning: Label `fig:emptyPlotTool' multiply defined.
+
+
+LaTeX Warning: Label `fig:emptyPlotTool' multiply defined.
+
+
+LaTeX Warning: Label `fig:emptyPlotTool' multiply defined.
+
+
+LaTeX Warning: Label `fig:emptyPlotTool' multiply defined.
+
+
+LaTeX Warning: Label `fig:emptyPlotTool' multiply defined.
+
 )
 \openout1 = `main.aux'.
 
@@ -916,23 +940,23 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has b
                    \relax 
 l.11 \newpage
               [1] (/Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/../Ejercicio1-CaracterizaciondeOpamps/Ejercicio-1.tex) [2] (/Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/../Ejercicio2-MediciondeBias/Ejercicio-2.tex
-<../Ejercicio2-MediciondeBias/Informe/modeloopamp.png, id=160, 488.42474pt x 436.029pt>
+<../Ejercicio2-MediciondeBias/Informe/modeloopamp.png, id=165, 488.42474pt x 436.029pt>
 File: ../Ejercicio2-MediciondeBias/Informe/modeloopamp.png Graphic file (type png)
 <use ../Ejercicio2-MediciondeBias/Informe/modeloopamp.png>
 Package pdftex.def Info: ../Ejercicio2-MediciondeBias/Informe/modeloopamp.png  used on input line 7.
 (pdftex.def)             Requested size: 195.36642pt x 174.4085pt.
-<../Ejercicio2-MediciondeBias/Informe/inversopamp.png, id=161, 321.6015pt x 190.311pt>
+<../Ejercicio2-MediciondeBias/Informe/inversopamp.png, id=166, 321.6015pt x 190.311pt>
 File: ../Ejercicio2-MediciondeBias/Informe/inversopamp.png Graphic file (type png)
 <use ../Ejercicio2-MediciondeBias/Informe/inversopamp.png>
 Package pdftex.def Info: ../Ejercicio2-MediciondeBias/Informe/inversopamp.png  used on input line 19.
 (pdftex.def)             Requested size: 160.80035pt x 95.15526pt.
-<../Ejercicio2-MediciondeBias/Informe/circuito.png, id=163, 607.67026pt x 257.763pt>
+<../Ejercicio2-MediciondeBias/Informe/circuito.png, id=168, 607.67026pt x 257.763pt>
 File: ../Ejercicio2-MediciondeBias/Informe/circuito.png Graphic file (type png)
 <use ../Ejercicio2-MediciondeBias/Informe/circuito.png>
 Package pdftex.def Info: ../Ejercicio2-MediciondeBias/Informe/circuito.png  used on input line 46.
 (pdftex.def)             Requested size: 394.98097pt x 167.54396pt.
  [3 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/../Ejercicio2-MediciondeBias/Informe/modeloopamp.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/../Ejercicio2-MediciondeBias/Informe/inversopamp.png>]
-<../Ejercicio2-MediciondeBias/Informe/realimentacion.png, id=172, 112.62074pt x 45.771pt>
+<../Ejercicio2-MediciondeBias/Informe/realimentacion.png, id=178, 112.62074pt x 45.771pt>
 File: ../Ejercicio2-MediciondeBias/Informe/realimentacion.png Graphic file (type png)
 <use ../Ejercicio2-MediciondeBias/Informe/realimentacion.png>
 Package pdftex.def Info: ../Ejercicio2-MediciondeBias/Informe/realimentacion.png  used on input line 59.
@@ -943,7 +967,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 86--87
  []
 
 [4 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/../Ejercicio2-MediciondeBias/Informe/circuito.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/../Ejercicio2-MediciondeBias/Informe/realimentacion.png>]
-<../Ejercicio2-MediciondeBias/Informe/etapa2.png, id=182, 311.9655pt x 228.25275pt>
+<../Ejercicio2-MediciondeBias/Informe/etapa2.png, id=187, 311.9655pt x 228.25275pt>
 File: ../Ejercicio2-MediciondeBias/Informe/etapa2.png Graphic file (type png)
 <use ../Ejercicio2-MediciondeBias/Informe/etapa2.png>
 Package pdftex.def Info: ../Ejercicio2-MediciondeBias/Informe/etapa2.png  used on input line 104.
@@ -959,7 +983,7 @@ Overfull \hbox (17.2222pt too wide) in paragraph at lines 102--115
 []$[]$ $[]$ 
  []
 
-<../Ejercicio2-MediciondeBias/Informe/etapa1.png, id=183, 370.986pt x 250.536pt>
+<../Ejercicio2-MediciondeBias/Informe/etapa1.png, id=188, 370.986pt x 250.536pt>
 File: ../Ejercicio2-MediciondeBias/Informe/etapa1.png Graphic file (type png)
 <use ../Ejercicio2-MediciondeBias/Informe/etapa1.png>
 Package pdftex.def Info: ../Ejercicio2-MediciondeBias/Informe/etapa1.png  used on input line 122.
@@ -983,7 +1007,7 @@ Overfull \hbox (14.14534pt too wide) in paragraph at lines 227--235
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [7]
-<../Ejercicio2-MediciondeBias/Informe/comptl081.png, id=209, 284.06125pt x 255.95625pt>
+<../Ejercicio2-MediciondeBias/Informe/comptl081.png, id=214, 284.06125pt x 255.95625pt>
 File: ../Ejercicio2-MediciondeBias/Informe/comptl081.png Graphic file (type png)
 <use ../Ejercicio2-MediciondeBias/Informe/comptl081.png>
 Package pdftex.def Info: ../Ejercicio2-MediciondeBias/Informe/comptl081.png  used on input line 313.
@@ -994,7 +1018,7 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 315.
 See the caption package documentation for explanation.
 
-<../Ejercicio2-MediciondeBias/Informe/complm365.png, id=211, 273.02pt x 278.03876pt>
+<../Ejercicio2-MediciondeBias/Informe/complm365.png, id=216, 273.02pt x 278.03876pt>
 File: ../Ejercicio2-MediciondeBias/Informe/complm365.png Graphic file (type png)
 <use ../Ejercicio2-MediciondeBias/Informe/complm365.png>
 Package pdftex.def Info: ../Ejercicio2-MediciondeBias/Informe/complm365.png  used on input line 322.
@@ -1004,7 +1028,7 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 324.
 See the caption package documentation for explanation.
 
-<../Ejercicio2-MediciondeBias/Informe/compib.png, id=212, 881.2925pt x 534.99875pt>
+<../Ejercicio2-MediciondeBias/Informe/compib.png, id=217, 881.2925pt x 534.99875pt>
 File: ../Ejercicio2-MediciondeBias/Informe/compib.png Graphic file (type png)
 <use ../Ejercicio2-MediciondeBias/Informe/compib.png>
 Package pdftex.def Info: ../Ejercicio2-MediciondeBias/Informe/compib.png  used on input line 333.
@@ -1015,40 +1039,40 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 See the caption package documentation for explanation.
 
 [8 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/../Ejercicio2-MediciondeBias/Informe/comptl081.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/../Ejercicio2-MediciondeBias/Informe/complm365.png>]) [9 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/../Ejercicio2-MediciondeBias/Informe/compib.png>] (/Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/../Ejercicio3-CircuitoIntegradoresyDerivadores/Ejercicio-3.tex
-<../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/Derivador/circuito_derivador.png, id=228, 480.29437pt x 255.20343pt>
+<../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/Derivador/circuito_derivador.png, id=233, 480.29437pt x 255.20343pt>
 File: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/Derivador/circuito_derivador.png Graphic file (type png)
 <use ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/Derivador/circuito_derivador.png>
 Package pdftex.def Info: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/Derivador/circuito_derivador.png  used on input line 17.
 (pdftex.def)             Requested size: 307.29288pt x 163.2829pt.
  [10 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/Derivador/circuito_derivador.png>]
-<../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/Derivador/bode_derivador magnitud.png, id=245, 508.0581pt x 245.718pt>
+<../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/Derivador/bode_derivador magnitud.png, id=250, 508.0581pt x 245.718pt>
 File: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/Derivador/bode_derivador magnitud.png Graphic file (type png)
 <use ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/Derivador/bode_derivador magnitud.png>
 Package pdftex.def Info: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/Derivador/bode_derivador magnitud.png  used on input line 104.
 (pdftex.def)             Requested size: 307.29288pt x 148.62422pt.
-<../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/Derivador/bode_derivador_fase.png, id=246, 508.0581pt x 252.945pt>
+<../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/Derivador/bode_derivador_fase.png, id=251, 508.0581pt x 252.945pt>
 File: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/Derivador/bode_derivador_fase.png Graphic file (type png)
 <use ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/Derivador/bode_derivador_fase.png>
 Package pdftex.def Info: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/Derivador/bode_derivador_fase.png  used on input line 109.
 (pdftex.def)             Requested size: 307.29288pt x 152.99553pt.
  [11 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/Derivador/bode_derivador magnitud.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/Derivador/bode_derivador_fase.png>]
-<../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-integrador.png, id=257, 514.92375pt x 292.09125pt>
+<../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-integrador.png, id=262, 514.92375pt x 292.09125pt>
 File: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-integrador.png Graphic file (type png)
 <use ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-integrador.png>
 Package pdftex.def Info: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-integrador.png  used on input line 143.
 (pdftex.def)             Requested size: 257.46124pt x 146.04526pt.
-<../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-integrador-corrientes.png, id=258, 514.92375pt x 322.20375pt>
+<../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-integrador-corrientes.png, id=263, 514.92375pt x 322.20375pt>
 File: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-integrador-corrientes.png Graphic file (type png)
 <use ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-integrador-corrientes.png>
 Package pdftex.def Info: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-integrador-corrientes.png  used on input line 164.
 (pdftex.def)             Requested size: 257.46124pt x 161.10147pt.
  [12 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-integrador.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-integrador-corrientes.png>]
-<../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/teorico-avol-inf-integrador-amplitud.png, id=268, 508.0581pt x 245.718pt>
+<../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/teorico-avol-inf-integrador-amplitud.png, id=273, 508.0581pt x 245.718pt>
 File: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/teorico-avol-inf-integrador-amplitud.png Graphic file (type png)
 <use ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/teorico-avol-inf-integrador-amplitud.png>
 Package pdftex.def Info: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/teorico-avol-inf-integrador-amplitud.png  used on input line 199.
 (pdftex.def)             Requested size: 508.05685pt x 245.71739pt.
-<../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/teorico-avol-inf-integrador-fase.png, id=269, 508.0581pt x 252.945pt>
+<../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/teorico-avol-inf-integrador-fase.png, id=274, 508.0581pt x 252.945pt>
 File: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/teorico-avol-inf-integrador-fase.png Graphic file (type png)
 <use ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/teorico-avol-inf-integrador-fase.png>
 Package pdftex.def Info: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/teorico-avol-inf-integrador-fase.png  used on input line 206.
@@ -1066,13 +1090,13 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 211.
 
-<../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/teorico-avol-fin-integrador-amplitud.png, id=277, 508.0581pt x 245.718pt>
+<../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/teorico-avol-fin-integrador-amplitud.png, id=282, 508.0581pt x 245.718pt>
 File: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/teorico-avol-fin-integrador-amplitud.png Graphic file (type png)
 <use ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/teorico-avol-fin-integrador-amplitud.png>
 Package pdftex.def Info: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/teorico-avol-fin-integrador-amplitud.png  used on input line 248.
 (pdftex.def)             Requested size: 508.05685pt x 245.71739pt.
 [14 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/teorico-avol-inf-integrador-fase.png>]
-<../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/teorico-avol-fin-integrador-fase.png, id=284, 508.0581pt x 252.945pt>
+<../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/teorico-avol-fin-integrador-fase.png, id=289, 508.0581pt x 252.945pt>
 File: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/teorico-avol-fin-integrador-fase.png Graphic file (type png)
 <use ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/teorico-avol-fin-integrador-fase.png>
 Package pdftex.def Info: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/teorico-avol-fin-integrador-fase.png  used on input line 255.
@@ -1091,39 +1115,39 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 260.
 
 [15 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/teorico-avol-fin-integrador-amplitud.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/teorico-avol-fin-integrador-fase.png>]
-<../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/teorico-avol-w-integrador-amplitud.png, id=294, 508.0581pt x 245.718pt>
+<../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/teorico-avol-w-integrador-amplitud.png, id=299, 508.0581pt x 245.718pt>
 File: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/teorico-avol-w-integrador-amplitud.png Graphic file (type png)
 <use ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/teorico-avol-w-integrador-amplitud.png>
 Package pdftex.def Info: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/teorico-avol-w-integrador-amplitud.png  used on input line 282.
 (pdftex.def)             Requested size: 508.05685pt x 245.71739pt.
-<../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/teorico-avol-w-integrador-fase.png, id=295, 508.0581pt x 252.945pt>
+<../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/teorico-avol-w-integrador-fase.png, id=300, 508.0581pt x 252.945pt>
 File: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/teorico-avol-w-integrador-fase.png Graphic file (type png)
 <use ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/teorico-avol-w-integrador-fase.png>
 Package pdftex.def Info: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/teorico-avol-w-integrador-fase.png  used on input line 289.
 (pdftex.def)             Requested size: 508.05685pt x 252.94438pt.
  [16 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/teorico-avol-w-integrador-amplitud.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/teorico-avol-w-integrador-fase.png>]
-<../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/comparativo-magnitud.png, id=304, 508.0581pt x 245.718pt>
+<../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/comparativo-magnitud.png, id=309, 508.0581pt x 245.718pt>
 File: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/comparativo-magnitud.png Graphic file (type png)
 <use ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/comparativo-magnitud.png>
 Package pdftex.def Info: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/comparativo-magnitud.png  used on input line 301.
 (pdftex.def)             Requested size: 508.05685pt x 245.71739pt.
-<../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/comparativo-fase.png, id=305, 508.0581pt x 252.945pt>
+<../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/comparativo-fase.png, id=310, 508.0581pt x 252.945pt>
 File: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/comparativo-fase.png Graphic file (type png)
 <use ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/comparativo-fase.png>
 Package pdftex.def Info: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/comparativo-fase.png  used on input line 308.
 (pdftex.def)             Requested size: 508.05685pt x 252.94438pt.
  [17 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/comparativo-magnitud.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/comparativo-fase.png>]
-<../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/simulado-integrador-amplitud.png, id=314, 508.0581pt x 245.718pt>
+<../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/simulado-integrador-amplitud.png, id=320, 508.0581pt x 245.718pt>
 File: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/simulado-integrador-amplitud.png Graphic file (type png)
 <use ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/simulado-integrador-amplitud.png>
 Package pdftex.def Info: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/simulado-integrador-amplitud.png  used on input line 331.
 (pdftex.def)             Requested size: 508.05685pt x 245.71739pt.
-<../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/simulado-integrador-fase.png, id=315, 508.0581pt x 252.945pt>
+<../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/simulado-integrador-fase.png, id=321, 508.0581pt x 252.945pt>
 File: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/simulado-integrador-fase.png Graphic file (type png)
 <use ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/simulado-integrador-fase.png>
 Package pdftex.def Info: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/simulado-integrador-fase.png  used on input line 338.
 (pdftex.def)             Requested size: 508.05685pt x 252.94438pt.
- [18 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/simulado-integrador-amplitud.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/simulado-integrador-fase.png>]
+
 
 LaTeX Warning: Command \textpm invalid in math mode on input line 349.
 
@@ -1131,84 +1155,84 @@ LaTeX Warning: Command \textpm invalid in math mode on input line 349.
 LaTeX Warning: Command \textpm invalid in math mode on input line 349.
 
 Missing character: There is no ± in font cmr10!
-<../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/senoidal - 100.png, id=326, 1205.50375pt x 626.34pt>
+[18 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/simulado-integrador-amplitud.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/simulado-integrador-fase.png>]
+<../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/senoidal - 100.png, id=331, 1205.50375pt x 626.34pt>
 File: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/senoidal - 100.png Graphic file (type png)
 <use ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/senoidal - 100.png>
 Package pdftex.def Info: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/senoidal - 100.png  used on input line 380.
 (pdftex.def)             Requested size: 482.19296pt x 250.53156pt.
-<../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/senoidal - 1000.png, id=327, 1203.49625pt x 621.32124pt>
+<../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/senoidal - 1000.png, id=332, 1203.49625pt x 621.32124pt>
 File: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/senoidal - 1000.png Graphic file (type png)
 <use ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/senoidal - 1000.png>
 Package pdftex.def Info: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/senoidal - 1000.png  used on input line 389.
 (pdftex.def)             Requested size: 481.38997pt x 248.5241pt.
-[19 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/senoidal - 100.png>]
-<../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/senoidal - 10000.png, id=334, 1206.5075pt x 627.34375pt>
+ [19 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/senoidal - 100.png>]
+<../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/senoidal - 10000.png, id=339, 1206.5075pt x 627.34375pt>
 File: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/senoidal - 10000.png Graphic file (type png)
 <use ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/senoidal - 10000.png>
 Package pdftex.def Info: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/senoidal - 10000.png  used on input line 398.
 (pdftex.def)             Requested size: 482.59445pt x 250.93304pt.
-<../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/comparativo-integrador-amplitud.png, id=335, 508.0581pt x 245.718pt>
+<../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/comparativo-integrador-amplitud.png, id=340, 508.0581pt x 245.718pt>
 File: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/comparativo-integrador-amplitud.png Graphic file (type png)
 <use ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/comparativo-integrador-amplitud.png>
 Package pdftex.def Info: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/comparativo-integrador-amplitud.png  used on input line 412.
 (pdftex.def)             Requested size: 508.05685pt x 245.71739pt.
  [20 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/senoidal - 1000.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/senoidal - 10000.png>]
-<../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/comparativo-integrador-fase.png, id=344, 508.0581pt x 252.945pt>
+<../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/comparativo-integrador-fase.png, id=349, 508.0581pt x 252.945pt>
 File: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/comparativo-integrador-fase.png Graphic file (type png)
 <use ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/comparativo-integrador-fase.png>
 Package pdftex.def Info: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/comparativo-integrador-fase.png  used on input line 419.
 (pdftex.def)             Requested size: 508.05685pt x 252.94438pt.
  [21 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/comparativo-integrador-amplitud.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/comparativo-integrador-fase.png>]
-<../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/cuadrada-1000.png, id=353, 1203.49625pt x 631.35875pt>
+<../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/cuadrada-1000.png, id=358, 1203.49625pt x 631.35875pt>
 File: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/cuadrada-1000.png Graphic file (type png)
 <use ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/cuadrada-1000.png>
 Package pdftex.def Info: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/cuadrada-1000.png  used on input line 448.
-(pdftex.def)             Requested size: 1203.49332pt x 631.35721pt.
+(pdftex.def)             Requested size: 541.56831pt x 284.10881pt.
 
-Overfull \hbox (691.34372pt too wide) in paragraph at lines 448--449
+Overfull \hbox (29.41872pt too wide) in paragraph at lines 448--449
  [][] 
  []
 
-[22]
-<../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/cuadrada-2500.png, id=358, 1202.4925pt x 628.3475pt>
+<../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/cuadrada-2500.png, id=359, 1202.4925pt x 628.3475pt>
 File: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/cuadrada-2500.png Graphic file (type png)
 <use ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/cuadrada-2500.png>
 Package pdftex.def Info: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/cuadrada-2500.png  used on input line 455.
-(pdftex.def)             Requested size: 1202.48956pt x 628.34596pt.
+(pdftex.def)             Requested size: 541.11662pt x 282.75375pt.
 
-Overfull \hbox (690.33997pt too wide) in paragraph at lines 455--456
+Overfull \hbox (28.96703pt too wide) in paragraph at lines 455--456
  [][] 
  []
 
-[23 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/cuadrada-1000.png>]
-<../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/cuadrada-10000.png, id=365, 1202.4925pt x 608.2725pt>
+[22 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/cuadrada-1000.png>]
+<../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/cuadrada-10000.png, id=366, 1202.4925pt x 608.2725pt>
 File: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/cuadrada-10000.png Graphic file (type png)
 <use ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/cuadrada-10000.png>
 Package pdftex.def Info: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/cuadrada-10000.png  used on input line 462.
-(pdftex.def)             Requested size: 1202.48956pt x 608.27103pt.
+(pdftex.def)             Requested size: 541.11662pt x 273.7201pt.
 
-Overfull \hbox (690.33997pt too wide) in paragraph at lines 462--463
+Overfull \hbox (28.96703pt too wide) in paragraph at lines 462--463
  [][] 
  []
 
-[24 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/cuadrada-2500.png>] [25 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/cuadrada-10000.png>]
-<../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/miller-integrador.png, id=379, 523.9575pt x 212.795pt>
+[23 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/cuadrada-2500.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/cuadrada-10000.png>]
+<../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/miller-integrador.png, id=375, 523.9575pt x 212.795pt>
 File: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/miller-integrador.png Graphic file (type png)
 <use ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/miller-integrador.png>
 Package pdftex.def Info: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/miller-integrador.png  used on input line 481.
 (pdftex.def)             Requested size: 366.76775pt x 148.95547pt.
-<../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/comparativo-integrador-zin-amplitud.png, id=380, 462.528pt x 346.896pt>
+<../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/comparativo-integrador-zin-amplitud.png, id=376, 462.528pt x 346.896pt>
 File: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/comparativo-integrador-zin-amplitud.png Graphic file (type png)
 <use ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/comparativo-integrador-zin-amplitud.png>
 Package pdftex.def Info: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/comparativo-integrador-zin-amplitud.png  used on input line 495.
 (pdftex.def)             Requested size: 462.52686pt x 346.89514pt.
- [26 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/miller-integrador.png>]
-<../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/comparativo-integrador-zin-fase.png, id=387, 462.528pt x 346.896pt>
+ [24 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/miller-integrador.png>]
+<../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/comparativo-integrador-zin-fase.png, id=384, 462.528pt x 346.896pt>
 File: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/comparativo-integrador-zin-fase.png Graphic file (type png)
 <use ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/comparativo-integrador-zin-fase.png>
 Package pdftex.def Info: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/comparativo-integrador-zin-fase.png  used on input line 502.
 (pdftex.def)             Requested size: 462.52686pt x 346.89514pt.
- [27 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/comparativo-integrador-zin-amplitud.png>]
+ [25 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/comparativo-integrador-zin-amplitud.png>]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 516.
@@ -1217,23 +1241,73 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 516.
 
-<../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-integrador-compensado.png, id=394, 435.6275pt x 302.12875pt>
+<../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-integrador-compensado.png, id=391, 435.6275pt x 302.12875pt>
 File: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-integrador-compensado.png Graphic file (type png)
 <use ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-integrador-compensado.png>
 Package pdftex.def Info: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-integrador-compensado.png  used on input line 532.
-(pdftex.def)             Requested size: 435.62643pt x 302.128pt.
-[28 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/comparativo-integrador-zin-fase.png>]
-<../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-integrador-compensado-resumido.png, id=401, 435.6275pt x 241.90375pt>
+(pdftex.def)             Requested size: 304.93716pt x 211.48868pt.
+[26 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/comparativo-integrador-zin-fase.png>]
+<../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-integrador-compensado-resumido.png, id=398, 435.6275pt x 241.90375pt>
 File: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-integrador-compensado-resumido.png Graphic file (type png)
 <use ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-integrador-compensado-resumido.png>
 Package pdftex.def Info: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-integrador-compensado-resumido.png  used on input line 542.
-(pdftex.def)             Requested size: 435.62643pt x 241.90315pt.
- [29 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-integrador-compensado.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-integrador-compensado-resumido.png>]
-Overfull \hbox (8.49016pt too wide) in paragraph at lines 598--599
-[]\OT1/cmr/m/n/10 Entonces eli-gien-do la fre-cuen-cia po-dre-mos ob-te-ner el va-lor la re-sis-ten-cia $\OML/cmm/m/it/10 R[]$ \OT1/cmr/m/n/10 a em-plear co-mo li-mi-ta-do-ra/compensadora.
+(pdftex.def)             Requested size: 304.93716pt x 169.33147pt.
+ [27 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-integrador-compensado.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-integrador-compensado-resumido.png>]
+<../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-bode-integrador-compensado-amplitud.png, id=407, 508.0581pt x 245.718pt>
+File: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-bode-integrador-compensado-amplitud.png Graphic file (type png)
+<use ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-bode-integrador-compensado-amplitud.png>
+Package pdftex.def Info: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-bode-integrador-compensado-amplitud.png  used on input line 616.
+(pdftex.def)             Requested size: 508.05685pt x 245.71739pt.
+ [28]
+<../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-bode-integrador-compensado-fase.png, id=412, 508.0581pt x 252.945pt>
+File: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-bode-integrador-compensado-fase.png Graphic file (type png)
+<use ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-bode-integrador-compensado-fase.png>
+Package pdftex.def Info: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-bode-integrador-compensado-fase.png  used on input line 623.
+(pdftex.def)             Requested size: 508.05685pt x 252.94438pt.
+<../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-bode-integrador-compensado-comparativo-amplitud.png, id=413, 529.22719pt x 255.95625pt>
+File: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-bode-integrador-compensado-comparativo-amplitud.png Graphic file (type png)
+<use ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-bode-integrador-compensado-comparativo-amplitud.png>
+Package pdftex.def Info: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-bode-integrador-compensado-comparativo-amplitud.png  used on input line 632.
+(pdftex.def)             Requested size: 529.22589pt x 255.95561pt.
+
+Overfull \hbox (17.0763pt too wide) in paragraph at lines 632--633
+ [][] 
  []
 
-) [30] (/Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/../Ejercicio4-CircuitodeAplicacion/Ejercicio-4.tex) [31]
+[29 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-bode-integrador-compensado-amplitud.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-bode-integrador-compensado-fase.png>]
+<../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-bode-integrador-compensado-comparativo-fase.png, id=422, 529.22719pt x 263.48438pt>
+File: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-bode-integrador-compensado-comparativo-fase.png Graphic file (type png)
+<use ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-bode-integrador-compensado-comparativo-fase.png>
+Package pdftex.def Info: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-bode-integrador-compensado-comparativo-fase.png  used on input line 639.
+(pdftex.def)             Requested size: 529.22589pt x 263.48372pt.
+
+Overfull \hbox (17.0763pt too wide) in paragraph at lines 639--640
+ [][] 
+ []
+
+<../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-bode-integrador-simulado-compensado-amplitud.png, id=423, 508.0581pt x 245.718pt>
+File: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-bode-integrador-simulado-compensado-amplitud.png Graphic file (type png)
+<use ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-bode-integrador-simulado-compensado-amplitud.png>
+Package pdftex.def Info: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-bode-integrador-simulado-compensado-amplitud.png  used on input line 650.
+(pdftex.def)             Requested size: 508.05685pt x 245.71739pt.
+[30 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-bode-integrador-compensado-comparativo-amplitud.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-bode-integrador-compensado-comparativo-fase.png>]
+<../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-bode-integrador-simulado-compensado-fase.png, id=433, 508.0581pt x 252.945pt>
+File: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-bode-integrador-simulado-compensado-fase.png Graphic file (type png)
+<use ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-bode-integrador-simulado-compensado-fase.png>
+Package pdftex.def Info: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-bode-integrador-simulado-compensado-fase.png  used on input line 657.
+(pdftex.def)             Requested size: 508.05685pt x 252.94438pt.
+<../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/transferencia-comparativo-todo-amplitud.png, id=434, 508.0581pt x 245.718pt>
+File: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/transferencia-comparativo-todo-amplitud.png Graphic file (type png)
+<use ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/transferencia-comparativo-todo-amplitud.png>
+Package pdftex.def Info: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/transferencia-comparativo-todo-amplitud.png  used on input line 668.
+(pdftex.def)             Requested size: 508.05685pt x 245.71739pt.
+ [31 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-bode-integrador-simulado-compensado-amplitud.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-bode-integrador-simulado-compensado-fase.png>]
+<../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/transferencia-comparativo-todo-fase.png, id=443, 508.0581pt x 252.945pt>
+File: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/transferencia-comparativo-todo-fase.png Graphic file (type png)
+<use ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/transferencia-comparativo-todo-fase.png>
+Package pdftex.def Info: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/transferencia-comparativo-todo-fase.png  used on input line 675.
+(pdftex.def)             Requested size: 508.05685pt x 252.94438pt.
+) [32 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/transferencia-comparativo-todo-amplitud.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/transferencia-comparativo-todo-fase.png>] (/Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/../Ejercicio4-CircuitodeAplicacion/Ejercicio-4.tex) [33]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 33.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 33.
  (/Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/main.aux
@@ -1243,7 +1317,7 @@ LaTeX Info: Redefining \% on input line 20.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 33.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 33.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: BA8BA5B8632BB115AFDDC3D7BED3E03E;2277.
+(rerunfilecheck)             Checksum: 1E2091E0B423AF6F91CF9CDB12CAE059;2405.
 
 
 LaTeX Warning: There were multiply-defined labels.
@@ -1251,18 +1325,18 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 33.
  ) 
 Here is how much of TeX's memory you used:
- 34492 strings out of 480608
- 811950 string characters out of 5903630
- 1184972 words of memory out of 5000000
- 49696 multiletter control sequences out of 15000+600000
+ 34551 strings out of 480608
+ 816918 string characters out of 5903630
+ 1184919 words of memory out of 5000000
+ 49736 multiletter control sequences out of 15000+600000
  545215 words of font info for 74 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  71i,16n,73p,909b,866s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on /Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/main.pdf (32 pages, 1180759 bytes).
+Output written on /Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/main.pdf (34 pages, 1355956 bytes).
 PDF statistics:
- 508 PDF objects out of 1000 (max. 8388607)
- 383 compressed objects within 4 object streams
- 107 named destinations out of 1000 (max. 500000)
- 406 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 549 PDF objects out of 1000 (max. 8388607)
+ 405 compressed objects within 5 object streams
+ 118 named destinations out of 1000 (max. 500000)
+ 454 words of extra memory for PDF output out of 10000 (max. 10000000)
 

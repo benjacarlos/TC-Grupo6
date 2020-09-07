@@ -342,7 +342,7 @@ mencionados previamente es:
 
 Se puede observar que los resultados de la simulación muestran total similitud con lo analizado teóricamente para el caso $A_{vol}(w)$.
 
-\subsubsection{Análisis de Entrada Senoidal al circuito} integrador
+\subsubsection{Análisis de Entrada Senoidal al circuito integrador}
 
 Se inyectó una señal senoidal variando su amplitud y frecuencia para analizar el comportamiento y la respuesta del circuito a ella.
 Se tiene en cuenta que para frecuencias bajas, la ganancia del circuito es mayor y podría generar saturación en la salida del circuito $v_out(t)$, que fue alimentado con
@@ -445,21 +445,21 @@ A continuación se puede observar el comportamiento integrador del circuito en l
 
 \begin{figure}[H]
     \centering 
-    \includegraphics [scale=1] {../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/cuadrada-1000.png} 
+    \includegraphics [scale=0.45] {../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/cuadrada-1000.png} 
     \caption{Señal de Entrada Cuadrada y Señal Integrada de Salida a 1000 Hz }
     \label{fig:emptyPlotTool}
 \end{figure}
 
 \begin{figure}[H]
     \centering 
-    \includegraphics [scale=1] {../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/cuadrada-2500.png} 
+    \includegraphics [scale=0.45] {../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/cuadrada-2500.png} 
     \caption{Señal de Entrada Cuadrada y Señal Integrada de Salida a 2500 Hz}
     \label{fig:emptyPlotTool}
 \end{figure}
 
 \begin{figure}[H]
     \centering 
-    \includegraphics [scale=1] {../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/cuadrada-10000.png} 
+    \includegraphics [scale=0.45] {../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/cuadrada-10000.png} 
     \caption{Señal de Entrada Cuadrada y Señal Integrada de Salida a 10.000 Hz}
     \label{fig:emptyPlotTool}
 \end{figure}
@@ -529,7 +529,7 @@ ganancia.
 
 \begin{figure}[H]
     \centering 
-    \includegraphics [scale=1] {../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-integrador-compensado.png} 
+    \includegraphics [scale=0.7] {../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-integrador-compensado.png} 
     \caption{Diagrama del circuito integrador compensado}
     \label{fig:emptyPlotTool}
 \end{figure}
@@ -539,7 +539,7 @@ casos analizados anteriormente. Para ello, simplificaremos el diagrama definiend
 
 \begin{figure}[H]
     \centering 
-    \includegraphics [scale=1] {../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-integrador-compensado-resumido.png} 
+    \includegraphics [scale=0.7] {../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-integrador-compensado-resumido.png} 
     \caption{Diagrama del circuito integrador compensado con impedancia equivalente para $R_c$ y $C$}
     \label{fig:emptyPlotTool}
 \end{figure}
@@ -579,22 +579,104 @@ Para finalizar este análisis, se calculará la función transferencia cuando $A
 
 $$H(S)=-\frac{R_c}{R}\frac{1}{S^2(\frac{CR_c}{W_bA_0})+SCR_c(1+\frac{1}{A_0}+\frac{1}{W_bA_0CR_c}+\frac{1}{W_bA_0CR})+1+\frac{1}{A_0}+\frac{R_c}{RA_0}}$$
 
-Se puede observar que para los últimos dos casos, nuevamente si $A_{vol}$ es mas y mas grande, estaremos en el caso de la ganancia ideal con el circuito compensado
+Se puede observar que para los últimos dos casos, nuevamente si $A_{vol}$ es mas y mas grande, estaremos en el caso de la ganancia ideal para el circuito compensado
 por $R_c$.
 
-A continuación se comparan las tres funciones transferencia desarrolladas.
 
-
-%INSERTAR GRAFICO COMPARATIVO
-
-Para poder conocer cuál es la $R_c$ a emplear, se buscará poder obtener un desfasaje de $90^o$ entre la señal de entrada y salida en frecuencias lo más baja posible.
-Para poder encontrar ese valor, y partiendo del caso ideal $ H(S) = - \frac{R_c}{R}.(\frac{1}{SCR_c+1})$, podemos observar que al introducir la resistencia $R_c$
-en paralelo contamos con un nuevo polo en donde el desfasaje cambiará a $90^o$  que dependerá de la frecuencia que nosotros consideremos como baja y el valor de $R_c$ empleado.
+Para poder conocer cuál es la $R_c$ a emplear, se buscará obtener un desfasaje de $90^o$ entre la señal de entrada y salida en frecuencias lo más baja posible.
+A su vez, la ganancia de $-3Db$ por década, será buscada en esa misma frecuencia.
+Contar con ambas caracteristicas implica contar con las características propias del integrador ideal. 
+Para poder encontrar ese valor, y partiendo del caso ideal con la resistencia
+de compensación,$ H(S) = - \frac{R_c}{R}.(\frac{1}{SCR_c+1})$, podemos observar que al introducir la resistencia $R_c$
+en paralelo contamos con un nuevo polo en donde el desfasaje cambiará a $90^o$ y obtendremos la ganancia de $-3DB$ que dependerá de la frecuencia que nosotros consideremos como baja y el valor de $R_c$ empleado.
 A su vez, podemos observar que para la función de transferencia ideal, contamos con la expresion de un filtro pasa-bajos pasivo como el analizado en la primera experiencia
 de laboratorio. Entonces la frecuencia de corte considerada para tal puede ser expresada como:
 
 $$f_0 = \frac{1}{2\pi R_cC}$$
 
-Entonces eligiendo la frecuencia podremos obtener el valor la resistencia $R_c$ a emplear como limitadora/compensadora. Se ele
+Una década luego de esa frecuencia, obtendremos el comportamiento deseado propio del integrador, y a su vez la limitación en la ganancia del circuito que evitará posibles saturaciones en $V_{out}$.
+Tomaremos como frecuencia de integración inicial $f=1KHz$, por lo cual para observar el efecto propio de un integrador a esta frecuencia, elegiremos como frecuencia
+$f=100Hz$, ya que una década luego se observarán los efectos deseados. 
 
-frecuencia, y ese polo te va a cambiar la fase 90° entonces te aseguras de que ese polo este en bajas frecuencias cosa de que en un rango meido de frecuencias vuelvas a tener la fase en 90°, es algo medio rebuscado y parece poco preciso peeero anda bien. Eso te pone un limite para la R de compensacion, despues otro limite lo podes sacar determinando la ganancia que quieras tener
+Entonces para obtener $R_c$:
+
+$$R_c \geq \frac {1}{2\pi fC} \longrightarrow R_c \geq \frac {1}{2\pi .100.(20n)}\longrightarrow R_c \geq 79577.47 Hz$$
+
+Entonces se ha utilizado un valor comercial de resistencia de $R_c=82KHz$. Teóricamente, se puede demostrar que en frecuencias mayores
+a $970 Hz$ el sistema deberá integrar sin efectos adversos y a su vez la máxima ganancia del circuito estará denotada por $\frac {R_c}{R}$ que es el equivalente a
+$24.12DB$ cuando antes a medida que las frecuencias se acercaban a $0Hz$, tendían a $110DB$. Se puede observar así nuestro efecto limitador en la ganancia.
+
+Cabe destacar que se podría haber utilizado una $R_c$ de mayor valor, pero en ese caso la ganancia se hubiese limitado menos generando para un mayor rango de frecuencias bajas
+un efecto de gran amplificación y consecuente saturación. Por ello, es que se decidió elegir el valor comercial más cercano al valor teórico obtenido.
+
+A continuación se puede observar las funciones transferencia para los tres casos descriptos:
+
+\begin{figure}[H]
+    \centering 
+    \includegraphics [scale=1] {../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-bode-integrador-compensado-amplitud.png} 
+    \caption{Amplitud de $Z_{in}$ en función de $f$}
+    \label{fig:emptyPlotTool}
+\end{figure}
+
+\begin{figure}[H]
+    \centering 
+    \includegraphics [scale=1] {../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-bode-integrador-compensado-fase.png} 
+    \caption{Fase de $Z_{in}$ en función de $f$ }
+    \label{fig:emptyPlotTool}
+\end{figure}
+
+También se puede observar como la ganancia queda limitada ahora al valor de $24.12DB$ para las bajas frecuencias:
+
+\begin{figure}[H]
+    \centering 
+    \includegraphics [scale=1] {../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-bode-integrador-compensado-comparativo-amplitud.png} 
+    \caption{Amplitud de $Z_{in}$ en función de $f$}
+    \label{fig:emptyPlotTool}
+\end{figure}
+
+\begin{figure}[H]
+    \centering 
+    \includegraphics [scale=1] {../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-bode-integrador-compensado-comparativo-fase.png} 
+    \caption{Fase de $Z_{in}$ en función de $f$ }
+    \label{fig:emptyPlotTool}
+\end{figure}
+
+\subsubsection{Respuesta en Frecuencia del sistema integrador compensado}
+
+Se realizó la simulación del circuito en el software $LTSpice$, obteniendo su respuesta en frecuencia que coincide con lo obtenido teoricamente.
+
+\begin{figure}[H]
+    \centering 
+    \includegraphics [scale=1] {../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-bode-integrador-simulado-compensado-amplitud.png} 
+    \caption{Amplitud de $Z_{in}$ en función de $f$}
+    \label{fig:emptyPlotTool}
+\end{figure}
+
+\begin{figure}[H]
+    \centering 
+    \includegraphics [scale=1] {../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-bode-integrador-simulado-compensado-fase.png} 
+    \caption{Fase de $Z_{in}$ en función de $f$ }
+    \label{fig:emptyPlotTool}
+\end{figure}
+
+Además de ello, se realizó la medición de la respuesta en frecuencia utilizando el $Electronic$ $Explorer$ $Board$. Es importante mencionar
+que en este caso debido a la limitación en la ganancia, se pudieron realizar mediciones en frecuencias donde antes no era posible por la alta ganancia
+en dichas frecuencias que generaban una saturación aun en valores pequeños de amplitud.
+
+\begin{figure}[H]
+    \centering 
+    \includegraphics [scale=1] {../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/transferencia-comparativo-todo-amplitud.png} 
+    \caption{Amplitud de $Z_{in}$ en función de $f$}
+    \label{fig:emptyPlotTool}
+\end{figure}
+
+\begin{figure}[H]
+    \centering 
+    \includegraphics [scale=1] {../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/transferencia-comparativo-todo-fase.png} 
+    \caption{Fase de $Z_{in}$ en función de $f$ }
+    \label{fig:emptyPlotTool}
+\end{figure}
+
+Se puede observar que tantos el modelo teórico, simulado y experimental coinciden en su comportamiento. Se puede notar también que
+en frecuencias del orden de $1MHz$, al ser tanta la atenuación no es posible medir con precisión la señal de salida.
+
