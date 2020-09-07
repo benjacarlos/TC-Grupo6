@@ -445,6 +445,13 @@ A continuación se puede observar el comportamiento integrador del circuito en l
 
 \begin{figure}[H]
     \centering 
+    \includegraphics [scale=0.45] {../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/cuadrada-500.png} 
+    \caption{Señal de Entrada Cuadrada y Señal Integrada de Salida a 500 Hz }
+    \label{fig:emptyPlotTool}
+\end{figure}
+
+\begin{figure}[H]
+    \centering 
     \includegraphics [scale=0.45] {../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/cuadrada-1000.png} 
     \caption{Señal de Entrada Cuadrada y Señal Integrada de Salida a 1000 Hz }
     \label{fig:emptyPlotTool}
@@ -677,6 +684,80 @@ en dichas frecuencias que generaban una saturación aun en valores pequeños de 
     \label{fig:emptyPlotTool}
 \end{figure}
 
-Se puede observar que tantos el modelo teórico, simulado y experimental coinciden en su comportamiento. Se puede notar también que
+Se puede observar que tanto el modelo teórico, simulado y experimental coinciden en su comportamiento. Se puede notar también que
 en frecuencias del orden de $1MHz$, al ser tanta la atenuación no es posible medir con precisión la señal de salida.
 
+\subsubsection{Análisis de Entrada Cuadrada al Circuito Integrador Compensado}
+
+Se buscó limitar la ganancia del sistema integrador para evitar efectos de saturación no deseados, pero a su vez, se buscó que el comportamiento integrador
+siga siendo el mismo en los rangos donde el circuito sin compensar funcionaba correctamente. Se realizaron las mismas mediciones, y se comprobó que el comportamiento
+aun era el esperado.
+
+\begin{figure}[H]
+    \centering 
+    \includegraphics [scale=0.45] {../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/cuadrada-compensado-1000.png} 
+    \caption{Señal de Entrada Cuadrada y Señal Integrada de Salida a 1000 Hz para el circuito compensado }
+    \label{fig:emptyPlotTool}
+\end{figure}
+
+\begin{figure}[H]
+    \centering 
+    \includegraphics [scale=0.45] {../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/cuadrada-compensado -2500.png} 
+    \caption{Señal de Entrada Cuadrada y Señal Integrada de Salida a 2500 Hz para el circuito compensado }
+    \label{fig:emptyPlotTool}
+\end{figure}
+
+\begin{figure}[H]
+    \centering 
+    \includegraphics [scale=0.45] {../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/cuadrada-compensado -10000.png} 
+    \caption{Señal de Entrada Cuadrada y Señal Integrada de Salida a 10000 Hz para el circuito compensado }
+    \label{fig:emptyPlotTool}
+\end{figure}
+
+Se puede observar además de que el efecto integrador se mantiene, el efecto integrador se da como se calculó una década después de la $f_0$ elegida previamente, lo que es equivalente
+a $1KHz$. Donde antes se observaban sobrepicos, por el efecto compensatorio de $R_c$ ahora ya no están presentes.
+
+\subsubsection{Análisis de Impedancia de Entrada al Circuito Integrador compensado}
+
+Para poder calcular teóricamente la impedancia de entrada, $Z_{in}$, para este caso se utilizará también el teorema de Miller tal que:
+
+$$ V_{out}=-A_{vol}.V^-$$
+
+Como para este caso, $K=-A_{vol}$, el circuito integrador con el amplificador operacional, queda expresado como:
+
+\begin{figure}[H]
+    \centering 
+    \includegraphics [scale=0.7] {../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/miller-integrador-compensado.png} 
+    \caption{Diagrama de BODE de Fase para OPAMP comparativo }
+    \label{fig:emptyPlotTool}
+\end{figure}
+
+Como nos interesa $Z_{in}=\frac{V_{in}}{i_1}$, es muy sencillo ver que a la entrada no inversora del amplificador operacional no ingresa corriente,
+por lo cual utilizando la ley de tensiones de Kirchoff:
+
+$$ V_{in} = i_1.R + i_1.\frac{Z}{1+A_{vol}} \longrightarrow \frac{V_{in}}{i_1}= R + \frac{Z}{1+A_{vol}} \longrightarrow Z_{in}=R+\frac{R_c}{SCR_c(1+A_{vol})+1+A_{vol}}$$
+
+Dicha impedancia teórica puede verse expresada en las siguientes figuras en conjunto con la expresión simulada mediante $LTSpice$ para ella:
+
+\begin{figure}[H]
+    \centering 
+    \includegraphics [scale=1] {../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/comparativo-integrador-zin-amplitud.png} 
+    \caption{Amplitud de $Z_{in}$ en función de $f$}
+    \label{fig:emptyPlotTool}
+\end{figure}
+
+\begin{figure}[H]
+    \centering 
+    \includegraphics [scale=1] {../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/comparativo-integrador-zin-fase.png} 
+    \caption{Fase de $Z_{in}$ en función de $f$ }
+    \label{fig:emptyPlotTool}
+\end{figure}
+
+Se puede observar que a frecuencias notablemente bajas, la impedancia tiende a aumentar en magnitud ya que la componente reactiva de 
+$Z_{in}$ es inversamente proporcional al valor de la frecuencia como se demostró anteriormente.
+A partir de frecuencias del orden de los $mHz$, se puede observar como el efecto de la reactancia capacitiva 
+se reduce, dejando unicamente la componente de la $R$. Por lo cual podemos afirmar que $Z_{in}$ es aproximadamente $R$ para esos casos, ademas del efecto que genera $A_0$.
+Lo mismo se puede observar con la fase que tiende a 0, ya que la componente compleja que aporta el capacitor se ve reducida conforme aumenta la frecuencia.
+Como conclusión entonces, para $f \geq 1Hz$ :
+
+$$Z_{in} \approx R$$

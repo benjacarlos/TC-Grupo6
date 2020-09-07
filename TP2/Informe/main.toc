@@ -24,5 +24,7 @@
 \contentsline {subsubsection}{\numberline {3.3.7}Análisis de Impedancia de Entrada al Circuito Integrador}{24}{subsubsection.3.3.7}%
 \contentsline {subsubsection}{\numberline {3.3.8}Compensación/Limitación del Circuito Integrador con una $R$ adicional}{26}{subsubsection.3.3.8}%
 \contentsline {subsubsection}{\numberline {3.3.9}Respuesta en Frecuencia del sistema integrador compensado}{30}{subsubsection.3.3.9}%
-\contentsline {section}{\numberline {4}Circuito de Aplicación}{33}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Introducción}{33}{subsection.4.1}%
+\contentsline {subsubsection}{\numberline {3.3.10}Análisis de Entrada Cuadrada al Circuito Integrador Compensado}{32}{subsubsection.3.3.10}%
+\contentsline {subsubsection}{\numberline {3.3.11}Análisis de Impedancia de Entrada al Circuito Integrador compensado}{34}{subsubsection.3.3.11}%
+\contentsline {section}{\numberline {4}Circuito de Aplicación}{37}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Introducción}{37}{subsection.4.1}%
