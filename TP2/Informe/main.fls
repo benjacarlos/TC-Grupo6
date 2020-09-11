@@ -46,12 +46,52 @@ INPUT C:\Program Files\MiKTeX 2.9\tex\latex\caption\caption.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\caption\caption.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\caption\caption3.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\caption\caption3.sty
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\siunitx\siunitx.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\siunitx\siunitx.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\l3kernel\expl3.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\l3kernel\expl3.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\l3kernel\expl3-code.tex
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\l3kernel\expl3-code.tex
+INPUT d:\Disco HDD\Documentos\Facultad\ITBA\4° año\2° cuatri\22.01 - Teoría de Circuitos\Cursada\Trabajos Prácticos\TC-Grupo6\TP2\Informe\nul:.tex
+INPUT d:\Disco HDD\Documentos\Facultad\ITBA\4° año\2° cuatri\22.01 - Teoría de Circuitos\Cursada\Trabajos Prácticos\TC-Grupo6\TP2\Informe\nul:.tex
+INPUT d:\Disco HDD\Documentos\Facultad\ITBA\4° año\2° cuatri\22.01 - Teoría de Circuitos\Cursada\Trabajos Prácticos\TC-Grupo6\TP2\Informe\nul:.tex
+INPUT d:\Disco HDD\Documentos\Facultad\ITBA\4° año\2° cuatri\22.01 - Teoría de Circuitos\Cursada\Trabajos Prácticos\TC-Grupo6\TP2\Informe\nul:.tex
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmr10.tfm
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmr10.tfm
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmr10.tfm
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmr10.tfm
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmr10.tfm
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmr10.tfm
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmr10.tfm
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmr10.tfm
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmr10.tfm
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmr10.tfm
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmr10.tfm
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmr10.tfm
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmr10.tfm
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmr10.tfm
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmr10.tfm
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\unicode-data\UnicodeData.txt
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\unicode-data\UnicodeData.txt
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\l3kernel\l3deprecation.def
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\l3kernel\l3deprecation.def
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\l3backend\l3backend-pdfmode.def
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\l3backend\l3backend-pdfmode.def
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\l3packages\xparse\xparse.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\l3packages\xparse\xparse.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\l3packages\xparse\xparse-generic.tex
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\l3packages\xparse\xparse-generic.tex
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amstext.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amstext.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\l3packages\l3keys2e\l3keys2e.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\l3packages\l3keys2e\l3keys2e.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\translator\translator.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\translator\translator.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\translator\translator.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty
@@ -248,46 +288,6 @@ INPUT C:\Program Files\MiKTeX 2.9\tex\generic\circuitikz\pgfcircpath.tex
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\xstring\xstring.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\xstring\xstring.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\generic\xstring\xstring.tex
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\siunitx\siunitx.sty
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\siunitx\siunitx.sty
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\l3kernel\expl3.sty
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\l3kernel\expl3.sty
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\l3kernel\expl3-code.tex
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\l3kernel\expl3-code.tex
-INPUT d:\Disco HDD\Documentos\Facultad\ITBA\4° año\2° cuatri\22.01 - Teoría de Circuitos\Cursada\Trabajos Prácticos\TC-Grupo6\TP2\Informe\nul:.tex
-INPUT d:\Disco HDD\Documentos\Facultad\ITBA\4° año\2° cuatri\22.01 - Teoría de Circuitos\Cursada\Trabajos Prácticos\TC-Grupo6\TP2\Informe\nul:.tex
-INPUT d:\Disco HDD\Documentos\Facultad\ITBA\4° año\2° cuatri\22.01 - Teoría de Circuitos\Cursada\Trabajos Prácticos\TC-Grupo6\TP2\Informe\nul:.tex
-INPUT d:\Disco HDD\Documentos\Facultad\ITBA\4° año\2° cuatri\22.01 - Teoría de Circuitos\Cursada\Trabajos Prácticos\TC-Grupo6\TP2\Informe\nul:.tex
-INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmr10.tfm
-INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmr10.tfm
-INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmr10.tfm
-INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmr10.tfm
-INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmr10.tfm
-INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmr10.tfm
-INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmr10.tfm
-INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmr10.tfm
-INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmr10.tfm
-INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmr10.tfm
-INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmr10.tfm
-INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmr10.tfm
-INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmr10.tfm
-INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmr10.tfm
-INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmr10.tfm
-INPUT C:\Program Files\MiKTeX 2.9\tex\generic\unicode-data\UnicodeData.txt
-INPUT C:\Program Files\MiKTeX 2.9\tex\generic\unicode-data\UnicodeData.txt
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\l3kernel\l3deprecation.def
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\l3kernel\l3deprecation.def
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\l3backend\l3backend-pdfmode.def
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\l3backend\l3backend-pdfmode.def
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\l3packages\xparse\xparse.sty
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\l3packages\xparse\xparse.sty
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\l3packages\xparse\xparse-generic.tex
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\l3packages\xparse\xparse-generic.tex
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\l3packages\l3keys2e\l3keys2e.sty
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\l3packages\l3keys2e\l3keys2e.sty
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\translator\translator.sty
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\translator\translator.sty
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\translator\translator.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\fancyhdr\fancyhdr.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\fancyhdr\fancyhdr.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\units\units.sty
@@ -307,24 +307,30 @@ INPUT C:\Program Files\MiKTeX 2.9\tex\context\base\mkii\supp-pdf.mkii
 INPUT C:\Program Files\MiKTeX 2.9\tex\context\base\mkii\supp-pdf.mkii
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\epstopdf-pkg\epstopdf-base.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\epstopdf-pkg\epstopdf-base.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\base\textcomp.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\base\textcomp.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1enc.def
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1enc.def
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1enc.dfu
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1enc.dfu
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\translator\translator-basic-dictionary-English.dict
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\translator\translator-basic-dictionary-English.dict
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\siunitx\siunitx-abbreviations.cfg
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\siunitx\siunitx-abbreviations.cfg
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\nameref.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\nameref.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\refcount\refcount.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\refcount\refcount.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\generic\gettitlestring\gettitlestring.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\generic\gettitlestring\gettitlestring.sty
-OUTPUT d:\Disco HDD\Documentos\Facultad\ITBA\4° año\2° cuatri\22.01 - Teoría de Circuitos\Cursada\Trabajos Prácticos\TC-Grupo6\TP2\Informe\main.out
+INPUT d:\Disco HDD\Documentos\Facultad\ITBA\4° año\2° cuatri\22.01 - Teoría de Circuitos\Cursada\Trabajos Prácticos\TC-Grupo6\TP2\Informe\main.out
+INPUT d:\Disco HDD\Documentos\Facultad\ITBA\4° año\2° cuatri\22.01 - Teoría de Circuitos\Cursada\Trabajos Prácticos\TC-Grupo6\TP2\Informe\main.out
+INPUT d:\Disco HDD\Documentos\Facultad\ITBA\4° año\2° cuatri\22.01 - Teoría de Circuitos\Cursada\Trabajos Prácticos\TC-Grupo6\TP2\Informe\main.out
+INPUT d:\Disco HDD\Documentos\Facultad\ITBA\4° año\2° cuatri\22.01 - Teoría de Circuitos\Cursada\Trabajos Prácticos\TC-Grupo6\TP2\Informe\main.out
 OUTPUT d:\Disco HDD\Documentos\Facultad\ITBA\4° año\2° cuatri\22.01 - Teoría de Circuitos\Cursada\Trabajos Prácticos\TC-Grupo6\TP2\Informe\main.pdf
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\base\textcomp.sty
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\base\textcomp.sty
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1enc.def
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1enc.def
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1enc.dfu
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1enc.dfu
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\translator\translator-basic-dictionary-English.dict
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\translator\translator-basic-dictionary-English.dict
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\siunitx\siunitx-abbreviations.cfg
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\siunitx\siunitx-abbreviations.cfg
+INPUT d:\Disco HDD\Documentos\Facultad\ITBA\4° año\2° cuatri\22.01 - Teoría de Circuitos\Cursada\Trabajos Prácticos\TC-Grupo6\TP2\Informe\main.out
+INPUT d:\Disco HDD\Documentos\Facultad\ITBA\4° año\2° cuatri\22.01 - Teoría de Circuitos\Cursada\Trabajos Prácticos\TC-Grupo6\TP2\Informe\main.out
+OUTPUT d:\Disco HDD\Documentos\Facultad\ITBA\4° año\2° cuatri\22.01 - Teoría de Circuitos\Cursada\Trabajos Prácticos\TC-Grupo6\TP2\Informe\main.out
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd
@@ -379,6 +385,9 @@ INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmti12.tfm
 INPUT C:\Users\germa\AppData\Local\MiKTeX\2.9\pdftex\config\pdftex.map
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmr12.tfm
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmbx12.tfm
+INPUT d:\Disco HDD\Documentos\Facultad\ITBA\4° año\2° cuatri\22.01 - Teoría de Circuitos\Cursada\Trabajos Prácticos\TC-Grupo6\TP2\Informe\main.toc
+INPUT d:\Disco HDD\Documentos\Facultad\ITBA\4° año\2° cuatri\22.01 - Teoría de Circuitos\Cursada\Trabajos Prácticos\TC-Grupo6\TP2\Informe\main.toc
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmbx10.tfm
 OUTPUT d:\Disco HDD\Documentos\Facultad\ITBA\4° año\2° cuatri\22.01 - Teoría de Circuitos\Cursada\Trabajos Prácticos\TC-Grupo6\TP2\Informe\main.toc
 INPUT ..\Ejercicio1-CaracterizaciondeOpamps\Ejercicio-1.tex
 INPUT ..\Ejercicio1-CaracterizaciondeOpamps\Ejercicio-1.tex
@@ -395,7 +404,6 @@ INPUT ..\Ejercicio2-MediciondeBias\Informe\inversopamp.png
 INPUT ..\Ejercicio2-MediciondeBias\Informe\inversopamp.png
 INPUT ..\Ejercicio2-MediciondeBias\Informe\inversopamp.png
 INPUT ..\Ejercicio2-MediciondeBias\Informe\inversopamp.png
-INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmbx10.tfm
 INPUT ..\Ejercicio2-MediciondeBias\Informe\circuito.png
 INPUT ..\Ejercicio2-MediciondeBias\Informe\circuito.png
 INPUT ..\Ejercicio2-MediciondeBias\Informe\circuito.png
@@ -436,15 +444,122 @@ INPUT ..\Ejercicio2-MediciondeBias\Informe\compib.png
 INPUT ..\Ejercicio2-MediciondeBias\Informe\compib.png
 INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Ejercicio-3.tex
 INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Ejercicio-3.tex
-INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\Derivador\bode_derivador magnitud.png
-INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\Derivador\bode_derivador magnitud.png
-INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\Derivador\bode_derivador magnitud.png
-INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\Derivador\bode_derivador magnitud.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\Derivador\circuito_derivador.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\Derivador\circuito_derivador.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\Derivador\circuito_derivador.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\Derivador\circuito_derivador.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\Derivador\circuito_derivador.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\Derivador\bode_derivador_magnitud.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\Derivador\bode_derivador_magnitud.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\Derivador\bode_derivador_magnitud.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\Derivador\bode_derivador_magnitud.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\Derivador\bode_derivador_magnitud.png
 INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\Derivador\bode_derivador_fase.png
 INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\Derivador\bode_derivador_fase.png
 INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\Derivador\bode_derivador_fase.png
 INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\Derivador\bode_derivador_fase.png
 INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\Derivador\bode_derivador_fase.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\Derivador\comparacion_magnitud.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\Derivador\comparacion_magnitud.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\Derivador\comparacion_magnitud.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\Derivador\comparacion_magnitud.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\Derivador\comparacion_magnitud.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\Derivador\comparacion_fase.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\Derivador\comparacion_fase.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\Derivador\comparacion_fase.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\Derivador\comparacion_fase.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\Derivador\comparacion_fase.png
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmti10.tfm
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\Derivador\circuito_medidor.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\Derivador\circuito_medidor.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\Derivador\circuito_medidor.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\Derivador\circuito_medidor.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\Derivador\circuito_medidor.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\Derivador\Zin\impedancia_teo_mag.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\Derivador\Zin\impedancia_teo_mag.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\Derivador\Zin\impedancia_teo_mag.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\Derivador\Zin\impedancia_teo_mag.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\Derivador\Zin\impedancia_teo_mag.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\Derivador\Zin\impedancia_teo_fase.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\Derivador\Zin\impedancia_teo_fase.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\Derivador\Zin\impedancia_teo_fase.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\Derivador\Zin\impedancia_teo_fase.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\Derivador\Zin\impedancia_teo_fase.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\Derivador\Zin\Z_in_comparacion_mod.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\Derivador\Zin\Z_in_comparacion_mod.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\Derivador\Zin\Z_in_comparacion_mod.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\Derivador\Zin\Z_in_comparacion_mod.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\Derivador\Zin\Z_in_comparacion_mod.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\Derivador\Zin\Z_in_comparacion_pha.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\Derivador\Zin\Z_in_comparacion_pha.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\Derivador\Zin\Z_in_comparacion_pha.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\Derivador\Zin\Z_in_comparacion_pha.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\Derivador\Zin\Z_in_comparacion_pha.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\Derivador\ruido_alto_f.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\Derivador\ruido_alto_f.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\Derivador\ruido_alto_f.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\Derivador\ruido_alto_f.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\Derivador\ruido_alto_f.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\Derivador\thd.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\Derivador\thd.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\Derivador\thd.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\Derivador\thd.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\Derivador\thd.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\Derivador\circuito_thd.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\Derivador\circuito_thd.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\Derivador\circuito_thd.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\Derivador\circuito_thd.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\Derivador\circuito_thd.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\Derivador\captura_sen.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\Derivador\captura_sen.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\Derivador\captura_sen.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\Derivador\captura_sen.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\Derivador\captura_sen.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\Derivador\rta_sen_1k6.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\Derivador\rta_sen_1k6.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\Derivador\rta_sen_1k6.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\Derivador\rta_sen_1k6.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\Derivador\rta_sen_1k6.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\Derivador\trian_1k6.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\Derivador\trian_1k6.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\Derivador\trian_1k6.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\Derivador\trian_1k6.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\Derivador\trian_1k6.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\Derivador\rta_triangular_1k6.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\Derivador\rta_triangular_1k6.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\Derivador\rta_triangular_1k6.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\Derivador\rta_triangular_1k6.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\Derivador\rta_triangular_1k6.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\Derivador\trian_160.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\Derivador\trian_160.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\Derivador\trian_160.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\Derivador\trian_160.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\Derivador\trian_160.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\Derivador\rta_triangular_160.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\Derivador\rta_triangular_160.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\Derivador\rta_triangular_160.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\Derivador\rta_triangular_160.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\Derivador\rta_triangular_160.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\Derivador\trans_compensa_mag.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\Derivador\trans_compensa_mag.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\Derivador\trans_compensa_mag.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\Derivador\trans_compensa_mag.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\Derivador\trans_compensa_mag.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\Derivador\trans_compensa_pha.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\Derivador\trans_compensa_pha.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\Derivador\trans_compensa_pha.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\Derivador\trans_compensa_pha.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\Derivador\trans_compensa_pha.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\Derivador\trans_compensa__comp_mag.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\Derivador\trans_compensa__comp_mag.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\Derivador\trans_compensa__comp_mag.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\Derivador\trans_compensa__comp_mag.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\Derivador\trans_compensa__comp_mag.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\Derivador\trans_compensa__comp_pha.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\Derivador\trans_compensa__comp_pha.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\Derivador\trans_compensa__comp_pha.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\Derivador\trans_compensa__comp_pha.png
+INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\Derivador\trans_compensa__comp_pha.png
 INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\diagrama-integrador.png
 INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\diagrama-integrador.png
 INPUT ..\Ejercicio3-CircuitoIntegradoresyDerivadores\Imagenes\diagrama-integrador.png
@@ -538,7 +653,7 @@ INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmsy5.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmsy5.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmsy7.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmsy7.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmti10.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmti10.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmti12.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmti12.pfb
-INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmtt10.pfb
-INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmtt10.pfb

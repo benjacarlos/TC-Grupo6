@@ -9,6 +9,7 @@ from PyQt5.QtWidgets import QFileDialog
 
 import src.package.bodeFunctions as bode
 import src.package.signalFunctions as sr
+import matplotlib as plt
 from src.ui.bodePlotter import Ui_bodePlotterWindow
 
 
@@ -140,7 +141,7 @@ class myPlot(QMainWindow, Ui_bodePlotterWindow):
     def plot_single_graph(self):
         self.plotTableGain.canvas.axes.clear()
         self.plotTablePhase.canvas.axes.clear()
-        self.plotTableGain.canvas.axes.title.set_text('Diagrama de Bode - Magnitud y Fase')
+        self.plotTableGain.canvas.axes.title.set_text('Respuesta en frecuencia - Magnitud y Fase')
         self.plotTableGain.canvas.aux_axes = self.plotTableGain.canvas.axes.twinx()
 
 
@@ -195,8 +196,8 @@ class myPlot(QMainWindow, Ui_bodePlotterWindow):
 
         self.plotTableGain.canvas.axes.clear()
         self.plotTablePhase.canvas.axes.clear()
-        self.plotTableGain.canvas.axes.title.set_text('Diagrama de Bode - Magnitud')
-        self.plotTablePhase.canvas.axes.title.set_text('Diagrama de Bode - Fase')
+        self.plotTableGain.canvas.axes.title.set_text('Respuesta en frecuencia - Magnitud')
+        self.plotTablePhase.canvas.axes.title.set_text('Respuesta en frecuencia - Fase')
 
 
         for myBode in self.bodes.bodesList:
@@ -222,8 +223,21 @@ class myPlot(QMainWindow, Ui_bodePlotterWindow):
 
                 self.plotTableGain.canvas.axes.grid(True,which="both")
                 self.plotTablePhase.canvas.axes.grid(True,which="both")
-                self.plotTableGain.canvas.axes.minorticks_on()  # Necesitamos esto para usar los ticks menores!
-                self.plotTablePhase.canvas.axes.minorticks_on()  # Necesitamos esto para usar los ticks menores!
+
+                locmaj = plt.ticker.LogLocator(base=10, numticks=12)
+                self.plotTableGain.canvas.axes.xaxis.set_major_locator(locmaj)
+                self.plotTablePhase.canvas.axes.xaxis.set_major_locator(locmaj)
+
+                locmin = plt.ticker.LogLocator(base=10.0, subs=(0.2, 0.4, 0.6, 0.8), numticks=12)
+                self.plotTableGain.canvas.axes.xaxis.set_minor_locator(locmin)
+                self.plotTableGain.canvas.axes.xaxis.set_minor_formatter(plt.ticker.NullFormatter())
+                # locmin = plt.ticker.LogLocator(base=10.0, subs=(0.2, 0.4, 0.6, 0.8), numticks=12)
+                self.plotTablePhase.canvas.axes.xaxis.set_minor_locator(locmin)
+                self.plotTablePhase.canvas.axes.xaxis.set_minor_formatter(plt.ticker.NullFormatter())
+
+                # self.plotTableGain.canvas.axes.minorticks_on()  # Necesitamos esto para usar los ticks menores!
+                # self.plotTablePhase.canvas.axes.minorticks_on()  # Necesitamos esto para usar los ticks menores!
+
                 self.plotTablePhase.canvas.figure.tight_layout()
                 self.plotTableGain.canvas.figure.tight_layout()
 
@@ -775,8 +789,10 @@ class myPlot(QMainWindow, Ui_bodePlotterWindow):
     def updatePhaseLabel(self):
         self.x_phase_label = self.xLabelInput.text()
         self.y_phase_label = self.yLabelInput.text()
-        self.plotTablePhase.canvas.axes.axes.set_xlabel(self.x_gain_label)
-        self.plotTablePhase.canvas.axes.axes.set_ylabel(self.y_gain_label)
+        self.xLabelInput.clear()
+        self.yLabelInput.clear()
+        self.plotTablePhase.canvas.axes.axes.set_xlabel(self.x_phase_label)
+        self.plotTablePhase.canvas.axes.axes.set_ylabel(self.y_phase_label)
         self.plotTablePhase.canvas.figure.tight_layout()
         self.plotTablePhase.canvas.draw()
 

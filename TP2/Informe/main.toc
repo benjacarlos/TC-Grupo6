@@ -14,11 +14,15 @@
 \contentsline {section}{\numberline {3}Circuito Integradores y Derivadores}{10}{section.3}% 
 \contentsline {subsection}{\numberline {3.1}Consideraciones generales}{10}{subsection.3.1}% 
 \contentsline {subsection}{\numberline {3.2}Circuito Derivador}{10}{subsection.3.2}% 
-\contentsline {subsection}{\numberline {3.3}Circuito Integrador}{12}{subsection.3.3}% 
-\contentsline {subsubsection}{\numberline {3.3.1}Introducci\IeC {\'o}n}{12}{subsubsection.3.3.1}% 
-\contentsline {subsubsection}{\numberline {3.3.2}An\IeC {\'a}lisis de la Transferencia del Circuito Integrador - OPAMP ideal}{12}{subsubsection.3.3.2}% 
-\contentsline {subsubsection}{\numberline {3.3.3}An\IeC {\'a}lisis de la Transferencia del Circuito Integrador - OPAMP con A finito}{14}{subsubsection.3.3.3}% 
-\contentsline {subsubsection}{\numberline {3.3.4}An\IeC {\'a}lisis de la Transferencia del Circuito Integrador - OPAMP con $A_{vol}(w)$}{16}{subsubsection.3.3.4}% 
-\contentsline {subsubsection}{\numberline {3.3.5}An\IeC {\'a}lisis de Impedancia de Entrada al Circuito Integrador}{18}{subsubsection.3.3.5}% 
-\contentsline {section}{\numberline {4}Circuito de Aplicaci\IeC {\'o}n}{19}{section.4}% 
-\contentsline {subsection}{\numberline {4.1}Introducci\IeC {\'o}n}{19}{subsection.4.1}% 
+\contentsline {subsubsection}{\numberline {3.2.1}Respuesta en frecuencia}{10}{subsubsection.3.2.1}% 
+\contentsline {subsubsection}{\numberline {3.2.2}Impedancia de entrada}{13}{subsubsection.3.2.2}% 
+\contentsline {subsubsection}{\numberline {3.2.3}Respuesta ante una senoidal}{15}{subsubsection.3.2.3}% 
+\contentsline {subsubsection}{\numberline {3.2.4}Compensaci\IeC {\'o}n}{20}{subsubsection.3.2.4}% 
+\contentsline {subsection}{\numberline {3.3}Circuito Integrador}{22}{subsection.3.3}% 
+\contentsline {subsubsection}{\numberline {3.3.1}Introducci\IeC {\'o}n}{22}{subsubsection.3.3.1}% 
+\contentsline {subsubsection}{\numberline {3.3.2}An\IeC {\'a}lisis de la Transferencia del Circuito Integrador - OPAMP ideal}{22}{subsubsection.3.3.2}% 
+\contentsline {subsubsection}{\numberline {3.3.3}An\IeC {\'a}lisis de la Transferencia del Circuito Integrador - OPAMP con A finito}{24}{subsubsection.3.3.3}% 
+\contentsline {subsubsection}{\numberline {3.3.4}An\IeC {\'a}lisis de la Transferencia del Circuito Integrador - OPAMP con $A_{vol}(w)$}{25}{subsubsection.3.3.4}% 
+\contentsline {subsubsection}{\numberline {3.3.5}An\IeC {\'a}lisis de Impedancia de Entrada al Circuito Integrador}{27}{subsubsection.3.3.5}% 
+\contentsline {section}{\numberline {4}Circuito de Aplicaci\IeC {\'o}n}{28}{section.4}% 
+\contentsline {subsection}{\numberline {4.1}Introducci\IeC {\'o}n}{28}{subsection.4.1}% 

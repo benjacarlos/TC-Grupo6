@@ -1,5 +1,10 @@
 .idea
 .idea/
+.pdf
+.bbl
+.blg
+.fdb_latexmk
+.synctex.gz
 
 __pycache__
 __pycache__/
