@@ -27,4 +27,6 @@
 \BOOKMARK [3][-]{subsubsection.3.3.11}{An\341lisis de Impedancia de Entrada al Circuito Integrador compensado}{subsection.3.3}% 27
 \BOOKMARK [3][-]{subsubsection.3.3.12}{Conclusi\363n}{subsection.3.3}% 28
 \BOOKMARK [1][-]{section.4}{Circuito de Aplicaci\363n}{}% 29
-\BOOKMARK [2][-]{subsection.4.1}{Introducci\363n}{section.4}% 30
+\BOOKMARK [2][-]{subsection.4.1}{Funcionamiento del LM35}{section.4}% 30
+\BOOKMARK [2][-]{subsection.4.2}{Implementaci\363n en rango de 35\260C y 45\260C}{section.4}% 31
+\BOOKMARK [2][-]{subsection.4.3}{Limitaci\363n de tensi\363n en la salida}{section.4}% 32
