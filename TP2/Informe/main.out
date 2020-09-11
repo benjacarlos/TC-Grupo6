@@ -20,8 +20,18 @@
 \BOOKMARK [2][-]{subsection.3.3}{Circuito Integrador}{section.3}% 20
 \BOOKMARK [3][-]{subsubsection.3.3.1}{Introducci\363n}{subsection.3.3}% 21
 \BOOKMARK [3][-]{subsubsection.3.3.2}{An\341lisis de la Transferencia del Circuito Integrador - OPAMP ideal}{subsection.3.3}% 22
-\BOOKMARK [3][-]{subsubsection.3.3.3}{An\341lisis de la Transferencia del Circuito Integrador - OPAMP con A finito}{subsection.3.3}% 23
+\BOOKMARK [3][-]{subsubsection.3.3.3}{An\341lisis de la Transferencia del Circuito Integrador - OPAMP con Avol finito}{subsection.3.3}% 23
 \BOOKMARK [3][-]{subsubsection.3.3.4}{An\341lisis de la Transferencia del Circuito Integrador - OPAMP con Avol\(w\)}{subsection.3.3}% 24
-\BOOKMARK [3][-]{subsubsection.3.3.5}{An\341lisis de Impedancia de Entrada al Circuito Integrador}{subsection.3.3}% 25
-\BOOKMARK [1][-]{section.4}{Circuito de Aplicaci\363n}{}% 26
-\BOOKMARK [2][-]{subsection.4.1}{Introducci\363n}{section.4}% 27
+\BOOKMARK [3][-]{subsubsection.3.3.5}{An\341lisis de Entrada Senoidal al circuito integrador}{subsection.3.3}% 25
+\BOOKMARK [3][-]{subsubsection.3.3.6}{An\341lisis de Entrada Cuadrada al Circuito Integrador}{subsection.3.3}% 26
+\BOOKMARK [3][-]{subsubsection.3.3.7}{An\341lisis de Impedancia de Entrada al Circuito Integrador}{subsection.3.3}% 27
+\BOOKMARK [3][-]{subsubsection.3.3.8}{Compensaci\363n/Limitaci\363n del Circuito Integrador con una R adicional}{subsection.3.3}% 28
+\BOOKMARK [3][-]{subsubsection.3.3.9}{Respuesta en Frecuencia del sistema integrador compensado}{subsection.3.3}% 29
+\BOOKMARK [3][-]{subsubsection.3.3.10}{An\341lisis de Entrada Cuadrada al Circuito Integrador Compensado}{subsection.3.3}% 30
+\BOOKMARK [3][-]{subsubsection.3.3.11}{An\341lisis de Impedancia de Entrada al Circuito Integrador compensado}{subsection.3.3}% 31
+\BOOKMARK [3][-]{subsubsection.3.3.12}{Conclusi\363n}{subsection.3.3}% 32
+\BOOKMARK [1][-]{section.4}{Circuito de Aplicaci\363n}{}% 33
+\BOOKMARK [2][-]{subsection.4.1}{Funcionamiento del LM35}{section.4}% 34
+\BOOKMARK [2][-]{subsection.4.2}{Implementaci\363n en rango de 35\260C y 45\260C}{section.4}% 35
+\BOOKMARK [2][-]{subsection.4.3}{Limitaci\363n de tensi\363n en la salida}{section.4}% 36
+\BOOKMARK [2][-]{subsection.4.4}{Hoja de datos relevantes}{section.4}% 37

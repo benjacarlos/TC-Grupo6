@@ -21,8 +21,18 @@
 \contentsline {subsection}{\numberline {3.3}Circuito Integrador}{22}{subsection.3.3}% 
 \contentsline {subsubsection}{\numberline {3.3.1}Introducci\IeC {\'o}n}{22}{subsubsection.3.3.1}% 
 \contentsline {subsubsection}{\numberline {3.3.2}An\IeC {\'a}lisis de la Transferencia del Circuito Integrador - OPAMP ideal}{22}{subsubsection.3.3.2}% 
-\contentsline {subsubsection}{\numberline {3.3.3}An\IeC {\'a}lisis de la Transferencia del Circuito Integrador - OPAMP con A finito}{24}{subsubsection.3.3.3}% 
+\contentsline {subsubsection}{\numberline {3.3.3}An\IeC {\'a}lisis de la Transferencia del Circuito Integrador - OPAMP con $A_{vol}$ finito}{24}{subsubsection.3.3.3}% 
 \contentsline {subsubsection}{\numberline {3.3.4}An\IeC {\'a}lisis de la Transferencia del Circuito Integrador - OPAMP con $A_{vol}(w)$}{25}{subsubsection.3.3.4}% 
-\contentsline {subsubsection}{\numberline {3.3.5}An\IeC {\'a}lisis de Impedancia de Entrada al Circuito Integrador}{27}{subsubsection.3.3.5}% 
-\contentsline {section}{\numberline {4}Circuito de Aplicaci\IeC {\'o}n}{28}{section.4}% 
-\contentsline {subsection}{\numberline {4.1}Introducci\IeC {\'o}n}{28}{subsection.4.1}% 
+\contentsline {subsubsection}{\numberline {3.3.5}An\IeC {\'a}lisis de Entrada Senoidal al circuito integrador}{28}{subsubsection.3.3.5}% 
+\contentsline {subsubsection}{\numberline {3.3.6}An\IeC {\'a}lisis de Entrada Cuadrada al Circuito Integrador}{31}{subsubsection.3.3.6}% 
+\contentsline {subsubsection}{\numberline {3.3.7}An\IeC {\'a}lisis de Impedancia de Entrada al Circuito Integrador}{33}{subsubsection.3.3.7}% 
+\contentsline {subsubsection}{\numberline {3.3.8}Compensaci\IeC {\'o}n/Limitaci\IeC {\'o}n del Circuito Integrador con una $R$ adicional}{35}{subsubsection.3.3.8}% 
+\contentsline {subsubsection}{\numberline {3.3.9}Respuesta en Frecuencia del sistema integrador compensado}{39}{subsubsection.3.3.9}% 
+\contentsline {subsubsection}{\numberline {3.3.10}An\IeC {\'a}lisis de Entrada Cuadrada al Circuito Integrador Compensado}{41}{subsubsection.3.3.10}% 
+\contentsline {subsubsection}{\numberline {3.3.11}An\IeC {\'a}lisis de Impedancia de Entrada al Circuito Integrador compensado}{43}{subsubsection.3.3.11}% 
+\contentsline {subsubsection}{\numberline {3.3.12}Conclusi\IeC {\'o}n}{45}{subsubsection.3.3.12}% 
+\contentsline {section}{\numberline {4}Circuito de Aplicaci\IeC {\'o}n}{46}{section.4}% 
+\contentsline {subsection}{\numberline {4.1}Funcionamiento del LM35}{46}{subsection.4.1}% 
+\contentsline {subsection}{\numberline {4.2}Implementaci\IeC {\'o}n en rango de 35\IeC {\textdegree }C y 45\IeC {\textdegree }C}{46}{subsection.4.2}% 
+\contentsline {subsection}{\numberline {4.3}Limitaci\IeC {\'o}n de tensi\IeC {\'o}n en la salida}{47}{subsection.4.3}% 
+\contentsline {subsection}{\numberline {4.4}Hoja de datos relevantes}{48}{subsection.4.4}% 

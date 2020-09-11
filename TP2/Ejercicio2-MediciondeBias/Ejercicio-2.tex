@@ -65,7 +65,7 @@ Hay 2 categorías de circuitos de realimentación, produciendo los siguientes ef
 
 \begin{itemize}
     \begin{minipage}{.49\textwidth}
-         \item Negativa (fase de $\pi$ a $2\pi$ en relación a la entrada): 
+         \item Negativa: 
         \begin{itemize}
             \item Disminuye de la ganancia efectiva del amplificador.
             \item Disminuye la impedancia de salida.
@@ -77,7 +77,7 @@ Hay 2 categorías de circuitos de realimentación, produciendo los siguientes ef
         \end{itemize}
     \end{minipage}
     \begin{minipage}{.45\textwidth}
-        \item Positiva (fase de $0$ a $\pi$ en relación a la entrada): 
+        \item Positiva: 
         \begin{itemize}
             \item Aumento de la ganancia efectiva del amplificador.
             \item Disminuye la impedancia de entrada.
@@ -147,7 +147,7 @@ $$H(s)=\frac{-\frac{A_{vol}^2}{1+sRC\cdot A_{vol}}}{1+\frac{A_{vol}^2}{1+sRC\cdo
 	=-\frac{1}{\frac{1}{A_{vol}^2}+\beta}\cdot \frac{1}{\frac{s}{\frac{1+A_{vol}^2\beta}{RCA_{vol}}} +1}$$
 Si se considera que $A_{vol}^2\beta >> 1$ se puede simplificar la expresi\'on:
 	\[H(s) = -\frac{1}{\beta}\cdot \frac{1}{\frac{s}{\frac{A_{vol}\beta}{RC}}+1}\]
-Considerando un modelo de polo dominante $\Longrightarrow A_{vol} = \frac{A_o}{\frac{s}{\omega_p}+1}$, donde $\omega_p = 2\pi \frac{BWP}{A_{vol}}$, tenemos:
+Considerando un modelo de polo dominante $\Longrightarrow A_{vol} = \frac{A_o}{\frac{s}{\omega_p}+1}$, donde $\omega_p = 2\pi \frac{GBW}{A_{vol}}$, tenemos:
 
     $$H(s) = -\frac{1}{\beta} \cdot \frac{1}{\frac{s}{\frac{\frac{A_o}{\frac{s}{\omega _p}+1}\beta}{RC}}+1}$$
 
@@ -264,20 +264,20 @@ Otro problema pudo ser provocado por la placa utilizada, esta es el Electronics 
 Como el circuito introducido es vulnerable al ruido es inevitable el uso de un capacitor para realizar una medición del bias. Sin embargo la cuesto es cual capacitor seleccionar, para ello debemos recurrir a la función de transferencia mencionada en la ecuación \ref{ej2FT}. De aqui encontramos que:
 $$f_0=\frac{1}{2\pi}\cdot \sqrt{\frac{\omega_pA_o\beta}{RC}}$$
 Teniendo en cuenta la información dada en la hoja de datos podemos calcular su frecuencia de corte:
-% Please add the following required packages to your document preamble:
-% \usepackage{booktabs}
 \begin{table}[h]
 \centering
 \begin{tabular}{@{}ccc@{}}
 \toprule
 \textbf{}     & \textbf{TL081} & \textbf{LF365} \\ \midrule
-$A_{vol}$          & 200            & 200            \\
-BWP {[}MHz{]} & 3              & 5              \\
-$\omega_p$ {[}kHz{]}   & 94             & 157            \\ \midrule
+$A_{vol} [\frac{V}{mV}]$          & 200            & 200            \\
+GBW {[}MHz{]} & 3              & 5              \\
+$\omega_p$ {[}Hz{]}   & 94             & 157            \\ \midrule
 $f_0$ {[}Hz{]}    & 126            & 163           \\
 \hline
 \end{tabular}
 \end{table}
+
+\vspace{3cm}
 
 Es decir que los ruidos que son de aproximadamente $50Hz$ no se encuentran atenuadas para nuestro circuito. Entonces, si se desea atenuar el ruido debemos tener una frecuencia de corte $f_0<50Hz$ necesitaríamos un capacitar de: 
 $$C>\frac{\omega_pA_o\beta}{4\pi^2R(50Hz)^2}$$
