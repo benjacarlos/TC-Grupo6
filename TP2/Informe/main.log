@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.8.20)  11 SEP 2020 22:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.8.20)  11 SEP 2020 23:01
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1309,12 +1309,12 @@ Package pdftex.def Info: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes
 File: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/comparativo-integrador-amplitud.png Graphic file (type png)
 <use ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/comparativo-integrador-amplitud.png>
 Package pdftex.def Info: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/comparativo-integrador-amplitud.png  used on input line 746.
-(pdftex.def)             Requested size: 508.05685pt x 245.71739pt.
+(pdftex.def)             Requested size: 304.8372pt x 147.43193pt.
 <../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/comparativo-integrador-fase.png, id=506, 508.0581pt x 252.945pt>
 File: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/comparativo-integrador-fase.png Graphic file (type png)
 <use ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/comparativo-integrador-fase.png>
 Package pdftex.def Info: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/comparativo-integrador-fase.png  used on input line 753.
-(pdftex.def)             Requested size: 508.05685pt x 252.94438pt.
+(pdftex.def)             Requested size: 304.8372pt x 151.76816pt.
  [29 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/senoidal - 10000.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/comparativo-integrador-amplitud.png>]
 <../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/cuadrada-500.png, id=515, 1205.50375pt x 637.38126pt>
 File: ../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/cuadrada-500.png Graphic file (type png)
@@ -1584,7 +1584,7 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  71i,16n,73p,909b,866s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on /Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/main.pdf (47 pages, 2449647 bytes).
+Output written on /Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/main.pdf (47 pages, 2449661 bytes).
 PDF statistics:
  792 PDF objects out of 1000 (max. 8388607)
  584 compressed objects within 6 object streams
