@@ -1,7 +1,5 @@
 \subsection{Consideraciones generales}
- 
 
-\subsection{Circuito Derivador}
 Para armar los circuitos propuestos por la cátedra se dispone de un
 amplificador operacional LM-833N. Los datos más importantes a considerar
 vistos en la hoja de datos son los siguientes:
@@ -10,6 +8,8 @@ vistos en la hoja de datos son los siguientes:
     \item BWP = $15 MHz$
     \item $\omega_b$ = $47 Hz$
 \end{itemize}   
+
+\subsection{Circuito Derivador}
 
 A continuación, se realiza el análisis sobre el circuito derivador planteado
 por la cátedra utilizando un amplificador operacional $LM833$ aplicado en el siguiente circuito.
@@ -25,7 +25,7 @@ que se muestran en la siguiente tabla.
     \begin{tabular}{|c|c|c|}
     \hline
                  & C       & R             \\ \hline
-    Teórcio      & 20 nF   & 5k1$\Omega$   \\ \hline
+    Teórico      & 20 nF   & 5k1$\Omega$   \\ \hline
     Medido       & 18.8 nF & 5.27 $\Omega$ \\ \hline
     $\epsilon_r$ & 6.4\%    & 3.3\%          \\ \hline
     \end{tabular}
@@ -475,16 +475,8 @@ valores medidos en su ausencia.
 
 \subsubsection{Introducción}
 
-Se realizó el análisis de un circuito integrador con amplificador operacional, utilizando en este caso los tres mismos componentes que para el circuito
-derivador, una Resistencia $R$,
-un capacitor $C$ y un amplificador operacional. 
-
-Los valores nominales utilizados para la experiencia fueron:
-
-\begin{itemize}
-	\item $R: 5.1K \Omega$ 
-	\item $C: 20nF$
-\end{itemize}
+Se realizó el análisis de un circuito integrador con amplificador operacional, utilizando los mismos elementos
+que para el caso del circuito derivador pero dispuestos de la siguiente manera:
 
 \begin{figure}[H]
     \centering 
@@ -539,20 +531,20 @@ $$ \frac{V_{in}}{R} = - (\frac{V_{out}}{X_c}) \Longrightarrow \frac{V_{out}}{V_{
 
 $$ H(S) = - \frac{1}{SRC}$$
 
-Queda demostrado el comportamiento del sistema como integrador en todo el rango de frecuencias, ya que si antitransformamos la función de transferencia
+Queda demostrado teóricamente el comportamiento del sistema como integrador en todo el rango de frecuencias, ya que si antitransformamos la función de transferencia
 obtenida implicará que para obtener $v_{out}(t)$ habrá que integrar $v_{in}(t)$ en el dominio del tiempo por tener el factor en el dominio de Laplace de $L(S)=\frac{1}{S}$.
-Luego se demostrara que por otras limitaciones, el circuito no funcionara como integrador en todo el rango de frecuencias.
+Luego se demostrará que por otras limitaciones, el circuito no funcionará como integrador en todo el rango de frecuencias.
 
 \begin{figure}[H]
     \centering 
-    \includegraphics [scale=1] {../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/teorico-avol-inf-integrador-amplitud.png} 
+    \includegraphics [scale=0.6] {../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/teorico-avol-inf-integrador-amplitud.png} 
     \caption{Respuesta en Frecuencia - Amplitud para OPAMP ideal}
     \label{fig:emptyPlotTool}
 \end{figure}
 
 \begin{figure}[H]
     \centering 
-    \includegraphics [scale=1] {../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/teorico-avol-inf-integrador-fase.png} 
+    \includegraphics [scale=0.6] {../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/teorico-avol-inf-integrador-fase.png} 
     \caption{Respuesta en Frecuencia - Fase para OPAMP ideal}
     \label{fig:emptyPlotTool}
 \end{figure}
@@ -589,19 +581,19 @@ Finalmente:
 $$H(S)= \frac{-A_{vol}}{SCR(A_{vol}+1)+1}$$
 
 Es importante notar que siendo la ganancia para el caso ideal, donde $A_{vol}$ es $\infty$, $ GI = - \frac{1}{SRC}$,  la función
-transferencia se puede representar como $H(S) = GI. \frac{-A_{vol}}{SCR(A_{vol}+1)+1}$. Y
+transferencia se puede representar para este caso como $H(S) = GI. \frac{-A_{vol}}{SCR(A_{vol}+1)+1}$. Y
 si $A_{vol}$ es lo suficientemente grande, tendremos la función transferencia ideal nuevamente del primer caso analizado para el circuito integrador.
 
 \begin{figure}[H]
     \centering 
-    \includegraphics [scale=1] {../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/teorico-avol-fin-integrador-amplitud.png} 
+    \includegraphics [scale=0.6] {../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/teorico-avol-fin-integrador-amplitud.png} 
     \caption{Respuesta en Frecuencia - Amplitud para OPAMP con $A_{vol}$ finito}
     \label{fig:emptyPlotTool}
 \end{figure}
 
 \begin{figure}[H]
     \centering 
-    \includegraphics [scale=1] {../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/teorico-avol-fin-integrador-fase.png} 
+    \includegraphics [scale=0.6] {../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/teorico-avol-fin-integrador-fase.png} 
     \caption{Respuesta en Frecuencia - Fase para OPAMP con $A_{vol}$ finito}
     \label{fig:emptyPlotTool}
 \end{figure}
@@ -628,14 +620,14 @@ Podemos observar que si $A_o$ es muy grande, nuevamente estaremos en el caso don
 
 \begin{figure}[H]
     \centering 
-    \includegraphics [scale=1] {../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/teorico-avol-w-integrador-amplitud.png} 
+    \includegraphics [scale=0.6] {../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/teorico-avol-w-integrador-amplitud.png} 
     \caption{Respuesta en Frecuencia - Amplitud para OPAMP con $A_{vol}(w)$}
     \label{fig:emptyPlotTool}
 \end{figure}
 
 \begin{figure}[H]
     \centering 
-    \includegraphics [scale=1] {../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/teorico-avol-w-integrador-fase.png} 
+    \includegraphics [scale=0.6] {../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/teorico-avol-w-integrador-fase.png} 
     \caption{Respuesta en Frecuencia - Fase para OPAMP con $A_{vol}(w)$ }
     \label{fig:emptyPlotTool}
 \end{figure}
@@ -647,40 +639,34 @@ Comparando los tres casos, podemos observar que en determinado rango de frecuenc
 
 \begin{figure}[H]
     \centering 
-    \includegraphics [scale=1] {../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/comparativo-magnitud.png} 
+    \includegraphics [scale=0.6] {../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/comparativo-magnitud.png} 
     \caption{Respuesta en Frecuencia - Amplitud para los tres modelos de OPAMP }
     \label{fig:emptyPlotTool}
 \end{figure}
 
 \begin{figure}[H]
     \centering 
-    \includegraphics [scale=1] {../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/comparativo-fase.png} 
+    \includegraphics [scale=0.6] {../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/comparativo-fase.png} 
     \caption{Respuesta en Frecuencia - Fase para los tres modelos de OPAMP }
     \label{fig:emptyPlotTool}
 \end{figure}
 
-Se puede afirmar que en la interseccion de las tres curvas para ambos graficos, el circuito se comportara como integrador. Para el caso en el que $A_{vol}(w)$, 
+Se puede afirmar que en la intersección de las tres curvas para ambos gráficos, el circuito se comportará como integrador. Para el caso en el que $A_{vol}(w)$, 
 observamos el efecto del polo dominante del amplificador operacional en el primer cambio de la fase (aproximadamente en $4.93mHz$). 
-Para los cálculos de la presente sección y análizando el DataSheet del amplificador operacional $LM833$, se obtuvieron los siguientes valores:
-
-\begin{itemize}
-	\item $w_b = 298.011 Hz$
-	\item $A_0 = 110 DB$
-\end{itemize}
 
 Para aportar un valor adicional al análisis y contrastar lo obtenido teóricamente, se realizó la simulación correspondiente en el software $LTSpice$. 
 Lo obtenido para la respuesta en frecuencia con los elementos mencionados previamente es:
 
 \begin{figure}[H]
     \centering 
-    \includegraphics [scale=1] {../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/simulado-integrador-amplitud.png} 
+    \includegraphics [scale=0.6] {../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/simulado-integrador-amplitud.png} 
     \caption{Respuesta en Frecuencia Simulada - Amplitud para Circuito Integrador }
     \label{fig:emptyPlotTool}
 \end{figure}
 
 \begin{figure}[H]
     \centering 
-    \includegraphics [scale=1] {../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/simulado-integrador-fase.png} 
+    \includegraphics [scale=0.6] {../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/simulado-integrador-fase.png} 
     \caption{Respuesta en Frecuencia Simulada - Fase para Circuito Integrador  }
     \label{fig:emptyPlotTool}
 \end{figure}
@@ -692,7 +678,7 @@ Se puede observar que los resultados de la simulación muestran total similitud 
 Se inyectó una señal senoidal variando su amplitud y frecuencia para analizar el comportamiento y la respuesta del circuito.
 Se tiene en cuenta que para frecuencias bajas, la ganancia del circuito es alta y podría generar saturación en la salida del circuito $v_{out}(t)$. 
 Además de ello, para frecuencias muy altas, la atenuación es tan grande que los valores a analizar se encuentran dentro de los rangos de error de los elementos de medición del
-$Electronic$ $Explorer$ $Board$.
+$Electronic$ $Explorer$ $Board$ y a su vez se mezclan con ruido haciendo que las mediciones pierdan precisión.
 
 Como el máximo voltaje posible de alimentación del $Electronic$ $Explorer$ $Board$ es de $\textpm 9V$, no se podrá obtener una amplitud en la señal de salida mayor a dicho voltaje.
 En primera instancia, se pudo observar que el circuito cumple su cometido. Integra la señal, es decir, si a la entrada tenemos una señal senoidal, a la salida tendremos una señal cosenoidal de signo opuesto.
@@ -749,8 +735,8 @@ Además de ello, se observan sobrepicos en la señal de salida.
 \end{figure}
 
 Para realizar el diagrama de respuesta en frecuencia no se pudo utilizar la funcionalidad $Network$ del software $WaveForms$ ya que al realizar un barrido en frecuencia
-con la misma amplitud para todos los casos, para el rango de frecuencias deseado, en las bajas frecuencias, el sistema saturía para determinada amplitud y para las frecuencias muy altas, la amplitud de la señal a la salida
-está en el orden del error presentado por el osciloscopio del $Electronic$ $Explorer$ $Board$.
+con la misma amplitud para todos los casos, para el rango de frecuencias deseado, en las bajas frecuencias, el sistema saturaría para determinada amplitud y para las frecuencias muy altas, la amplitud de la señal a la salida
+está en el orden del error presentado por el osciloscopio del $Electronic$ $Explorer$ $Board$ y se mezcla con ruido.
 
 Se realizaron entonces mediciones manuales, variando la amplitud según la frecuencia, convenientemente, y resultó comparable (en las frecuencias donde se pudo realizar las mediciones)
 a los modelos simulado y teórico.
@@ -769,6 +755,10 @@ a los modelos simulado y teórico.
     \label{fig:emptyPlotTool}
 \end{figure}
 
+Es importante destacar que para frecuencias menores al valor de frecuencia donde se atenua la señal, solo se pudieron realizar mediciones en cierto rango,
+ya que la ganancia era tanta que la señal de salida saturaba por superar la maxima tension posible a la salida para este caso que es de aproximidamente $\pm 9V$.
+En esos casos, lamentablemente no se pudieron realizar mediciones aun utilizando el rango de los $mV$.
+
 \subsubsection{Análisis de Entrada Cuadrada al Circuito Integrador}
 
 Es importante antes de realizar el análisis para la correspondiente señal de entrada, analizar el comportamiento del capacitor en los distintos rangos de frecuencia.
@@ -779,7 +769,7 @@ donde está conectado el capacitor no circulará corriente al tener una impedanc
 Al haber un circuito abierto, el proceso de realimentación se verá interrumpido, haciendo que la diferencia mencionada en incisos anteriores que determinaba a 
 $v_{out}=A_0(V^+-V^-)$ sea cada ves más grande. Esto guarda correlación con que el hecho de que si baja la frecuencia, la señal de salida se verá más y más amplificada,
 y a su vez la diferencia de potencial $(V^+-V^-)$ será cada vez mayor, por estar $V^+$ conectada a tierra y por el hecho de que la retroalimentación del circuito se ve afectada
-por la alta impedancia del capacitor.
+por la alta impedancia del capacitor e interrumple su ciclo.
 
 Otro factor importante a tener en cuenta es que en el mundo real, los generadores de señales, incluido el generador de señales del $Electronic$ $Explorer$ $Board$ no son ideales,
 por lo cual en ellos se presenta una componente de tensión continua que puede ser de mayor o menor valor. La particularidad de este circuito integrador es que amplifica las componentes 
@@ -822,7 +812,7 @@ A continuación se puede observar el comportamiento integrador del circuito en l
 En los tres casos, se puede apreciar efectivamente el comportamiento integrador del circuito. Durante los semi-ciclos donde la tensión de la señal 
 de la entrada cuadrada es positiva, se puede ver la pendiente negativa en la señal triangular y la situación opuesta se presenta durante el siguiente semi-ciclo.
 Ello por el efecto integrador-inversor del circuito.
-Además, se observa claramente que a medida que la frecuencia aumenta la amplitud de la señal triangular de salida se atenua y se pueden también observar
+Además, se observa claramente que a medida que la frecuencia aumenta la amplitud de la señal triangular de salida se atenúa y se pueden también observar
 sobrepicos en los gráficos.
 
 \subsubsection{Análisis de Impedancia de Entrada al Circuito Integrador}
@@ -843,7 +833,7 @@ Como para este caso, $K=-A_{vol}$, el circuito integrador con el amplificador op
 Como nos interesa $Z_{in}=\frac{V_{in}}{i_1}$, es muy sencillo ver que a la entrada no inversora del amplificador operacional no ingresa corriente,
 por lo cual utilizando la ley de tensiones de Kirchoff:
 
-$$ V_{in} = i_1.R + i_1.\frac{X_c}{1+A_{vol}} \longrightarrow \frac{V_{in}}{i_1}= R + \frac{X_c}{1+A_{vol}} \longrightarrow Z_{in}=R+\frac{1}{SC(1+A_0)}$$
+$$ V_{in} = i_1.R + i_1.\frac{X_c}{1+A_{vol}} \longrightarrow \frac{V_{in}}{i_1}= R + \frac{X_c}{1+A_{vol}} \longrightarrow Z_{in}=R+\frac{1}{SC(1+A_{vol})}$$
 
 Dicha impedancia teórica puede verse expresada en las siguientes figuras en conjunto con la expresión simulada mediante $LTSpice$ para ella:
 
@@ -867,7 +857,7 @@ A partir de frecuencias del orden de los $Hz$, se puede observar como el efecto 
 se reduce, dejando unicamente la componente de la $R$. Ello debido a la relación inversa con $A_0$ y con $f$.
 Por lo cual podemos afirmar que $Z_{in}$ es aproximadamente $R$ para esos casos.
 Lo mismo se puede observar con la fase que tiende a 0, ya que la componente compleja (reactiva) que aporta el capacitor se ve reducida conforme aumenta la frecuencia.
-Como conclusión entonces, para $f \geq 1Hz$ :
+Como conclusión entonces, para aproximadamente $f \geq 1Hz$ :
 
 $$Z_{in} \approx R$$
 
@@ -937,13 +927,15 @@ Para finalizar este análisis, se calculará la función transferencia cuando $A
 
 $$H(S)=-\frac{R_c}{R}\frac{1}{S^2(\frac{CR_c}{W_bA_0})+SCR_c(1+\frac{1}{A_0}+\frac{1}{W_bA_0CR_c}+\frac{1}{W_bA_0CR})+1+\frac{1}{A_0}+\frac{R_c}{RA_0}}$$
 
-Se puede observar que para los últimos dos casos, nuevamente si $A_{vol}$ es mas y mas grande, estaremos en el caso de la ganancia ideal para el circuito compensado
+Se puede observar que para los últimos dos casos, nuevamente si $A_{vol}$ es más y más grande, estaremos en el caso de la ganancia ideal para el circuito compensado
 por $R_c$.
 
 
 Para poder determinar cuál es la $R_c$ a emplear, se buscará obtener un desfasaje de $90^o$ entre la señal de entrada y salida en frecuencias lo más baja posible.
 A su vez, la ganancia de $-3DB$ por década, será buscada en esa misma frecuencia.
-Contar con ambas caracteristicas implica contar con las características propias del integrador ideal. 
+Contar con ambas caracteristicas implica contar con las características propias del integrador ideal. Y a su vez el efecto de compensación/limitación.
+
+
 Para poder encontrar ese valor, y partiendo del caso ideal con la resistencia
 de compensación, donde $ H(S) = - \frac{R_c}{R}.(\frac{1}{SCR_c+1})$, podemos observar que al introducir la resistencia $R_c$
 en paralelo contamos con un nuevo polo en donde el desfasaje cambiará a $90^o$ y obtendremos la ganancia de $-3DB$ que dependerá de la frecuencia que nosotros consideremos como baja y el valor de $R_c$ empleado.
@@ -959,30 +951,29 @@ $f=100Hz$, ya que una década luego se observarán los efectos deseados.
 
 Entonces para obtener $R_c$:
 
-$$R_c \geq \frac {1}{2\pi fC} \longrightarrow R_c \geq \frac {1}{2\pi .100.(20n)}\longrightarrow R_c \geq 79577.47 \omega $$
+$$R_c \geq \frac {1}{2\pi fC} \longrightarrow R_c \geq \frac {1}{2\pi .100.(20n)}\longrightarrow R_c \geq 79577.47 \Omega $$
 
-Se ha utilizado el valor comercial de resistencia de $R_c=82K\omega$. Con este valor de $R_c$, teóricamente, se puede demostrar que en frecuencias mayores
+Se ha utilizado el valor comercial de resistencia de $R_c=82K\Omega$. Con este valor de $R_c$, teóricamente, se puede demostrar que en frecuencias mayores
 a $970 Hz$ el sistema deberá integrar sin efectos adversos y a su vez la máxima ganancia del circuito estará denotada por $\frac {R_c}{R}$ que es el equivalente a
-$24.12DB$ cuando antes a medida que las frecuencias se acercaban a $0Hz$, tendían a $110DB$. Se puede observar así nuestro efecto limitador en la ganancia.
-Para el caso sin $R_c$, recordemos que la máxima ganancia posible era de $110DB$
+$24.12DB$, cuando antes a medida que las frecuencias se acercaban a $0Hz$, tendían a $110DB$. Se puede observar así nuestro efecto limitador en la ganancia.
 
-Es importante mencionar que podría haber utilizado una $R_c$ de mayor valor, pero en ese caso la ganancia se hubiese limitado menos generando para un mayor rango de frecuencias bajas
+Es importante mencionar que se podría haber utilizado una $R_c$ de mayor valor, pero en ese caso la ganancia se hubiese limitado menos generando para un mayor rango de frecuencias bajas
 un efecto de gran amplificación y consecuente saturación. Por ello, es que se decidió elegir el valor comercial más cercano al valor teórico obtenido.
 Como conclusión, establecemos que se decide limitar el rango de frecuencias donde el circuito trabajará como integrador pero la ganancia se ve limitada a un valor
 en el cual no se esperarían saturaciones a la salida del circuito.
 
-A continuación se puede observar las funciones transferencia para los tres casos descriptos:
+A continuación se pueden observar las funciones transferencia para los tres casos descriptos:
 
 \begin{figure}[H]
     \centering 
-    \includegraphics [scale=1] {../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-bode-integrador-compensado-amplitud.png} 
+    \includegraphics [scale=0.6] {../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-bode-integrador-compensado-amplitud.png} 
     \caption{Respuesta en Frecuencia Comparativa - Amplitud para Circuito Integrador Compensado}
     \label{fig:emptyPlotTool}
 \end{figure}
 
 \begin{figure}[H]
     \centering 
-    \includegraphics [scale=1] {../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-bode-integrador-compensado-fase.png} 
+    \includegraphics [scale=0.6] {../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-bode-integrador-compensado-fase.png} 
     \caption{Respuesta en Frecuencia Comparativa - Fase para Circuito Integrador Compensado }
     \label{fig:emptyPlotTool}
 \end{figure}
@@ -991,14 +982,14 @@ Gráficamente, se puede observar como la ganancia queda limitada ahora al valor 
 
 \begin{figure}[H]
     \centering 
-    \includegraphics [scale=1] {../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-bode-integrador-compensado-comparativo-amplitud.png} 
+    \includegraphics [scale=0.6] {../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-bode-integrador-compensado-comparativo-amplitud.png} 
     \caption{Respuesta en Frecuencia Comparativa - Amplitud para Circuito Integrador compensado y sin compensar}
     \label{fig:emptyPlotTool}
 \end{figure}
 
 \begin{figure}[H]
     \centering 
-    \includegraphics [scale=1] {../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-bode-integrador-compensado-comparativo-fase.png} 
+    \includegraphics [scale=0.6] {../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-bode-integrador-compensado-comparativo-fase.png} 
     \caption{Respuesta en Frecuencia Comparativa - Fase para Circuito Integrador compensado y sin compensar }
     \label{fig:emptyPlotTool}
 \end{figure}
@@ -1009,21 +1000,21 @@ Se realizó la simulación del circuito en el software $LTSpice$, obteniendo su 
 
 \begin{figure}[H]
     \centering 
-    \includegraphics [scale=1] {../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-bode-integrador-simulado-compensado-amplitud.png} 
+    \includegraphics [scale=0.6] {../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-bode-integrador-simulado-compensado-amplitud.png} 
     \caption{Respuesta en Frecuencia Simulada - Amplitud para Circuito Integrador compensado}
     \label{fig:emptyPlotTool}
 \end{figure}
 
 \begin{figure}[H]
     \centering 
-    \includegraphics [scale=1] {../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-bode-integrador-simulado-compensado-fase.png} 
+    \includegraphics [scale=0.6] {../Ejercicio3-CircuitoIntegradoresyDerivadores/Imagenes/diagrama-bode-integrador-simulado-compensado-fase.png} 
     \caption{Respuesta en Frecuencia Simulada - Fase para Circuito Integrador compensado }
     \label{fig:emptyPlotTool}
 \end{figure}
 
 Además de ello, se realizó la medición de la respuesta en frecuencia utilizando el $Electronic$ $Explorer$ $Board$. Es importante mencionar
 que en este caso debido a la limitación en la ganancia, se pudieron realizar mediciones en frecuencias donde antes no era posible por la alta ganancia
-en dichas frecuencias que generaban una saturación aun en valores pequeños de amplitud para la señal de entrada.
+en dichas frecuencias que generaban una saturación aún en valores pequeños de amplitud para la señal de entrada.
 
 \begin{figure}[H]
     \centering 
@@ -1041,9 +1032,9 @@ en dichas frecuencias que generaban una saturación aun en valores pequeños de 
 
 Se puede observar que tanto el modelo teórico, simulado y experimental coinciden en su comportamiento. Se puede notar también que
 en frecuencias del orden de $1MHz$, al ser tanta la atenuación no es posible medir con precisión la señal de salida y con los elementos con los que 
-se cuenta no es posible contrastar empiricamente los tres modelos.
+se cuenta no es posible contrastar empiricamente los tres modelos. Esta misma situación se daba en el circuito sin $R_c$.
 
-En todos los casos medidos, el desfasaje guarda total correlación con los modelos teóricos, sin superar un margen de error de $\textpm$ $3^0$
+En todos los casos medidos, el desfasaje guarda total correlación con los modelos teóricos, sin superar un margen de error de $\textpm$ $3^o$
 
 \subsubsection{Análisis de Entrada Cuadrada al Circuito Integrador Compensado}
 
@@ -1113,14 +1104,21 @@ Dicha impedancia teórica puede verse expresada en las siguientes figuras en con
 \end{figure}
 
 Se puede observar que en el rango de frecuencias donde se espera el comportamiento integrador del circuito, la impedancia es constante
-y equivalente a $R$. Ello se debe al efecto que genera la resistencia de compensacion, en la expresion para $Z_{in}$, de este caso, en conjunto con 
+y equivalente a $R$. Ello se debe al efecto que genera la resistencia de compensacion, en la expresion para $Z_{in}$, en conjunto con 
 la relación inversa entre la $f$ y la componente reactiva de $Z_{in}$.
 
-Lo mismo se puede observar con la fase que es a 0, ya que la componente reactiva de $Z_{in}$ es minima aun para frecuencias bajas, debido al efecto
+Lo mismo se puede observar con la fase que es 0, ya que la componente reactiva de $Z_{in}$ es mínima aún para frecuencias bajas, debido al efecto
 compensatorio de $R_c$
 
-Como conclusión entonces:
+Como conclusión entonces, también para este caso en las frecuencias donde se trabajó:
 
 $$Z_{in} \approx R$$
 
 \subsubsection{Conclusión}
+
+Se pudo observar el comportamiento teórico del circuito integrador con amplificador operacional, a su vez de su comportamiento real.
+Es importante destacar de la experiencia, que el comportamiento teórico "menos ideal" coincide con las simulaciones y mediciones realizadas, pero a su vez
+el comportamiento integrador ideal no es posible, aunque con la utilización de $R_c$ se implementaron cambios en el circuito para compensar efectos no deseados,
+ya sea para controlar la ganancia en la señal de salida, un efecto que dependiendo del uso de este circuito deberá ser menor o peor y también controlar el rango
+de comportamiento lineal de este circuito. 
+
