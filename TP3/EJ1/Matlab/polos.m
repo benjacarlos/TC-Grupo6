@@ -1,3 +1,5 @@
+close all;
+
 s = tf('s');
 opt = bodeoptions();
 opt.FreqUnits = 'Hz';
@@ -46,25 +48,28 @@ C = 34.965e-9;
 % % superponedorZsinH('','bode rochi.csv', 'tc_tp3_ej1_zout_spice_x1.csv', w, 'tc_tp3_ej1_zout');
 % 
 
-valoresR6 = [R6ideal/50, R6ideal/30, R6ideal/10,R6ideal/8, R6ideal/7, R6ideal/5, R6ideal, R6ideal*10];
+valoresR6 = [R6ideal/8, R6ideal/7, R6ideal/5, R6ideal, R6ideal*10];%R6ideal/50, R6ideal/30, R6ideal/10
 % Hideal = 2*tf([Lideal/valoresR6(1), 0], [Lideal*Cideal, Lideal/valoresR6(1), 1]);
-Hideal = (s^2*C^2*R^2 - s*C*R^2/valoresR6(1)+1)/(s^2*C^2*R^2 - s*C*R^2/valoresR6(1)+1);
+Hideal = (s^2*C^2*R^2 - s*C*R^2/valoresR6(1)+1)/(s^2*C^2*R^2 + s*C*R^2/valoresR6(1)+1);
 
 pzopt = pzoptions();
 pzopt.FreqUnits = 'Hz';
-pzopt.Grid = 'on';
+% pzopt.Grid = 'on';
 pzopt.XLabel.String = 'Parte real';
 pzopt.YLabel.String = 'Parte imaginaria';
 pzopt.Title.String = ' ';
-pzplot(Hideal, pzopt);
+pzmap(Hideal, pzopt);
+% grid on;
 fig = gcf;
-fig.Position = [100 100 1000 500];
+% fig.Position = [100 100 1000 500];
 hold on;
 
 for i=2:size(valoresR6,2)
-    Hideal = 2*tf([Lideal/valoresR6(i), 0], [Lideal*Cideal, Lideal/valoresR6(i), 1]);
-    pzplot(Hideal, pzopt);
+    Hideal = (s^2*C^2*R^2 - s*C*R^2/valoresR6(i)+1)/(s^2*C^2*R^2 + s*C*R^2/valoresR6(i)+1);
+    pzmap(Hideal, pzopt);
 end
 ax = gca;
-ax.XLim = [-200000 10000];
-ax.YLim = [-15000 15000];
+% ax.XLim = [-1.7e5 1.7e5];
+% ax.YLim = [-1.7e5 1.7e5];
+legend({'0.5R','0.6R','0.8R','4R','40R'});%'0.08R','0.13R','0.4R',
+hold off;

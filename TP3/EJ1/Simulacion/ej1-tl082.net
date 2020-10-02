@@ -1,0 +1,23 @@
+* E:\WK\Google Drive - ITBA\ITBA - Me\2020B\Teoria de Circuitos\TP\git\TC-Grupo6\TP3\EJ1\Simulacion\ej1-tl082.asc
+C1 V1+ pp 34.965n
+C2 N001 V2- 34.965n
+R1 V1+ 0 8.8k
+R2 V1+ N001 2.2k
+R3 V2- Vout 2.2k
+R4 Vout V2+ 2.2k
+R5 V2+ pp 2.2k
+V1 v+ 0 9
+V2 0 v- 9
+V3 N002 0 SINE() AC 1
+XU1 NC_01 NC_02 NC_03 NC_04 NC_05 LM833 LM833 Avol=316.2K GBW=15Meg Slew=5Meg ilimit=25m rail=0 Vos=0 phimargin=60 en=0 enk=0 in=0 ink=0 Rin=175K
+XU2 NC_06 NC_07 NC_08 NC_09 NC_10 LM833 LM833 Avol=316.2K GBW=15Meg Slew=5Meg ilimit=25m rail=0 Vos=0 phimargin=60 en=0 enk=0 in=0 ink=0 Rin=175K
+XU3 V1+ V2- v+ v- Vout TL082
+XU4 V2+ V2- v+ v- N001 TL082
+R6 pp N002 10e3
+R7 pp 0 1Meg
+C3 pp 0 100p
+.ac dec 1000 1 10meg
+.lib E:\WK\Google Drive - ITBA\ITBA - Me\2020B\Teoria de Circuitos\TP\git\TC-Grupo6\TP3\EJ1\Simulacion\TL082.301
+.lib LM833.sub
+.backanno
+.end
