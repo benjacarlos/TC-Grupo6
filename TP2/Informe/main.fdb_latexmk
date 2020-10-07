@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1599876110 "/Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/main.tex" "/Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/main.pdf" "main" 1599876120
+["pdflatex"] 1599876110 "/Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/main.tex" "/Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/main.pdf" "main" 1599876162
   "../Ejercicio1-CaracterizaciondeOpamps/Ejercicio-1.tex" 1598811131 26 10904f543284ef646ddb2887abba4993 ""
   "../Ejercicio2-MediciondeBias/Ejercicio-2.tex" 1599872333 21599 09ddf118a6e9ad71e4be444ea16579a3 ""
   "../Ejercicio2-MediciondeBias/Informe/circuito.png" 1599017579 14940 0a088c45fdcbddce8717bc5155655751 ""
@@ -317,10 +317,10 @@
   "main.toc" 1599876119 3972 2ee18ff91585ad37fc90785dfee10e6b "pdflatex"
   "preamble.tex" 1599871734 1445 47edca13f5caa95192228c13f28d961c ""
   (generated)
+  "main.toc"
+  "main.pdf"
   "main.log"
   "/Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/main.pdf"
-  "main.out"
   "/Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP2/Informe/main.log"
-  "main.toc"
+  "main.out"
   "main.aux"
-  "main.pdf"
