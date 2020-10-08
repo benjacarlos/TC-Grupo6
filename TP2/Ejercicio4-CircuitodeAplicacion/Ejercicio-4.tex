@@ -1,5 +1,5 @@
 \subsection{Funcionamiento del LM35}
-El LM35 es sensor de temperatura que viene en forma de un integrado con 3 terminales. El funcionamiento es simple, se alimenta al integrado por su terminal de entrada $V_s$ con una fuente de tensión continua de $4V$ a $20V$, luego en su terminal de salida $V_o$ devolverá $10mV$ por cada $°C$ que el sensor detecte en el ambiente.
+El LM35 es un sensor de temperatura que viene en forma de un integrado con 3 terminales. El funcionamiento es simple, se alimenta al integrado por su terminal de entrada $V_s$ con una fuente de tensión continua de $4V$ a $20V$, luego en su terminal de salida $V_o$ devolverá $10mV$ por cada $°C$ que el sensor detecte en el ambiente.
 
 \begin{equation}
     V_T(T) = 0mV + \frac{10 mV}{°C} T
@@ -51,8 +51,8 @@ Cuando $V_i = 0,45°C$ (caso máximo):
     -\frac{R_1}{R_i} 0,1V = 5V => \frac{R_1}{R_i}=-50
 \end{equation}
 
-En este caso se usa un resistencia de $50R_i$ en el caso de $R_1$. No obstante en la práctica se necesitara utilizar una resistencia variable en el caso de $R_f$ para poder equilibrar el desajuste de las resistencias ya que no suelen ser iguales a su valor nominal.
-Sin embargo tenemos un problema de no tener en la salida los valores deseado sino que invertidos, para solucionar esto implementamos en la entrada otro circuito inversor pero con una resistencia variable para asegurar que la ganancia del circuito sea $-1$. Según el siguiente esquema sería necesario que $R_a = R_b$:
+En este caso se usa un resistencia de $50R_i$ en el caso de $R_1$. No obstante en la práctica se necesitará utilizar una resistencia variable en el caso de $R_f$ para poder equilibrar el desajuste de las resistencias ya que no suelen ser iguales a su valor nominal.
+Sin embargo tenemos un problema de no tener en la salida los valores deseado sino que invertidos. Para solucionar esto implementamos en la entrada otro circuito inversor pero con una resistencia variable para asegurar que la ganancia del circuito sea $-1$. Según el siguiente esquema sería necesario que $R_a = R_b$:
 
 \begin{figure}[H]
     \centering
@@ -80,7 +80,22 @@ Se nos pide implementar un circuito de protección para que la salida se manteng
 \end{figure}
 
 
-\subsection{Hoja de datos relevantes}
+\subsection{Hoja de datos del circuito implementado}
+
+Del circuito implementado se hacen relevantes los siguientes valores:
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+\textbf{Parametro}    & \textbf{Símbolo}        & \textbf{Valor min} & \textbf{Valor max} & \textbf{Unidad} \\ \hline
+Alimentación positiva & $V+$                      & 7                  & 15                 & V               \\ \hline
+Alimentación negativa & $V-$                      & -15                & -7                 & V               \\ \hline
+Señal de entrada      & $V_{in}$               & 4                  & 20                 & V               \\ \hline
+Tensión de salida     & $V_{o}$                & -0,75              & 5,5                & V               \\ \hline
+Rango de temperatura  & $\Delta T$ & 35                 & 45                 & °C              \\ \hline
+\end{tabular}
+\end{table}
 
 
 

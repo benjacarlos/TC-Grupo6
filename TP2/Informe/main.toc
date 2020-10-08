@@ -1,38 +1,38 @@
 \babel@toc {spanish}{}
-\contentsline {section}{\numberline {1}Caracterizaci\IeC {\'o}n de Amplificadores Operacionales}{2}{section.1}% 
-\contentsline {subsection}{\numberline {1.1}Introducci\IeC {\'o}n}{2}{subsection.1.1}% 
-\contentsline {section}{\numberline {2}Medici\IeC {\'o}n de Bias}{3}{section.2}% 
-\contentsline {subsection}{\numberline {2.1}Corriente de Bias y Tensi\IeC {\'o}n de Offset}{3}{subsection.2.1}% 
-\contentsline {subsection}{\numberline {2.2}An\IeC {\'a}lisis del Circuito}{4}{subsection.2.2}% 
-\contentsline {subsubsection}{\numberline {2.2.1}Circuito de Realimentaci\IeC {\'o}n}{4}{subsubsection.2.2.1}% 
-\contentsline {subsubsection}{\numberline {2.2.2}Funcionamiento del Circuito}{5}{subsubsection.2.2.2}% 
-\contentsline {subsection}{\numberline {2.3}Estudio de Resultados}{6}{subsection.2.3}% 
-\contentsline {subsection}{\numberline {2.4}Evaluaci\IeC {\'o}n del Circuito}{7}{subsection.2.4}% 
-\contentsline {subsubsection}{\numberline {2.4.1}Capacitor en Uso}{7}{subsubsection.2.4.1}% 
-\contentsline {subsubsection}{\numberline {2.4.2}Estabilidad del Circuito}{8}{subsubsection.2.4.2}% 
-\contentsline {subsubsection}{\numberline {2.4.3}Configuraciones}{8}{subsubsection.2.4.3}% 
-\contentsline {section}{\numberline {3}Circuito Integradores y Derivadores}{10}{section.3}% 
-\contentsline {subsection}{\numberline {3.1}Consideraciones generales}{10}{subsection.3.1}% 
-\contentsline {subsection}{\numberline {3.2}Circuito Derivador}{10}{subsection.3.2}% 
-\contentsline {subsubsection}{\numberline {3.2.1}Respuesta en frecuencia}{10}{subsubsection.3.2.1}% 
-\contentsline {subsubsection}{\numberline {3.2.2}Impedancia de entrada}{13}{subsubsection.3.2.2}% 
-\contentsline {subsubsection}{\numberline {3.2.3}Respuesta ante una senoidal}{15}{subsubsection.3.2.3}% 
-\contentsline {subsubsection}{\numberline {3.2.4}Compensaci\IeC {\'o}n}{20}{subsubsection.3.2.4}% 
-\contentsline {subsection}{\numberline {3.3}Circuito Integrador}{22}{subsection.3.3}% 
-\contentsline {subsubsection}{\numberline {3.3.1}Introducci\IeC {\'o}n}{22}{subsubsection.3.3.1}% 
-\contentsline {subsubsection}{\numberline {3.3.2}An\IeC {\'a}lisis de la Transferencia del Circuito Integrador - OPAMP ideal}{22}{subsubsection.3.3.2}% 
-\contentsline {subsubsection}{\numberline {3.3.3}An\IeC {\'a}lisis de la Transferencia del Circuito Integrador - OPAMP con $A_{vol}$ finito}{24}{subsubsection.3.3.3}% 
-\contentsline {subsubsection}{\numberline {3.3.4}An\IeC {\'a}lisis de la Transferencia del Circuito Integrador - OPAMP con $A_{vol}(w)$}{25}{subsubsection.3.3.4}% 
-\contentsline {subsubsection}{\numberline {3.3.5}An\IeC {\'a}lisis de Entrada Senoidal al circuito integrador}{28}{subsubsection.3.3.5}% 
-\contentsline {subsubsection}{\numberline {3.3.6}An\IeC {\'a}lisis de Entrada Cuadrada al Circuito Integrador}{31}{subsubsection.3.3.6}% 
-\contentsline {subsubsection}{\numberline {3.3.7}An\IeC {\'a}lisis de Impedancia de Entrada al Circuito Integrador}{33}{subsubsection.3.3.7}% 
-\contentsline {subsubsection}{\numberline {3.3.8}Compensaci\IeC {\'o}n/Limitaci\IeC {\'o}n del Circuito Integrador con una $R$ adicional}{35}{subsubsection.3.3.8}% 
-\contentsline {subsubsection}{\numberline {3.3.9}Respuesta en Frecuencia del sistema integrador compensado}{39}{subsubsection.3.3.9}% 
-\contentsline {subsubsection}{\numberline {3.3.10}An\IeC {\'a}lisis de Entrada Cuadrada al Circuito Integrador Compensado}{41}{subsubsection.3.3.10}% 
-\contentsline {subsubsection}{\numberline {3.3.11}An\IeC {\'a}lisis de Impedancia de Entrada al Circuito Integrador compensado}{43}{subsubsection.3.3.11}% 
-\contentsline {subsubsection}{\numberline {3.3.12}Conclusi\IeC {\'o}n}{45}{subsubsection.3.3.12}% 
-\contentsline {section}{\numberline {4}Circuito de Aplicaci\IeC {\'o}n}{46}{section.4}% 
-\contentsline {subsection}{\numberline {4.1}Funcionamiento del LM35}{46}{subsection.4.1}% 
-\contentsline {subsection}{\numberline {4.2}Implementaci\IeC {\'o}n en rango de 35\IeC {\textdegree }C y 45\IeC {\textdegree }C}{46}{subsection.4.2}% 
-\contentsline {subsection}{\numberline {4.3}Limitaci\IeC {\'o}n de tensi\IeC {\'o}n en la salida}{47}{subsection.4.3}% 
-\contentsline {subsection}{\numberline {4.4}Hoja de datos relevantes}{48}{subsection.4.4}% 
+\contentsline {section}{\numberline {1}Caracterización de Amplificadores Operacionales}{2}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Introducción}{2}{subsection.1.1}%
+\contentsline {section}{\numberline {2}Medición de Bias}{3}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Corriente de Bias y Tensión de Offset}{3}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Análisis del Circuito}{4}{subsection.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.1}Circuito de Realimentación}{4}{subsubsection.2.2.1}%
+\contentsline {subsubsection}{\numberline {2.2.2}Funcionamiento del Circuito}{5}{subsubsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.3}Estudio de Resultados}{6}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Evaluación del Circuito}{7}{subsection.2.4}%
+\contentsline {subsubsection}{\numberline {2.4.1}Capacitor en Uso}{7}{subsubsection.2.4.1}%
+\contentsline {subsubsection}{\numberline {2.4.2}Estabilidad del Circuito}{8}{subsubsection.2.4.2}%
+\contentsline {subsubsection}{\numberline {2.4.3}Configuraciones}{8}{subsubsection.2.4.3}%
+\contentsline {section}{\numberline {3}Circuito Integradores y Derivadores}{10}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Consideraciones generales}{10}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Circuito Derivador}{10}{subsection.3.2}%
+\contentsline {subsubsection}{\numberline {3.2.1}Respuesta en frecuencia}{10}{subsubsection.3.2.1}%
+\contentsline {subsubsection}{\numberline {3.2.2}Impedancia de entrada}{13}{subsubsection.3.2.2}%
+\contentsline {subsubsection}{\numberline {3.2.3}Respuesta ante una senoidal}{15}{subsubsection.3.2.3}%
+\contentsline {subsubsection}{\numberline {3.2.4}Compensación}{20}{subsubsection.3.2.4}%
+\contentsline {subsection}{\numberline {3.3}Circuito Integrador}{22}{subsection.3.3}%
+\contentsline {subsubsection}{\numberline {3.3.1}Introducción}{22}{subsubsection.3.3.1}%
+\contentsline {subsubsection}{\numberline {3.3.2}Análisis de la Transferencia del Circuito Integrador - OPAMP ideal}{22}{subsubsection.3.3.2}%
+\contentsline {subsubsection}{\numberline {3.3.3}Análisis de la Transferencia del Circuito Integrador - OPAMP con $A_{vol}$ finito}{23}{subsubsection.3.3.3}%
+\contentsline {subsubsection}{\numberline {3.3.4}Análisis de la Transferencia del Circuito Integrador - OPAMP con $A_{vol}(w)$}{24}{subsubsection.3.3.4}%
+\contentsline {subsubsection}{\numberline {3.3.5}Análisis de Entrada Senoidal al circuito integrador}{27}{subsubsection.3.3.5}%
+\contentsline {subsubsection}{\numberline {3.3.6}Análisis de Entrada Cuadrada al Circuito Integrador}{30}{subsubsection.3.3.6}%
+\contentsline {subsubsection}{\numberline {3.3.7}Análisis de Impedancia de Entrada al Circuito Integrador}{32}{subsubsection.3.3.7}%
+\contentsline {subsubsection}{\numberline {3.3.8}Compensación/Limitación del Circuito Integrador con una $R$ adicional}{34}{subsubsection.3.3.8}%
+\contentsline {subsubsection}{\numberline {3.3.9}Respuesta en Frecuencia del sistema integrador compensado}{38}{subsubsection.3.3.9}%
+\contentsline {subsubsection}{\numberline {3.3.10}Análisis de Entrada Cuadrada al Circuito Integrador Compensado}{39}{subsubsection.3.3.10}%
+\contentsline {subsubsection}{\numberline {3.3.11}Análisis de Impedancia de Entrada al Circuito Integrador compensado}{41}{subsubsection.3.3.11}%
+\contentsline {subsubsection}{\numberline {3.3.12}Conclusión}{43}{subsubsection.3.3.12}%
+\contentsline {section}{\numberline {4}Circuito de Aplicación}{44}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Funcionamiento del LM35}{44}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Implementación en rango de 35°C y 45°C}{44}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Limitación de tensión en la salida}{45}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Hoja de datos del circuito implementado}{46}{subsection.4.4}%

@@ -29,7 +29,7 @@ En un amplificador operacional ideal la impedancia de entrada es infinita, por l
     
     \item Corrientes de Bias ($Ib$) y de offset ($Ioff$):
     
-    Si bien estas corrientes no es querida dentro del circuito es esencial e inevitable esta porque es la que se encarga de polarizar el operador, en otras palabras que funcione de manera correcta el amplificador. Pero, a su vez introduce error en el sistema agregando una diferencia de tensión indeseada cuando halla una resistencia en seria en la entrada.
+    Si bien esta corrientes no es querida dentro del circuito es esencial e inevitable esta porque es la que se encarga de polarizar el operador, en otras palabras que funcione de manera correcta el amplificador. Pero, a su vez introduce error en el sistema agregando una diferencia de tensión indeseada cuando halla una resistencia en serie en la entrada.
     
 \end{itemize}
 
@@ -88,7 +88,7 @@ Hay 2 categorías de circuitos de realimentación, produciendo los siguientes ef
     \end{minipage}
 \end{itemize}
 
-En este caso se utilizara una realimentación positiva cuya ecuación nos resulta:
+En este caso se utilizará una realimentación positiva cuya ecuación nos resulta:
 $$x_i = x_A + x_B, \hspace{0.2cm} x_B = \beta x_A$$
 $$y_o = A_{OL} x_i = A_{OL} (x_A + x_B) \Longrightarrow y_o - A_{OL} \beta y_o = A_{OL} x_i$$
 $$H(s) = \frac{y_o}{x_i} = \frac{A_{OL}}{1-A_{OL}\beta}$$

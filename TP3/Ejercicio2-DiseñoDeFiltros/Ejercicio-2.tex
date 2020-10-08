@@ -1,0 +1,31 @@
+En la presente sección, se implementerán cuatro filtros de segundo orden según las siguientes especificaciones:
+
+% Please add the following required packages to your document preamble:
+% \usepackage[table,xcdraw]{xcolor}
+% If you use beamer only pass "xcolor=table" option, i.e. \documentclass[xcolor=table]{beamer}
+\begin{table}[]
+    \centering
+    \begin{tabular}{|c|c|c|c|}
+    \hline
+    \rowcolor[HTML]{C0C0C0} 
+    Tipo de Filtro & $f_p[Hz]$ & $f_a[Hz]$ & $f_c[Hz]$ \\ \hline
+    Low-Pass       & 5000   & 17500  & -      \\ \hline
+    High-Pass      & 3500   & 1000   & -      \\ \hline
+    Band-Pass      & -      & -      & 10000  \\ \hline
+    Band-Rejection & -      & -      & 1000   \\ \hline
+    \end{tabular}
+    \end{table}
+
+
+\subsection{Gyrto}
+
+
+1. Diseñar una función transferencia que cumpla con las especificaciones.
+3
+2. Diseñar un circuito que implemente la función transferencia utilizando un Gyrator. Justificar adecuadamente la elección de todos sus componentes y redactar una introducción teórica al tema.
+3. Determinar rangos de operación en zona lineal. Se espera adecuada profundidad en este análisis.
+4. Contrastar el diseño del circuito con las simulaciones correspondientes.
+5. Implementar el circuito y comprobar su funcionamiento con las mediciones correspondientes.
+6. Analizar el comportamiento del sistema en altas frecuencias.
+7. Diseñar un PCB que contenga todos los circuitos pedidos (en el mismo PCB). A su vez, puede utilizarse un
+sólo IC en la implementación pedida.
