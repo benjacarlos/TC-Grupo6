@@ -1,8 +1,5 @@
-En la presente sección, se implementerán cuatro filtros de segundo orden según las siguientes especificaciones:
+En la presente sección, se implementarán cuatro filtros de segundo orden según las siguientes especificaciones:
 
-% Please add the following required packages to your document preamble:
-% \usepackage[table,xcdraw]{xcolor}
-% If you use beamer only pass "xcolor=table" option, i.e. \documentclass[xcolor=table]{beamer}
 \begin{table}[]
     \centering
     \begin{tabular}{|c|c|c|c|}
@@ -16,12 +13,58 @@ En la presente sección, se implementerán cuatro filtros de segundo orden segú
     \end{tabular}
     \end{table}
 
+En cada caso se espera:
 
-\subsection{Gyrto}
+\begin{itemize}
+	\item Ganancia mayor a -3 dB cuando $f < f_p$ o $f > f_p$ 
+	\item Ganancia menor a -10 dB cuando $f > f_a$ o $f < f_a$
+	\item Ganancia nunca superior a 0 dB
+	\item Ganancia unitaria en continua ($f \to \infty$)
+\end{itemize}
 
+Cada circuito será empleado implementando una resistencia $R$, una inductancia $L$ y un capacitor $C$. Pero para la
+inductancia $L$, ésta será reemplazada por componentes que unidos presenten un comportamiento similar a ella, en este caso
+un Gyrator.
+
+\subsection{Filtro Pasa-Bajos (Low-Pass)}
+
+En este caso, se procederá a realizar un circuito pasa-bajos de segundo orden clásico, tal que podemos
+ver la disposición de elementos en la siguiente figura:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{../Ejercicio2-DiseñoDeFiltros/Imagenes/diagrama-pasa-bajos.png}
+    \caption{Circuito Pasa-Bajos de segundo orden}
+\end{figure}
+
+Las especificaciones son las siguientes:
+
+\begin{itemize}
+	\item Ganancia mayor a -3 dB cuando $f < 5 KHz$ 
+	\item Ganancia menor a -10 dB cuando $f > 17.5 KHz $
+	\item Ganancia nunca superior a 0 dB
+	\item Ganancia unitaria en continua ($f \to \infty$)
+\end{itemize}
+
+En el dominio de Laplace podemos ver que la función de transferencia para este circuito está dada por:
+
+$$H(S)=\frac{V_out(S)}{V_in(S)}=\frac{\frac{1}{SC}}{SL+R+\frac{1}{SC}} \longrightarrow 
+H(S)=\frac{1}{S^2LC+SCR+1}$$
+
+De allí podemos observar que $w_0=\frac{1}{\sqrt{LC}}$, $Q=\frac{1}{2\xi}$ y $\xi=\frac{R\sqrt{C}}{2\sqrt{L}}$
+
+Podemos observar que la ganancia nunca deberá superar a 0 dB por ello no se deben presentar sobrepicos en el circuito RLC.
+Sabiendo que los sobrepicos se presentarán en casos donde $\xi \geq \frac{1}{\sqrt{2}}$, se tomarán valores que cumplan la relación:
+
+$$\xi > \frac{1}{\sqrt{2}}$$
+
+Luego en nuestro caso, analizando las especificaciones 
+
+\subsection{Filtro Pasa-Altos (High-Pass)}
+\subsection{Filtro Pasa-Banda (Band-Pass)}
+\subsection{Filtro Rechaza-Banda (Band-Rejection)}
 
 1. Diseñar una función transferencia que cumpla con las especificaciones.
-3
 2. Diseñar un circuito que implemente la función transferencia utilizando un Gyrator. Justificar adecuadamente la elección de todos sus componentes y redactar una introducción teórica al tema.
 3. Determinar rangos de operación en zona lineal. Se espera adecuada profundidad en este análisis.
 4. Contrastar el diseño del circuito con las simulaciones correspondientes.
@@ -29,3 +72,139 @@ En la presente sección, se implementerán cuatro filtros de segundo orden segú
 6. Analizar el comportamiento del sistema en altas frecuencias.
 7. Diseñar un PCB que contenga todos los circuitos pedidos (en el mismo PCB). A su vez, puede utilizarse un
 sólo IC en la implementación pedida.
+
+\subsection{Utilización de un Gyrator en los filtros}
+
+En los circuitos descriptos previamente, se reemplazará la inductancia $L$, por un equivalente utilizando
+un gyrator. 
+
+\subsubsection{Introducción a Gyrators}
+
+Un Gyrator o girador es considerado un elemento pasivo adicional a los ya conocidos y analizados. Una de sus funcionalidades es ser empleado como un inductor. 
+El motivo de reemplazar a un inductor real se encuentra en fines prácticos, ya que al utilizar éste en lugar de una inductancia, se pueden reducir tanto el tamaño de un circuito
+como el costo del mismo. 
+
+Además, una inductancia tiene asociada una resistencia. El cable que se utiliza para elaborarlos, tiene dicha resistencia asociada. 
+Por otro lado, se pueden obtener capacitores de alta calidad y con un girador, obtener inductores de alta calidad.
+
+Entonces un gyrator puede reemplazar a una inductancia con una combinación de amplificador operacional, una resistencia y un capacitor.
+Para lograr ello, podemos definir también al gyrator como un inversor de las características corriente voltaje de un componente eléctrico.
+
+El símbolo circuital utilizado para el gyrator es el siguiente:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.3\textwidth]{../Ejercicio2-DiseñoDeFiltros/Imagenes/diagrama-basico-gyrator.png}
+    \caption{Símbolo circuital del Gyrator}
+\end{figure}
+
+\subsubsection{Implementación real de un Gyrator}
+
+Físicamente hay distintas formas de implementar un Gyrator, pero en nuestro caso, lo implementaremos con un solo elemento activo representado
+por un amplificador operacional aunque se han visto en la cátedra formas de implementarlo con dos amplificadores, con el fin de simplificar las mediciones
+y armado de circuito se analizará el caso con un solo amplificador.
+
+En el siguiente diagrama se puede ver dicha implementación observando el Gyrator a la izquierda y su equivalente a la derecha:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{../Ejercicio2-DiseñoDeFiltros/Imagenes/diagrama-gyrator-inductor.png}
+    \caption{Equivalente circuital entre Gyrator e Inductor}
+\end{figure}
+
+En la próxima sección se verá que este equivalente no es válido para todo el rango de frecuencias.
+
+\subsubsection{Análisis de $Z_{in}$}
+
+Para describir el comportamiento del circuito como un inductor es importante 
+analizar la impedancia de entrada de dicho circuito tal que $Z_{in}=\frac{V_{in}}{I_{in}}$. 
+Para ello, utilizaremos el siguiente diagrama circuital:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.4\textwidth]{../Ejercicio2-DiseñoDeFiltros/Imagenes/diagrama-gyrator-corrientes.png}
+    \caption{Equivalente circuital entre Gyrator e Inductor}
+\end{figure}
+
+Se puede observar del gráfico que:
+
+$$V_{out}=V^-$$
+
+Por ello:
+
+$$V_{out}=A_{vol}(V^+-V^-) \longrightarrow V^-=A_{vol}(V^+-V^-) 
+\longrightarrow V^-= V^+ \frac{A_{vol}}{1+A_{vol}}$$
+
+Luego podemos ver utilizando un divisor de tensión que:
+
+$$V^+= V_{in}\frac{R_g}{R_g+\frac{1}{sC_g}}$$
+
+Además obsevamos que:
+
+$$I_{in}=i_1+i_2$$
+
+Como no ingresa corriente al amplificador operacional:
+
+$$i_1=\frac{V_{in}-V^-}{R_L}$$
+$$i_2=\frac{V^+}{R_g}$$
+
+Entonces:
+
+$$I_{in}=\frac{V_{in}-V^-}{R_L}+\frac{V^+}{R_g} \longrightarrow 
+I_{in}=V_{in}(\frac{R_g+\frac{1}{sC_g}+R_L-R_g\frac{A_{vol}}{1+A_{vol}}}{R_L(R_g+\frac{1}{sC_g})})$$
+
+Finalmente:
+
+$$Z_{in}=\frac{V_{in}}{I_{in}}=\frac{V_{in}}{V_{in}(\frac{R_g+\frac{1}{sC_g}+R_L-R_g\frac{A_{vol}}{1+A_{vol}}}{R_L(R_g+\frac{1}{sC_g})})}$$
+
+$$Z_{in}=\frac{R_L(R_g+\frac{1}{sC_g})}{R_g+\frac{1}{sC_g}+R_L-R_g\frac{A_{vol}}{1+A_{vol}}}$$
+
+Si ahora multiplicamos por el factor $sC_g$ en numerador y denominador:
+
+$$Z_{in}=\frac{R_L(sC_gR_g+1)}{sC_g(R_g+R_L-R_g\frac{A_{vol}}{1+A_{vol}})+1}$$
+
+Como $A_{vol}=\frac{A_0}{1+\frac{s}{w_p}}$, el factor $\frac{A_{vol}}{1+A_{vol}}$ cambia su comportamiento
+según la frecuencia de trabajo:
+
+$$\frac{A_{vol}}{1+A_{vol}}=\frac{\frac{A_0}{1+\frac{s}{w_p}}}{1+\frac{A_0}{1+\frac{s}{w_p}}}=
+\frac{A_0}{A_0+1+\frac{s}{w_p}}=\frac{1}{1+\frac{1}{A_0}+\frac{s}{A_0w_p}}$$
+
+Notemos que $GBP$ o Gain Bandwidth Product es equivalente a $A_0w_p$, y $A_0$ tiene un valor alto, por ello:
+
+$$\frac{1}{1+\frac{s}{GBP}}$$
+
+Entonces, siempre que $\frac{s}{GBP} >> 1$ , podremos aproximar dicha expresión:
+
+$$\frac{1}{1+\frac{s}{GBP}} \approx 1$$
+
+Siendo:
+
+$$Z_{in}=\frac{R_L(sC_gR_g+1)}{sC_gR_L+1}$$
+
+Tomaremos dicha relación cuando $\frac{s}{GBP} \geq 10$, o equivalente a decir una diferencia de un orden de magnitud.
+
+Caso contrario, nuestro impedancia no podrá aproximarse a un inductor.
+
+Como $Z_{in}=\frac{R_L(sC_gR_g+1)}{sC_gR_L+1}$, para obtener una expresión de la forma de un inductor,
+podremos establecer las siguientes relaciones tal que:
+
+$$1 >> sC_gR_L$$
+
+Cumpliendo dicha situación, nuestro inductor usando gyrator estará representado por:
+
+$Z_{in}=R_L(sC_gR_g+1)\longrightarrow Z_{in}=sC_gR_gR_L+R_L$
+
+Donde:
+
+$$L=C_gR_gR_L$$
+
+Como nota final de este comportamiento es importante ver que la relación $1 >> sC_gR_L$, se cumplirá a bajas frecuencias,
+mayores o menores dependiendo de los componentes elegidos, entonces nuestro equivalente quedará representado por:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.3\textwidth]{../Ejercicio2-DiseñoDeFiltros/Imagenes/equivalente-inductor.png}
+    \caption{Equivalente de Inductor utilizando un Gyrator}
+\end{figure}
+
+

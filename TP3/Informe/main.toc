@@ -2,8 +2,15 @@
 \contentsline {section}{\numberline {1}Filtro con GIC}{2}{section.1}%
 \contentsline {subsection}{\numberline {1.1}Filtro con GIC}{2}{subsection.1.1}%
 \contentsline {section}{\numberline {2}Introducción a Diseño de Filtros}{3}{section.2}%
-\contentsline {subsection}{\numberline {2.1}Gyrto}{3}{subsection.2.1}%
-\contentsline {section}{\numberline {3}Amplificador de Instrumentación}{4}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Amplificador de Instrumentación}{4}{subsection.3.1}%
-\contentsline {section}{\numberline {4}Control de Tonos y Ecualizador de Fase}{5}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Ecualizador de Fase}{5}{subsection.4.1}%
+\contentsline {subsection}{\numberline {2.1}Filtro Pasa-Bajos (Low-Pass)}{3}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Filtro Pasa-Altos (High-Pass)}{4}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Filtro Pasa-Banda (Band-Pass)}{4}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Filtro Rechaza-Banda (Band-Rejection)}{4}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}Utilización de un Gyrator en los filtros}{4}{subsection.2.5}%
+\contentsline {subsubsection}{\numberline {2.5.1}Introducción a Gyrators}{4}{subsubsection.2.5.1}%
+\contentsline {subsubsection}{\numberline {2.5.2}Implementación real de un Gyrator}{4}{subsubsection.2.5.2}%
+\contentsline {subsubsection}{\numberline {2.5.3}Análisis de $Z_{in}$}{5}{subsubsection.2.5.3}%
+\contentsline {section}{\numberline {3}Amplificador de Instrumentación}{8}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Amplificador de Instrumentación}{8}{subsection.3.1}%
+\contentsline {section}{\numberline {4}Control de Tonos y Ecualizador de Fase}{9}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Ecualizador de Fase}{9}{subsection.4.1}%
