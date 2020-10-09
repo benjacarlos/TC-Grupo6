@@ -2,18 +2,14 @@
 \contentsline {section}{\numberline {1}Filtro con GIC}{2}{section.1}%
 \contentsline {subsection}{\numberline {1.1}Filtro con GIC}{2}{subsection.1.1}%
 \contentsline {section}{\numberline {2}Introducción a Diseño de Filtros}{3}{section.2}%
-\contentsline {subsection}{\numberline {2.1}Gyrto}{3}{subsection.2.1}%
-\contentsline {subsubsection}{\numberline {2.1.1}Introducción a Gyrators}{3}{subsubsection.2.1.1}%
-\contentsline {subsubsection}{\numberline {2.1.2}Implementación real de un Gyrator}{4}{subsubsection.2.1.2}%
-\contentsline {subsubsection}{\numberline {2.1.3}Análisis de $Z_{in}$}{4}{subsubsection.2.1.3}%
-\contentsline {subsubsection}{\numberline {2.1.4}Elección del amplificador operacional para el Gyrator}{6}{subsubsection.2.1.4}%
-\contentsline {subsection}{\numberline {2.2}Filtro Pasa-Bajos (Low-Pass)}{6}{subsection.2.2}%
-\contentsline {subsection}{\numberline {2.3}Filtro Pasa-Altos (High-Pass)}{10}{subsection.2.3}%
-\contentsline {subsection}{\numberline {2.4}Filtro Rechaza-Banda (Band-Rejection)}{14}{subsection.2.4}%
-\contentsline {subsection}{\numberline {2.5}Filtro Pasa-Banda (Band-Pass)}{17}{subsection.2.5}%
+\contentsline {subsubsection}{\numberline {2.0.1}Introducción a Gyrators}{3}{subsubsection.2.0.1}%
+\contentsline {subsubsection}{\numberline {2.0.2}Implementación real de un Gyrator}{4}{subsubsection.2.0.2}%
+\contentsline {subsubsection}{\numberline {2.0.3}Análisis de $Z_{in}$}{4}{subsubsection.2.0.3}%
+\contentsline {subsubsection}{\numberline {2.0.4}Elección del amplificador operacional para el Gyrator}{6}{subsubsection.2.0.4}%
+\contentsline {subsection}{\numberline {2.1}Filtro Pasa-Bajos (Low-Pass)}{6}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Filtro Pasa-Altos (High-Pass)}{10}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Filtro Rechaza-Banda (Band-Rejection)}{14}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Filtro Pasa-Banda (Band-Pass)}{17}{subsection.2.4}%
 \contentsline {section}{\numberline {3}Amplificador de Instrumentación}{22}{section.3}%
 \contentsline {subsection}{\numberline {3.1}Amplificador de Instrumentación}{22}{subsection.3.1}%
 \contentsline {section}{\numberline {4}Control de Tonos y Ecualizador de Fase}{23}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Ecualizador de Fase}{23}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Ecualizador de Fase}{23}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}Análisis matemático}{23}{subsection.4.3}%
