@@ -10,6 +10,11 @@
 \contentsline {subsection}{\numberline {2.2}Filtro Pasa-Altos (High-Pass)}{10}{subsection.2.2}%
 \contentsline {subsection}{\numberline {2.3}Filtro Rechaza-Banda (Band-Rejection)}{14}{subsection.2.3}%
 \contentsline {subsection}{\numberline {2.4}Filtro Pasa-Banda (Band-Pass)}{17}{subsection.2.4}%
-\contentsline {section}{\numberline {3}Amplificador de Instrumentación}{22}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Amplificador de Instrumentación}{22}{subsection.3.1}%
-\contentsline {section}{\numberline {4}Control de Tonos y Ecualizador de Fase}{23}{section.4}%
+\contentsline {subsection}{\numberline {2.5}Implementación}{21}{subsection.2.5}%
+\contentsline {subsubsection}{\numberline {2.5.1}Consideraciones de diseño}{21}{subsubsection.2.5.1}%
+\contentsline {section}{\numberline {3}Amplificador de Instrumentación}{25}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Amplificador de Instrumentación}{25}{subsection.3.1}%
+\contentsline {section}{\numberline {4}Control de Tonos y Ecualizador de Fase}{26}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Ecualizador de Fase}{26}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Ecualizador de Fase}{26}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Análisis matemático}{26}{subsection.4.3}%
