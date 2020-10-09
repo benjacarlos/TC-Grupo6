@@ -145,6 +145,13 @@ Se pudo comprobar entonces que para el circuito equivalente con gyrator se cumpl
 De la simulación se observó que en $f=5.00007 KHz$, la ganancia es de $-1.904 dB$ y en $f=17.503KHz$, es de $-13.25 dB$
 
 Comprobado ello, se realizó la simulación utilizando ahora el amplificador operacional y los elementos pasivos del gyrator obtenidos anteriormente.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{../Ejercicio2-DiseñoDeFiltros/Imagenes/pasa-bajos-opamp-diagrama.png}
+    \caption{Circuito Pasa-Bajos de segundo orden}
+\end{figure}
+
 Lo obtenido fue lo siguiente:
 
 \begin{figure}[H]
@@ -262,8 +269,46 @@ Se procedió a simular el comportamiento del circuito RLC equivalente con el gyr
 
 %Poner tabla con nuevos valores%
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-rlc-pasa-altos-amplitud.png}
+    \caption{Circuito Pasa-Bajos de segundo orden}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-rlc-pasa-altos-fase.png}
+    \caption{Circuito Pasa-Bajos de segundo orden}
+\end{figure}
+
+Se pudo comprobar entonces que para el circuito equivalente con gyrator se cumple lo establecido en la plantilla.
+De la simulación se observó que en $f=5.00007 KHz$, la ganancia es de $-10.97 dB$ y en $f=21.003KHz$, es de $-0.6955 dB$
+
+Comprobado ello, se realizó la simulación utilizando ahora el amplificador operacional y los elementos pasivos del gyrator obtenidos anteriormente.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{../Ejercicio2-DiseñoDeFiltros/Imagenes/pasa-altos-opamp-diagrama.png}
+    \caption{Circuito Pasa-Bajos de segundo orden}
+\end{figure}
+
+Lo obtenido fue lo siguiente:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{../Ejercicio2-DiseñoDeFiltros/Imagenes/Pasa-Altos-Marcado-Opamp.png}
+    \caption{Circuito Pasa-Bajos de segundo orden}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-opamp-pasa-altos-fase.png}
+    \caption{Circuito Pasa-Bajos de segundo orden}
+\end{figure}
+
+Se puede comprobar aquí también que la plantilla se sigue cumpliendo obteniendo el filtro pasa-altos solicitado.
+
 \subsection{Filtro Pasa-Banda (Band-Pass)}
-\subsection{Filtro Rechaza-Banda (Band-Rejection)}
 
 1. Diseñar una función transferencia que cumpla con las especificaciones.
 2. Diseñar un circuito que implemente la función transferencia utilizando un Gyrator. Justificar adecuadamente la elección de todos sus componentes y redactar una introducción teórica al tema.
@@ -273,6 +318,108 @@ Se procedió a simular el comportamiento del circuito RLC equivalente con el gyr
 6. Analizar el comportamiento del sistema en altas frecuencias.
 7. Diseñar un PCB que contenga todos los circuitos pedidos (en el mismo PCB). A su vez, puede utilizarse un
 sólo IC en la implementación pedida.
+
+\subsection{Filtro Rechaza-Banda (Band-Rejection)}
+
+Se procederá a realizar un circuito rechaza-banda de segundo orden clásico, tal que podemos
+ver la disposición de elementos en la siguiente figura:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{../Ejercicio2-DiseñoDeFiltros/Imagenes/diagrama-rechaza-banda.png}
+    \caption{Circuito Pasa-Altos de segundo orden}
+\end{figure}
+
+La única especificación en este caso es:
+
+\begin{itemize}
+	\item E1: $f_c=6 KHz$
+\end{itemize}
+
+En el dominio de Laplace podemos ver que la función de transferencia para este circuito está dada por:
+
+$$H(S)=\frac{V_{out}(S)}{V_{in}(S)}=\frac{SL+\frac{1}{SC}}{SL+R+\frac{1}{SC}} \longrightarrow H(S)=\frac{S^{2}LC+1}{S^2LC+SRC+1}$$
+
+Podemos ver que aquí también $w_0=\frac{1}{\sqrt{LC}}$, por ello:
+
+$$2 \pi f_0 = \frac{1}{\sqrt{LC}} \longrightarrow 2 \pi 6KHz = \frac{1}{\sqrt{LC}}$$
+
+Mantendremos una consistencia en el capacitor utilizado, eligiendo nuevamente $C=0.1 \mu F$, entonces
+
+$$L = 7.036 mH$$
+
+Para este caso, optaremos por obtener un circuito críticamente amortiguado o cercano a él, por ello utilizando la relación:
+
+$$\xi=\frac{R\sqrt{C}}{2\sqrt{L}}=\frac{1}{sqrt{2}} \longrightarrow R=375.06$$
+
+El valor comercial más cercano con el que contamos es $560 \Omega$ por lo que contaremos con un comportamiento sobreamortiguado.
+
+Como utilizaremos un gyrator, analizaremos también:
+
+$$Z=sC_gR_gR_L+R_L$$
+
+$$1 >> sC_gR_L$$
+
+Partiendo de la última expresión, se escogió:
+
+\begin{itemize}
+	\item $C_g=0.1 \mu F$
+	\item $R_L=10 \Omega$
+	\item $R_g=6.8K \Omega$
+\end{itemize}
+
+Notar que el valor escogido es tal que $C=C_g$ y $R_L$ es pequeña en comparación a la $R$ del circuito para no generar
+un sobreamortiguamiento adicional.
+
+Verificando las relaciones:
+
+$$Z=sC_gR_gR_L+R_L \longrightarrow Z = s6.8m + 10$$
+
+$$1 >> s100n.10 \longrightarrow 1  >> s1\mu$$
+
+Se procedió a simular el comportamiento del circuito RLC equivalente con el gyrator implementado para observar si su comportamiento es el esperado:
+
+%Poner tabla con nuevos valores%
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-rlc-pasa-altos-amplitud.png}
+    \caption{Circuito Pasa-Bajos de segundo orden}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-rlc-pasa-altos-fase.png}
+    \caption{Circuito Pasa-Bajos de segundo orden}
+\end{figure}
+
+Se pudo comprobar entonces que para el circuito equivalente con gyrator se cumple lo establecido en la plantilla.
+De la simulación se observó que en $f=5.00007 KHz$, la ganancia es de $-10.97 dB$ y en $f=21.003KHz$, es de $-0.6955 dB$
+
+Comprobado ello, se realizó la simulación utilizando ahora el amplificador operacional y los elementos pasivos del gyrator obtenidos anteriormente.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{../Ejercicio2-DiseñoDeFiltros/Imagenes/pasa-altos-opamp-diagrama.png}
+    \caption{Circuito Pasa-Bajos de segundo orden}
+\end{figure}
+
+Lo obtenido fue lo siguiente:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{../Ejercicio2-DiseñoDeFiltros/Imagenes/Pasa-Altos-Marcado-Opamp.png}
+    \caption{Circuito Pasa-Bajos de segundo orden}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-opamp-pasa-altos-fase.png}
+    \caption{Circuito Pasa-Bajos de segundo orden}
+\end{figure}
+
+Se puede comprobar aquí también que la plantilla se sigue cumpliendo obteniendo el filtro pasa-altos solicitado.
+
 
 \subsection{Utilización de un Gyrator en los filtros}
 

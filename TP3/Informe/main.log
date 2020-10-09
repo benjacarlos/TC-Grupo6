@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.8.20)  8 OCT 2020 16:37
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.8.20)  8 OCT 2020 20:23
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -853,59 +853,118 @@ File: ../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-rlc-pasa-bajos-fase.png Grap
 <use ../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-rlc-pasa-bajos-fase.png>
 Package pdftex.def Info: ../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-rlc-pasa-bajos-fase.png  used on input line 140.
 (pdftex.def)             Requested size: 307.29288pt x 152.99553pt.
-<../Ejercicio2-DiseñoDeFiltros/Imagenes/Pasa-Bajos-Marcado-Opamp.jpg, id=124, 1411.2725pt x 682.55pt>
+<../Ejercicio2-DiseñoDeFiltros/Imagenes/pasa-bajos-opamp-diagrama.png, id=124, 282.30469pt x 225.09094pt>
+File: ../Ejercicio2-DiseñoDeFiltros/Imagenes/pasa-bajos-opamp-diagrama.png Graphic file (type png)
+<use ../Ejercicio2-DiseñoDeFiltros/Imagenes/pasa-bajos-opamp-diagrama.png>
+Package pdftex.def Info: ../Ejercicio2-DiseñoDeFiltros/Imagenes/pasa-bajos-opamp-diagrama.png  used on input line 151.
+(pdftex.def)             Requested size: 307.29288pt x 245.0317pt.
+ [5 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-rlc-pasa-bajos-amplitud.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-rlc-pasa-bajos-fase.png>]
+<../Ejercicio2-DiseñoDeFiltros/Imagenes/Pasa-Bajos-Marcado-Opamp.jpg, id=133, 1411.2725pt x 682.55pt>
 File: ../Ejercicio2-DiseñoDeFiltros/Imagenes/Pasa-Bajos-Marcado-Opamp.jpg Graphic file (type jpg)
 <use ../Ejercicio2-DiseñoDeFiltros/Imagenes/Pasa-Bajos-Marcado-Opamp.jpg>
-Package pdftex.def Info: ../Ejercicio2-DiseñoDeFiltros/Imagenes/Pasa-Bajos-Marcado-Opamp.jpg  used on input line 152.
+Package pdftex.def Info: ../Ejercicio2-DiseñoDeFiltros/Imagenes/Pasa-Bajos-Marcado-Opamp.jpg  used on input line 159.
 (pdftex.def)             Requested size: 307.29288pt x 148.62006pt.
- [5 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-rlc-pasa-bajos-amplitud.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-rlc-pasa-bajos-fase.png>]
-<../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-opamp-pasa-bajos-fase.png, id=133, 508.0581pt x 252.945pt>
+<../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-opamp-pasa-bajos-fase.png, id=134, 508.0581pt x 252.945pt>
 File: ../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-opamp-pasa-bajos-fase.png Graphic file (type png)
 <use ../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-opamp-pasa-bajos-fase.png>
-Package pdftex.def Info: ../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-opamp-pasa-bajos-fase.png  used on input line 158.
+Package pdftex.def Info: ../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-opamp-pasa-bajos-fase.png  used on input line 165.
 (pdftex.def)             Requested size: 307.29288pt x 152.99553pt.
-<../Ejercicio2-DiseñoDeFiltros/Imagenes/diagrama-pasa-altos.png, id=134, 504.88625pt x 312.16624pt>
+<../Ejercicio2-DiseñoDeFiltros/Imagenes/diagrama-pasa-altos.png, id=135, 504.88625pt x 312.16624pt>
 File: ../Ejercicio2-DiseñoDeFiltros/Imagenes/diagrama-pasa-altos.png Graphic file (type png)
 <use ../Ejercicio2-DiseñoDeFiltros/Imagenes/diagrama-pasa-altos.png>
-Package pdftex.def Info: ../Ejercicio2-DiseñoDeFiltros/Imagenes/diagrama-pasa-altos.png  used on input line 173.
+Package pdftex.def Info: ../Ejercicio2-DiseñoDeFiltros/Imagenes/diagrama-pasa-altos.png  used on input line 180.
 (pdftex.def)             Requested size: 307.29288pt x 189.9972pt.
- [6 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio2-DiseñoDeFiltros/Imagenes/Pasa-Bajos-Marcado-Opamp.jpg> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-opamp-pasa-bajos-fase.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio2-DiseñoDeFiltros/Imagenes/diagrama-pasa-altos.png>] [7]
-<../Ejercicio2-DiseñoDeFiltros/Imagenes/diagrama-basico-gyrator.png, id=149, 341.275pt x 246.9225pt>
+ [6 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio2-DiseñoDeFiltros/Imagenes/pasa-bajos-opamp-diagrama.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio2-DiseñoDeFiltros/Imagenes/Pasa-Bajos-Marcado-Opamp.jpg> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-opamp-pasa-bajos-fase.png>] [7 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio2-DiseñoDeFiltros/Imagenes/diagrama-pasa-altos.png>]
+<../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-rlc-pasa-altos-amplitud.png, id=152, 508.0581pt x 245.718pt>
+File: ../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-rlc-pasa-altos-amplitud.png Graphic file (type png)
+<use ../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-rlc-pasa-altos-amplitud.png>
+Package pdftex.def Info: ../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-rlc-pasa-altos-amplitud.png  used on input line 274.
+(pdftex.def)             Requested size: 307.29288pt x 148.62422pt.
+<../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-rlc-pasa-altos-fase.png, id=153, 508.0581pt x 252.945pt>
+File: ../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-rlc-pasa-altos-fase.png Graphic file (type png)
+<use ../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-rlc-pasa-altos-fase.png>
+Package pdftex.def Info: ../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-rlc-pasa-altos-fase.png  used on input line 280.
+(pdftex.def)             Requested size: 307.29288pt x 152.99553pt.
+ [8 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-rlc-pasa-altos-amplitud.png>]
+<../Ejercicio2-DiseñoDeFiltros/Imagenes/pasa-altos-opamp-diagrama.png, id=160, 575.14874pt x 345.54094pt>
+File: ../Ejercicio2-DiseñoDeFiltros/Imagenes/pasa-altos-opamp-diagrama.png Graphic file (type png)
+<use ../Ejercicio2-DiseñoDeFiltros/Imagenes/pasa-altos-opamp-diagrama.png>
+Package pdftex.def Info: ../Ejercicio2-DiseñoDeFiltros/Imagenes/pasa-altos-opamp-diagrama.png  used on input line 291.
+(pdftex.def)             Requested size: 307.29288pt x 184.62267pt.
+<../Ejercicio2-DiseñoDeFiltros/Imagenes/Pasa-Altos-Marcado-Opamp.png, id=161, 590.205pt x 256.96pt>
+File: ../Ejercicio2-DiseñoDeFiltros/Imagenes/Pasa-Altos-Marcado-Opamp.png Graphic file (type png)
+<use ../Ejercicio2-DiseñoDeFiltros/Imagenes/Pasa-Altos-Marcado-Opamp.png>
+Package pdftex.def Info: ../Ejercicio2-DiseñoDeFiltros/Imagenes/Pasa-Altos-Marcado-Opamp.png  used on input line 299.
+(pdftex.def)             Requested size: 307.29288pt x 133.78856pt.
+<../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-opamp-pasa-altos-fase.png, id=162, 508.0581pt x 252.945pt>
+File: ../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-opamp-pasa-altos-fase.png Graphic file (type png)
+<use ../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-opamp-pasa-altos-fase.png>
+Package pdftex.def Info: ../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-opamp-pasa-altos-fase.png  used on input line 305.
+(pdftex.def)             Requested size: 307.29288pt x 152.99553pt.
+ [9 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-rlc-pasa-altos-fase.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio2-DiseñoDeFiltros/Imagenes/pasa-altos-opamp-diagrama.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio2-DiseñoDeFiltros/Imagenes/Pasa-Altos-Marcado-Opamp.png>]
+<../Ejercicio2-DiseñoDeFiltros/Imagenes/diagrama-rechaza-banda.png, id=173, 363.3575pt x 286.06876pt>
+File: ../Ejercicio2-DiseñoDeFiltros/Imagenes/diagrama-rechaza-banda.png Graphic file (type png)
+<use ../Ejercicio2-DiseñoDeFiltros/Imagenes/diagrama-rechaza-banda.png>
+Package pdftex.def Info: ../Ejercicio2-DiseñoDeFiltros/Imagenes/diagrama-rechaza-banda.png  used on input line 329.
+(pdftex.def)             Requested size: 307.29288pt x 241.93736pt.
+ [10 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-opamp-pasa-altos-fase.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio2-DiseñoDeFiltros/Imagenes/diagrama-rechaza-banda.png>]
+File: ../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-rlc-pasa-altos-amplitud.png Graphic file (type png)
+<use ../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-rlc-pasa-altos-amplitud.png>
+Package pdftex.def Info: ../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-rlc-pasa-altos-amplitud.png  used on input line 386.
+(pdftex.def)             Requested size: 307.29288pt x 148.62422pt.
+File: ../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-rlc-pasa-altos-fase.png Graphic file (type png)
+<use ../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-rlc-pasa-altos-fase.png>
+Package pdftex.def Info: ../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-rlc-pasa-altos-fase.png  used on input line 392.
+(pdftex.def)             Requested size: 307.29288pt x 152.99553pt.
+ [11]
+File: ../Ejercicio2-DiseñoDeFiltros/Imagenes/pasa-altos-opamp-diagrama.png Graphic file (type png)
+<use ../Ejercicio2-DiseñoDeFiltros/Imagenes/pasa-altos-opamp-diagrama.png>
+Package pdftex.def Info: ../Ejercicio2-DiseñoDeFiltros/Imagenes/pasa-altos-opamp-diagrama.png  used on input line 403.
+(pdftex.def)             Requested size: 307.29288pt x 184.62267pt.
+File: ../Ejercicio2-DiseñoDeFiltros/Imagenes/Pasa-Altos-Marcado-Opamp.png Graphic file (type png)
+<use ../Ejercicio2-DiseñoDeFiltros/Imagenes/Pasa-Altos-Marcado-Opamp.png>
+Package pdftex.def Info: ../Ejercicio2-DiseñoDeFiltros/Imagenes/Pasa-Altos-Marcado-Opamp.png  used on input line 411.
+(pdftex.def)             Requested size: 307.29288pt x 133.78856pt.
+File: ../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-opamp-pasa-altos-fase.png Graphic file (type png)
+<use ../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-opamp-pasa-altos-fase.png>
+Package pdftex.def Info: ../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-opamp-pasa-altos-fase.png  used on input line 417.
+(pdftex.def)             Requested size: 307.29288pt x 152.99553pt.
+ [12]
+<../Ejercicio2-DiseñoDeFiltros/Imagenes/diagrama-basico-gyrator.png, id=196, 341.275pt x 246.9225pt>
 File: ../Ejercicio2-DiseñoDeFiltros/Imagenes/diagrama-basico-gyrator.png Graphic file (type png)
 <use ../Ejercicio2-DiseñoDeFiltros/Imagenes/diagrama-basico-gyrator.png>
-Package pdftex.def Info: ../Ejercicio2-DiseñoDeFiltros/Imagenes/diagrama-basico-gyrator.png  used on input line 298.
+Package pdftex.def Info: ../Ejercicio2-DiseñoDeFiltros/Imagenes/diagrama-basico-gyrator.png  used on input line 445.
 (pdftex.def)             Requested size: 153.64644pt x 111.16682pt.
- [8 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio2-DiseñoDeFiltros/Imagenes/diagrama-basico-gyrator.png>]
-<../Ejercicio2-DiseñoDeFiltros/Imagenes/diagrama-gyrator-inductor.png, id=156, 753.81625pt x 282.05376pt>
+<../Ejercicio2-DiseñoDeFiltros/Imagenes/diagrama-gyrator-inductor.png, id=197, 753.81625pt x 282.05376pt>
 File: ../Ejercicio2-DiseñoDeFiltros/Imagenes/diagrama-gyrator-inductor.png Graphic file (type png)
 <use ../Ejercicio2-DiseñoDeFiltros/Imagenes/diagrama-gyrator-inductor.png>
-Package pdftex.def Info: ../Ejercicio2-DiseñoDeFiltros/Imagenes/diagrama-gyrator-inductor.png  used on input line 312.
+Package pdftex.def Info: ../Ejercicio2-DiseñoDeFiltros/Imagenes/diagrama-gyrator-inductor.png  used on input line 459.
 (pdftex.def)             Requested size: 307.29288pt x 114.9757pt.
+ [13 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio2-DiseñoDeFiltros/Imagenes/diagrama-basico-gyrator.png>]
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 465.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 318.
+(hyperref)                removing `subscript' on input line 465.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 318.
+(hyperref)                removing `math shift' on input line 465.
 
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 318.
-
-<../Ejercicio2-DiseñoDeFiltros/Imagenes/diagrama-gyrator-corrientes.png, id=157, 426.59375pt x 300.12125pt>
+<../Ejercicio2-DiseñoDeFiltros/Imagenes/diagrama-gyrator-corrientes.png, id=205, 426.59375pt x 300.12125pt>
 File: ../Ejercicio2-DiseñoDeFiltros/Imagenes/diagrama-gyrator-corrientes.png Graphic file (type png)
 <use ../Ejercicio2-DiseñoDeFiltros/Imagenes/diagrama-gyrator-corrientes.png>
-Package pdftex.def Info: ../Ejercicio2-DiseñoDeFiltros/Imagenes/diagrama-gyrator-corrientes.png  used on input line 326.
+Package pdftex.def Info: ../Ejercicio2-DiseñoDeFiltros/Imagenes/diagrama-gyrator-corrientes.png  used on input line 473.
 (pdftex.def)             Requested size: 204.8567pt x 144.12524pt.
-[9 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio2-DiseñoDeFiltros/Imagenes/diagrama-gyrator-inductor.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio2-DiseñoDeFiltros/Imagenes/diagrama-gyrator-corrientes.png>]
-<../Ejercicio2-DiseñoDeFiltros/Imagenes/equivalente-inductor.png, id=167, 309.155pt x 259.97125pt>
+[14 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio2-DiseñoDeFiltros/Imagenes/diagrama-gyrator-inductor.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio2-DiseñoDeFiltros/Imagenes/diagrama-gyrator-corrientes.png>]
+<../Ejercicio2-DiseñoDeFiltros/Imagenes/equivalente-inductor.png, id=215, 309.155pt x 259.97125pt>
 File: ../Ejercicio2-DiseñoDeFiltros/Imagenes/equivalente-inductor.png Graphic file (type png)
 <use ../Ejercicio2-DiseñoDeFiltros/Imagenes/equivalente-inductor.png>
-Package pdftex.def Info: ../Ejercicio2-DiseñoDeFiltros/Imagenes/equivalente-inductor.png  used on input line 408.
+Package pdftex.def Info: ../Ejercicio2-DiseñoDeFiltros/Imagenes/equivalente-inductor.png  used on input line 555.
 (pdftex.def)             Requested size: 153.64644pt x 129.2078pt.
- [10]) [11 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio2-DiseñoDeFiltros/Imagenes/equivalente-inductor.png>] (/Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio3-AmplificadorDeInstrumentacion/Ejercicio-3.tex) [12] (/Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio4-EcualizadorDeFase/Ejercicio-4.tex) [13]
+ [15]) [16 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio2-DiseñoDeFiltros/Imagenes/equivalente-inductor.png>] (/Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio3-AmplificadorDeInstrumentacion/Ejercicio-3.tex) [17] (/Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio4-EcualizadorDeFase/Ejercicio-4.tex) [18]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 31.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 31.
  (/Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/main.aux
@@ -919,18 +978,18 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 31.
  ) 
 Here is how much of TeX's memory you used:
- 34230 strings out of 480608
- 798411 string characters out of 5903630
+ 34289 strings out of 480608
+ 801430 string characters out of 5903630
  1179809 words of memory out of 5000000
- 49529 multiletter control sequences out of 15000+600000
+ 49564 multiletter control sequences out of 15000+600000
  544880 words of font info for 73 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  71i,13n,73p,511b,804s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on /Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/main.pdf (14 pages, 539443 bytes).
+Output written on /Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/main.pdf (19 pages, 735454 bytes).
 PDF statistics:
- 252 PDF objects out of 1000 (max. 8388607)
- 199 compressed objects within 2 object streams
- 41 named destinations out of 1000 (max. 500000)
- 183 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 303 PDF objects out of 1000 (max. 8388607)
+ 230 compressed objects within 3 object streams
+ 58 named destinations out of 1000 (max. 500000)
+ 218 words of extra memory for PDF output out of 10000 (max. 10000000)
 
