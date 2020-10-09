@@ -250,8 +250,8 @@ class myPlot(QMainWindow, Ui_bodePlotterWindow):
 
         self.plotTableGain.canvas.axes.axes.set_xlabel(self.x_gain_label)
         self.plotTableGain.canvas.axes.axes.set_ylabel(self.y_gain_label)
-        self.plotTablePhase.canvas.axes.axes.set_xlabel(self.x_gain_label)
-        self.plotTablePhase.canvas.axes.axes.set_ylabel(self.y_gain_label)
+        self.plotTablePhase.canvas.axes.axes.set_xlabel(self.x_phase_label)
+        self.plotTablePhase.canvas.axes.axes.set_ylabel(self.y_phase_label)
         self.plotTableGain.canvas.figure.tight_layout()
         self.plotTablePhase.canvas.figure.tight_layout()
         self.plotTableGain.canvas.draw()
