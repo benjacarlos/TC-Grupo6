@@ -1,24 +1,2 @@
 \BOOKMARK [1][-]{section.1}{Filtro con GIC}{}% 1
 \BOOKMARK [2][-]{subsection.1.1}{Filtro con GIC}{section.1}% 2
-\BOOKMARK [1][-]{section.2}{Introducci\363n a Dise\361o de Filtros}{}% 3
-<<<<<<< HEAD
-\BOOKMARK [2][-]{subsection.2.1}{Gyrto}{section.2}% 4
-\BOOKMARK [1][-]{section.3}{Amplificador de Instrumentaci\363n}{}% 5
-\BOOKMARK [2][-]{subsection.3.1}{Amplificador de Instrumentaci\363n}{section.3}% 6
-\BOOKMARK [1][-]{section.4}{Control de Tonos y Ecualizador de Fase}{}% 7
-\BOOKMARK [2][-]{subsection.4.1}{Ecualizador de Fase}{section.4}% 8
-=======
-\BOOKMARK [2][-]{subsubsection.2.0.1}{Introducci\363n a Gyrators}{section.2}% 4
-\BOOKMARK [3][-]{subsubsection.2.0.2}{Implementaci\363n real de un Gyrator}{subsubsection.2.0.1}% 5
-\BOOKMARK [3][-]{subsubsection.2.0.3}{An\341lisis de Zin}{subsubsection.2.0.1}% 6
-\BOOKMARK [3][-]{subsubsection.2.0.4}{Elecci\363n del amplificador operacional para el Gyrator}{subsubsection.2.0.1}% 7
-\BOOKMARK [2][-]{subsection.2.1}{Filtro Pasa-Bajos \(Low-Pass\)}{section.2}% 8
-\BOOKMARK [2][-]{subsection.2.2}{Filtro Pasa-Altos \(High-Pass\)}{section.2}% 9
-\BOOKMARK [2][-]{subsection.2.3}{Filtro Pasa-Banda \(Band-Pass\)}{section.2}% 10
-\BOOKMARK [2][-]{subsection.2.4}{Filtro Rechaza-Banda \(Band-Rejection\)}{section.2}% 11
-\BOOKMARK [1][-]{section.3}{Amplificador de Instrumentaci\363n}{}% 12
-\BOOKMARK [2][-]{subsection.3.1}{Amplificador de Instrumentaci\363n}{section.3}% 13
-\BOOKMARK [1][-]{section.4}{Control de Tonos y Ecualizador de Fase}{}% 14
-\BOOKMARK [2][-]{subsection.4.1}{Ecualizador de Fase}{section.4}% 15
-\BOOKMARK [2][-]{subsection.4.2}{An\341lisis matem\341tico}{section.4}% 16
->>>>>>> b9544b5532f0c407ccdd73065b1f39988c1ea0bb
