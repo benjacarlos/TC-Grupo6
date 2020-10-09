@@ -3,6 +3,11 @@
 .pdf
 .bbl
 .blg
+.aux
+.log
+.fls
+.out
+.toc
 .fdb_latexmk
 .synctex.gz
 
