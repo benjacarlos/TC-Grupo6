@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.8.20)  7 OCT 2020 18:59
+=======
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.8.20)  9 OCT 2020 01:25
+>>>>>>> b9544b5532f0c407ccdd73065b1f39988c1ea0bb
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -710,10 +714,14 @@ Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \@thisrulewidth=\dimen332
 ) (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarybabel.code.tex
 File: tikzlibrarybabel.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+<<<<<<< HEAD
 )) (/Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/main.aux
 LaTeX Info: Redefining \. on input line 20.
 LaTeX Info: Redefining \% on input line 20.
 )
+=======
+)) (/Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/main.aux)
+>>>>>>> b9544b5532f0c407ccdd73065b1f39988c1ea0bb
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 5.
@@ -811,7 +819,10 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 5.
 LaTeX Info: Redefining \pageref on input line 5.
 LaTeX Info: Redefining \nameref on input line 5.
+<<<<<<< HEAD
  (/Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/main.out) (/Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/main.out)
+=======
+>>>>>>> b9544b5532f0c407ccdd73065b1f39988c1ea0bb
 \@outlinefile=\write4
 \openout4 = `main.out'.
 
@@ -825,10 +836,14 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 5.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (/Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/Caratula.tex [1
 
+<<<<<<< HEAD
 {/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]) (/Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/main.toc
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
 )
+=======
+{/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}])
+>>>>>>> b9544b5532f0c407ccdd73065b1f39988c1ea0bb
 \tf@toc=\write5
 \openout5 = `main.toc'.
 
@@ -838,6 +853,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has b
 l.11 \newpage
               [1] (/Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio1-FiltroConGIC/Ejercicio-1.tex) [2] (/Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio2-DiseñoDeFiltros/Ejercicio-2.tex
 
+<<<<<<< HEAD
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 6.
 
@@ -847,6 +863,628 @@ Package caption Warning: Unused \captionsetup[figure] on input line 9.
 See the caption package documentation for explanation.
 
 [5]
+=======
+Package hyperref Warning: Difference (2) between bookmark levels is greater 
+(hyperref)                than one, level fixed on input line 30.
+
+<../Ejercicio2-DiseñoDeFiltros/Imagenes/diagrama-basico-gyrator.png, id=29, 341.275pt x 246.9225pt>
+File: ../Ejercicio2-DiseñoDeFiltros/Imagenes/diagrama-basico-gyrator.png Graphic file (type png)
+<use ../Ejercicio2-DiseñoDeFiltros/Imagenes/diagrama-basico-gyrator.png>
+Package pdftex.def Info: ../Ejercicio2-DiseñoDeFiltros/Imagenes/diagrama-basico-gyrator.png  used on input line 46.
+(pdftex.def)             Requested size: 153.64644pt x 111.16682pt.
+<../Ejercicio2-DiseñoDeFiltros/Imagenes/diagrama-gyrator-inductor.png, id=31, 753.81625pt x 282.05376pt>
+File: ../Ejercicio2-DiseñoDeFiltros/Imagenes/diagrama-gyrator-inductor.png Graphic file (type png)
+<use ../Ejercicio2-DiseñoDeFiltros/Imagenes/diagrama-gyrator-inductor.png>
+Package pdftex.def Info: ../Ejercicio2-DiseñoDeFiltros/Imagenes/diagrama-gyrator-inductor.png  used on input line 59.
+(pdftex.def)             Requested size: 307.29288pt x 114.9757pt.
+[3 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio2-DiseñoDeFiltros/Imagenes/diagrama-basico-gyrator.png>]
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 67.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `subscript' on input line 67.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 67.
+
+<../Ejercicio2-DiseñoDeFiltros/Imagenes/diagrama-gyrator-corrientes.png, id=47, 426.59375pt x 300.12125pt>
+File: ../Ejercicio2-DiseñoDeFiltros/Imagenes/diagrama-gyrator-corrientes.png Graphic file (type png)
+<use ../Ejercicio2-DiseñoDeFiltros/Imagenes/diagrama-gyrator-corrientes.png>
+Package pdftex.def Info: ../Ejercicio2-DiseñoDeFiltros/Imagenes/diagrama-gyrator-corrientes.png  used on input line 75.
+(pdftex.def)             Requested size: 204.8567pt x 144.12524pt.
+[4 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio2-DiseñoDeFiltros/Imagenes/diagrama-gyrator-inductor.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio2-DiseñoDeFiltros/Imagenes/diagrama-gyrator-corrientes.png>]
+<../Ejercicio2-DiseñoDeFiltros/Imagenes/equivalente-inductor.png, id=60, 309.155pt x 259.97125pt>
+File: ../Ejercicio2-DiseñoDeFiltros/Imagenes/equivalente-inductor.png Graphic file (type png)
+<use ../Ejercicio2-DiseñoDeFiltros/Imagenes/equivalente-inductor.png>
+Package pdftex.def Info: ../Ejercicio2-DiseñoDeFiltros/Imagenes/equivalente-inductor.png  used on input line 158.
+(pdftex.def)             Requested size: 153.64644pt x 129.2078pt.
+ [5]
+<../Ejercicio2-DiseñoDeFiltros/Imagenes/diagrama-pasa-bajos.png, id=66, 383.4325pt x 192.72pt>
+File: ../Ejercicio2-DiseñoDeFiltros/Imagenes/diagrama-pasa-bajos.png Graphic file (type png)
+<use ../Ejercicio2-DiseñoDeFiltros/Imagenes/diagrama-pasa-bajos.png>
+Package pdftex.def Info: ../Ejercicio2-DiseñoDeFiltros/Imagenes/diagrama-pasa-bajos.png  used on input line 173.
+(pdftex.def)             Requested size: 307.29288pt x 154.4585pt.
+ [6 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio2-DiseñoDeFiltros/Imagenes/equivalente-inductor.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio2-DiseñoDeFiltros/Imagenes/diagrama-pasa-bajos.png>]
+<../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-rlc-pasa-bajos-amplitud.png, id=78, 508.0581pt x 245.718pt>
+File: ../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-rlc-pasa-bajos-amplitud.png Graphic file (type png)
+<use ../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-rlc-pasa-bajos-amplitud.png>
+Package pdftex.def Info: ../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-rlc-pasa-bajos-amplitud.png  used on input line 272.
+(pdftex.def)             Requested size: 307.29288pt x 148.62422pt.
+ [7]
+<../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-rlc-pasa-bajos-fase.png, id=83, 508.0581pt x 252.945pt>
+File: ../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-rlc-pasa-bajos-fase.png Graphic file (type png)
+<use ../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-rlc-pasa-bajos-fase.png>
+Package pdftex.def Info: ../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-rlc-pasa-bajos-fase.png  used on input line 278.
+(pdftex.def)             Requested size: 307.29288pt x 152.99553pt.
+<../Ejercicio2-DiseñoDeFiltros/Imagenes/pasa-bajos-opamp-diagrama.png, id=84, 282.30469pt x 225.09094pt>
+File: ../Ejercicio2-DiseñoDeFiltros/Imagenes/pasa-bajos-opamp-diagrama.png Graphic file (type png)
+<use ../Ejercicio2-DiseñoDeFiltros/Imagenes/pasa-bajos-opamp-diagrama.png>
+Package pdftex.def Info: ../Ejercicio2-DiseñoDeFiltros/Imagenes/pasa-bajos-opamp-diagrama.png  used on input line 291.
+(pdftex.def)             Requested size: 307.29288pt x 245.0317pt.
+ [8 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-rlc-pasa-bajos-amplitud.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-rlc-pasa-bajos-fase.png>]
+<../Ejercicio2-DiseñoDeFiltros/Imagenes/Pasa-Bajos-Marcado-Opamp.jpg, id=93, 1411.2725pt x 682.55pt>
+File: ../Ejercicio2-DiseñoDeFiltros/Imagenes/Pasa-Bajos-Marcado-Opamp.jpg Graphic file (type jpg)
+<use ../Ejercicio2-DiseñoDeFiltros/Imagenes/Pasa-Bajos-Marcado-Opamp.jpg>
+Package pdftex.def Info: ../Ejercicio2-DiseñoDeFiltros/Imagenes/Pasa-Bajos-Marcado-Opamp.jpg  used on input line 299.
+(pdftex.def)             Requested size: 307.29288pt x 148.62006pt.
+<../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-opamp-pasa-bajos-fase.png, id=94, 508.0581pt x 252.945pt>
+File: ../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-opamp-pasa-bajos-fase.png Graphic file (type png)
+<use ../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-opamp-pasa-bajos-fase.png>
+Package pdftex.def Info: ../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-opamp-pasa-bajos-fase.png  used on input line 305.
+(pdftex.def)             Requested size: 307.29288pt x 152.99553pt.
+<../Ejercicio2-DiseñoDeFiltros/Imagenes/pasa-bajos-final-amplitud.png, id=95, 508.0581pt x 245.718pt>
+File: ../Ejercicio2-DiseñoDeFiltros/Imagenes/pasa-bajos-final-amplitud.png Graphic file (type png)
+<use ../Ejercicio2-DiseñoDeFiltros/Imagenes/pasa-bajos-final-amplitud.png>
+Package pdftex.def Info: ../Ejercicio2-DiseñoDeFiltros/Imagenes/pasa-bajos-final-amplitud.png  used on input line 315.
+(pdftex.def)             Requested size: 307.29288pt x 148.62422pt.
+ [9 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio2-DiseñoDeFiltros/Imagenes/pasa-bajos-opamp-diagrama.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio2-DiseñoDeFiltros/Imagenes/Pasa-Bajos-Marcado-Opamp.jpg> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-opamp-pasa-bajos-fase.png>]
+<../Ejercicio2-DiseñoDeFiltros/Imagenes/pasa-bajos-final-fase.png, id=105, 508.0581pt x 252.945pt>
+File: ../Ejercicio2-DiseñoDeFiltros/Imagenes/pasa-bajos-final-fase.png Graphic file (type png)
+<use ../Ejercicio2-DiseñoDeFiltros/Imagenes/pasa-bajos-final-fase.png>
+Package pdftex.def Info: ../Ejercicio2-DiseñoDeFiltros/Imagenes/pasa-bajos-final-fase.png  used on input line 321.
+(pdftex.def)             Requested size: 307.29288pt x 152.99553pt.
+<../Ejercicio2-DiseñoDeFiltros/Imagenes/diagrama-pasa-altos.png, id=106, 504.88625pt x 312.16624pt>
+File: ../Ejercicio2-DiseñoDeFiltros/Imagenes/diagrama-pasa-altos.png Graphic file (type png)
+<use ../Ejercicio2-DiseñoDeFiltros/Imagenes/diagrama-pasa-altos.png>
+Package pdftex.def Info: ../Ejercicio2-DiseñoDeFiltros/Imagenes/diagrama-pasa-altos.png  used on input line 334.
+(pdftex.def)             Requested size: 256.0748pt x 158.331pt.
+ [10 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio2-DiseñoDeFiltros/Imagenes/pasa-bajos-final-amplitud.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio2-DiseñoDeFiltros/Imagenes/pasa-bajos-final-fase.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio2-DiseñoDeFiltros/Imagenes/diagrama-pasa-altos.png>] [11]
+<../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-rlc-pasa-altos-amplitud.png, id=122, 508.0581pt x 245.718pt>
+File: ../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-rlc-pasa-altos-amplitud.png Graphic file (type png)
+<use ../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-rlc-pasa-altos-amplitud.png>
+Package pdftex.def Info: ../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-rlc-pasa-altos-amplitud.png  used on input line 426.
+(pdftex.def)             Requested size: 307.29288pt x 148.62422pt.
+<../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-rlc-pasa-altos-fase.png, id=123, 508.0581pt x 252.945pt>
+File: ../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-rlc-pasa-altos-fase.png Graphic file (type png)
+<use ../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-rlc-pasa-altos-fase.png>
+Package pdftex.def Info: ../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-rlc-pasa-altos-fase.png  used on input line 432.
+(pdftex.def)             Requested size: 307.29288pt x 152.99553pt.
+<../Ejercicio2-DiseñoDeFiltros/Imagenes/pasa-altos-opamp-diagrama.png, id=124, 575.14874pt x 345.54094pt>
+File: ../Ejercicio2-DiseñoDeFiltros/Imagenes/pasa-altos-opamp-diagrama.png Graphic file (type png)
+<use ../Ejercicio2-DiseñoDeFiltros/Imagenes/pasa-altos-opamp-diagrama.png>
+Package pdftex.def Info: ../Ejercicio2-DiseñoDeFiltros/Imagenes/pasa-altos-opamp-diagrama.png  used on input line 443.
+(pdftex.def)             Requested size: 307.29288pt x 184.62267pt.
+ [12 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-rlc-pasa-altos-amplitud.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-rlc-pasa-altos-fase.png>]
+<../Ejercicio2-DiseñoDeFiltros/Imagenes/Pasa-Altos-Marcado-Opamp.jpg, id=134, 1411.2725pt x 682.55pt>
+File: ../Ejercicio2-DiseñoDeFiltros/Imagenes/Pasa-Altos-Marcado-Opamp.jpg Graphic file (type jpg)
+<use ../Ejercicio2-DiseñoDeFiltros/Imagenes/Pasa-Altos-Marcado-Opamp.jpg>
+Package pdftex.def Info: ../Ejercicio2-DiseñoDeFiltros/Imagenes/Pasa-Altos-Marcado-Opamp.jpg  used on input line 451.
+(pdftex.def)             Requested size: 307.29288pt x 148.62006pt.
+<../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-opamp-pasa-altos-fase.png, id=135, 508.0581pt x 252.945pt>
+File: ../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-opamp-pasa-altos-fase.png Graphic file (type png)
+<use ../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-opamp-pasa-altos-fase.png>
+Package pdftex.def Info: ../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-opamp-pasa-altos-fase.png  used on input line 457.
+(pdftex.def)             Requested size: 307.29288pt x 152.99553pt.
+<../Ejercicio2-DiseñoDeFiltros/Imagenes/pasa-altos-final-amplitud.png, id=136, 508.0581pt x 245.718pt>
+File: ../Ejercicio2-DiseñoDeFiltros/Imagenes/pasa-altos-final-amplitud.png Graphic file (type png)
+<use ../Ejercicio2-DiseñoDeFiltros/Imagenes/pasa-altos-final-amplitud.png>
+Package pdftex.def Info: ../Ejercicio2-DiseñoDeFiltros/Imagenes/pasa-altos-final-amplitud.png  used on input line 467.
+(pdftex.def)             Requested size: 307.29288pt x 148.62422pt.
+ [13 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio2-DiseñoDeFiltros/Imagenes/pasa-altos-opamp-diagrama.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio2-DiseñoDeFiltros/Imagenes/Pasa-Altos-Marcado-Opamp.jpg> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-opamp-pasa-altos-fase.png>]
+<../Ejercicio2-DiseñoDeFiltros/Imagenes/pasa-altos-final-fase.png, id=146, 508.0581pt x 252.945pt>
+File: ../Ejercicio2-DiseñoDeFiltros/Imagenes/pasa-altos-final-fase.png Graphic file (type png)
+<use ../Ejercicio2-DiseñoDeFiltros/Imagenes/pasa-altos-final-fase.png>
+Package pdftex.def Info: ../Ejercicio2-DiseñoDeFiltros/Imagenes/pasa-altos-final-fase.png  used on input line 473.
+(pdftex.def)             Requested size: 307.29288pt x 152.99553pt.
+<../Ejercicio2-DiseñoDeFiltros/Imagenes/diagrama-rechaza-banda.png, id=147, 363.3575pt x 286.06876pt>
+File: ../Ejercicio2-DiseñoDeFiltros/Imagenes/diagrama-rechaza-banda.png Graphic file (type png)
+<use ../Ejercicio2-DiseñoDeFiltros/Imagenes/diagrama-rechaza-banda.png>
+Package pdftex.def Info: ../Ejercicio2-DiseñoDeFiltros/Imagenes/diagrama-rechaza-banda.png  used on input line 496.
+(pdftex.def)             Requested size: 256.0748pt x 201.60866pt.
+ [14 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio2-DiseñoDeFiltros/Imagenes/pasa-altos-final-amplitud.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio2-DiseñoDeFiltros/Imagenes/pasa-altos-final-fase.png>] [15 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio2-DiseñoDeFiltros/Imagenes/diagrama-rechaza-banda.png>]
+<../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-rlc-rechaza-banda-amplitud.png, id=164, 508.0581pt x 245.718pt>
+File: ../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-rlc-rechaza-banda-amplitud.png Graphic file (type png)
+<use ../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-rlc-rechaza-banda-amplitud.png>
+Package pdftex.def Info: ../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-rlc-rechaza-banda-amplitud.png  used on input line 555.
+(pdftex.def)             Requested size: 307.29288pt x 148.62422pt.
+<../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-rlc-rechaza-banda-fase.png, id=165, 508.0581pt x 252.945pt>
+File: ../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-rlc-rechaza-banda-fase.png Graphic file (type png)
+<use ../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-rlc-rechaza-banda-fase.png>
+Package pdftex.def Info: ../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-rlc-rechaza-banda-fase.png  used on input line 561.
+(pdftex.def)             Requested size: 307.29288pt x 152.99553pt.
+<../Ejercicio2-DiseñoDeFiltros/Imagenes/rechaza-banda-opamp-diagrama.png, id=166, 529.98pt x 306.39468pt>
+File: ../Ejercicio2-DiseñoDeFiltros/Imagenes/rechaza-banda-opamp-diagrama.png Graphic file (type png)
+<use ../Ejercicio2-DiseñoDeFiltros/Imagenes/rechaza-banda-opamp-diagrama.png>
+Package pdftex.def Info: ../Ejercicio2-DiseñoDeFiltros/Imagenes/rechaza-banda-opamp-diagrama.png  used on input line 572.
+(pdftex.def)             Requested size: 307.29288pt x 177.65294pt.
+ [16 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-rlc-rechaza-banda-amplitud.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-rlc-rechaza-banda-fase.png>]
+<../Ejercicio2-DiseñoDeFiltros/Imagenes/Rechaza-Banda-Marcado-Opamp.jpg, id=175, 1411.2725pt x 682.55pt>
+File: ../Ejercicio2-DiseñoDeFiltros/Imagenes/Rechaza-Banda-Marcado-Opamp.jpg Graphic file (type jpg)
+<use ../Ejercicio2-DiseñoDeFiltros/Imagenes/Rechaza-Banda-Marcado-Opamp.jpg>
+Package pdftex.def Info: ../Ejercicio2-DiseñoDeFiltros/Imagenes/Rechaza-Banda-Marcado-Opamp.jpg  used on input line 580.
+(pdftex.def)             Requested size: 307.29288pt x 148.62006pt.
+<../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-opamp-rechaza-banda-fase.png, id=176, 508.0581pt x 252.945pt>
+File: ../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-opamp-rechaza-banda-fase.png Graphic file (type png)
+<use ../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-opamp-rechaza-banda-fase.png>
+Package pdftex.def Info: ../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-opamp-rechaza-banda-fase.png  used on input line 586.
+(pdftex.def)             Requested size: 307.29288pt x 152.99553pt.
+<../Ejercicio2-DiseñoDeFiltros/Imagenes/rechaza-banda-final-amplitud.png, id=177, 508.0581pt x 245.718pt>
+File: ../Ejercicio2-DiseñoDeFiltros/Imagenes/rechaza-banda-final-amplitud.png Graphic file (type png)
+<use ../Ejercicio2-DiseñoDeFiltros/Imagenes/rechaza-banda-final-amplitud.png>
+Package pdftex.def Info: ../Ejercicio2-DiseñoDeFiltros/Imagenes/rechaza-banda-final-amplitud.png  used on input line 596.
+(pdftex.def)             Requested size: 307.29288pt x 148.62422pt.
+ [17 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio2-DiseñoDeFiltros/Imagenes/rechaza-banda-opamp-diagrama.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio2-DiseñoDeFiltros/Imagenes/Rechaza-Banda-Marcado-Opamp.jpg> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-opamp-rechaza-banda-fase.png>]
+<../Ejercicio2-DiseñoDeFiltros/Imagenes/rechaza-banda-final-fase.png, id=187, 508.0581pt x 252.945pt>
+File: ../Ejercicio2-DiseñoDeFiltros/Imagenes/rechaza-banda-final-fase.png Graphic file (type png)
+<use ../Ejercicio2-DiseñoDeFiltros/Imagenes/rechaza-banda-final-fase.png>
+Package pdftex.def Info: ../Ejercicio2-DiseñoDeFiltros/Imagenes/rechaza-banda-final-fase.png  used on input line 602.
+(pdftex.def)             Requested size: 307.29288pt x 152.99553pt.
+) [18 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio2-DiseñoDeFiltros/Imagenes/rechaza-banda-final-amplitud.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio2-DiseñoDeFiltros/Imagenes/rechaza-banda-final-fase.png>] (/Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio3-AmplificadorDeInstrumentacion/Ejercicio-3.tex) [19] (/Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio4-EcualizadorDeFase/Ejercicio-4.tex
+
+LaTeX Warning: File `Informe/Ecualizador de Fase.png' not found on input line 9.
+
+
+/Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio4-EcualizadorDeFase/Ejercicio-4.tex:9: Package pdftex.def Error: File `Informe/Ecualizador de Fase.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.9 ...s[scale=1]{Informe/Ecualizador de Fase.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Runaway argument?
+ 
+/Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio4-EcualizadorDeFase/Ejercicio-4.tex:18: Paragraph ended before \align was complete.
+<to be read again> 
+                   \par 
+l.18 
+     
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+/Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio4-EcualizadorDeFase/Ejercicio-4.tex:18: Missing $ inserted.
+<inserted text> 
+                $
+l.18 
+     
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+/Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio4-EcualizadorDeFase/Ejercicio-4.tex:18: Missing \endgroup inserted.
+<inserted text> 
+                \endgroup 
+l.18 
+     
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+/Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio4-EcualizadorDeFase/Ejercicio-4.tex:18: Display math should end with $$.
+<to be read again> 
+                   \par 
+l.18 
+     
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+/Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio4-EcualizadorDeFase/Ejercicio-4.tex:27: Misplaced \cr.
+\math@cr@@@ ->\cr 
+                  
+l.27 \end{align}
+                
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+/Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio4-EcualizadorDeFase/Ejercicio-4.tex:27: Misplaced \noalign.
+\math@cr@@ ... \iffalse }\fi \math@cr@@@ \noalign 
+                                                  {\vskip #1\relax }
+l.27 \end{align}
+                
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+/Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio4-EcualizadorDeFase/Ejercicio-4.tex:27: Misplaced \noalign.
+\black@ #1->\noalign 
+                     {\ifdim #1>\displaywidth \dimen@ \prevdepth \nointerlin...
+l.27 \end{align}
+                
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+/Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio4-EcualizadorDeFase/Ejercicio-4.tex:27: Extra }, or forgotten \endgroup.
+\endalign ->\math@cr \black@ \totwidth@ \egroup 
+                                                \ifingather@ \restorealignst...
+l.27 \end{align}
+                
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+/Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio4-EcualizadorDeFase/Ejercicio-4.tex:27: Missing $ inserted.
+<inserted text> 
+                $
+l.27 \end{align}
+                
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+/Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio4-EcualizadorDeFase/Ejercicio-4.tex:27: Display math should end with $$.
+<to be read again> 
+                   \endgroup 
+l.27 \end{align}
+                
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+
+LaTeX Warning: File `Informe/EcSinPot.png' not found on input line 32.
+
+
+/Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio4-EcualizadorDeFase/Ejercicio-4.tex:32: Package pdftex.def Error: File `Informe/EcSinPot.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.32 ...udegraphics[scale=1]{Informe/EcSinPot.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: Reference `1reemplazo' on page 20 undefined on input line 36.
+
+
+LaTeX Warning: Reference `2reemplazo' on page 20 undefined on input line 36.
+
+Runaway argument?
+ 
+/Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio4-EcualizadorDeFase/Ejercicio-4.tex:40: Paragraph ended before \align was complete.
+<to be read again> 
+                   \par 
+l.40 
+     
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+/Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio4-EcualizadorDeFase/Ejercicio-4.tex:40: Missing $ inserted.
+<inserted text> 
+                $
+l.40 
+     
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+/Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio4-EcualizadorDeFase/Ejercicio-4.tex:40: Missing \endgroup inserted.
+<inserted text> 
+                \endgroup 
+l.40 
+     
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+/Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio4-EcualizadorDeFase/Ejercicio-4.tex:40: Display math should end with $$.
+<to be read again> 
+                   \par 
+l.40 
+     
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+/Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio4-EcualizadorDeFase/Ejercicio-4.tex:53: Misplaced \cr.
+\math@cr@@@ ->\cr 
+                  
+l.53 \end{align}
+                
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+/Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio4-EcualizadorDeFase/Ejercicio-4.tex:53: Misplaced \noalign.
+\math@cr@@ ... \iffalse }\fi \math@cr@@@ \noalign 
+                                                  {\vskip #1\relax }
+l.53 \end{align}
+                
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+/Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio4-EcualizadorDeFase/Ejercicio-4.tex:53: Misplaced \noalign.
+\black@ #1->\noalign 
+                     {\ifdim #1>\displaywidth \dimen@ \prevdepth \nointerlin...
+l.53 \end{align}
+                
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+/Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio4-EcualizadorDeFase/Ejercicio-4.tex:53: Extra }, or forgotten \endgroup.
+\endalign ->\math@cr \black@ \totwidth@ \egroup 
+                                                \ifingather@ \restorealignst...
+l.53 \end{align}
+                
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+/Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio4-EcualizadorDeFase/Ejercicio-4.tex:53: Missing $ inserted.
+<inserted text> 
+                $
+l.53 \end{align}
+                
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+/Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio4-EcualizadorDeFase/Ejercicio-4.tex:53: Display math should end with $$.
+<to be read again> 
+                   \endgroup 
+l.53 \end{align}
+                
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+
+LaTeX Warning: File `Informe/1cambioEstrella.png' not found on input line 58.
+
+
+/Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio4-EcualizadorDeFase/Ejercicio-4.tex:58: Package pdftex.def Error: File `Informe/1cambioEstrella.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.58 ...cs[scale=0.6]{Informe/1cambioEstrella.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+Runaway argument?
+ 
+/Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio4-EcualizadorDeFase/Ejercicio-4.tex:65: Paragraph ended before \align was complete.
+<to be read again> 
+                   \par 
+l.65 
+     
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+/Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio4-EcualizadorDeFase/Ejercicio-4.tex:65: Missing $ inserted.
+<inserted text> 
+                $
+l.65 
+     
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+/Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio4-EcualizadorDeFase/Ejercicio-4.tex:65: Missing \endgroup inserted.
+<inserted text> 
+                \endgroup 
+l.65 
+     
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+/Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio4-EcualizadorDeFase/Ejercicio-4.tex:65: Display math should end with $$.
+<to be read again> 
+                   \par 
+l.65 
+     
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+[20]
+/Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio4-EcualizadorDeFase/Ejercicio-4.tex:78: Misplaced \cr.
+\math@cr@@@ ->\cr 
+                  
+l.78 \end{align}
+                
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+/Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio4-EcualizadorDeFase/Ejercicio-4.tex:78: Misplaced \noalign.
+\math@cr@@ ... \iffalse }\fi \math@cr@@@ \noalign 
+                                                  {\vskip #1\relax }
+l.78 \end{align}
+                
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+/Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio4-EcualizadorDeFase/Ejercicio-4.tex:78: Misplaced \noalign.
+\black@ #1->\noalign 
+                     {\ifdim #1>\displaywidth \dimen@ \prevdepth \nointerlin...
+l.78 \end{align}
+                
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+/Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio4-EcualizadorDeFase/Ejercicio-4.tex:78: Extra }, or forgotten \endgroup.
+\endalign ->\math@cr \black@ \totwidth@ \egroup 
+                                                \ifingather@ \restorealignst...
+l.78 \end{align}
+                
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+/Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio4-EcualizadorDeFase/Ejercicio-4.tex:78: Missing $ inserted.
+<inserted text> 
+                $
+l.78 \end{align}
+                
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+/Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio4-EcualizadorDeFase/Ejercicio-4.tex:78: Display math should end with $$.
+<to be read again> 
+                   \endgroup 
+l.78 \end{align}
+                
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+
+LaTeX Warning: File `Informe/2cambioTriangulo.png' not found on input line 83.
+
+
+/Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio4-EcualizadorDeFase/Ejercicio-4.tex:83: Package pdftex.def Error: File `Informe/2cambioTriangulo.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.83 ...s[scale=0.6]{Informe/2cambioTriangulo.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Runaway argument?
+ 
+/Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio4-EcualizadorDeFase/Ejercicio-4.tex:91: Paragraph ended before \align was complete.
+<to be read again> 
+                   \par 
+l.91 
+     
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+/Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio4-EcualizadorDeFase/Ejercicio-4.tex:91: Missing $ inserted.
+<inserted text> 
+                $
+l.91 
+     
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+/Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio4-EcualizadorDeFase/Ejercicio-4.tex:91: Missing \endgroup inserted.
+<inserted text> 
+                \endgroup 
+l.91 
+     
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+/Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio4-EcualizadorDeFase/Ejercicio-4.tex:91: Display math should end with $$.
+<to be read again> 
+                   \par 
+l.91 
+     
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+/Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio4-EcualizadorDeFase/Ejercicio-4.tex:104: Misplaced \cr.
+\math@cr@@@ ->\cr 
+                  
+l.104 \end{align}
+                 
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+/Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio4-EcualizadorDeFase/Ejercicio-4.tex:104: Misplaced \noalign.
+\math@cr@@ ... \iffalse }\fi \math@cr@@@ \noalign 
+                                                  {\vskip #1\relax }
+l.104 \end{align}
+                 
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+/Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio4-EcualizadorDeFase/Ejercicio-4.tex:104: Misplaced \noalign.
+\black@ #1->\noalign 
+                     {\ifdim #1>\displaywidth \dimen@ \prevdepth \nointerlin...
+l.104 \end{align}
+                 
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+/Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio4-EcualizadorDeFase/Ejercicio-4.tex:104: Extra }, or forgotten \endgroup.
+\endalign ->\math@cr \black@ \totwidth@ \egroup 
+                                                \ifingather@ \restorealignst...
+l.104 \end{align}
+                 
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+/Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio4-EcualizadorDeFase/Ejercicio-4.tex:104: Missing $ inserted.
+<inserted text> 
+                $
+l.104 \end{align}
+                 
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+/Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio4-EcualizadorDeFase/Ejercicio-4.tex:104: Display math should end with $$.
+<to be read again> 
+                   \endgroup 
+l.104 \end{align}
+                 
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+) [21]
+>>>>>>> b9544b5532f0c407ccdd73065b1f39988c1ea0bb
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 31.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 31.
  (/Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/main.aux
@@ -855,6 +1493,7 @@ LaTeX Info: Redefining \% on input line 20.
 )
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 31.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 31.
+<<<<<<< HEAD
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 8CAA5E7E177F5297351BFED3FFC50E42;532.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 31.
@@ -874,4 +1513,38 @@ PDF statistics:
  102 compressed objects within 2 object streams
  16 named destinations out of 1000 (max. 500000)
  77 words of extra memory for PDF output out of 10000 (max. 10000000)
+=======
+
+
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `main.out':
+(rerunfilecheck)             Before: <no file>
+(rerunfilecheck)             After:  63BD7A8564C872E4D58156FC2F41B3F8;1268.
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 31.
+ ) 
+Here is how much of TeX's memory you used:
+ 34448 strings out of 480608
+ 807773 string characters out of 5903630
+ 1179704 words of memory out of 5000000
+ 49667 multiletter control sequences out of 15000+600000
+ 545217 words of font info for 74 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 71i,13n,73p,511b,804s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb>
+Output written on /Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/main.pdf (22 pages, 1373694 bytes).
+PDF statistics:
+ 314 PDF objects out of 1000 (max. 8388607)
+ 215 compressed objects within 3 object streams
+ 83 named destinations out of 1000 (max. 500000)
+ 153 words of extra memory for PDF output out of 10000 (max. 10000000)
+>>>>>>> b9544b5532f0c407ccdd73065b1f39988c1ea0bb
 

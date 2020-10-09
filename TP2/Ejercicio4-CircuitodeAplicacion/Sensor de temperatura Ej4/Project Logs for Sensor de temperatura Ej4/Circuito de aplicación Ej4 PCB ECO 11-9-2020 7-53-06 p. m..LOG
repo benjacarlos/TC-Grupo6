@@ -1,0 +1,64 @@
+Added Component: Designator=J1(BORNERA2)
+Add component. Clean all parameters for all variants
+Added Component: Designator=J2(BORNERA2)
+Add component. Clean all parameters for all variants
+Added Component: Designator=J3(BORNERA2)
+Add component. Clean all parameters for all variants
+Added Component: Designator=J4(BORNERA3)
+Add component. Clean all parameters for all variants
+Added Component: Designator=R1(RES400)
+Add component. Clean all parameters for all variants
+Added Component: Designator=Ra(RES400)
+Add component. Clean all parameters for all variants
+Added Component: Designator=Rb(POTENCIOMETRO)
+Add component. Clean all parameters for all variants
+Added Component: Designator=Rf(POTENCIOMETRO)
+Add component. Clean all parameters for all variants
+Added Component: Designator=Ri(RES400)
+Add component. Clean all parameters for all variants
+Added Component: Designator=U0(TO-220 H - DISIPADOR)
+Add component. Clean all parameters for all variants
+Added Component: Designator=U1(DIP8)
+Add component. Clean all parameters for all variants
+Added Pin To Net: NetName=GND Pin=J1-1
+Added Pin To Net: NetName=GND Pin=J2-1
+Added Pin To Net: NetName=GND Pin=J3-1
+Added Pin To Net: NetName=GND Pin=J4-1
+Added Pin To Net: NetName=GND Pin=U0-1
+Added Pin To Net: NetName=GND Pin=U1-2
+Added Pin To Net: NetName=GND Pin=U1-6
+Added Net: Name=GND
+Added Pin To Net: NetName=NetR1_1 Pin=R1-1
+Added Pin To Net: NetName=NetR1_1 Pin=Rf-3
+Added Pin To Net: NetName=NetR1_1 Pin=Ri-2
+Added Pin To Net: NetName=NetR1_1 Pin=U1-5
+Added Net: Name=NetR1_1
+Added Pin To Net: NetName=NetRa_1 Pin=Ra-1
+Added Pin To Net: NetName=NetRa_1 Pin=U0-2
+Added Net: Name=NetRa_1
+Added Pin To Net: NetName=NetRa_2 Pin=Ra-2
+Added Pin To Net: NetName=NetRa_2 Pin=Rb-1
+Added Pin To Net: NetName=NetRa_2 Pin=U1-3
+Added Net: Name=NetRa_2
+Added Pin To Net: NetName=NetRb_3 Pin=Rb-3
+Added Pin To Net: NetName=NetRb_3 Pin=Ri-1
+Added Pin To Net: NetName=NetRb_3 Pin=U1-1
+Added Net: Name=NetRb_3
+Added Pin To Net: NetName=Vcc+ Pin=J4-3
+Added Pin To Net: NetName=Vcc+ Pin=U1-8
+Added Net: Name=Vcc+
+Added Pin To Net: NetName=Vcc- Pin=J4-2
+Added Pin To Net: NetName=Vcc- Pin=U1-4
+Added Net: Name=Vcc-
+Added Pin To Net: NetName=Vf Pin=J3-2
+Added Pin To Net: NetName=Vf Pin=Rf-1
+Added Net: Name=Vf
+Added Pin To Net: NetName=Vin Pin=J1-2
+Added Pin To Net: NetName=Vin Pin=U0-3
+Added Net: Name=Vin
+Added Pin To Net: NetName=Vout Pin=J2-2
+Added Pin To Net: NetName=Vout Pin=R1-2
+Added Pin To Net: NetName=Vout Pin=U1-7
+Added Net: Name=Vout
+Added Class: Name=Circuito de Aplicacion Ej4
+Added Room: Name=Circuito de Aplicacion Ej4
