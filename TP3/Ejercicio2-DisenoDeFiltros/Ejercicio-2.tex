@@ -616,3 +616,80 @@ Se procedió a armar el circuito en la $Electronics$ $Explorer$ $Board$, obtenie
 \end{figure}
 
 
+subsection{Implementación}
+En esta sección se plantean las consideraciones de diseño llevadas a cabo para implementar los circuitos presentados anteriormente 
+en un PCB. Lamentablemente, dadas las condiciones presentes no se puede implementar físicamente lo expuesto pero se toman todos los 
+recaudos necesarios para lograr un diseño fidedigno a una implementación real. \par 
+
+La cátedra plantea la condición de que es necesario implementar el diseño de los filtros usando un sólo circuito integrado, por ende, se 
+decide utilizar el $TL084CN$ fabricado por \textit{Texas Instruments},
+ encapsulado que cuenta con cuatro amplificadores operacionales en su interior. A su vez, de lo anterior se desprende que habrá que implementar 
+ nuestro diseño en el mismo PCB.
+Consecuentemente, los cuatro filtros solicitados, \textit{Band Pass}, \textit{Band Reject}, \textit{Low Pass} y \textit{High Pass}, requieren un 
+filtro de segundo orden RLC para cumplir con las especificaciones, utilizando un \textit{girator} cada uno para simular una inductancia. Para 
+implementar el anterior dispositivo se utiliza el circuito presentado anteriormente en las simulaciones. \par 
+
+\subsubsection{Consideraciones de diseño}
+Dado que cada filtro requiere un amplificador operacional y que los valores de inductancia simulados con el girator son distintos para cada implementación,
+se considera que lo óptimo es asignar un amplificador operacional a cada filtro, de manera de tener cuatro circuitos implementados en
+ la misma placa pero que no comparten 
+componentes. De esta manera, se minimiza la posibilidad de errores o de incompatibilidades. \par 
+
+Por otro lado, en vista de un uso óptimo, se procede a aislar los cuatro circuitos para poder usarlos de manera independiente. Esto se logra implementando 
+tanto pines a la entrada como a la salida del PCB, los cuales son la conexión eléctrica de entrada y de salida de cada filtro. Se utiliza un 
+\textit{header 4x2} en el esquemático que representa las tiras de pares de pines con las conexiones posibles. Para utilizar un filtro es necesario cerrar
+ la conexión eléctricamente entre los dos pines utilizando un \textit{jumper}. Este procedimiento se debe realizar tanto a la entrada como a la salida de 
+ cada filtro.  Por otro lado, en las proximidades de las conexiones de salida se colocaron dos pines, conectados a la señal de salida y tierra,
+  de manera tal de colocar de manera sencilla y práctica la punta del osciloscopio para medir.
+
+\begin{figure}
+      
+ \centering
+ \begin{subfigure}[b]{0.33\textwidth}
+     \centering
+     \includegraphics[width=\textwidth]{../Ejercicio2-DiseñoDeFiltros/Imagenes/esquematico_pines_in.png}
+     \caption{Implementación a nivel esquemático}
+ \end{subfigure}
+ \hfill
+ \begin{subfigure}[b]{0.33\textwidth}
+     \centering
+     \includegraphics[width=\textwidth]{../Ejercicio2-DiseñoDeFiltros/Imagenes/esquematico_pines_out.png}
+     \caption{Implementación a nivel PCB}
+ \end{subfigure}
+ \hfill
+ \begin{subfigure}[b]{0.33\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{../Ejercicio2-DiseñoDeFiltros/Imagenes/esquematico_pines_sal.png}
+    \caption{Implementación punto de medición}
+\end{subfigure}
+\end{figure}
+
+La limitación que nos plantea este diseño es la imposibilidad de medir más de un filtro a la vez. A nivel lógico lo implementado responde al siguiente 
+esquema:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{../Ejercicio2-DiseñoDeFiltros/Imagenes/logic_diagram.png}
+    \caption{Diagrama de Bloques lógico}
+\end{figure}
+
+La implementación final del PCB se presenta a continuación.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{../Ejercicio2-DiseñoDeFiltros/Imagenes/PCB_logic.png}
+    \caption{Vista del PCB a nivel conexionado}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{../Ejercicio2-DiseñoDeFiltros/Imagenes/PCB_logic_3d.png}
+    \caption{Vista 3D del PCB}
+\end{figure}
+
+
+La única consideración a realizar es que se omitió la utilización de agujeros de sujeción para colocar tamecos a la placa. Se decidió omitirlos 
+para poder presentar el diseño de manera más clara y tener más espacio para pistas. Sin embargo, en una implementación real es indispensable tenerlos 
+en consideración por comodidad y para una correcta manipulación del PCB.
+
+
+
