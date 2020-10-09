@@ -1,3 +1,12 @@
+1. Diseñar una función transferencia que cumpla con las especificaciones.
+2. Diseñar un circuito que implemente la función transferencia utilizando un Gyrator. Justificar adecuadamente la elección de todos sus componentes y redactar una introducción teórica al tema.
+3. Determinar rangos de operación en zona lineal. Se espera adecuada profundidad en este análisis.
+4. Contrastar el diseño del circuito con las simulaciones correspondientes.
+5. Implementar el circuito y comprobar su funcionamiento con las mediciones correspondientes.
+6. Analizar el comportamiento del sistema en altas frecuencias.
+7. Diseñar un PCB que contenga todos los circuitos pedidos (en el mismo PCB). A su vez, puede utilizarse un
+sólo IC en la implementación pedida.
+
 En la presente sección, se implementarán cuatro filtros de segundo orden según las siguientes especificaciones:
 
 \begin{table}[H]
@@ -475,16 +484,6 @@ Para contrastar aquí empíricamente, también se armó el circuito en la $Elect
 \end{figure}
 
 
-\subsection{Filtro Pasa-Banda (Band-Pass)}
-
-1. Diseñar una función transferencia que cumpla con las especificaciones.
-2. Diseñar un circuito que implemente la función transferencia utilizando un Gyrator. Justificar adecuadamente la elección de todos sus componentes y redactar una introducción teórica al tema.
-3. Determinar rangos de operación en zona lineal. Se espera adecuada profundidad en este análisis.
-4. Contrastar el diseño del circuito con las simulaciones correspondientes.
-5. Implementar el circuito y comprobar su funcionamiento con las mediciones correspondientes.
-6. Analizar el comportamiento del sistema en altas frecuencias.
-7. Diseñar un PCB que contenga todos los circuitos pedidos (en el mismo PCB). A su vez, puede utilizarse un
-sólo IC en la implementación pedida.
 
 \subsection{Filtro Rechaza-Banda (Band-Rejection)}
 
@@ -523,7 +522,7 @@ $$\xi=\frac{R \sqrt{C}}{2\sqrt{L}}=\frac{1}{sqrt{2}} \longrightarrow R=375.06$$
 El valor comercial más cercano con el que contamos es $560 \Omega$ por lo que observaremes un comportamiento sobreamortiguado aunque aquí
 no tendrá mucha importancia ya que no se especificaron parámetros adicionales mas que E1.
 
-Como usaremoz un gyrator, tendremos que analizar nuevamente:
+Como usaremos un gyrator, tendremos que analizar nuevamente:
 
 $$Z=sC_gR_gR_L+R_L$$
 
@@ -604,3 +603,120 @@ Se procedió a armar el circuito en la $Electronics$ $Explorer$ $Board$, obtenie
 \end{figure}
 
 
+\subsection{Filtro Pasa-Banda (Band-Pass)}
+
+Realizaremos también un filtro pasa-banda de segundo orden clásico, con los siguientes elementos:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{../Ejercicio2-DiseñoDeFiltros/Imagenes/diagrama-pasa-banda.png}
+    \caption{Circuito Pasa-Altos de segundo orden}
+\end{figure}
+
+La única especificación en este caso es:
+
+\begin{itemize}
+	\item E1: $f_c=10 KHz$
+\end{itemize}
+
+Nuevamente utilizando la transformada de Laplace obtenemos la función de transferencia para el último filtro
+a diseñar:
+
+$$H(S)=\frac{V_{out}(S)}{V_{in}(S)}=\frac{\frac{1}{SC}\parallel SL}{\frac{1}{SC}\parallel SL + R} \longrightarrow 
+H(S)=\frac{S\frac{L}{R}}{S^2LC+S\frac{L}{R}+1}$$
+
+Como en los filtros analizados anteriormente, la frecuencia de corte
+será $w_0=\frac{1}{\sqrt{LC}}$, por lo tanto:
+
+$$2 \pi f_0 = \frac{1}{\sqrt{LC}} \longrightarrow 2 \pi 10KHz = \frac{1}{\sqrt{LC}}$$
+
+En todos los filtros optamos por $C=0.1 \mu F$. El mismo será empleado aquí también, por lo que nuestra inductancia será:
+
+$$L = 2.533 mH$$
+
+También al buscar un circuito críticamente amortiguado:
+
+$$\xi=\frac{R \sqrt{C}}{2\sqrt{L}}=\frac{1}{sqrt{2}} \longrightarrow R=225.04$$
+
+El valor que utilizaremos entonces es $220 \Omega$ por lo que observaremes un comportamiento apenas subamortiguado.
+Nuevamente no es un factor que nos afecte en el diseño del filtro, ya que la única condición establecida es la frecuencia
+de corte.
+
+Para el gyrator, calcularemos el valor nominal de los elementos a emplear:
+
+$$Z=sC_gR_gR_L+R_L$$
+
+$$1 >> sC_gR_L$$
+
+Se eligió:
+
+\begin{itemize}
+	\item $C_g=0.1 \mu F$
+	\item $R_L=10 \Omega$
+	\item $R_g=2.7K \Omega$
+\end{itemize}
+
+Como en todos los casos el efecto de $R_L$ sobre el circuito es mínimo.
+
+Verificando las relaciones:
+
+$$Z=sC_gR_gR_L+R_L \longrightarrow Z = s2.7m + 10$$
+
+$$1 >> s100n.10 \longrightarrow 1  >> s1\mu$$
+
+Se procedió a simular el comportamiento del circuito RLC equivalente con el gyrator implementado para observar si su comportamiento es el esperado:
+
+%Poner tabla con nuevos valores%
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-rlc-pasa-banda-amplitud.png}
+    \caption{Circuito Pasa-Bajos de segundo orden}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-rlc-pasa-banda-fase.png}
+    \caption{Circuito Pasa-Bajos de segundo orden}
+\end{figure}
+
+Se comprobó que para el circuito equivalente con gyrator se cumple lo establecido en la plantilla.
+De la simulación se observó que en $f_c=6.1031 KHz$, donde la ganancia es de $-90.64 dB$.
+
+Luego, se realizó la simulación utilizando ahora el amplificador operacional y los elementos pasivos del gyrator obtenidos anteriormente.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{../Ejercicio2-DiseñoDeFiltros/Imagenes/pasa-banda-opamp-diagrama.png}
+    \caption{Circuito Pasa-Bajos de segundo orden}
+\end{figure}
+
+Lo obtenido fue lo siguiente:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{../Ejercicio2-DiseñoDeFiltros/Imagenes/Pasa-Banda-Marcado-Opamp.jpg}
+    \caption{Circuito Pasa-Bajos de segundo orden}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-opamp-pasa-banda-fase.png}
+    \caption{Circuito Pasa-Bajos de segundo orden}
+\end{figure}
+
+Se puede comprobar aquí también que la plantilla se sigue cumpliendo obteniendo el filtro rechaza-banda solicitado.
+
+Se procedió a armar el circuito en la $Electronics$ $Explorer$ $Board$, obteniendo la siguiente respuesta en frecuencia medida:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{../Ejercicio2-DiseñoDeFiltros/Imagenes/pasa-banda-final-amplitud.png}
+    \caption{Circuito Pasa-Bajos de segundo orden}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{../Ejercicio2-DiseñoDeFiltros/Imagenes/pasa-bandaa-final-fase.png}
+    \caption{Circuito Pasa-Bajos de segundo orden}
+\end{figure}
