@@ -1,19 +1,36 @@
 \BOOKMARK [1][-]{section.1}{Filtro con GIC}{}% 1
-\BOOKMARK [2][-]{subsection.1.1}{Filtro con GIC}{section.1}% 2
-\BOOKMARK [1][-]{section.2}{Introducci\363n a Dise\361o de Filtros}{}% 3
-\BOOKMARK [2][-]{subsubsection.2.0.1}{Introducci\363n a Gyrators}{section.2}% 4
-\BOOKMARK [3][-]{subsubsection.2.0.2}{Implementaci\363n real de un Gyrator}{subsubsection.2.0.1}% 5
-\BOOKMARK [3][-]{subsubsection.2.0.3}{An\341lisis de Zin}{subsubsection.2.0.1}% 6
-\BOOKMARK [3][-]{subsubsection.2.0.4}{Elecci\363n del amplificador operacional para el Gyrator}{subsubsection.2.0.1}% 7
-\BOOKMARK [2][-]{subsection.2.1}{Filtro Pasa-Bajos \(Low-Pass\)}{section.2}% 8
-\BOOKMARK [2][-]{subsection.2.2}{Filtro Pasa-Altos \(High-Pass\)}{section.2}% 9
-\BOOKMARK [2][-]{subsection.2.3}{Filtro Rechaza-Banda \(Band-Rejection\)}{section.2}% 10
-\BOOKMARK [2][-]{subsection.2.4}{Filtro Pasa-Banda \(Band-Pass\)}{section.2}% 11
-\BOOKMARK [2][-]{subsection.2.5}{Implementaci\363n}{section.2}% 12
-\BOOKMARK [3][-]{subsubsection.2.5.1}{Consideraciones de dise\361o}{subsection.2.5}% 13
-\BOOKMARK [1][-]{section.3}{Amplificador de Instrumentaci\363n}{}% 14
-\BOOKMARK [2][-]{subsection.3.1}{Amplificador de Instrumentaci\363n}{section.3}% 15
-\BOOKMARK [1][-]{section.4}{Control de Tonos y Ecualizador de Fase}{}% 16
-\BOOKMARK [2][-]{subsection.4.1}{Ecualizador de Fase}{section.4}% 17
-\BOOKMARK [2][-]{subsection.4.2}{Ecualizador de Fase}{section.4}% 18
-\BOOKMARK [2][-]{subsection.4.3}{An\341lisis matem\341tico}{section.4}% 19
+\BOOKMARK [2][-]{subsection.1.1}{Introducci\363n al GIC}{section.1}% 2
+\BOOKMARK [2][-]{subsection.1.2}{Dise\361o de un Filtro Pasa-Todo}{section.1}% 3
+\BOOKMARK [3][-]{subsubsection.1.2.1}{Respuesta en frecuencia}{subsection.1.2}% 4
+\BOOKMARK [3][-]{subsubsection.1.2.2}{Funcionamiento de Resistencias}{subsection.1.2}% 5
+\BOOKMARK [3][-]{subsubsection.1.2.3}{An\341lisis de Sensibilidad}{subsection.1.2}% 6
+\BOOKMARK [3][-]{subsubsection.1.2.4}{Impedancia del Circuito}{subsection.1.2}% 7
+\BOOKMARK [3][-]{subsubsection.1.2.5}{Implementaci\363n del Circuito}{subsection.1.2}% 8
+\BOOKMARK [3][-]{subsubsection.1.2.6}{Elecci\363n de Amplificador Operacional}{subsection.1.2}% 9
+\BOOKMARK [2][-]{subsection.1.3}{An\341lisis de Resultados}{section.1}% 10
+\BOOKMARK [3][-]{subsubsection.1.3.1}{Respuesta en Frecuencia}{subsection.1.3}% 11
+\BOOKMARK [3][-]{subsubsection.1.3.2}{Impedancia de Entrada}{subsection.1.3}% 12
+\BOOKMARK [3][-]{subsubsection.1.3.3}{Impedancia de Salida}{subsection.1.3}% 13
+\BOOKMARK [2][-]{subsection.1.4}{Respuesta al Escal\363n}{section.1}% 14
+\BOOKMARK [2][-]{subsection.1.5}{Limitaciones del Circuito}{section.1}% 15
+\BOOKMARK [3][-]{subsubsection.1.5.1}{Limitaci\363n por Tensi\363n}{subsection.1.5}% 16
+\BOOKMARK [3][-]{subsubsection.1.5.2}{Limitaci\363n por Frecuencia}{subsection.1.5}% 17
+\BOOKMARK [3][-]{subsubsection.1.5.3}{Limitaci\363n por Se\361al}{subsection.1.5}% 18
+\BOOKMARK [2][-]{subsection.1.6}{Conclusi\363n}{section.1}% 19
+\BOOKMARK [1][-]{section.2}{Introducci\363n a Dise\361o de Filtros}{}% 20
+\BOOKMARK [2][-]{subsubsection.2.0.1}{Introducci\363n a Gyrators}{section.2}% 21
+\BOOKMARK [3][-]{subsubsection.2.0.2}{Implementaci\363n real de un Gyrator}{subsubsection.2.0.1}% 22
+\BOOKMARK [3][-]{subsubsection.2.0.3}{An\341lisis de Zin}{subsubsection.2.0.1}% 23
+\BOOKMARK [3][-]{subsubsection.2.0.4}{Elecci\363n del amplificador operacional para el Gyrator}{subsubsection.2.0.1}% 24
+\BOOKMARK [2][-]{subsection.2.1}{Filtro Pasa-Bajos \(Low-Pass\)}{section.2}% 25
+\BOOKMARK [2][-]{subsection.2.2}{Filtro Pasa-Altos \(High-Pass\)}{section.2}% 26
+\BOOKMARK [2][-]{subsection.2.3}{Filtro Rechaza-Banda \(Band-Rejection\)}{section.2}% 27
+\BOOKMARK [2][-]{subsection.2.4}{Filtro Pasa-Banda \(Band-Pass\)}{section.2}% 28
+\BOOKMARK [2][-]{subsection.2.5}{Implementaci\363n}{section.2}% 29
+\BOOKMARK [3][-]{subsubsection.2.5.1}{Consideraciones de dise\361o}{subsection.2.5}% 30
+\BOOKMARK [1][-]{section.3}{Amplificador de Instrumentaci\363n}{}% 31
+\BOOKMARK [2][-]{subsection.3.1}{Amplificador de Instrumentaci\363n}{section.3}% 32
+\BOOKMARK [1][-]{section.4}{Control de Tonos y Ecualizador de Fase}{}% 33
+\BOOKMARK [2][-]{subsection.4.1}{Ecualizador de Fase}{section.4}% 34
+\BOOKMARK [2][-]{subsection.4.2}{Ecualizador de Fase}{section.4}% 35
+\BOOKMARK [2][-]{subsection.4.3}{An\341lisis matem\341tico}{section.4}% 36
