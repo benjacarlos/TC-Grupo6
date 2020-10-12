@@ -1,80 +1,100 @@
-<<<<<<< HEAD
-\subsection{Ecualizador de Fase}
-=======
-empieza el 4
 
 \subsection{Ecualizador de Fase}
 
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=1]{../Ejercicio4-EcualizadorDeFase/Informe/Ecualizador de Fase.png}
+	\includegraphics[width=0.6\textwidth]{../Ejercicio4-EcualizadorDeFase/Informe/Ecualizador de Fase.png}
 	\caption{Circuito Ecualizador de Fase}
 \end{figure}
 
 
 \subsection{Análisis matemático}
 
-Para analizar el circuito propuesto, se opto por reemplazar la resistencia variable $R_2$ por dos resistencias las cuales llamaremos $R_{21}$ y $R_{22}$, de esta forma será más fácil poder resolver el circuito propuesto, para esto definimos:
+Para analizar el circuito propuesto, se opto por reemplazar la resistencia variable $R_2$ por dos resistencias las cuales llamaremos 
+$R_{21}$ y $R_{22}$, relacionadas por un coeficiente $\delta$. 
+De esta forma será más fácil poder resolver el circuito propuesto, entonces definimos:
 
 \begin{align}
-	\begin{equation}
-		R_{21} = R_2 . \delta
-	\end{equation}
-	\begin{equation}
-		R_{22}= R_2 . (1 - \delta)
-	\end{equation}
+		R_{21} &= R_2  \delta \\
+		R_{22} &= R_2  (1 - \delta)
 \end{align}
 
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=1]{../Ejercicio4-EcualizadorDeFase/Informe/EcSinPot.png}
+	\includegraphics[width=0.6\textwidth]{../Ejercicio4-EcualizadorDeFase/Informe/EcSinPot.png}
 	\caption{Modelo matemático}
 \end{figure}
 
-Se utilizo el reemplazo de impedancia de configuración triangulo a estrella y luego una transformación de configuración estrella a triangulo como se muestra en las imágenes \ref{1reemplazo} y \ref{2reemplazo}  para poder simplificar el circuito lo mas posible el circuito.
+Se utilizo el reemplazo de impedancia de configuración 
+triangulo a estrella y luego una transformación de configuración
+ estrella a triangulo como se muestra en las imágenes [\ref{1reemplazo}]
+  y [\ref{2reemplazo}]  para poder simplificar el circuito lo más posible.
 Para el primer reemplazo se usaron las siguientes ecuaciones:
 
+\begin{align*}
+		Z_{AB} &= \frac{1}{sC_1} \\
+		Z_{BC} &= R_{22} \\
+		Z_{CA} &= R_{21}
+\end{align*}
+A partir de la misma, se realiza una transformación de parámetros triángulo
+a estrella, de tal manera de simplificar nuestro circuito.
+ Se hacen las 
+siguientes consideraciones:
+
+\begin{align*}
+	Z_{eq} &= Z_{AB} + Z_{BC} + Z_{CA}
+\end{align*}
+
+El desarrollo matemático realizado fue el siguiente: \par 
+
 \begin{align}
-	\begin{equation}
-		Z_{AB}= \frac{1}{sC_1}
-	\end{equation}
-	\begin{equation}
-		Z_{BC}= R_{22}
-	\end{equation}
-	
-	\begin{equation}
-		Z_{CA}= R_{21}
-	\end{equation}
+	Z_{A} &= \frac{Z_{AB}+Z_{CA}}{Z_{eq}} \\
+	Z_{B} &= \frac{Z_{AB}+Z_{BC}}{Z_{eq}}  \\
+	Z_{C} &= \frac{Z_{BC}+Z_{CA}}{Z_{eq}} 
 \end{align}
 
-\begin{figure}[h]
-	\caption{1° Reemplazo}
+
+\begin{figure}[H]
+
 	\centering
-	\includegraphics[scale=0.6]{../Ejercicio4-EcualizadorDeFase/Informe/1cambioEstrella.png}
+	\includegraphics[width=0.9\textwidth]{../Ejercicio4-EcualizadorDeFase/Informe/1cambioEstrella.png}
+	\caption{1° Reemplazo - Transformación estrella a triángulo}
 	\label{1reemplazo} 
 \end{figure}
 
-Para el segundo reemplazose usaron las siguientes ecuaciones:
+
+Para el segundo reemplazo, se reagrupan las impedancias
+ de la siguiente manera:
 
 \begin{align}
-	\begin{equation}
-		Z_{A'}= R_1 + Z_{A}
-	\end{equation}
-	\begin{equation}
-		Z_{B'}= R_1 + Z_{B}
-	\end{equation}
-	
-	\begin{equation}
-		Z_{C'}= \frac{1}{sC_1} + Z_{C}
-	\end{equation}
+		Z_{A'} &= R_1 + Z_{A} \\
+		Z_{B'} &= R_1 + Z_{B} \\
+		Z_{C'} &= \frac{1}{sC_2} + Z_{C}
+\end{align}
+Se hacen las 
+siguientes consideraciones:
+
+\begin{align*}
+	Z_{eq'} &= Z_{A'} + Z_{B'} + Z_{C'}
+\end{align*}
+
+Consecuentemente, se realiza una transformación de Kenelly, pasando 
+de un modelo estrella un triángulo. Obteniéndose las siguientes expresiones:
+
+\begin{align}
+	Z_{A'B'} &= \frac{Z_{eq'}}{Z_{C'}} \\
+	Z_{B'C'} &= \frac{Z_{eq'}}{Z_{A'}}  \\
+	Z_{C'A'} &= \frac{Z_{eq'}}{Z_{B'}} 
 \end{align}
 
-\begin{figure}[h]
-	\caption{2° Reemplazo}
+
+
+\begin{figure}[H]
 	\centering
-	\includegraphics[scale=0.6]{../Ejercicio4-EcualizadorDeFase/Informe/2cambioTriangulo.png}
+	\includegraphics[width=0.9\textwidth]{../Ejercicio4-EcualizadorDeFase/Informe/2cambioTriangulo.png}
+	\caption{2° Reemplazo - Transformación estrella a triángulo}
 	\label{2reemplazo} 
 \end{figure}
 
@@ -87,55 +107,34 @@ Por último simplificamos las impedancias que estaban en paralelo obteniendo un 
 	\label{Cir Final}
 \end{figure}
 
-Para no complicar los cálculos se uso el programa Maple para poder obtener los resultados finales de las impedancias.
-
-%%% 	FALTA ALGUNAS ECUACIONES DE IMPEDANCIAS 
-
-\subsubsection{Caso ideal}
-
-Para calcular la transferencia del caso ideal, con las condiciones de $A=\infty $, un $r_{in}=\infty$ y una $r_{out}$ = 0. También se usaron las aproximaciones $C_1 = 10 C_2$, $R_3 >> 1 $ y $R_3 = 10 R_2$ . Luego se procedió a resolver el circuito para obtener la transferencia del circuito de forma ideal. De un simple análisis se puede determinar que:
+Para no complicar los cálculos se uso el programa Maple
+ para poder obtener los resultados finales de los reemplazos, 
+ dejando asi las siguientes impedancias:
 
 \begin{align}
-	\begin{equation}
-		\frac{V_{out}}{Z_2} = \frac{- V_{in}}{Z_1}
-	\end{equation}
-	
-	\begin{equation}
-		H(s)=\frac{V_{out}}{V_{in}} = \frac{-Z_2}{Z_1}
-	\end{equation}
-	\label{ecTransferenciaIdeal}	
+		Z_{C''A''} & = Z_{C'A'}//R_3 \\
+		Z_{B''C''} & = Z_{B'C'}//R_3
 \end{align}
-
-%NO SE SI SE PUEDE COMENTAR UN POCO EL RESULTADO
-
-\subsubsection{Caso no ideal}
-
-Si tenemos en cuenta un A finito, con polo dominante, un $r_{in}$ finito y una $r_{out}$ = 0, refiriéndonos de esta forma a un caso que se asemeja más a un modelo real, teniendo en cuenta que se consideran más factores para aproximar a las condiciones reales del circuito. Así el circuito funcionara con la respectiva salida
+Finalmente, nos queda el circuito simplificado mostrado en 
+[\ref{circuito_final}], del mismo se puede despejar la transferencia 
+del sistema como:
 
 \begin{align}
-	
-	\begin{equation}
-		H(s)=\frac{V_{out}}{V_{in}} = \frac{s^2 \alpha + s \gamma_z + \beta}{s^2 \alpha + s \gamma_p + \beta}
-	\end{equation}
-	\label{ecTransferencia}
-	
-	\begin{equation}
-		\alpha= 
-	\end{equation}
-	
-	\begin{equation}
-		\beta= 
-	\end{equation}
-	
-	\begin{equation}
-		\gamma_z= 
-	\end{equation}
-	
-	\begin{equation}
-		\gamma_p= 
-	\end{equation}
-	
+	H(\$)=\frac{V_{out}}{V_{in}}=-\frac{Z_{B''C''}}{Z_{C''A''}}
+	\label{trans}
 \end{align}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{../Ejercicio4-EcualizadorDeFase/Informe/2cambioTriangulo.png}
+	\caption{2° Reemplazo - Transformación estrella a triángulo}
+	\label{circuito_final} 
+\end{figure}
+
+
+Trabajando algebráicamente sobre la ecuaci+on
+
+
 
 
 Para facilitar escribir la ecuación se usaron los reemplazos ya mostrados. De la ecuación \ref{ecTransferencia} se puede determinar que la frecuencia de corte del circuito es:
@@ -163,4 +162,3 @@ Para facilitar escribir la ecuación se usaron los reemplazos ya mostrados. De l
 	
 \end{align}
 
-\subsubsection{•}
