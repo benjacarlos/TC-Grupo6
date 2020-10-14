@@ -1,9 +1,7 @@
 
 \subsection{Ecualizador de Fase}
 
-En esta sección del informe se procederá a analizar un ecualizador 
-de fase y control de tonos, cuyo
-circuito se presenta a continuación en la figura [\ref{circuito_ecualizador_de_fase}].
+En esta sección del informe se procederá a analizar un ecualizador de fase y control de tonos, cuyo circuito se presenta a continuación en la figura [\ref{circuito_ecualizador_de_fase}].
 
 
 \begin{figure}[H]
@@ -348,7 +346,188 @@ dadas por la ecuación [\ref{A0cotas}].
 \vspace{2mm}
 
 
+\subsection{Elección de componentes}
+Para obtener una mejor simulación usamos 3 frecuencias debido a que el controlador de tonos debería usar frecuencias dentro del espectro audible para el oído humano, esto es en el rango de entre 20Hz y 20kHz, por lo que se debería predecir 3 valores de componentes para distintas frecuencias. Para frecuencias bajas donde están los sonido graves que están entre los 20Hz y 100Hz, para frecuencias medias donde se encuentran la una gran cantidad de sonidos musicales que están entre 400Hz y 900Hz, y para las frecuencias altas donde se encuentran los sonidos agudos suponemos un limite frecuencia ya que aunque el oído humano detecte hasta señales de 20kHz los sonidos que están por encima de los 5kHz ya no pertenecen a los generados por instrumentos musicales por lo que si suponemos un limite para nuestro circuito bien podría rondar entre los 5kHz y los 8kHz.
+Para poder elegir los componentes y mantener la relaciones de simplificación ($C_1=10.C_2$ y $R_3=10.R_2$) tuvimos en cuanta que en el mercado solo hay valores nominales, por lo cual la elección se debía hacer en base a los componentes que se venden y no a lo que teóricamente queremos. El componente más determinante es el potenciómetro $R_2$ el cual tiene valores de venta mas restringidos, por ese mismo motivo utilizamos un potenciómetro de $10k\Omega$ y optamos por una relación de $R_2=10.R_2$ dándonos una resistencia de $R1=1k\Omega$. Luego buscamos mediante la ecuación \ref{f0final} valores de $C_2$ para frecuencias bajas, medias y altas ($50Hz$, $500Hz$ y $5kHz$ aproximadamente). Los valores de $C_2$ fueron los siguientes:
 
+\begin{table}[h]
+\centering
+\begin{tabular}{|c|c|c|c|l}
+\cline{1-4}
+\textbf{Frecuencia deseada} & \textbf{$C_2$ deseado} & \textbf{$C_2$ comercial} & \textbf{Frecuencia obtenida} &  \\ \cline{1-4}
+50Hz                        & 110nF                 & 100nF                   & 55Hz                         &  \\ \cline{1-4}
+500Hz                       & 11nF                  & 10nF                    & 551Hz                        &  \\ \cline{1-4}
+5kHz                        & 1.1nF                 & 1nF                     & 5.5kHz                       &  \\ \cline{1-4}
+\end{tabular}
+\end{table}
+
+De los valores ya obtenidos a elección de $R_2$ y $C_2$ se calcularon las demás componentes con sus respectivas relaciones, siendo entonces la siguiente elección de componentes para las distintas frecuencias:
+
+\begin{table}[htb]
+\centering
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+\textbf{Frecuencia} & \textbf{$C_2$} & \textbf{$C_1$} & \textbf{$R_1$} & \textbf{$R_2$} & \textbf{$R_3$} \\ \hline
+55Hz                & 100nF          & 1$\mu$F          & 1k$\Omega$     & 10k$\Omega$    & 100k$\Omega$   \\ \hline
+551Hz               & 10nF           & 100nF           & 1k$\Omega$     & 10k$\Omega$    & 100k$\Omega$   \\ \hline
+5.5kHz              & 1nF            & 10nF            & 1k$\Omega$     & 10k$\Omega$    & 100k$\Omega$   \\ \hline
+\end{tabular}
+\end{table}
+\
+
+
+\textbf{A TENER EN CUENTA}: Para tener mejores resultados en el circuito se debería usar tecnología SMD, que es tecnología de montaje superficial, ya que esta tecnología permite tener componentes resistivos con tolerancias de $1\%$ y capacitivos con $5\%$ logrando en la práctica mejores resultados. 
+
+
+\subsection{Simulaciones}
+
+Para las simulaciones se tuvo en cuenta que la posición del potenciómetro es lo que genera más variación sobre la transferencia en las distintas frecuencias, por lo que se mostrará las distintas simulaciones en posición de L=1 (donde $R_2$ es máximo), L=0.5 (donde $R_{21} = R_{22}$) y con L=0 (donde $R_2$ es mínimo) como casos extremos de cada frecuencia.
+
+\subsubsection{Frecuencias bajas}
+A continuación mostraremos las amplitudes en dB con los distintos valores de L simulados y teóricos. La frecuencia $f_0$ es de 55Hz.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.6\textwidth]{../Ejercicio4-EcualizadorDeFase/Informe/lowFrecL000Mag.png} 
+	\caption{Magnitud en dB con L=0}
+	\label{lowMagL00}
+\end{figure}
 	
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.6\textwidth]{../Ejercicio4-EcualizadorDeFase/Informe/lowFrecL050Mag.png} 
+	\caption{Magnitud en dB con L=0.5}
+	\label{lowMagL05}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.6\textwidth]{../Ejercicio4-EcualizadorDeFase/Informe/lowFrecL100Mag.png} 
+	\caption{Magnitud en dB con L=1}
+	\label{lowMagL10}
+\end{figure}
+
+
+Ahora mostraremos las fases con los distintos valores de L simulados y teóricos.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.6\textwidth]{../Ejercicio4-EcualizadorDeFase/Informe/lowFrecL000Fase.png} 
+	\caption{Fase en grados con L=0}
+	\label{lowFaseL00}
+\end{figure}
+	
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.6\textwidth]{../Ejercicio4-EcualizadorDeFase/Informe/lowFrecL050Fase.png} 
+	\caption{Fase en grados con L=0.5}
+	\label{lowFaseL05}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.6\textwidth]{../Ejercicio4-EcualizadorDeFase/Informe/lowFrecL100Fase.png} 
+	\caption{Fase en grados con L=1}
+	\label{lowFaseL10}
+\end{figure}
+
+
+\subsubsection{Frecuencias medias}
+A continuación mostraremos las amplitudes en dB con los distintos valores de L simulados y teóricos. La frecuencia $f_0$ es de 551Hz.
+
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.6\textwidth]{../Ejercicio4-EcualizadorDeFase/Informe/medFrecL000Mag.png} 
+	\caption{Magnitud en dB con L=0}
+	\label{medMagL00}
+\end{figure}
+	
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.6\textwidth]{../Ejercicio4-EcualizadorDeFase/Informe/medFrecL050Mag.png} 
+	\caption{Magnitud en dB con L=0.5}
+	\label{medMagL05}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.6\textwidth]{../Ejercicio4-EcualizadorDeFase/Informe/medFrecL100Mag.png} 
+	\caption{Magnitud en dB con L=1}
+	\label{medMagL10}
+\end{figure}
+
+
+Ahora mostraremos las fases con los distintos valores de L simulados y teóricos.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.6\textwidth]{../Ejercicio4-EcualizadorDeFase/Informe/medFrecL000Fase.png} 
+	\caption{Fase en grados con L=0}
+	\label{medFaseL00}
+\end{figure}
+	
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.6\textwidth]{../Ejercicio4-EcualizadorDeFase/Informe/medFrecL050Fase.png} 
+	\caption{Fase en grados con L=0.5}
+	\label{medFaseL05}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.6\textwidth]{../Ejercicio4-EcualizadorDeFase/Informe/medFrecL100Fase.png} 
+	\caption{Fase en grados con L=1}
+	\label{medFaseL10}
+\end{figure}
+
+\subsubsection{Frecuencias altas}
+A continuación mostraremos las amplitudes en dB con los distintos valores de L simulados y teóricos. La frecuencia $f_0$ es de 5.5kHz.
+
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.6\textwidth]{../Ejercicio4-EcualizadorDeFase/Informe/highFrecL000Mag.png} 
+	\caption{Magnitud en dB con L=0}
+	\label{highMagL00}
+\end{figure}
+	
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.6\textwidth]{../Ejercicio4-EcualizadorDeFase/Informe/highFrecL050Mag.png} 
+	\caption{Magnitud en dB con L=0.5}
+	\label{highMagL05}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.6\textwidth]{../Ejercicio4-EcualizadorDeFase/Informe/highFrecL100Mag.png} 
+	\caption{Magnitud en dB con L=1}
+	\label{highMagL10}
+\end{figure}
+
+
+Ahora mostraremos las fases con los distintos valores de L simulados y teóricos.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.6\textwidth]{../Ejercicio4-EcualizadorDeFase/Informe/highFrecL000Fase.png} 
+	\caption{Fase en grados con L=0}
+	\label{highFaseL00}
+\end{figure}
+	
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.6\textwidth]{../Ejercicio4-EcualizadorDeFase/Informe/highFrecL050Fase.png} 
+	\caption{Fase en grados con L=0.5}
+	\label{highFaseL05}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.6\textwidth]{../Ejercicio4-EcualizadorDeFase/Informe/highFrecL100Fase.png} 
+	\caption{Fase en grados con L=1}
+	\label{highFaseL10}
+\end{figure}
 
 
