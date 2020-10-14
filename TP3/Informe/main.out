@@ -32,17 +32,31 @@
 \BOOKMARK [2][-]{subsection.2.3}{Filtro Pasa-Altos \(High-Pass\)}{section.2}% 32
 \BOOKMARK [3][-]{subsubsection.2.3.1}{Especificaciones}{subsection.2.3}% 33
 \BOOKMARK [3][-]{subsubsection.2.3.2}{Dise\361o del Filtro}{subsection.2.3}% 34
-\BOOKMARK [2][-]{subsection.2.4}{Filtro Rechaza-Banda \(Band-Rejection\)}{section.2}% 35
-\BOOKMARK [2][-]{subsection.2.5}{Filtro Pasa-Banda \(Band-Pass\)}{section.2}% 36
-\BOOKMARK [2][-]{subsection.2.6}{Implementaci\363n}{section.2}% 37
-\BOOKMARK [3][-]{subsubsection.2.6.1}{Consideraciones de dise\361o}{subsection.2.6}% 38
-\BOOKMARK [1][-]{section.3}{Amplificador de Instrumentaci\363n}{}% 39
-\BOOKMARK [2][-]{subsection.3.1}{Amplificador de Instrumentaci\363n}{section.3}% 40
-\BOOKMARK [1][-]{section.4}{Control de Tonos y Ecualizador de Fase}{}% 41
-\BOOKMARK [2][-]{subsection.4.1}{Ecualizador de Fase}{section.4}% 42
-\BOOKMARK [2][-]{subsection.4.2}{An\341lisis matem\341tico}{section.4}% 43
-\BOOKMARK [2][-]{subsection.4.3}{Elecci\363n de componentes}{section.4}% 44
-\BOOKMARK [2][-]{subsection.4.4}{Simulaciones}{section.4}% 45
-\BOOKMARK [3][-]{subsubsection.4.4.1}{Frecuencias bajas}{subsection.4.4}% 46
-\BOOKMARK [3][-]{subsubsection.4.4.2}{Frecuencias medias}{subsection.4.4}% 47
-\BOOKMARK [3][-]{subsubsection.4.4.3}{Frecuencias altas}{subsection.4.4}% 48
+\BOOKMARK [3][-]{subsubsection.2.3.3}{Dise\361o del Filtro con Gyrator}{subsection.2.3}% 35
+\BOOKMARK [3][-]{subsubsection.2.3.4}{An\341lisis mediante simulaci\363n}{subsection.2.3}% 36
+\BOOKMARK [3][-]{subsubsection.2.3.5}{An\341lisis emp\355rico}{subsection.2.3}% 37
+\BOOKMARK [2][-]{subsection.2.4}{Filtro Rechaza-Banda \(Band-Rejection\)}{section.2}% 38
+\BOOKMARK [3][-]{subsubsection.2.4.1}{Especificaciones}{subsection.2.4}% 39
+\BOOKMARK [3][-]{subsubsection.2.4.2}{Dise\361o del Filtro}{subsection.2.4}% 40
+\BOOKMARK [3][-]{subsubsection.2.4.3}{Dise\361o del Filtro con Gyrator}{subsection.2.4}% 41
+\BOOKMARK [3][-]{subsubsection.2.4.4}{An\341lisis mediante simulaci\363n}{subsection.2.4}% 42
+\BOOKMARK [3][-]{subsubsection.2.4.5}{An\341lisis emp\355rico}{subsection.2.4}% 43
+\BOOKMARK [2][-]{subsection.2.5}{Filtro Pasa-Banda \(Band-Pass\)}{section.2}% 44
+\BOOKMARK [2][-]{subsection.2.6}{Especificaciones}{section.2}% 45
+\BOOKMARK [2][-]{subsection.2.7}{Dise\361o del filtro}{section.2}% 46
+\BOOKMARK [2][-]{subsection.2.8}{Dise\361o de filtro con Gyrator}{section.2}% 47
+\BOOKMARK [2][-]{subsection.2.9}{An\341lisis mediante simulaci\363n}{section.2}% 48
+\BOOKMARK [2][-]{subsection.2.10}{An\341lisis emp\355rico}{section.2}% 49
+\BOOKMARK [2][-]{subsection.2.11}{Implementaci\363n}{section.2}% 50
+\BOOKMARK [3][-]{subsubsection.2.11.1}{Consideraciones de dise\361o}{subsection.2.11}% 51
+\BOOKMARK [2][-]{subsection.2.12}{Conclusi\363n}{section.2}% 52
+\BOOKMARK [1][-]{section.3}{Amplificador de Instrumentaci\363n}{}% 53
+\BOOKMARK [2][-]{subsection.3.1}{Amplificador de Instrumentaci\363n}{section.3}% 54
+\BOOKMARK [1][-]{section.4}{Control de Tonos y Ecualizador de Fase}{}% 55
+\BOOKMARK [2][-]{subsection.4.1}{Ecualizador de Fase}{section.4}% 56
+\BOOKMARK [2][-]{subsection.4.2}{An\341lisis matem\341tico}{section.4}% 57
+\BOOKMARK [2][-]{subsection.4.3}{Elecci\363n de componentes}{section.4}% 58
+\BOOKMARK [2][-]{subsection.4.4}{Simulaciones}{section.4}% 59
+\BOOKMARK [3][-]{subsubsection.4.4.1}{Frecuencias bajas}{subsection.4.4}% 60
+\BOOKMARK [3][-]{subsubsection.4.4.2}{Frecuencias medias}{subsection.4.4}% 61
+\BOOKMARK [3][-]{subsubsection.4.4.3}{Frecuencias altas}{subsection.4.4}% 62

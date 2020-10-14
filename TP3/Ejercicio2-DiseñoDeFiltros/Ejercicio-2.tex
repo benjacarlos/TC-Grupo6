@@ -453,21 +453,19 @@ Sabiendo que los sobrepicos se presentarán también aquí en casos donde $\xi \
 
 $$\xi > \frac{1}{\sqrt{2}}$$.
 
-Se realizará el mismo análisis que para el circuito pasa-bajos, donde para establecer una relación y hallar una frecuencia de corte $f_0$ apropiada, tal que se cumplan los requisitos
-de esta plantilla, estableceremos una diferencia mínima de 10 dB entre $21 KHz$ y $6 KHz$, ya que la diferencia establecida por la plantilla, E1 y E2,
-es de por lo menos 7 dB (-3 dB a -10 dB).
+Se realizará un análisis similar al filtro pasa-bajos, donde para establecer una relación y hallar una frecuencia de corte $f_0$ apropiada, sabiendo que para una $f$
+mayor a la $f_0$ la ganancia será mayor a $-3dB$ y siendo $f_{REF} = 21.5KHz$.
 
-Mediante dicha relación, entonces sabiendo que en $\frac{1}{4}$ de década se obtendrá una diferencia de 10 dB y tomando como referencia 
-la $f$ de E1:
 
 $$\frac{1}{4}=\log_{10}(\frac{21KHz}{f_0})$$
 
-También podremos estimar una $f_0$ tal que se cumpla la plantilla:
+Estimamos una $f_0$ tal que se cumpla la plantilla:
 
 $$f_0 = \frac{21KHz}{1.7782} = 11.80 KHz$$
 
-Se utilizará una frecuencia un poco menor, $f_0=11 KHz$ ya que con la diferencia establecida de 10 dB, usar una frecuencia menor, no afectará el comportamiento 
-esperado según la plantilla.
+Se utilizará una frecuencia un poco menor, $f_0=11 KHz$ ya que ello no afectará al diseño del filtro según la plantilla.
+Para frecuencias mayores a $11 KHz$, la ganancia será mayor a $-3dB$ cumpliéndose E1 y está alejada lo suficiente para que por la pendiente
+propia de la respuesta en frecuencia para la magnitud, en $f=6KHz$, nos encontremos en un valor de ganancia menor a $-10 dB$ cumpliéndose E2.
 
 Por las relaciones expresadas previamente:
 
@@ -500,6 +498,8 @@ Por ello se utilizó un valor de $R= 220 \Omega$ ya que es el valor más cercano
     \caption{Valores de elementos para el filtro pasa-altos con circuito RLC}
     \end{table}
 
+\subsubsection{Diseño del Filtro con Gyrator}
+
 Para implementar dicho circuito pero utilizando el gyrator descripto previamente
 para reemplazar a la inductancia y teniendo las relaciones descriptas anteriormente:
 
@@ -526,6 +526,8 @@ El rango de trabajo ideal del "inductor" al haber elegido los mismos valores de 
 
 $$f << 160 KHz$$
 
+\subsubsection{Análisis mediante simulación}
+
 Se procedió a simular el comportamiento del circuito RLC equivalente con el gyrator implementado para observar si su comportamiento es el esperado:
 
 \begin{table}[H]
@@ -551,11 +553,11 @@ Se procedió a simular el comportamiento del circuito RLC equivalente con el gyr
     \caption{Circuito Pasa-Bajos de segundo orden}
 \end{figure}
 
-Para el circuito equivalente con gyrator se cumple lo establecido en la plantilla.
+Para el circuito equivalente RLC se cumple lo establecido en la plantilla.
 De la simulación se observó que en $f=6.00007 KHz$, la ganancia es de $-10.97 dB$ y en $f=21.003KHz$, es de $-0.6955 dB$.
-Tampoco se observan sobre-picos.
+Tampoco se observan sobrepicos ni un efecto de sobreamortiguamiento notable.
 
-Luego, se realizó la simulación utilizando el gyrator en lugar del inductor:
+Se realizó la simulación utilizando el gyrator en lugar del inductor y lo obtenido fue:
 
 \begin{figure}[H]
     \centering
@@ -579,6 +581,8 @@ Lo obtenido fue lo siguiente:
 
 Se puede comprobar aquí también que la plantilla se sigue cumpliendo obteniendo el filtro pasa-altos buscado.
 
+\subsubsection{Análisis empírico}
+
 Para la contrastación empírica, se midió la respuesta en frecuencia utilizando la $Electronics$ $Explorer$ $Board$:
 
 \begin{figure}[H]
@@ -593,25 +597,29 @@ Para la contrastación empírica, se midió la respuesta en frecuencia utilizand
     \caption{Circuito Pasa-Bajos de segundo orden}
 \end{figure}
 
-Nuevamente podemos ver que el modelo simulado con Gyrator y el medido coinciden en gran medida. De un modelo ideal,
-donde se utiliza un inductor en lugar de un gyrator, hay algunas diferencias al igual que en el filtro anterior y ellas son 
-propias de la introducción del gyrator utilizando el amplificador operacional.
+Nuevamente podemos ver que el modelo simulado con Gyrator y el medido coinciden en gran medida. Aquí a diferencia del filtro anterior,
+el gyrator se utilizó referenciándose a tierra evitando obtener efectos alejados de lo buscado.
 
-En primer lugar, cuando $f \to \infty$, la ganancia no es unitaria ya que se puede observar que aproximadamente
+
+Cuando $f \to \infty$, la ganancia no es unitaria ya que se puede observar que aproximadamente
 $50 KHz$ la respuesta en frecuencia para la amplitud de un circuito RLC equivalente y el implementado realmente, varían.
-Para una implementación con el gyrator utilizado, no será posible mantener la condición E1 para $f>50KHz$.
+Para una implementación con el gyrator utilizado, no será posible mantener la condición E4 para $f>50KHz$.
 
 Más allá de ello, se pudo comprobar que el circuito cumplió con E1 y E2 ya que lo observado fue para $f=6KHz$, una ganancia
 de $-11.15 dB$ y para $f=21 KHz$, de $-0.0663$
 
 Se observa el efecto de un cero en el circuito y un polo adicional también ya que en la respuesta en frecuencia para la fase,
-se encuentra un cambio que no logra compensarse como si hubiese únicamente la existencia de un cero en $f$ aproximadamente en $100 Khz$.
+se encuentra un cambio que no logra compensarse como si hubiese únicamente un cero en $f$ aproximadamente en $100 Khz$.
 Este efecto es introducido claramente por el amplificador operacional empleado, ya que como se demostró en la relación anterior,
 para determinada frecuencia el comportamiento del gyrator no es el de un inductor ideal.
 
+Para realizar las mediciones, en este caso se optó también por una señal senoidal de entrada de $2V$. Al igual que en el caso anterior
+el filtro cumple la función estipulada pero para $f < 50 KHz$ por los efectos introducidos por el polo dominante del amplificador operacional
+y consecuentemente el comportamiento del gyrator como inductor condicionado por éste.
+
 \subsection{Filtro Rechaza-Banda (Band-Rejection)}
 
-Se procederá a realizar un circuito rechaza-banda de segundo orden clásico, tal que podemos
+Se realizó un circuito rechaza-banda de segundo orden clásico, tal que podemos
 ver la disposición de elementos en la siguiente figura:
 
 \begin{figure}[H]
@@ -620,11 +628,15 @@ ver la disposición de elementos en la siguiente figura:
     \caption{Circuito Rechaza-Banda de segundo orden}
 \end{figure}
 
+\subsubsection{Especificaciones}
+
 La única especificación en este caso es:
 
 \begin{itemize}
 	\item E1: $f_c=6 KHz$
 \end{itemize}
+
+\subsubsection{Diseño del Filtro}
 
 En el dominio de Laplace podemos observar que la función de transferencia para este circuito es:
 
@@ -644,7 +656,7 @@ filtro:
 $$\xi=\frac{R \sqrt{C}}{2\sqrt{L}}=\frac{1}{\sqrt{2}} \longrightarrow R=375.06$$
 
 El valor comercial más cercano con el que contamos es $560 \Omega$ por lo que observaremos un comportamiento sobreamortiguado aunque aquí
-no tendrá mucha importancia ya que no se especificaron parámetros adicionales más que E1.
+no tendrá mucha importancia ya que no se especificaron parámetros adicionales más que E1 siempre y cuando nos encontremos en la $f_c$ solicitada.
 
 \begin{table}[H]
     \centering
@@ -657,7 +669,9 @@ no tendrá mucha importancia ya que no se especificaron parámetros adicionales 
     \caption{Valores de elementos para el filtro rechaza-banda con circuito RLC}
     \end{table}
 
-Al analizar el comportamiendo del inductor mediante Gyrator, se obtuvieron los siguientes valores:
+\subsubsection{Diseño del Filtro con Gyrator}
+
+Al analizar el comportamiendo del inductor mediante Gyrator, se eligieron los siguientes valores:
 
 \begin{table}[H]
     \centering
@@ -673,6 +687,8 @@ Al analizar el comportamiendo del inductor mediante Gyrator, se obtuvieron los s
 Cuyo rango de trabajo se dará también siempre y cuando:
 
 $$f << 160 KHz$$
+
+\subsubsection{Análisis mediante simulación}
 
 Se procedió a simular el comportamiento del circuito RLC equivalente para observar su comportamiento:
 
@@ -699,8 +715,8 @@ Se procedió a simular el comportamiento del circuito RLC equivalente para obser
     \caption{Circuito Pasa-Bajos de segundo orden}
 \end{figure}
 
-Se comprobó que para el circuito equivalente con gyrator se cumple lo establecido en la plantilla.
-De la simulación se observó que en $f_c=6.1031 KHz$, donde la ganancia es de $-90.64 dB$.
+Se comprobó que para el circuito equivalente RLC  se cumple lo establecido en la plantilla.
+observándose que $f_c=6.1031 KHz$, donde la ganancia es de $-90.64 dB$.
 
 Una vez comprobado el correcto funcionamiento del filtro, se realizó la simulación pertinente al circuito
 con el gyrator:
@@ -725,7 +741,9 @@ Lo obtenido fue lo siguiente:
     \caption{Circuito Pasa-Bajos de segundo orden}
 \end{figure}
 
-Se puede comprobar aquí también que la plantilla se sigue cumpliendo obteniendo el filtro rechaza-banda solicitado.
+Se puede comprobar aquí también que la plantilla se sigue cumpliendo obteniendo el filtro rechaza-banda deseado.
+
+\subsubsection{Análisis empírico}
 
 Se procedió a armar el circuito en la $Electronics$ $Explorer$ $Board$, para medir la respuesta en frecuencia del filtro:
 
@@ -741,6 +759,17 @@ Se procedió a armar el circuito en la $Electronics$ $Explorer$ $Board$, para me
     \caption{Circuito Pasa-Bajos de segundo orden}
 \end{figure}
 
+Aquí como solo se contaba con una especificación el diseño fue más sencillo. El valor de la $f_c$ obtenida empíricamente coincide con lo buscado
+siendo esta de $6094.94 Hz$ que dado los valores de los elementos utilizados y su tolerancia se encuentra del rango esperado.
+
+Al igual que en el filtro anterior alrededor de los $50KHz$, se observa el efeco del polo dominante del amplificador operacional del gyrator pero a diferencia
+del caso anterior aquí la frecuencia cuando $f \to \infty$ no debe ser unitaria. Sin embargo al buscar un filtro rechaza-banda la atenuación que se observa, puede
+afectar el comportamiento y consecuente uso del filtro. 
+
+La profundidad tanto simulada como medida coindicen notablemente siendo esta $-32.57 dB$.
+
+En resumen, este filtro cumple con la única especificación solicitada por lo cual podría ser utilizado como tal para un rango
+de frecuencias mayor que en los casos anteriores.
 
 \subsection{Filtro Pasa-Banda (Band-Pass)}
 
@@ -752,11 +781,15 @@ Realizaremos como último filtro, un pasa-banda de segundo orden clásico, con l
     \caption{Circuito Pasa-Altos de segundo orden}
 \end{figure}
 
+\subsection{Especificaciones}
+
 La única especificación en este caso es:
 
 \begin{itemize}
 	\item E1: $f_c=10 KHz$
 \end{itemize}
+
+\subsection{Diseño del filtro}
 
 Nuevamente utilizando la transformada de Laplace obtenemos la función de transferencia para el último filtro
 a diseñar:
@@ -777,7 +810,7 @@ También al buscar un circuito críticamente amortiguado:
 
 $$\xi=\frac{R \sqrt{C}}{2\sqrt{L}}=\frac{1}{sqrt{2}} \longrightarrow R=225.04$$
 
-El valor que utilizaremos entonces es $220 \Omega$ por lo que observaremes un comportamiento apenas subamortiguado.
+El valor que utilizaremos entonces es $220 \Omega$ por lo que observaremos un comportamiento apenas subamortiguado.
 Nuevamente no es un factor que nos afecte en el diseño del filtro, ya que la única condición establecida es la frecuencia
 de corte.
 
@@ -791,6 +824,8 @@ de corte.
     \end{tabular}
     \caption{Valores de elementos para el filtro pasa-banda con circuito RLC}
     \end{table}
+
+\subsection{Diseño de filtro con Gyrator}
 
 Para el gyrator, se escogieron los siguientes elementos:
 
@@ -806,6 +841,8 @@ Para el gyrator, se escogieron los siguientes elementos:
     \end{table}
 
 El rango de trabajo del inductor con gyrator es el mismo que para los tres filtros anteriores ($ f << 160 KHz$).
+
+\subsection{Análisis mediante simulación}
 
 Se simuló el comportamiento del circuito RLC equivalente para verificar el correcto funcionamiento del filtro.
 
@@ -833,9 +870,10 @@ Se simuló el comportamiento del circuito RLC equivalente para verificar el corr
     \caption{Circuito Pasa-Bajos de segundo orden}
 \end{figure}
 
-A simple vista se puede observar que la frecuencia de corte es muy cercana a los $10 KHz$.
+A simple vista se puede observar que la frecuencia de corte es muy cercana a los $10 KHz$, con el corrimiento dado por
+el cambio de los valores equivalentes utilizados.
 
-Se realizó la simulación utilizando ahora el amplificador operacional y los elementos pasivos del gyrator obtenidos anteriormente.
+La simulación con la implementación del gyrator arrojó los siguiente resultados:
 
 \begin{figure}[H]
     \centering
@@ -857,7 +895,10 @@ Lo obtenido fue lo siguiente:
     \caption{Circuito Pasa-Bajos de segundo orden}
 \end{figure}
 
-Se puede comprobar aquí también que la plantilla se sigue cumpliendo obteniendo el filtro pasa-banda buscado.
+Se puede comprobar aquí también que la plantilla se sigue cumpliendo obteniendo el filtro pasa-banda buscado con un corrimiento
+$f_c$ muy pequeño.
+
+\subsection{Análisis empírico}
 
 Se procedió a armar el circuito en la $Electronics$ $Explorer$ $Board$, para medir la respuesta en frecuencia:
 
@@ -872,6 +913,15 @@ Se procedió a armar el circuito en la $Electronics$ $Explorer$ $Board$, para me
     \includegraphics[width=0.7\textwidth]{../Ejercicio2-DiseñoDeFiltros/Imagenes/pasa-bandaa-final-fase.png}
     \caption{Circuito Pasa-Bajos de segundo orden}
 \end{figure}
+
+Lo primero que llama la atención es que la atenuación para frecuencias aproximadamente menores a $1 KHz$ no es similar
+a la esperada de un filtro elemental de este tipo. Ello mismo se puede observar en el desfasaje donde la fase teórica y real no coinciden para el mismo
+rango de frecuencias. La $f_c$ empírica prácticamente se solapa con la simulada por lo cual el filtro se encuentra en el rango
+aceptado según la especificación. 
+
+Aquí no se observa un efecto adverso en frecuencias mayores a $f=50KHz$ pero si se observa el efecto adverso para bajas frecuencias donde el filtro
+atenúa en menor medida a lo que se podría buscar.
+
 
 \subsection{Implementación}
 
@@ -949,3 +999,21 @@ La implementación final del PCB se presenta a continuación.
 La única consideración a realizar es que se omitió la utilización de agujeros de sujeción para colocar tamecos a la placa. Se decidió omitirlos 
 para poder presentar el diseño de manera más clara y tener más espacio para pistas. Sin embargo, en una implementación real es indispensable tenerlos 
 en consideración por comodidad y para una correcta manipulación del PCB.
+
+\subsection{Conclusión}
+
+Se comprobó el diseño de filtros elementales de segundo orden utilizando el gyrator como inductor y analizando los beneficios de éste.
+Así como se encontraron beneficios, se demostraron y midieron efectos adversos en el comportamiento de los filtros siendo el rango de frecuencias
+de trabajo el afectado. Los efectos introducitos por el amplificador operacional y su polo dominante juegan un papel importante en la transferencia
+y por ende comportamiento del filtro, haciendo que tener en cuenta y analizar sus parámetros como GBP sean factores fundamentales a la hora del diseño.
+
+
+El hecho de no emplear una bobina, facilitó mucho el diseño de un circuito ya que como se diseñó en el PCB correspondiente, se lograron emplear
+cuatro filtros con un solo IC en un tamaño bastante reducido pero con las limitaciones mencionadas precedentemente.
+
+En la mayoría de los casos, la implementación fue muy cercana a la ideal para frecuencias menores a $50KHz$ por lo cual dicho rango
+sería el que se debería emplear para los filtros diseñados anteriormente. 
+
+Como nota final, es importante mencionar que no solo el comportamiento del gyrator asociado al amplificador afectan al circuito, sino que
+el slew-rate de él, juegan un papel muy importante, ya que hay una limitación en cuanto a la señal de entrada del circuito como una limitación de tensión máxima
+atribuible a la $V_{sat}$ propia del elemento activo.
