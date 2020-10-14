@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.8.20)  14 OCT 2020 17:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.8.20)  14 OCT 2020 19:06
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -42,6 +42,14 @@ File: babel.def 2020/03/22 3.42 Babel common definitions
 )
 \es@quottoks=\toks17
 \es@quotdepth=\count177
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/babel-english/english.ldf
+Language: english 2017/06/06 v3.3r English support from the babel system
+Package babel Info: \l@canadian = using hyphenrules for english
+(babel)             (\language0) on input line 102.
+Package babel Info: \l@australian = using hyphenrules for ukenglish
+(babel)             (\language21) on input line 105.
+Package babel Info: \l@newzealand = using hyphenrules for ukenglish
+(babel)             (\language21) on input line 108.
 )) (/usr/local/texlive/2020/texmf-dist/tex/latex/xcolor/xcolor.sty
 Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
  (/usr/local/texlive/2020/texmf-dist/tex/latex/graphics-cfg/color.cfg
@@ -710,7 +718,14 @@ Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \@thisrulewidth=\dimen332
 ) (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarybabel.code.tex
 File: tikzlibrarybabel.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-)) (/Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/main.aux)
+)) (/Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/main.aux
+
+LaTeX Warning: Label `Y' multiply defined.
+
+
+LaTeX Warning: Label `trans_ideal_aplicada' multiply defined.
+
+)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 4.
@@ -729,8 +744,6 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 4.
 LaTeX Font Info:    ... okay on input line 4.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 4.
 LaTeX Font Info:    ... okay on input line 4.
-LaTeX Info: Redefining \. on input line 4.
-LaTeX Info: Redefining \% on input line 4.
  (/usr/local/texlive/2020/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count340
@@ -808,6 +821,7 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 4.
 LaTeX Info: Redefining \pageref on input line 4.
 LaTeX Info: Redefining \nameref on input line 4.
+ (/Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/main.out) (/Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/main.out)
 \@outlinefile=\write4
 \openout4 = `main.out'.
 
@@ -821,7 +835,7 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 4.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (/Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/Caratula.tex [1
 
-{/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}])
+{/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]) (/Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/main.toc)
 \tf@toc=\write5
 \openout5 = `main.toc'.
 
@@ -830,33 +844,23 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has b
                    \relax 
 l.10 \newpage
               [1] (/Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio1-FiltroConGIC/Ejercicio-1.tex
-<../Ejercicio1-FiltroConGIC/Informe/giccir.jpg, id=23, 513.92pt x 279.0425pt>
+<../Ejercicio1-FiltroConGIC/Informe/giccir.jpg, id=267, 513.92pt x 279.0425pt>
 File: ../Ejercicio1-FiltroConGIC/Informe/giccir.jpg Graphic file (type jpg)
 <use ../Ejercicio1-FiltroConGIC/Informe/giccir.jpg>
 Package pdftex.def Info: ../Ejercicio1-FiltroConGIC/Informe/giccir.jpg  used on input line 9.
 (pdftex.def)             Requested size: 359.74153pt x 195.3284pt.
-<../Ejercicio1-FiltroConGIC/Informe/circuito.png, id=24, 476.982pt x 239.6955pt>
+<../Ejercicio1-FiltroConGIC/Informe/circuito.png, id=268, 476.982pt x 239.6955pt>
 File: ../Ejercicio1-FiltroConGIC/Informe/circuito.png Graphic file (type png)
 <use ../Ejercicio1-FiltroConGIC/Informe/circuito.png>
 Package pdftex.def Info: ../Ejercicio1-FiltroConGIC/Informe/circuito.png  used on input line 27.
 (pdftex.def)             Requested size: 333.88512pt x 167.78569pt.
- [2 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio1-FiltroConGIC/Informe/giccir.jpg>]
-
-LaTeX Warning: Reference `ej1eq2' on page 3 undefined on input line 61.
-
-
-LaTeX Warning: Reference `ej1eq3' on page 3 undefined on input line 61.
-
-
-LaTeX Warning: Reference `ej1eq1' on page 3 undefined on input line 61.
-
-[3 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio1-FiltroConGIC/Informe/circuito.png>]
-<../Ejercicio1-FiltroConGIC/Informe/polor6.png, id=55, 502.87875pt x 305.64188pt>
+ [2 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio1-FiltroConGIC/Informe/giccir.jpg>] [3 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio1-FiltroConGIC/Informe/circuito.png>]
+<../Ejercicio1-FiltroConGIC/Informe/polor6.png, id=295, 502.87875pt x 305.64188pt>
 File: ../Ejercicio1-FiltroConGIC/Informe/polor6.png Graphic file (type png)
 <use ../Ejercicio1-FiltroConGIC/Informe/polor6.png>
 Package pdftex.def Info: ../Ejercicio1-FiltroConGIC/Informe/polor6.png  used on input line 116.
 (pdftex.def)             Requested size: 402.30354pt x 244.51381pt.
-<../Ejercicio1-FiltroConGIC/Informe/polor6-1.png, id=56, 526.96875pt x 395.22656pt>
+<../Ejercicio1-FiltroConGIC/Informe/polor6-1.png, id=296, 526.96875pt x 395.22656pt>
 File: ../Ejercicio1-FiltroConGIC/Informe/polor6-1.png Graphic file (type png)
 <use ../Ejercicio1-FiltroConGIC/Informe/polor6-1.png>
 Package pdftex.def Info: ../Ejercicio1-FiltroConGIC/Informe/polor6-1.png  used on input line 120.
@@ -877,45 +881,29 @@ Overfull \hbox (25.00003pt too wide) in paragraph at lines 114--123
 []$ 
  []
 
-[4 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio1-FiltroConGIC/Informe/polor6.png (PNG copy)>]
-
-LaTeX Warning: Reference `ej1eq5' on page 5 undefined on input line 141.
-
-
-LaTeX Warning: Reference `ej1eq6' on page 5 undefined on input line 141.
-
-[5 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio1-FiltroConGIC/Informe/polor6-1.png (PNG copy)>]
-
-LaTeX Warning: Reference `ej1resp' on page 6 undefined on input line 171.
-
-
-LaTeX Warning: Reference `ej1eq7' on page 6 undefined on input line 197.
-
-[6]
-<../Ejercicio1-FiltroConGIC/Informe/rfmag.png, id=78, 526.96875pt x 395.22656pt>
+[4 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio1-FiltroConGIC/Informe/polor6.png (PNG copy)>] [5 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio1-FiltroConGIC/Informe/polor6-1.png (PNG copy)>] [6]
+<../Ejercicio1-FiltroConGIC/Informe/rfmag.png, id=319, 526.96875pt x 395.22656pt>
 File: ../Ejercicio1-FiltroConGIC/Informe/rfmag.png Graphic file (type png)
 <use ../Ejercicio1-FiltroConGIC/Informe/rfmag.png>
 Package pdftex.def Info: ../Ejercicio1-FiltroConGIC/Informe/rfmag.png  used on input line 249.
 (pdftex.def)             Requested size: 368.8756pt x 276.6567pt.
-<../Ejercicio1-FiltroConGIC/Informe/rfpha.png, id=79, 526.96875pt x 395.22656pt>
+<../Ejercicio1-FiltroConGIC/Informe/rfpha.png, id=320, 526.96875pt x 395.22656pt>
 File: ../Ejercicio1-FiltroConGIC/Informe/rfpha.png Graphic file (type png)
 <use ../Ejercicio1-FiltroConGIC/Informe/rfpha.png>
 Package pdftex.def Info: ../Ejercicio1-FiltroConGIC/Informe/rfpha.png  used on input line 250.
 (pdftex.def)             Requested size: 368.8756pt x 276.6567pt.
  [7]
-
-LaTeX Warning: Reference `ej1despha' on page 8 undefined on input line 255.
-
-<../Ejercicio1-FiltroConGIC/Informe/desphaOsc.png, id=89, 505.89pt x 233.673pt>
+<../Ejercicio1-FiltroConGIC/Informe/desphaOsc.png, id=329, 505.89pt x 233.673pt>
 File: ../Ejercicio1-FiltroConGIC/Informe/desphaOsc.png Graphic file (type png)
 <use ../Ejercicio1-FiltroConGIC/Informe/desphaOsc.png>
 Package pdftex.def Info: ../Ejercicio1-FiltroConGIC/Informe/desphaOsc.png  used on input line 259.
 (pdftex.def)             Requested size: 505.88875pt x 233.67242pt.
 
+
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [8 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio1-FiltroConGIC/Informe/rfmag.png (PNG copy)> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio1-FiltroConGIC/Informe/rfpha.png (PNG copy)>]
-<../Ejercicio1-FiltroConGIC/Informe/zin.png, id=95, 892.83563pt x 364.36125pt>
+<../Ejercicio1-FiltroConGIC/Informe/zin.png, id=336, 892.83563pt x 364.36125pt>
 File: ../Ejercicio1-FiltroConGIC/Informe/zin.png Graphic file (type png)
 <use ../Ejercicio1-FiltroConGIC/Informe/zin.png>
 Package pdftex.def Info: ../Ejercicio1-FiltroConGIC/Informe/zin.png  used on input line 274.
@@ -928,744 +916,445 @@ Overfull \hbox (23.55591pt too wide) in paragraph at lines 274--275
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<../Ejercicio1-FiltroConGIC/Informe/zout.png, id=96, 789.70032pt x 395.22656pt>
+<../Ejercicio1-FiltroConGIC/Informe/zout.png, id=337, 789.70032pt x 395.22656pt>
 File: ../Ejercicio1-FiltroConGIC/Informe/zout.png Graphic file (type png)
 <use ../Ejercicio1-FiltroConGIC/Informe/zout.png>
 Package pdftex.def Info: ../Ejercicio1-FiltroConGIC/Informe/zout.png  used on input line 291.
 (pdftex.def)             Requested size: 473.82385pt x 237.13776pt.
 [9 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio1-FiltroConGIC/Informe/desphaOsc.png (PNG copy)>] [10 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio1-FiltroConGIC/Informe/zin.png (PNG copy)> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio1-FiltroConGIC/Informe/zout.png (PNG copy)>]
-<../Ejercicio1-FiltroConGIC/Informe/re.png, id=113, 526.96875pt x 395.22656pt>
+<../Ejercicio1-FiltroConGIC/Informe/re.png, id=350, 526.96875pt x 395.22656pt>
 File: ../Ejercicio1-FiltroConGIC/Informe/re.png Graphic file (type png)
 <use ../Ejercicio1-FiltroConGIC/Informe/re.png>
 Package pdftex.def Info: ../Ejercicio1-FiltroConGIC/Informe/re.png  used on input line 314.
 (pdftex.def)             Requested size: 421.57556pt x 316.18167pt.
-<../Ejercicio1-FiltroConGIC/Informe/re1.png, id=114, 508.299pt x 233.673pt>
+<../Ejercicio1-FiltroConGIC/Informe/re1.png, id=351, 508.299pt x 233.673pt>
 File: ../Ejercicio1-FiltroConGIC/Informe/re1.png Graphic file (type png)
 <use ../Ejercicio1-FiltroConGIC/Informe/re1.png>
 Package pdftex.def Info: ../Ejercicio1-FiltroConGIC/Informe/re1.png  used on input line 323.
 (pdftex.def)             Requested size: 406.63974pt x 186.93864pt.
  [11 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio1-FiltroConGIC/Informe/re.png (PNG copy)> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio1-FiltroConGIC/Informe/re1.png (PNG copy)>]
-<../Ejercicio1-FiltroConGIC/Informe/re1k.png, id=122, 508.299pt x 233.673pt>
+<../Ejercicio1-FiltroConGIC/Informe/re1k.png, id=359, 508.299pt x 233.673pt>
 File: ../Ejercicio1-FiltroConGIC/Informe/re1k.png Graphic file (type png)
 <use ../Ejercicio1-FiltroConGIC/Informe/re1k.png>
 Package pdftex.def Info: ../Ejercicio1-FiltroConGIC/Informe/re1k.png  used on input line 336.
 (pdftex.def)             Requested size: 406.63974pt x 186.93864pt.
-
-
-LaTeX Warning: Reference `ej1limt' on page 12 undefined on input line 347.
-
-<../Ejercicio1-FiltroConGIC/Informe/limtensionpng.png, id=123, 508.299pt x 233.673pt>
+<../Ejercicio1-FiltroConGIC/Informe/limtensionpng.png, id=361, 508.299pt x 233.673pt>
 File: ../Ejercicio1-FiltroConGIC/Informe/limtensionpng.png Graphic file (type png)
 <use ../Ejercicio1-FiltroConGIC/Informe/limtensionpng.png>
 Package pdftex.def Info: ../Ejercicio1-FiltroConGIC/Informe/limtensionpng.png  used on input line 351.
 (pdftex.def)             Requested size: 406.63974pt x 186.93864pt.
-
-LaTeX Warning: Reference `ej1rf' on page 12 undefined on input line 360.
-
-[12 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio1-FiltroConGIC/Informe/re1k.png (PNG copy)> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio1-FiltroConGIC/Informe/limtensionpng.png (PNG copy)>]) [13] (/Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio2-DiseñoDeFiltros/Ejercicio-2.tex
-
-Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 38.
-
-<../Ejercicio2-DiseñoDeFiltros/Imagenes/diagrama-basico-gyrator.png, id=140, 341.275pt x 246.9225pt>
+ [12 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio1-FiltroConGIC/Informe/re1k.png (PNG copy)> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio1-FiltroConGIC/Informe/limtensionpng.png (PNG copy)>]) [13] (/Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio2-DiseñoDeFiltros/Ejercicio-2.tex
+<../Ejercicio2-DiseñoDeFiltros/Imagenes/diagrama-basico-gyrator.png, id=374, 341.275pt x 246.9225pt>
 File: ../Ejercicio2-DiseñoDeFiltros/Imagenes/diagrama-basico-gyrator.png Graphic file (type png)
 <use ../Ejercicio2-DiseñoDeFiltros/Imagenes/diagrama-basico-gyrator.png>
-Package pdftex.def Info: ../Ejercicio2-DiseñoDeFiltros/Imagenes/diagrama-basico-gyrator.png  used on input line 54.
+Package pdftex.def Info: ../Ejercicio2-DiseñoDeFiltros/Imagenes/diagrama-basico-gyrator.png  used on input line 57.
 (pdftex.def)             Requested size: 128.0374pt x 92.64091pt.
-<../Ejercicio2-DiseñoDeFiltros/Imagenes/diagrama-gyrator-inductor.png, id=142, 753.81625pt x 282.05376pt>
+ [14 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio2-DiseñoDeFiltros/Imagenes/diagrama-basico-gyrator.png>]
+<../Ejercicio2-DiseñoDeFiltros/Imagenes/diagrama-gyrator-inductor.png, id=383, 753.81625pt x 282.05376pt>
 File: ../Ejercicio2-DiseñoDeFiltros/Imagenes/diagrama-gyrator-inductor.png Graphic file (type png)
 <use ../Ejercicio2-DiseñoDeFiltros/Imagenes/diagrama-gyrator-inductor.png>
-Package pdftex.def Info: ../Ejercicio2-DiseñoDeFiltros/Imagenes/diagrama-gyrator-inductor.png  used on input line 68.
+Package pdftex.def Info: ../Ejercicio2-DiseñoDeFiltros/Imagenes/diagrama-gyrator-inductor.png  used on input line 71.
 (pdftex.def)             Requested size: 307.29288pt x 114.9757pt.
-[14 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio2-DiseñoDeFiltros/Imagenes/diagrama-basico-gyrator.png>]
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 76.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 76.
+(hyperref)                removing `math shift' on input line 80.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 76.
+(hyperref)                removing `subscript' on input line 80.
 
-<../Ejercicio2-DiseñoDeFiltros/Imagenes/diagrama-gyrator-corrientes.png, id=153, 426.59375pt x 300.12125pt>
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 80.
+
+<../Ejercicio2-DiseñoDeFiltros/Imagenes/diagrama-gyrator-corrientes.png, id=384, 426.59375pt x 300.12125pt>
 File: ../Ejercicio2-DiseñoDeFiltros/Imagenes/diagrama-gyrator-corrientes.png Graphic file (type png)
 <use ../Ejercicio2-DiseñoDeFiltros/Imagenes/diagrama-gyrator-corrientes.png>
-Package pdftex.def Info: ../Ejercicio2-DiseñoDeFiltros/Imagenes/diagrama-gyrator-corrientes.png  used on input line 84.
+Package pdftex.def Info: ../Ejercicio2-DiseñoDeFiltros/Imagenes/diagrama-gyrator-corrientes.png  used on input line 88.
 (pdftex.def)             Requested size: 204.8567pt x 144.12524pt.
-[15 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio2-DiseñoDeFiltros/Imagenes/diagrama-gyrator-inductor.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio2-DiseñoDeFiltros/Imagenes/diagrama-gyrator-corrientes.png>]
-<../Ejercicio2-DiseñoDeFiltros/Imagenes/equivalente-inductor.png, id=164, 309.155pt x 259.97125pt>
+[15 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio2-DiseñoDeFiltros/Imagenes/diagrama-gyrator-inductor.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio2-DiseñoDeFiltros/Imagenes/diagrama-gyrator-corrientes.png>] [16]
+<../Ejercicio2-DiseñoDeFiltros/Imagenes/equivalente-inductor.png, id=397, 309.155pt x 259.97125pt>
 File: ../Ejercicio2-DiseñoDeFiltros/Imagenes/equivalente-inductor.png Graphic file (type png)
 <use ../Ejercicio2-DiseñoDeFiltros/Imagenes/equivalente-inductor.png>
-Package pdftex.def Info: ../Ejercicio2-DiseñoDeFiltros/Imagenes/equivalente-inductor.png  used on input line 171.
+Package pdftex.def Info: ../Ejercicio2-DiseñoDeFiltros/Imagenes/equivalente-inductor.png  used on input line 174.
 (pdftex.def)             Requested size: 153.64644pt x 129.2078pt.
- [16]
-<../Ejercicio2-DiseñoDeFiltros/Imagenes/diagrama-pasa-bajos.png, id=170, 383.4325pt x 192.72pt>
+<../Ejercicio2-DiseñoDeFiltros/Imagenes/diagrama-pasa-bajos.png, id=399, 383.4325pt x 192.72pt>
 File: ../Ejercicio2-DiseñoDeFiltros/Imagenes/diagrama-pasa-bajos.png Graphic file (type png)
 <use ../Ejercicio2-DiseñoDeFiltros/Imagenes/diagrama-pasa-bajos.png>
-Package pdftex.def Info: ../Ejercicio2-DiseñoDeFiltros/Imagenes/diagrama-pasa-bajos.png  used on input line 193.
+Package pdftex.def Info: ../Ejercicio2-DiseñoDeFiltros/Imagenes/diagrama-pasa-bajos.png  used on input line 204.
 (pdftex.def)             Requested size: 256.0748pt x 128.7159pt.
  [17 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio2-DiseñoDeFiltros/Imagenes/equivalente-inductor.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio2-DiseñoDeFiltros/Imagenes/diagrama-pasa-bajos.png>] [18]
-<../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-rlc-pasa-bajos-amplitud.png, id=187, 508.0581pt x 245.718pt>
+<../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-rlc-pasa-bajos-amplitud.png, id=413, 508.0581pt x 245.718pt>
 File: ../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-rlc-pasa-bajos-amplitud.png Graphic file (type png)
 <use ../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-rlc-pasa-bajos-amplitud.png>
-Package pdftex.def Info: ../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-rlc-pasa-bajos-amplitud.png  used on input line 326.
+Package pdftex.def Info: ../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-rlc-pasa-bajos-amplitud.png  used on input line 345.
 (pdftex.def)             Requested size: 307.29288pt x 148.62422pt.
-<../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-rlc-pasa-bajos-fase.png, id=188, 508.0581pt x 252.945pt>
+ [19]
+<../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-rlc-pasa-bajos-fase.png, id=421, 508.0581pt x 252.945pt>
 File: ../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-rlc-pasa-bajos-fase.png Graphic file (type png)
 <use ../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-rlc-pasa-bajos-fase.png>
-Package pdftex.def Info: ../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-rlc-pasa-bajos-fase.png  used on input line 332.
+Package pdftex.def Info: ../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-rlc-pasa-bajos-fase.png  used on input line 351.
 (pdftex.def)             Requested size: 307.29288pt x 152.99553pt.
- [19 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-rlc-pasa-bajos-amplitud.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-rlc-pasa-bajos-fase.png>]
-<../Ejercicio2-DiseñoDeFiltros/Imagenes/pasa-bajos-opamp-diagrama.png, id=199, 282.30469pt x 225.09094pt>
+<../Ejercicio2-DiseñoDeFiltros/Imagenes/pasa-bajos-opamp-diagrama.png, id=422, 282.30469pt x 225.09094pt>
 File: ../Ejercicio2-DiseñoDeFiltros/Imagenes/pasa-bajos-opamp-diagrama.png Graphic file (type png)
 <use ../Ejercicio2-DiseñoDeFiltros/Imagenes/pasa-bajos-opamp-diagrama.png>
-Package pdftex.def Info: ../Ejercicio2-DiseñoDeFiltros/Imagenes/pasa-bajos-opamp-diagrama.png  used on input line 345.
+Package pdftex.def Info: ../Ejercicio2-DiseñoDeFiltros/Imagenes/pasa-bajos-opamp-diagrama.png  used on input line 364.
 (pdftex.def)             Requested size: 256.0748pt x 204.1908pt.
-<../Ejercicio2-DiseñoDeFiltros/Imagenes/Pasa-Bajos-Marcado-Opamp.jpg, id=200, 1411.2725pt x 682.55pt>
+<../Ejercicio2-DiseñoDeFiltros/Imagenes/Pasa-Bajos-Marcado-Opamp.jpg, id=423, 1411.2725pt x 682.55pt>
 File: ../Ejercicio2-DiseñoDeFiltros/Imagenes/Pasa-Bajos-Marcado-Opamp.jpg Graphic file (type jpg)
 <use ../Ejercicio2-DiseñoDeFiltros/Imagenes/Pasa-Bajos-Marcado-Opamp.jpg>
-Package pdftex.def Info: ../Ejercicio2-DiseñoDeFiltros/Imagenes/Pasa-Bajos-Marcado-Opamp.jpg  used on input line 353.
+Package pdftex.def Info: ../Ejercicio2-DiseñoDeFiltros/Imagenes/Pasa-Bajos-Marcado-Opamp.jpg  used on input line 372.
 (pdftex.def)             Requested size: 358.50314pt x 173.3866pt.
-<../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-opamp-pasa-bajos-fase.png, id=201, 508.0581pt x 252.945pt>
+ [20 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-rlc-pasa-bajos-amplitud.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-rlc-pasa-bajos-fase.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio2-DiseñoDeFiltros/Imagenes/pasa-bajos-opamp-diagrama.png>]
+<../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-opamp-pasa-bajos-fase.png, id=434, 508.0581pt x 252.945pt>
 File: ../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-opamp-pasa-bajos-fase.png Graphic file (type png)
 <use ../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-opamp-pasa-bajos-fase.png>
-Package pdftex.def Info: ../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-opamp-pasa-bajos-fase.png  used on input line 359.
+Package pdftex.def Info: ../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-opamp-pasa-bajos-fase.png  used on input line 378.
 (pdftex.def)             Requested size: 358.50314pt x 178.4922pt.
- [20 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio2-DiseñoDeFiltros/Imagenes/pasa-bajos-opamp-diagrama.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio2-DiseñoDeFiltros/Imagenes/Pasa-Bajos-Marcado-Opamp.jpg>]
-<../Ejercicio2-DiseñoDeFiltros/Imagenes/pasa-bajos-final-amplitud.png, id=209, 508.0581pt x 245.718pt>
+<../Ejercicio2-DiseñoDeFiltros/Imagenes/pasa-bajos-final-amplitud.png, id=435, 508.0581pt x 245.718pt>
 File: ../Ejercicio2-DiseñoDeFiltros/Imagenes/pasa-bajos-final-amplitud.png Graphic file (type png)
 <use ../Ejercicio2-DiseñoDeFiltros/Imagenes/pasa-bajos-final-amplitud.png>
-Package pdftex.def Info: ../Ejercicio2-DiseñoDeFiltros/Imagenes/pasa-bajos-final-amplitud.png  used on input line 369.
+Package pdftex.def Info: ../Ejercicio2-DiseñoDeFiltros/Imagenes/pasa-bajos-final-amplitud.png  used on input line 390.
 (pdftex.def)             Requested size: 358.50314pt x 173.39243pt.
-<../Ejercicio2-DiseñoDeFiltros/Imagenes/pasa-bajos-final-fase.png, id=210, 508.0581pt x 252.945pt>
+<../Ejercicio2-DiseñoDeFiltros/Imagenes/pasa-bajos-final-fase.png, id=436, 508.0581pt x 252.945pt>
 File: ../Ejercicio2-DiseñoDeFiltros/Imagenes/pasa-bajos-final-fase.png Graphic file (type png)
 <use ../Ejercicio2-DiseñoDeFiltros/Imagenes/pasa-bajos-final-fase.png>
-Package pdftex.def Info: ../Ejercicio2-DiseñoDeFiltros/Imagenes/pasa-bajos-final-fase.png  used on input line 375.
+Package pdftex.def Info: ../Ejercicio2-DiseñoDeFiltros/Imagenes/pasa-bajos-final-fase.png  used on input line 396.
 (pdftex.def)             Requested size: 358.50314pt x 178.4922pt.
- [21 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-opamp-pasa-bajos-fase.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio2-DiseñoDeFiltros/Imagenes/pasa-bajos-final-amplitud.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio2-DiseñoDeFiltros/Imagenes/pasa-bajos-final-fase.png>]
-<../Ejercicio2-DiseñoDeFiltros/Imagenes/diagrama-pasa-altos.png, id=221, 504.88625pt x 312.16624pt>
+ [21 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio2-DiseñoDeFiltros/Imagenes/Pasa-Bajos-Marcado-Opamp.jpg> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-opamp-pasa-bajos-fase.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio2-DiseñoDeFiltros/Imagenes/pasa-bajos-final-amplitud.png>]
+<../Ejercicio2-DiseñoDeFiltros/Imagenes/diagrama-pasa-altos.png, id=446, 504.88625pt x 312.16624pt>
 File: ../Ejercicio2-DiseñoDeFiltros/Imagenes/diagrama-pasa-altos.png Graphic file (type png)
 <use ../Ejercicio2-DiseñoDeFiltros/Imagenes/diagrama-pasa-altos.png>
-Package pdftex.def Info: ../Ejercicio2-DiseñoDeFiltros/Imagenes/diagrama-pasa-altos.png  used on input line 403.
+Package pdftex.def Info: ../Ejercicio2-DiseñoDeFiltros/Imagenes/diagrama-pasa-altos.png  used on input line 428.
 (pdftex.def)             Requested size: 256.0748pt x 158.331pt.
- [22 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio2-DiseñoDeFiltros/Imagenes/diagrama-pasa-altos.png>] [23]
-<../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-rlc-pasa-altos-amplitud.png, id=235, 508.0581pt x 245.718pt>
+ [22 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio2-DiseñoDeFiltros/Imagenes/pasa-bajos-final-fase.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio2-DiseñoDeFiltros/Imagenes/diagrama-pasa-altos.png>] [23]
+<../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-rlc-pasa-altos-amplitud.png, id=460, 508.0581pt x 245.718pt>
 File: ../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-rlc-pasa-altos-amplitud.png Graphic file (type png)
 <use ../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-rlc-pasa-altos-amplitud.png>
-Package pdftex.def Info: ../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-rlc-pasa-altos-amplitud.png  used on input line 515.
+Package pdftex.def Info: ../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-rlc-pasa-altos-amplitud.png  used on input line 544.
 (pdftex.def)             Requested size: 307.29288pt x 148.62422pt.
-<../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-rlc-pasa-altos-fase.png, id=236, 508.0581pt x 252.945pt>
+<../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-rlc-pasa-altos-fase.png, id=461, 508.0581pt x 252.945pt>
 File: ../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-rlc-pasa-altos-fase.png Graphic file (type png)
 <use ../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-rlc-pasa-altos-fase.png>
-Package pdftex.def Info: ../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-rlc-pasa-altos-fase.png  used on input line 521.
+Package pdftex.def Info: ../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-rlc-pasa-altos-fase.png  used on input line 550.
 (pdftex.def)             Requested size: 307.29288pt x 152.99553pt.
-<../Ejercicio2-DiseñoDeFiltros/Imagenes/pasa-altos-opamp-diagrama.png, id=237, 575.14874pt x 345.54094pt>
+ [24 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-rlc-pasa-altos-amplitud.png>]
+<../Ejercicio2-DiseñoDeFiltros/Imagenes/pasa-altos-opamp-diagrama.png, id=472, 575.14874pt x 345.54094pt>
 File: ../Ejercicio2-DiseñoDeFiltros/Imagenes/pasa-altos-opamp-diagrama.png Graphic file (type png)
 <use ../Ejercicio2-DiseñoDeFiltros/Imagenes/pasa-altos-opamp-diagrama.png>
-Package pdftex.def Info: ../Ejercicio2-DiseñoDeFiltros/Imagenes/pasa-altos-opamp-diagrama.png  used on input line 533.
+Package pdftex.def Info: ../Ejercicio2-DiseñoDeFiltros/Imagenes/pasa-altos-opamp-diagrama.png  used on input line 562.
 (pdftex.def)             Requested size: 204.8567pt x 123.07123pt.
-<../Ejercicio2-DiseñoDeFiltros/Imagenes/Pasa-Altos-Marcado-Opamp.jpg, id=238, 1411.2725pt x 682.55pt>
+<../Ejercicio2-DiseñoDeFiltros/Imagenes/Pasa-Altos-Marcado-Opamp.jpg, id=473, 1411.2725pt x 682.55pt>
 File: ../Ejercicio2-DiseñoDeFiltros/Imagenes/Pasa-Altos-Marcado-Opamp.jpg Graphic file (type jpg)
 <use ../Ejercicio2-DiseñoDeFiltros/Imagenes/Pasa-Altos-Marcado-Opamp.jpg>
-Package pdftex.def Info: ../Ejercicio2-DiseñoDeFiltros/Imagenes/Pasa-Altos-Marcado-Opamp.jpg  used on input line 541.
+Package pdftex.def Info: ../Ejercicio2-DiseñoDeFiltros/Imagenes/Pasa-Altos-Marcado-Opamp.jpg  used on input line 570.
 (pdftex.def)             Requested size: 307.29288pt x 148.62006pt.
- [24 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-rlc-pasa-altos-amplitud.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-rlc-pasa-altos-fase.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio2-DiseñoDeFiltros/Imagenes/pasa-altos-opamp-diagrama.png>]
-<../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-opamp-pasa-altos-fase.png, id=251, 508.0581pt x 252.945pt>
+<../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-opamp-pasa-altos-fase.png, id=474, 508.0581pt x 252.945pt>
 File: ../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-opamp-pasa-altos-fase.png Graphic file (type png)
 <use ../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-opamp-pasa-altos-fase.png>
-Package pdftex.def Info: ../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-opamp-pasa-altos-fase.png  used on input line 547.
+Package pdftex.def Info: ../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-opamp-pasa-altos-fase.png  used on input line 576.
 (pdftex.def)             Requested size: 307.29288pt x 152.99553pt.
-<../Ejercicio2-DiseñoDeFiltros/Imagenes/pasa-altos-final-amplitud.png, id=252, 508.0581pt x 245.718pt>
+ [25 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-rlc-pasa-altos-fase.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio2-DiseñoDeFiltros/Imagenes/pasa-altos-opamp-diagrama.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio2-DiseñoDeFiltros/Imagenes/Pasa-Altos-Marcado-Opamp.jpg>]
+<../Ejercicio2-DiseñoDeFiltros/Imagenes/pasa-altos-final-amplitud.png, id=484, 508.0581pt x 245.718pt>
 File: ../Ejercicio2-DiseñoDeFiltros/Imagenes/pasa-altos-final-amplitud.png Graphic file (type png)
 <use ../Ejercicio2-DiseñoDeFiltros/Imagenes/pasa-altos-final-amplitud.png>
-Package pdftex.def Info: ../Ejercicio2-DiseñoDeFiltros/Imagenes/pasa-altos-final-amplitud.png  used on input line 557.
+Package pdftex.def Info: ../Ejercicio2-DiseñoDeFiltros/Imagenes/pasa-altos-final-amplitud.png  used on input line 586.
 (pdftex.def)             Requested size: 307.29288pt x 148.62422pt.
-<../Ejercicio2-DiseñoDeFiltros/Imagenes/pasa-altos-final-fase.png, id=253, 508.0581pt x 252.945pt>
+<../Ejercicio2-DiseñoDeFiltros/Imagenes/pasa-altos-final-fase.png, id=485, 508.0581pt x 252.945pt>
 File: ../Ejercicio2-DiseñoDeFiltros/Imagenes/pasa-altos-final-fase.png Graphic file (type png)
 <use ../Ejercicio2-DiseñoDeFiltros/Imagenes/pasa-altos-final-fase.png>
-Package pdftex.def Info: ../Ejercicio2-DiseñoDeFiltros/Imagenes/pasa-altos-final-fase.png  used on input line 563.
+Package pdftex.def Info: ../Ejercicio2-DiseñoDeFiltros/Imagenes/pasa-altos-final-fase.png  used on input line 592.
 (pdftex.def)             Requested size: 307.29288pt x 152.99553pt.
- [25 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio2-DiseñoDeFiltros/Imagenes/Pasa-Altos-Marcado-Opamp.jpg> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-opamp-pasa-altos-fase.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio2-DiseñoDeFiltros/Imagenes/pasa-altos-final-amplitud.png>]
-<../Ejercicio2-DiseñoDeFiltros/Imagenes/diagrama-rechaza-banda.png, id=263, 363.3575pt x 286.06876pt>
+ [26 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-opamp-pasa-altos-fase.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio2-DiseñoDeFiltros/Imagenes/pasa-altos-final-amplitud.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio2-DiseñoDeFiltros/Imagenes/pasa-altos-final-fase.png>]
+<../Ejercicio2-DiseñoDeFiltros/Imagenes/diagrama-rechaza-banda.png, id=496, 363.3575pt x 286.06876pt>
 File: ../Ejercicio2-DiseñoDeFiltros/Imagenes/diagrama-rechaza-banda.png Graphic file (type png)
 <use ../Ejercicio2-DiseñoDeFiltros/Imagenes/diagrama-rechaza-banda.png>
-Package pdftex.def Info: ../Ejercicio2-DiseñoDeFiltros/Imagenes/diagrama-rechaza-banda.png  used on input line 590.
+Package pdftex.def Info: ../Ejercicio2-DiseñoDeFiltros/Imagenes/diagrama-rechaza-banda.png  used on input line 619.
 (pdftex.def)             Requested size: 204.8567pt x 161.2843pt.
- [26 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio2-DiseñoDeFiltros/Imagenes/pasa-altos-final-fase.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio2-DiseñoDeFiltros/Imagenes/diagrama-rechaza-banda.png>]
-<../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-rlc-rechaza-banda-amplitud.png, id=273, 508.0581pt x 245.718pt>
+ [27 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio2-DiseñoDeFiltros/Imagenes/diagrama-rechaza-banda.png>]
+<../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-rlc-rechaza-banda-amplitud.png, id=504, 508.0581pt x 245.718pt>
 File: ../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-rlc-rechaza-banda-amplitud.png Graphic file (type png)
 <use ../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-rlc-rechaza-banda-amplitud.png>
-Package pdftex.def Info: ../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-rlc-rechaza-banda-amplitud.png  used on input line 663.
+Package pdftex.def Info: ../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-rlc-rechaza-banda-amplitud.png  used on input line 692.
 (pdftex.def)             Requested size: 307.29288pt x 148.62422pt.
-<../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-rlc-rechaza-banda-fase.png, id=274, 508.0581pt x 252.945pt>
+<../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-rlc-rechaza-banda-fase.png, id=505, 508.0581pt x 252.945pt>
 File: ../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-rlc-rechaza-banda-fase.png Graphic file (type png)
 <use ../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-rlc-rechaza-banda-fase.png>
-Package pdftex.def Info: ../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-rlc-rechaza-banda-fase.png  used on input line 669.
+Package pdftex.def Info: ../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-rlc-rechaza-banda-fase.png  used on input line 698.
 (pdftex.def)             Requested size: 307.29288pt x 152.99553pt.
- [27 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-rlc-rechaza-banda-amplitud.png>]
-<../Ejercicio2-DiseñoDeFiltros/Imagenes/rechaza-banda-opamp-diagrama.png, id=284, 529.98pt x 306.39468pt>
+<../Ejercicio2-DiseñoDeFiltros/Imagenes/rechaza-banda-opamp-diagrama.png, id=506, 529.98pt x 306.39468pt>
 File: ../Ejercicio2-DiseñoDeFiltros/Imagenes/rechaza-banda-opamp-diagrama.png Graphic file (type png)
 <use ../Ejercicio2-DiseñoDeFiltros/Imagenes/rechaza-banda-opamp-diagrama.png>
-Package pdftex.def Info: ../Ejercicio2-DiseñoDeFiltros/Imagenes/rechaza-banda-opamp-diagrama.png  used on input line 681.
+Package pdftex.def Info: ../Ejercicio2-DiseñoDeFiltros/Imagenes/rechaza-banda-opamp-diagrama.png  used on input line 710.
 (pdftex.def)             Requested size: 256.0748pt x 148.04489pt.
-<../Ejercicio2-DiseñoDeFiltros/Imagenes/Rechaza-Banda-Marcado-Opamp.jpg, id=285, 1411.2725pt x 682.55pt>
+ [28 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-rlc-rechaza-banda-amplitud.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-rlc-rechaza-banda-fase.png>]
+<../Ejercicio2-DiseñoDeFiltros/Imagenes/Rechaza-Banda-Marcado-Opamp.jpg, id=517, 1411.2725pt x 682.55pt>
 File: ../Ejercicio2-DiseñoDeFiltros/Imagenes/Rechaza-Banda-Marcado-Opamp.jpg Graphic file (type jpg)
 <use ../Ejercicio2-DiseñoDeFiltros/Imagenes/Rechaza-Banda-Marcado-Opamp.jpg>
-Package pdftex.def Info: ../Ejercicio2-DiseñoDeFiltros/Imagenes/Rechaza-Banda-Marcado-Opamp.jpg  used on input line 689.
+Package pdftex.def Info: ../Ejercicio2-DiseñoDeFiltros/Imagenes/Rechaza-Banda-Marcado-Opamp.jpg  used on input line 718.
 (pdftex.def)             Requested size: 358.50314pt x 173.3866pt.
-<../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-opamp-rechaza-banda-fase.png, id=286, 508.0581pt x 252.945pt>
+<../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-opamp-rechaza-banda-fase.png, id=518, 508.0581pt x 252.945pt>
 File: ../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-opamp-rechaza-banda-fase.png Graphic file (type png)
 <use ../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-opamp-rechaza-banda-fase.png>
-Package pdftex.def Info: ../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-opamp-rechaza-banda-fase.png  used on input line 695.
+Package pdftex.def Info: ../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-opamp-rechaza-banda-fase.png  used on input line 724.
 (pdftex.def)             Requested size: 358.50314pt x 178.4922pt.
- [28 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-rlc-rechaza-banda-fase.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio2-DiseñoDeFiltros/Imagenes/rechaza-banda-opamp-diagrama.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio2-DiseñoDeFiltros/Imagenes/Rechaza-Banda-Marcado-Opamp.jpg>]
-<../Ejercicio2-DiseñoDeFiltros/Imagenes/rechaza-banda-final-amplitud.png, id=296, 508.0581pt x 245.718pt>
+<../Ejercicio2-DiseñoDeFiltros/Imagenes/rechaza-banda-final-amplitud.png, id=519, 508.0581pt x 245.718pt>
 File: ../Ejercicio2-DiseñoDeFiltros/Imagenes/rechaza-banda-final-amplitud.png Graphic file (type png)
 <use ../Ejercicio2-DiseñoDeFiltros/Imagenes/rechaza-banda-final-amplitud.png>
-Package pdftex.def Info: ../Ejercicio2-DiseñoDeFiltros/Imagenes/rechaza-banda-final-amplitud.png  used on input line 705.
+Package pdftex.def Info: ../Ejercicio2-DiseñoDeFiltros/Imagenes/rechaza-banda-final-amplitud.png  used on input line 734.
 (pdftex.def)             Requested size: 358.50314pt x 173.39243pt.
-<../Ejercicio2-DiseñoDeFiltros/Imagenes/rechaza-banda-final-fase.png, id=297, 508.0581pt x 252.945pt>
+ [29 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio2-DiseñoDeFiltros/Imagenes/rechaza-banda-opamp-diagrama.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio2-DiseñoDeFiltros/Imagenes/Rechaza-Banda-Marcado-Opamp.jpg> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-opamp-rechaza-banda-fase.png>]
+<../Ejercicio2-DiseñoDeFiltros/Imagenes/rechaza-banda-final-fase.png, id=529, 508.0581pt x 252.945pt>
 File: ../Ejercicio2-DiseñoDeFiltros/Imagenes/rechaza-banda-final-fase.png Graphic file (type png)
 <use ../Ejercicio2-DiseñoDeFiltros/Imagenes/rechaza-banda-final-fase.png>
-Package pdftex.def Info: ../Ejercicio2-DiseñoDeFiltros/Imagenes/rechaza-banda-final-fase.png  used on input line 711.
+Package pdftex.def Info: ../Ejercicio2-DiseñoDeFiltros/Imagenes/rechaza-banda-final-fase.png  used on input line 740.
 (pdftex.def)             Requested size: 358.50314pt x 178.4922pt.
-<../Ejercicio2-DiseñoDeFiltros/Imagenes/diagrama-pasa-banda.png, id=298, 608.2725pt x 410.53375pt>
+<../Ejercicio2-DiseñoDeFiltros/Imagenes/diagrama-pasa-banda.png, id=530, 608.2725pt x 410.53375pt>
 File: ../Ejercicio2-DiseñoDeFiltros/Imagenes/diagrama-pasa-banda.png Graphic file (type png)
 <use ../Ejercicio2-DiseñoDeFiltros/Imagenes/diagrama-pasa-banda.png>
-Package pdftex.def Info: ../Ejercicio2-DiseñoDeFiltros/Imagenes/diagrama-pasa-banda.png  used on input line 722.
+Package pdftex.def Info: ../Ejercicio2-DiseñoDeFiltros/Imagenes/diagrama-pasa-banda.png  used on input line 751.
 (pdftex.def)             Requested size: 256.0748pt x 172.83017pt.
- [29 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-opamp-rechaza-banda-fase.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio2-DiseñoDeFiltros/Imagenes/rechaza-banda-final-amplitud.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio2-DiseñoDeFiltros/Imagenes/rechaza-banda-final-fase.png>] [30 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio2-DiseñoDeFiltros/Imagenes/diagrama-pasa-banda.png>]
-<../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-rlc-pasa-banda-amplitud.png, id=319, 508.0581pt x 245.718pt>
+ [30 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio2-DiseñoDeFiltros/Imagenes/rechaza-banda-final-amplitud.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio2-DiseñoDeFiltros/Imagenes/rechaza-banda-final-fase.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio2-DiseñoDeFiltros/Imagenes/diagrama-pasa-banda.png>]
+<../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-rlc-pasa-banda-amplitud.png, id=542, 508.0581pt x 245.718pt>
 File: ../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-rlc-pasa-banda-amplitud.png Graphic file (type png)
 <use ../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-rlc-pasa-banda-amplitud.png>
-Package pdftex.def Info: ../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-rlc-pasa-banda-amplitud.png  used on input line 797.
+Package pdftex.def Info: ../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-rlc-pasa-banda-amplitud.png  used on input line 826.
 (pdftex.def)             Requested size: 307.29288pt x 148.62422pt.
-<../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-rlc-pasa-banda-fase.png, id=320, 508.0581pt x 252.945pt>
+<../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-rlc-pasa-banda-fase.png, id=543, 508.0581pt x 252.945pt>
 File: ../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-rlc-pasa-banda-fase.png Graphic file (type png)
 <use ../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-rlc-pasa-banda-fase.png>
-Package pdftex.def Info: ../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-rlc-pasa-banda-fase.png  used on input line 803.
+Package pdftex.def Info: ../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-rlc-pasa-banda-fase.png  used on input line 832.
 (pdftex.def)             Requested size: 307.29288pt x 152.99553pt.
-<../Ejercicio2-DiseñoDeFiltros/Imagenes/pasa-banda-opamp-diagrama.png, id=321, 332.74312pt x 206.27063pt>
+ [31 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-rlc-pasa-banda-amplitud.png>]
+<../Ejercicio2-DiseñoDeFiltros/Imagenes/pasa-banda-opamp-diagrama.png, id=553, 332.74312pt x 206.27063pt>
 File: ../Ejercicio2-DiseñoDeFiltros/Imagenes/pasa-banda-opamp-diagrama.png Graphic file (type png)
 <use ../Ejercicio2-DiseñoDeFiltros/Imagenes/pasa-banda-opamp-diagrama.png>
-Package pdftex.def Info: ../Ejercicio2-DiseñoDeFiltros/Imagenes/pasa-banda-opamp-diagrama.png  used on input line 813.
+Package pdftex.def Info: ../Ejercicio2-DiseñoDeFiltros/Imagenes/pasa-banda-opamp-diagrama.png  used on input line 842.
 (pdftex.def)             Requested size: 256.0748pt x 158.75333pt.
-<../Ejercicio2-DiseñoDeFiltros/Imagenes/Pasa-Banda-Marcado-Opamp.jpg, id=322, 1411.2725pt x 682.55pt>
+<../Ejercicio2-DiseñoDeFiltros/Imagenes/Pasa-Banda-Marcado-Opamp.jpg, id=554, 1411.2725pt x 682.55pt>
 File: ../Ejercicio2-DiseñoDeFiltros/Imagenes/Pasa-Banda-Marcado-Opamp.jpg Graphic file (type jpg)
 <use ../Ejercicio2-DiseñoDeFiltros/Imagenes/Pasa-Banda-Marcado-Opamp.jpg>
-Package pdftex.def Info: ../Ejercicio2-DiseñoDeFiltros/Imagenes/Pasa-Banda-Marcado-Opamp.jpg  used on input line 821.
+Package pdftex.def Info: ../Ejercicio2-DiseñoDeFiltros/Imagenes/Pasa-Banda-Marcado-Opamp.jpg  used on input line 850.
 (pdftex.def)             Requested size: 358.50314pt x 173.3866pt.
- [31 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-rlc-pasa-banda-amplitud.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-rlc-pasa-banda-fase.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio2-DiseñoDeFiltros/Imagenes/pasa-banda-opamp-diagrama.png>]
-<../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-opamp-pasa-banda-fase.png, id=334, 508.0581pt x 252.945pt>
+<../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-opamp-pasa-banda-fase.png, id=555, 508.0581pt x 252.945pt>
 File: ../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-opamp-pasa-banda-fase.png Graphic file (type png)
 <use ../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-opamp-pasa-banda-fase.png>
-Package pdftex.def Info: ../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-opamp-pasa-banda-fase.png  used on input line 827.
+Package pdftex.def Info: ../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-opamp-pasa-banda-fase.png  used on input line 856.
 (pdftex.def)             Requested size: 358.50314pt x 178.4922pt.
-<../Ejercicio2-DiseñoDeFiltros/Imagenes/pasa-banda-final-amplitud.png, id=335, 508.0581pt x 245.718pt>
+ [32 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-rlc-pasa-banda-fase.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio2-DiseñoDeFiltros/Imagenes/pasa-banda-opamp-diagrama.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio2-DiseñoDeFiltros/Imagenes/Pasa-Banda-Marcado-Opamp.jpg>]
+<../Ejercicio2-DiseñoDeFiltros/Imagenes/pasa-banda-final-amplitud.png, id=565, 508.0581pt x 245.718pt>
 File: ../Ejercicio2-DiseñoDeFiltros/Imagenes/pasa-banda-final-amplitud.png Graphic file (type png)
 <use ../Ejercicio2-DiseñoDeFiltros/Imagenes/pasa-banda-final-amplitud.png>
-Package pdftex.def Info: ../Ejercicio2-DiseñoDeFiltros/Imagenes/pasa-banda-final-amplitud.png  used on input line 837.
+Package pdftex.def Info: ../Ejercicio2-DiseñoDeFiltros/Imagenes/pasa-banda-final-amplitud.png  used on input line 866.
 (pdftex.def)             Requested size: 358.50314pt x 173.39243pt.
-<../Ejercicio2-DiseñoDeFiltros/Imagenes/pasa-bandaa-final-fase.png, id=336, 508.0581pt x 252.945pt>
+<../Ejercicio2-DiseñoDeFiltros/Imagenes/pasa-bandaa-final-fase.png, id=566, 508.0581pt x 252.945pt>
 File: ../Ejercicio2-DiseñoDeFiltros/Imagenes/pasa-bandaa-final-fase.png Graphic file (type png)
 <use ../Ejercicio2-DiseñoDeFiltros/Imagenes/pasa-bandaa-final-fase.png>
-Package pdftex.def Info: ../Ejercicio2-DiseñoDeFiltros/Imagenes/pasa-bandaa-final-fase.png  used on input line 843.
+Package pdftex.def Info: ../Ejercicio2-DiseñoDeFiltros/Imagenes/pasa-bandaa-final-fase.png  used on input line 872.
 (pdftex.def)             Requested size: 358.50314pt x 178.4922pt.
- [32 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio2-DiseñoDeFiltros/Imagenes/Pasa-Banda-Marcado-Opamp.jpg> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-opamp-pasa-banda-fase.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio2-DiseñoDeFiltros/Imagenes/pasa-banda-final-amplitud.png>]
-<../Ejercicio2-DiseñoDeFiltros/Imagenes/esquematico_pines_in.png, id=347, 363.60844pt x 225.09094pt>
+ [33 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-opamp-pasa-banda-fase.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio2-DiseñoDeFiltros/Imagenes/pasa-banda-final-amplitud.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio2-DiseñoDeFiltros/Imagenes/pasa-bandaa-final-fase.png>]
+<../Ejercicio2-DiseñoDeFiltros/Imagenes/esquematico_pines_in.png, id=577, 363.60844pt x 225.09094pt>
 File: ../Ejercicio2-DiseñoDeFiltros/Imagenes/esquematico_pines_in.png Graphic file (type png)
 <use ../Ejercicio2-DiseñoDeFiltros/Imagenes/esquematico_pines_in.png>
-Package pdftex.def Info: ../Ejercicio2-DiseñoDeFiltros/Imagenes/esquematico_pines_in.png  used on input line 880.
+Package pdftex.def Info: ../Ejercicio2-DiseñoDeFiltros/Imagenes/esquematico_pines_in.png  used on input line 909.
 (pdftex.def)             Requested size: 128.0374pt x 79.26384pt.
 
-Underfull \hbox (badness 7468) in paragraph at lines 881--881
-[]\OT1/cmr/m/n/7 (a) |Im-ple-men-ta-ci^^Son a ni-vel es-
+Underfull \hbox (badness 7468) in paragraph at lines 910--910
+[]\OT1/cmr/m/n/7 (a) |Im-ple-mentaci^^Son a nivel es-
  []
 
-<../Ejercicio2-DiseñoDeFiltros/Imagenes/esquematico_pines_out.png, id=348, 197.98969pt x 237.13594pt>
+<../Ejercicio2-DiseñoDeFiltros/Imagenes/esquematico_pines_out.png, id=578, 197.98969pt x 237.13594pt>
 File: ../Ejercicio2-DiseñoDeFiltros/Imagenes/esquematico_pines_out.png Graphic file (type png)
 <use ../Ejercicio2-DiseñoDeFiltros/Imagenes/esquematico_pines_out.png>
-Package pdftex.def Info: ../Ejercicio2-DiseñoDeFiltros/Imagenes/esquematico_pines_out.png  used on input line 886.
+Package pdftex.def Info: ../Ejercicio2-DiseñoDeFiltros/Imagenes/esquematico_pines_out.png  used on input line 915.
 (pdftex.def)             Requested size: 128.0374pt x 153.35495pt.
-<../Ejercicio2-DiseñoDeFiltros/Imagenes/esquematico_pines_sal.png, id=349, 264.99pt x 97.86563pt>
+<../Ejercicio2-DiseñoDeFiltros/Imagenes/esquematico_pines_sal.png, id=579, 264.99pt x 97.86563pt>
 File: ../Ejercicio2-DiseñoDeFiltros/Imagenes/esquematico_pines_sal.png Graphic file (type png)
 <use ../Ejercicio2-DiseñoDeFiltros/Imagenes/esquematico_pines_sal.png>
-Package pdftex.def Info: ../Ejercicio2-DiseñoDeFiltros/Imagenes/esquematico_pines_sal.png  used on input line 892.
+Package pdftex.def Info: ../Ejercicio2-DiseñoDeFiltros/Imagenes/esquematico_pines_sal.png  used on input line 921.
 (pdftex.def)             Requested size: 128.0374pt x 47.28705pt.
-[33 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio2-DiseñoDeFiltros/Imagenes/esquematico_pines_in.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio2-DiseñoDeFiltros/Imagenes/esquematico_pines_out.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio2-DiseñoDeFiltros/Imagenes/esquematico_pines_sal.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio2-DiseñoDeFiltros/Imagenes/pasa-bandaa-final-fase.png>]
-<../Ejercicio2-DiseñoDeFiltros/Imagenes/logic_diagram.png, id=360, 391.4625pt x 286.82156pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 922--922
+[]\OT1/cmr/m/n/7 (c) |Im-ple-mentaci^^Son punto de
+ []
+
+<../Ejercicio2-DiseñoDeFiltros/Imagenes/logic_diagram.png, id=580, 391.4625pt x 286.82156pt>
 File: ../Ejercicio2-DiseñoDeFiltros/Imagenes/logic_diagram.png Graphic file (type png)
 <use ../Ejercicio2-DiseñoDeFiltros/Imagenes/logic_diagram.png>
-Package pdftex.def Info: ../Ejercicio2-DiseñoDeFiltros/Imagenes/logic_diagram.png  used on input line 902.
+Package pdftex.def Info: ../Ejercicio2-DiseñoDeFiltros/Imagenes/logic_diagram.png  used on input line 931.
 (pdftex.def)             Requested size: 307.29288pt x 225.16415pt.
-<../Ejercicio2-DiseñoDeFiltros/Imagenes/PCB_logic.png, id=361, 371.13657pt x 371.88937pt>
+[34 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio2-DiseñoDeFiltros/Imagenes/esquematico_pines_in.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio2-DiseñoDeFiltros/Imagenes/esquematico_pines_out.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio2-DiseñoDeFiltros/Imagenes/esquematico_pines_sal.png>]
+<../Ejercicio2-DiseñoDeFiltros/Imagenes/PCB_logic.png, id=587, 371.13657pt x 371.88937pt>
 File: ../Ejercicio2-DiseñoDeFiltros/Imagenes/PCB_logic.png Graphic file (type png)
 <use ../Ejercicio2-DiseñoDeFiltros/Imagenes/PCB_logic.png>
-Package pdftex.def Info: ../Ejercicio2-DiseñoDeFiltros/Imagenes/PCB_logic.png  used on input line 909.
+Package pdftex.def Info: ../Ejercicio2-DiseñoDeFiltros/Imagenes/PCB_logic.png  used on input line 938.
 (pdftex.def)             Requested size: 307.29288pt x 307.92473pt.
-<../Ejercicio2-DiseñoDeFiltros/Imagenes/PCB_logic_3d.png, id=362, 350.81062pt x 351.56343pt>
+<../Ejercicio2-DiseñoDeFiltros/Imagenes/PCB_logic_3d.png, id=588, 350.81062pt x 351.56343pt>
 File: ../Ejercicio2-DiseñoDeFiltros/Imagenes/PCB_logic_3d.png Graphic file (type png)
 <use ../Ejercicio2-DiseñoDeFiltros/Imagenes/PCB_logic_3d.png>
-Package pdftex.def Info: ../Ejercicio2-DiseñoDeFiltros/Imagenes/PCB_logic_3d.png  used on input line 915.
+Package pdftex.def Info: ../Ejercicio2-DiseñoDeFiltros/Imagenes/PCB_logic_3d.png  used on input line 944.
 (pdftex.def)             Requested size: 307.29288pt x 307.97665pt.
- [34 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio2-DiseñoDeFiltros/Imagenes/logic_diagram.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio2-DiseñoDeFiltros/Imagenes/PCB_logic.png>]) [35 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio2-DiseñoDeFiltros/Imagenes/PCB_logic_3d.png>] (/Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio3-AmplificadorDeInstrumentacion/Ejercicio-3.tex) [36] (/Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio4-EcualizadorDeFase/Ejercicio-4.tex
-
-LaTeX Warning: Reference `circuito_ecualizador_de_fase' on page 37 undefined on input line 3.
-
-
-LaTeX Warning: File `../Ejercicio4-EcualizadorDeFase/Informe/Ecualizador_de_Fase.png' not found on input line 8.
-
-
-/Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio4-EcualizadorDeFase/Ejercicio-4.tex:8: Package pdftex.def Error: File `../Ejercicio4-EcualizadorDeFase/Informe/Ecualizador_de_Fase.png' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.8 ...adorDeFase/Informe/Ecualizador_de_Fase.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: Reference `suma_pote' on page 37 undefined on input line 41.
-
-
-LaTeX Warning: Reference `multiplicacion_pote' on page 37 undefined on input line 41.
-
-<../Ejercicio4-EcualizadorDeFase/Informe/EcSinPot.png, id=381, 733.74126pt x 492.84125pt>
+ [35 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio2-DiseñoDeFiltros/Imagenes/logic_diagram.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio2-DiseñoDeFiltros/Imagenes/PCB_logic.png>]) [36 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio2-DiseñoDeFiltros/Imagenes/PCB_logic_3d.png>] (/Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio3-AmplificadorDeInstrumentacion/Ejercicio-3.tex) [37] (/Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio4-EcualizadorDeFase/Ejercicio-4.tex
+<../Ejercicio4-EcualizadorDeFase/Informe/Ecualizador_de_Fase.png, id=606, 623.32875pt x 492.84125pt>
+File: ../Ejercicio4-EcualizadorDeFase/Informe/Ecualizador_de_Fase.png Graphic file (type png)
+<use ../Ejercicio4-EcualizadorDeFase/Informe/Ecualizador_de_Fase.png>
+Package pdftex.def Info: ../Ejercicio4-EcualizadorDeFase/Informe/Ecualizador_de_Fase.png  used on input line 9.
+(pdftex.def)             Requested size: 230.46574pt x 182.22055pt.
+<../Ejercicio4-EcualizadorDeFase/Informe/EcSinPot.png, id=609, 733.74126pt x 492.84125pt>
 File: ../Ejercicio4-EcualizadorDeFase/Informe/EcSinPot.png Graphic file (type png)
 <use ../Ejercicio4-EcualizadorDeFase/Informe/EcSinPot.png>
-Package pdftex.def Info: ../Ejercicio4-EcualizadorDeFase/Informe/EcSinPot.png  used on input line 47.
+Package pdftex.def Info: ../Ejercicio4-EcualizadorDeFase/Informe/EcSinPot.png  used on input line 48.
 (pdftex.def)             Requested size: 230.46574pt x 154.7946pt.
-[37]
-
-LaTeX Warning: Reference `1reemplazo' on page 38 undefined on input line 53.
-
-
-LaTeX Warning: Reference `2reemplazo' on page 38 undefined on input line 54.
-
-<../Ejercicio4-EcualizadorDeFase/Informe/1cambioEstrella.png, id=395, 1581.91pt x 492.84125pt>
+ [38 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio4-EcualizadorDeFase/Informe/Ecualizador_de_Fase.png>]
+<../Ejercicio4-EcualizadorDeFase/Informe/1cambioEstrella.png, id=623, 1581.91pt x 492.84125pt>
 File: ../Ejercicio4-EcualizadorDeFase/Informe/1cambioEstrella.png Graphic file (type png)
 <use ../Ejercicio4-EcualizadorDeFase/Informe/1cambioEstrella.png>
-Package pdftex.def Info: ../Ejercicio4-EcualizadorDeFase/Informe/1cambioEstrella.png  used on input line 84.
+Package pdftex.def Info: ../Ejercicio4-EcualizadorDeFase/Informe/1cambioEstrella.png  used on input line 85.
 (pdftex.def)             Requested size: 460.9315pt x 143.60463pt.
-[38 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio4-EcualizadorDeFase/Informe/EcSinPot.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio4-EcualizadorDeFase/Informe/1cambioEstrella.png>]
-<../Ejercicio4-EcualizadorDeFase/Informe/2cambioTriangulo.png, id=408, 1406.25375pt x 412.54124pt>
+ [39 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio4-EcualizadorDeFase/Informe/EcSinPot.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio4-EcualizadorDeFase/Informe/1cambioEstrella.png>]
+<../Ejercicio4-EcualizadorDeFase/Informe/2cambioTriangulo.png, id=637, 1406.25375pt x 412.54124pt>
 File: ../Ejercicio4-EcualizadorDeFase/Informe/2cambioTriangulo.png Graphic file (type png)
 <use ../Ejercicio4-EcualizadorDeFase/Informe/2cambioTriangulo.png>
-Package pdftex.def Info: ../Ejercicio4-EcualizadorDeFase/Informe/2cambioTriangulo.png  used on input line 120.
+Package pdftex.def Info: ../Ejercicio4-EcualizadorDeFase/Informe/2cambioTriangulo.png  used on input line 121.
 (pdftex.def)             Requested size: 460.9315pt x 135.21368pt.
-
-
-LaTeX Warning: Reference `Cir_Final' on page 39 undefined on input line 127.
-
-<../Ejercicio4-EcualizadorDeFase/Informe/EcFinal.png, id=409, 573.14125pt x 302.12875pt>
+<../Ejercicio4-EcualizadorDeFase/Informe/EcFinal.png, id=639, 573.14125pt x 302.12875pt>
 File: ../Ejercicio4-EcualizadorDeFase/Informe/EcFinal.png Graphic file (type png)
 <use ../Ejercicio4-EcualizadorDeFase/Informe/EcFinal.png>
-Package pdftex.def Info: ../Ejercicio4-EcualizadorDeFase/Informe/EcFinal.png  used on input line 138.
+Package pdftex.def Info: ../Ejercicio4-EcualizadorDeFase/Informe/EcFinal.png  used on input line 139.
 (pdftex.def)             Requested size: 230.46574pt x 121.49016pt.
+
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[39 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio4-EcualizadorDeFase/Informe/2cambioTriangulo.png>]
-
-LaTeX Warning: Reference `expresion_1' on page 40 undefined on input line 165.
-
-
-LaTeX Warning: Reference `expresion_2' on page 40 undefined on input line 165.
-
-
-LaTeX Warning: Reference `alpha1' on page 40 undefined on input line 166.
-
-
-LaTeX Warning: Reference `alpha2' on page 40 undefined on input line 166.
-
-
-LaTeX Warning: Reference `alpha3' on page 40 undefined on input line 166.
-
-
-LaTeX Warning: Reference `z1' on page 40 undefined on input line 177.
-
-
-LaTeX Warning: Reference `z2' on page 40 undefined on input line 177.
-
-
-LaTeX Warning: Reference `z3' on page 40 undefined on input line 177.
-
-[40 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio4-EcualizadorDeFase/Informe/EcFinal.png>]
-
-LaTeX Warning: Reference `circuito_no_ideal' on page 41 undefined on input line 225.
-
-
-LaTeX Warning: File `../Ejercicio4-EcualizadorDeFase/Informe/circuito_no_ideal.png' not found on input line 228.
-
-
-/Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio4-EcualizadorDeFase/Ejercicio-4.tex:228: Package pdftex.def Error: File `../Ejercicio4-EcualizadorDeFase/Informe/circuito_no_ideal.png' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.228 ...adorDeFase/Informe/circuito_no_ideal.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: Reference `trans_no_ideal' on page 41 undefined on input line 249.
-
-
-LaTeX Warning: Reference `trans_ideal' on page 41 undefined on input line 249.
-
-
-LaTeX Warning: Reference `trans_ideal_aplicada' on page 41 undefined on input line 266.
-
-[41]
-
-LaTeX Warning: Reference `trans_ideal_aplicada' on page 42 undefined on input line 291.
-
-
-LaTeX Warning: Reference `trans_ideal_aplicada_normalizada' on page 42 undefined on input line 301.
-
-
-LaTeX Warning: Reference `alpha1_prima' on page 42 undefined on input line 310.
-
-
-LaTeX Warning: Reference `alpha3_simplificado' on page 42 undefined on input line 310.
-
-
-LaTeX Warning: Reference `w_0' on page 42 undefined on input line 310.
-
-
-LaTeX Warning: Reference `A0cotas' on page 42 undefined on input line 338.
-
-[42]
-
-LaTeX Warning: Reference `f0final' on page 43 undefined on input line 350.
-
-
-LaTeX Warning: File `../Ejercicio4-EcualizadorDeFase/Informe/lowFrecL000Mag.png' not found on input line 390.
-
-
-/Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio4-EcualizadorDeFase/Ejercicio-4.tex:390: Package pdftex.def Error: File `../Ejercicio4-EcualizadorDeFase/Informe/lowFrecL000Mag.png' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.390 ...lizadorDeFase/Informe/lowFrecL000Mag.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[43]
-
-LaTeX Warning: File `../Ejercicio4-EcualizadorDeFase/Informe/lowFrecL050Mag.png' not found on input line 397.
-
-
-/Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio4-EcualizadorDeFase/Ejercicio-4.tex:397: Package pdftex.def Error: File `../Ejercicio4-EcualizadorDeFase/Informe/lowFrecL050Mag.png' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.397 ...lizadorDeFase/Informe/lowFrecL050Mag.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: File `../Ejercicio4-EcualizadorDeFase/Informe/lowFrecL100Mag.png' not found on input line 404.
-
-
-/Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio4-EcualizadorDeFase/Ejercicio-4.tex:404: Package pdftex.def Error: File `../Ejercicio4-EcualizadorDeFase/Informe/lowFrecL100Mag.png' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.404 ...lizadorDeFase/Informe/lowFrecL100Mag.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[44]
-
-LaTeX Warning: File `../Ejercicio4-EcualizadorDeFase/Informe/lowFrecL000Fase.png' not found on input line 414.
-
-
-/Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio4-EcualizadorDeFase/Ejercicio-4.tex:414: Package pdftex.def Error: File `../Ejercicio4-EcualizadorDeFase/Informe/lowFrecL000Fase.png' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.414 ...izadorDeFase/Informe/lowFrecL000Fase.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: File `../Ejercicio4-EcualizadorDeFase/Informe/lowFrecL050Fase.png' not found on input line 421.
-
-
-/Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio4-EcualizadorDeFase/Ejercicio-4.tex:421: Package pdftex.def Error: File `../Ejercicio4-EcualizadorDeFase/Informe/lowFrecL050Fase.png' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.421 ...izadorDeFase/Informe/lowFrecL050Fase.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[45]
-
-LaTeX Warning: File `../Ejercicio4-EcualizadorDeFase/Informe/lowFrecL100Fase.png' not found on input line 428.
-
-
-/Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio4-EcualizadorDeFase/Ejercicio-4.tex:428: Package pdftex.def Error: File `../Ejercicio4-EcualizadorDeFase/Informe/lowFrecL100Fase.png' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.428 ...izadorDeFase/Informe/lowFrecL100Fase.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: File `../Ejercicio4-EcualizadorDeFase/Informe/medFrecL000Mag.png' not found on input line 440.
-
-
-/Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio4-EcualizadorDeFase/Ejercicio-4.tex:440: Package pdftex.def Error: File `../Ejercicio4-EcualizadorDeFase/Informe/medFrecL000Mag.png' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.440 ...lizadorDeFase/Informe/medFrecL000Mag.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[46]
-
-LaTeX Warning: File `../Ejercicio4-EcualizadorDeFase/Informe/medFrecL050Mag.png' not found on input line 447.
-
-
-/Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio4-EcualizadorDeFase/Ejercicio-4.tex:447: Package pdftex.def Error: File `../Ejercicio4-EcualizadorDeFase/Informe/medFrecL050Mag.png' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.447 ...lizadorDeFase/Informe/medFrecL050Mag.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[47]
-
-LaTeX Warning: File `../Ejercicio4-EcualizadorDeFase/Informe/medFrecL100Mag.png' not found on input line 454.
-
-
-/Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio4-EcualizadorDeFase/Ejercicio-4.tex:454: Package pdftex.def Error: File `../Ejercicio4-EcualizadorDeFase/Informe/medFrecL100Mag.png' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.454 ...lizadorDeFase/Informe/medFrecL100Mag.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: File `../Ejercicio4-EcualizadorDeFase/Informe/medFrecL000Fase.png' not found on input line 464.
-
-
-/Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio4-EcualizadorDeFase/Ejercicio-4.tex:464: Package pdftex.def Error: File `../Ejercicio4-EcualizadorDeFase/Informe/medFrecL000Fase.png' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.464 ...izadorDeFase/Informe/medFrecL000Fase.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[48]
-
-LaTeX Warning: File `../Ejercicio4-EcualizadorDeFase/Informe/medFrecL050Fase.png' not found on input line 471.
-
-
-/Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio4-EcualizadorDeFase/Ejercicio-4.tex:471: Package pdftex.def Error: File `../Ejercicio4-EcualizadorDeFase/Informe/medFrecL050Fase.png' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.471 ...izadorDeFase/Informe/medFrecL050Fase.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: File `../Ejercicio4-EcualizadorDeFase/Informe/medFrecL100Fase.png' not found on input line 478.
-
-
-/Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio4-EcualizadorDeFase/Ejercicio-4.tex:478: Package pdftex.def Error: File `../Ejercicio4-EcualizadorDeFase/Informe/medFrecL100Fase.png' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.478 ...izadorDeFase/Informe/medFrecL100Fase.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[49]
-
-LaTeX Warning: File `../Ejercicio4-EcualizadorDeFase/Informe/highFrecL000Mag.png' not found on input line 489.
-
-
-/Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio4-EcualizadorDeFase/Ejercicio-4.tex:489: Package pdftex.def Error: File `../Ejercicio4-EcualizadorDeFase/Informe/highFrecL000Mag.png' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.489 ...izadorDeFase/Informe/highFrecL000Mag.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[50]
-
-LaTeX Warning: File `../Ejercicio4-EcualizadorDeFase/Informe/highFrecL050Mag.png' not found on input line 496.
-
-
-/Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio4-EcualizadorDeFase/Ejercicio-4.tex:496: Package pdftex.def Error: File `../Ejercicio4-EcualizadorDeFase/Informe/highFrecL050Mag.png' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.496 ...izadorDeFase/Informe/highFrecL050Mag.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: File `../Ejercicio4-EcualizadorDeFase/Informe/highFrecL100Mag.png' not found on input line 503.
-
-
-/Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio4-EcualizadorDeFase/Ejercicio-4.tex:503: Package pdftex.def Error: File `../Ejercicio4-EcualizadorDeFase/Informe/highFrecL100Mag.png' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.503 ...izadorDeFase/Informe/highFrecL100Mag.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[51]
-
-LaTeX Warning: File `../Ejercicio4-EcualizadorDeFase/Informe/highFrecL000Fase.png' not found on input line 513.
-
-
-/Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio4-EcualizadorDeFase/Ejercicio-4.tex:513: Package pdftex.def Error: File `../Ejercicio4-EcualizadorDeFase/Informe/highFrecL000Fase.png' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.513 ...zadorDeFase/Informe/highFrecL000Fase.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: File `../Ejercicio4-EcualizadorDeFase/Informe/highFrecL050Fase.png' not found on input line 520.
-
-
-/Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio4-EcualizadorDeFase/Ejercicio-4.tex:520: Package pdftex.def Error: File `../Ejercicio4-EcualizadorDeFase/Informe/highFrecL050Fase.png' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.520 ...zadorDeFase/Informe/highFrecL050Fase.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[52]
-
-LaTeX Warning: File `../Ejercicio4-EcualizadorDeFase/Informe/highFrecL100Fase.png' not found on input line 527.
-
-
-/Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio4-EcualizadorDeFase/Ejercicio-4.tex:527: Package pdftex.def Error: File `../Ejercicio4-EcualizadorDeFase/Informe/highFrecL100Fase.png' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.527 ...zadorDeFase/Informe/highFrecL100Fase.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-) [53]
+[40 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio4-EcualizadorDeFase/Informe/2cambioTriangulo.png>] [41 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio4-EcualizadorDeFase/Informe/EcFinal.png>]
+<../Ejercicio4-EcualizadorDeFase/Informe/circuito_no_ideal.png, id=682, 487.06969pt x 292.09125pt>
+File: ../Ejercicio4-EcualizadorDeFase/Informe/circuito_no_ideal.png Graphic file (type png)
+<use ../Ejercicio4-EcualizadorDeFase/Informe/circuito_no_ideal.png>
+Package pdftex.def Info: ../Ejercicio4-EcualizadorDeFase/Informe/circuito_no_ideal.png  used on input line 229.
+(pdftex.def)             Requested size: 230.46574pt x 138.20547pt.
+ [42 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio4-EcualizadorDeFase/Informe/circuito_no_ideal.png>] [43]
+<../Ejercicio4-EcualizadorDeFase/Informe/lowFrecL000Mag.png, id=724, 489.2679pt x 192.9609pt>
+File: ../Ejercicio4-EcualizadorDeFase/Informe/lowFrecL000Mag.png Graphic file (type png)
+<use ../Ejercicio4-EcualizadorDeFase/Informe/lowFrecL000Mag.png>
+Package pdftex.def Info: ../Ejercicio4-EcualizadorDeFase/Informe/lowFrecL000Mag.png  used on input line 391.
+(pdftex.def)             Requested size: 307.29288pt x 121.195pt.
+<../Ejercicio4-EcualizadorDeFase/Informe/lowFrecL050Mag.png, id=725, 489.2679pt x 192.9609pt>
+File: ../Ejercicio4-EcualizadorDeFase/Informe/lowFrecL050Mag.png Graphic file (type png)
+<use ../Ejercicio4-EcualizadorDeFase/Informe/lowFrecL050Mag.png>
+Package pdftex.def Info: ../Ejercicio4-EcualizadorDeFase/Informe/lowFrecL050Mag.png  used on input line 398.
+(pdftex.def)             Requested size: 307.29288pt x 121.195pt.
+ [44 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio4-EcualizadorDeFase/Informe/lowFrecL000Mag.png>]
+<../Ejercicio4-EcualizadorDeFase/Informe/lowFrecL100Mag.png, id=734, 489.2679pt x 192.9609pt>
+File: ../Ejercicio4-EcualizadorDeFase/Informe/lowFrecL100Mag.png Graphic file (type png)
+<use ../Ejercicio4-EcualizadorDeFase/Informe/lowFrecL100Mag.png>
+Package pdftex.def Info: ../Ejercicio4-EcualizadorDeFase/Informe/lowFrecL100Mag.png  used on input line 405.
+(pdftex.def)             Requested size: 307.29288pt x 121.195pt.
+<../Ejercicio4-EcualizadorDeFase/Informe/lowFrecL000Fase.png, id=735, 489.2679pt x 200.1879pt>
+File: ../Ejercicio4-EcualizadorDeFase/Informe/lowFrecL000Fase.png Graphic file (type png)
+<use ../Ejercicio4-EcualizadorDeFase/Informe/lowFrecL000Fase.png>
+Package pdftex.def Info: ../Ejercicio4-EcualizadorDeFase/Informe/lowFrecL000Fase.png  used on input line 415.
+(pdftex.def)             Requested size: 307.29288pt x 125.73415pt.
+<../Ejercicio4-EcualizadorDeFase/Informe/lowFrecL050Fase.png, id=736, 489.2679pt x 200.1879pt>
+File: ../Ejercicio4-EcualizadorDeFase/Informe/lowFrecL050Fase.png Graphic file (type png)
+<use ../Ejercicio4-EcualizadorDeFase/Informe/lowFrecL050Fase.png>
+Package pdftex.def Info: ../Ejercicio4-EcualizadorDeFase/Informe/lowFrecL050Fase.png  used on input line 422.
+(pdftex.def)             Requested size: 307.29288pt x 125.73415pt.
+<../Ejercicio4-EcualizadorDeFase/Informe/lowFrecL100Fase.png, id=737, 489.2679pt x 200.1879pt>
+File: ../Ejercicio4-EcualizadorDeFase/Informe/lowFrecL100Fase.png Graphic file (type png)
+<use ../Ejercicio4-EcualizadorDeFase/Informe/lowFrecL100Fase.png>
+Package pdftex.def Info: ../Ejercicio4-EcualizadorDeFase/Informe/lowFrecL100Fase.png  used on input line 429.
+(pdftex.def)             Requested size: 307.29288pt x 125.73415pt.
+ [45 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio4-EcualizadorDeFase/Informe/lowFrecL050Mag.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio4-EcualizadorDeFase/Informe/lowFrecL100Mag.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio4-EcualizadorDeFase/Informe/lowFrecL000Fase.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio4-EcualizadorDeFase/Informe/lowFrecL050Fase.png>]
+<../Ejercicio4-EcualizadorDeFase/Informe/medFrecL000Mag.png, id=751, 489.2679pt x 192.9609pt>
+File: ../Ejercicio4-EcualizadorDeFase/Informe/medFrecL000Mag.png Graphic file (type png)
+<use ../Ejercicio4-EcualizadorDeFase/Informe/medFrecL000Mag.png>
+Package pdftex.def Info: ../Ejercicio4-EcualizadorDeFase/Informe/medFrecL000Mag.png  used on input line 441.
+(pdftex.def)             Requested size: 307.29288pt x 121.195pt.
+<../Ejercicio4-EcualizadorDeFase/Informe/medFrecL050Mag.png, id=752, 489.2679pt x 192.9609pt>
+File: ../Ejercicio4-EcualizadorDeFase/Informe/medFrecL050Mag.png Graphic file (type png)
+<use ../Ejercicio4-EcualizadorDeFase/Informe/medFrecL050Mag.png>
+Package pdftex.def Info: ../Ejercicio4-EcualizadorDeFase/Informe/medFrecL050Mag.png  used on input line 448.
+(pdftex.def)             Requested size: 307.29288pt x 121.195pt.
+<../Ejercicio4-EcualizadorDeFase/Informe/medFrecL100Mag.png, id=753, 489.2679pt x 192.9609pt>
+File: ../Ejercicio4-EcualizadorDeFase/Informe/medFrecL100Mag.png Graphic file (type png)
+<use ../Ejercicio4-EcualizadorDeFase/Informe/medFrecL100Mag.png>
+Package pdftex.def Info: ../Ejercicio4-EcualizadorDeFase/Informe/medFrecL100Mag.png  used on input line 455.
+(pdftex.def)             Requested size: 307.29288pt x 121.195pt.
+<../Ejercicio4-EcualizadorDeFase/Informe/medFrecL000Fase.png, id=754, 489.2679pt x 200.1879pt>
+File: ../Ejercicio4-EcualizadorDeFase/Informe/medFrecL000Fase.png Graphic file (type png)
+<use ../Ejercicio4-EcualizadorDeFase/Informe/medFrecL000Fase.png>
+Package pdftex.def Info: ../Ejercicio4-EcualizadorDeFase/Informe/medFrecL000Fase.png  used on input line 465.
+(pdftex.def)             Requested size: 307.29288pt x 125.73415pt.
+ [46 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio4-EcualizadorDeFase/Informe/lowFrecL100Fase.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio4-EcualizadorDeFase/Informe/medFrecL000Mag.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio4-EcualizadorDeFase/Informe/medFrecL050Mag.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio4-EcualizadorDeFase/Informe/medFrecL100Mag.png>]
+<../Ejercicio4-EcualizadorDeFase/Informe/medFrecL050Fase.png, id=767, 489.2679pt x 200.1879pt>
+File: ../Ejercicio4-EcualizadorDeFase/Informe/medFrecL050Fase.png Graphic file (type png)
+<use ../Ejercicio4-EcualizadorDeFase/Informe/medFrecL050Fase.png>
+Package pdftex.def Info: ../Ejercicio4-EcualizadorDeFase/Informe/medFrecL050Fase.png  used on input line 472.
+(pdftex.def)             Requested size: 307.29288pt x 125.73415pt.
+<../Ejercicio4-EcualizadorDeFase/Informe/medFrecL100Fase.png, id=768, 489.2679pt x 200.1879pt>
+File: ../Ejercicio4-EcualizadorDeFase/Informe/medFrecL100Fase.png Graphic file (type png)
+<use ../Ejercicio4-EcualizadorDeFase/Informe/medFrecL100Fase.png>
+Package pdftex.def Info: ../Ejercicio4-EcualizadorDeFase/Informe/medFrecL100Fase.png  used on input line 479.
+(pdftex.def)             Requested size: 307.29288pt x 125.73415pt.
+<../Ejercicio4-EcualizadorDeFase/Informe/highFrecL000Mag.png, id=769, 489.2679pt x 192.9609pt>
+File: ../Ejercicio4-EcualizadorDeFase/Informe/highFrecL000Mag.png Graphic file (type png)
+<use ../Ejercicio4-EcualizadorDeFase/Informe/highFrecL000Mag.png>
+Package pdftex.def Info: ../Ejercicio4-EcualizadorDeFase/Informe/highFrecL000Mag.png  used on input line 490.
+(pdftex.def)             Requested size: 307.29288pt x 121.195pt.
+<../Ejercicio4-EcualizadorDeFase/Informe/highFrecL050Mag.png, id=770, 489.2679pt x 192.9609pt>
+File: ../Ejercicio4-EcualizadorDeFase/Informe/highFrecL050Mag.png Graphic file (type png)
+<use ../Ejercicio4-EcualizadorDeFase/Informe/highFrecL050Mag.png>
+Package pdftex.def Info: ../Ejercicio4-EcualizadorDeFase/Informe/highFrecL050Mag.png  used on input line 497.
+(pdftex.def)             Requested size: 307.29288pt x 121.195pt.
+ [47 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio4-EcualizadorDeFase/Informe/medFrecL000Fase.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio4-EcualizadorDeFase/Informe/medFrecL050Fase.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio4-EcualizadorDeFase/Informe/medFrecL100Fase.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio4-EcualizadorDeFase/Informe/highFrecL000Mag.png>]
+<../Ejercicio4-EcualizadorDeFase/Informe/highFrecL100Mag.png, id=783, 489.2679pt x 192.9609pt>
+File: ../Ejercicio4-EcualizadorDeFase/Informe/highFrecL100Mag.png Graphic file (type png)
+<use ../Ejercicio4-EcualizadorDeFase/Informe/highFrecL100Mag.png>
+Package pdftex.def Info: ../Ejercicio4-EcualizadorDeFase/Informe/highFrecL100Mag.png  used on input line 504.
+(pdftex.def)             Requested size: 307.29288pt x 121.195pt.
+<../Ejercicio4-EcualizadorDeFase/Informe/highFrecL000Fase.png, id=784, 489.2679pt x 200.1879pt>
+File: ../Ejercicio4-EcualizadorDeFase/Informe/highFrecL000Fase.png Graphic file (type png)
+<use ../Ejercicio4-EcualizadorDeFase/Informe/highFrecL000Fase.png>
+Package pdftex.def Info: ../Ejercicio4-EcualizadorDeFase/Informe/highFrecL000Fase.png  used on input line 514.
+(pdftex.def)             Requested size: 307.29288pt x 125.73415pt.
+<../Ejercicio4-EcualizadorDeFase/Informe/highFrecL050Fase.png, id=785, 489.2679pt x 200.1879pt>
+File: ../Ejercicio4-EcualizadorDeFase/Informe/highFrecL050Fase.png Graphic file (type png)
+<use ../Ejercicio4-EcualizadorDeFase/Informe/highFrecL050Fase.png>
+Package pdftex.def Info: ../Ejercicio4-EcualizadorDeFase/Informe/highFrecL050Fase.png  used on input line 521.
+(pdftex.def)             Requested size: 307.29288pt x 125.73415pt.
+<../Ejercicio4-EcualizadorDeFase/Informe/highFrecL100Fase.png, id=786, 489.2679pt x 200.1879pt>
+File: ../Ejercicio4-EcualizadorDeFase/Informe/highFrecL100Fase.png Graphic file (type png)
+<use ../Ejercicio4-EcualizadorDeFase/Informe/highFrecL100Fase.png>
+Package pdftex.def Info: ../Ejercicio4-EcualizadorDeFase/Informe/highFrecL100Fase.png  used on input line 528.
+(pdftex.def)             Requested size: 307.29288pt x 125.73415pt.
+ [48 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio4-EcualizadorDeFase/Informe/highFrecL050Mag.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio4-EcualizadorDeFase/Informe/highFrecL100Mag.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio4-EcualizadorDeFase/Informe/highFrecL000Fase.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio4-EcualizadorDeFase/Informe/highFrecL050Fase.png>]) [49 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio4-EcualizadorDeFase/Informe/highFrecL100Fase.png>]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 30.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 30.
- (/Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/main.aux
-LaTeX Info: Redefining \. on input line 20.
-LaTeX Info: Redefining \% on input line 20.
-)
+ (/Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/main.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 30.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 30.
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: B64E8E40EF293D7507EBB0B8A1ED20A5;3907.
 
 
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  8EC1ECF87E2A62B911A35504930F6909;3207.
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+LaTeX Warning: There were multiply-defined labels.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 30.
  ) 
 Here is how much of TeX's memory you used:
- 35145 strings out of 480608
- 838643 string characters out of 5903630
- 1181705 words of memory out of 5000000
- 50136 multiletter control sequences out of 15000+600000
- 545563 words of font info for 75 fonts, out of 8000000 for 9000
+ 34945 strings out of 480608
+ 826914 string characters out of 5903630
+ 1185662 words of memory out of 5000000
+ 49957 multiletter control sequences out of 15000+600000
+ 545898 words of font info for 76 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 71i,16n,73p,1348b,804s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb>
-Output written on /Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/main.pdf (54 pages, 2446548 bytes).
+ 71i,16n,73p,1351b,801s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
+Output written on /Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/main.pdf (50 pages, 2787583 bytes).
 PDF statistics:
- 674 PDF objects out of 1000 (max. 8388607)
- 495 compressed objects within 5 object streams
- 246 named destinations out of 1000 (max. 500000)
- 308 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 937 PDF objects out of 1000 (max. 8388607)
+ 720 compressed objects within 8 object streams
+ 250 named destinations out of 1000 (max. 500000)
+ 792 words of extra memory for PDF output out of 10000 (max. 10000000)
 
