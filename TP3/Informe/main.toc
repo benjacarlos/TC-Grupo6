@@ -1,4 +1,4 @@
-\babel@toc {spanish}{}
+\babel@toc {english}{}
 \contentsline {section}{\numberline {1}Filtro con GIC}{2}{section.1}%
 \contentsline {subsection}{\numberline {1.1}Introducción al GIC}{2}{subsection.1.1}%
 \contentsline {subsection}{\numberline {1.2}Diseño de un Filtro Pasa-Todo}{2}{subsection.1.2}%
@@ -19,23 +19,11 @@
 \contentsline {subsubsection}{\numberline {1.5.3}Limitación por Señal}{13}{subsubsection.1.5.3}%
 \contentsline {subsection}{\numberline {1.6}Conclusión}{13}{subsection.1.6}%
 \contentsline {section}{\numberline {2}Introducción a Diseño de Filtros}{14}{section.2}%
-\contentsline {subsubsection}{\numberline {2.0.1}Introducción a Gyrators}{14}{subsubsection.2.0.1}%
-\contentsline {subsubsection}{\numberline {2.0.2}Implementación real de un Gyrator}{14}{subsubsection.2.0.2}%
-\contentsline {subsubsection}{\numberline {2.0.3}Análisis de $Z_{in}$}{15}{subsubsection.2.0.3}%
-\contentsline {subsubsection}{\numberline {2.0.4}Elección del amplificador operacional para el Gyrator}{17}{subsubsection.2.0.4}%
-\contentsline {subsection}{\numberline {2.1}Filtro Pasa-Bajos (Low-Pass)}{17}{subsection.2.1}%
-\contentsline {subsection}{\numberline {2.2}Filtro Pasa-Altos (High-Pass)}{22}{subsection.2.2}%
-\contentsline {subsection}{\numberline {2.3}Filtro Rechaza-Banda (Band-Rejection)}{26}{subsection.2.3}%
-\contentsline {subsection}{\numberline {2.4}Filtro Pasa-Banda (Band-Pass)}{29}{subsection.2.4}%
-\contentsline {subsection}{\numberline {2.5}Implementación}{33}{subsection.2.5}%
-\contentsline {subsubsection}{\numberline {2.5.1}Consideraciones de diseño}{33}{subsubsection.2.5.1}%
-\contentsline {section}{\numberline {3}Amplificador de Instrumentación}{36}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Amplificador de Instrumentación}{36}{subsection.3.1}%
-\contentsline {section}{\numberline {4}Control de Tonos y Ecualizador de Fase}{37}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Ecualizador de Fase}{37}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Análisis matemático}{37}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}Elección de componentes}{43}{subsection.4.3}%
-\contentsline {subsection}{\numberline {4.4}Simulaciones}{43}{subsection.4.4}%
-\contentsline {subsubsection}{\numberline {4.4.1}Frecuencias bajas}{43}{subsubsection.4.4.1}%
-\contentsline {subsubsection}{\numberline {4.4.2}Frecuencias medias}{47}{subsubsection.4.4.2}%
-\contentsline {subsubsection}{\numberline {4.4.3}Frecuencias altas}{50}{subsubsection.4.4.3}%
+\contentsline {section}{\numberline {3}Amplificador de Instrumentación}{15}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Amplificador de Instrumentación}{15}{subsection.3.1}%
+\contentsline {section}{\numberline {4}Control de Tonos y Ecualizador de Fase}{16}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Ecualizador de Fase}{16}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Análisis matemático}{16}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Elección de componentes}{23}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Simulaciones}{23}{subsection.4.4}%
+\contentsline {subsubsection}{\numberline {4.4.1}Frecuencias bajas}{23}{subsubsection.4.4.1}%
