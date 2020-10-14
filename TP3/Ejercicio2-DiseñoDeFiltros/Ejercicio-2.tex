@@ -1,8 +1,4 @@
-3. Determinar rangos de operación en zona lineal. Se espera adecuada profundidad en este análisis.
-5. Implementar el circuito y comprobar su funcionamiento con las mediciones correspondientes.
-6. Analizar el comportamiento del sistema en altas frecuencias.
-
-En la presente sección, se implementarán cuatro filtros de segundo orden según las siguientes especificaciones:
+En la presente sección se implementarán cuatro filtros de segundo orden según las siguientes especificaciones:
 
 \begin{table}[H]
     \centering
@@ -323,6 +319,11 @@ Se verifica a continuación el rango de frecuencias de trabajo para el gyrator c
 
 $$1 >> S(0.1 \mu )(10) \longrightarrow 1  >> 2 \pi f 10^{-6} \longrightarrow f << 160 KHz$$
 
+La función transferencia del filtro considerando el rango de trabajo anterior y la implementación del gyrator
+estará dada por:
+
+$$H(S)=\frac{1}{S^2(C_gR_gR_L)C+SC(R+R_L)+1}$$
+
 \subsubsection{Análisis mediante simulación}
 
 Se procedió a simular el comportamiento del circuito RLC equivalente con los valores obtenidos de la implementación con el 
@@ -342,14 +343,14 @@ buscadas:
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.6\textwidth]{../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-rlc-pasa-bajos-amplitud.png}
-    \caption{Circuito Pasa-Bajos de segundo orden}
+    \includegraphics[width=0.7\textwidth]{../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-rlc-pasa-bajos-amplitud.png}
+    \caption{Respuesta en Frecuencia - Amplitud - Filtro Pasa-Bajos Equivalente}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.6\textwidth]{../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-rlc-pasa-bajos-fase.png}
-    \caption{Circuito Pasa-Bajos de segundo orden}
+    \includegraphics[width=0.7\textwidth]{../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-rlc-pasa-bajos-fase.png}
+    \caption{Respuesta en Frecuencia - Fase - Filtro Pasa-Bajos Equivalente}
 \end{figure}
 
 Se pudo comprobar entonces que para el circuito equivalente con gyrator se cumple lo establecido en la plantilla.
@@ -370,13 +371,13 @@ Lo obtenido fue lo siguiente:
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.7\textwidth]{../Ejercicio2-DiseñoDeFiltros/Imagenes/Pasa-Bajos-Marcado-Opamp.jpg}
-    \caption{Circuito Pasa-Bajos de segundo orden}
+    \caption{Respuesta en Frecuencia Simulada - Amplitud - Filtro Pasa-Bajos con Gyrator}
 \end{figure}
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.7\textwidth]{../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-opamp-pasa-bajos-fase.png}
-    \caption{Circuito Pasa-Bajos de segundo orden}
+    \caption{Respuesta en Frecuencia Simulada - Fase - Filtro Pasa-Bajos con Gyrator}
 \end{figure}
 
 Se puede comprobar aquí también que la plantilla se sigue cumpliendo obteniendo el filtro pasa-bajos con el comportamiento deseado.
@@ -388,13 +389,13 @@ Como punto final, se empleó el circuito diseñado en la $Digital$ $Explorer$ $B
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.7\textwidth]{../Ejercicio2-DiseñoDeFiltros/Imagenes/pasa-bajos-final-amplitud.png}
-    \caption{Circuito Pasa-Bajos de segundo orden}
+    \caption{Respuesta en Frecuencia - Amplitud - Filtro Pasa-Bajos Comparativo}
 \end{figure}
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.7\textwidth]{../Ejercicio2-DiseñoDeFiltros/Imagenes/pasa-bajos-final-fase.png}
-    \caption{Circuito Pasa-Bajos de segundo orden}
+    \caption{Respuesta en Frecuencia - Fase - Filtro Pasa-Bajos Equivalente}
 \end{figure}
 
 
@@ -526,6 +527,10 @@ El rango de trabajo ideal del "inductor" al haber elegido los mismos valores de 
 
 $$f << 160 KHz$$
 
+Para el rango de trabajo del gyrator, la función transferencia estará representada por :
+
+$$H(S)=\frac{S^{2}(C_gR_gR_L)C + SCR_L}{S^2(C_gR_gR_L)C+SC(R+R_L)+1}$$
+
 \subsubsection{Análisis mediante simulación}
 
 Se procedió a simular el comportamiento del circuito RLC equivalente con el gyrator implementado para observar si su comportamiento es el esperado:
@@ -544,13 +549,13 @@ Se procedió a simular el comportamiento del circuito RLC equivalente con el gyr
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.6\textwidth]{../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-rlc-pasa-altos-amplitud.png}
-    \caption{Circuito Pasa-Bajos de segundo orden}
+    \caption{Respuesta en Frecuencia - Amplitud - Filtro Pasa-Altos Equivalente}
 \end{figure}
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.6\textwidth]{../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-rlc-pasa-altos-fase.png}
-    \caption{Circuito Pasa-Bajos de segundo orden}
+    \caption{Respuesta en Frecuencia - Fase - Filtro Pasa-Altos Equivalente}
 \end{figure}
 
 Para el circuito equivalente RLC se cumple lo establecido en la plantilla.
@@ -569,14 +574,14 @@ Lo obtenido fue lo siguiente:
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.6\textwidth]{../Ejercicio2-DiseñoDeFiltros/Imagenes/Pasa-Altos-Marcado-Opamp.jpg}
-    \caption{Circuito Pasa-Bajos de segundo orden}
+    \includegraphics[width=0.7\textwidth]{../Ejercicio2-DiseñoDeFiltros/Imagenes/Pasa-Altos-Marcado-Opamp.jpg}
+    \caption{Respuesta en Frecuencia Simulada - Amplitud - Filtro Pasa-Altos con Gyrator}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.6\textwidth]{../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-opamp-pasa-altos-fase.png}
-    \caption{Circuito Pasa-Bajos de segundo orden}
+    \includegraphics[width=0.7\textwidth]{../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-opamp-pasa-altos-fase.png}
+    \caption{Respuesta en Frecuencia Simulada - Fase - Filtro Pasa-Altos con Gyrator}
 \end{figure}
 
 Se puede comprobar aquí también que la plantilla se sigue cumpliendo obteniendo el filtro pasa-altos buscado.
@@ -587,14 +592,14 @@ Para la contrastación empírica, se midió la respuesta en frecuencia utilizand
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.6\textwidth]{../Ejercicio2-DiseñoDeFiltros/Imagenes/pasa-altos-final-amplitud.png}
-    \caption{Circuito Pasa-Bajos de segundo orden}
+    \includegraphics[width=0.7\textwidth]{../Ejercicio2-DiseñoDeFiltros/Imagenes/pasa-altos-final-amplitud.png}
+    \caption{Respuesta en Frecuencia - Amplitud - Filtro Pasa-Altos Comparativa}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.6\textwidth]{../Ejercicio2-DiseñoDeFiltros/Imagenes/pasa-altos-final-fase.png}
-    \caption{Circuito Pasa-Bajos de segundo orden}
+    \includegraphics[width=0.7\textwidth]{../Ejercicio2-DiseñoDeFiltros/Imagenes/pasa-altos-final-fase.png}
+    \caption{Respuesta en Frecuencia - Fase - Filtro Pasa-Altos Comparativa}
 \end{figure}
 
 Nuevamente podemos ver que el modelo simulado con Gyrator y el medido coinciden en gran medida. Aquí a diferencia del filtro anterior,
@@ -688,6 +693,10 @@ Cuyo rango de trabajo se dará también siempre y cuando:
 
 $$f << 160 KHz$$
 
+La función transferencia estará dada por:
+
+$$H(S)=\frac{S^{2}(C_gR_gR_L)C + SCR_L + 1}{S^2(C_gR_gR_L)C+ SC(R+R_L)+1}$$
+
 \subsubsection{Análisis mediante simulación}
 
 Se procedió a simular el comportamiento del circuito RLC equivalente para observar su comportamiento:
@@ -706,13 +715,13 @@ Se procedió a simular el comportamiento del circuito RLC equivalente para obser
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.6\textwidth]{../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-rlc-rechaza-banda-amplitud.png}
-    \caption{Circuito Pasa-Bajos de segundo orden}
+    \caption{Respuesta en Frecuencia - Amplitud - Filtro Rechaza-Banda Equivalente}
 \end{figure}
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.6\textwidth]{../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-rlc-rechaza-banda-fase.png}
-    \caption{Circuito Pasa-Bajos de segundo orden}
+    \caption{Respuesta en Frecuencia - Fase - Filtro Rechaza-Banda Equivalente}
 \end{figure}
 
 Se comprobó que para el circuito equivalente RLC  se cumple lo establecido en la plantilla.
@@ -732,13 +741,13 @@ Lo obtenido fue lo siguiente:
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.7\textwidth]{../Ejercicio2-DiseñoDeFiltros/Imagenes/Rechaza-Banda-Marcado-Opamp.jpg}
-    \caption{Circuito Pasa-Bajos de segundo orden}
+    \caption{Respuesta en Frecuencia Simulada - Amplitud - Filtro Rechaza-Banda con Gyrator}
 \end{figure}
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.7\textwidth]{../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-opamp-rechaza-banda-fase.png}
-    \caption{Circuito Pasa-Bajos de segundo orden}
+    \caption{Respuesta en Frecuencia Simulada - Fase - Filtro Rechaza-Banda con Gyrator}
 \end{figure}
 
 Se puede comprobar aquí también que la plantilla se sigue cumpliendo obteniendo el filtro rechaza-banda deseado.
@@ -750,13 +759,13 @@ Se procedió a armar el circuito en la $Electronics$ $Explorer$ $Board$, para me
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.7\textwidth]{../Ejercicio2-DiseñoDeFiltros/Imagenes/rechaza-banda-final-amplitud.png}
-    \caption{Circuito Pasa-Bajos de segundo orden}
+    \caption{Respuesta en Frecuencia - Amplitud - Filtro Rechaza-Banda comparativo}
 \end{figure}
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.7\textwidth]{../Ejercicio2-DiseñoDeFiltros/Imagenes/rechaza-banda-final-fase.png}
-    \caption{Circuito Pasa-Bajos de segundo orden}
+    \caption{Respuesta en Frecuencia - Fase - Filtro Rechaza-Banda comparativo}
 \end{figure}
 
 Aquí como solo se contaba con una especificación el diseño fue más sencillo. El valor de la $f_c$ obtenida empíricamente coincide con lo buscado
@@ -778,7 +787,7 @@ Realizaremos como último filtro, un pasa-banda de segundo orden clásico, con l
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.5\textwidth]{../Ejercicio2-DiseñoDeFiltros/Imagenes/diagrama-pasa-banda.png}
-    \caption{Circuito Pasa-Altos de segundo orden}
+    \caption{Circuito Pasa-Banda de segundo orden}
 \end{figure}
 
 \subsection{Especificaciones}
@@ -789,7 +798,7 @@ La única especificación en este caso es:
 	\item E1: $f_c=10 KHz$
 \end{itemize}
 
-\subsection{Diseño del filtro}
+\subsubsection{Diseño del filtro}
 
 Nuevamente utilizando la transformada de Laplace obtenemos la función de transferencia para el último filtro
 a diseñar:
@@ -825,7 +834,7 @@ de corte.
     \caption{Valores de elementos para el filtro pasa-banda con circuito RLC}
     \end{table}
 
-\subsection{Diseño de filtro con Gyrator}
+\subsubsection{Diseño de filtro con Gyrator}
 
 Para el gyrator, se escogieron los siguientes elementos:
 
@@ -842,7 +851,11 @@ Para el gyrator, se escogieron los siguientes elementos:
 
 El rango de trabajo del inductor con gyrator es el mismo que para los tres filtros anteriores ($ f << 160 KHz$).
 
-\subsection{Análisis mediante simulación}
+La función transferencia resultante es:
+
+$$H(S)=\frac{S(C_gR_gR_L) + R_L}{S^2(C_gR_gR_L)CR+S(CR_LR+C_gR_gR_L)+R+R_L}$$
+
+\subsubsection{Análisis mediante simulación}
 
 Se simuló el comportamiento del circuito RLC equivalente para verificar el correcto funcionamiento del filtro.
 
@@ -861,13 +874,13 @@ Se simuló el comportamiento del circuito RLC equivalente para verificar el corr
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.6\textwidth]{../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-rlc-pasa-banda-amplitud.png}
-    \caption{Circuito Pasa-Bajos de segundo orden}
+    \caption{Respuesta en Frecuencia - Amplitud - Filtro Pasa-Banda Equivalente}
 \end{figure}
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.6\textwidth]{../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-rlc-pasa-banda-fase.png}
-    \caption{Circuito Pasa-Bajos de segundo orden}
+    \caption{Respuesta en Frecuencia - Fase - Filtro Pasa-Banda Equivalente}
 \end{figure}
 
 A simple vista se puede observar que la frecuencia de corte es muy cercana a los $10 KHz$, con el corrimiento dado por
@@ -878,7 +891,7 @@ La simulación con la implementación del gyrator arrojó los siguiente resultad
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.5\textwidth]{../Ejercicio2-DiseñoDeFiltros/Imagenes/pasa-banda-opamp-diagrama.png}
-    \caption{Circuito empleado para el filtro Pasa-Bandas - Simulación en LTSpice}
+    \caption{Circuito empleado para el filtro Pasa-Banda - Simulación en LTSpice}
 \end{figure}
 
 Lo obtenido fue lo siguiente:
@@ -886,13 +899,13 @@ Lo obtenido fue lo siguiente:
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.7\textwidth]{../Ejercicio2-DiseñoDeFiltros/Imagenes/Pasa-Banda-Marcado-Opamp.jpg}
-    \caption{Circuito Pasa-Bajos de segundo orden}
+    \caption{Respuesta en Frecuencia Simulada - Amplitud - Filtro Pasa-Banda con Gyrator}
 \end{figure}
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.7\textwidth]{../Ejercicio2-DiseñoDeFiltros/Imagenes/bode-opamp-pasa-banda-fase.png}
-    \caption{Circuito Pasa-Bajos de segundo orden}
+    \caption{Respuesta en Frecuencia Simulada - Fase - Filtro Pasa-Banda con Gyrator}
 \end{figure}
 
 Se puede comprobar aquí también que la plantilla se sigue cumpliendo obteniendo el filtro pasa-banda buscado con un corrimiento
@@ -905,13 +918,13 @@ Se procedió a armar el circuito en la $Electronics$ $Explorer$ $Board$, para me
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.7\textwidth]{../Ejercicio2-DiseñoDeFiltros/Imagenes/pasa-banda-final-amplitud.png}
-    \caption{Circuito Pasa-Bajos de segundo orden}
+    \caption{Respuesta en Frecuencia - Amplitud - Filtro Pasa-Banda Comparativo}
 \end{figure}
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.7\textwidth]{../Ejercicio2-DiseñoDeFiltros/Imagenes/pasa-bandaa-final-fase.png}
-    \caption{Circuito Pasa-Bajos de segundo orden}
+    \caption{Respuesta en Frecuencia - Fase - Filtro Pasa-Banda Comparativo}
 \end{figure}
 
 Lo primero que llama la atención es que la atenuación para frecuencias aproximadamente menores a $1 KHz$ no es similar

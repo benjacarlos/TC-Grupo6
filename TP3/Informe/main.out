@@ -43,13 +43,13 @@
 \BOOKMARK [3][-]{subsubsection.2.4.5}{An\341lisis emp\355rico}{subsection.2.4}% 43
 \BOOKMARK [2][-]{subsection.2.5}{Filtro Pasa-Banda \(Band-Pass\)}{section.2}% 44
 \BOOKMARK [2][-]{subsection.2.6}{Especificaciones}{section.2}% 45
-\BOOKMARK [2][-]{subsection.2.7}{Dise\361o del filtro}{section.2}% 46
-\BOOKMARK [2][-]{subsection.2.8}{Dise\361o de filtro con Gyrator}{section.2}% 47
-\BOOKMARK [2][-]{subsection.2.9}{An\341lisis mediante simulaci\363n}{section.2}% 48
-\BOOKMARK [2][-]{subsection.2.10}{An\341lisis emp\355rico}{section.2}% 49
-\BOOKMARK [2][-]{subsection.2.11}{Implementaci\363n}{section.2}% 50
-\BOOKMARK [3][-]{subsubsection.2.11.1}{Consideraciones de dise\361o}{subsection.2.11}% 51
-\BOOKMARK [2][-]{subsection.2.12}{Conclusi\363n}{section.2}% 52
+\BOOKMARK [3][-]{subsubsection.2.6.1}{Dise\361o del filtro}{subsection.2.6}% 46
+\BOOKMARK [3][-]{subsubsection.2.6.2}{Dise\361o de filtro con Gyrator}{subsection.2.6}% 47
+\BOOKMARK [3][-]{subsubsection.2.6.3}{An\341lisis mediante simulaci\363n}{subsection.2.6}% 48
+\BOOKMARK [2][-]{subsection.2.7}{An\341lisis emp\355rico}{section.2}% 49
+\BOOKMARK [2][-]{subsection.2.8}{Implementaci\363n}{section.2}% 50
+\BOOKMARK [3][-]{subsubsection.2.8.1}{Consideraciones de dise\361o}{subsection.2.8}% 51
+\BOOKMARK [2][-]{subsection.2.9}{Conclusi\363n}{section.2}% 52
 \BOOKMARK [1][-]{section.3}{Amplificador de Instrumentaci\363n}{}% 53
 \BOOKMARK [2][-]{subsection.3.1}{Amplificador de Instrumentaci\363n}{section.3}% 54
 \BOOKMARK [1][-]{section.4}{Control de Tonos y Ecualizador de Fase}{}% 55
