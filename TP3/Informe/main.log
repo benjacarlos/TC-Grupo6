@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.11.21)  13 OCT 2020 21:34
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.11.21)  14 OCT 2020 19:56
 entering extended mode
 **./main.tex
 (main.tex
@@ -1213,14 +1213,7 @@ Package: booktabs 2005/04/14 v1.61803 publication quality tables
 ("C:\Users\Paulo\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\frontendlaye
 r\tikz\libraries\tikzlibrarybabel.code.tex"
 File: tikzlibrarybabel.code.tex 2013/06/24 v3.0.1a (rcs-revision 1.1)
-)) (main.aux
-
-LaTeX Warning: Label `Y' multiply defined.
-
-
-LaTeX Warning: Label `trans_ideal_aplicada' multiply defined.
-
-)
+)) (main.aux)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 4.
@@ -1237,7 +1230,8 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 4.
 LaTeX Font Info:    ... okay on input line 4.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 4.
 LaTeX Font Info:    Try loading font information for TS1+cmr on input line 4.
- ("C:\Users\Paulo\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
+
+("C:\Users\Paulo\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    ... okay on input line 4.
@@ -1346,7 +1340,9 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
 {C:/Users/Paulo/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}])
-(main.toc)
+
+Package hyperref Warning: old toc file detected, not used; run LaTeX again.
+
 \tf@toc=\write5
 \openout5 = `main.toc'.
 
@@ -1356,29 +1352,38 @@ been already used, duplicate ignored
                    \relax 
 l.10 \newpage
               [1] (../Ejercicio1-FiltroConGIC/Ejercicio-1.tex
-<../Ejercicio1-FiltroConGIC/Informe/giccir.jpg, id=168, 513.92pt x 279.0425pt>
+<../Ejercicio1-FiltroConGIC/Informe/giccir.jpg, id=142, 513.92pt x 279.0425pt>
 File: ../Ejercicio1-FiltroConGIC/Informe/giccir.jpg Graphic file (type jpg)
 <use ../Ejercicio1-FiltroConGIC/Informe/giccir.jpg>
 Package pdftex.def Info: ../Ejercicio1-FiltroConGIC/Informe/giccir.jpg  used on
  input line 10.
 (pdftex.def)             Requested size: 359.74153pt x 195.3284pt.
-<../Ejercicio1-FiltroConGIC/Informe/circuito.png, id=169, 476.982pt x 239.6955p
+<../Ejercicio1-FiltroConGIC/Informe/circuito.png, id=143, 476.982pt x 239.6955p
 t>
 File: ../Ejercicio1-FiltroConGIC/Informe/circuito.png Graphic file (type png)
 <use ../Ejercicio1-FiltroConGIC/Informe/circuito.png>
 Package pdftex.def Info: ../Ejercicio1-FiltroConGIC/Informe/circuito.png  used 
 on input line 28.
 (pdftex.def)             Requested size: 333.88512pt x 167.78569pt.
- [2 <../Ejercicio1-FiltroConGIC/Informe/giccir.jpg>] [3 <../Ejercicio1-FiltroCo
-nGIC/Informe/circuito.png>]
-<../Ejercicio1-FiltroConGIC/Informe/polor6.png, id=198, 502.87875pt x 305.64188
+ [2 <../Ejercicio1-FiltroConGIC/Informe/giccir.jpg>]
+
+LaTeX Warning: Reference `ej1eq2' on page 3 undefined on input line 62.
+
+
+LaTeX Warning: Reference `ej1eq3' on page 3 undefined on input line 62.
+
+
+LaTeX Warning: Reference `ej1eq1' on page 3 undefined on input line 62.
+
+[3 <../Ejercicio1-FiltroConGIC/Informe/circuito.png>]
+<../Ejercicio1-FiltroConGIC/Informe/polor6.png, id=170, 502.87875pt x 305.64188
 pt>
 File: ../Ejercicio1-FiltroConGIC/Informe/polor6.png Graphic file (type png)
 <use ../Ejercicio1-FiltroConGIC/Informe/polor6.png>
 Package pdftex.def Info: ../Ejercicio1-FiltroConGIC/Informe/polor6.png  used on
  input line 117.
 (pdftex.def)             Requested size: 402.30354pt x 244.51381pt.
-<../Ejercicio1-FiltroConGIC/Informe/polor6-1.png, id=199, 526.96875pt x 395.226
+<../Ejercicio1-FiltroConGIC/Informe/polor6-1.png, id=171, 526.96875pt x 395.226
 56pt>
 File: ../Ejercicio1-FiltroConGIC/Informe/polor6-1.png Graphic file (type png)
 <use ../Ejercicio1-FiltroConGIC/Informe/polor6-1.png>
@@ -1401,16 +1406,29 @@ Overfull \hbox (25.00003pt too wide) in paragraph at lines 115--124
 []$ 
  []
 
-[4 <../Ejercicio1-FiltroConGIC/Informe/polor6.png (PNG copy)>] [5 <../Ejercicio
-1-FiltroConGIC/Informe/polor6-1.png (PNG copy)>] [6]
-<../Ejercicio1-FiltroConGIC/Informe/rfmag.png, id=222, 526.96875pt x 395.22656p
+[4 <../Ejercicio1-FiltroConGIC/Informe/polor6.png (PNG copy)>]
+
+LaTeX Warning: Reference `ej1eq5' on page 5 undefined on input line 142.
+
+
+LaTeX Warning: Reference `ej1eq6' on page 5 undefined on input line 142.
+
+[5 <../Ejercicio1-FiltroConGIC/Informe/polor6-1.png (PNG copy)>]
+
+LaTeX Warning: Reference `ej1resp' on page 6 undefined on input line 172.
+
+
+LaTeX Warning: Reference `ej1eq7' on page 6 undefined on input line 198.
+
+[6]
+<../Ejercicio1-FiltroConGIC/Informe/rfmag.png, id=190, 526.96875pt x 395.22656p
 t>
 File: ../Ejercicio1-FiltroConGIC/Informe/rfmag.png Graphic file (type png)
 <use ../Ejercicio1-FiltroConGIC/Informe/rfmag.png>
 Package pdftex.def Info: ../Ejercicio1-FiltroConGIC/Informe/rfmag.png  used on 
 input line 250.
 (pdftex.def)             Requested size: 368.8756pt x 276.6567pt.
-<../Ejercicio1-FiltroConGIC/Informe/rfpha.png, id=223, 526.96875pt x 395.22656p
+<../Ejercicio1-FiltroConGIC/Informe/rfpha.png, id=191, 526.96875pt x 395.22656p
 t>
 File: ../Ejercicio1-FiltroConGIC/Informe/rfpha.png Graphic file (type png)
 <use ../Ejercicio1-FiltroConGIC/Informe/rfpha.png>
@@ -1418,7 +1436,10 @@ Package pdftex.def Info: ../Ejercicio1-FiltroConGIC/Informe/rfpha.png  used on
 input line 251.
 (pdftex.def)             Requested size: 368.8756pt x 276.6567pt.
  [7]
-<../Ejercicio1-FiltroConGIC/Informe/desphaOsc.png, id=231, 505.89pt x 233.673pt
+
+LaTeX Warning: Reference `ej1despha' on page 8 undefined on input line 256.
+
+<../Ejercicio1-FiltroConGIC/Informe/desphaOsc.png, id=198, 505.89pt x 233.673pt
 >
 File: ../Ejercicio1-FiltroConGIC/Informe/desphaOsc.png Graphic file (type png)
 <use ../Ejercicio1-FiltroConGIC/Informe/desphaOsc.png>
@@ -1426,12 +1447,11 @@ Package pdftex.def Info: ../Ejercicio1-FiltroConGIC/Informe/desphaOsc.png  used
  on input line 260.
 (pdftex.def)             Requested size: 505.88875pt x 233.67242pt.
 
-
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [8 <../Ejercicio1-FiltroConGIC/Informe/rfmag.png (PNG copy)> <../Ejercicio1-Fil
 troConGIC/Informe/rfpha.png (PNG copy)>]
-<../Ejercicio1-FiltroConGIC/Informe/zin.png, id=238, 892.83563pt x 364.36125pt>
+<../Ejercicio1-FiltroConGIC/Informe/zin.png, id=204, 892.83563pt x 364.36125pt>
 
 File: ../Ejercicio1-FiltroConGIC/Informe/zin.png Graphic file (type png)
 <use ../Ejercicio1-FiltroConGIC/Informe/zin.png>
@@ -1446,7 +1466,7 @@ Overfull \hbox (23.55591pt too wide) in paragraph at lines 275--276
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<../Ejercicio1-FiltroConGIC/Informe/zout.png, id=239, 789.70032pt x 395.22656pt
+<../Ejercicio1-FiltroConGIC/Informe/zout.png, id=205, 789.70032pt x 395.22656pt
 >
 File: ../Ejercicio1-FiltroConGIC/Informe/zout.png Graphic file (type png)
 <use ../Ejercicio1-FiltroConGIC/Informe/zout.png>
@@ -1456,13 +1476,13 @@ nput line 292.
 [9 <../Ejercicio1-FiltroConGIC/Informe/desphaOsc.png (PNG copy)>] [10 <../Ejerc
 icio1-FiltroConGIC/Informe/zin.png (PNG copy)> <../Ejercicio1-FiltroConGIC/Info
 rme/zout.png (PNG copy)>]
-<../Ejercicio1-FiltroConGIC/Informe/re.png, id=252, 526.96875pt x 395.22656pt>
+<../Ejercicio1-FiltroConGIC/Informe/re.png, id=219, 526.96875pt x 395.22656pt>
 File: ../Ejercicio1-FiltroConGIC/Informe/re.png Graphic file (type png)
 <use ../Ejercicio1-FiltroConGIC/Informe/re.png>
 Package pdftex.def Info: ../Ejercicio1-FiltroConGIC/Informe/re.png  used on inp
 ut line 315.
 (pdftex.def)             Requested size: 421.57556pt x 316.18167pt.
-<../Ejercicio1-FiltroConGIC/Informe/re1.png, id=253, 508.299pt x 233.673pt>
+<../Ejercicio1-FiltroConGIC/Informe/re1.png, id=220, 508.299pt x 233.673pt>
 File: ../Ejercicio1-FiltroConGIC/Informe/re1.png Graphic file (type png)
 <use ../Ejercicio1-FiltroConGIC/Informe/re1.png>
 Package pdftex.def Info: ../Ejercicio1-FiltroConGIC/Informe/re1.png  used on in
@@ -1470,13 +1490,17 @@ put line 324.
 (pdftex.def)             Requested size: 406.63974pt x 186.93864pt.
  [11 <../Ejercicio1-FiltroConGIC/Informe/re.png (PNG copy)> <../Ejercicio1-Filt
 roConGIC/Informe/re1.png (PNG copy)>]
-<../Ejercicio1-FiltroConGIC/Informe/re1k.png, id=261, 508.299pt x 233.673pt>
+<../Ejercicio1-FiltroConGIC/Informe/re1k.png, id=228, 508.299pt x 233.673pt>
 File: ../Ejercicio1-FiltroConGIC/Informe/re1k.png Graphic file (type png)
 <use ../Ejercicio1-FiltroConGIC/Informe/re1k.png>
 Package pdftex.def Info: ../Ejercicio1-FiltroConGIC/Informe/re1k.png  used on i
 nput line 337.
 (pdftex.def)             Requested size: 406.63974pt x 186.93864pt.
-<../Ejercicio1-FiltroConGIC/Informe/limtensionpng.png, id=263, 508.299pt x 233.
+
+
+LaTeX Warning: Reference `ej1limt' on page 12 undefined on input line 348.
+
+<../Ejercicio1-FiltroConGIC/Informe/limtensionpng.png, id=229, 508.299pt x 233.
 673pt>
 File: ../Ejercicio1-FiltroConGIC/Informe/limtensionpng.png Graphic file (type p
 ng)
@@ -1484,11 +1508,18 @@ ng)
 Package pdftex.def Info: ../Ejercicio1-FiltroConGIC/Informe/limtensionpng.png  
 used on input line 352.
 (pdftex.def)             Requested size: 406.63974pt x 186.93864pt.
- [12 <../Ejercicio1-FiltroConGIC/Informe/re1k.png (PNG copy)> <../Ejercicio1-Fi
-ltroConGIC/Informe/limtensionpng.png (PNG copy)>]) [13] [14]
+
+LaTeX Warning: Reference `ej1rf' on page 12 undefined on input line 361.
+
+[12 <../Ejercicio1-FiltroConGIC/Informe/re1k.png (PNG copy)> <../Ejercicio1-Fil
+troConGIC/Informe/limtensionpng.png (PNG copy)>]) [13] [14]
 (../Ejercicio3-AmplificadorDeInstrumentacion/Ejercicio-3.tex) [15]
 (../Ejercicio4-EcualizadorDeFase/Ejercicio-4.tex
-<../Ejercicio4-EcualizadorDeFase/Informe/Ecualizador_de_Fase.png, id=285, 623.3
+
+LaTeX Warning: Reference `circuito_ecualizador_de_fase' on page 16 undefined on
+ input line 4.
+
+<../Ejercicio4-EcualizadorDeFase/Informe/Ecualizador_de_Fase.png, id=249, 623.3
 2875pt x 492.84125pt>
 File: ../Ejercicio4-EcualizadorDeFase/Informe/Ecualizador_de_Fase.png Graphic f
 ile (type png)
@@ -1496,7 +1527,14 @@ ile (type png)
 Package pdftex.def Info: ../Ejercicio4-EcualizadorDeFase/Informe/Ecualizador_de
 _Fase.png  used on input line 9.
 (pdftex.def)             Requested size: 230.46574pt x 182.22055pt.
-<../Ejercicio4-EcualizadorDeFase/Informe/EcSinPot.png, id=289, 733.74126pt x 49
+
+LaTeX Warning: Reference `suma_pote' on page 16 undefined on input line 42.
+
+
+LaTeX Warning: Reference `multiplicacion_pote' on page 16 undefined on input li
+ne 42.
+
+<../Ejercicio4-EcualizadorDeFase/Informe/EcSinPot.png, id=251, 733.74126pt x 49
 2.84125pt>
 File: ../Ejercicio4-EcualizadorDeFase/Informe/EcSinPot.png Graphic file (type p
 ng)
@@ -1504,8 +1542,14 @@ ng)
 Package pdftex.def Info: ../Ejercicio4-EcualizadorDeFase/Informe/EcSinPot.png  
 used on input line 48.
 (pdftex.def)             Requested size: 230.46574pt x 154.7946pt.
- [16 <../Ejercicio4-EcualizadorDeFase/Informe/Ecualizador_de_Fase.png>]
-<../Ejercicio4-EcualizadorDeFase/Informe/1cambioEstrella.png, id=302, 1581.91pt
+[16 <../Ejercicio4-EcualizadorDeFase/Informe/Ecualizador_de_Fase.png>]
+
+LaTeX Warning: Reference `1reemplazo' on page 17 undefined on input line 54.
+
+
+LaTeX Warning: Reference `2reemplazo' on page 17 undefined on input line 55.
+
+<../Ejercicio4-EcualizadorDeFase/Informe/1cambioEstrella.png, id=262, 1581.91pt
  x 492.84125pt>
 File: ../Ejercicio4-EcualizadorDeFase/Informe/1cambioEstrella.png Graphic file 
 (type png)
@@ -1513,9 +1557,9 @@ File: ../Ejercicio4-EcualizadorDeFase/Informe/1cambioEstrella.png Graphic file
 Package pdftex.def Info: ../Ejercicio4-EcualizadorDeFase/Informe/1cambioEstrell
 a.png  used on input line 85.
 (pdftex.def)             Requested size: 460.9315pt x 143.60463pt.
- [17 <../Ejercicio4-EcualizadorDeFase/Informe/EcSinPot.png> <../Ejercicio4-Ecua
-lizadorDeFase/Informe/1cambioEstrella.png>]
-<../Ejercicio4-EcualizadorDeFase/Informe/2cambioTriangulo.png, id=316, 1406.253
+[17 <../Ejercicio4-EcualizadorDeFase/Informe/EcSinPot.png> <../Ejercicio4-Ecual
+izadorDeFase/Informe/1cambioEstrella.png>]
+<../Ejercicio4-EcualizadorDeFase/Informe/2cambioTriangulo.png, id=275, 1406.253
 75pt x 412.54124pt>
 File: ../Ejercicio4-EcualizadorDeFase/Informe/2cambioTriangulo.png Graphic file
  (type png)
@@ -1523,7 +1567,11 @@ File: ../Ejercicio4-EcualizadorDeFase/Informe/2cambioTriangulo.png Graphic file
 Package pdftex.def Info: ../Ejercicio4-EcualizadorDeFase/Informe/2cambioTriangu
 lo.png  used on input line 121.
 (pdftex.def)             Requested size: 460.9315pt x 135.21368pt.
-<../Ejercicio4-EcualizadorDeFase/Informe/EcFinal.png, id=318, 573.14125pt x 302
+
+
+LaTeX Warning: Reference `Cir_Final' on page 18 undefined on input line 128.
+
+<../Ejercicio4-EcualizadorDeFase/Informe/EcFinal.png, id=276, 573.14125pt x 302
 .12875pt>
 File: ../Ejercicio4-EcualizadorDeFase/Informe/EcFinal.png Graphic file (type pn
 g)
@@ -1532,12 +1580,39 @@ Package pdftex.def Info: ../Ejercicio4-EcualizadorDeFase/Informe/EcFinal.png  u
 sed on input line 139.
 (pdftex.def)             Requested size: 230.46574pt x 121.49016pt.
 
-
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[18 <../Ejercicio4-EcualizadorDeFase/Informe/2cambioTriangulo.png>] [19 <../Eje
-rcicio4-EcualizadorDeFase/Informe/EcFinal.png>]
-<../Ejercicio4-EcualizadorDeFase/Informe/circuito_no_ideal.png, id=363, 487.069
+[18 <../Ejercicio4-EcualizadorDeFase/Informe/2cambioTriangulo.png>]
+
+LaTeX Warning: Reference `expresion_1' on page 19 undefined on input line 166.
+
+
+LaTeX Warning: Reference `expresion_2' on page 19 undefined on input line 166.
+
+
+LaTeX Warning: Reference `alpha1' on page 19 undefined on input line 167.
+
+
+LaTeX Warning: Reference `alpha2' on page 19 undefined on input line 167.
+
+
+LaTeX Warning: Reference `alpha3' on page 19 undefined on input line 167.
+
+
+LaTeX Warning: Reference `z1' on page 19 undefined on input line 178.
+
+
+LaTeX Warning: Reference `z2' on page 19 undefined on input line 178.
+
+
+LaTeX Warning: Reference `z3' on page 19 undefined on input line 178.
+
+[19 <../Ejercicio4-EcualizadorDeFase/Informe/EcFinal.png>]
+
+LaTeX Warning: Reference `circuito_no_ideal' on page 20 undefined on input line
+ 226.
+
+<../Ejercicio4-EcualizadorDeFase/Informe/circuito_no_ideal.png, id=313, 487.069
 69pt x 292.09125pt>
 File: ../Ejercicio4-EcualizadorDeFase/Informe/circuito_no_ideal.png Graphic fil
 e (type png)
@@ -1545,8 +1620,45 @@ e (type png)
 Package pdftex.def Info: ../Ejercicio4-EcualizadorDeFase/Informe/circuito_no_id
 eal.png  used on input line 229.
 (pdftex.def)             Requested size: 230.46574pt x 138.20547pt.
- [20 <../Ejercicio4-EcualizadorDeFase/Informe/circuito_no_ideal.png>] [21]
-<../Ejercicio4-EcualizadorDeFase/Informe/lowFrecL000Mag.png, id=404, 489.2679pt
+
+LaTeX Warning: Reference `trans_no_ideal' on page 20 undefined on input line 25
+0.
+
+
+LaTeX Warning: Reference `trans_ideal' on page 20 undefined on input line 250.
+
+
+LaTeX Warning: Reference `trans_ideal_aplicada' on page 20 undefined on input l
+ine 267.
+
+[20 <../Ejercicio4-EcualizadorDeFase/Informe/circuito_no_ideal.png>]
+
+LaTeX Warning: Reference `trans_ideal_aplicada' on page 21 undefined on input l
+ine 292.
+
+
+LaTeX Warning: Reference `trans_ideal_aplicada_normalizada' on page 21 undefine
+d on input line 302.
+
+
+LaTeX Warning: Reference `alpha1_prima' on page 21 undefined on input line 311.
+
+
+
+LaTeX Warning: Reference `alpha3_simplificado' on page 21 undefined on input li
+ne 311.
+
+
+LaTeX Warning: Reference `w_0' on page 21 undefined on input line 311.
+
+
+LaTeX Warning: Reference `A0cotas' on page 21 undefined on input line 339.
+
+
+LaTeX Warning: Reference `f0final' on page 21 undefined on input line 351.
+
+[21]
+<../Ejercicio4-EcualizadorDeFase/Informe/lowFrecL000Mag.png, id=344, 489.2679pt
  x 192.9609pt>
 File: ../Ejercicio4-EcualizadorDeFase/Informe/lowFrecL000Mag.png Graphic file (
 type png)
@@ -1554,7 +1666,7 @@ type png)
 Package pdftex.def Info: ../Ejercicio4-EcualizadorDeFase/Informe/lowFrecL000Mag
 .png  used on input line 391.
 (pdftex.def)             Requested size: 307.29288pt x 121.195pt.
-<../Ejercicio4-EcualizadorDeFase/Informe/lowFrecL050Mag.png, id=405, 489.2679pt
+<../Ejercicio4-EcualizadorDeFase/Informe/lowFrecL050Mag.png, id=345, 489.2679pt
  x 192.9609pt>
 File: ../Ejercicio4-EcualizadorDeFase/Informe/lowFrecL050Mag.png Graphic file (
 type png)
@@ -1563,7 +1675,7 @@ Package pdftex.def Info: ../Ejercicio4-EcualizadorDeFase/Informe/lowFrecL050Mag
 .png  used on input line 398.
 (pdftex.def)             Requested size: 307.29288pt x 121.195pt.
  [22 <../Ejercicio4-EcualizadorDeFase/Informe/lowFrecL000Mag.png>]
-<../Ejercicio4-EcualizadorDeFase/Informe/lowFrecL100Mag.png, id=414, 489.2679pt
+<../Ejercicio4-EcualizadorDeFase/Informe/lowFrecL100Mag.png, id=354, 489.2679pt
  x 192.9609pt>
 File: ../Ejercicio4-EcualizadorDeFase/Informe/lowFrecL100Mag.png Graphic file (
 type png)
@@ -1571,7 +1683,7 @@ type png)
 Package pdftex.def Info: ../Ejercicio4-EcualizadorDeFase/Informe/lowFrecL100Mag
 .png  used on input line 405.
 (pdftex.def)             Requested size: 307.29288pt x 121.195pt.
-<../Ejercicio4-EcualizadorDeFase/Informe/lowFrecL000Fase.png, id=415, 489.2679p
+<../Ejercicio4-EcualizadorDeFase/Informe/lowFrecL000Fase.png, id=355, 489.2679p
 t x 200.1879pt>
 File: ../Ejercicio4-EcualizadorDeFase/Informe/lowFrecL000Fase.png Graphic file 
 (type png)
@@ -1579,7 +1691,7 @@ File: ../Ejercicio4-EcualizadorDeFase/Informe/lowFrecL000Fase.png Graphic file
 Package pdftex.def Info: ../Ejercicio4-EcualizadorDeFase/Informe/lowFrecL000Fas
 e.png  used on input line 415.
 (pdftex.def)             Requested size: 307.29288pt x 125.73415pt.
-<../Ejercicio4-EcualizadorDeFase/Informe/lowFrecL050Fase.png, id=416, 489.2679p
+<../Ejercicio4-EcualizadorDeFase/Informe/lowFrecL050Fase.png, id=356, 489.2679p
 t x 200.1879pt>
 File: ../Ejercicio4-EcualizadorDeFase/Informe/lowFrecL050Fase.png Graphic file 
 (type png)
@@ -1587,7 +1699,7 @@ File: ../Ejercicio4-EcualizadorDeFase/Informe/lowFrecL050Fase.png Graphic file
 Package pdftex.def Info: ../Ejercicio4-EcualizadorDeFase/Informe/lowFrecL050Fas
 e.png  used on input line 422.
 (pdftex.def)             Requested size: 307.29288pt x 125.73415pt.
-<../Ejercicio4-EcualizadorDeFase/Informe/lowFrecL100Fase.png, id=417, 489.2679p
+<../Ejercicio4-EcualizadorDeFase/Informe/lowFrecL100Fase.png, id=357, 489.2679p
 t x 200.1879pt>
 File: ../Ejercicio4-EcualizadorDeFase/Informe/lowFrecL100Fase.png Graphic file 
 (type png)
@@ -1599,7 +1711,7 @@ e.png  used on input line 429.
 4-EcualizadorDeFase/Informe/lowFrecL100Mag.png> <../Ejercicio4-EcualizadorDeFas
 e/Informe/lowFrecL000Fase.png> <../Ejercicio4-EcualizadorDeFase/Informe/lowFrec
 L050Fase.png>]
-<../Ejercicio4-EcualizadorDeFase/Informe/medFrecL000Mag.png, id=430, 489.2679pt
+<../Ejercicio4-EcualizadorDeFase/Informe/medFrecL000Mag.png, id=370, 489.2679pt
  x 192.9609pt>
 File: ../Ejercicio4-EcualizadorDeFase/Informe/medFrecL000Mag.png Graphic file (
 type png)
@@ -1607,7 +1719,7 @@ type png)
 Package pdftex.def Info: ../Ejercicio4-EcualizadorDeFase/Informe/medFrecL000Mag
 .png  used on input line 441.
 (pdftex.def)             Requested size: 307.29288pt x 121.195pt.
-<../Ejercicio4-EcualizadorDeFase/Informe/medFrecL050Mag.png, id=431, 489.2679pt
+<../Ejercicio4-EcualizadorDeFase/Informe/medFrecL050Mag.png, id=371, 489.2679pt
  x 192.9609pt>
 File: ../Ejercicio4-EcualizadorDeFase/Informe/medFrecL050Mag.png Graphic file (
 type png)
@@ -1615,7 +1727,7 @@ type png)
 Package pdftex.def Info: ../Ejercicio4-EcualizadorDeFase/Informe/medFrecL050Mag
 .png  used on input line 448.
 (pdftex.def)             Requested size: 307.29288pt x 121.195pt.
-<../Ejercicio4-EcualizadorDeFase/Informe/medFrecL100Mag.png, id=432, 489.2679pt
+<../Ejercicio4-EcualizadorDeFase/Informe/medFrecL100Mag.png, id=372, 489.2679pt
  x 192.9609pt>
 File: ../Ejercicio4-EcualizadorDeFase/Informe/medFrecL100Mag.png Graphic file (
 type png)
@@ -1623,7 +1735,7 @@ type png)
 Package pdftex.def Info: ../Ejercicio4-EcualizadorDeFase/Informe/medFrecL100Mag
 .png  used on input line 455.
 (pdftex.def)             Requested size: 307.29288pt x 121.195pt.
-<../Ejercicio4-EcualizadorDeFase/Informe/medFrecL000Fase.png, id=433, 489.2679p
+<../Ejercicio4-EcualizadorDeFase/Informe/medFrecL000Fase.png, id=373, 489.2679p
 t x 200.1879pt>
 File: ../Ejercicio4-EcualizadorDeFase/Informe/medFrecL000Fase.png Graphic file 
 (type png)
@@ -1635,7 +1747,7 @@ e.png  used on input line 465.
 o4-EcualizadorDeFase/Informe/medFrecL000Mag.png> <../Ejercicio4-EcualizadorDeFa
 se/Informe/medFrecL050Mag.png> <../Ejercicio4-EcualizadorDeFase/Informe/medFrec
 L100Mag.png>]
-<../Ejercicio4-EcualizadorDeFase/Informe/medFrecL050Fase.png, id=447, 489.2679p
+<../Ejercicio4-EcualizadorDeFase/Informe/medFrecL050Fase.png, id=387, 489.2679p
 t x 200.1879pt>
 File: ../Ejercicio4-EcualizadorDeFase/Informe/medFrecL050Fase.png Graphic file 
 (type png)
@@ -1643,7 +1755,7 @@ File: ../Ejercicio4-EcualizadorDeFase/Informe/medFrecL050Fase.png Graphic file
 Package pdftex.def Info: ../Ejercicio4-EcualizadorDeFase/Informe/medFrecL050Fas
 e.png  used on input line 472.
 (pdftex.def)             Requested size: 307.29288pt x 125.73415pt.
-<../Ejercicio4-EcualizadorDeFase/Informe/medFrecL100Fase.png, id=448, 489.2679p
+<../Ejercicio4-EcualizadorDeFase/Informe/medFrecL100Fase.png, id=388, 489.2679p
 t x 200.1879pt>
 File: ../Ejercicio4-EcualizadorDeFase/Informe/medFrecL100Fase.png Graphic file 
 (type png)
@@ -1651,7 +1763,7 @@ File: ../Ejercicio4-EcualizadorDeFase/Informe/medFrecL100Fase.png Graphic file
 Package pdftex.def Info: ../Ejercicio4-EcualizadorDeFase/Informe/medFrecL100Fas
 e.png  used on input line 479.
 (pdftex.def)             Requested size: 307.29288pt x 125.73415pt.
-<../Ejercicio4-EcualizadorDeFase/Informe/highFrecL000Mag.png, id=449, 489.2679p
+<../Ejercicio4-EcualizadorDeFase/Informe/highFrecL000Mag.png, id=389, 489.2679p
 t x 192.9609pt>
 File: ../Ejercicio4-EcualizadorDeFase/Informe/highFrecL000Mag.png Graphic file 
 (type png)
@@ -1659,7 +1771,7 @@ File: ../Ejercicio4-EcualizadorDeFase/Informe/highFrecL000Mag.png Graphic file
 Package pdftex.def Info: ../Ejercicio4-EcualizadorDeFase/Informe/highFrecL000Ma
 g.png  used on input line 490.
 (pdftex.def)             Requested size: 307.29288pt x 121.195pt.
-<../Ejercicio4-EcualizadorDeFase/Informe/highFrecL050Mag.png, id=450, 489.2679p
+<../Ejercicio4-EcualizadorDeFase/Informe/highFrecL050Mag.png, id=390, 489.2679p
 t x 192.9609pt>
 File: ../Ejercicio4-EcualizadorDeFase/Informe/highFrecL050Mag.png Graphic file 
 (type png)
@@ -1671,7 +1783,7 @@ g.png  used on input line 497.
 o4-EcualizadorDeFase/Informe/medFrecL050Fase.png> <../Ejercicio4-EcualizadorDeF
 ase/Informe/medFrecL100Fase.png> <../Ejercicio4-EcualizadorDeFase/Informe/highF
 recL000Mag.png>]
-<../Ejercicio4-EcualizadorDeFase/Informe/highFrecL100Mag.png, id=464, 489.2679p
+<../Ejercicio4-EcualizadorDeFase/Informe/highFrecL100Mag.png, id=403, 489.2679p
 t x 192.9609pt>
 File: ../Ejercicio4-EcualizadorDeFase/Informe/highFrecL100Mag.png Graphic file 
 (type png)
@@ -1679,7 +1791,7 @@ File: ../Ejercicio4-EcualizadorDeFase/Informe/highFrecL100Mag.png Graphic file
 Package pdftex.def Info: ../Ejercicio4-EcualizadorDeFase/Informe/highFrecL100Ma
 g.png  used on input line 504.
 (pdftex.def)             Requested size: 307.29288pt x 121.195pt.
-<../Ejercicio4-EcualizadorDeFase/Informe/highFrecL000Fase.png, id=465, 489.2679
+<../Ejercicio4-EcualizadorDeFase/Informe/highFrecL000Fase.png, id=404, 489.2679
 pt x 200.1879pt>
 File: ../Ejercicio4-EcualizadorDeFase/Informe/highFrecL000Fase.png Graphic file
  (type png)
@@ -1687,7 +1799,7 @@ File: ../Ejercicio4-EcualizadorDeFase/Informe/highFrecL000Fase.png Graphic file
 Package pdftex.def Info: ../Ejercicio4-EcualizadorDeFase/Informe/highFrecL000Fa
 se.png  used on input line 514.
 (pdftex.def)             Requested size: 307.29288pt x 125.73415pt.
-<../Ejercicio4-EcualizadorDeFase/Informe/highFrecL050Fase.png, id=466, 489.2679
+<../Ejercicio4-EcualizadorDeFase/Informe/highFrecL050Fase.png, id=405, 489.2679
 pt x 200.1879pt>
 File: ../Ejercicio4-EcualizadorDeFase/Informe/highFrecL050Fase.png Graphic file
  (type png)
@@ -1695,7 +1807,7 @@ File: ../Ejercicio4-EcualizadorDeFase/Informe/highFrecL050Fase.png Graphic file
 Package pdftex.def Info: ../Ejercicio4-EcualizadorDeFase/Informe/highFrecL050Fa
 se.png  used on input line 521.
 (pdftex.def)             Requested size: 307.29288pt x 125.73415pt.
-<../Ejercicio4-EcualizadorDeFase/Informe/highFrecL100Fase.png, id=467, 489.2679
+<../Ejercicio4-EcualizadorDeFase/Informe/highFrecL100Fase.png, id=406, 489.2679
 pt x 200.1879pt>
 File: ../Ejercicio4-EcualizadorDeFase/Informe/highFrecL100Fase.png Graphic file
  (type png)
@@ -1703,39 +1815,35 @@ File: ../Ejercicio4-EcualizadorDeFase/Informe/highFrecL100Fase.png Graphic file
 Package pdftex.def Info: ../Ejercicio4-EcualizadorDeFase/Informe/highFrecL100Fa
 se.png  used on input line 528.
 (pdftex.def)             Requested size: 307.29288pt x 125.73415pt.
-)
-[26 <../Ejercicio4-EcualizadorDeFase/Informe/highFrecL050Mag.png> <../Ejercicio
-4-EcualizadorDeFase/Informe/highFrecL100Mag.png> <../Ejercicio4-EcualizadorDeFa
-se/Informe/highFrecL000Fase.png> <../Ejercicio4-EcualizadorDeFase/Informe/highF
-recL050Fase.png>] [27 <../Ejercicio4-EcualizadorDeFase/Informe/highFrecL100Fase
-.png>]
+ [26 <../Ejercicio4-EcualizadorDeFase/Informe/highFrecL050Mag.png> <../Ejercici
+o4-EcualizadorDeFase/Informe/highFrecL100Mag.png> <../Ejercicio4-EcualizadorDeF
+ase/Informe/highFrecL000Fase.png> <../Ejercicio4-EcualizadorDeFase/Informe/high
+FrecL050Fase.png>]) [27 <../Ejercicio4-EcualizadorDeFase/Informe/highFrecL100Fa
+se.png>]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 30.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 30.
  (main.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 30.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 30.
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: 095C8A675CEA49E81661C544220A7D7C;2365.
 
 
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
+LaTeX Warning: There were undefined references.
 
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: 277EA3E812566666EE70A2B97B021202;2287
-(rerunfilecheck)             After:  095C8A675CEA49E81661C544220A7D7C;2365.
 
-LaTeX Warning: There were multiply-defined labels.
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 30.
  ) 
 Here is how much of TeX's memory you used:
- 35967 strings out of 492970
- 762649 string characters out of 3126593
- 895094 words of memory out of 3000000
- 39186 multiletter control sequences out of 15000+200000
+ 35966 strings out of 492970
+ 762607 string characters out of 3126593
+ 891455 words of memory out of 3000000
+ 39187 multiletter control sequences out of 15000+200000
  543077 words of font info for 64 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 64i,16n,63p,1291b,411s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 64i,16n,63p,1288b,411s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\Paulo\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\
 tcrm0800.pk> <C:\Users\Paulo\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\
 ec\dpi600\tcrm1000.pk><C:/Users/Paulo/AppData/Local/Programs/MiKTeX 2.9/fonts/t
@@ -1763,9 +1871,9 @@ C:/Users/Paulo/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
 /amsfonts/cm/cmti10.pfb><C:/Users/Paulo/AppData/Local/Programs/MiKTeX 2.9/fonts
 /type1/public/amsfonts/cm/cmti12.pfb><C:/Users/Paulo/AppData/Local/Programs/MiK
 TeX 2.9/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on main.pdf (28 pages, 1069976 bytes).
+Output written on main.pdf (28 pages, 1057642 bytes).
 PDF statistics:
- 594 PDF objects out of 1000 (max. 8388607)
+ 533 PDF objects out of 1000 (max. 8388607)
  157 named destinations out of 1000 (max. 500000)
- 430 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 438 words of extra memory for PDF output out of 10000 (max. 10000000)
 
