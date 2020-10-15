@@ -53,11 +53,21 @@
 \contentsline {subsection}{\numberline {2.9}Conclusión}{39}{subsection.2.9}%
 \contentsline {section}{\numberline {3}Amplificador de Instrumentación}{40}{section.3}%
 \contentsline {subsection}{\numberline {3.1}Amplificador de Instrumentación}{40}{subsection.3.1}%
-\contentsline {section}{\numberline {4}Control de Tonos y Ecualizador de Fase}{41}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Ecualizador de Fase}{41}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Análisis matemático}{41}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}Elección de componentes}{47}{subsection.4.3}%
-\contentsline {subsection}{\numberline {4.4}Simulaciones}{47}{subsection.4.4}%
-\contentsline {subsubsection}{\numberline {4.4.1}Frecuencias bajas}{47}{subsubsection.4.4.1}%
-\contentsline {subsubsection}{\numberline {4.4.2}Frecuencias medias}{49}{subsubsection.4.4.2}%
-\contentsline {subsubsection}{\numberline {4.4.3}Frecuencias altas}{50}{subsubsection.4.4.3}%
+\contentsline {subsubsection}{\numberline {3.1.1}Introducción}{40}{subsubsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.2}Descripción del comportamiento del circuito}{40}{subsection.3.2}%
+\contentsline {subsubsection}{\numberline {3.2.1}Modelo ideal}{41}{subsubsection.3.2.1}%
+\contentsline {subsubsection}{\numberline {3.2.2}Modelos no ideales}{42}{subsubsection.3.2.2}%
+\contentsline {subsubsection}{\numberline {3.2.3}Análisis con componentes empleados}{42}{subsubsection.3.2.3}%
+\contentsline {subsection}{\numberline {3.3}Mediciones}{44}{subsection.3.3}%
+\contentsline {subsubsection}{\numberline {3.3.1}Modo común}{44}{subsubsection.3.3.1}%
+\contentsline {subsubsection}{\numberline {3.3.2}Modo diferencial}{46}{subsubsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.4}Medición de tensión de salida montada sobre nivel de DC}{47}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.5}Conclusiones}{47}{subsection.3.5}%
+\contentsline {section}{\numberline {4}Control de Tonos y Ecualizador de Fase}{48}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Ecualizador de Fase}{48}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Análisis matemático}{48}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Elección de componentes}{54}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Simulaciones}{54}{subsection.4.4}%
+\contentsline {subsubsection}{\numberline {4.4.1}Frecuencias bajas}{54}{subsubsection.4.4.1}%
+\contentsline {subsubsection}{\numberline {4.4.2}Frecuencias medias}{56}{subsubsection.4.4.2}%
+\contentsline {subsubsection}{\numberline {4.4.3}Frecuencias altas}{57}{subsubsection.4.4.3}%

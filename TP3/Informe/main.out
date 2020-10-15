@@ -52,11 +52,21 @@
 \BOOKMARK [2][-]{subsection.2.9}{Conclusi\363n}{section.2}% 52
 \BOOKMARK [1][-]{section.3}{Amplificador de Instrumentaci\363n}{}% 53
 \BOOKMARK [2][-]{subsection.3.1}{Amplificador de Instrumentaci\363n}{section.3}% 54
-\BOOKMARK [1][-]{section.4}{Control de Tonos y Ecualizador de Fase}{}% 55
-\BOOKMARK [2][-]{subsection.4.1}{Ecualizador de Fase}{section.4}% 56
-\BOOKMARK [2][-]{subsection.4.2}{An\341lisis matem\341tico}{section.4}% 57
-\BOOKMARK [2][-]{subsection.4.3}{Elecci\363n de componentes}{section.4}% 58
-\BOOKMARK [2][-]{subsection.4.4}{Simulaciones}{section.4}% 59
-\BOOKMARK [3][-]{subsubsection.4.4.1}{Frecuencias bajas}{subsection.4.4}% 60
-\BOOKMARK [3][-]{subsubsection.4.4.2}{Frecuencias medias}{subsection.4.4}% 61
-\BOOKMARK [3][-]{subsubsection.4.4.3}{Frecuencias altas}{subsection.4.4}% 62
+\BOOKMARK [3][-]{subsubsection.3.1.1}{Introducci\363n}{subsection.3.1}% 55
+\BOOKMARK [2][-]{subsection.3.2}{Descripci\363n del comportamiento del circuito}{section.3}% 56
+\BOOKMARK [3][-]{subsubsection.3.2.1}{Modelo ideal}{subsection.3.2}% 57
+\BOOKMARK [3][-]{subsubsection.3.2.2}{Modelos no ideales}{subsection.3.2}% 58
+\BOOKMARK [3][-]{subsubsection.3.2.3}{An\341lisis con componentes empleados}{subsection.3.2}% 59
+\BOOKMARK [2][-]{subsection.3.3}{Mediciones}{section.3}% 60
+\BOOKMARK [3][-]{subsubsection.3.3.1}{Modo com\372n}{subsection.3.3}% 61
+\BOOKMARK [3][-]{subsubsection.3.3.2}{Modo diferencial}{subsection.3.3}% 62
+\BOOKMARK [2][-]{subsection.3.4}{Medici\363n de tensi\363n de salida montada sobre nivel de DC}{section.3}% 63
+\BOOKMARK [2][-]{subsection.3.5}{Conclusiones}{section.3}% 64
+\BOOKMARK [1][-]{section.4}{Control de Tonos y Ecualizador de Fase}{}% 65
+\BOOKMARK [2][-]{subsection.4.1}{Ecualizador de Fase}{section.4}% 66
+\BOOKMARK [2][-]{subsection.4.2}{An\341lisis matem\341tico}{section.4}% 67
+\BOOKMARK [2][-]{subsection.4.3}{Elecci\363n de componentes}{section.4}% 68
+\BOOKMARK [2][-]{subsection.4.4}{Simulaciones}{section.4}% 69
+\BOOKMARK [3][-]{subsubsection.4.4.1}{Frecuencias bajas}{subsection.4.4}% 70
+\BOOKMARK [3][-]{subsubsection.4.4.2}{Frecuencias medias}{subsection.4.4}% 71
+\BOOKMARK [3][-]{subsubsection.4.4.3}{Frecuencias altas}{subsection.4.4}% 72
