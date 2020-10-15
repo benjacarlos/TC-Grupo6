@@ -1,6 +1,6 @@
 \subsection{Introducción al GIC}
 
-Generalized Impedance Converter (GIC) son, como lo nombre lo indica, convertidores de impedancia, es decir para algunos filtros se podrá remplazar alguno de los componentes con un GIC. Por ejemplo cuando el uso de la bobina con inductancias de valor elevado puede involucrar agregar a un circuito un componente de gran tamaño como resistencia parásita indeseado, para ello, en rango de frecuencias donde se permite utilizar ampliadores operacionales, se utilizan los GIC.
+Generalized Impedance Converter (GIC) son, como su nombre lo indica, convertidores de impedancia, es decir para algunos filtros se podrá remplazar alguno de los componentes con un GIC. Por ejemplo cuando el uso de la bobina con inductancias de valor elevado puede involucrar agregar a un circuito un componente de gran tamaño como resistencia parásita indeseado, para ello, en rango de frecuencias donde se permite utilizar amplificadores operacionales, se utilizan los GIC.
 
 Los GIC tienen la siguiente configuración:
 
@@ -20,7 +20,7 @@ De esta manera es posible simular cualquier componente, sea resistivo capacitivo
 
 \subsection{Diseño de un Filtro Pasa-Todo}
 
-Se implemento el siguiente circuito:
+Se implementó el siguiente circuito:
 
 \begin{figure}[H]
     \centering
@@ -79,13 +79,13 @@ Esta respuesta en frecuencia corresponde a un Pasa-Todo con:
 \end{split}
 \end{equation}
 
-Se simplifica las ecuaciones si establecemos los valores de los componentes como la siguiente:
+Se simplifican las ecuaciones si establecemos los valores de los componentes como los siguientes:
 
 $$R1 = R3 = R4 = R8 = R$$
 $$R6 = Q  R $$
 $$C2 = C6 = C$$
 
-Del cual modifica la transferencia como:
+Del cual modifica la transferencia a:
 
 \begin{equation}
     \label{ej1eq7}
@@ -97,7 +97,7 @@ Del cual modifica la transferencia como:
 \begin{itemize}
     \item Resistencia $R8$:
     
-    La función de esta resistencia es es conectar la salida del GIC que le da un camino a la corriente y/o la suministra. Luego el efecto de esta resistencia en casos limites sera:
+    La función de esta resistencia es conectar la salida del GIC que le da un camino a la corriente y/o la suministra. Luego el efecto de esta resistencia en casos límites será:
     $$\lim_{R8 \longrightarrow 0} H(s) = 1 - \frac{sC2R1R3}{R6}$$
     En esta circunstancia se comporta como un filtro pasa altos, donde la impedancia del $C2$ y $C6$ se vuelve despreciable y a su vez  circula mayor corriente en el GIC. Debido a esto aumenta la caída de tensión en los componentes resistivos del GIC, dando lugar a un incremento en la tensión de salida. 
     
@@ -134,7 +134,7 @@ Del cual modifica la transferencia como:
 \subsubsection{Análisis de Sensibilidad}
 
 Dado que en las experiencias se desea el menor error posible, se debe tomar en cuenta las tolerancias y los valores comerciales que restringen la elección de parámetros del circuito. Para ello se realiza un análisis de las sensibilidades
-de los distintos parámetros con respecto a cada componente, esto indicara el peso que tendrá cada componente en el circuito. 
+de los distintos parámetros con respecto a cada componente, esto indicará el peso que tendrá cada componente en el circuito. 
 
 La sensibilidad se calcula como:
 $$S^y_x = \frac{x}{y}\frac{dy}{dx}$$
@@ -157,7 +157,7 @@ Donde `$x$' es el componente e `$y$' la sensibilidad de un parámetro, que en es
 Cabe notar que se verifica la propiedad de suma:
 $$\sum_n R_n^y - \sum_k C_k^y = 0$$
 
-De acuerdo con las sensibilidades obtenidas, se sabe que las variaciones en $R6$ no tiene efecto en $\omega_0$, sin embargo presentan un rol importante para la selección de $Q_z$ y $Q_p$ dado que una modificación de esta afecta con una relación 1:1, o sea si se aumenta un porcentaje la resistencia se incrementa el valor de los $Q$ a la misma razón. Por otro lado, los otros componentes tienen una relación de modulo $\frac{1}{2}:1$ para $\omega_0$, $Q_z$ y $Q_p$. Pero dependiendo del signo de sensibilidad la variación positiva de una no necesariamente significa la elevación de las variables, por ejemplo en $\omega_0$ el aumento del valor de $R4$ causa que la variable se incremente, no obstante un aumento en el valor del resto de los componentes provoca un decremento de éste parámetro. 
+De acuerdo con las sensibilidades obtenidas, se sabe que las variaciones en $R6$ no tiene efecto en $\omega_0$, sin embargo presentan un rol importante para la selección de $Q_z$ y $Q_p$ dado que una modificación de esta afecta con una relación 1:1, o sea si se aumenta un porcentaje la resistencia se incrementa el valor de los $Q$ a la misma razón. Por otro lado, los otros componentes tienen una relación de módulo $\frac{1}{2}:1$ para $\omega_0$, $Q_z$ y $Q_p$. Pero dependiendo del signo de sensibilidad la variación positiva de una no necesariamente significa la elevación de las variables, por ejemplo en $\omega_0$ el aumento del valor de $R4$ causa que la variable se incremente, no obstante un aumento en el valor del resto de los componentes provoca un decremento de éste parámetro. 
 
 \subsubsection{Impedancia del Circuito}
 
@@ -216,7 +216,7 @@ Se selecciono entonces una resistencia $R = 2.2k\Omega$ para realizar un anális
 	\end{tabular}
 	\caption{Valores de los Componentes Ideales y Aplicados}
 \end{table}
-Luego si experimentamos el circuito se notara en teoría:
+Luego si experimentamos el circuito se notará en teoría:
 \begin{table}[h]
 \centering
 \begin{tabular}{cc}
@@ -230,11 +230,11 @@ $\omega_0${[}rad/s{]} & Q    \\ \hline
 
 La selección de los amplificadores operacionales dependen del circuito a implementar, ya que son los que determinan que características son las mas importantes para el caso.
 
-Para el filtro a aplicar se busca un gran GBW y $A_vol$ para el $A_vol(j\omega)$ no baje por los polos dominantes que actúan a frecuencias altas, de esta manera el integrado puede actuar cercano la ideal. En particular los filtros pasa-todos, que se utiliza para la corrección de fase, es importante que tenga ganancia de $0dB$ para toda frecuencia, por ello se debe mantener el mayor rango posible de frecuencia sin distorsiones. 
+Para el filtro a aplicar se busca un gran GBW y $A_{vol}$ para que el $A_{vol}(j\omega)$ no baje por los polos dominantes que actúan a frecuencias altas, de esta manera el integrado puede actuar cercano la ideal. En particular los filtros pasa-todos, que se utiliza para la corrección de fase, es importante que tenga ganancia de $0dB$ para toda frecuencia, por ello se debe mantener el mayor rango posible de frecuencia sin distorsiones. 
 
 Otra de las características a considerar es el slew-rate, que al estar operando a altas frecuencias un alto valor de ella evita la posibilidad de que se vea limitada la tensión máxima a frecuencias menores menor al del polo. 
 
-Por ultimo, la impedancia de entrada del amplificador operacional debe ser muy alta en relación con los otros componentes del circuito, es por esta que impide que circule corriente por las entradas del amplificador haciendo valida las ecuaciones realizadas anteriormente. 
+Por último, la impedancia de entrada del amplificador operacional debe ser muy alta en relación con los otros componentes del circuito, es por esta que impide que circule corriente por las entradas del amplificador haciendo valida las ecuaciones realizadas anteriormente. 
 
 Por lo tanto se tuvo en cuenta los opamps $LM833$ y $TL082$ las cuales cumplen con un considerable GBW, slew-rate y impedancia de entrada. Se selecciono entonces el $TL082$, que si bien tiene menor GBW que el $LM833$, a frecuencias que se utiliza el circuito $4MHz$ es suficiente por lo que luego se aprecio mas el slew-rate que es $13\frac{V}{\mu s}$ mayor al del $LM833$. 
 
@@ -242,7 +242,7 @@ Por lo tanto se tuvo en cuenta los opamps $LM833$ y $TL082$ las cuales cumplen c
 
 \subsubsection{Respuesta en Frecuencia}
 
-Realizando un análisis en frecuencia, superponiendo resultados teóricos, simulados y experimental se obtuvo el siguiente gráfico:
+Realizando un análisis en frecuencia, superponiendo resultados teóricos, simulados y experimentales se obtuvo el siguiente gráfico:
 
 \begin{figure}[H]
     \centering
@@ -325,11 +325,11 @@ Del cual obtuvimos experimentalmente lo siguiente:
     \label{ej1reexp}
 \end{figure}
 
-Se observa que las oscilaciones empiezan con pendiente negativa, lo que indica defasaje de 180 grados. Esto se debe al desfasaje introduce el filtro a las componentes de la cuadrada de frecuencia mayor a la de corte. Como las componentes de la cuadrada que actúan primero son las de mayor frecuencia, éstas se ven desfasadas 180 grados. 
+Se observa que las oscilaciones empiezan con pendiente negativa, lo que indica defasaje de 180 grados. Esto se debe al desfasaje que introduce el filtro a las componentes de la cuadrada de frecuencia mayor a la de corte. Como las componentes de la cuadrada que actúan primero son las de mayor frecuencia, éstas se ven desfasadas 180 grados. 
 
-Por otro lado, se establece el circuito a partir del quito pseudoperiodo, es decir que tiene un tiempo de establecimiento de aproximadamente $2.06ms$ en el experimental mientras que en la simulación y el teorico se establece a tiempos mayores al rededor de los $2.15ms$. Dado que existen resistencias parásitas dentro del circuito, es esperable esta mayor atenuación en la experiencia hecha.
+Por otro lado, se establece el circuito a partir del quinto pseudoperiodo, es decir que tiene un tiempo de establecimiento de aproximadamente $2.06ms$ en el experimental mientras que en la simulación y el teorico se establece a tiempos mayores al rededor de los $2.15ms$. Dado que existen resistencias parásitas dentro del circuito, es esperable esta mayor atenuación en la experiencia hecha.
 
-Este tiempo de establecimiento es un problema para un filtro pasa-todo ya que a frecuencias con periodos menores a la misma los resultados obtenidos de la misma serán oscilantes en vez de la salida sea otra señal cuadrada. Por ejemplo para señales de frecuencia $1kHz$ o periodo $1ms$, la tension de salida resulta:
+Este tiempo de establecimiento es un problema para un filtro pasa-todo ya que a frecuencias con periodos menores a la misma los resultados obtenidos de la misma serán oscilantes en vez de la salida sea otra señal cuadrada. Por ejemplo para señales de frecuencia $1kHz$ o periodo $1ms$, la tensión de salida resulta:
 
 \begin{figure}[H]
     \centering
@@ -365,4 +365,4 @@ En caso de utilizar el circuito con entrada no sinusoidales, es importante tener
 
 \subsection{Conclusión}
 
-Con el uso de un GIC, se pudo implementar un pasa-todo, si bien con cierto grado de error debido a tolerancias y/o componentes parásitas, se obtuvo a grandes rázagos los resultados esperados hasta los $200kHz$, donde pasando esta frecuencia el operacional deja de tener carácter ideal. Es también importante remarcar la importancia de sensibilidad que tienen los componentes, es decir debemos tener en cuenta cuales son los componentes mas importantes a la hora de realizar una experiencia para tener resultados acorde a lo planeado, pues una variación de ciertos componentes puede afectar ampliamente los resultados obtenidos. 
+Con el uso de un GIC, se pudo implementar un pasa-todo, si bien con cierto grado de error debido a tolerancias y/o componentes parásitas, se obtuvieron a grandes rasgos los resultados esperados hasta los $200kHz$, donde pasando esta frecuencia el operacional deja de tener carácter ideal. Es también importante remarcar la importancia de sensibilidad que tienen los componentes, es decir debemos tener en cuenta cuales son los componentes mas importantes a la hora de realizar una experiencia para tener resultados acorde a lo planeado, pues una variación de ciertos componentes puede afectar ampliamente los resultados obtenidos. 
