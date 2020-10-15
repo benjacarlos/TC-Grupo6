@@ -122,7 +122,7 @@ Tomando el modelo de polo dominante para la ganancia a lazo abierto del circuito
 
 $$A_{vol} = \frac{A_o}{1+\frac{s}{\omega_p}}$$
 
-Resolviendo el sistema y simplificando se obtuvieron las expresiones para las transferencias en modo diferencial y en modo común, es decir, las ganancias $A_{DM}$ y $A_{CM}$, tanto con $A_{ol}$ constante para todos los operacionales del sistema como considerando en todos el modelo de polo dominante. Por su longitud y complejidad para mostrarlas en forma simbólica, se reemplazaron los valores nominales de los componentes del circuito. Se deja constancia de las expresiones mas adelante en la presente sección.
+Resolviendo el sistema y simplificando se obtuvieron las expresiones para las transferencias en modo diferencial y en modo común, es decir, las ganancias $A_{DM}$ y $A_{CM}$, tanto con $A_{ol}$ constante para todos los operacionales del sistema como considerando en todos el modelo de polo dominante. Por su longitud y complejidad para mostrarlas en forma simbólica, se emplearon los resultados directamente en el análisis gráfico. 
 
 \subsubsection{Análisis con componentes empleados}
 
@@ -157,33 +157,12 @@ Para la construcción del circuito, se empleó el integrado $TL084$, el cual con
 
 En los amplificadores de instrumentación (y en los amplificadores diferenciales en general) tiene especial relevancia cuidar las relaciones entre los componentes que constituyen el circuito. Es por esto que se emplearon resistores con tolerancias del 1\%. 
 
-Reemplazando estos valores en las expresiones halladas para las ganancias en modo diferencial y en modo común a lazo abierto, se tienen:
 
-
-Vout Aol constante
-CMRR Aol constante
-
-Vout 
-
-Adm
-
-Acm
-
-De modo que con el modelo ideal de ganancia a lazo abierto constante, el CMRR resulta:
-
-Vout Polo dominante
-CMRR polo dominante
-
-
-Por lo tanto, se tiene que R5 afectará, en mayor o menor medida, en las funciones transferencias en ambos modos.
+Se tiene que R5 afectará, en mayor o menor medida, en las funciones transferencias en ambos modos.
 
 Considerando que la tensión $V_{feed}$ fija la tensión en $V_{x}$, se puede establecer una relación entre las tensión de salida del OA4 y la resistencia $R_{5}$ según los valores de las señales ingresantes a 
-$V_{1}$ y $V_{2}$. Dado que los valores máximos de $V_{feed}$ estarán dados por los valores de saturación del OA4, se podrá plantear a partir de ello cotas para el valor de $R_{5}$. 
-
-Se obtienen los siguientes límites según el modo de excitación al circuito:
-
-FALTA EXPRESION
-
+$V_{1}$ y $V_{2}$. Dado que los valores máximos de $V_{feed}$ estarán dados por los valores de saturación del OA4, se podrá plantear a partir de ello cotas para el valor de $R_{5}$. De aquí se obtuvo que en modo común la resistencia $R_{5}$ debe tener valores comprendidos entre cero
+y $236k\Omega$ para tensiones $V_{CM}$ menores a los 6.85V. 
 
 Analizando distintos valores de $R_{5}$ directamente en las funciones transferencias, se puede visualizar el comportamiento de la ganancia y la diferencia de fase en respuesta a la frecuencia. 
 
@@ -254,9 +233,9 @@ teórico de las funciones de transferencia.
 
 Se construyó el circuito en el $board$ del $Digilent$ $electronics$ $explorer$. Se emplearon dos capacitores de  de $0.1uF$ entre GND y las entradas $+V_{cc}$ y $-V_{cc}$ para reducir posibles errores por ruido dada la alta impedancia de las fuentes de alimentación. Se fijaron en el preset los valores mencionados anteriormente para $R_{5}$ para observar empíricamente su efecto sobre el circuito en ambos modos. 
 
-Se presentan los circuitos empleados para las mediciones.
-
-FOTOS CIRCUITOS
+Para la medición en modo común, se conectaron ambas entradas a la señal excitada por una de las salidas del generador de funciones. En cuanto al modo diferencial, se configuraron las dos salidas del generador de funciones para que funcionen de forma sincronizada, 
+conectando cada uno respectivamente a una de las entradas del circuito, siendo una de las señales un poco mayor en amplitud que la otra para poder medir la amplificación de la señal diferencial a la salida. Para la medición en este modo
+se debió tener especial cuidado con la saturación del circuito, por lo que se configuraron las señales de excitación con una amplitud del orden de las decenas de $mV$.
 
 \subsubsection{Modo común}
 
@@ -264,82 +243,110 @@ Se obtuvo la ganancia y la diferencia de fase en respuesta a la frecuencia para 
 
 \begin{figure}[H]
   \centering
-  \subfloat[Respuesta en frecuencia: ganancia]{\includegraphics[width=0.4\textwidth]{../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/Gain50k.png}\label{fig:f1}}
+  \subfloat[Respuesta en frecuencia: ganancia]{\includegraphics[width=0.45\textwidth]{../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/Gain50k.png}\label{fig:f1}}
   \hfill
-  \subfloat[Respuesta en frecuencia: diferencia de fase]{\includegraphics[width=0.4\textwidth]{../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/Phase50k.png}\label{fig:f2}}
+  \subfloat[Respuesta en frecuencia: diferencia de fase]{\includegraphics[width=0.45\textwidth]{../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/Phase50k.png}\label{fig:f2}}
   \caption{Respuesta en frecuencia para $R_{5}$ = $50k\Omega$}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-    \subfloat[Respuesta en frecuencia: ganancia]{\includegraphics[width=0.4\textwidth]{../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/Gain30k.png}\label{fig:f1}}
+    \subfloat[Respuesta en frecuencia: ganancia]{\includegraphics[width=0.45\textwidth]{../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/Gain30k.png}\label{fig:f1}}
     \hfill
-    \subfloat[Respuesta en frecuencia: diferencia de fase]{\includegraphics[width=0.4\textwidth]{../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/Phase30k.png}\label{fig:f2}}
+    \subfloat[Respuesta en frecuencia: diferencia de fase]{\includegraphics[width=0.45\textwidth]{../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/Phase30k.png}\label{fig:f2}}
     \caption{Respuesta en frecuencia para $R_{5}$ = $30k\Omega$}
   \end{figure}
 
   \begin{figure}[H]
     \centering
-    \subfloat[Respuesta en frecuencia: ganancia]{\includegraphics[width=0.4\textwidth]{../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/Gain10k.png}\label{fig:f1}}
+    \subfloat[Respuesta en frecuencia: ganancia]{\includegraphics[width=0.45\textwidth]{../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/Gain10k.png}\label{fig:f1}}
     \hfill
-    \subfloat[Respuesta en frecuencia: diferencia de fase]{\includegraphics[width=0.4\textwidth]{../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/Phase10k.png}\label{fig:f2}}
+    \subfloat[Respuesta en frecuencia: diferencia de fase]{\includegraphics[width=0.45\textwidth]{../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/Phase10k.png}\label{fig:f2}}
     \caption{Respuesta en frecuencia para $R_{5}$ = $10k\Omega$}
   \end{figure}
 
   \begin{figure}[H]
     \centering
-    \subfloat[Respuesta en frecuencia: ganancia]{\includegraphics[width=0.4\textwidth]{../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/Gain5k.png}\label{fig:f1}}
+    \subfloat[Respuesta en frecuencia: ganancia]{\includegraphics[width=0.45\textwidth]{../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/Gain5k.png}\label{fig:f1}}
     \hfill
-    \subfloat[Respuesta en frecuencia: diferencia de fase]{\includegraphics[width=0.4\textwidth]{../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/Phase5k.png}\label{fig:f2}}
+    \subfloat[Respuesta en frecuencia: diferencia de fase]{\includegraphics[width=0.45\textwidth]{../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/Phase5k.png}\label{fig:f2}}
     \caption{Respuesta en frecuencia para $R_{5}$ = $5k\Omega$}
   \end{figure}
 
   \begin{figure}[H]
     \centering
-    \subfloat[Respuesta en frecuencia: ganancia]{\includegraphics[width=0.4\textwidth]{../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/Gain100.png}\label{fig:f1}}
+    \subfloat[Respuesta en frecuencia: ganancia]{\includegraphics[width=0.45\textwidth]{../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/Gain100.png}\label{fig:f1}}
     \hfill
-    \subfloat[Respuesta en frecuencia: diferencia de fase]{\includegraphics[width=0.4\textwidth]{../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/Phase100.png}\label{fig:f2}}
+    \subfloat[Respuesta en frecuencia: diferencia de fase]{\includegraphics[width=0.45\textwidth]{../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/Phase100.png}\label{fig:f2}}
     \caption{Respuesta en frecuencia para $R_{5}$ = $100\Omega$}
   \end{figure}
 
-CONCLUSIONES: diferencias con modelos teóricos, simulados y medidos, especialmente para los valores de R5 bajos. 
+  En cada uno de los gráficos se presentan diferencias entre el modelo teórico y los resultados medidos y simulados, aunque se observa, especialmente en los gráficos de fase, una similitud en el comportamiento. 
+  Las mayores diferencias se encuentran con bajos valores de $R_{5}$, lo cual era esperado dado la poca estabilidad del circuito en esas situaciones. Se confirma la predición teórica que para bajos valores de ese resistor se puede
+  llegar a obtener una ganancia para ciertas frecuencias, lo cual no resulta conveniente para la implementación de un In Amp. 
 
 \begin{figure}[H]
     \centering
-    \subfloat[Respuesta en frecuencia: ganancia]{\includegraphics[width=0.4\textwidth]{../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/CMAllGain.png}\label{fig:f1}}
+    \subfloat[Respuesta en frecuencia: ganancia]{\includegraphics[width=0.45\textwidth]{../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/CMAllGain.png}\label{fig:f1}}
     \hfill
-    \subfloat[Respuesta en frecuencia: diferencia de fase]{\includegraphics[width=0.4\textwidth]{../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/CMAllPhase.png}\label{fig:f2}}
+    \subfloat[Respuesta en frecuencia: diferencia de fase]{\includegraphics[width=0.45\textwidth]{../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/CMAllPhase.png}\label{fig:f2}}
     \caption{Respuesta en frecuencia para $R_{5}$ = $50k\Omega$}
+    \label{fig:CMsuperpuesto}
   \end{figure}
+
+
 
 Observando en la figura \ref{fig:CMsuperpuesto} las respuestas en frecuencia de la ganancia y fase en modo común para los distintos valores superpuestas, se puede observar precisamente que bajos valores de R5 dan inestabilidad al comportamiento del circuito.
 
 
 \subsubsection{Modo diferencial}
 
-En la subsección REF se observó que en el modo diferencial el circuito posee gran estabilidad para valores bajos y altos de $R_{5}$. Por simplificación en el análisis, se estudiaron las respuestas en frecuencia para $R_{5}$ = $50k\Omega$ y $R_{5}$ = $5k\Omega$.
+En el análisis anterior se observó que en el modo diferencial el circuito posee gran estabilidad para valores bajos y altos de $R_{5}$. Por simplificación, se estudiaron las respuestas en frecuencia para $R_{5}$ = $50k\Omega$ y $R_{5}$ = $5k\Omega$.
 
 \begin{figure}[H]
     \centering
-    \subfloat[Respuesta en frecuencia: ganancia]{\includegraphics[width=0.4\textwidth]{../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/CMAllGain.png}\label{fig:f1}}
+    \subfloat[Respuesta en frecuencia: ganancia]{\includegraphics[width=0.45\textwidth]{../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/DM/DM50kGain.png}\label{fig:f1}}
     \hfill
-    \subfloat[Respuesta en frecuencia: diferencia de fase]{\includegraphics[width=0.4\textwidth]{../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/CMAllPhase.png}\label{fig:f2}}
+    \subfloat[Respuesta en frecuencia: diferencia de fase]{\includegraphics[width=0.45\textwidth]{../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/DM/DM50kPhase.png}\label{fig:f2}}
     \caption{Respuesta en frecuencia para $R_{5}$ = $50k\Omega$}
   \end{figure}
 
   \begin{figure}[H]
     \centering
-    \subfloat[Respuesta en frecuencia: ganancia]{\includegraphics[width=0.4\textwidth]{../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/CMAllGain.png}\label{fig:f1}}
+    \subfloat[Respuesta en frecuencia: ganancia]{\includegraphics[width=0.45\textwidth]{../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/DM/DM5kGain.png}\label{fig:f1}}
     \hfill
-    \subfloat[Respuesta en frecuencia: diferencia de fase]{\includegraphics[width=0.4\textwidth]{../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/CMAllPhase.png}\label{fig:f2}}
+    \subfloat[Respuesta en frecuencia: diferencia de fase]{\includegraphics[width=0.45\textwidth]{../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/DM/DM5kPhase.png}\label{fig:f2}}
     \caption{Respuesta en frecuencia para $R_{5}$ = $50k\Omega$}
   \end{figure}
 
-Se observa para ambos casos una similitud entre el modelo teórico y los resultados simulados y medidos...
+Se puede visualizar que se presentan diferencias entre los modelos teóricos y los resultados simulados y medidos tanto para la ganancia como para la diferencia de fase en respuesta a la frecuencia.
+Donde mayores diferencias se observan es en la ganancia, mientras que en los gráficos de las fases los valores medidos se asemejan en gran grado a los simulados.
 
-\subsection{Medición de tensión de salida montada sobre nivel de DC}
+\subsection{Tensión de salida montada sobre nivel de DC}
 
+Para que la tensión de salida del circuito aparezca montada sobre una señal continua se debe modificar la referencia del circuito. Hasta el momento, el circuito analizado posee una referencia directamente
+a GND por medio de la entrada inversora del OA. Planteando una conexión a una $V_{DC}$ en dicha entrada y considerando a todos los amplificadores operacionales como ideales, tal como se vio al comienzo 
+de esta sección, se tienen las siguientes relaciones en el circuito:
 
-\subsection{Conclusiones}
+$$V_{o2}=V^{+}_{3}=V^{+}_{4}=V^{-}_{4} = V_{DC}$$
+
+$$V_{o1} = \left(1+\frac{R_3}{R_4}\right)\cdot V_{1}  - \frac{R_3}{R_4}\cdot V_x$$
+
+Teniendo por las relaciones planteadas que:
+
+$$V_x = (1+\frac{R_6}{R_7}) \cdot V_2 - \frac{R_4}{R_3}\cdot V_{DC}$$
+              
+$$V_{out} = -\frac{R_{2}}{R_{1}}\cdot V_{o1} + (1+\frac{R_2}{R_1}) \cdot V_{DC} \Rightarrow V_{out} = V_{DC} - \frac{R_2}{R_1})\cdot (1+\frac{R_3}{R_4}) (V_{1}-V_{2})$$
+
+Siendo $V_{1}=V_{2}=V_{CM}$:
+
+$$V_{out} = V_{DC}$$
+
+En modo diferencial se obtiene:
+
+$$V_{out} = V_{DC} - \frac{R_2}{R_1})\cdot (1+\frac{R_3}{R_4})\cdot V_{DM}$$
+
+Consiguiendo de esta forma "montar" la señal de salida del In Amp sobre una tensión continua. 
+
 
 

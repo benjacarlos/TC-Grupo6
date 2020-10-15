@@ -1,0 +1,34 @@
+Version 4
+SymbolType CELL
+LINE Normal -32 -32 32 0
+LINE Normal -32 32 32 0
+LINE Normal -32 -32 -32 32
+LINE Normal -26 16 -18 16
+LINE Normal -27 -16 -19 -16
+LINE Normal -23 -12 -23 -20
+LINE Normal 0 -32 0 -16
+LINE Normal 0 32 0 16
+LINE Normal 4 -20 12 -20
+LINE Normal 8 -24 8 -16
+LINE Normal 4 20 12 20
+WINDOW 0 16 -32 Left 2
+WINDOW 3 16 32 Left 2
+SYMATTR Value TL084
+SYMATTR Value2 TL084
+SYMATTR Prefix X
+SYMATTR ModelFile FACUsub/TL084.lib
+PIN -32 -16 NONE 0
+PINATTR PinName In+
+PINATTR SpiceOrder 1
+PIN -32 16 NONE 0
+PINATTR PinName In-
+PINATTR SpiceOrder 2
+PIN 0 -32 NONE 0
+PINATTR PinName V+
+PINATTR SpiceOrder 3
+PIN 0 32 NONE 0
+PINATTR PinName V-
+PINATTR SpiceOrder 4
+PIN 32 0 NONE 0
+PINATTR PinName OUT
+PINATTR SpiceOrder 5
