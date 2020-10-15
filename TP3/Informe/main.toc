@@ -61,8 +61,7 @@
 \contentsline {subsection}{\numberline {3.3}Mediciones}{44}{subsection.3.3}%
 \contentsline {subsubsection}{\numberline {3.3.1}Modo común}{44}{subsubsection.3.3.1}%
 \contentsline {subsubsection}{\numberline {3.3.2}Modo diferencial}{46}{subsubsection.3.3.2}%
-\contentsline {subsection}{\numberline {3.4}Medición de tensión de salida montada sobre nivel de DC}{47}{subsection.3.4}%
-\contentsline {subsection}{\numberline {3.5}Conclusiones}{47}{subsection.3.5}%
+\contentsline {subsection}{\numberline {3.4}Tensión de salida montada sobre nivel de DC}{47}{subsection.3.4}%
 \contentsline {section}{\numberline {4}Control de Tonos y Ecualizador de Fase}{48}{section.4}%
 \contentsline {subsection}{\numberline {4.1}Ecualizador de Fase}{48}{subsection.4.1}%
 \contentsline {subsection}{\numberline {4.2}Análisis matemático}{48}{subsection.4.2}%
