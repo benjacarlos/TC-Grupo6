@@ -59,7 +59,7 @@
 \contentsline {subsubsection}{\numberline {3.2.2}Modelos no ideales}{42}{subsubsection.3.2.2}%
 \contentsline {subsubsection}{\numberline {3.2.3}Análisis con componentes empleados}{42}{subsubsection.3.2.3}%
 \contentsline {subsection}{\numberline {3.3}Mediciones}{44}{subsection.3.3}%
-\contentsline {subsubsection}{\numberline {3.3.1}Modo común}{44}{subsubsection.3.3.1}%
+\contentsline {subsubsection}{\numberline {3.3.1}Modo común}{45}{subsubsection.3.3.1}%
 \contentsline {subsubsection}{\numberline {3.3.2}Modo diferencial}{46}{subsubsection.3.3.2}%
 \contentsline {subsection}{\numberline {3.4}Tensión de salida montada sobre nivel de DC}{47}{subsection.3.4}%
 \contentsline {section}{\numberline {4}Control de Tonos y Ecualizador de Fase}{48}{section.4}%

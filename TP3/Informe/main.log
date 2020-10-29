@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.8.20)  14 OCT 2020 23:30
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.8.20)  14 OCT 2020 23:43
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1346,24 +1346,23 @@ Package pdftex.def Info: ../Ejercicio2-DiseñoDeFiltros/Imagenes/PCB_logic_3d.p
 File: ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/InAmpWiki.png Graphic file (type png)
 <use ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/InAmpWiki.png>
 Package pdftex.def Info: ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/InAmpWiki.png  used on input line 37.
-(pdftex.def)             Requested size: 95.356pt x 68.50577pt.
- [40] [41 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/InAmpWiki.png>]
-<../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/CMVariacionR5Gain.png, id=742, 505.1673pt x 239.9364pt>
+(pdftex.def)             Requested size: 305.1404pt x 219.21928pt.
+ [40] [41 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/InAmpWiki.png>] [42]
+<../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/CMVariacionR5Gain.png, id=748, 505.1673pt x 239.9364pt>
 File: ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/CMVariacionR5Gain.png Graphic file (type png)
 <use ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/CMVariacionR5Gain.png>
 Package pdftex.def Info: ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/CMVariacionR5Gain.png  used on input line 177.
-(pdftex.def)             Requested size: 204.8567pt x 97.29817pt.
-<../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/CMVariacionR5Phase.png, id=743, 505.1673pt x 247.1634pt>
+(pdftex.def)             Requested size: 240.71092pt x 114.32976pt.
+<../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/CMVariacionR5Phase.png, id=749, 505.1673pt x 247.1634pt>
 File: ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/CMVariacionR5Phase.png Graphic file (type png)
 <use ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/CMVariacionR5Phase.png>
 Package pdftex.def Info: ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/CMVariacionR5Phase.png  used on input line 179.
 (pdftex.def)             Requested size: 204.8567pt x 100.22885pt.
- [42]
 <../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/DM/VariacionR5Gain.png, id=750, 505.1673pt x 239.9364pt>
 File: ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/DM/VariacionR5Gain.png Graphic file (type png)
 <use ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/DM/VariacionR5Gain.png>
 Package pdftex.def Info: ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/DM/VariacionR5Gain.png  used on input line 186.
-(pdftex.def)             Requested size: 204.8567pt x 97.29817pt.
+(pdftex.def)             Requested size: 240.71092pt x 114.32976pt.
 <../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/DM/VariacionR5Phase.png, id=751, 505.1673pt x 247.1634pt>
 File: ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/DM/VariacionR5Phase.png Graphic file (type png)
 <use ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/DM/VariacionR5Phase.png>
@@ -1373,116 +1372,117 @@ Package pdftex.def Info: ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/DM
 File: ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/MonteCarloGain.png Graphic file (type png)
 <use ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/MonteCarloGain.png>
 Package pdftex.def Info: ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/MonteCarloGain.png  used on input line 199.
-(pdftex.def)             Requested size: 204.8567pt x 93.99481pt.
+(pdftex.def)             Requested size: 240.71092pt x 110.44998pt.
 <../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/MonteCarloPhase.png, id=753, 1445.4pt x 666.99188pt>
 File: ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/MonteCarloPhase.png Graphic file (type png)
 <use ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/MonteCarloPhase.png>
 Package pdftex.def Info: ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/MonteCarloPhase.png  used on input line 201.
-(pdftex.def)             Requested size: 204.8567pt x 94.52827pt.
-<../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/DM/MonteCarloGain.png, id=754, 1445.4pt x 664.73344pt>
+(pdftex.def)             Requested size: 240.71092pt x 111.07683pt.
+ [43 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/CMVariacionR5Gain.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/CMVariacionR5Phase.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/DM/VariacionR5Gain.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/DM/VariacionR5Phase.png>]
+<../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/DM/MonteCarloGain.png, id=765, 1445.4pt x 664.73344pt>
 File: ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/DM/MonteCarloGain.png Graphic file (type png)
 <use ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/DM/MonteCarloGain.png>
 Package pdftex.def Info: ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/DM/MonteCarloGain.png  used on input line 207.
-(pdftex.def)             Requested size: 204.8567pt x 94.2082pt.
-<../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/DM/MonteCarloPhase.png, id=755, 1445.4pt x 663.22781pt>
+(pdftex.def)             Requested size: 240.71092pt x 110.70073pt.
+<../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/DM/MonteCarloPhase.png, id=766, 1445.4pt x 663.22781pt>
 File: ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/DM/MonteCarloPhase.png Graphic file (type png)
 <use ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/DM/MonteCarloPhase.png>
 Package pdftex.def Info: ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/DM/MonteCarloPhase.png  used on input line 209.
-(pdftex.def)             Requested size: 204.8567pt x 93.99481pt.
- [43 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/CMVariacionR5Gain.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/CMVariacionR5Phase.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/DM/VariacionR5Gain.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/DM/VariacionR5Phase.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/MonteCarloGain.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/MonteCarloPhase.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/DM/MonteCarloGain.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/DM/MonteCarloPhase.png>]
-<../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/DM/AolvariableDMGain.png, id=770, 505.1673pt x 239.9364pt>
+(pdftex.def)             Requested size: 240.71092pt x 110.44998pt.
+<../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/DM/AolvariableDMGain.png, id=767, 505.1673pt x 239.9364pt>
 File: ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/DM/AolvariableDMGain.png Graphic file (type png)
 <use ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/DM/AolvariableDMGain.png>
 Package pdftex.def Info: ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/DM/AolvariableDMGain.png  used on input line 226.
-(pdftex.def)             Requested size: 204.8567pt x 97.29817pt.
-<../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/DM/AolvariableDMPhase.png, id=771, 505.1673pt x 247.1634pt>
+(pdftex.def)             Requested size: 240.71092pt x 114.32976pt.
+<../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/DM/AolvariableDMPhase.png, id=768, 505.1673pt x 247.1634pt>
 File: ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/DM/AolvariableDMPhase.png Graphic file (type png)
 <use ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/DM/AolvariableDMPhase.png>
 Package pdftex.def Info: ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/DM/AolvariableDMPhase.png  used on input line 228.
-(pdftex.def)             Requested size: 204.8567pt x 100.22885pt.
-<../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/Gain50k.png, id=772, 505.1673pt x 239.9364pt>
+(pdftex.def)             Requested size: 240.71092pt x 117.77342pt.
+ [44 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/MonteCarloGain.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/MonteCarloPhase.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/DM/MonteCarloGain.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/DM/MonteCarloPhase.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/DM/AolvariableDMGain.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/DM/AolvariableDMPhase.png>]
+<../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/Gain50k.png, id=780, 505.1673pt x 239.9364pt>
 File: ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/Gain50k.png Graphic file (type png)
 <use ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/Gain50k.png>
 Package pdftex.def Info: ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/Gain50k.png  used on input line 246.
-(pdftex.def)             Requested size: 230.46574pt x 109.46411pt.
-<../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/Phase50k.png, id=773, 505.1673pt x 247.1634pt>
+(pdftex.def)             Requested size: 240.71092pt x 114.32976pt.
+<../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/Phase50k.png, id=781, 505.1673pt x 247.1634pt>
 File: ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/Phase50k.png Graphic file (type png)
 <use ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/Phase50k.png>
 Package pdftex.def Info: ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/Phase50k.png  used on input line 248.
-(pdftex.def)             Requested size: 230.46574pt x 112.76122pt.
-<../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/Gain30k.png, id=774, 505.1673pt x 239.9364pt>
+(pdftex.def)             Requested size: 240.71092pt x 117.77342pt.
+<../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/Gain30k.png, id=782, 505.1673pt x 239.9364pt>
 File: ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/Gain30k.png Graphic file (type png)
 <use ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/Gain30k.png>
 Package pdftex.def Info: ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/Gain30k.png  used on input line 254.
-(pdftex.def)             Requested size: 230.46574pt x 109.46411pt.
-<../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/Phase30k.png, id=775, 505.1673pt x 247.1634pt>
+(pdftex.def)             Requested size: 240.71092pt x 114.32976pt.
+<../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/Phase30k.png, id=783, 505.1673pt x 247.1634pt>
 File: ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/Phase30k.png Graphic file (type png)
 <use ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/Phase30k.png>
 Package pdftex.def Info: ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/Phase30k.png  used on input line 256.
-(pdftex.def)             Requested size: 230.46574pt x 112.76122pt.
- [44 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/DM/AolvariableDMGain.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/DM/AolvariableDMPhase.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/Gain50k.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/Phase50k.png>]
-<../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/Gain10k.png, id=787, 505.1673pt x 239.9364pt>
+(pdftex.def)             Requested size: 240.71092pt x 117.77342pt.
+<../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/Gain10k.png, id=784, 505.1673pt x 239.9364pt>
 File: ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/Gain10k.png Graphic file (type png)
 <use ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/Gain10k.png>
 Package pdftex.def Info: ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/Gain10k.png  used on input line 262.
-(pdftex.def)             Requested size: 230.46574pt x 109.46411pt.
-<../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/Phase10k.png, id=788, 505.1673pt x 247.1634pt>
+(pdftex.def)             Requested size: 240.71092pt x 114.32976pt.
+<../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/Phase10k.png, id=785, 505.1673pt x 247.1634pt>
 File: ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/Phase10k.png Graphic file (type png)
 <use ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/Phase10k.png>
 Package pdftex.def Info: ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/Phase10k.png  used on input line 264.
-(pdftex.def)             Requested size: 230.46574pt x 112.76122pt.
-<../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/Gain5k.png, id=789, 505.1673pt x 239.9364pt>
+(pdftex.def)             Requested size: 240.71092pt x 117.77342pt.
+<../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/Gain5k.png, id=786, 505.1673pt x 239.9364pt>
 File: ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/Gain5k.png Graphic file (type png)
 <use ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/Gain5k.png>
 Package pdftex.def Info: ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/Gain5k.png  used on input line 270.
-(pdftex.def)             Requested size: 230.46574pt x 109.46411pt.
-<../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/Phase5k.png, id=790, 505.1673pt x 247.1634pt>
+(pdftex.def)             Requested size: 240.71092pt x 114.32976pt.
+<../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/Phase5k.png, id=787, 505.1673pt x 247.1634pt>
 File: ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/Phase5k.png Graphic file (type png)
 <use ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/Phase5k.png>
 Package pdftex.def Info: ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/Phase5k.png  used on input line 272.
-(pdftex.def)             Requested size: 230.46574pt x 112.76122pt.
-<../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/Gain100.png, id=791, 505.1673pt x 239.9364pt>
+(pdftex.def)             Requested size: 240.71092pt x 117.77342pt.
+ [45 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/Gain50k.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/Phase50k.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/Gain30k.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/Phase30k.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/Gain10k.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/Phase10k.png>]
+<../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/Gain100.png, id=801, 505.1673pt x 239.9364pt>
 File: ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/Gain100.png Graphic file (type png)
 <use ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/Gain100.png>
 Package pdftex.def Info: ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/Gain100.png  used on input line 278.
-(pdftex.def)             Requested size: 230.46574pt x 109.46411pt.
-<../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/Phase100.png, id=792, 505.1673pt x 247.1634pt>
+(pdftex.def)             Requested size: 240.71092pt x 114.32976pt.
+<../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/Phase100.png, id=802, 505.1673pt x 247.1634pt>
 File: ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/Phase100.png Graphic file (type png)
 <use ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/Phase100.png>
 Package pdftex.def Info: ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/Phase100.png  used on input line 280.
-(pdftex.def)             Requested size: 230.46574pt x 112.76122pt.
-<../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/CMAllGain.png, id=793, 505.1673pt x 239.9364pt>
+(pdftex.def)             Requested size: 240.71092pt x 117.77342pt.
+<../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/CMAllGain.png, id=803, 505.1673pt x 239.9364pt>
 File: ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/CMAllGain.png Graphic file (type png)
 <use ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/CMAllGain.png>
 Package pdftex.def Info: ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/CMAllGain.png  used on input line 290.
-(pdftex.def)             Requested size: 230.46574pt x 109.46411pt.
-<../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/CMAllPhase.png, id=794, 505.1673pt x 247.1634pt>
+(pdftex.def)             Requested size: 240.71092pt x 114.32976pt.
+<../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/CMAllPhase.png, id=804, 505.1673pt x 247.1634pt>
 File: ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/CMAllPhase.png Graphic file (type png)
 <use ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/CMAllPhase.png>
 Package pdftex.def Info: ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/CMAllPhase.png  used on input line 292.
-(pdftex.def)             Requested size: 230.46574pt x 112.76122pt.
- [45 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/Gain30k.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/Phase30k.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/Gain10k.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/Phase10k.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/Gain5k.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/Phase5k.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/Gain100.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/Phase100.png>]
-<../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/DM/DM50kGain.png, id=812, 505.1673pt x 237.7683pt>
+(pdftex.def)             Requested size: 240.71092pt x 117.77342pt.
+<../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/DM/DM50kGain.png, id=806, 505.1673pt x 237.7683pt>
 File: ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/DM/DM50kGain.png Graphic file (type png)
 <use ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/DM/DM50kGain.png>
 Package pdftex.def Info: ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/DM/DM50kGain.png  used on input line 308.
-(pdftex.def)             Requested size: 230.46574pt x 108.47498pt.
-<../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/DM/DM50kPhase.png, id=813, 505.1673pt x 244.9953pt>
+(pdftex.def)             Requested size: 240.71092pt x 113.29665pt.
+<../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/DM/DM50kPhase.png, id=807, 505.1673pt x 244.9953pt>
 File: ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/DM/DM50kPhase.png Graphic file (type png)
 <use ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/DM/DM50kPhase.png>
 Package pdftex.def Info: ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/DM/DM50kPhase.png  used on input line 310.
-(pdftex.def)             Requested size: 230.46574pt x 111.7721pt.
-<../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/DM/DM5kGain.png, id=814, 505.1673pt x 237.7683pt>
+(pdftex.def)             Requested size: 240.71092pt x 116.74033pt.
+ [46 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/Gain5k.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/Phase5k.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/Gain100.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/Phase100.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/CMAllGain.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/CMAllPhase.png>]
+<../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/DM/DM5kGain.png, id=821, 505.1673pt x 237.7683pt>
 File: ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/DM/DM5kGain.png Graphic file (type png)
 <use ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/DM/DM5kGain.png>
 Package pdftex.def Info: ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/DM/DM5kGain.png  used on input line 316.
-(pdftex.def)             Requested size: 230.46574pt x 108.47498pt.
-<../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/DM/DM5kPhase.png, id=815, 505.1673pt x 244.9953pt>
+(pdftex.def)             Requested size: 240.71092pt x 113.29665pt.
+<../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/DM/DM5kPhase.png, id=822, 505.1673pt x 244.9953pt>
 File: ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/DM/DM5kPhase.png Graphic file (type png)
 <use ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/DM/DM5kPhase.png>
 Package pdftex.def Info: ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/DM/DM5kPhase.png  used on input line 318.
-(pdftex.def)             Requested size: 230.46574pt x 111.7721pt.
- [46 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/CMAllGain.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/CMAllPhase.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/DM/DM50kGain.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/DM/DM50kPhase.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/DM/DM5kGain.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/DM/DM5kPhase.png>]) [47] (/Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio4-EcualizadorDeFase/Ejercicio-4.tex
+(pdftex.def)             Requested size: 240.71092pt x 116.74033pt.
+) [47 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/DM/DM50kGain.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/DM/DM50kPhase.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/DM/DM5kGain.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/DM/DM5kPhase.png>] (/Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/../Ejercicio4-EcualizadorDeFase/Ejercicio-4.tex
 <../Ejercicio4-EcualizadorDeFase/Informe/Ecualizador_de_Fase.png, id=834, 623.32875pt x 492.84125pt>
 File: ../Ejercicio4-EcualizadorDeFase/Informe/Ecualizador_de_Fase.png Graphic file (type png)
 <use ../Ejercicio4-EcualizadorDeFase/Informe/Ecualizador_de_Fase.png>
@@ -1638,7 +1638,7 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  71i,16n,73p,1351b,856s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on /Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/main.pdf (60 pages, 3710408 bytes).
+Output written on /Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP3/Informe/main.pdf (60 pages, 3710707 bytes).
 PDF statistics:
  1180 PDF objects out of 1200 (max. 8388607)
  900 compressed objects within 9 object streams
