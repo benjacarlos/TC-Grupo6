@@ -1,6 +1,8 @@
 from PyQt5.QtWidgets import *
 from src.ui.filterToolWindow import Ui_filterToolWindow
 from scipy import signal
+from filterDesigned import filterDesigned
+from scipy import signal
 
 class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
     def __init__(self):
@@ -72,11 +74,13 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
             self.maxQ = float (self.qmaxInput.text())
         except:
             ErrorMessage = ErrorMessage + "The QMax must be a valid number \n"
+
         if ErrorMessage != "":
             msgWrongInput.setText(ErrorMessage)
             msgWrongInput.exec()
         else:
             print ("Aca voy a la funcion que calcula el filtro")
+            #self.defineFilter()
             self.plotGraphic()
 
         #print(self.AaInputFilter)
@@ -90,9 +94,9 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
         myPlotGraphicType = str(self.plotTypeOptionInput.currentText())
 
         if myPlotGraphicType == "Magnitude":
-            print ("Voy a Funcion:" + myPlotGraphicType)
+            self.plotMagnitude()
         elif myPlotGraphicType == "Phase":
-            print("Voy a Funcion:" + myPlotGraphicType)
+            self.plotPhase()
         elif myPlotGraphicType == "Attenuation":
             print("Voy a Funcion:" + myPlotGraphicType)
         elif myPlotGraphicType == "Attenuation - Normalized":
@@ -100,7 +104,7 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
         elif myPlotGraphicType == "Group Delay":
             print("Voy a Funcion:" + myPlotGraphicType)
         elif myPlotGraphicType == "Poles and Zeros":
-            print("Voy a Funcion:" + myPlotGraphicType)
+            self.plotZerosAndPoles()
         elif myPlotGraphicType == "Impulse Response":
             print("Voy a Funcion:" + myPlotGraphicType)
         elif myPlotGraphicType == "Step Response":
@@ -108,14 +112,51 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
         elif myPlotGraphicType == "Maximum Q":
             print("Voy a Funcion:" + myPlotGraphicType)
 
-#control.pzmap(sys, Plot=True, title='Pole Zero Map')
-#Plot a pole/zero map for a linear system.
+    def plotMagnitude (self):
+        print ("ploteador")
+        self.numerator = [1]
+        self.denominator = [1,1]
+        self.system = signal.TransferFunction(self.numerator,self.denominator)
+        self.w,self.mag,self.phase = signal.bode(self.system)
 
-#Parameters:
-#sys (LTI (StateSpace or TransferFunction)) – Linear system for which poles and zeros are computed.
-#Plot (bool) – If True a graph is generated with Matplotlib, otherwise the poles and zeros are only computed and returned.
-#Returns:
-#pole (array) – The systems poles
-#zeros (array) – The system’s zeros.
+        self.filterToolPlotTable.canvas.axes.clear()
+        self.filterToolPlotTable.canvas.axes.semilogx(self.w,self.mag)
+        self.filterToolPlotTable.canvas.axes.grid(True, which="both")
+        self.filterToolPlotTable.canvas.axes.minorticks_on()
+        self.filterToolPlotTable.canvas.figure.tight_layout()
+
+        self.filterToolPlotTable.canvas.axes.axes.set_xlabel("Eje X")
+        self.filterToolPlotTable.canvas.axes.axes.set_ylabel("Eje Y")
+        self.filterToolPlotTable.canvas.axes.title.set_text('Respuesta en Frecuencia - MAGNITUD')
+        self.filterToolPlotTable.canvas.figure.tight_layout()
+        self.filterToolPlotTable.canvas.draw()
+
+    def plotPhase (self):
+        self.numerator = [1]
+        self.denominator = [1,1]
+        self.system = signal.TransferFunction(self.numerator,self.denominator)
+        self.w,self.mag,self.phase = signal.bode(self.system)
+
+        self.filterToolPlotTable.canvas.axes.clear()
+        self.filterToolPlotTable.canvas.axes.semilogx(self.w,self.phase)
+        self.filterToolPlotTable.canvas.axes.grid(True, which="both")
+        self.filterToolPlotTable.canvas.axes.minorticks_on()
+        self.filterToolPlotTable.canvas.figure.tight_layout()
+        self.filterToolPlotTable.canvas.axes.axes.set_xlabel("Eje X")
+        self.filterToolPlotTable.canvas.axes.axes.set_ylabel("Eje Y")
+        self.filterToolPlotTable.canvas.axes.title.set_text('Respuesta en Frecuencia - Fase')
+        self.filterToolPlotTable.canvas.figure.tight_layout()
+        self.filterToolPlotTable.canvas.draw()
+
+    def plotZerosAndPoles (self):
+        self.numerator = [1,1]
+        self.denominator = [1, 1,1]
+        self.system = signal.TransferFunction(self.numerator, self.denominator)
+        self.ZerosandPoles = self.system.to_zpk()
+        print (self.ZerosandPoles)
 
 
+
+    def defineFilter (self):
+        print ("hola")
+        self.myFilter = filterDesigned (self.AaInputFilter,self.ApInputFilter,self.FaInputFilter, self.FpInputFilter,str(self.filterTypeOption.currentText()),str(self.approxTypeOption.currentText()),self.filterOrder, self.maxQ, self.denorm)

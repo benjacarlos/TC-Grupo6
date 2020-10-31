@@ -316,7 +316,7 @@
        </rect>
       </property>
      </widget>
-     <widget class="filterToolPlot" name="widget" native="true">
+     <widget class="filterToolPlot" name="filterToolPlotTable" native="true">
       <property name="geometry">
        <rect>
         <x>330</x>
