@@ -8,7 +8,7 @@ from matplotlib.figure import Figure
 # - Clase Principal del gráfico para cada filtro  #
 ###################################################
 
-class filterToolPlot(QWidget):
+class filterToolPlotStage2(QWidget):
 
     def __init__(self, parent=None):
         QWidget.__init__(self, parent)

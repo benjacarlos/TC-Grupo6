@@ -20,11 +20,11 @@
       <x>10</x>
       <y>10</y>
       <width>901</width>
-      <height>721</height>
+      <height>711</height>
      </rect>
     </property>
     <property name="currentIndex">
-     <number>1</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="stageOne">
      <widget class="QComboBox" name="filterTypeOption">
@@ -435,7 +435,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>Accept Parameters</string>
+       <string>Enter Parameters</string>
       </property>
      </widget>
     </widget>
@@ -471,6 +471,138 @@
        <string>Return to Stage 1</string>
       </property>
      </widget>
+     <widget class="QWidget" name="parametersInfo" native="true">
+      <property name="geometry">
+       <rect>
+        <x>450</x>
+        <y>470</y>
+        <width>351</width>
+        <height>201</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="filterToolPlotStage2" name="widget_2" native="true">
+      <property name="geometry">
+       <rect>
+        <x>330</x>
+        <y>30</y>
+        <width>550</width>
+        <height>381</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="parametersInfoLabel">
+      <property name="geometry">
+       <rect>
+        <x>510</x>
+        <y>440</y>
+        <width>211</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>20</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Filter Parameters</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="parametersInfoLabel_2">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>50</y>
+        <width>231</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>20</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Transfer Functions</string>
+      </property>
+     </widget>
+     <widget class="QWidget" name="widget_3" native="true">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>80</y>
+        <width>301</width>
+        <height>301</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="zeroTransferFunctionOrder">
+      <property name="geometry">
+       <rect>
+        <x>90</x>
+        <y>390</y>
+        <width>141</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>First Order</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Second Order</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QComboBox" name="poleTransferFunctionOrder">
+      <property name="geometry">
+       <rect>
+        <x>90</x>
+        <y>430</y>
+        <width>141</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>First Order</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Second Order</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLabel" name="zeroLabel">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>390</y>
+        <width>41</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Zeros</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="poleLabel">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>430</y>
+        <width>31</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Poles</string>
+      </property>
+     </widget>
     </widget>
    </widget>
   </widget>
@@ -491,6 +623,12 @@
    <class>filterToolPlot</class>
    <extends>QWidget</extends>
    <header>filtertoolplot.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>filterToolPlotStage2</class>
+   <extends>QWidget</extends>
+   <header>filtertoolplotstage2.h</header>
    <container>1</container>
   </customwidget>
  </customwidgets>
