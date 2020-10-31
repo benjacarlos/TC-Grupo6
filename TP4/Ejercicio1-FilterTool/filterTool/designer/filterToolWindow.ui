@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>filterToolWindow</class>
+ <widget class="QMainWindow" name="filterToolWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>933</width>
+    <height>767</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QStackedWidget" name="stackedWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>901</width>
+      <height>721</height>
+     </rect>
+    </property>
+    <widget class="QWidget" name="page">
+     <widget class="QComboBox" name="filterTypeOption">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>70</y>
+        <width>221</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>Low-Pass</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>High-Pass</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Band-Pass</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Band-Rejection</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Group Delay</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QComboBox" name="approxTypeOption">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>130</y>
+        <width>221</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>Cauer</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Gauss</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Legendre</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLabel" name="filterTypeOptionLabel">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>50</y>
+        <width>71</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Filter Type</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="aproxTypeOptionLabel">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>110</y>
+        <width>71</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Approximation</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_2"/>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>933</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
