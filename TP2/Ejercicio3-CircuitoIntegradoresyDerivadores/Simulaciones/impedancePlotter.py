@@ -43,7 +43,9 @@ def myImpedanceCalculatorDerivator(fStart,fEnd):
         phases.append (numpy.degrees (cmath.phase(phase)))
     return myrange,magnitudes,phases
 
-def plotInLog (xlabel,ylabel,theTitle, frange,logPlot,ax):
+def plotInLog (xlabel,ylabel,theTitle, frange,logPlot,fig):
+
+    ax = fig.add_subplot()
     ax.semilogx(frange, logPlot)
     ax.set_xscale('log')
     ax.grid(True, which="both")
@@ -55,7 +57,7 @@ def plotInLog (xlabel,ylabel,theTitle, frange,logPlot,ax):
 
 
 def readLT (fileName):
-    ltSpiceTXT = open(r"C:\Users\Nicolas Mestanza\Desktop\Draft5.txt", "r")
+    ltSpiceTXT = open(r"C:\Users\Nicolas Mestanza\Desktop\Draft3.txt", "r")
     EachLine = ltSpiceTXT.readlines()
     print (EachLine)
     myLTImpedance = dict()
@@ -87,7 +89,7 @@ def readLT (fileName):
 
 if __name__ == '__main__':
     mySpiceImpedance = readLT ("Draft5")
-    fig, ax = plt.subplots()
+    fig = plt.figure()
     ######################################################
     # Definir desde que a que frecuencia quiero graficar #
     ######################################################
@@ -102,12 +104,13 @@ if __name__ == '__main__':
     myrange, myMagnitude,myPhase = myImpedanceCalculatorIntegrator(fStart,fEnd)
     #myrange, myMagnitude,myPhase = myImpedanceCalculatorDerivator(fStart,fEnd)
 
-    plotInLog ("Frecuencia (Hz)","|Zin|","Impedancia de Entrada",mySpiceImpedance['f'],mySpiceImpedance['magnitude'],ax)
+    plotInLog ("Frecuencia (Hz)","|Zin|","Impedancia de Entrada",mySpiceImpedance['f'],mySpiceImpedance['magnitude'],fig)
 
-    plotInLog ("Frecuencia (Hz)","|Zin|","Impedancia de Entrada",myrange,myMagnitude,ax)
-    fig.tight_layout()
+    plotInLog ("Frecuencia (Hz)","|Zin|","Impedancia de Entrada",myrange,myMagnitude,fig)
     #plotInLog("Frecuencia (Hz)", "Fase Zin", "Impedancia de Entrada", myrange, myPhase)
     plt.show()
+
+
 
 
 

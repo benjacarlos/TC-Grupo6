@@ -195,8 +195,8 @@ class myPlot(QMainWindow, Ui_bodePlotterWindow):
 
         self.plotTableGain.canvas.axes.clear()
         self.plotTablePhase.canvas.axes.clear()
-        self.plotTableGain.canvas.axes.title.set_text('Diagrama de Bode - Magnitud')
-        self.plotTablePhase.canvas.axes.title.set_text('Diagrama de Bode - Fase')
+        self.plotTableGain.canvas.axes.title.set_text('Respuesta en Frecuencia - Amplitud')
+        self.plotTablePhase.canvas.axes.title.set_text('Respuesta en Frecuencia - Fase')
 
 
         for myBode in self.bodes.bodesList:
@@ -212,9 +212,9 @@ class myPlot(QMainWindow, Ui_bodePlotterWindow):
                 # Grafica apropiadamente según cada caso de Input #
 
                 if myBode.bodeType=="csvFunction":
-                   self.plotTableGain.canvas.axes.plot(myBode.w, myBode.mag, '-o', color=myBode.color, label=myBode.label)
+                   self.plotTableGain.canvas.axes.plot(myBode.w, myBode.mag, '--',marker="x",linewidth=1.2, color=myBode.color, label=myBode.label)
                    self.plotTableGain.canvas.axes.set_xscale('log')
-                   self.plotTablePhase.canvas.axes.plot(myBode.w, myBode.phase, '-o', color=myBode.color, label=myBode.label)
+                   self.plotTablePhase.canvas.axes.plot(myBode.w, myBode.phase, '--',marker="x",linewidth=1.2, color=myBode.color, label=myBode.label)
                    self.plotTablePhase.canvas.axes.set_xscale('log')
                 else:
                     self.plotTableGain.canvas.axes.semilogx(myBode.w, myBode.mag, color=myBode.color, label=myBode.label)

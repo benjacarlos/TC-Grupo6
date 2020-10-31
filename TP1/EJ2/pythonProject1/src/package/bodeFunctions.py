@@ -177,8 +177,8 @@ class bodeFunction:
             #
             # phase 1D ndarray
             # Phase array [deg]
-
-            self.w, self.mag, self.phase = signal.bode(self.transferFunction)
+            m = np.linspace(2000, 6000000, 1000000)
+            self.w, self.mag, self.phase = signal.bode(self.transferFunction, w=m)
             self.bodeType = "transferFunction"
 
 
