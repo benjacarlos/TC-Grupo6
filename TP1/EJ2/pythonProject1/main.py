@@ -159,7 +159,7 @@ class myPlot(QMainWindow, Ui_bodePlotterWindow):
 
 
                 if myBode.bodeType == "csvFunction":
-                    self.plotTableGain.canvas.axes.plot(myBode.w, myBode.mag, '-o', color=myBode.color, label="|"+myBode.label+"|")
+                    self.plotTableGain.canvas.axes.plot(myBode.w, myBode.mag, color=myBode.color, label="|"+myBode.label+"|")
                     self.plotTableGain.canvas.aux_axes.scatter(myBode.w, myBode.phase, color=myBode.color,label="Fase " + myBode.label)
                     self.plotTableGain.canvas.axes.set_xscale('log')
                 else:
@@ -213,9 +213,9 @@ class myPlot(QMainWindow, Ui_bodePlotterWindow):
                 # Grafica apropiadamente según cada caso de Input #
 
                 if myBode.bodeType=="csvFunction":
-                   self.plotTableGain.canvas.axes.plot(myBode.w, myBode.mag, '-o', color=myBode.color, label=myBode.label)
+                   self.plotTableGain.canvas.axes.plot(myBode.w, myBode.mag, color=myBode.color, label=myBode.label)
                    self.plotTableGain.canvas.axes.set_xscale('log')
-                   self.plotTablePhase.canvas.axes.plot(myBode.w, myBode.phase, '-o', color=myBode.color, label=myBode.label)
+                   self.plotTablePhase.canvas.axes.plot(myBode.w, myBode.phase, color=myBode.color, label=myBode.label)
                    self.plotTablePhase.canvas.axes.set_xscale('log')
                 else:
                     self.plotTableGain.canvas.axes.semilogx(myBode.w, myBode.mag, color=myBode.color, label=myBode.label)
