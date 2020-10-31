@@ -1,0 +1,7 @@
+Removed Pin From Net: NetName=NetR1_1 Pin=Rf-3
+Added Pin To Net: NetName=NetR1_1 Pin=Rf-2
+Added Pin To Net: NetName=NetRb_2 Pin=Rb-2
+Added Pin To Net: NetName=NetRb_2 Pin=Ri-1
+Added Pin To Net: NetName=NetRb_2 Pin=U1-1
+Added Net: Name=NetRb_2
+Added Room: Name=Circuito de Aplicacion Ej4

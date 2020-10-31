@@ -1,0 +1,28 @@
+* E:\WK\Google Drive - ITBA\ITBA - Me\2020B\Teoria de Circuitos\TP\git\TC-Grupo6\TP3\EJ1\Simulacion\ej1-tl082.asc
+C1 V1+ Vin {mc(C,tolc)}
+C2 N001 V2- {mc(C,tolc)}
+R1 V1+ 0 {mc(4*R,tolr)}
+R2 V1+ N001 {mc(R,tolr)}
+R3 V2- Vout {mc(R,tolr)}
+R4 Vout V2+ {mc(R,tolr)}
+R5 V2+ Vin {mc(R,tolr)}
+V1 v+ 0 9
+V2 0 v- 9
+V3 Vin 0 PULSE(0 0.5 0 .00001 .00001 1) AC 1
+XU1 NC_01 NC_02 NC_03 NC_04 NC_05 LM833 LM833 Avol=316.2K GBW=15Meg Slew=5Meg ilimit=25m rail=0 Vos=0 phimargin=60 en=0 enk=0 in=0 ink=0 Rin=175K
+XU2 NC_06 NC_07 NC_08 NC_09 NC_10 LM833 LM833 Avol=316.2K GBW=15Meg Slew=5Meg ilimit=25m rail=0 Vos=0 phimargin=60 en=0 enk=0 in=0 ink=0 Rin=175K
+XU3 V1+ V2- v+ v- Vout TL082
+XU4 V2+ V2- v+ v- N001 TL082
+R7 pp 0 1Meg
+C3 pp 0 100p
+* .ac dec 1000 1 10meg
+.param R = 2.2k
+.param tolr = 0.05
+.param C = 34.965n
+.param tolc = 0.2
+* .step param run 0 100 1
+.tran 0 .005 0 100
+.lib E:\WK\Google Drive - ITBA\ITBA - Me\2020B\Teoria de Circuitos\TP\git\TC-Grupo6\TP3\EJ1\Simulacion\TL082.301
+.lib LM833.sub
+.backanno
+.end

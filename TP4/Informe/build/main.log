@@ -1,0 +1,2134 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.8.21)  14 OCT 2020 23:35
+entering extended mode
+**d:/Documents/GitHub/TC-Grupo6/TP3/Informe/main.tex
+(d:/Documents/GitHub/TC-Grupo6/TP3/Informe/main.tex
+LaTeX2e <2020-02-02> patch level 5
+L3 programming layer <2020-06-18> (preamble.tex ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls"
+Document Class: article 2019/12/20 v1.4l Standard LaTeX document class
+("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/latex/base\size10.clo"
+File: size10.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
+)
+\c@part=\count167
+\c@section=\count168
+\c@subsection=\count169
+\c@subsubsection=\count170
+\c@paragraph=\count171
+\c@subparagraph=\count172
+\c@figure=\count173
+\c@table=\count174
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen134
+) ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/latex/base\inputenc.sty"
+Package: inputenc 2018/08/11 v1.3c Input encoding file
+\inpenc@prehook=\toks15
+\inpenc@posthook=\toks16
+) ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/generic/babel\babel.sty"
+Package: babel 2020/06/10 3.45 The Babel package
+ ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/generic/babel\babel.def"
+File: babel.def 2020/06/10 3.45 Babel common definitions
+\babel@savecnt=\count175
+\U@D=\dimen135
+\l@babelnohyphens=\language79
+ ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/generic/babel\txtbabel.def")
+\bbl@readstream=\read2
+)
+\bbl@dirlevel=\count176
+
+*************************************
+* Local config file bblopts.cfg used
+*
+("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/latex/arabi\bblopts.cfg"
+File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of babel
+) ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/latex/babel-spanish\spanish.ldf"
+Language: spanish.ldf 2016/03/03 v5.0p Spanish support from the babel system
+\es@quottoks=\toks17
+\es@quotdepth=\count177
+) ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/latex/babel-english\english.ldf"
+Language: english 2017/06/06 v3.3r English support from the babel system
+Package babel Info: \l@canadian = using hyphenrules for english
+(babel)             (\language0) on input line 102.
+Package babel Info: \l@australian = using hyphenrules for ukenglish
+(babel)             (\language73) on input line 105.
+Package babel Info: \l@newzealand = using hyphenrules for ukenglish
+(babel)             (\language73) on input line 108.
+)) ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.sty"
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+ ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg"
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+ ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def"
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+) ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/latex/colortbl\colortbl.sty"
+Package: colortbl 2020/01/04 v1.0e Color table columns (DPC)
+ ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/latex/tools\array.sty"
+Package: array 2019/08/31 v2.4l Tabular extension package (FMi)
+\col@sep=\dimen136
+\ar@mcellbox=\box45
+\extrarowheight=\dimen137
+\NC@list=\toks18
+\extratabsurround=\skip49
+\backup@length=\skip50
+\ar@cellbox=\box46
+)
+\everycr=\toks19
+\minrowclearance=\skip51
+)
+\rownum=\count178
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+) ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty"
+Package: geometry 2020/01/02 v5.9 Page Geometry
+ ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty"
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks20
+) ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvtex.sty"
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+ ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty"
+Package: iftex 2020/03/06 v1.0d TeX engine tests
+))
+\Gm@cnth=\count179
+\Gm@cntv=\count180
+\c@Gm@tempcnt=\count181
+\Gm@bindingoffset=\dimen138
+\Gm@wd@mp=\dimen139
+\Gm@odd@mp=\dimen140
+\Gm@even@mp=\dimen141
+\Gm@layoutwidth=\dimen142
+\Gm@layoutheight=\dimen143
+\Gm@layouthoffset=\dimen144
+\Gm@layoutvoffset=\dimen145
+\Gm@dimlist=\toks21
+ ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg")) ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption.sty"
+Package: caption 2020/05/30 v3.4k Customizing captions (AR)
+ ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption3.sty"
+Package: caption3 2020/07/20 v1.12b caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 61.
+\captionmargin=\dimen146
+\captionmargin@=\dimen147
+\captionwidth=\dimen148
+\caption@tempdima=\dimen149
+\caption@indent=\dimen150
+\caption@parindent=\dimen151
+\caption@hangindent=\dimen152
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count182
+\c@continuedfloat=\count183
+) ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/latex/siunitx\siunitx.sty" ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/latex/l3kernel\expl3.sty"
+Package: expl3 2020-06-18 L3 programming layer (loader) 
+ ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdfmode.def"
+File: l3backend-pdfmode.def 2020-06-29 L3 backend support: PDF mode
+\l__kernel_color_stack_int=\count184
+\l__pdf_internal_box=\box47
+)) ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/xparse\xparse.sty"
+Package: xparse 2020-05-15 L3 Experimental document command parser
+ ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/xparse\xparse-generic.tex"
+\l__xparse_current_arg_int=\count185
+\g__xparse_grabber_int=\count186
+\l__xparse_m_args_int=\count187
+\l__xparse_v_nesting_int=\count188
+))
+Package: siunitx 2020/02/25 v2.8b A comprehensive (SI) units package
+ ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amstext.sty"
+Package: amstext 2000/06/29 v2.01 AMS text
+ ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.sty"
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks22
+\ex@=\dimen153
+)) ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/l3keys2e\l3keys2e.sty"
+Package: l3keys2e 2020-05-15 LaTeX2e option processing using LaTeX3 keys
+)
+\l__siunitx_tmp_box=\box48
+\l__siunitx_tmp_dim=\dimen154
+\l__siunitx_tmp_int=\count189
+\l__siunitx_number_mantissa_length_int=\count190
+\l__siunitx_number_uncert_length_int=\count191
+\l__siunitx_round_int=\count192
+\l__siunitx_process_decimal_int=\count193
+\l__siunitx_process_uncertainty_int=\count194
+\l__siunitx_process_fixed_int=\count195
+\l__siunitx_process_integer_min_int=\count196
+\l__siunitx_process_precision_int=\count197
+\l__siunitx_group_min_int=\count198
+\l__siunitx_angle_marker_box=\box49
+\l__siunitx_angle_unit_box=\box50
+\l__siunitx_angle_marker_dim=\dimen155
+\l__siunitx_angle_unit_dim=\dimen156
+\l__siunitx_unit_int=\count199
+\l__siunitx_unit_denominator_int=\count266
+\l__siunitx_unit_numerator_int=\count267
+\l__siunitx_unit_prefix_int=\count268
+\l__siunitx_unit_prefix_base_int=\count269
+\l__siunitx_unit_prefix_gram_int=\count270
+\l__siunitx_number_product_int=\count271
+\c__siunitx_one_fill_skip=\skip52
+\l__siunitx_table_unit_align_skip=\skip53
+\l__siunitx_table_exponent_dim=\dimen157
+\l__siunitx_table_integer_dim=\dimen158
+\l__siunitx_table_mantissa_dim=\dimen159
+\l__siunitx_table_marker_dim=\dimen160
+\l__siunitx_table_result_dim=\dimen161
+\l__siunitx_table_uncert_dim=\dimen162
+\l__siunitx_table_fill_pre_dim=\dimen163
+\l__siunitx_table_fill_post_dim=\dimen164
+\l__siunitx_table_fill_mid_dim=\dimen165
+\l__siunitx_table_pre_box=\box51
+\l__siunitx_table_post_box=\box52
+\l__siunitx_table_mantissa_box=\box53
+\l__siunitx_table_result_box=\box54
+\l__siunitx_table_number_align_skip=\skip54
+\l__siunitx_table_text_align_skip=\skip55
+ ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/latex/translator\translator.sty"
+Package: translator 2020-08-03 v1.12c Easy translation of strings in LaTeX
+)) ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty"
+Package: amsmath 2020/01/20 v2.17e AMS math features
+\@mathmargin=\skip56
+
+For additional information on amsmath, use the `?' option.
+("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.sty"
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen166
+) ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.sty"
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count272
+LaTeX Info: Redefining \frac on input line 227.
+\uproot@=\count273
+\leftroot@=\count274
+LaTeX Info: Redefining \overline on input line 389.
+\classnum@=\count275
+\DOTSCASE@=\count276
+LaTeX Info: Redefining \ldots on input line 486.
+LaTeX Info: Redefining \dots on input line 489.
+LaTeX Info: Redefining \cdots on input line 610.
+\Mathstrutbox@=\box55
+\strutbox@=\box56
+\big@size=\dimen167
+LaTeX Font Info:    Redeclaring font encoding OML on input line 733.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 734.
+\macc@depth=\count277
+\c@MaxMatrixCols=\count278
+\dotsspace@=\muskip16
+\c@parentequation=\count279
+\dspbrk@lvl=\count280
+\tag@help=\toks23
+\row@=\count281
+\column@=\count282
+\maxfields@=\count283
+\andhelp@=\toks24
+\eqnshift@=\dimen168
+\alignsep@=\dimen169
+\tagshift@=\dimen170
+\tagwidth@=\dimen171
+\totwidth@=\dimen172
+\lineht@=\dimen173
+\@envbody=\toks25
+\multlinegap=\skip57
+\multlinetaggap=\skip58
+\mathdisplay@stack=\toks26
+LaTeX Info: Redefining \[ on input line 2859.
+LaTeX Info: Redefining \] on input line 2860.
+) ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amsfonts.sty"
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+) ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amssymb.sty"
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+) ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty"
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count284
+\float@exts=\toks27
+\float@box=\box57
+\@float@everytoks=\toks28
+\@floatcapt=\box58
+) ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/latex/base\textcomp.sty"
+Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
+) ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty"
+Package: graphicx 2019/11/30 v1.2a Enhanced LaTeX Graphics (DPC,SPQR)
+ ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty"
+Package: graphics 2019/11/30 v1.4a Standard LaTeX Graphics (DPC,SPQR)
+ ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty"
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+) ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.cfg"
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 105.
+)
+\Gin@req@height=\dimen174
+\Gin@req@width=\dimen175
+) ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/latex/wrapfig\wrapfig.sty"
+\wrapoverhang=\dimen176
+\WF@size=\dimen177
+\c@WF@wrappedlines=\count285
+\WF@box=\box59
+\WF@everypar=\toks29
+Package: wrapfig 2003/01/31  v 3.6
+) ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/latex/caption\subcaption.sty"
+Package: subcaption 2020/01/22 v1.3d Sub-captions (AR)
+\c@subfigure=\count286
+\c@subtable=\count287
+) ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/latex/tools\multicol.sty"
+Package: multicol 2019/12/09 v1.8y multicolumn formatting (FMi)
+\c@tracingmulticols=\count288
+\mult@box=\box60
+\multicol@leftmargin=\dimen178
+\c@unbalance=\count289
+\c@collectmore=\count290
+\doublecol@number=\count291
+\multicoltolerance=\count292
+\multicolpretolerance=\count293
+\full@width=\dimen179
+\page@free=\dimen180
+\premulticols=\dimen181
+\postmulticols=\dimen182
+\multicolsep=\skip59
+\multicolbaselineskip=\skip60
+\partial@page=\box61
+\last@line=\box62
+\maxbalancingoverflow=\dimen183
+\mult@rightbox=\box63
+\mult@grightbox=\box64
+\mult@gfirstbox=\box65
+\mult@firstbox=\box66
+\@tempa=\box67
+\@tempa=\box68
+\@tempa=\box69
+\@tempa=\box70
+\@tempa=\box71
+\@tempa=\box72
+\@tempa=\box73
+\@tempa=\box74
+\@tempa=\box75
+\@tempa=\box76
+\@tempa=\box77
+\@tempa=\box78
+\@tempa=\box79
+\@tempa=\box80
+\@tempa=\box81
+\@tempa=\box82
+\@tempa=\box83
+\@tempa=\box84
+\@tempa=\box85
+\@tempa=\box86
+\@tempa=\box87
+\@tempa=\box88
+\@tempa=\box89
+\@tempa=\box90
+\@tempa=\box91
+\@tempa=\box92
+\@tempa=\box93
+\@tempa=\box94
+\@tempa=\box95
+\@tempa=\box96
+\@tempa=\box97
+\@tempa=\box98
+\@tempa=\box99
+\@tempa=\box100
+\@tempa=\box101
+\@tempa=\box102
+\@tempa=\box103
+\c@minrows=\count294
+\c@columnbadness=\count295
+\c@finalcolumnbadness=\count296
+\last@try=\dimen184
+\multicolovershoot=\dimen185
+\multicolundershoot=\dimen186
+\mult@nat@firstbox=\box104
+\colbreak@box=\box105
+\mc@col@check@num=\count297
+) ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/latex/multirow\multirow.sty"
+Package: multirow 2019/05/31 v2.5 Span multiple rows of a table
+\multirow@colwidth=\skip61
+\multirow@cntb=\count298
+\multirow@dima=\skip62
+\bigstrutjot=\dimen187
+) ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref.sty"
+Package: hyperref 2020-05-15 v7.00e Hypertext links for LaTeX
+ ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty"
+Package: ltxcmds 2019/12/15 v1.24 LaTeX kernel commands for general use (HO)
+) ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/generic/pdftexcmds\pdftexcmds.sty"
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO)
+ ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/generic/infwarerr\infwarerr.sty"
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+) ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/generic/kvsetkeys\kvsetkeys.sty"
+Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
+) ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/generic/kvdefinekeys\kvdefinekeys.sty"
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+) ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/generic/pdfescape\pdfescape.sty"
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+) ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/latex/hycolor\hycolor.sty"
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+) ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/latex/letltxmacro\letltxmacro.sty"
+Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
+) ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/latex/auxhook\auxhook.sty"
+Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
+) ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoptions.sty"
+Package: kvoptions 2019/11/29 v3.13 Key value format for package options (HO)
+)
+\@linkdim=\dimen188
+\Hy@linkcounter=\count299
+\Hy@pagecounter=\count300
+ ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.def"
+File: pd1enc.def 2020-05-15 v7.00e Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+) ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/generic/intcalc\intcalc.sty"
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+) ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/generic/etexcmds\etexcmds.sty"
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+)
+\Hy@SavedSpaceFactor=\count301
+Package hyperref Info: Hyper figures OFF on input line 4464.
+Package hyperref Info: Link nesting OFF on input line 4469.
+Package hyperref Info: Hyper index ON on input line 4472.
+Package hyperref Info: Plain pages OFF on input line 4479.
+Package hyperref Info: Backreferencing OFF on input line 4484.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4717.
+\c@Hy@tempcnt=\count302
+ ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty"
+\Urlmuskip=\muskip17
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 5076.
+\XeTeXLinkMargin=\dimen189
+ ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/generic/bitset\bitset.sty"
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+ ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/generic/bigintcalc\bigintcalc.sty"
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
+))
+\Fld@menulength=\count303
+\Field@Width=\dimen190
+\Fld@charsize=\dimen191
+Package hyperref Info: Hyper figures OFF on input line 6347.
+Package hyperref Info: Link nesting OFF on input line 6352.
+Package hyperref Info: Hyper index ON on input line 6355.
+Package hyperref Info: backreferencing OFF on input line 6362.
+Package hyperref Info: Link coloring OFF on input line 6367.
+Package hyperref Info: Link coloring with OCG OFF on input line 6372.
+Package hyperref Info: PDF/A mode OFF on input line 6377.
+LaTeX Info: Redefining \ref on input line 6417.
+LaTeX Info: Redefining \pageref on input line 6421.
+ ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/generic/atbegshi\atbegshi.sty"
+Package: atbegshi 2019/12/05 v1.19 At begin shipout hook (HO)
+)
+\Hy@abspage=\count304
+\c@Item=\count305
+\c@Hfootnote=\count306
+)
+Package hyperref Info: Driver (autodetected): hpdftex.
+ ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hpdftex.def"
+File: hpdftex.def 2020-05-15 v7.00e Hyperref driver for pdfTeX
+ ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/latex/atveryend\atveryend.sty"
+Package: atveryend 2019-12-11 v1.11 Hooks at the very end of document (HO)
+Package atveryend Info: \enddocument detected (standard20110627).
+)
+\Fld@listcount=\count307
+\c@bookmark@seq@number=\count308
+ ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/latex/rerunfilecheck\rerunfilecheck.sty"
+Package: rerunfilecheck 2019/12/05 v1.9 Rerun checks for auxiliary files (HO)
+ ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/generic/uniquecounter\uniquecounter.sty"
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 286.
+)
+\Hy@SectionHShift=\skip63
+)
+Package hyperref Info: Option `colorlinks' set `true' on input line 33.
+ ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/latex/circuitikz\circuitikz.sty"
+Package: circuitikz 2020/08/07{} The CircuiTikz circuit drawing package version 1.2.3
+ ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/latex/pgf/frontendlayer\tikz.sty" ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgf.sty" ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfrcs.sty" ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil-common.tex"
+\pgfutil@everybye=\toks30
+\pgfutil@tempdima=\dimen192
+\pgfutil@tempdimb=\dimen193
+ ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil-common-lists.tex")) ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil-latex.def"
+\pgfutil@abb=\box106
+ ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/latex/ms\everyshi.sty"
+Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
+)) ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfrcs.code.tex" ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/generic/pgf\pgf.revision.tex")
+Package: pgfrcs 2020/01/08 v3.1.5b (3.1.5b)
+))
+Package: pgf 2020/01/08 v3.1.5b (3.1.5b)
+ ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgfcore.sty" ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/latex/pgf/systemlayer\pgfsys.sty" ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsys.code.tex"
+Package: pgfsys 2020/01/08 v3.1.5b (3.1.5b)
+ ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys.code.tex"
+\pgfkeys@pathtoks=\toks31
+\pgfkeys@temptoks=\toks32
+ ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeysfiltered.code.tex"
+\pgfkeys@tmptoks=\toks33
+))
+\pgf@x=\dimen194
+\pgf@y=\dimen195
+\pgf@xa=\dimen196
+\pgf@ya=\dimen197
+\pgf@xb=\dimen198
+\pgf@yb=\dimen199
+\pgf@xc=\dimen256
+\pgf@yc=\dimen257
+\pgf@xd=\dimen258
+\pgf@yd=\dimen259
+\w@pgf@writea=\write3
+\r@pgf@reada=\read3
+\c@pgf@counta=\count309
+\c@pgf@countb=\count310
+\c@pgf@countc=\count311
+\c@pgf@countd=\count312
+\t@pgf@toka=\toks34
+\t@pgf@tokb=\toks35
+\t@pgf@tokc=\toks36
+\pgf@sys@id@count=\count313
+ ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgf.cfg"
+File: pgf.cfg 2020/01/08 v3.1.5b (3.1.5b)
+)
+Driver file for pgf: pgfsys-pdftex.def
+ ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsys-pdftex.def"
+File: pgfsys-pdftex.def 2020/01/08 v3.1.5b (3.1.5b)
+ ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsys-common-pdf.def"
+File: pgfsys-common-pdf.def 2020/01/08 v3.1.5b (3.1.5b)
+))) ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsyssoftpath.code.tex"
+File: pgfsyssoftpath.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgfsyssoftpath@smallbuffer@items=\count314
+\pgfsyssoftpath@bigbuffer@items=\count315
+) ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsysprotocol.code.tex"
+File: pgfsysprotocol.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+)) ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcore.code.tex"
+Package: pgfcore 2020/01/08 v3.1.5b (3.1.5b)
+ ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.code.tex" ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathcalc.code.tex" ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathutil.code.tex") ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathparser.code.tex"
+\pgfmath@dimen=\dimen260
+\pgfmath@count=\count316
+\pgfmath@box=\box107
+\pgfmath@toks=\toks37
+\pgfmath@stack@operand=\toks38
+\pgfmath@stack@operation=\toks39
+) ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.code.tex" ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.basic.code.tex") ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.trigonometric.code.tex") ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.random.code.tex") ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.comparison.code.tex") ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.base.code.tex") ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.round.code.tex") ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.misc.code.tex") ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.integerarithmetics.code.tex"))) ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfloat.code.tex"
+\c@pgfmathroundto@lastzeros=\count317
+)) ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfint.code.tex") ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepoints.code.tex"
+File: pgfcorepoints.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgf@picminx=\dimen261
+\pgf@picmaxx=\dimen262
+\pgf@picminy=\dimen263
+\pgf@picmaxy=\dimen264
+\pgf@pathminx=\dimen265
+\pgf@pathmaxx=\dimen266
+\pgf@pathminy=\dimen267
+\pgf@pathmaxy=\dimen268
+\pgf@xx=\dimen269
+\pgf@xy=\dimen270
+\pgf@yx=\dimen271
+\pgf@yy=\dimen272
+\pgf@zx=\dimen273
+\pgf@zy=\dimen274
+) ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepathconstruct.code.tex"
+File: pgfcorepathconstruct.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgf@path@lastx=\dimen275
+\pgf@path@lasty=\dimen276
+) ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepathusage.code.tex"
+File: pgfcorepathusage.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgf@shorten@end@additional=\dimen277
+\pgf@shorten@start@additional=\dimen278
+) ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorescopes.code.tex"
+File: pgfcorescopes.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgfpic=\box108
+\pgf@hbox=\box109
+\pgf@layerbox@main=\box110
+\pgf@picture@serial@count=\count318
+) ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoregraphicstate.code.tex"
+File: pgfcoregraphicstate.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgflinewidth=\dimen279
+) ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoretransformations.code.tex"
+File: pgfcoretransformations.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgf@pt@x=\dimen280
+\pgf@pt@y=\dimen281
+\pgf@pt@temp=\dimen282
+) ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorequick.code.tex"
+File: pgfcorequick.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+) ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoreobjects.code.tex"
+File: pgfcoreobjects.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+) ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepathprocessing.code.tex"
+File: pgfcorepathprocessing.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+) ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorearrows.code.tex"
+File: pgfcorearrows.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgfarrowsep=\dimen283
+) ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoreshade.code.tex"
+File: pgfcoreshade.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgf@max=\dimen284
+\pgf@sys@shading@range@num=\count319
+\pgf@shadingcount=\count320
+) ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoreimage.code.tex"
+File: pgfcoreimage.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+ ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoreexternal.code.tex"
+File: pgfcoreexternal.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgfexternal@startupbox=\box111
+)) ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorelayers.code.tex"
+File: pgfcorelayers.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+) ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoretransparency.code.tex"
+File: pgfcoretransparency.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+) ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepatterns.code.tex"
+File: pgfcorepatterns.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+) ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorerdf.code.tex"
+File: pgfcorerdf.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+))) ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmoduleshapes.code.tex"
+File: pgfmoduleshapes.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgfnodeparttextbox=\box112
+) ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmoduleplot.code.tex"
+File: pgfmoduleplot.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+) ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfcomp-version-0-65.sty"
+Package: pgfcomp-version-0-65 2020/01/08 v3.1.5b (3.1.5b)
+\pgf@nodesepstart=\dimen285
+\pgf@nodesepend=\dimen286
+) ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfcomp-version-1-18.sty"
+Package: pgfcomp-version-1-18 2020/01/08 v3.1.5b (3.1.5b)
+)) ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgffor.sty" ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfkeys.sty" ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys.code.tex")) ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/latex/pgf/math\pgfmath.sty" ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.code.tex")) ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgffor.code.tex"
+Package: pgffor 2020/01/08 v3.1.5b (3.1.5b)
+ ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.code.tex")
+\pgffor@iter=\dimen287
+\pgffor@skip=\dimen288
+\pgffor@stack=\toks40
+\pgffor@toks=\toks41
+)) ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz\tikz.code.tex"
+Package: tikz 2020/01/08 v3.1.5b (3.1.5b)
+ ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibraryplothandlers.code.tex"
+File: pgflibraryplothandlers.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgf@plot@mark@count=\count321
+\pgfplotmarksize=\dimen289
+)
+\tikz@lastx=\dimen290
+\tikz@lasty=\dimen291
+\tikz@lastxsaved=\dimen292
+\tikz@lastysaved=\dimen293
+\tikz@lastmovetox=\dimen294
+\tikz@lastmovetoy=\dimen295
+\tikzleveldistance=\dimen296
+\tikzsiblingdistance=\dimen297
+\tikz@figbox=\box113
+\tikz@figbox@bg=\box114
+\tikz@tempbox=\box115
+\tikz@tempbox@bg=\box116
+\tikztreelevel=\count322
+\tikznumberofchildren=\count323
+\tikznumberofcurrentchild=\count324
+\tikz@fig@count=\count325
+ ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodulematrix.code.tex"
+File: pgfmodulematrix.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgfmatrixcurrentrow=\count326
+\pgfmatrixcurrentcolumn=\count327
+\pgf@matrix@numberofcolumns=\count328
+)
+\tikz@expandcount=\count329
+
+("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarytopaths.code.tex"
+File: tikzlibrarytopaths.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+))) ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarycalc.code.tex"
+File: tikzlibrarycalc.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+) ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibraryarrows.meta.code.tex"
+File: pgflibraryarrows.meta.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgfarrowinset=\dimen298
+\pgfarrowlength=\dimen299
+\pgfarrowwidth=\dimen300
+\pgfarrowlinewidth=\dimen301
+) ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarybending.code.tex"
+File: tikzlibrarybending.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+ ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodulebending.code.tex"
+File: pgfmodulebending.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+ ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodulenonlineartransformations.code.tex"
+File: pgfmodulenonlineartransformations.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgftransformnonlinearflatness=\dimen302
+) ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibrarycurvilinear.code.tex"
+File: pgflibrarycurvilinear.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgf@curvilinear@time@a=\dimen303
+\pgf@curvilinear@length@a=\dimen304
+\pgf@curvilinear@length@b=\dimen305
+\pgf@curvilinear@length@c=\dimen306
+\pgf@curvilinear@length@d=\dimen307
+)
+\pgf@arrows@the@rigidity=\dimen308
+)) ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibraryfpu.code.tex" ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibraryfpu.code.tex")) ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/generic/circuitikz\pgfcirc.defines.tex"
+\pgf@circ@count@a=\count330
+\pgf@circ@count@b=\count331
+\pgf@circ@count@c=\count332
+\pgf@circ@res@up=\dimen309
+\pgf@circ@res@down=\dimen310
+\pgf@circ@res@zero=\dimen311
+\pgf@circ@res@left=\dimen312
+\pgf@circ@res@right=\dimen313
+\pgf@circ@res@other=\dimen314
+\pgf@circ@res@step=\dimen315
+\pgf@circ@res@temp=\dimen316
+\pgf@circ@Rlen=\dimen317
+\pgf@circ@scaled@Rlen=\dimen318
+\pgfstartlinewidth=\dimen319
+) ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/generic/circuitikz\pgfcircutils.tex") ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/generic/circuitikz\pgfcircshapes.tex") ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/generic/circuitikz\pgfcircmonopoles.tex") ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/generic/circuitikz\pgfcircbipoles.tex") ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/generic/circuitikz\pgfcirctripoles.tex"
+\pgf@circ@res@count=\count333
+) ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/generic/circuitikz\pgfcircquadpoles.tex") ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/generic/circuitikz\pgfcircmultipoles.tex") ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/generic/circuitikz\pgfcirclabel.tex") ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/generic/circuitikz\pgfcircvoltage.tex"
+\pgfcirc@labelshift=\dimen320
+) ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/generic/circuitikz\pgfcirccurrent.tex") ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/generic/circuitikz\pgfcircflow.tex") ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/generic/circuitikz\pgfcircpath.tex") ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/latex/xstring\xstring.sty" ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/generic/xstring\xstring.tex"
+\integerpart=\count334
+\decimalpart=\count335
+)
+Package: xstring 2019/02/06 v1.83 String manipulations (CT)
+)) ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/latex/fancyhdr\fancyhdr.sty"
+Package: fancyhdr 2019/01/31 v3.10 Extensive control of page headers and footers
+\f@nch@headwidth=\skip64
+\f@nch@O@elh=\skip65
+\f@nch@O@erh=\skip66
+\f@nch@O@olh=\skip67
+\f@nch@O@orh=\skip68
+\f@nch@O@elf=\skip69
+\f@nch@O@erf=\skip70
+\f@nch@O@olf=\skip71
+\f@nch@O@orf=\skip72
+) ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/latex/units\units.sty"
+Package: units 1998/08/04 v0.9b Typesetting units
+ ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/latex/base\ifthen.sty"
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+) ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/latex/units\nicefrac.sty"
+Package: nicefrac 1998/08/04 v0.9b Nice fractions
+\L@UnitsRaiseDisplaystyle=\skip73
+\L@UnitsRaiseTextstyle=\skip74
+\L@UnitsRaiseScriptstyle=\skip75
+)) ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/latex/booktabs\booktabs.sty"
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen321
+\lightrulewidth=\dimen322
+\cmidrulewidth=\dimen323
+\belowrulesep=\dimen324
+\belowbottomsep=\dimen325
+\aboverulesep=\dimen326
+\abovetopsep=\dimen327
+\cmidrulesep=\dimen328
+\cmidrulekern=\dimen329
+\defaultaddspace=\dimen330
+\@cmidla=\count336
+\@cmidlb=\count337
+\@aboverulesep=\dimen331
+\@belowrulesep=\dimen332
+\@thisruleclass=\count338
+\@lastruleclass=\count339
+\@thisrulewidth=\dimen333
+) ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarybabel.code.tex"
+File: tikzlibrarybabel.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+)) (d:/Documents\GitHub\TC-Grupo6\TP3\Informe\build\main.aux)
+\openout1 = `main.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+ ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii"
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count340
+\scratchdimen=\dimen334
+\scratchbox=\box117
+\nofMPsegments=\count341
+\nofMParguments=\count342
+\everyMPshowfont=\toks42
+\MPscratchCnt=\count343
+\MPscratchDim=\dimen335
+\MPnumerator=\count344
+\makeMPintoPDFobject=\count345
+\everyMPtoPDFconversion=\toks43
+) ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty"
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
+)
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(56.9055pt, 512.1496pt, 28.45277pt)
+* v-part:(T,H,B)=(71.13188pt, 711.3189pt, 62.59607pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=512.1496pt
+* \textheight=711.3189pt
+* \oddsidemargin=-15.36449pt
+* \evensidemargin=-15.36449pt
+* \topmargin=-38.1381pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=10.0pt
+* \footskip=30.0pt
+* \marginparwidth=57.0pt
+* \marginparsep=11.0pt
+* \columnsep=10.0pt
+* \skip\footins=28.45274pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: float package is loaded.
+Package caption Info: hyperref package is loaded.
+Package caption Info: wrapfig package is loaded.
+Package caption Info: End \AtBeginDocument code.
+("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/latex/translator\translator-basic-dictionary-English.dict"
+Dictionary: translator-basic-dictionary, Language: English 
+) ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/latex/siunitx\siunitx-abbreviations.cfg"
+File: siunitx-abbreviations.cfg 2017/11/26 v2.7k siunitx: Abbreviated units
+)
+\AtBeginShipoutBox=\box118
+Package hyperref Info: Link coloring ON on input line 4.
+ ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty"
+Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
+ ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/latex/refcount\refcount.sty"
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+) ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/generic/gettitlestring\gettitlestring.sty"
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+)
+\c@section@level=\count346
+)
+LaTeX Info: Redefining \ref on input line 4.
+LaTeX Info: Redefining \pageref on input line 4.
+LaTeX Info: Redefining \nameref on input line 4.
+ (main.out) (main.out)
+\@outlinefile=\write4
+\openout4 = `main.out'.
+
+ ABD: EveryShipout initializing macros
+LaTeX Font Info:    Trying to load font information for U+msa on input line 4.
+ ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd"
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 4.
+ ("C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd"
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+) (Caratula.tex [1
+
+{C:/Users/Facu Molina/AppData/Local/MiKTeX/pdftex/config/pdftex.map}])
+
+Package hyperref Warning: old toc file detected, not used; run LaTeX again.
+
+\tf@toc=\write5
+\openout5 = `main.toc'.
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.10 \newpage
+              [1] (../Ejercicio1-FiltroConGIC/Ejercicio-1.tex
+<../Ejercicio1-FiltroConGIC/Informe/giccir.jpg, id=306, 513.92pt x 279.0425pt>
+File: ../Ejercicio1-FiltroConGIC/Informe/giccir.jpg Graphic file (type jpg)
+<use ../Ejercicio1-FiltroConGIC/Informe/giccir.jpg>
+Package pdftex.def Info: ../Ejercicio1-FiltroConGIC/Informe/giccir.jpg  used on input line 9.
+(pdftex.def)             Requested size: 359.74153pt x 195.3284pt.
+<../Ejercicio1-FiltroConGIC/Informe/circuito.png, id=307, 476.982pt x 239.6955pt>
+File: ../Ejercicio1-FiltroConGIC/Informe/circuito.png Graphic file (type png)
+<use ../Ejercicio1-FiltroConGIC/Informe/circuito.png>
+Package pdftex.def Info: ../Ejercicio1-FiltroConGIC/Informe/circuito.png  used on input line 27.
+(pdftex.def)             Requested size: 333.88512pt x 167.78569pt.
+ [2 <../Ejercicio1-FiltroConGIC/Informe/giccir.jpg>]
+
+LaTeX Warning: Reference `ej1eq2' on page 3 undefined on input line 61.
+
+
+LaTeX Warning: Reference `ej1eq3' on page 3 undefined on input line 61.
+
+
+LaTeX Warning: Reference `ej1eq1' on page 3 undefined on input line 61.
+
+[3 <../Ejercicio1-FiltroConGIC/Informe/circuito.png>]
+<../Ejercicio1-FiltroConGIC/Informe/polor6.png, id=334, 502.87875pt x 305.64188pt>
+File: ../Ejercicio1-FiltroConGIC/Informe/polor6.png Graphic file (type png)
+<use ../Ejercicio1-FiltroConGIC/Informe/polor6.png>
+Package pdftex.def Info: ../Ejercicio1-FiltroConGIC/Informe/polor6.png  used on input line 116.
+(pdftex.def)             Requested size: 402.30354pt x 244.51381pt.
+<../Ejercicio1-FiltroConGIC/Informe/polor6-1.png, id=335, 526.96875pt x 395.22656pt>
+File: ../Ejercicio1-FiltroConGIC/Informe/polor6-1.png Graphic file (type png)
+<use ../Ejercicio1-FiltroConGIC/Informe/polor6-1.png>
+Package pdftex.def Info: ../Ejercicio1-FiltroConGIC/Informe/polor6-1.png  used on input line 120.
+(pdftex.def)             Requested size: 368.8756pt x 276.6567pt.
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 121.
+See the caption package documentation for explanation.
+
+
+Overfull \hbox (25.00003pt too wide) in paragraph at lines 114--123
+[]$[]$
+ []
+
+
+Overfull \hbox (25.00003pt too wide) in paragraph at lines 114--123
+[]$ 
+ []
+
+[4 <../Ejercicio1-FiltroConGIC/Informe/polor6.png (PNG copy)>]
+
+LaTeX Warning: Reference `ej1eq5' on page 5 undefined on input line 141.
+
+
+LaTeX Warning: Reference `ej1eq6' on page 5 undefined on input line 141.
+
+[5 <../Ejercicio1-FiltroConGIC/Informe/polor6-1.png (PNG copy)>]
+
+LaTeX Warning: Reference `ej1resp' on page 6 undefined on input line 171.
+
+
+LaTeX Warning: Reference `ej1eq7' on page 6 undefined on input line 197.
+
+[6]
+<../Ejercicio1-FiltroConGIC/Informe/rfmag.png, id=354, 526.96875pt x 395.22656pt>
+File: ../Ejercicio1-FiltroConGIC/Informe/rfmag.png Graphic file (type png)
+<use ../Ejercicio1-FiltroConGIC/Informe/rfmag.png>
+Package pdftex.def Info: ../Ejercicio1-FiltroConGIC/Informe/rfmag.png  used on input line 249.
+(pdftex.def)             Requested size: 368.8756pt x 276.6567pt.
+<../Ejercicio1-FiltroConGIC/Informe/rfpha.png, id=355, 526.96875pt x 395.22656pt>
+File: ../Ejercicio1-FiltroConGIC/Informe/rfpha.png Graphic file (type png)
+<use ../Ejercicio1-FiltroConGIC/Informe/rfpha.png>
+Package pdftex.def Info: ../Ejercicio1-FiltroConGIC/Informe/rfpha.png  used on input line 250.
+(pdftex.def)             Requested size: 368.8756pt x 276.6567pt.
+ [7]
+
+LaTeX Warning: Reference `ej1despha' on page 8 undefined on input line 255.
+
+<../Ejercicio1-FiltroConGIC/Informe/desphaOsc.png, id=362, 505.89pt x 233.673pt>
+File: ../Ejercicio1-FiltroConGIC/Informe/desphaOsc.png Graphic file (type png)
+<use ../Ejercicio1-FiltroConGIC/Informe/desphaOsc.png>
+Package pdftex.def Info: ../Ejercicio1-FiltroConGIC/Informe/desphaOsc.png  used on input line 259.
+(pdftex.def)             Requested size: 505.88875pt x 233.67242pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[8 <../Ejercicio1-FiltroConGIC/Informe/rfmag.png (PNG copy)> <../Ejercicio1-FiltroConGIC/Informe/rfpha.png (PNG copy)>]
+<../Ejercicio1-FiltroConGIC/Informe/zin.png, id=368, 892.83563pt x 364.36125pt>
+File: ../Ejercicio1-FiltroConGIC/Informe/zin.png Graphic file (type png)
+<use ../Ejercicio1-FiltroConGIC/Informe/zin.png>
+Package pdftex.def Info: ../Ejercicio1-FiltroConGIC/Informe/zin.png  used on input line 274.
+(pdftex.def)             Requested size: 535.7055pt x 218.61842pt.
+
+Overfull \hbox (23.55591pt too wide) in paragraph at lines 274--275
+ [][] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<../Ejercicio1-FiltroConGIC/Informe/zout.png, id=369, 789.70032pt x 395.22656pt>
+File: ../Ejercicio1-FiltroConGIC/Informe/zout.png Graphic file (type png)
+<use ../Ejercicio1-FiltroConGIC/Informe/zout.png>
+Package pdftex.def Info: ../Ejercicio1-FiltroConGIC/Informe/zout.png  used on input line 291.
+(pdftex.def)             Requested size: 473.82385pt x 237.13776pt.
+[9 <../Ejercicio1-FiltroConGIC/Informe/desphaOsc.png (PNG copy)>] [10 <../Ejercicio1-FiltroConGIC/Informe/zin.png (PNG copy)> <../Ejercicio1-FiltroConGIC/Informe/zout.png (PNG copy)>]
+<../Ejercicio1-FiltroConGIC/Informe/re.png, id=383, 526.96875pt x 395.22656pt>
+File: ../Ejercicio1-FiltroConGIC/Informe/re.png Graphic file (type png)
+<use ../Ejercicio1-FiltroConGIC/Informe/re.png>
+Package pdftex.def Info: ../Ejercicio1-FiltroConGIC/Informe/re.png  used on input line 314.
+(pdftex.def)             Requested size: 421.57556pt x 316.18167pt.
+<../Ejercicio1-FiltroConGIC/Informe/re1.png, id=384, 508.299pt x 233.673pt>
+File: ../Ejercicio1-FiltroConGIC/Informe/re1.png Graphic file (type png)
+<use ../Ejercicio1-FiltroConGIC/Informe/re1.png>
+Package pdftex.def Info: ../Ejercicio1-FiltroConGIC/Informe/re1.png  used on input line 323.
+(pdftex.def)             Requested size: 406.63974pt x 186.93864pt.
+ [11 <../Ejercicio1-FiltroConGIC/Informe/re.png (PNG copy)> <../Ejercicio1-FiltroConGIC/Informe/re1.png (PNG copy)>]
+<../Ejercicio1-FiltroConGIC/Informe/re1k.png, id=392, 508.299pt x 233.673pt>
+File: ../Ejercicio1-FiltroConGIC/Informe/re1k.png Graphic file (type png)
+<use ../Ejercicio1-FiltroConGIC/Informe/re1k.png>
+Package pdftex.def Info: ../Ejercicio1-FiltroConGIC/Informe/re1k.png  used on input line 336.
+(pdftex.def)             Requested size: 406.63974pt x 186.93864pt.
+
+
+LaTeX Warning: Reference `ej1limt' on page 12 undefined on input line 347.
+
+<../Ejercicio1-FiltroConGIC/Informe/limtensionpng.png, id=393, 508.299pt x 233.673pt>
+File: ../Ejercicio1-FiltroConGIC/Informe/limtensionpng.png Graphic file (type png)
+<use ../Ejercicio1-FiltroConGIC/Informe/limtensionpng.png>
+Package pdftex.def Info: ../Ejercicio1-FiltroConGIC/Informe/limtensionpng.png  used on input line 351.
+(pdftex.def)             Requested size: 406.63974pt x 186.93864pt.
+
+LaTeX Warning: Reference `ej1rf' on page 12 undefined on input line 360.
+
+[12 <../Ejercicio1-FiltroConGIC/Informe/re1k.png (PNG copy)> <../Ejercicio1-FiltroConGIC/Informe/limtensionpng.png (PNG copy)>]) [13] (../Ejercicio2-DiseÃ±oDeFiltros/Ejercicio-2.tex
+
+LaTeX Warning: File `../Ejercicio2-DisenÌƒoDeFiltros/Imagenes/diagrama-basico-gyrator.png' not found on input line 53.
+
+
+../Ejercicio2-DiseÃ±oDeFiltros/Ejercicio-2.tex:53: Package pdftex.def Error: File `../Ejercicio2-DisenÌƒoDeFiltros/Imagenes/diagrama-basico-gyrator.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.53 ...tros/Imagenes/diagrama-basico-gyrator.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no Ì in font cmtt10!
+Missing character: There is no ƒ in font cmtt10!
+[14]
+
+LaTeX Warning: File `../Ejercicio2-DisenÌƒoDeFiltros/Imagenes/diagrama-gyrator-inductor.png' not found on input line 67.
+
+
+../Ejercicio2-DiseÃ±oDeFiltros/Ejercicio-2.tex:67: Package pdftex.def Error: File `../Ejercicio2-DisenÌƒoDeFiltros/Imagenes/diagrama-gyrator-inductor.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.67 ...os/Imagenes/diagrama-gyrator-inductor.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no Ì in font cmtt10!
+Missing character: There is no ƒ in font cmtt10!
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 76.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `subscript' on input line 76.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 76.
+
+
+LaTeX Warning: File `../Ejercicio2-DisenÌƒoDeFiltros/Imagenes/diagrama-gyrator-corrientes.png' not found on input line 84.
+
+
+../Ejercicio2-DiseÃ±oDeFiltros/Ejercicio-2.tex:84: Package pdftex.def Error: File `../Ejercicio2-DisenÌƒoDeFiltros/Imagenes/diagrama-gyrator-corrientes.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.84 .../Imagenes/diagrama-gyrator-corrientes.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no Ì in font cmtt10!
+Missing character: There is no ƒ in font cmtt10!
+[15] [16]
+
+LaTeX Warning: File `../Ejercicio2-DisenÌƒoDeFiltros/Imagenes/equivalente-inductor.png' not found on input line 170.
+
+
+../Ejercicio2-DiseÃ±oDeFiltros/Ejercicio-2.tex:170: Package pdftex.def Error: File `../Ejercicio2-DisenÌƒoDeFiltros/Imagenes/equivalente-inductor.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.170 ...iltros/Imagenes/equivalente-inductor.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no Ì in font cmtt10!
+Missing character: There is no ƒ in font cmtt10!
+[17]
+
+LaTeX Warning: File `../Ejercicio2-DisenÌƒoDeFiltros/Imagenes/diagrama-pasa-bajos.png' not found on input line 200.
+
+
+../Ejercicio2-DiseÃ±oDeFiltros/Ejercicio-2.tex:200: Package pdftex.def Error: File `../Ejercicio2-DisenÌƒoDeFiltros/Imagenes/diagrama-pasa-bajos.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.200 ...Filtros/Imagenes/diagrama-pasa-bajos.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no Ì in font cmtt10!
+Missing character: There is no ƒ in font cmtt10!
+[18] [19]
+
+LaTeX Warning: File `../Ejercicio2-DisenÌƒoDeFiltros/Imagenes/bode-rlc-pasa-bajos-amplitud.png' not found on input line 346.
+
+
+../Ejercicio2-DiseÃ±oDeFiltros/Ejercicio-2.tex:346: Package pdftex.def Error: File `../Ejercicio2-DisenÌƒoDeFiltros/Imagenes/bode-rlc-pasa-bajos-amplitud.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.346 ...magenes/bode-rlc-pasa-bajos-amplitud.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no Ì in font cmtt10!
+Missing character: There is no ƒ in font cmtt10!
+[20]
+
+LaTeX Warning: File `../Ejercicio2-DisenÌƒoDeFiltros/Imagenes/bode-rlc-pasa-bajos-fase.png' not found on input line 352.
+
+
+../Ejercicio2-DiseÃ±oDeFiltros/Ejercicio-2.tex:352: Package pdftex.def Error: File `../Ejercicio2-DisenÌƒoDeFiltros/Imagenes/bode-rlc-pasa-bajos-fase.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.352 ...os/Imagenes/bode-rlc-pasa-bajos-fase.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no Ì in font cmtt10!
+Missing character: There is no ƒ in font cmtt10!
+[21]
+
+LaTeX Warning: File `../Ejercicio2-DisenÌƒoDeFiltros/Imagenes/pasa-bajos-opamp-diagrama.png' not found on input line 365.
+
+
+../Ejercicio2-DiseÃ±oDeFiltros/Ejercicio-2.tex:365: Package pdftex.def Error: File `../Ejercicio2-DisenÌƒoDeFiltros/Imagenes/pasa-bajos-opamp-diagrama.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.365 ...s/Imagenes/pasa-bajos-opamp-diagrama.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no Ì in font cmtt10!
+Missing character: There is no ƒ in font cmtt10!
+[22]
+
+LaTeX Warning: File `../Ejercicio2-DisenÌƒoDeFiltros/Imagenes/Pasa-Bajos-Marcado-Opamp.jpg' not found on input line 373.
+
+
+../Ejercicio2-DiseÃ±oDeFiltros/Ejercicio-2.tex:373: Package pdftex.def Error: File `../Ejercicio2-DisenÌƒoDeFiltros/Imagenes/Pasa-Bajos-Marcado-Opamp.jpg' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.373 ...os/Imagenes/Pasa-Bajos-Marcado-Opamp.jpg}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no Ì in font cmtt10!
+Missing character: There is no ƒ in font cmtt10!
+
+LaTeX Warning: File `../Ejercicio2-DisenÌƒoDeFiltros/Imagenes/bode-opamp-pasa-bajos-fase.png' not found on input line 379.
+
+
+../Ejercicio2-DiseÃ±oDeFiltros/Ejercicio-2.tex:379: Package pdftex.def Error: File `../Ejercicio2-DisenÌƒoDeFiltros/Imagenes/bode-opamp-pasa-bajos-fase.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.379 .../Imagenes/bode-opamp-pasa-bajos-fase.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no Ì in font cmtt10!
+Missing character: There is no ƒ in font cmtt10!
+[23]
+
+LaTeX Warning: File `../Ejercicio2-DisenÌƒoDeFiltros/Imagenes/pasa-bajos-final-amplitud.png' not found on input line 391.
+
+
+../Ejercicio2-DiseÃ±oDeFiltros/Ejercicio-2.tex:391: Package pdftex.def Error: File `../Ejercicio2-DisenÌƒoDeFiltros/Imagenes/pasa-bajos-final-amplitud.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.391 ...s/Imagenes/pasa-bajos-final-amplitud.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no Ì in font cmtt10!
+Missing character: There is no ƒ in font cmtt10!
+[24]
+
+LaTeX Warning: File `../Ejercicio2-DisenÌƒoDeFiltros/Imagenes/pasa-bajos-final-fase.png' not found on input line 397.
+
+
+../Ejercicio2-DiseÃ±oDeFiltros/Ejercicio-2.tex:397: Package pdftex.def Error: File `../Ejercicio2-DisenÌƒoDeFiltros/Imagenes/pasa-bajos-final-fase.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.397 ...ltros/Imagenes/pasa-bajos-final-fase.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no Ì in font cmtt10!
+Missing character: There is no ƒ in font cmtt10!
+[25]
+
+LaTeX Warning: File `../Ejercicio2-DisenÌƒoDeFiltros/Imagenes/diagrama-pasa-altos.png' not found on input line 429.
+
+
+../Ejercicio2-DiseÃ±oDeFiltros/Ejercicio-2.tex:429: Package pdftex.def Error: File `../Ejercicio2-DisenÌƒoDeFiltros/Imagenes/diagrama-pasa-altos.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.429 ...Filtros/Imagenes/diagrama-pasa-altos.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no Ì in font cmtt10!
+Missing character: There is no ƒ in font cmtt10!
+[26] [27] [28]
+
+LaTeX Warning: File `../Ejercicio2-DisenÌƒoDeFiltros/Imagenes/bode-rlc-pasa-altos-amplitud.png' not found on input line 551.
+
+
+../Ejercicio2-DiseÃ±oDeFiltros/Ejercicio-2.tex:551: Package pdftex.def Error: File `../Ejercicio2-DisenÌƒoDeFiltros/Imagenes/bode-rlc-pasa-altos-amplitud.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.551 ...magenes/bode-rlc-pasa-altos-amplitud.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no Ì in font cmtt10!
+Missing character: There is no ƒ in font cmtt10!
+
+LaTeX Warning: File `../Ejercicio2-DisenÌƒoDeFiltros/Imagenes/bode-rlc-pasa-altos-fase.png' not found on input line 557.
+
+
+../Ejercicio2-DiseÃ±oDeFiltros/Ejercicio-2.tex:557: Package pdftex.def Error: File `../Ejercicio2-DisenÌƒoDeFiltros/Imagenes/bode-rlc-pasa-altos-fase.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.557 ...os/Imagenes/bode-rlc-pasa-altos-fase.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no Ì in font cmtt10!
+Missing character: There is no ƒ in font cmtt10!
+[29]
+
+LaTeX Warning: File `../Ejercicio2-DisenÌƒoDeFiltros/Imagenes/pasa-altos-opamp-diagrama.png' not found on input line 569.
+
+
+../Ejercicio2-DiseÃ±oDeFiltros/Ejercicio-2.tex:569: Package pdftex.def Error: File `../Ejercicio2-DisenÌƒoDeFiltros/Imagenes/pasa-altos-opamp-diagrama.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.569 ...s/Imagenes/pasa-altos-opamp-diagrama.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no Ì in font cmtt10!
+Missing character: There is no ƒ in font cmtt10!
+
+LaTeX Warning: File `../Ejercicio2-DisenÌƒoDeFiltros/Imagenes/Pasa-Altos-Marcado-Opamp.jpg' not found on input line 577.
+
+
+../Ejercicio2-DiseÃ±oDeFiltros/Ejercicio-2.tex:577: Package pdftex.def Error: File `../Ejercicio2-DisenÌƒoDeFiltros/Imagenes/Pasa-Altos-Marcado-Opamp.jpg' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.577 ...os/Imagenes/Pasa-Altos-Marcado-Opamp.jpg}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no Ì in font cmtt10!
+Missing character: There is no ƒ in font cmtt10!
+[30]
+
+LaTeX Warning: File `../Ejercicio2-DisenÌƒoDeFiltros/Imagenes/bode-opamp-pasa-altos-fase.png' not found on input line 583.
+
+
+../Ejercicio2-DiseÃ±oDeFiltros/Ejercicio-2.tex:583: Package pdftex.def Error: File `../Ejercicio2-DisenÌƒoDeFiltros/Imagenes/bode-opamp-pasa-altos-fase.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.583 .../Imagenes/bode-opamp-pasa-altos-fase.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no Ì in font cmtt10!
+Missing character: There is no ƒ in font cmtt10!
+[31]
+
+LaTeX Warning: File `../Ejercicio2-DisenÌƒoDeFiltros/Imagenes/pasa-altos-final-amplitud.png' not found on input line 595.
+
+
+../Ejercicio2-DiseÃ±oDeFiltros/Ejercicio-2.tex:595: Package pdftex.def Error: File `../Ejercicio2-DisenÌƒoDeFiltros/Imagenes/pasa-altos-final-amplitud.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.595 ...s/Imagenes/pasa-altos-final-amplitud.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no Ì in font cmtt10!
+Missing character: There is no ƒ in font cmtt10!
+[32]
+
+LaTeX Warning: File `../Ejercicio2-DisenÌƒoDeFiltros/Imagenes/pasa-altos-final-fase.png' not found on input line 601.
+
+
+../Ejercicio2-DiseÃ±oDeFiltros/Ejercicio-2.tex:601: Package pdftex.def Error: File `../Ejercicio2-DisenÌƒoDeFiltros/Imagenes/pasa-altos-final-fase.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.601 ...ltros/Imagenes/pasa-altos-final-fase.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no Ì in font cmtt10!
+Missing character: There is no ƒ in font cmtt10!
+[33]
+
+LaTeX Warning: File `../Ejercicio2-DisenÌƒoDeFiltros/Imagenes/diagrama-rechaza-banda.png' not found on input line 632.
+
+
+../Ejercicio2-DiseÃ±oDeFiltros/Ejercicio-2.tex:632: Package pdftex.def Error: File `../Ejercicio2-DisenÌƒoDeFiltros/Imagenes/diagrama-rechaza-banda.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.632 ...tros/Imagenes/diagrama-rechaza-banda.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no Ì in font cmtt10!
+Missing character: There is no ƒ in font cmtt10!
+[34] [35]
+
+LaTeX Warning: File `../Ejercicio2-DisenÌƒoDeFiltros/Imagenes/bode-rlc-rechaza-banda-amplitud.png' not found on input line 717.
+
+
+../Ejercicio2-DiseÃ±oDeFiltros/Ejercicio-2.tex:717: Package pdftex.def Error: File `../Ejercicio2-DisenÌƒoDeFiltros/Imagenes/bode-rlc-rechaza-banda-amplitud.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.717 ...enes/bode-rlc-rechaza-banda-amplitud.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no Ì in font cmtt10!
+Missing character: There is no ƒ in font cmtt10!
+
+LaTeX Warning: File `../Ejercicio2-DisenÌƒoDeFiltros/Imagenes/bode-rlc-rechaza-banda-fase.png' not found on input line 723.
+
+
+../Ejercicio2-DiseÃ±oDeFiltros/Ejercicio-2.tex:723: Package pdftex.def Error: File `../Ejercicio2-DisenÌƒoDeFiltros/Imagenes/bode-rlc-rechaza-banda-fase.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.723 ...Imagenes/bode-rlc-rechaza-banda-fase.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no Ì in font cmtt10!
+Missing character: There is no ƒ in font cmtt10!
+[36]
+
+LaTeX Warning: File `../Ejercicio2-DisenÌƒoDeFiltros/Imagenes/rechaza-banda-opamp-diagrama.png' not found on input line 735.
+
+
+../Ejercicio2-DiseÃ±oDeFiltros/Ejercicio-2.tex:735: Package pdftex.def Error: File `../Ejercicio2-DisenÌƒoDeFiltros/Imagenes/rechaza-banda-opamp-diagrama.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.735 ...magenes/rechaza-banda-opamp-diagrama.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no Ì in font cmtt10!
+Missing character: There is no ƒ in font cmtt10!
+
+LaTeX Warning: File `../Ejercicio2-DisenÌƒoDeFiltros/Imagenes/Rechaza-Banda-Marcado-Opamp.jpg' not found on input line 743.
+
+
+../Ejercicio2-DiseÃ±oDeFiltros/Ejercicio-2.tex:743: Package pdftex.def Error: File `../Ejercicio2-DisenÌƒoDeFiltros/Imagenes/Rechaza-Banda-Marcado-Opamp.jpg' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.743 ...Imagenes/Rechaza-Banda-Marcado-Opamp.jpg}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no Ì in font cmtt10!
+Missing character: There is no ƒ in font cmtt10!
+[37]
+
+LaTeX Warning: File `../Ejercicio2-DisenÌƒoDeFiltros/Imagenes/bode-opamp-rechaza-banda-fase.png' not found on input line 749.
+
+
+../Ejercicio2-DiseÃ±oDeFiltros/Ejercicio-2.tex:749: Package pdftex.def Error: File `../Ejercicio2-DisenÌƒoDeFiltros/Imagenes/bode-opamp-rechaza-banda-fase.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.749 ...agenes/bode-opamp-rechaza-banda-fase.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no Ì in font cmtt10!
+Missing character: There is no ƒ in font cmtt10!
+[38]
+
+LaTeX Warning: File `../Ejercicio2-DisenÌƒoDeFiltros/Imagenes/rechaza-banda-final-amplitud.png' not found on input line 761.
+
+
+../Ejercicio2-DiseÃ±oDeFiltros/Ejercicio-2.tex:761: Package pdftex.def Error: File `../Ejercicio2-DisenÌƒoDeFiltros/Imagenes/rechaza-banda-final-amplitud.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.761 ...magenes/rechaza-banda-final-amplitud.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no Ì in font cmtt10!
+Missing character: There is no ƒ in font cmtt10!
+[39]
+
+LaTeX Warning: File `../Ejercicio2-DisenÌƒoDeFiltros/Imagenes/rechaza-banda-final-fase.png' not found on input line 767.
+
+
+../Ejercicio2-DiseÃ±oDeFiltros/Ejercicio-2.tex:767: Package pdftex.def Error: File `../Ejercicio2-DisenÌƒoDeFiltros/Imagenes/rechaza-banda-final-fase.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.767 ...os/Imagenes/rechaza-banda-final-fase.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no Ì in font cmtt10!
+Missing character: There is no ƒ in font cmtt10!
+[40]
+
+LaTeX Warning: File `../Ejercicio2-DisenÌƒoDeFiltros/Imagenes/diagrama-pasa-banda.png' not found on input line 789.
+
+
+../Ejercicio2-DiseÃ±oDeFiltros/Ejercicio-2.tex:789: Package pdftex.def Error: File `../Ejercicio2-DisenÌƒoDeFiltros/Imagenes/diagrama-pasa-banda.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.789 ...Filtros/Imagenes/diagrama-pasa-banda.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no Ì in font cmtt10!
+Missing character: There is no ƒ in font cmtt10!
+[41] [42]
+
+LaTeX Warning: File `../Ejercicio2-DisenÌƒoDeFiltros/Imagenes/bode-rlc-pasa-banda-amplitud.png' not found on input line 876.
+
+
+../Ejercicio2-DiseÃ±oDeFiltros/Ejercicio-2.tex:876: Package pdftex.def Error: File `../Ejercicio2-DisenÌƒoDeFiltros/Imagenes/bode-rlc-pasa-banda-amplitud.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.876 ...magenes/bode-rlc-pasa-banda-amplitud.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no Ì in font cmtt10!
+Missing character: There is no ƒ in font cmtt10!
+
+LaTeX Warning: File `../Ejercicio2-DisenÌƒoDeFiltros/Imagenes/bode-rlc-pasa-banda-fase.png' not found on input line 882.
+
+
+../Ejercicio2-DiseÃ±oDeFiltros/Ejercicio-2.tex:882: Package pdftex.def Error: File `../Ejercicio2-DisenÌƒoDeFiltros/Imagenes/bode-rlc-pasa-banda-fase.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.882 ...os/Imagenes/bode-rlc-pasa-banda-fase.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no Ì in font cmtt10!
+Missing character: There is no ƒ in font cmtt10!
+[43]
+
+LaTeX Warning: File `../Ejercicio2-DisenÌƒoDeFiltros/Imagenes/pasa-banda-opamp-diagrama.png' not found on input line 893.
+
+
+../Ejercicio2-DiseÃ±oDeFiltros/Ejercicio-2.tex:893: Package pdftex.def Error: File `../Ejercicio2-DisenÌƒoDeFiltros/Imagenes/pasa-banda-opamp-diagrama.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.893 ...s/Imagenes/pasa-banda-opamp-diagrama.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no Ì in font cmtt10!
+Missing character: There is no ƒ in font cmtt10!
+
+LaTeX Warning: File `../Ejercicio2-DisenÌƒoDeFiltros/Imagenes/Pasa-Banda-Marcado-Opamp.jpg' not found on input line 901.
+
+
+../Ejercicio2-DiseÃ±oDeFiltros/Ejercicio-2.tex:901: Package pdftex.def Error: File `../Ejercicio2-DisenÌƒoDeFiltros/Imagenes/Pasa-Banda-Marcado-Opamp.jpg' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.901 ...os/Imagenes/Pasa-Banda-Marcado-Opamp.jpg}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no Ì in font cmtt10!
+Missing character: There is no ƒ in font cmtt10!
+[44]
+
+LaTeX Warning: File `../Ejercicio2-DisenÌƒoDeFiltros/Imagenes/bode-opamp-pasa-banda-fase.png' not found on input line 907.
+
+
+../Ejercicio2-DiseÃ±oDeFiltros/Ejercicio-2.tex:907: Package pdftex.def Error: File `../Ejercicio2-DisenÌƒoDeFiltros/Imagenes/bode-opamp-pasa-banda-fase.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.907 .../Imagenes/bode-opamp-pasa-banda-fase.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no Ì in font cmtt10!
+Missing character: There is no ƒ in font cmtt10!
+[45]
+
+LaTeX Warning: File `../Ejercicio2-DisenÌƒoDeFiltros/Imagenes/pasa-banda-final-amplitud.png' not found on input line 920.
+
+
+../Ejercicio2-DiseÃ±oDeFiltros/Ejercicio-2.tex:920: Package pdftex.def Error: File `../Ejercicio2-DisenÌƒoDeFiltros/Imagenes/pasa-banda-final-amplitud.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.920 ...s/Imagenes/pasa-banda-final-amplitud.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no Ì in font cmtt10!
+Missing character: There is no ƒ in font cmtt10!
+[46]
+
+LaTeX Warning: File `../Ejercicio2-DisenÌƒoDeFiltros/Imagenes/pasa-bandaa-final-fase.png' not found on input line 926.
+
+
+../Ejercicio2-DiseÃ±oDeFiltros/Ejercicio-2.tex:926: Package pdftex.def Error: File `../Ejercicio2-DisenÌƒoDeFiltros/Imagenes/pasa-bandaa-final-fase.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.926 ...tros/Imagenes/pasa-bandaa-final-fase.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no Ì in font cmtt10!
+Missing character: There is no ƒ in font cmtt10!
+[47] [48]
+
+LaTeX Warning: File `../Ejercicio2-DisenÌƒoDeFiltros/Imagenes/esquematico_pines_in.png' not found on input line 972.
+
+
+../Ejercicio2-DiseÃ±oDeFiltros/Ejercicio-2.tex:972: Package pdftex.def Error: File `../Ejercicio2-DisenÌƒoDeFiltros/Imagenes/esquematico_pines_in.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.972 ...iltros/Imagenes/esquematico_pines_in.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no Ì in font cmtt10!
+Missing character: There is no ƒ in font cmtt10!
+
+Underfull \hbox (badness 7468) in paragraph at lines 973--973
+[]\OT1/cmr/m/n/7 (a) |Im-ple-mentacion a nivel es-
+ []
+
+
+LaTeX Warning: File `../Ejercicio2-DisenÌƒoDeFiltros/Imagenes/esquematico_pines_out.png' not found on input line 978.
+
+
+../Ejercicio2-DiseÃ±oDeFiltros/Ejercicio-2.tex:978: Package pdftex.def Error: File `../Ejercicio2-DisenÌƒoDeFiltros/Imagenes/esquematico_pines_out.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.978 ...ltros/Imagenes/esquematico_pines_out.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no Ì in font cmtt10!
+Missing character: There is no ƒ in font cmtt10!
+
+LaTeX Warning: File `../Ejercicio2-DisenÌƒoDeFiltros/Imagenes/esquematico_pines_sal.png' not found on input line 984.
+
+
+../Ejercicio2-DiseÃ±oDeFiltros/Ejercicio-2.tex:984: Package pdftex.def Error: File `../Ejercicio2-DisenÌƒoDeFiltros/Imagenes/esquematico_pines_sal.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.984 ...ltros/Imagenes/esquematico_pines_sal.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no Ì in font cmtt10!
+Missing character: There is no ƒ in font cmtt10!
+
+Underfull \hbox (badness 10000) in paragraph at lines 985--985
+[]\OT1/cmr/m/n/7 (c) |Im-ple-mentacion punto de
+ []
+
+
+LaTeX Warning: File `../Ejercicio2-DisenÌƒoDeFiltros/Imagenes/logic_diagram.png' not found on input line 994.
+
+
+../Ejercicio2-DiseÃ±oDeFiltros/Ejercicio-2.tex:994: Package pdftex.def Error: File `../Ejercicio2-DisenÌƒoDeFiltros/Imagenes/logic_diagram.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.994 ...nÌƒoDeFiltros/Imagenes/logic_diagram.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no Ì in font cmtt10!
+Missing character: There is no ƒ in font cmtt10!
+
+LaTeX Warning: File `../Ejercicio2-DisenÌƒoDeFiltros/Imagenes/PCB_logic.png' not found on input line 1001.
+
+
+../Ejercicio2-DiseÃ±oDeFiltros/Ejercicio-2.tex:1001: Package pdftex.def Error: File `../Ejercicio2-DisenÌƒoDeFiltros/Imagenes/PCB_logic.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1001 ...isenÌƒoDeFiltros/Imagenes/PCB_logic.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no Ì in font cmtt10!
+Missing character: There is no ƒ in font cmtt10!
+[49]
+
+LaTeX Warning: File `../Ejercicio2-DisenÌƒoDeFiltros/Imagenes/PCB_logic_3d.png' not found on input line 1007.
+
+
+../Ejercicio2-DiseÃ±oDeFiltros/Ejercicio-2.tex:1007: Package pdftex.def Error: File `../Ejercicio2-DisenÌƒoDeFiltros/Imagenes/PCB_logic_3d.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1007 ...nÌƒoDeFiltros/Imagenes/PCB_logic_3d.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no Ì in font cmtt10!
+Missing character: There is no ƒ in font cmtt10!
+[50]) [51] (../Ejercicio3-AmplificadorDeInstrumentacion/Ejercicio-3.tex
+<../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/InAmpWiki.png, id=619, 381.425pt x 274.02374pt>
+File: ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/InAmpWiki.png Graphic file (type png)
+<use ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/InAmpWiki.png>
+Package pdftex.def Info: ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/InAmpWiki.png  used on input line 37.
+(pdftex.def)             Requested size: 305.1404pt x 219.21928pt.
+ [52] [53 <../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/InAmpWiki.png>]
+
+LaTeX Warning: Reference `eq:sistnoideal' on page 54 undefined on input line 121.
+
+[54]
+<../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/CMVariacionR5Gain.png, id=637, 505.1673pt x 239.9364pt>
+File: ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/CMVariacionR5Gain.png Graphic file (type png)
+<use ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/CMVariacionR5Gain.png>
+Package pdftex.def Info: ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/CMVariacionR5Gain.png  used on input line 177.
+(pdftex.def)             Requested size: 240.71092pt x 114.32976pt.
+<../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/CMVariacionR5Phase.png, id=639, 505.1673pt x 247.1634pt>
+File: ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/CMVariacionR5Phase.png Graphic file (type png)
+<use ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/CMVariacionR5Phase.png>
+Package pdftex.def Info: ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/CMVariacionR5Phase.png  used on input line 179.
+(pdftex.def)             Requested size: 204.8567pt x 100.22885pt.
+<../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/DM/VariacionR5Gain.png, id=640, 505.1673pt x 239.9364pt>
+File: ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/DM/VariacionR5Gain.png Graphic file (type png)
+<use ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/DM/VariacionR5Gain.png>
+Package pdftex.def Info: ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/DM/VariacionR5Gain.png  used on input line 186.
+(pdftex.def)             Requested size: 240.71092pt x 114.32976pt.
+<../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/DM/VariacionR5Phase.png, id=641, 505.1673pt x 247.1634pt>
+File: ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/DM/VariacionR5Phase.png Graphic file (type png)
+<use ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/DM/VariacionR5Phase.png>
+Package pdftex.def Info: ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/DM/VariacionR5Phase.png  used on input line 188.
+(pdftex.def)             Requested size: 204.8567pt x 100.22885pt.
+<../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/MonteCarloGain.png, id=642, 1445.4pt x 663.22781pt>
+File: ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/MonteCarloGain.png Graphic file (type png)
+<use ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/MonteCarloGain.png>
+Package pdftex.def Info: ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/MonteCarloGain.png  used on input line 199.
+(pdftex.def)             Requested size: 240.71092pt x 110.44998pt.
+<../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/MonteCarloPhase.png, id=643, 1445.4pt x 666.99188pt>
+File: ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/MonteCarloPhase.png Graphic file (type png)
+<use ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/MonteCarloPhase.png>
+Package pdftex.def Info: ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/MonteCarloPhase.png  used on input line 201.
+(pdftex.def)             Requested size: 240.71092pt x 111.07683pt.
+ [55 <../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/CMVariacionR5Gain.png> <../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/CMVariacionR5Phase.png> <../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/DM/VariacionR5Gain.png> <../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/DM/VariacionR5Phase.png>]
+<../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/DM/MonteCarloGain.png, id=655, 1445.4pt x 664.73344pt>
+File: ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/DM/MonteCarloGain.png Graphic file (type png)
+<use ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/DM/MonteCarloGain.png>
+Package pdftex.def Info: ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/DM/MonteCarloGain.png  used on input line 207.
+(pdftex.def)             Requested size: 240.71092pt x 110.70073pt.
+<../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/DM/MonteCarloPhase.png, id=656, 1445.4pt x 663.22781pt>
+File: ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/DM/MonteCarloPhase.png Graphic file (type png)
+<use ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/DM/MonteCarloPhase.png>
+Package pdftex.def Info: ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/DM/MonteCarloPhase.png  used on input line 209.
+(pdftex.def)             Requested size: 240.71092pt x 110.44998pt.
+<../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/DM/AolvariableDMGain.png, id=657, 505.1673pt x 239.9364pt>
+File: ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/DM/AolvariableDMGain.png Graphic file (type png)
+<use ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/DM/AolvariableDMGain.png>
+Package pdftex.def Info: ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/DM/AolvariableDMGain.png  used on input line 226.
+(pdftex.def)             Requested size: 240.71092pt x 114.32976pt.
+<../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/DM/AolvariableDMPhase.png, id=658, 505.1673pt x 247.1634pt>
+File: ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/DM/AolvariableDMPhase.png Graphic file (type png)
+<use ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/DM/AolvariableDMPhase.png>
+Package pdftex.def Info: ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/DM/AolvariableDMPhase.png  used on input line 228.
+(pdftex.def)             Requested size: 240.71092pt x 117.77342pt.
+ [56 <../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/MonteCarloGain.png> <../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/MonteCarloPhase.png> <../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/DM/MonteCarloGain.png> <../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/DM/MonteCarloPhase.png> <../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/DM/AolvariableDMGain.png> <../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/DM/AolvariableDMPhase.png>]
+<../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/Gain50k.png, id=669, 505.1673pt x 239.9364pt>
+File: ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/Gain50k.png Graphic file (type png)
+<use ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/Gain50k.png>
+Package pdftex.def Info: ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/Gain50k.png  used on input line 246.
+(pdftex.def)             Requested size: 240.71092pt x 114.32976pt.
+<../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/Phase50k.png, id=670, 505.1673pt x 247.1634pt>
+File: ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/Phase50k.png Graphic file (type png)
+<use ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/Phase50k.png>
+Package pdftex.def Info: ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/Phase50k.png  used on input line 248.
+(pdftex.def)             Requested size: 240.71092pt x 117.77342pt.
+<../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/Gain30k.png, id=671, 505.1673pt x 239.9364pt>
+File: ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/Gain30k.png Graphic file (type png)
+<use ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/Gain30k.png>
+Package pdftex.def Info: ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/Gain30k.png  used on input line 254.
+(pdftex.def)             Requested size: 240.71092pt x 114.32976pt.
+<../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/Phase30k.png, id=672, 505.1673pt x 247.1634pt>
+File: ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/Phase30k.png Graphic file (type png)
+<use ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/Phase30k.png>
+Package pdftex.def Info: ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/Phase30k.png  used on input line 256.
+(pdftex.def)             Requested size: 240.71092pt x 117.77342pt.
+<../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/Gain10k.png, id=673, 505.1673pt x 239.9364pt>
+File: ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/Gain10k.png Graphic file (type png)
+<use ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/Gain10k.png>
+Package pdftex.def Info: ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/Gain10k.png  used on input line 262.
+(pdftex.def)             Requested size: 240.71092pt x 114.32976pt.
+<../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/Phase10k.png, id=674, 505.1673pt x 247.1634pt>
+File: ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/Phase10k.png Graphic file (type png)
+<use ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/Phase10k.png>
+Package pdftex.def Info: ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/Phase10k.png  used on input line 264.
+(pdftex.def)             Requested size: 240.71092pt x 117.77342pt.
+<../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/Gain5k.png, id=675, 505.1673pt x 239.9364pt>
+File: ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/Gain5k.png Graphic file (type png)
+<use ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/Gain5k.png>
+Package pdftex.def Info: ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/Gain5k.png  used on input line 270.
+(pdftex.def)             Requested size: 240.71092pt x 114.32976pt.
+<../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/Phase5k.png, id=676, 505.1673pt x 247.1634pt>
+File: ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/Phase5k.png Graphic file (type png)
+<use ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/Phase5k.png>
+Package pdftex.def Info: ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/Phase5k.png  used on input line 272.
+(pdftex.def)             Requested size: 240.71092pt x 117.77342pt.
+ [57 <../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/Gain50k.png> <../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/Phase50k.png> <../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/Gain30k.png> <../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/Phase30k.png> <../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/Gain10k.png> <../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/Phase10k.png>]
+<../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/Gain100.png, id=690, 505.1673pt x 239.9364pt>
+File: ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/Gain100.png Graphic file (type png)
+<use ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/Gain100.png>
+Package pdftex.def Info: ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/Gain100.png  used on input line 278.
+(pdftex.def)             Requested size: 240.71092pt x 114.32976pt.
+<../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/Phase100.png, id=691, 505.1673pt x 247.1634pt>
+File: ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/Phase100.png Graphic file (type png)
+<use ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/Phase100.png>
+Package pdftex.def Info: ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/Phase100.png  used on input line 280.
+(pdftex.def)             Requested size: 240.71092pt x 117.77342pt.
+<../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/CMAllGain.png, id=692, 505.1673pt x 239.9364pt>
+File: ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/CMAllGain.png Graphic file (type png)
+<use ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/CMAllGain.png>
+Package pdftex.def Info: ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/CMAllGain.png  used on input line 290.
+(pdftex.def)             Requested size: 240.71092pt x 114.32976pt.
+<../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/CMAllPhase.png, id=693, 505.1673pt x 247.1634pt>
+File: ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/CMAllPhase.png Graphic file (type png)
+<use ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/CMAllPhase.png>
+Package pdftex.def Info: ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/CMAllPhase.png  used on input line 292.
+(pdftex.def)             Requested size: 240.71092pt x 117.77342pt.
+
+
+LaTeX Warning: Reference `fig:CMsuperpuesto' on page 58 undefined on input line 299.
+
+<../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/DM/DM50kGain.png, id=694, 505.1673pt x 237.7683pt>
+File: ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/DM/DM50kGain.png Graphic file (type png)
+<use ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/DM/DM50kGain.png>
+Package pdftex.def Info: ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/DM/DM50kGain.png  used on input line 308.
+(pdftex.def)             Requested size: 240.71092pt x 113.29665pt.
+<../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/DM/DM50kPhase.png, id=695, 505.1673pt x 244.9953pt>
+File: ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/DM/DM50kPhase.png Graphic file (type png)
+<use ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/DM/DM50kPhase.png>
+Package pdftex.def Info: ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/DM/DM50kPhase.png  used on input line 310.
+(pdftex.def)             Requested size: 240.71092pt x 116.74033pt.
+[58 <../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/Gain5k.png> <../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/Phase5k.png> <../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/Gain100.png> <../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/Phase100.png> <../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/CMAllGain.png> <../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/CM/CMAllPhase.png>]
+<../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/DM/DM5kGain.png, id=709, 505.1673pt x 237.7683pt>
+File: ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/DM/DM5kGain.png Graphic file (type png)
+<use ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/DM/DM5kGain.png>
+Package pdftex.def Info: ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/DM/DM5kGain.png  used on input line 316.
+(pdftex.def)             Requested size: 240.71092pt x 113.29665pt.
+<../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/DM/DM5kPhase.png, id=710, 505.1673pt x 244.9953pt>
+File: ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/DM/DM5kPhase.png Graphic file (type png)
+<use ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/DM/DM5kPhase.png>
+Package pdftex.def Info: ../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/DM/DM5kPhase.png  used on input line 318.
+(pdftex.def)             Requested size: 240.71092pt x 116.74033pt.
+) [59 <../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/DM/DM50kGain.png> <../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/DM/DM50kPhase.png> <../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/DM/DM5kGain.png> <../Ejercicio3-AmplificadorDeInstrumentacion/Imagenes/DM/DM5kPhase.png>] (../Ejercicio4-EcualizadorDeFase/Ejercicio-4.tex
+
+LaTeX Warning: Reference `circuito_ecualizador_de_fase' on page 60 undefined on input line 4.
+
+<../Ejercicio4-EcualizadorDeFase/Informe/Ecualizador_de_Fase.png, id=721, 623.32875pt x 492.84125pt>
+File: ../Ejercicio4-EcualizadorDeFase/Informe/Ecualizador_de_Fase.png Graphic file (type png)
+<use ../Ejercicio4-EcualizadorDeFase/Informe/Ecualizador_de_Fase.png>
+Package pdftex.def Info: ../Ejercicio4-EcualizadorDeFase/Informe/Ecualizador_de_Fase.png  used on input line 9.
+(pdftex.def)             Requested size: 230.46574pt x 182.22055pt.
+
+LaTeX Warning: Reference `suma_pote' on page 60 undefined on input line 42.
+
+
+LaTeX Warning: Reference `multiplicacion_pote' on page 60 undefined on input line 42.
+
+<../Ejercicio4-EcualizadorDeFase/Informe/EcSinPot.png, id=722, 733.74126pt x 492.84125pt>
+File: ../Ejercicio4-EcualizadorDeFase/Informe/EcSinPot.png Graphic file (type png)
+<use ../Ejercicio4-EcualizadorDeFase/Informe/EcSinPot.png>
+Package pdftex.def Info: ../Ejercicio4-EcualizadorDeFase/Informe/EcSinPot.png  used on input line 48.
+(pdftex.def)             Requested size: 230.46574pt x 154.7946pt.
+[60 <../Ejercicio4-EcualizadorDeFase/Informe/Ecualizador_de_Fase.png>]
+
+LaTeX Warning: Reference `1reemplazo' on page 61 undefined on input line 54.
+
+
+LaTeX Warning: Reference `2reemplazo' on page 61 undefined on input line 55.
+
+<../Ejercicio4-EcualizadorDeFase/Informe/1cambioEstrella.png, id=734, 1581.91pt x 492.84125pt>
+File: ../Ejercicio4-EcualizadorDeFase/Informe/1cambioEstrella.png Graphic file (type png)
+<use ../Ejercicio4-EcualizadorDeFase/Informe/1cambioEstrella.png>
+Package pdftex.def Info: ../Ejercicio4-EcualizadorDeFase/Informe/1cambioEstrella.png  used on input line 85.
+(pdftex.def)             Requested size: 460.9315pt x 143.60463pt.
+[61 <../Ejercicio4-EcualizadorDeFase/Informe/EcSinPot.png> <../Ejercicio4-EcualizadorDeFase/Informe/1cambioEstrella.png>]
+<../Ejercicio4-EcualizadorDeFase/Informe/2cambioTriangulo.png, id=747, 1406.25375pt x 412.54124pt>
+File: ../Ejercicio4-EcualizadorDeFase/Informe/2cambioTriangulo.png Graphic file (type png)
+<use ../Ejercicio4-EcualizadorDeFase/Informe/2cambioTriangulo.png>
+Package pdftex.def Info: ../Ejercicio4-EcualizadorDeFase/Informe/2cambioTriangulo.png  used on input line 121.
+(pdftex.def)             Requested size: 460.9315pt x 135.21368pt.
+
+
+LaTeX Warning: Reference `Cir_Final' on page 62 undefined on input line 128.
+
+<../Ejercicio4-EcualizadorDeFase/Informe/EcFinal.png, id=748, 573.14125pt x 302.12875pt>
+File: ../Ejercicio4-EcualizadorDeFase/Informe/EcFinal.png Graphic file (type png)
+<use ../Ejercicio4-EcualizadorDeFase/Informe/EcFinal.png>
+Package pdftex.def Info: ../Ejercicio4-EcualizadorDeFase/Informe/EcFinal.png  used on input line 139.
+(pdftex.def)             Requested size: 230.46574pt x 121.49016pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[62 <../Ejercicio4-EcualizadorDeFase/Informe/2cambioTriangulo.png>]
+
+LaTeX Warning: Reference `expresion_1' on page 63 undefined on input line 166.
+
+
+LaTeX Warning: Reference `expresion_2' on page 63 undefined on input line 166.
+
+
+LaTeX Warning: Reference `alpha1' on page 63 undefined on input line 167.
+
+
+LaTeX Warning: Reference `alpha2' on page 63 undefined on input line 167.
+
+
+LaTeX Warning: Reference `alpha3' on page 63 undefined on input line 167.
+
+
+LaTeX Warning: Reference `z1' on page 63 undefined on input line 178.
+
+
+LaTeX Warning: Reference `z2' on page 63 undefined on input line 178.
+
+
+LaTeX Warning: Reference `z3' on page 63 undefined on input line 178.
+
+[63 <../Ejercicio4-EcualizadorDeFase/Informe/EcFinal.png>]
+
+LaTeX Warning: Reference `circuito_no_ideal' on page 64 undefined on input line 226.
+
+<../Ejercicio4-EcualizadorDeFase/Informe/circuito_no_ideal.png, id=783, 487.06969pt x 292.09125pt>
+File: ../Ejercicio4-EcualizadorDeFase/Informe/circuito_no_ideal.png Graphic file (type png)
+<use ../Ejercicio4-EcualizadorDeFase/Informe/circuito_no_ideal.png>
+Package pdftex.def Info: ../Ejercicio4-EcualizadorDeFase/Informe/circuito_no_ideal.png  used on input line 229.
+(pdftex.def)             Requested size: 230.46574pt x 138.20547pt.
+
+LaTeX Warning: Reference `trans_no_ideal' on page 64 undefined on input line 250.
+
+
+LaTeX Warning: Reference `trans_ideal' on page 64 undefined on input line 250.
+
+
+LaTeX Warning: Reference `trans_ideal_aplicada' on page 64 undefined on input line 267.
+
+[64 <../Ejercicio4-EcualizadorDeFase/Informe/circuito_no_ideal.png>]
+
+LaTeX Warning: Reference `trans_ideal_aplicada' on page 65 undefined on input line 292.
+
+
+LaTeX Warning: Reference `trans_ideal_aplicada_normalizada' on page 65 undefined on input line 302.
+
+
+LaTeX Warning: Reference `alpha1_prima' on page 65 undefined on input line 311.
+
+
+LaTeX Warning: Reference `alpha3_simplificado' on page 65 undefined on input line 311.
+
+
+LaTeX Warning: Reference `w_0' on page 65 undefined on input line 311.
+
+
+LaTeX Warning: Reference `A0cotas' on page 65 undefined on input line 339.
+
+
+LaTeX Warning: Reference `f0final' on page 65 undefined on input line 351.
+
+[65]
+<../Ejercicio4-EcualizadorDeFase/Informe/lowFrecL000Mag.png, id=814, 489.2679pt x 192.9609pt>
+File: ../Ejercicio4-EcualizadorDeFase/Informe/lowFrecL000Mag.png Graphic file (type png)
+<use ../Ejercicio4-EcualizadorDeFase/Informe/lowFrecL000Mag.png>
+Package pdftex.def Info: ../Ejercicio4-EcualizadorDeFase/Informe/lowFrecL000Mag.png  used on input line 391.
+(pdftex.def)             Requested size: 307.29288pt x 121.195pt.
+<../Ejercicio4-EcualizadorDeFase/Informe/lowFrecL050Mag.png, id=815, 489.2679pt x 192.9609pt>
+File: ../Ejercicio4-EcualizadorDeFase/Informe/lowFrecL050Mag.png Graphic file (type png)
+<use ../Ejercicio4-EcualizadorDeFase/Informe/lowFrecL050Mag.png>
+Package pdftex.def Info: ../Ejercicio4-EcualizadorDeFase/Informe/lowFrecL050Mag.png  used on input line 398.
+(pdftex.def)             Requested size: 307.29288pt x 121.195pt.
+ [66 <../Ejercicio4-EcualizadorDeFase/Informe/lowFrecL000Mag.png>]
+<../Ejercicio4-EcualizadorDeFase/Informe/lowFrecL100Mag.png, id=825, 489.2679pt x 192.9609pt>
+File: ../Ejercicio4-EcualizadorDeFase/Informe/lowFrecL100Mag.png Graphic file (type png)
+<use ../Ejercicio4-EcualizadorDeFase/Informe/lowFrecL100Mag.png>
+Package pdftex.def Info: ../Ejercicio4-EcualizadorDeFase/Informe/lowFrecL100Mag.png  used on input line 405.
+(pdftex.def)             Requested size: 307.29288pt x 121.195pt.
+<../Ejercicio4-EcualizadorDeFase/Informe/lowFrecL000Fase.png, id=826, 489.2679pt x 200.1879pt>
+File: ../Ejercicio4-EcualizadorDeFase/Informe/lowFrecL000Fase.png Graphic file (type png)
+<use ../Ejercicio4-EcualizadorDeFase/Informe/lowFrecL000Fase.png>
+Package pdftex.def Info: ../Ejercicio4-EcualizadorDeFase/Informe/lowFrecL000Fase.png  used on input line 415.
+(pdftex.def)             Requested size: 307.29288pt x 125.73415pt.
+<../Ejercicio4-EcualizadorDeFase/Informe/lowFrecL050Fase.png, id=827, 489.2679pt x 200.1879pt>
+File: ../Ejercicio4-EcualizadorDeFase/Informe/lowFrecL050Fase.png Graphic file (type png)
+<use ../Ejercicio4-EcualizadorDeFase/Informe/lowFrecL050Fase.png>
+Package pdftex.def Info: ../Ejercicio4-EcualizadorDeFase/Informe/lowFrecL050Fase.png  used on input line 422.
+(pdftex.def)             Requested size: 307.29288pt x 125.73415pt.
+<../Ejercicio4-EcualizadorDeFase/Informe/lowFrecL100Fase.png, id=828, 489.2679pt x 200.1879pt>
+File: ../Ejercicio4-EcualizadorDeFase/Informe/lowFrecL100Fase.png Graphic file (type png)
+<use ../Ejercicio4-EcualizadorDeFase/Informe/lowFrecL100Fase.png>
+Package pdftex.def Info: ../Ejercicio4-EcualizadorDeFase/Informe/lowFrecL100Fase.png  used on input line 429.
+(pdftex.def)             Requested size: 307.29288pt x 125.73415pt.
+ [67 <../Ejercicio4-EcualizadorDeFase/Informe/lowFrecL050Mag.png> <../Ejercicio4-EcualizadorDeFase/Informe/lowFrecL100Mag.png> <../Ejercicio4-EcualizadorDeFase/Informe/lowFrecL000Fase.png> <../Ejercicio4-EcualizadorDeFase/Informe/lowFrecL050Fase.png>]
+<../Ejercicio4-EcualizadorDeFase/Informe/medFrecL000Mag.png, id=841, 489.2679pt x 192.9609pt>
+File: ../Ejercicio4-EcualizadorDeFase/Informe/medFrecL000Mag.png Graphic file (type png)
+<use ../Ejercicio4-EcualizadorDeFase/Informe/medFrecL000Mag.png>
+Package pdftex.def Info: ../Ejercicio4-EcualizadorDeFase/Informe/medFrecL000Mag.png  used on input line 441.
+(pdftex.def)             Requested size: 307.29288pt x 121.195pt.
+<../Ejercicio4-EcualizadorDeFase/Informe/medFrecL050Mag.png, id=842, 489.2679pt x 192.9609pt>
+File: ../Ejercicio4-EcualizadorDeFase/Informe/medFrecL050Mag.png Graphic file (type png)
+<use ../Ejercicio4-EcualizadorDeFase/Informe/medFrecL050Mag.png>
+Package pdftex.def Info: ../Ejercicio4-EcualizadorDeFase/Informe/medFrecL050Mag.png  used on input line 448.
+(pdftex.def)             Requested size: 307.29288pt x 121.195pt.
+<../Ejercicio4-EcualizadorDeFase/Informe/medFrecL100Mag.png, id=843, 489.2679pt x 192.9609pt>
+File: ../Ejercicio4-EcualizadorDeFase/Informe/medFrecL100Mag.png Graphic file (type png)
+<use ../Ejercicio4-EcualizadorDeFase/Informe/medFrecL100Mag.png>
+Package pdftex.def Info: ../Ejercicio4-EcualizadorDeFase/Informe/medFrecL100Mag.png  used on input line 455.
+(pdftex.def)             Requested size: 307.29288pt x 121.195pt.
+<../Ejercicio4-EcualizadorDeFase/Informe/medFrecL000Fase.png, id=844, 489.2679pt x 200.1879pt>
+File: ../Ejercicio4-EcualizadorDeFase/Informe/medFrecL000Fase.png Graphic file (type png)
+<use ../Ejercicio4-EcualizadorDeFase/Informe/medFrecL000Fase.png>
+Package pdftex.def Info: ../Ejercicio4-EcualizadorDeFase/Informe/medFrecL000Fase.png  used on input line 465.
+(pdftex.def)             Requested size: 307.29288pt x 125.73415pt.
+ [68 <../Ejercicio4-EcualizadorDeFase/Informe/lowFrecL100Fase.png> <../Ejercicio4-EcualizadorDeFase/Informe/medFrecL000Mag.png> <../Ejercicio4-EcualizadorDeFase/Informe/medFrecL050Mag.png> <../Ejercicio4-EcualizadorDeFase/Informe/medFrecL100Mag.png>]
+<../Ejercicio4-EcualizadorDeFase/Informe/medFrecL050Fase.png, id=857, 489.2679pt x 200.1879pt>
+File: ../Ejercicio4-EcualizadorDeFase/Informe/medFrecL050Fase.png Graphic file (type png)
+<use ../Ejercicio4-EcualizadorDeFase/Informe/medFrecL050Fase.png>
+Package pdftex.def Info: ../Ejercicio4-EcualizadorDeFase/Informe/medFrecL050Fase.png  used on input line 472.
+(pdftex.def)             Requested size: 307.29288pt x 125.73415pt.
+<../Ejercicio4-EcualizadorDeFase/Informe/medFrecL100Fase.png, id=858, 489.2679pt x 200.1879pt>
+File: ../Ejercicio4-EcualizadorDeFase/Informe/medFrecL100Fase.png Graphic file (type png)
+<use ../Ejercicio4-EcualizadorDeFase/Informe/medFrecL100Fase.png>
+Package pdftex.def Info: ../Ejercicio4-EcualizadorDeFase/Informe/medFrecL100Fase.png  used on input line 479.
+(pdftex.def)             Requested size: 307.29288pt x 125.73415pt.
+<../Ejercicio4-EcualizadorDeFase/Informe/highFrecL000Mag.png, id=859, 489.2679pt x 192.9609pt>
+File: ../Ejercicio4-EcualizadorDeFase/Informe/highFrecL000Mag.png Graphic file (type png)
+<use ../Ejercicio4-EcualizadorDeFase/Informe/highFrecL000Mag.png>
+Package pdftex.def Info: ../Ejercicio4-EcualizadorDeFase/Informe/highFrecL000Mag.png  used on input line 490.
+(pdftex.def)             Requested size: 307.29288pt x 121.195pt.
+<../Ejercicio4-EcualizadorDeFase/Informe/highFrecL050Mag.png, id=860, 489.2679pt x 192.9609pt>
+File: ../Ejercicio4-EcualizadorDeFase/Informe/highFrecL050Mag.png Graphic file (type png)
+<use ../Ejercicio4-EcualizadorDeFase/Informe/highFrecL050Mag.png>
+Package pdftex.def Info: ../Ejercicio4-EcualizadorDeFase/Informe/highFrecL050Mag.png  used on input line 497.
+(pdftex.def)             Requested size: 307.29288pt x 121.195pt.
+ [69 <../Ejercicio4-EcualizadorDeFase/Informe/medFrecL000Fase.png> <../Ejercicio4-EcualizadorDeFase/Informe/medFrecL050Fase.png> <../Ejercicio4-EcualizadorDeFase/Informe/medFrecL100Fase.png> <../Ejercicio4-EcualizadorDeFase/Informe/highFrecL000Mag.png>]
+<../Ejercicio4-EcualizadorDeFase/Informe/highFrecL100Mag.png, id=873, 489.2679pt x 192.9609pt>
+File: ../Ejercicio4-EcualizadorDeFase/Informe/highFrecL100Mag.png Graphic file (type png)
+<use ../Ejercicio4-EcualizadorDeFase/Informe/highFrecL100Mag.png>
+Package pdftex.def Info: ../Ejercicio4-EcualizadorDeFase/Informe/highFrecL100Mag.png  used on input line 504.
+(pdftex.def)             Requested size: 307.29288pt x 121.195pt.
+<../Ejercicio4-EcualizadorDeFase/Informe/highFrecL000Fase.png, id=874, 489.2679pt x 200.1879pt>
+File: ../Ejercicio4-EcualizadorDeFase/Informe/highFrecL000Fase.png Graphic file (type png)
+<use ../Ejercicio4-EcualizadorDeFase/Informe/highFrecL000Fase.png>
+Package pdftex.def Info: ../Ejercicio4-EcualizadorDeFase/Informe/highFrecL000Fase.png  used on input line 514.
+(pdftex.def)             Requested size: 307.29288pt x 125.73415pt.
+<../Ejercicio4-EcualizadorDeFase/Informe/highFrecL050Fase.png, id=875, 489.2679pt x 200.1879pt>
+File: ../Ejercicio4-EcualizadorDeFase/Informe/highFrecL050Fase.png Graphic file (type png)
+<use ../Ejercicio4-EcualizadorDeFase/Informe/highFrecL050Fase.png>
+Package pdftex.def Info: ../Ejercicio4-EcualizadorDeFase/Informe/highFrecL050Fase.png  used on input line 521.
+(pdftex.def)             Requested size: 307.29288pt x 125.73415pt.
+<../Ejercicio4-EcualizadorDeFase/Informe/highFrecL100Fase.png, id=876, 489.2679pt x 200.1879pt>
+File: ../Ejercicio4-EcualizadorDeFase/Informe/highFrecL100Fase.png Graphic file (type png)
+<use ../Ejercicio4-EcualizadorDeFase/Informe/highFrecL100Fase.png>
+Package pdftex.def Info: ../Ejercicio4-EcualizadorDeFase/Informe/highFrecL100Fase.png  used on input line 528.
+(pdftex.def)             Requested size: 307.29288pt x 125.73415pt.
+ [70 <../Ejercicio4-EcualizadorDeFase/Informe/highFrecL050Mag.png> <../Ejercicio4-EcualizadorDeFase/Informe/highFrecL100Mag.png> <../Ejercicio4-EcualizadorDeFase/Informe/highFrecL000Fase.png> <../Ejercicio4-EcualizadorDeFase/Informe/highFrecL050Fase.png>]) [71 <../Ejercicio4-EcualizadorDeFase/Informe/highFrecL100Fase.png>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 30.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 30.
+ (d:/Documents\GitHub\TC-Grupo6\TP3\Informe\build\main.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 30.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 30.
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: 145DFB73B86822D31105363EF6DE2273;5791.
+
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 30.
+ ) 
+Here is how much of TeX's memory you used:
+ 36850 strings out of 480790
+ 911055 string characters out of 2894453
+ 1237936 words of memory out of 3000000
+ 51830 multiletter control sequences out of 15000+200000
+ 545898 words of font info for 76 fonts, out of 3000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 71i,16n,73p,1328b,801s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\Facu Molina\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm0800.pk> <C:\Users\Facu Molina\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk><C:/Users/Facu Molina/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/Facu Molina/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Facu Molina/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/Facu Molina/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Facu Molina/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmex7.pfb><C:/Users/Facu Molina/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Facu Molina/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Facu Molina/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/Facu Molina/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/Facu Molina/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/Facu Molina/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Facu Molina/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Facu Molina/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Facu Molina/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/Facu Molina/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/Facu Molina/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/Facu Molina/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Facu Molina/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Facu Molina/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/Facu Molina/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/Facu Molina/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/Facu Molina/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/Facu Molina/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/Facu Molina/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb>
+Output written on d:/Documents\GitHub\TC-Grupo6\TP3\Informe\build\main.pdf (72 pages, 2121534 bytes).
+PDF statistics:
+ 1045 PDF objects out of 1200 (max. 8388607)
+ 311 named destinations out of 1000 (max. 500000)
+ 901 words of extra memory for PDF output out of 10000 (max. 10000000)
+

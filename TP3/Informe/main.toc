@@ -1,0 +1,72 @@
+\babel@toc {english}{}
+\contentsline {section}{\numberline {1}Filtro con GIC}{3}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Introducción al GIC}{3}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Diseño de un Filtro Pasa-Todo}{3}{subsection.1.2}%
+\contentsline {subsubsection}{\numberline {1.2.1}Respuesta en frecuencia}{4}{subsubsection.1.2.1}%
+\contentsline {subsubsection}{\numberline {1.2.2}Funcionamiento de Resistencias}{5}{subsubsection.1.2.2}%
+\contentsline {subsubsection}{\numberline {1.2.3}Análisis de Sensibilidad}{6}{subsubsection.1.2.3}%
+\contentsline {subsubsection}{\numberline {1.2.4}Impedancia del Circuito}{7}{subsubsection.1.2.4}%
+\contentsline {subsubsection}{\numberline {1.2.5}Implementación del Circuito}{7}{subsubsection.1.2.5}%
+\contentsline {subsubsection}{\numberline {1.2.6}Elección de Amplificador Operacional}{8}{subsubsection.1.2.6}%
+\contentsline {subsection}{\numberline {1.3}Análisis de Resultados}{8}{subsection.1.3}%
+\contentsline {subsubsection}{\numberline {1.3.1}Respuesta en Frecuencia}{8}{subsubsection.1.3.1}%
+\contentsline {subsubsection}{\numberline {1.3.2}Impedancia de Entrada}{10}{subsubsection.1.3.2}%
+\contentsline {subsubsection}{\numberline {1.3.3}Impedancia de Salida}{10}{subsubsection.1.3.3}%
+\contentsline {subsection}{\numberline {1.4}Respuesta al Escalón}{11}{subsection.1.4}%
+\contentsline {subsection}{\numberline {1.5}Limitaciones del Circuito}{13}{subsection.1.5}%
+\contentsline {subsubsection}{\numberline {1.5.1}Limitación por Tensión}{13}{subsubsection.1.5.1}%
+\contentsline {subsubsection}{\numberline {1.5.2}Limitación por Frecuencia}{14}{subsubsection.1.5.2}%
+\contentsline {subsubsection}{\numberline {1.5.3}Limitación por Señal}{14}{subsubsection.1.5.3}%
+\contentsline {subsection}{\numberline {1.6}Conclusión}{14}{subsection.1.6}%
+\contentsline {section}{\numberline {2}Introducción a Diseño de Filtros}{15}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Implementación de un Inductor con Gyrator}{15}{subsection.2.1}%
+\contentsline {subsubsection}{\numberline {2.1.1}Introducción a Gyrators}{15}{subsubsection.2.1.1}%
+\contentsline {subsubsection}{\numberline {2.1.2}Implementación real de un Gyrator}{15}{subsubsection.2.1.2}%
+\contentsline {subsubsection}{\numberline {2.1.3}Análisis de $Z_{in}$ del Gyrator}{16}{subsubsection.2.1.3}%
+\contentsline {subsubsection}{\numberline {2.1.4}Elección del amplificador operacional para el Gyrator y diseño de filtros}{18}{subsubsection.2.1.4}%
+\contentsline {subsection}{\numberline {2.2}Filtro Pasa-Bajos (Low-Pass)}{18}{subsection.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.1}Especificaciones}{18}{subsubsection.2.2.1}%
+\contentsline {subsubsection}{\numberline {2.2.2}Diseño del Filtro}{19}{subsubsection.2.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.3}Diseño del Filtro con Gyrator}{20}{subsubsection.2.2.3}%
+\contentsline {subsubsection}{\numberline {2.2.4}Análisis mediante simulación}{20}{subsubsection.2.2.4}%
+\contentsline {subsubsection}{\numberline {2.2.5}Análisis empírico}{23}{subsubsection.2.2.5}%
+\contentsline {subsection}{\numberline {2.3}Filtro Pasa-Altos (High-Pass)}{24}{subsection.2.3}%
+\contentsline {subsubsection}{\numberline {2.3.1}Especificaciones}{24}{subsubsection.2.3.1}%
+\contentsline {subsubsection}{\numberline {2.3.2}Diseño del Filtro}{24}{subsubsection.2.3.2}%
+\contentsline {subsubsection}{\numberline {2.3.3}Diseño del Filtro con Gyrator}{25}{subsubsection.2.3.3}%
+\contentsline {subsubsection}{\numberline {2.3.4}Análisis mediante simulación}{25}{subsubsection.2.3.4}%
+\contentsline {subsubsection}{\numberline {2.3.5}Análisis empírico}{27}{subsubsection.2.3.5}%
+\contentsline {subsection}{\numberline {2.4}Filtro Rechaza-Banda (Band-Rejection)}{28}{subsection.2.4}%
+\contentsline {subsubsection}{\numberline {2.4.1}Especificaciones}{28}{subsubsection.2.4.1}%
+\contentsline {subsubsection}{\numberline {2.4.2}Diseño del Filtro}{29}{subsubsection.2.4.2}%
+\contentsline {subsubsection}{\numberline {2.4.3}Diseño del Filtro con Gyrator}{29}{subsubsection.2.4.3}%
+\contentsline {subsubsection}{\numberline {2.4.4}Análisis mediante simulación}{29}{subsubsection.2.4.4}%
+\contentsline {subsubsection}{\numberline {2.4.5}Análisis empírico}{31}{subsubsection.2.4.5}%
+\contentsline {subsection}{\numberline {2.5}Filtro Pasa-Banda (Band-Pass)}{32}{subsection.2.5}%
+\contentsline {subsection}{\numberline {2.6}Especificaciones}{32}{subsection.2.6}%
+\contentsline {subsubsection}{\numberline {2.6.1}Diseño del filtro}{32}{subsubsection.2.6.1}%
+\contentsline {subsubsection}{\numberline {2.6.2}Diseño de filtro con Gyrator}{33}{subsubsection.2.6.2}%
+\contentsline {subsubsection}{\numberline {2.6.3}Análisis mediante simulación}{33}{subsubsection.2.6.3}%
+\contentsline {subsection}{\numberline {2.7}Análisis empírico}{35}{subsection.2.7}%
+\contentsline {subsection}{\numberline {2.8}Implementación}{36}{subsection.2.8}%
+\contentsline {subsubsection}{\numberline {2.8.1}Consideraciones de diseño}{36}{subsubsection.2.8.1}%
+\contentsline {subsection}{\numberline {2.9}Conclusión}{39}{subsection.2.9}%
+\contentsline {section}{\numberline {3}Amplificador de Instrumentación}{40}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Amplificador de Instrumentación}{40}{subsection.3.1}%
+\contentsline {subsubsection}{\numberline {3.1.1}Introducción}{40}{subsubsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.2}Descripción del comportamiento del circuito}{40}{subsection.3.2}%
+\contentsline {subsubsection}{\numberline {3.2.1}Modelo ideal}{41}{subsubsection.3.2.1}%
+\contentsline {subsubsection}{\numberline {3.2.2}Modelos no ideales}{42}{subsubsection.3.2.2}%
+\contentsline {subsubsection}{\numberline {3.2.3}Análisis con componentes empleados}{42}{subsubsection.3.2.3}%
+\contentsline {subsection}{\numberline {3.3}Mediciones}{44}{subsection.3.3}%
+\contentsline {subsubsection}{\numberline {3.3.1}Modo común}{45}{subsubsection.3.3.1}%
+\contentsline {subsubsection}{\numberline {3.3.2}Modo diferencial}{46}{subsubsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.4}Tensión de salida montada sobre nivel de DC}{47}{subsection.3.4}%
+\contentsline {section}{\numberline {4}Control de Tonos y Ecualizador de Fase}{48}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Ecualizador de Fase}{48}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Análisis matemático}{48}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Elección de componentes}{54}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Simulaciones}{54}{subsection.4.4}%
+\contentsline {subsubsection}{\numberline {4.4.1}Frecuencias bajas}{54}{subsubsection.4.4.1}%
+\contentsline {subsubsection}{\numberline {4.4.2}Frecuencias medias}{56}{subsubsection.4.4.2}%
+\contentsline {subsubsection}{\numberline {4.4.3}Frecuencias altas}{57}{subsubsection.4.4.3}%
