@@ -3,11 +3,15 @@ from src.ui.filterToolWindow import Ui_filterToolWindow
 from scipy import signal
 from filterDesigned import filterDesigned
 from scipy import signal
+import matplotlib.pyplot as plt
+
 
 class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
     def __init__(self):
         super(myFilterToolApplication, self).__init__()
         self.setupUi(self)
+
+        self.filters=[]
 
     # Mapeo de botones interactivos y sus respectivas funciones #
 
@@ -49,6 +53,7 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
             except:
                 ErrorMessage = ErrorMessage + "Fp must be a valid number \n"
 
+
         elif str(self.filterTypeOption.currentText()) == "High-Pass":
             print ("Estoy en HP")
         elif str(self.filterTypeOption.currentText()) == "Band-Pass":
@@ -80,13 +85,11 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
             msgWrongInput.exec()
         else:
             print ("Aca voy a la funcion que calcula el filtro")
-            #self.defineFilter()
+            self.filterOption = str(self.filterTypeOption.currentText())
+            self.approxOption = str(self.approxTypeOption.currentText())
+            self.filters.append(self.defineFilter())
             self.plotGraphic()
 
-        #print(self.AaInputFilter)
-        #print(self.ApInputFilter)
-        #print(self.FaInputFilter)
-        #print(self.FpInputFilter)
 
     # Funciones que grafican#
 
@@ -98,6 +101,7 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
         elif myPlotGraphicType == "Phase":
             self.plotPhase()
         elif myPlotGraphicType == "Attenuation":
+            self.plotAttenuation()
             print("Voy a Funcion:" + myPlotGraphicType)
         elif myPlotGraphicType == "Attenuation - Normalized":
             print("Voy a Funcion:" + myPlotGraphicType)
@@ -171,7 +175,7 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
 
         self.filterToolPlotTable.canvas.axes.clear()
         self.filterToolPlotTable.canvas.axes.set_axisbelow(True)
-        self.filterToolPlotTable.canvas.axes.grid(True,linestyle='-.',which="both")
+        self.filterToolPlotTable.canvas.axes.grid(True,linestyle='-',which="both")
 
         self.filterToolPlotTable.canvas.axes.scatter(myZeros[0],myZeros[1],marker="o",label="Zeros")
         self.filterToolPlotTable.canvas.axes.scatter(myPoles[0],myPoles[1],marker="x",label = "Poles")
@@ -211,41 +215,45 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
         self.filterToolPlotTable.canvas.draw()
 
     def plotAttenuation (self):
-        print ("Hola")
-        if str(self.filterTypeOption.currentText())=="Low-Pass":
-            #firstPoint =
-            #secondPoint =
-        #elif str(self.filterTypeOption.currentText())=="Band-Pass":
-        #elif str(self.filterTypeOption.currentText()) == "Band-Rejection":
-        #elif str(self.filterTypeOption.currentText()) == "Band-Pass":
-        #elif str(self.filterTypeOption.currentText()) == "Low-Pass":
 
-        self.numerator = [1]
-        self.denominator = [1, 1]
-        self.system = signal.TransferFunction(self.numerator, self.denominator)
-        self.w, self.mag, self.phase = signal.bode(self.system)
+        print (self.filters[0].thisFilter)
 
         self.filterToolPlotTable.canvas.axes.clear()
-        self.filterToolPlotTable.canvas.axes.semilogx(self.w, self.phase)
+
+        self.filterToolPlotTable.canvas.axes.semilogx(self.filters[0].thisFilter.w,self.filters[0].thisFilter.magnitudeh,label = self.filters[0].label)
+
         self.filterToolPlotTable.canvas.axes.grid(True, linestyle='-', which="both")
-        self.filterToolPlotTable.canvas.axes.minorticks_on()
         self.filterToolPlotTable.canvas.figure.tight_layout()
+
+
+        self.rectangle_p = plt.Rectangle((0, -1*self.filters[0].Ap), self.filters[0].thisFilter.fc, -1*self.filters[0].Aa - 100, fc='violet', alpha=0.8)
+        self.rectangle_a = plt.Rectangle((self.filters[0].Fa, -1*self.filters[0].Aa), self.filters[0].thisFilter.w_max - self.filters[0].thisFilter.fc, self.filters[0].Aa + 30, fc='violet', alpha=0.8)
+
+
+        self.filterToolPlotTable.canvas.figure.gca().add_patch(self.rectangle_p)
+        self.filterToolPlotTable.canvas.figure.gca().add_patch(self.rectangle_a)
+
+        #self.filterToolPlottable.canvas.axes.legend(fancybox=True, framealpha=0.5)
         self.filterToolPlotTable.canvas.axes.axes.set_xlabel("Frequency [Hz]")
         self.filterToolPlotTable.canvas.axes.axes.set_ylabel("Phase [°]")
         self.filterToolPlotTable.canvas.axes.title.set_text('Frequency Response - Phase')
+
         self.filterToolPlotTable.canvas.figure.tight_layout()
         self.filterToolPlotTable.canvas.draw()
 
-        points = [(2, 4), (2, 8), (4, 6), (6, 8)]
-        line = plt.Polygon(points, closed=None, fill=None, edgecolor='r')
 
-        fig = plt.figure()
-        ax = plt.subplot(1, 1, 1)
-        ax.add_patch(line)
 
+
+
+    #Una vez procesado los inputs y aceptados, este metodo crea y apendea ese nuevo filtro a la lista de filtros. Lo crea convenientemente dependiendo el tipo#
 
     def defineFilter (self):
         print ("hola")
-        self.myFilter = filterDesigned (self.AaInputFilter,self.ApInputFilter,self.FaInputFilter, self.FpInputFilter,str(self.filterTypeOption.currentText()),str(self.approxTypeOption.currentText()),self.filterOrder, self.maxQ, self.denorm)
+        self.filters.append(filterDesigned (self.AaInputFilter,self.ApInputFilter,self.FaInputFilter, self.FpInputFilter,self.filterOption,self.approxOption,self.filterOrder, self.maxQ, self.denorm))
+
+
+
+
+
 
 
