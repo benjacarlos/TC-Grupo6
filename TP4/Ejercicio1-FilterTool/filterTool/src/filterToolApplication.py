@@ -102,7 +102,7 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
         elif myPlotGraphicType == "Attenuation - Normalized":
             print("Voy a Funcion:" + myPlotGraphicType)
         elif myPlotGraphicType == "Group Delay":
-            print("Voy a Funcion:" + myPlotGraphicType)
+            self.plotGroupDelay()
         elif myPlotGraphicType == "Poles and Zeros":
             self.plotZerosAndPoles()
         elif myPlotGraphicType == "Impulse Response":
@@ -121,13 +121,13 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
 
         self.filterToolPlotTable.canvas.axes.clear()
         self.filterToolPlotTable.canvas.axes.semilogx(self.w,self.mag)
-        self.filterToolPlotTable.canvas.axes.grid(True, which="both")
+        self.filterToolPlotTable.canvas.axes.grid(True,linestyle='-', which="both")
         self.filterToolPlotTable.canvas.axes.minorticks_on()
         self.filterToolPlotTable.canvas.figure.tight_layout()
 
-        self.filterToolPlotTable.canvas.axes.axes.set_xlabel("Eje X")
-        self.filterToolPlotTable.canvas.axes.axes.set_ylabel("Eje Y")
-        self.filterToolPlotTable.canvas.axes.title.set_text('Respuesta en Frecuencia - MAGNITUD')
+        self.filterToolPlotTable.canvas.axes.axes.set_xlabel("Frequency [Hz]")
+        self.filterToolPlotTable.canvas.axes.axes.set_ylabel("Gain [DB]")
+        self.filterToolPlotTable.canvas.axes.title.set_text('Frequency Response - Amplitude')
         self.filterToolPlotTable.canvas.figure.tight_layout()
         self.filterToolPlotTable.canvas.draw()
 
@@ -137,14 +137,15 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
         self.system = signal.TransferFunction(self.numerator,self.denominator)
         self.w,self.mag,self.phase = signal.bode(self.system)
 
+
         self.filterToolPlotTable.canvas.axes.clear()
         self.filterToolPlotTable.canvas.axes.semilogx(self.w,self.phase)
-        self.filterToolPlotTable.canvas.axes.grid(True, which="both")
+        self.filterToolPlotTable.canvas.axes.grid(True,linestyle='-', which="both")
         self.filterToolPlotTable.canvas.axes.minorticks_on()
         self.filterToolPlotTable.canvas.figure.tight_layout()
-        self.filterToolPlotTable.canvas.axes.axes.set_xlabel("Eje X")
-        self.filterToolPlotTable.canvas.axes.axes.set_ylabel("Eje Y")
-        self.filterToolPlotTable.canvas.axes.title.set_text('Respuesta en Frecuencia - Fase')
+        self.filterToolPlotTable.canvas.axes.axes.set_xlabel("Frequency [Hz]")
+        self.filterToolPlotTable.canvas.axes.axes.set_ylabel("Phase [°]")
+        self.filterToolPlotTable.canvas.axes.title.set_text('Frequency Response - Phase')
         self.filterToolPlotTable.canvas.figure.tight_layout()
         self.filterToolPlotTable.canvas.draw()
 
@@ -152,10 +153,62 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
         self.numerator = [1,1]
         self.denominator = [1, 1,1]
         self.system = signal.TransferFunction(self.numerator, self.denominator)
-        self.ZerosandPoles = self.system.to_zpk()
-        print (self.ZerosandPoles)
+        print(self.system.zeros)
+        print(self.system.poles)
+        myZeros=[[],[]]
+        myPoles= [[],[]]
+        for zero in self.system.zeros:
+            myZeros[0].append(zero.real)
+            myZeros[1].append(zero.imag)
+        for pole in self.system.poles:
+            myPoles[0].append(pole.real)
+            myPoles[1].append(pole.imag)
+        myMaxX = [max(myZeros[0],key=abs),max(myPoles[0],key=abs)]
+        myMaxY = [max(myZeros[1],key=abs),max(myPoles[1],key=abs)]
+
+        print (max(myMaxX,key=abs))
+        print (max(myMaxY, key=abs))
+
+        self.filterToolPlotTable.canvas.axes.clear()
+        self.filterToolPlotTable.canvas.axes.set_axisbelow(True)
+        self.filterToolPlotTable.canvas.axes.grid(True,linestyle='-.',which="both")
+
+        self.filterToolPlotTable.canvas.axes.scatter(myZeros[0],myZeros[1],marker="o",label="Zeros")
+        self.filterToolPlotTable.canvas.axes.scatter(myPoles[0],myPoles[1],marker="x",label = "Poles")
+
+        self.filterToolPlotTable.canvas.axes.spines['left'].set_position('zero')
+        self.filterToolPlotTable.canvas.axes.spines['left'].set_linewidth(1)
+        self.filterToolPlotTable.canvas.axes.spines['right'].set_color('none')
+        self.filterToolPlotTable.canvas.axes.spines['bottom'].set_position('zero')
+        self.filterToolPlotTable.canvas.axes.spines['bottom'].set_linewidth(1)
+        self.filterToolPlotTable.canvas.axes.spines['top'].set_color('none')
+
+        self.filterToolPlotTable.canvas.axes.set_xlim(-1.2*abs(max(myMaxX,key=abs)),1.2*abs(max(myMaxX,key=abs)))
+        self.filterToolPlotTable.canvas.axes.set_ylim(-1.2 * abs(max(myMaxY, key=abs)), 1.2 * abs(max(myMaxY, key=abs)))
+        self.filterToolPlotTable.canvas.axes.minorticks_on()
+
+        self.filterToolPlotTable.canvas.axes.title.set_text('Zeros and Poles Diagram')
+
+        #self.filterToolPlotTablecanvas.axes.legend(fancybox=True, framealpha=0.5)
+        self.filterToolPlotTable.canvas.figure.tight_layout()
+        self.filterToolPlotTable.canvas.draw()
 
 
+    def plotGroupDelay (self):
+        self.numerator = [1]
+        self.denominator = [10000,23123123]
+        self.system = signal.TransferFunction(self.numerator,self.denominator)
+        self.w,self.gd= signal.group_delay((self.numerator,self.denominator))
+        self.filterToolPlotTable.canvas.axes.clear()
+        self.filterToolPlotTable.canvas.axes.plot(self.w,self.gd)
+        self.filterToolPlotTable.canvas.axes.grid(True,linestyle='-', which="both")
+        self.filterToolPlotTable.canvas.axes.minorticks_on()
+        self.filterToolPlotTable.canvas.figure.tight_layout()
+        self.filterToolPlotTable.canvas.axes.axes.set_xlabel("Frequency [rad/sample]")
+        self.filterToolPlotTable.canvas.axes.axes.set_ylabel("Group delay [samples]")
+        self.filterToolPlotTable.canvas.axes.title.set_text('Group Delay')
+        self.filterToolPlotTable.canvas.figure.tight_layout()
+        self.filterToolPlotTable.canvas.draw()
 
     def defineFilter (self):
         print ("hola")
