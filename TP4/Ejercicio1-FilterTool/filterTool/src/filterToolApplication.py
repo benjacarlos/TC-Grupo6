@@ -189,7 +189,7 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
 
         self.filterToolPlotTable.canvas.axes.title.set_text('Zeros and Poles Diagram')
 
-        #self.filterToolPlotTablecanvas.axes.legend(fancybox=True, framealpha=0.5)
+
         self.filterToolPlotTable.canvas.figure.tight_layout()
         self.filterToolPlotTable.canvas.draw()
 
@@ -210,6 +210,42 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
         self.filterToolPlotTable.canvas.figure.tight_layout()
         self.filterToolPlotTable.canvas.draw()
 
+    def plotAttenuation (self):
+        print ("Hola")
+        if str(self.filterTypeOption.currentText())=="Low-Pass":
+            #firstPoint =
+            #secondPoint =
+        #elif str(self.filterTypeOption.currentText())=="Band-Pass":
+        #elif str(self.filterTypeOption.currentText()) == "Band-Rejection":
+        #elif str(self.filterTypeOption.currentText()) == "Band-Pass":
+        #elif str(self.filterTypeOption.currentText()) == "Low-Pass":
+
+        self.numerator = [1]
+        self.denominator = [1, 1]
+        self.system = signal.TransferFunction(self.numerator, self.denominator)
+        self.w, self.mag, self.phase = signal.bode(self.system)
+
+        self.filterToolPlotTable.canvas.axes.clear()
+        self.filterToolPlotTable.canvas.axes.semilogx(self.w, self.phase)
+        self.filterToolPlotTable.canvas.axes.grid(True, linestyle='-', which="both")
+        self.filterToolPlotTable.canvas.axes.minorticks_on()
+        self.filterToolPlotTable.canvas.figure.tight_layout()
+        self.filterToolPlotTable.canvas.axes.axes.set_xlabel("Frequency [Hz]")
+        self.filterToolPlotTable.canvas.axes.axes.set_ylabel("Phase [°]")
+        self.filterToolPlotTable.canvas.axes.title.set_text('Frequency Response - Phase')
+        self.filterToolPlotTable.canvas.figure.tight_layout()
+        self.filterToolPlotTable.canvas.draw()
+
+        points = [(2, 4), (2, 8), (4, 6), (6, 8)]
+        line = plt.Polygon(points, closed=None, fill=None, edgecolor='r')
+
+        fig = plt.figure()
+        ax = plt.subplot(1, 1, 1)
+        ax.add_patch(line)
+
+
     def defineFilter (self):
         print ("hola")
         self.myFilter = filterDesigned (self.AaInputFilter,self.ApInputFilter,self.FaInputFilter, self.FpInputFilter,str(self.filterTypeOption.currentText()),str(self.approxTypeOption.currentText()),self.filterOrder, self.maxQ, self.denorm)
+
+
