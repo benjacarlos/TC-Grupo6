@@ -1,4 +1,14 @@
 * D:\Disco HDD\Documentos\Facultad\ITBA\4° año\2° cuatri\22.01 - Teoría de Circuitos\Cursada\Trabajos Prácticos\TC-Grupo6\TP2\Ejercicio3-CircuitoIntegradoresyDerivadores\Simulaciones\Derivador.asc
+<<<<<<< HEAD
+R1 N002 N001 5k27
+C1 N001 N003 18.8n
+V1 Vcc 0 9
+V2 0 Vee 9
+V3 N003 0 PULSE(-500m 500mv 1p 0.5ms 0.5ms 0 0.1ms)
+XU1 0 N001 Vcc Vee N002 LM833
+.tran 10ms startup
+.lib Germosub/LM833.lib
+=======
 R1 Att N006 5k27
 C1 N006 N012 18.8n
 V1 Vcc 0 9
@@ -49,5 +59,6 @@ R18 N010 N009 1k
 ;tran 1ms
 .lib Germosub/LM833.lib
 .lib Germosub/Opamps_Comparators_ST.lib
+>>>>>>> c1296a005517be6f1d0c0bf296ec14d617549244
 .backanno
 .end
