@@ -39,4 +39,4 @@ def cauer(A_p,A_a,w_p,w_a,w_max):
 
     plt.show()
 
-    print('s')
+    print(n)
