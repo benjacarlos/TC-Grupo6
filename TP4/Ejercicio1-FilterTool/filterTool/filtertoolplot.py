@@ -21,5 +21,4 @@ class filterToolPlot(QWidget):
         vertical_layout.addWidget(self.toolbar)
 
         self.canvas.axes = self.canvas.figure.add_subplot(111)
-        #self.canvas.axes.title.set_text('Diagrama de BODE - MAGNITUD')
         self.setLayout(vertical_layout)
