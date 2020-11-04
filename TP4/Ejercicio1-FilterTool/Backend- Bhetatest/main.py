@@ -15,7 +15,7 @@ from template import template
 import cauer as cauer
 import gauss as gauss
 
-   #dummy functions
+#dummy functions
 def plot(template):
     if template.should_be_drawn():
         w, h = signal.freqs(template.actual_num, template.actual_den, worN=np.linspace(1e4, 1e6, 1000))
@@ -37,8 +37,27 @@ def plot(template):
         plt.tight_layout()
 
         if template.should_draw_template():
-            rectangle_p = plt.Rectangle((0, -template.A_p), template.w_p, -template.A_a - 100, fc='violet', alpha=0.8)
-            rectangle_a = plt.Rectangle((template.w_a, -template.A_a), 1e6 - template.w_p, template.A_a + 30, fc='violet', alpha=0.8)
+            if template.type==Type.LP:
+                rectangle_p = plt.Rectangle((0, -template.data["A_p"]), template.data["w_p"], -template.data["A_a"] - 100, fc='violet', alpha=0.8)
+                rectangle_a = plt.Rectangle((template.data["w_a"], -template.data["A_a"]), 1e6 - template.data["w_p"], template.data["A_a"] + 30, fc='violet', alpha=0.8)
+
+            if template.type==Type.HP:
+                rectangle_p = plt.Rectangle((0, 0), template.data["w_a"], -template.data["A_a"], fc='violet', alpha=0.8)
+                rectangle_a = plt.Rectangle((template.data["w_p"], -template.data["A_p"]), 1e6 - template.data["w_p"], -template.data["A_a"] - 200, fc='violet', alpha=0.8)
+
+            if template.type==Type.BP:
+                rectangle_p = plt.Rectangle((0, -template.data["A_a"]), template.data["w_a_m"], template.data["A_a"], fc='violet', alpha=0.8)
+                rectangle_p1 = plt.Rectangle((template.data["w_a"], -template.data["A_a"]), template.data["w_a"]+10e6, template.data["A_a"], fc='violet', alpha=0.8)
+                rectangle_a = plt.Rectangle((template.data["w_p_m"], -template.data["A_p"]), template.bw, -template.data["A_a"] - 200, fc='violet', alpha=0.8)
+
+                plt.gca().add_patch(rectangle_p1)
+
+            if template.type==Type.BR:
+                rectangle_p = plt.Rectangle((0, -template.data["A_p"]), template.data["w_p_m"], template.data["A_a"]-300, fc='violet', alpha=0.8)
+                rectangle_p1 = plt.Rectangle((template.data["w_p"], -template.data["A_p"]), template.data["w_a"]+10e6, template.data["A_a"]-300, fc='violet', alpha=0.8)
+                rectangle_a = plt.Rectangle((template.data["w_a_m"], 0), template.data["w_a"]-template.data["w_a_m"], -template.data["A_a"], fc='violet', alpha=0.8)
+
+                plt.gca().add_patch(rectangle_p1)
 
             plt.gca().add_patch(rectangle_p)
             plt.gca().add_patch(rectangle_a)
@@ -51,13 +70,29 @@ def plot(template):
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    A_a=30
-    A_p=3
-    w_p=100e3
-    w_a=150e3
-    w_max=1e6
-    #cauer.cauer(A_p,A_a,w_p,w_a,w_max)
-    temp_legen=template(Type.LP,Approximation.Legendre,A_p,A_a,w_p,w_a,w_max)
+
+#creo un diccionario para pasar los datos
+
+    data = {
+        "A_a" : 30,
+        "A_p" : 3,
+        "w_a" : 120e3,
+        "w_a_m" : 80e3,
+        "w_p" : 150e3,
+        "w_p_m" : 50e3
+    }
+    temp_legen=template(Type.BR,Approximation.Legendre,data)
     plot(temp_legen)
-    #legendre.legendre(A_p,A_a,w_p,w_a,w_max)
+    data.clear()
+
+    data = {
+        "A_a": 30,
+        "A_p": 3,
+        "w_a": 120e3,
+        "w_p": 80e3,
+    }
+    temp_legen_2 = template(Type.LP, Approximation.Legendre, data)
+    plot(temp_legen_2)
+
+
 
