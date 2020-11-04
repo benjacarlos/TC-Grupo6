@@ -12,7 +12,6 @@ from numpy.polynomial.polynomial import polyval
 
 def legendre (A_p,A_a,w_p,w_a,w_max):
 
-    w_aN=w_a/w_p
     epsilon=np.sqrt(10.0**(A_p/10)-1)
     b=np.log10((10.0**(A_a/10)-1)/epsilon**2)
     plt.figure()
@@ -65,7 +64,7 @@ def legendre (A_p,A_a,w_p,w_a,w_max):
 
 
 
-        a=polyval(w_aN**2,serie)
+        a=polyval(w_a**2,serie)
         #print(a)
         #print(b)
         #print(serie)
