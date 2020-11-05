@@ -8,16 +8,17 @@ import matplotlib.patches as mpatch
 from matplotlib.patches import FancyBboxPatch
 
 
-def butterworth(A_p,A_a,w_p,w_a,n_hardcodeado,cte_des):
+def cheby1(A_p,A_a,w_p,w_a,n_hardcodeado,cte_des):
 
-    n,fc=signal.buttord(w_p,w_a,A_p,A_a,analog=True)
+    n,fc=signal.cheb1ord(w_p,w_a,A_p,A_a,analog=True)
 
     if n_hardcodeado != 0:
         n=n_hardcodeado
 
-    z,p,gain=signal.butter(n,fc,'lowpass',analog=True,output='zpk')
+    z,p,gain=signal.cheby1(n,A_p,fc,'lowpass',analog=True,output='zpk')
     num, den = signal.zpk2tf(z, p, gain)
 
+    print(n)
     #Proceso de desnormalizacion
     if cte_des != 0:  #Busco la frecuencia a la cual estoy en Aa con una estimación
         k = 1 / w_a
@@ -29,12 +30,12 @@ def butterworth(A_p,A_a,w_p,w_a,n_hardcodeado,cte_des):
         w_p_prima=w_p+(w_a-w_a_prima)
         print(w_p_prima)
 
-        n, fc = signal.buttord(w_p_prima, w_a, A_p, A_a, analog=True)
+        n, fc = signal.cheb1ord(w_p_prima, w_a, A_p, A_a, analog=True)
 
         if n_hardcodeado != 0:
             n = n_hardcodeado
 
-        z, p, gain = signal.butter(n, fc, 'lowpass', analog=True, output='zpk')
+        z, p, gain = signal.cheby1(n,A_p, fc, 'lowpass', analog=True, output='zpk')
 
     return z,p,gain,n
     # w, h = signal.freqs(b, a, worN=np.linspace(0, w_max, 1000))

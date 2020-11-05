@@ -2,6 +2,8 @@ from enum import Enum
 import legendre as legendre
 import butterworth as butterworth
 import cauer as cauer
+import cheby1 as cheby1
+import cheby2 as cheby2
 import gauss as gauss
 from scipy import signal
 import numpy as np
@@ -203,6 +205,68 @@ class template():
             if self.type==Type.BR:
                 self.actual_num, self.actual_den = signal.lp2bs(self.normalized_num, self.normalized_den, self.wo,self.bw)
                 self.actual_z, self.actual_p,self.actual_k = signal.lp2bs_zpk(self.normalized_z, self.normalized_p, self.normalized_k,self.wo,self.bw)
+
+        if self.approximation == Approximation.Cheby1:
+            self.normalized_z, self.normalized_p, self.normalized_k, self.n = cheby1.cheby1(self.data["A_p"],
+                                                                                            self.data["A_a"], 1,
+                                                                                            self.w_a_n, self.data["n"],
+                                                                                            self.data[
+                                                                                                "d"])  # dummy wmax
+            self.normalized_num, self.normalized_den = signal.zpk2tf(self.normalized_z, self.normalized_p,
+                                                                     self.normalized_k)
+
+            if self.type == Type.LP:
+                self.actual_num, self.actual_den = signal.lp2lp(self.normalized_num, self.normalized_den,
+                                                                self.data["w_p"])
+                self.actual_z, self.actual_p, self.actual_k = signal.lp2lp_zpk(self.normalized_z, self.normalized_p,
+                                                                               self.normalized_k, self.data["w_p"])
+
+            if self.type == Type.HP:
+                self.actual_num, self.actual_den = signal.lp2hp(self.normalized_num, self.normalized_den,
+                                                                self.data["w_p"])
+                self.actual_z, self.actual_p, self.actual_k = signal.lp2hp_zpk(self.normalized_z, self.normalized_p,
+                                                                               self.normalized_k, self.data["w_p"])
+
+            if self.type == Type.BP:
+                self.actual_num, self.actual_den = signal.lp2bp(self.normalized_num, self.normalized_den, self.wo,
+                                                                self.bw)
+                self.actual_z, self.actual_p, self.actual_k = signal.lp2bp_zpk(self.normalized_z, self.normalized_p,
+                                                                               self.normalized_k, self.wo, self.bw)
+
+            if self.type == Type.BR:
+                self.actual_num, self.actual_den = signal.lp2bs(self.normalized_num, self.normalized_den, self.wo,
+                                                                self.bw)
+                self.actual_z, self.actual_p, self.actual_k = signal.lp2bs_zpk(self.normalized_z, self.normalized_p,
+                                                                               self.normalized_k, self.wo, self.bw)
+
+        if self.approximation == Approximation.Cheby2:
+            self.normalized_z, self.normalized_p, self.normalized_k, self.n = cheby2.cheby2(self.data["A_p"],self.data["A_a"], 1,self.w_a_n, self.data["n"], self.data["d"])  # dummy wmax
+            self.normalized_num, self.normalized_den = signal.zpk2tf(self.normalized_z, self.normalized_p,
+                                                                     self.normalized_k)
+
+            if self.type == Type.LP:
+                self.actual_num, self.actual_den = signal.lp2lp(self.normalized_num, self.normalized_den,
+                                                                self.data["w_p"])
+                self.actual_z, self.actual_p, self.actual_k = signal.lp2lp_zpk(self.normalized_z, self.normalized_p,
+                                                                               self.normalized_k, self.data["w_p"])
+
+            if self.type == Type.HP:
+                self.actual_num, self.actual_den = signal.lp2hp(self.normalized_num, self.normalized_den,
+                                                                self.data["w_p"])
+                self.actual_z, self.actual_p, self.actual_k = signal.lp2hp_zpk(self.normalized_z, self.normalized_p,
+                                                                               self.normalized_k, self.data["w_p"])
+
+            if self.type == Type.BP:
+                self.actual_num, self.actual_den = signal.lp2bp(self.normalized_num, self.normalized_den, self.wo,
+                                                                self.bw)
+                self.actual_z, self.actual_p, self.actual_k = signal.lp2bp_zpk(self.normalized_z, self.normalized_p,
+                                                                               self.normalized_k, self.wo, self.bw)
+
+            if self.type == Type.BR:
+                self.actual_num, self.actual_den = signal.lp2bs(self.normalized_num, self.normalized_den, self.wo,
+                                                                self.bw)
+                self.actual_z, self.actual_p, self.actual_k = signal.lp2bs_zpk(self.normalized_z, self.normalized_p,
+                                                                               self.normalized_k, self.wo, self.bw)
 
         # if self.approximation==Approximation.Gauss:
         #     legendre.legendre(self.A_p,self.A_a,self.w_p,self.w_a,1e6) #dummy wmax
