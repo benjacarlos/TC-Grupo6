@@ -1,9 +1,11 @@
 from enum import Enum
 import legendre as legendre
+import butterworth as butterworth
 import cauer as cauer
 import gauss as gauss
 from scipy import signal
 import numpy as np
+
 
 #implementar un diccionario
 ##vamos a tener que usar un container para mandar todos los datos
@@ -98,17 +100,15 @@ class template():
 
         if self.type == Type.BR:
             #calculo w0 y bw
-            self.bw = self.data["w_a"] - self.data["w_a_m"]
+
             self.wo = np.sqrt(self.data["w_a"] * self.data["w_a_m"])
 
-            if np.abs(self.wo - self.data["w_p"])!= np.abs(self.wo - self.data["w_p_m"]):
+            if (self.data["w_p"]*self.data["w_p_m"]) >= self.wo**2:
+                self.data["w_p"] = (self.wo ** 2) / self.data["w_p_m"]
+            else:
+                self.data["w_p_m"] = (self.wo ** 2) / self.data["w_p"]
 
-                if np.abs(self.wo - self.data["w_p"]) > np.abs(self.wo - self.data["w_p_m"]):
-                    self.data["w_p"] = (self.wo**2)/self.data["w_p_m"]
-                else:
-                    self.data["w_p_m"] = (self.wo**2)/self.data["w_p"]
-
-
+            self.bw = self.data["w_p"] - self.data["w_p_m"]
             print(self.bw)
             print(self.wo)
             print(self.data["w_a_m"])
@@ -116,18 +116,18 @@ class template():
             print(self.data["w_p_m"])
             print(self.data["w_p"])
 
-            self.w_a_n=(self.data["w_p"]-self.data["w_p_m"])/self.data["w_a"]
+            self.w_a_n=(self.data["w_p"]-self.data["w_p_m"])/(self.data["w_a"]-self.data["w_a_m"])
 
         if self.type == Type.BP:
             #calculo w0 y bw
             self.bw = self.data["w_p"] - self.data["w_p_m"]
             self.wo = np.sqrt(self.data["w_p"] * self.data["w_p_m"])
-            if np.abs(self.wo - self.data["w_a"]) != np.abs(self.wo - self.data["w_a_m"]):
 
-                if np.abs(self.wo - self.data["w_a"]) > np.abs(self.wo - self.data["w_a_m"] ):
-                    self.data["w_a"] = (self.wo**2)/self.data["w_a_m"]
-                else:
-                    self.data["w_a_m"] = (self.wo**2)/self.data["w_a"]
+            if (self.data["w_a"]*self.data["w_a_m"]) >= self.wo**2:
+                self.data["w_a"] = (self.wo ** 2) / self.data["w_a_m"]
+            else:
+                self.data["w_a_m"] = (self.wo ** 2) / self.data["w_a"]
+
 
             print(self.bw)
             print(self.wo)
@@ -136,7 +136,7 @@ class template():
             print(self.data["w_p_m"])
             print(self.data["w_p"])
 
-            self.w_a_n = (self.data["w_a"] - self.data["w_a_m"]) / self.data["w_p"]
+            self.w_a_n = (self.data["w_a"] - self.data["w_a_m"]) / (self.data["w_p"]-self.data["w_p_m"])
 
         self.k=1/self.w_a_n
 
@@ -164,12 +164,28 @@ class template():
                 self.actual_num, self.actual_den = signal.lp2bs(self.normalized_num, self.normalized_den, self.wo,self.bw)
                 self.actual_z, self.actual_p,self.actual_k = signal.lp2bs_zpk(self.normalized_z, self.normalized_p, self.normalized_k,self.wo,self.bw)
 
-            # if self.type==Type.PT:
-            #     self.actual_num, self.actual_den = signal.lp2lp(self.normalized_num, self.normalized_den, self.w_p)
-            #     self.actual_z, self.actual_p,self.actual_k = signal.lp2lp_zpk(self.normalized_z, self.normalized_p, self.normalized_k, self.w_p)
-
         if self.approximation==Approximation.Cauer:
             self.normalized_z, self.normalized_p, self.normalized_k, self.n=cauer.cauer(self.data["A_p"],self.data["A_a"],1,self.w_a_n,self.data["n"],self.data["d"]) #dummy wmax
+            self.normalized_num, self.normalized_den = signal.zpk2tf(self.normalized_z, self.normalized_p, self.normalized_k)
+
+            if self.type==Type.LP:
+                self.actual_num, self.actual_den = signal.lp2lp(self.normalized_num, self.normalized_den, self.data["w_p"])
+                self.actual_z, self.actual_p,self.actual_k = signal.lp2lp_zpk(self.normalized_z, self.normalized_p, self.normalized_k, self.data["w_p"])
+
+            if self.type==Type.HP:
+                self.actual_num, self.actual_den = signal.lp2hp(self.normalized_num, self.normalized_den, self.data["w_p"])
+                self.actual_z, self.actual_p,self.actual_k = signal.lp2hp_zpk(self.normalized_z, self.normalized_p, self.normalized_k, self.data["w_p"])
+
+            if self.type==Type.BP:
+                self.actual_num, self.actual_den = signal.lp2bp(self.normalized_num, self.normalized_den, self.wo,self.bw)
+                self.actual_z, self.actual_p,self.actual_k = signal.lp2bp_zpk(self.normalized_z, self.normalized_p, self.normalized_k,self.wo,self.bw)
+
+            if self.type==Type.BR:
+                self.actual_num, self.actual_den = signal.lp2bs(self.normalized_num, self.normalized_den, self.wo,self.bw)
+                self.actual_z, self.actual_p,self.actual_k = signal.lp2bs_zpk(self.normalized_z, self.normalized_p, self.normalized_k,self.wo,self.bw)
+
+        if self.approximation==Approximation.Butterworth:
+            self.normalized_z, self.normalized_p, self.normalized_k, self.n=butterworth.butterworth(self.data["A_p"],self.data["A_a"],1,self.w_a_n,self.data["n"],self.data["d"]) #dummy wmax
             self.normalized_num, self.normalized_den = signal.zpk2tf(self.normalized_z, self.normalized_p, self.normalized_k)
 
             if self.type==Type.LP:
@@ -219,8 +235,8 @@ class template():
         self.actual_num, self.actual_dem, =signal.lp2bs(self.normalized_num,self.normalized_den,self.wo,self.bw)
         self.actual_z,self.actual_p,self.actual_k=signal.lp2bs_zpk(self.normalized_z,self.normalized_p,self.normalized_k,self.w_p,self.wo,self.bw)
 
-    def make_me_a_PT(self):
-        print('en proceso, bancala')
+
+
 
 
 
