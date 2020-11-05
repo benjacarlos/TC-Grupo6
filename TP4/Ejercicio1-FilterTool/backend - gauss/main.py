@@ -15,78 +15,158 @@ from numpy import pi, log10, abs, logspace, diff, unwrap, angle
 # en polos y zeros, H(S) y H(jw)             #
 ##############################################
 
-def gaussFilter(A_p, A_a, w_p, w_a, w_max, n,wrg,tol,tau):
+def gaussFilter(A_p, A_a, w_p, w_a, w_max,wrg,tol,tau,n=0):
 
-    # El range va de 1 a n-1#
+    tol = tol / 100
+    idealN=False
 
-    nMax = n + 1
-    myGaussSum = 0
-    imNumber = sympy.I
-    s = sympy.symbols("s")
-    w = sympy.symbols("w")
-    wrg_norm = wrg*tau
-    tau_norm = 1
+    if n != 0:
+        nMax = n + 1
+        myGaussSum = 0
+        s = sympy. \
+            symbols("s")
+        w = sympy.symbols("w")
 
-    # Itero hasta llegar al mejor N#
+        for k in range(1, nMax):
+            # Defino la Sumatoria del Denominador de una Gaussiana#
 
-    for k in range(1, nMax):
-        # Defino la Sumatoria del Denominador de una Gaussiana#
+            myGaussSum += (((-1) ** k) / (math.factorial(k)) * (s) ** (2 * k))
 
-        myGaussSum += (((-1) ** k) / (math.factorial(k)) * (s) ** (2 * k))
+        rawGaussFilter = 1 / (1 + myGaussSum)
 
-    rawGaussFilter = 1 / (1 + myGaussSum)
+        # Separo en denominador y numerador # #ESTO NO ES NECESARIO. Quedo legacy
+        rawGaussFilterNum, rawGaussFilterDen = sympy.fraction(rawGaussFilter)
 
-    #FUNCION GAUSSIANA CRUDA#
-    #print("ACA TENGO LA FUNCION GAUSSIANA CRUDA:")
-    #print (rawGaussFilter)
+        # Transformo el polinomio obtenido en [coefMax,...,coefMin]
 
-    # Separo en denominador y numerador #
-    rawGaussFilterNum,rawGaussFilterDen = sympy.fraction(rawGaussFilter)
+        rawGaussFilterDenInCoeff = sympy.Poly(rawGaussFilterDen, s).all_coeffs()
 
+        # Esto es el poliniomio del denominador contemplando todos los polos
 
-    # Transformo el polinomio obtenido en [coefMax,...,coefMin]
+        poles = np.poly1d(rawGaussFilterDenInCoeff)
 
-    rawGaussFilterDenInCoeff = sympy.Poly(rawGaussFilterDen,s).all_coeffs()
+        gaussFilterPoles = []
 
-    # COEFICIENTE DE MI DENOMINADOR#
-    #print ("ACA TENGO EL COEFICIENTE DE MI DENOMINADOR:")
-    #print (rawGaussFilterDenInCoeff)
+        # Filtro las raices con parte real negativa
 
-    #print("ACA TENGO TODOS LOS POLOS:")
-    poles = np.poly1d(rawGaussFilterDenInCoeff)
+        for pole in roots(poles):
+            if pole.real < 0:
+                gaussFilterPoles.append(pole)
 
-    #print (roots(poles))
+        # Esta funcion me devuelve el polinomio en un array en el orden a+bx**1+c**2+...+d**n
+        # Tengo que dar vuelta la lista para que sea compatible con los modulos de scypy
 
-    gaussFilterPoles = []
+        # Obtengo mi polinomio del denominador en base a los polos que se encuentran en el semi-plano izquierdo
+        myDenominator = pol.polyfromroots(gaussFilterPoles)
 
-    # Filtro las raices con parte real negativa
+        # Retorno el numerador que siempre es 1
+        # Retorno la parte real de los coeficientes del denominador ya que por aproximacion de la libreria
+        # hay parte imaginaria para ordenes mayores a 5 que son muy muy pequeños, los desprecio :(
 
-    for pole in roots(poles):
-        if pole.real < 0:
-            gaussFilterPoles.append(pole)
+        num = [1]
 
-    # Esta funcion me devuelve el polinomio en un array en el orden a+bx**1+c**2+...+d**n
+        # Doy vuelta para que este correcto el array con coeficientes del denominador
+        den = myDenominator.real[::-1]
 
-    myDenominator = pol.polyfromroots(gaussFilterPoles)
+        # Reemplazo s por tau.s para obtener el tau que quiero en el group_delay
+        for i in range(len(den)):
+            den[i] = (den[i] * (tau) ** (len(den) - i - 1))
 
-    #######################################################
-    # Evaluo retardo de grupo
-    #
-
-    # Retorno el numerador que siempre es 1
-    # Retorno la parte real de los coeficientes del denominador ya que por aproximacion de la libreria
-    # hay parte imaginaria para ordenes mayores a 5 que son muy muy pequeños :(
-
-    num = [1]
-    den = myDenominator.real[::-1]
-    for i in range (0,len(den)):
-        coeff = coeff * (tau)**(len(den))
+        # Obtengo retardo de grupo
+        w, h = signal.freqs(num, den)
 
 
-    w,h = signal.freqs([1],myDenominator.real[::-1])
-    group_delay = -np.diff(np.unwrap(np.angle(h))) / np.diff(w)
+        # NUEVO
 
-    return [1],myDenominator.real[::-1],[],gaussFilterPoles,group_delay,w[1:]
+        #########################
+        # Normalizo             #
+        group_delay = -np.diff(np.unwrap(np.angle(h))) / np.diff(w)
+        group_delay = group_delay / group_delay[0] * tau
+
+        nMax = nMax - 1
+
+    else:
+        nMax = n + 2
+
+        while idealN == False:
+
+            myGaussSum = 0
+            imNumber = sympy.I
+            nMax = (nMax + 1)
+            s = sympy. \
+                symbols("s")
+            w = sympy.symbols("w")
+
+            for k in range(1, nMax):
+                # Defino la Sumatoria del Denominador de una Gaussiana#
+
+                myGaussSum += (((-1) ** k) / (math.factorial(k)) * (s) ** (2 * k))
+
+            rawGaussFilter = 1 / (1 + myGaussSum)
+
+            # Separo en denominador y numerador # #ESTO NO ES NECESARIO. Quedo legacy
+            rawGaussFilterNum, rawGaussFilterDen = sympy.fraction(rawGaussFilter)
+
+            # Transformo el polinomio obtenido en [coefMax,...,coefMin]
+
+            rawGaussFilterDenInCoeff = sympy.Poly(rawGaussFilterDen, s).all_coeffs()
+
+            # Esto es el poliniomio del denominador contemplando todos los polos
+
+            poles = np.poly1d(rawGaussFilterDenInCoeff)
+
+            gaussFilterPoles = []
+
+            # Filtro las raices con parte real negativa
+
+            for pole in roots(poles):
+                if pole.real < 0:
+                    gaussFilterPoles.append(pole)
+
+            # Esta funcion me devuelve el polinomio en un array en el orden a+bx**1+c**2+...+d**n
+            # Tengo que dar vuelta la lista para que sea compatible con los modulos de scypy
+
+            # Obtengo mi polinomio del denominador en base a los polos que se encuentran en el semi-plano izquierdo
+            myDenominator = pol.polyfromroots(gaussFilterPoles)
+
+            # Retorno el numerador que siempre es 1
+            # Retorno la parte real de los coeficientes del denominador ya que por aproximacion de la libreria
+            # hay parte imaginaria para ordenes mayores a 5 que son muy muy pequeños, los desprecio :(
+
+            num = [1]
+
+            # Doy vuelta para que este correcto el array con coeficientes del denominador
+            den = myDenominator.real[::-1]
+
+            # Reemplazo s por tau.s para obtener el tau que quiero en el group_delay
+            for i in range(len(den)):
+                den[i] = (den[i] * (tau) ** (len(den) - i - 1))
+
+            # Obtengo retardo de grupo
+            w, h = signal.freqs(num, den,(logspace(log10(wrg/1000), log10(wrg*100), 10000)))
+
+            # NUEVO
+
+            #########################
+            # Normalizo             #
+            group_delay = -np.diff(np.unwrap(np.angle(h))) / np.diff(w)
+
+            temp_gd = group_delay / group_delay[0]
+
+            group_delay = group_delay / group_delay[0] * tau
+
+            myIndex = [m for m, i in enumerate(w) if i > wrg][0]
+
+
+            if temp_gd[myIndex] > (1 - tol):
+                idealN = True
+                nMax = nMax - 1
+
+
+
+
+
+    return [1],den,[],gaussFilterPoles,group_delay,w[1:],nMax
 
     #########################################
 
@@ -105,31 +185,31 @@ if __name__ == '__main__':
     w_p=100e3
     w_a=150e3
     w_max=1e6
-    wrg = 600
-    tol=20
-    tau = 10e-3
+    wrg = 400
+    tol = 1
+    tau = 1e-3
 
-
-    #n=1
-    num,den,myZeros,myPoles,gd,wd = gaussFilter(A_p,A_a,w_p,w_a,w_max,2,wrg,tol,tau)
-    num2, den2, myZeros2, myPoles2, gd2, wd2 = gaussFilter(A_p, A_a, w_p, w_a, w_max, 4, wrg, tol, tau)
-    num3, den3, myZeros3, myPoles3, gd3, wd3 = gaussFilter(A_p, A_a, w_p, w_a, w_max, 15, wrg, tol, tau)
-    print (myPoles)
+    num,den,myZeros,myPoles,gd,wd,n = gaussFilter(A_p,A_a,w_p,w_a,w_max,wrg,tol,tau)
+    print (n)
+    #num2, den2, myZeros2, myPoles2, gd2, wd2 = gaussFilter(A_p, A_a, w_p, w_a, w_max, wrg, tol, tau, 6)
+    #num3, den3, myZeros3, myPoles3, gd3, wd3 = gaussFilter(A_p, A_a, w_p, w_a, w_max, wrg, tol, tau, 9)
+    #print (myPoles)
 
     system = signal.TransferFunction (num,den)
 
     w,mag,phase = signal.bode(system)
 
 
-    #plt.figure()
+    plt.figure()
 
-    #plt.semilogx(w, mag)
+    plt.semilogx(w, phase)
 
-    #plt.show()
+    plt.show()
 
     plt.figure()
-    plt.semilogx (wd,gd)
-    plt.semilogx(wd2, gd2)
-    plt.semilogx(wd3, gd3)
+    plt.semilogx (wd,gd,label="n=2")
+    #plt.semilogx(2*pi*wd2, gd2,label="n=3")
+    #plt.semilogx(2*pi*wd3, gd3,label="n=4")
+    plt.legend()
 
     plt.show()
