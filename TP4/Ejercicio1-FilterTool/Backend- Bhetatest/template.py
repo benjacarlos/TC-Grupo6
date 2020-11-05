@@ -101,7 +101,7 @@ class template():
             self.bw = self.data["w_a"] - self.data["w_a_m"]
             self.wo = np.sqrt(self.data["w_a"] * self.data["w_a_m"])
 
-            if np.abs(self.wo - self.data["w_p"])!= np.abs(self.wo - self.data["w_p_m"]):
+            if np.abs(self.wo - self.data["w_p"]) != np.abs(self.wo - self.data["w_p_m"]):
 
                 if np.abs(self.wo - self.data["w_p"]) > np.abs(self.wo - self.data["w_p_m"]):
                     self.data["w_p"] = (self.wo**2)/self.data["w_p_m"]
@@ -116,12 +116,14 @@ class template():
             print(self.data["w_p_m"])
             print(self.data["w_p"])
 
-            self.w_a_n=(self.data["w_p"]-self.data["w_p_m"])/self.data["w_a"]
+            self.w_a_n=(self.data["w_p"]-self.data["w_p_m"])/(self.data["w_a"]-self.data["w_a_m"])
 
         if self.type == Type.BP:
             #calculo w0 y bw
             self.bw = self.data["w_p"] - self.data["w_p_m"]
             self.wo = np.sqrt(self.data["w_p"] * self.data["w_p_m"])
+            # self.w_a_n = (self.data["w_a"] - self.data["w_a_m"]) / (self.data["w_p"]-self.data["w_p_m"])
+
             if np.abs(self.wo - self.data["w_a"]) != np.abs(self.wo - self.data["w_a_m"]):
 
                 if np.abs(self.wo - self.data["w_a"]) > np.abs(self.wo - self.data["w_a_m"] ):
@@ -136,7 +138,7 @@ class template():
             print(self.data["w_p_m"])
             print(self.data["w_p"])
 
-            self.w_a_n = (self.data["w_a"] - self.data["w_a_m"]) / self.data["w_p"]
+            self.w_a_n = (self.data["w_a"] - self.data["w_a_m"]) / (self.data["w_p"]-self.data["w_p_m"])
 
         self.k=1/self.w_a_n
 

@@ -16,7 +16,6 @@ import numpy.polynomial as polynomial
 def legendre (A_p,A_a,w_p,w_a,n_hardcodeado,cte_des):
 
     epsilon=np.sqrt(10.0**(A_p/10)-1)
-    k=1/w_a
     print(epsilon)
     b=np.log10((10.0**(A_a/10)-1)/epsilon**2)
 
@@ -54,11 +53,11 @@ def legendre (A_p,A_a,w_p,w_a,n_hardcodeado,cte_des):
 
         print(p)
 
-        k = float(np.prod(np.abs(p)))
+        gain = float(np.prod(np.abs(p)))
 
         z = []
 
-        num,den = signal.zpk2tf(z,p,k)
+        num,den = signal.zpk2tf(z,p,gain)
         w, h = signal.freqs(num, den, worN=np.linspace(w_a, w_a, 1))
         current_att=20 * np.log10(abs(h))
         print(n)
@@ -69,24 +68,24 @@ def legendre (A_p,A_a,w_p,w_a,n_hardcodeado,cte_des):
         else:
             n += 1
 
-    w, h = signal.freqs(num, den, worN=np.linspace(1, w_a, 1000))
-    array = np.abs(np.asarray(20 * np.log10(abs(h))))
-    idx = (np.abs(array - A_a)).argmin()
-    w_a_prima=w[idx]
-    A_a_detec=array[idx]
-
-    den = den[::-1]
-    w_a_prima=inversefunc(polynomial.Polynomial(den/k), 10**(-A_a/20))
-    print(w_a_prima)
-    if cte_des!=0:
-        #w_a_prima=inversefunc(polynomial.Polynomial(den),A_a)
+    #Proceso de desnormalizacion
+    if cte_des != 0:  #Busco la frecuencia a la cual estoy en Aa con una estimación
+        k = 1 / w_a
+        w, h = signal.freqs(num, den, worN=np.linspace(1, w_a, 1000))
+        array = np.abs(np.asarray(20 * np.log10(abs(h))))
+        idx = (np.abs(array - A_a)).argmin()
+        w_a_prima=w[idx]
+        A_a_detec=array[idx]
         print(w_a_prima)
-        cte_desnormalizacion = 1 + ((1 / (k*w_a_prima)) - 1) * cte_des
-        p = [element * cte_desnormalizacion for element in p]
-        k = float(np.prod(np.abs(p)))
-        num,den = signal.zpk2tf(z,p,k)
 
-    return z, p, k, n
+        #Calculo la constante de desnormalizacion
+        cte_desnormalizacion = 1 + ((1 / (k*w_a_prima)) - 1) * cte_des
+        #Multiplico los polos y la ganacia por la cte
+        p = [element * cte_desnormalizacion for element in p]
+        gain = float(np.prod(np.abs(p)))
+
+
+    return z, p, gain, n
 
 def get_equation(n):
 
