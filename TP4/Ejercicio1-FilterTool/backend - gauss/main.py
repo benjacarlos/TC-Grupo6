@@ -1,4 +1,5 @@
 import sympy
+from sympy import atan,im,re
 import math
 from scipy import signal
 import numpy as np
@@ -6,65 +7,96 @@ from numpy.polynomial import polynomial as pol
 from numpy import roots
 import matplotlib.pyplot as plt
 from numpy import pi, diff, unwrap, angle
+from numpy import pi, log10, abs, logspace, diff, unwrap, angle
 
+
+##############################################
+# Esta funcion devuelve el filtro Gaussiano  #
+# en polos y zeros, H(S) y H(jw)             #
+##############################################
 
 def gaussFilter(A_p, A_a, w_p, w_a, w_max, n,wrg,tol,tau):
 
     # El range va de 1 a n-1#
+
     nMax = n + 1
     myGaussSum = 0
     imNumber = sympy.I
     s = sympy.symbols("s")
+    w = sympy.symbols("w")
     wrg_norm = wrg*tau
     tau_norm = 1
 
     # Itero hasta llegar al mejor N#
+
     for k in range(1, nMax):
         # Defino la Sumatoria del Denominador de una Gaussiana#
 
-
-        ###ACA ES 1 o -1?
-        myGaussSum += (((1) ** k) / (math.factorial(k)) * (s / imNumber) ** (2 * k))
+        myGaussSum += (((-1) ** k) / (math.factorial(k)) * (s) ** (2 * k))
 
     rawGaussFilter = 1 / (1 + myGaussSum)
 
-    # De la expresion obtengo
+    #FUNCION GAUSSIANA CRUDA#
+    #print("ACA TENGO LA FUNCION GAUSSIANA CRUDA:")
+    #print (rawGaussFilter)
 
+    # Separo en denominador y numerador #
     rawGaussFilterNum,rawGaussFilterDen = sympy.fraction(rawGaussFilter)
 
-    rawGaussFilterNumInCoeff = sympy.Poly(rawGaussFilterNum,s).all_coeffs()
+
+    # Transformo el polinomio obtenido en [coefMax,...,coefMin]
+
     rawGaussFilterDenInCoeff = sympy.Poly(rawGaussFilterDen,s).all_coeffs()
 
+    # COEFICIENTE DE MI DENOMINADOR#
+    #print ("ACA TENGO EL COEFICIENTE DE MI DENOMINADOR:")
+    #print (rawGaussFilterDenInCoeff)
+
+    #print("ACA TENGO TODOS LOS POLOS:")
     poles = np.poly1d(rawGaussFilterDenInCoeff)
+
+    #print (roots(poles))
 
     gaussFilterPoles = []
 
+    # Filtro las raices con parte real negativa
+
     for pole in roots(poles):
         if pole.real < 0:
-            gaussFilterPoles.append(pole.real)
+            gaussFilterPoles.append(pole)
 
+    # Esta funcion me devuelve el polinomio en un array en el orden a+bx**1+c**2+...+d**n
 
     myDenominator = pol.polyfromroots(gaussFilterPoles)
-
-    print (myDenominator)
 
     #######################################################
     # Evaluo retardo de grupo
     #
 
-    w,h = signal.freqs([1], myDenominator)
+    # Retorno el numerador que siempre es 1
+    # Retorno la parte real de los coeficientes del denominador ya que por aproximacion de la libreria
+    # hay parte imaginaria para ordenes mayores a 5 que son muy muy pequeños :(
 
-    w, gd = signal.group_delay((w, h))
+    num = [1]
+    den = myDenominator.real[::-1]
+    for i in range (0,len(den)):
+        coeff = coeff * (tau)**(len(den))
 
 
-    plt.figure()
-    plt.plot(w,gd)
-    plt.show()
+    w,h = signal.freqs([1],myDenominator.real[::-1])
+    group_delay = -np.diff(np.unwrap(np.angle(h))) / np.diff(w)
 
-    #if (gd[wrg_norm])
+    return [1],myDenominator.real[::-1],[],gaussFilterPoles,group_delay,w[1:]
 
-    return [1],myDenominator
     #########################################
+
+def createPolynomialInSymbolFromRoots(roots):
+
+    w = sympy.symbols('w')
+    whole =1
+    for root in roots:
+        whole *=(sympy.I*w-root)
+    return(whole.expand())
 
 if __name__ == '__main__':
 
@@ -79,22 +111,25 @@ if __name__ == '__main__':
 
 
     #n=1
-    num,den =gaussFilter(A_p,A_a,w_p,w_a,w_max,2,wrg,tol,tau)
-    num2, den2 = gaussFilter(A_p, A_a, w_p, w_a, w_max, 2,wrg,tol,tau)
+    num,den,myZeros,myPoles,gd,wd = gaussFilter(A_p,A_a,w_p,w_a,w_max,2,wrg,tol,tau)
+    num2, den2, myZeros2, myPoles2, gd2, wd2 = gaussFilter(A_p, A_a, w_p, w_a, w_max, 4, wrg, tol, tau)
+    num3, den3, myZeros3, myPoles3, gd3, wd3 = gaussFilter(A_p, A_a, w_p, w_a, w_max, 15, wrg, tol, tau)
+    print (myPoles)
 
     system = signal.TransferFunction (num,den)
-    system2 = signal.TransferFunction(num2, den2)
+
     w,mag,phase = signal.bode(system)
-    w2,mag2,phase2 = signal.bode(system2)
-    plt.figure()
-    plt.semilogx(w, mag)
-    plt.semilogx(w2,mag2)
-    lti = signal.lti(num2,den2)
-    plt.figure()
-    x,y = signal.impulse (lti)
-    plt.plot(x, y)
+
+
+    #plt.figure()
+
+    #plt.semilogx(w, mag)
+
+    #plt.show()
 
     plt.figure()
-    wn,t = signal.group_delay((num2,den2))
-    plt.plot (wn,t)
+    plt.semilogx (wd,gd)
+    plt.semilogx(wd2, gd2)
+    plt.semilogx(wd3, gd3)
+
     plt.show()
