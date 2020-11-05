@@ -18,3 +18,5 @@ class gaussFilter ():
         self.b,self.a=signal.ellip(self.n,self.A_p,self.A_a,self.fc,'lowpass',analog=True,output='ba')
         self.w,self.h=signal.freqs(self.b, self.a, worN=np.linspace(0, self.w_max, 1000))
         self.magnitudeh = 20 * np.log10(abs(self.h))
+
+        
