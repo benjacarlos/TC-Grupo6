@@ -8,7 +8,7 @@ import matplotlib.patches as mpatch
 from matplotlib.patches import FancyBboxPatch
 
 
-def cauer(A_p,A_a,w_p,w_a,n_hardcodeado,cte_des):
+def butterworth(A_p,A_a,w_p,w_a,n_hardcodeado,cte_des):
 
     n,fc=signal.ellipord(w_p,w_a,A_p,A_a,analog=True)
 
