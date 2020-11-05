@@ -1,9 +1,10 @@
 from PyQt5.QtWidgets import *
 from src.ui.filterToolWindow import Ui_filterToolWindow
 from scipy import signal
-from filterDesigned import filterDesigned
 from scipy import signal
 import matplotlib.pyplot as plt
+
+from template import *
 
 
 class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
@@ -13,12 +14,28 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
 
         self.filters=[]
 
+        self.appTemplates = []
+
+
     # Mapeo de botones interactivos y sus respectivas funciones #
 
         self.goStageTwoButton.clicked.connect(self.goStageTwo)
         self.returnStageOneButton.clicked.connect(self.goStageOne)
         self.acceptParametersStageOne.clicked.connect(self.stageOneGetFilterInputs)
+        self.filterTypeOption.currentTextChanged.connect(self.showMoreOptions)
         self.plotTypeOptionInput.currentTextChanged.connect(self.plotGraphic)
+
+
+
+    def showMoreOptions (self):
+        if str((self.filterTypeOption.currentText())) != "Group Delay":
+            self.filterParameters.setCurrentWidget(self.freqParameters)
+            if str((self.filterTypeOption.currentText())) =="Low-Pass" or str((self.filterTypeOption.currentText()))=="High-Pass":
+                self.hiddenWidget.setCurrentWidget(self.dontShowHidden)
+            else:
+                self.hiddenWidget.setCurrentWidget(self.showHiddenWidget)
+        elif str((self.filterTypeOption.currentText())) == "Group Delay":
+                self.filterParameters.setCurrentWidget(self.groupDelayParameters)
 
     # Funciones que redirigen a pantallas#
     def goStageTwo (self):
@@ -31,32 +48,132 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
 
     def stageOneGetFilterInputs(self):
 
+
+        self.data = {
+            "A_a": 0,
+            "A_p": 0,
+            "w_p": 0,
+            "w_a_m": 0,
+            "w_a": 0,
+            "w_p_m": 0,
+            "n": 0,  # poner valor != 0 para harcodear
+            "Q_max": 0,  # poner valor != 0 para harcodear
+            "d": 0  # coeficiente de desnormalización,  0<d<1   , por defecto 0
+        }
+
         msgWrongInput = QMessageBox()
         msgWrongInput.setIcon(QMessageBox.Warning)
         msgWrongInput.setWindowTitle('Error')
         if str (self.filterTypeOption.currentText()) == "Low-Pass":
+            self.filterTypeSelected=Type.LP
+            if (self.approxTypeOption.currentText()) == "Legendre":
+                self.filterTypeInput = Approximation.Legendre
+            elif (self.approxTypeOption.currentText()) == "Cauer":
+                self.filterTypeInput = Approximation.Cauer
+            elif (self.approxTypeOption.currentText()) == "Gauss":
+                self.filterTypeInput = Approximation.Gauss
+            elif (self.approxTypeOption.currentText()) == "Butterworth":
+                self.filterTypeInput = Approximation.Butterworth
+            elif (self.approxTypeOption.currentText()) == "Cheby1":
+                self.filterTypeInput = Approximation.Cheby1
+            elif (self.approxTypeOption.currentText()) == "Cheby2":
+                self.filterTypeInput = Approximation.Cheby2
+            elif (self.approxTypeOption.currentText()) == "Bessel":
+                self.filterTypeInput = Approximation.Bessel
             ErrorMessage = ""
             try:
-                self.AaInputFilter = float (self.aaInput.text())
+                self.data["A_a"] = float (self.aaInput.text())
             except:
                 ErrorMessage = ErrorMessage + "Aa must be a valid number\n"
             try:
-                self.ApInputFilter = float (self.apInput.text())
+                self.data["A_p"] = float (self.apInput.text())
             except:
                 ErrorMessage = ErrorMessage + "Ap must be a valid number \n"
             try:
-                self.FaInputFilter = float (self.faInput.text())
+                self.data["w_a"] = float (self.faInput.text())
             except:
                 ErrorMessage = ErrorMessage + "Fa must be a valid number \n"
             try:
-                self.FpInputFilter = float (self.fpInput_2.text())
+                self.data["w_p"] = float (self.fpInput.text())
             except:
                 ErrorMessage = ErrorMessage + "Fp must be a valid number \n"
 
 
         elif str(self.filterTypeOption.currentText()) == "High-Pass":
-            print ("Estoy en HP")
+            self.filterTypeSelected = Type.HP
+            if (self.approxTypeOption.currentText()) == "Legendre":
+                self.filterTypeInput = Approximation.Legendre
+            elif (self.approxTypeOption.currentText()) == "Cauer":
+                self.filterTypeInput = Approximation.Cauer
+            elif (self.approxTypeOption.currentText()) == "Gauss":
+                self.filterTypeInput = Approximation.Gauss
+            elif (self.approxTypeOption.currentText()) == "Butterworth":
+                self.filterTypeInput = Approximation.Butterworth
+            elif (self.approxTypeOption.currentText()) == "Cheby1":
+                self.filterTypeInput = Approximation.Cheby1
+            elif (self.approxTypeOption.currentText()) == "Cheby2":
+                self.filterTypeInput = Approximation.Cheby2
+            elif (self.approxTypeOption.currentText()) == "Bessel":
+                self.filterTypeInput = Approximation.Bessel
+            ErrorMessage = ""
+            try:
+                self.data["A_a"] = float(self.aaInput.text())
+            except:
+                ErrorMessage = ErrorMessage + "Aa must be a valid number\n"
+            try:
+                self.data["A_p"] = float(self.apInput.text())
+            except:
+                ErrorMessage = ErrorMessage + "Ap must be a valid number \n"
+            try:
+                self.data["w_a"] = float(self.faInput.text())
+            except:
+                ErrorMessage = ErrorMessage + "Fa must be a valid number \n"
+            try:
+                self.data["w_p"] = float(self.fpInput.text())
+            except:
+                ErrorMessage = ErrorMessage + "Fp must be a valid number \n"
         elif str(self.filterTypeOption.currentText()) == "Band-Pass":
+            self.filterTypeSelected = Type.BP
+            if (self.approxTypeOption.currentText()) == "Legendre":
+                self.filterTypeInput = Approximation.Legendre
+            elif (self.approxTypeOption.currentText()) == "Cauer":
+                self.filterTypeInput = Approximation.Cauer
+            elif (self.approxTypeOption.currentText()) == "Gauss":
+                self.filterTypeInput = Approximation.Gauss
+            elif (self.approxTypeOption.currentText()) == "Butterworth":
+                self.filterTypeInput = Approximation.Butterworth
+            elif (self.approxTypeOption.currentText()) == "Cheby1":
+                self.filterTypeInput = Approximation.Cheby1
+            elif (self.approxTypeOption.currentText()) == "Cheby2":
+                self.filterTypeInput = Approximation.Cheby2
+            elif (self.approxTypeOption.currentText()) == "Bessel":
+                self.filterTypeInput = Approximation.Bessel
+            ErrorMessage = ""
+            try:
+                self.data["A_a"] = float(self.aaInput.text())
+            except:
+                ErrorMessage = ErrorMessage + "Aa must be a valid number\n"
+            try:
+                self.data["A_p"] = float(self.apInput.text())
+            except:
+                ErrorMessage = ErrorMessage + "Ap must be a valid number \n"
+            try:
+                self.data["w_a"] = float(self.faInput.text())
+            except:
+                ErrorMessage = ErrorMessage + "Fa must be a valid number \n"
+            try:
+                self.data["w_p"] = float(self.fpInput.text())
+            except:
+                ErrorMessage = ErrorMessage + "Fp must be a valid number \n"
+            try:
+                self.data["w_a_m"] = float(self.famInput.text())
+            except:
+                ErrorMessage = ErrorMessage + "Fp must be a valid number \n"
+            try:
+                self.data["w_p_m"] = float(self.fpmInput.text())
+            except:
+                ErrorMessage = ErrorMessage + "Fp must be a valid number \n"
+
             print ("Estoy en BP")
         elif str(self.filterTypeOption.currentText()) == "Band-Rejection":
             print ("Estoy en BR")
@@ -64,19 +181,19 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
             print ("Estoy en GD")
 
         try:
-            self.filterOrder = int (self.filterOrderInput.text())
-            if self.filterOrder < 0:
+            self.data["n"] = int (self.filterOrderInput.text())
+            if self.data["n"] < 0:
                 raise Exception("Exception")
         except:
             ErrorMessage = ErrorMessage + "The filter order must be a valid number \n"
         try:
-            self.denorm = float (self.denormInput.text())
-            if self.denorm < 0 or self.denorm > 100:
+            self.data["d"] = float (self.denormInput.text())
+            if self.data["d"] < 0 or self.data["d"] > 1:
                 raise Exception("Exception")
         except:
-            ErrorMessage = ErrorMessage + "The Denormalization % must be a valid number (0 to 100) \n"
+            ErrorMessage = ErrorMessage + "The Denormalization must be a valid number (0 to 1) \n"
         try:
-            self.maxQ = float (self.qmaxInput.text())
+            self.data["Q_max"] = float (self.qmaxInput.text())
         except:
             ErrorMessage = ErrorMessage + "The QMax must be a valid number \n"
 
@@ -84,11 +201,29 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
             msgWrongInput.setText(ErrorMessage)
             msgWrongInput.exec()
         else:
+
             print ("Aca voy a la funcion que calcula el filtro")
-            self.filterOption = str(self.filterTypeOption.currentText())
-            self.approxOption = str(self.approxTypeOption.currentText())
-            self.filters.append(self.defineFilter())
-            self.plotGraphic()
+            self.data = {
+                "A_a": 10,
+                "A_p": 3,
+                "w_p": 300e3,
+                "w_a_m": 100e3,
+                "w_a": 200e3,
+                "w_p_m": 20e3,
+                "n": 0,  # poner valor != 0 para harcodear
+                "Q_max": 0,  # poner valor != 0 para harcodear
+                "d": 1  # coeficiente de desnormalización,  0<d<1   , por defecto 0
+            }
+            print(self.data)
+            self.appTemplates.append(template(Type.BR, Approximation.Cheby2, self.data))
+            print (self.appTemplates[len(self.appTemplates)-1].data)
+            print (len(self.appTemplates))
+
+
+            # self.filterOption = str(self.filterTypeOption.currentText())
+            #self.approxOption = str(self.approxTypeOption.currentText())
+            #self.filters.append(self.defineFilter())
+            #self.plotGraphic()
 
 
     # Funciones que grafican#
@@ -247,9 +382,6 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
 
     #Una vez procesado los inputs y aceptados, este metodo crea y apendea ese nuevo filtro a la lista de filtros. Lo crea convenientemente dependiendo el tipo#
 
-    def defineFilter (self):
-        print ("hola")
-        self.filters.append(filterDesigned (self.AaInputFilter,self.ApInputFilter,self.FaInputFilter, self.FpInputFilter,self.filterOption,self.approxOption,self.filterOrder, self.maxQ, self.denorm))
 
 
 

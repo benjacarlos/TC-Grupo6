@@ -12,7 +12,7 @@ import numpy as np
 #implementar un diccionario
 ##vamos a tener que usar un container para mandar todos los datos
 class template():
-    def __init__(self,type,approximation,data):
+    def __init__(self,type,approximation,data=0):
         #type
         self.type=type
         self.approximation=approximation

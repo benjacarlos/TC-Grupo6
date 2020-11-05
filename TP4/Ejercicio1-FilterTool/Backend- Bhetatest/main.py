@@ -123,10 +123,10 @@ if __name__ == '__main__':
         "d": 1 #coeficiente de desnormalización,  0<d<1   , por defecto 0
     }
     temp_legen_3 = template(Type.BR, Approximation.Cheby2, data)
-    temp_legen_3.type = Type.LPN
-    plot(temp_legen_3)
-    temp_legen_3.type = Type.BR
-    plot(temp_legen_3)
+    #temp_legen_3.type = Type.LPN
+    #plot(temp_legen_3)
+    #temp_legen_3.type = Type.BR
+    #plot(temp_legen_3)
 
 
 
