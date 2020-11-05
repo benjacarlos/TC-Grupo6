@@ -8,89 +8,85 @@ import numpy.polynomial.legendre as legen
 from fractions import Fraction as F
 from numpy.polynomial import Polynomial as P
 from numpy.polynomial.polynomial import polyval
+from pynverse import inversefunc
+import numpy.polynomial as polynomial
 
 
-def legendre (A_p,A_a,w_p,w_a,w_max):
+
+def legendre (A_p,A_a,w_p,w_a,n_hardcodeado,cte_des):
 
     epsilon=np.sqrt(10.0**(A_p/10)-1)
+    k=1/w_a
+    print(epsilon)
     b=np.log10((10.0**(A_a/10)-1)/epsilon**2)
-    plt.figure()
-    #1ok    2ok
 
-    for n in range(1,7,1):
-    #    n = 5
-        serie=get_equation(n)
+    plt.figure()
+
+
+
+    if n_hardcodeado != 0:
+        n=n_hardcodeado
+    else:
+        n = 1
+    #Chequeo n mínimo
+    while True:
+        serie = get_equation(n)
+        iter = 0
         print(n)
         print(serie)
-        iter=0
-        #p = np.roots([-3, 0, -3, 0, -1, 0, 1])
-
-
-
-
-        #s=jw  ->  -s^2=w^2
+        # s=jw  ->  -s^2=w^2
         for x in serie:
-            if iter%2==0:
-                if iter%4!=0:
-                    serie[iter]=-x
+            if iter % 2 == 0:
+                if iter % 4 != 0:
+                    serie[iter] = -x
             iter += 1
-
-        serie[0]=1
+        serie = [element * epsilon for element in serie]
+        serie[0] = 1
 
         serie.reverse()
         print(serie)
 
-        p=np.roots(serie)
-        #print(p)
+        p = np.roots(serie)
+        # print(p)
         p = p[p.real < 0]
+
+        #z = [element * cte_des for element in z]
+
         print(p)
 
         k = float(np.prod(np.abs(p)))
 
-        z=[]
-        #num, den = signal.zpk2tf(z, p, k)
-        #print(den)
+        z = []
 
-        #num_,dem_=signal.lp2lp(num,den,w_p)
+        num,den = signal.zpk2tf(z,p,k)
+        w, h = signal.freqs(num, den, worN=np.linspace(w_a, w_a, 1))
+        current_att=20 * np.log10(abs(h))
+        print(n)
+        print(abs(current_att))
 
-        #print(dem_)
+        if np.abs(current_att) >= A_a or n_hardcodeado != 0:
+            break
+        else:
+            n += 1
 
+    w, h = signal.freqs(num, den, worN=np.linspace(1, w_a, 1000))
+    array = np.abs(np.asarray(20 * np.log10(abs(h))))
+    idx = (np.abs(array - A_a)).argmin()
+    w_a_prima=w[idx]
+    A_a_detec=array[idx]
 
-        # w, h = signal.freqs(num_, dem_, worN=np.linspace(1e4, w_max, 1000))
-        #
-        #
-        # plt.semilogx(w, 20 * np.log10(abs(h)),label='n'+str(n))
+    den = den[::-1]
+    w_a_prima=inversefunc(polynomial.Polynomial(den/k), 10**(-A_a/20))
+    print(w_a_prima)
+    if cte_des!=0:
+        #w_a_prima=inversefunc(polynomial.Polynomial(den),A_a)
+        print(w_a_prima)
+        cte_desnormalizacion = 1 + ((1 / (k*w_a_prima)) - 1) * cte_des
+        p = [element * cte_desnormalizacion for element in p]
+        k = float(np.prod(np.abs(p)))
+        num,den = signal.zpk2tf(z,p,k)
 
-
-
-
-        a=polyval(w_a**2,serie)
-        #print(a)
-        #print(b)
-        #print(serie)
-        #print(p)
-
-    # plt.title('Elliptic filter frequency response (rp=5, rs=40)')
-    # plt.xlabel('Frequency [radians / second]')
-    # plt.ylabel('Amplitude [dB]')
-    # plt.margins(0, 0.1)
-    # plt.grid(which='both', axis='both')
-    # #plt.axvline(fc, color='green')  # cutoff frequency
-    # #plt.axvline(w_a, color='red')  # cutoff frequency
-    # #plt.axvline(w_p, color='red')  # cutoff frequency
-    #
-    # #plt.axhline(-A_a, color='green')  # rs
-    # #plt.axhline(-A_p, color='green')  # rp
-    # #plt.plot([0, fc], [-A_p, -A_p], color='green', alpha=0.8)
-    # plt.tight_layout()
-    # rectangle_p = plt.Rectangle((0, -A_p), w_p, -A_a-100, fc='violet', alpha=0.8)
-    # rectangle_a = plt.Rectangle((w_a, -A_a), w_max-w_p, A_a+30, fc='violet', alpha=0.8)
-    #
-    # plt.gca().add_patch(rectangle_p)
-    # plt.gca().add_patch(rectangle_a)
-    # plt.show()
-
-    return z, p, k
+    return z, p, k, n
 
 def get_equation(n):
 
@@ -126,10 +122,10 @@ def get_equation(n):
             if k > 0:
                 a.append(3 / np.sqrt((k + 1) * (k + 2)))
                 if k>1:
-                    for i in range(int(k)):
+                    for i in range(int(k-1)):
                         # i impar
                         if ((i+2) % 2 == 1):
-                            a.append((2 * (i+2) + 1) * a[1])
+                            a.append(((2 * (i+2) + 1)/3) * a[1])
                         # i par
                         else:
                             a.append(0)
