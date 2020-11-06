@@ -1,6 +1,6 @@
-\subsection{Celda Rauch (Deliyannis-Friend modificada)}
+\section{Celda Rauch (Deliyannis-Friend modificada)}
 
-\subsubsection{Introducción}
+\subsection{Introducción}
 
 Se busca mediante el uso de una celda de Rauch o también conocida como Deliyannis-Friend y la aproximación de Chebyshev para diseñar un filtro pasa banda con las siguientes parámetros:
 
@@ -26,7 +26,7 @@ Para ello debemos primero introducir la celda de Rauch que tiene la forma:
 
 \begin{figure}[H]
     \centering
-    \includegraphics[scale = 0.6]{../Ejercicio2-DiseñoDeCeldas/2. CELDA RAUCH/Informe/circuito3.png}
+    \includegraphics[scale = 0.6]{../Ejercicio2-DisenoDeCeldas/2CELDARAUCH/Informe/circuito3.png}
     \caption{Celda de Rauch}
     \label{ej22cirbasic}
 \end{figure}
@@ -35,7 +35,7 @@ Sin embargo, se observa que uno de los requisitos que debe cumplir el filtro es 
 
 \begin{figure}[H]
     \centering
-    \includegraphics[scale = 0.6]{../Ejercicio2-DiseñoDeCeldas/2. CELDA RAUCH/Informe/circuito.png}
+    \includegraphics[scale = 0.6]{../Ejercicio2-DisenoDeCeldas/2CELDARAUCH/Informe/circuito.png}
     \caption{Celda de Rauch Mejorada}
     \label{ej22cirbasic}
 \end{figure}
@@ -59,7 +59,7 @@ Conociendo que las resistencia de retroalimentación valen $RA = KR$ y $RB = (1-
     G = \frac{R2R3}{2R1R2(K - 1) + KR3(R1 + R2)}
 \end{equation}
 
-\subsubsection{Dise\~no del Filtro con Chebyshev}
+\subsection{Dise\~no del Filtro con Chebyshev}
 
 Para obtener una funci\'on trasferencia que cumpla con una plantilla, es posible utilizar la aproximación\'on de Chebyshev cuyas f\'ormulas caracter\'isticas se muestran en \ref{ej22eqche}.
 \begin{equation}
@@ -118,7 +118,7 @@ Como se menciono, utilizaremos dos celdas Rauch en cascada por lo que podemos di
 Por otro lado para asegurar que la impedancia de entrada nunca sea menor a $50k\Omega$, se utilizaron 4 amplificadores operacionales. Dos de ellas para el funcionamiento de las celdas, uno se coloco como un buffer entre las dos etapas, asegurando que no se altere ninguna etapa, y el cuarto fue utilizado como buffer de entrada, es decir impedancias muy altas a las frecuencias de interés.
 
 
-\subsubsection{Selección de Componentes}
+\subsection{Selección de Componentes}
 
 Conociendo entonces la función de transferencia del circuito dado en la ecuación \ref{ej22eqhf} es posible determinar los componentes indicados para el filtro deseado. Estos componentes lo podemos determinar utilizando las siguientes relaciones dado por Schaumann con $Q_0 = 1.5$, el factor óptimo de calidad de la celda Deliyannis-Friend sin mejora, y las respectivas $Q$ y $\omega_0$ del las etapas:
 
@@ -155,7 +155,7 @@ Despejando desde las ecuaciones \ref{ej22eqvalor} con $C = 1nF$ obtenemos los co
 \label{ej22tvalt}
 \end{table}
 
-\subsubsubsection{Sensibilidad de los Componentes}
+\subsubsection{Sensibilidad de los Componentes}
 
 Es importante conocer las sensibilidades de los parámetros previo a la selección de componentes, de esta manera tener una idea de que valores pueden variar sin causar grandes cambios en el circuito. 
 
@@ -177,7 +177,7 @@ Es importante conocer las sensibilidades de los parámetros previo a la selecci�
 \caption{Ecuaciones de Sensibilidad}
 \end{table}
 
-\subsubsubsection{Selección de Componentes a Utilizar}
+\subsubsection{Selección de Componentes a Utilizar}
 
 Como los valores no suelen ser comerciales se debe adaptar los valores, luego teniendo en cuenta sus sensibilidades se selecciono los componentes a implementar como:
 
@@ -203,7 +203,7 @@ Luego, realizando un análisis de montecarlo con los componentes utilizados, res
 
 \begin{figure}[H]
     \centering
-    \includegraphics[scale = 0.65]{../Ejercicio2-DiseñoDeCeldas/2. CELDA RAUCH/Informe/monte.PNG}
+    \includegraphics[scale = 0.65]{../Ejercicio2-DisenoDeCeldas/2CELDARAUCH/Informe/monte.PNG}
     \caption{Análisis de Montecarlo}
     \label{ej22monteall}
 \end{figure}
@@ -212,35 +212,35 @@ Para una representación mas gráfica se realizo un histograma de dispersión po
 
 \begin{figure}[H]
     \centering
-    \includegraphics[scale = 0.5]{../Ejercicio2-DiseñoDeCeldas/2. CELDA RAUCH/Informe/disp1.png}
+    \includegraphics[scale = 0.5]{../Ejercicio2-DisenoDeCeldas/2CELDARAUCH/Informe/disp1.png}
     \caption{Histograma de Dispersión de f0 de la Primera Etapa}
     \label{ej22dis1}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[scale = 0.5]{../Ejercicio2-DiseñoDeCeldas/2. CELDA RAUCH/Informe/disp2.png}
+    \includegraphics[scale = 0.5]{../Ejercicio2-DisenoDeCeldas/2CELDARAUCH/Informe/disp2.png}
     \caption{Histograma de Dispersión de f0 de la Segunda Etapa}
     \label{ej22dis1}
 \end{figure}
 
 
-\subsubsection{Análisis de Experimental}
+\subsection{Análisis de Experimental}
 
-\subsubsubsection{Respuesta en Frecuencia}
+\subsubsection{Respuesta en Frecuencia}
 
 Realizando un análisis en frecuencia, superponiendo resultados teóricos, simulados y experimental se obtuvo el siguiente gráfico:
 
 \begin{figure}[H]
     \centering
-    \includegraphics[scale = 0.6]{../Ejercicio2-DiseñoDeCeldas/2. CELDA RAUCH/Informe/bodemag.png}
+    \includegraphics[scale = 0.6]{../Ejercicio2-DisenoDeCeldas/2CELDARAUCH/Informe/bodemag.png}
     % \includegraphics[scale = 0.6]{bodepha.png}
     % \caption{Respuesta en Frecuencia del Circuito}
     % \label{ej22bode}
 \end{figure}
 \begin{figure}[H]
     \centering
-    \includegraphics[scale = 0.6]{../Ejercicio2-DiseñoDeCeldas/2. CELDA RAUCH/Informe/bodepha.png}
+    \includegraphics[scale = 0.6]{../Ejercicio2-DisenoDeCeldas/2CELDARAUCH/Informe/bodepha.png}
     \caption{Respuesta en Frecuencia del Circuito}
     \label{ej22bode}
 \end{figure}
@@ -248,18 +248,18 @@ Realizando un análisis en frecuencia, superponiendo resultados teóricos, simul
 En las frecuencias de interés, se puede observarse que se corresponden correctamente los valores medidos con los calculados, si bien con algunas leves diferencias debido a la tolerancia de los componentes pero se encuentra dentro de los resultados esperados. Es importante mencionar que como la atenuación a frecuencias lejanas al $f_0$, el circuito es susceptible al ruido, por lo que las mediciones se verán afectadas grandemente, creando oscilaciones indeseadas. Por otro lado, como se ve en la simulación y en la medición empírica, hay un salto de fase cuando $f>100kHz$, esta alteración es correspondiente al polo inducido por los amplificadores operacionales, dado que ahora no funcionan idealmente. 
 
 
-\subsubsubsection{Impedancia de Entrada}
+\subsubsection{Impedancia de Entrada}
 
 Como los amplificadores operacionales tienen una impedancia de entrada muy elevada, y no tener resistencias comparables para una correcta medición, se estudio la impedancia de entrada desde la simulación.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[scale = 0.5]{../Ejercicio2-DiseñoDeCeldas/2. CELDA RAUCH/Informe/zin.png}
+    \includegraphics[scale = 0.5]{../Ejercicio2-DisenoDeCeldas/2CELDARAUCH/Informe/zin.png}
     \caption{Impedancia de Entrada Simulado}
     \label{ej22zin}
 \end{figure}
 
-\subsubsubsection{Rango Dinámico}
+\subsubsection{Rango Dinámico}
 
 Para el calculo de rango dinámico, se utiliza la ganancia máxima del circuito experimentado $G = 1.45dB = 1.18$. La tensi\'on m\'axima a la salida ser\'a 6V teniendo en cuenta que la alimentaci\'on $\pm 9V$. Por lo tanto, para hallar la m\'axima tensión sera:
 
@@ -279,6 +279,6 @@ Entonces obtenemos el rango dinámico como:
     RD = 20log(\frac{V_i^{MAX}}{V_i^{MIN}})= 54.12dB
 \end{equation}
 
-\subsubsection{Conclusión}
+\subsection{Conclusión}
 
 Si bien los resultados resultaron ser similares a la esperado, es indispensable mencionar que no es filtro preciso ya que los componentes utilizados fueron con tolerancias mayores a $5\%$ y no se utilizo prestes debido a la falta de un milímetro para conocer el valor utilizado. Por otro lado, se debe destacar la cualidad de esta celda de Rauch que se pudo obtener un elevado valor de factor de calidad debido a la realimentación positiva y negativa, pero se debe también tener cuidado ya que si los valores del ciclo de realimentación positiva no están bien diseñados, el circuito podría oscilar.

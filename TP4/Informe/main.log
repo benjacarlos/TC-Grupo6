@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.8.14)  6 NOV 2020 17:21
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.8.14)  6 NOV 2020 18:04
 entering extended mode
 **./main.tex
 (main.tex
@@ -903,7 +903,14 @@ Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 ("C:\Program Files\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibr
 arybabel.code.tex"
 File: tikzlibrarybabel.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-)) (main.aux)
+)) (main.aux
+
+LaTeX Warning: Label `ej22cirbasic' multiply defined.
+
+
+LaTeX Warning: Label `ej22dis1' multiply defined.
+
+)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 4.
@@ -922,8 +929,7 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 4.
 LaTeX Font Info:    ... okay on input line 4.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 4.
 LaTeX Font Info:    ... okay on input line 4.
-
-("C:\Program Files\MiKTeX\tex/context/base/mkii\supp-pdf.mkii"
+ ("C:\Program Files\MiKTeX\tex/context/base/mkii\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count340
 \scratchdimen=\dimen334
@@ -1030,28 +1036,126 @@ been already used, duplicate ignored
                    \relax 
 l.9 \newpage
              [1] (../Ejercicio1-FilterTool/Ejercicio-1.tex) [2]
+(../Ejercicio2-DisenoDeCeldas/Ejercicio-2.tex
+<../Ejercicio2-DisenoDeCeldas/2CELDARAUCH/Informe/circuito3.png, id=77, 428.802
+pt x 292.09125pt>
+File: ../Ejercicio2-DisenoDeCeldas/2CELDARAUCH/Informe/circuito3.png Graphic fi
+le (type png)
+<use ../Ejercicio2-DisenoDeCeldas/2CELDARAUCH/Informe/circuito3.png>
+Package pdftex.def Info: ../Ejercicio2-DisenoDeCeldas/2CELDARAUCH/Informe/circu
+ito3.png  used on input line 29.
+(pdftex.def)             Requested size: 257.28317pt x 175.25609pt.
+<../Ejercicio2-DisenoDeCeldas/2CELDARAUCH/Informe/circuito.png, id=79, 428.802p
+t x 292.09125pt>
+File: ../Ejercicio2-DisenoDeCeldas/2CELDARAUCH/Informe/circuito.png Graphic fil
+e (type png)
+<use ../Ejercicio2-DisenoDeCeldas/2CELDARAUCH/Informe/circuito.png>
+Package pdftex.def Info: ../Ejercicio2-DisenoDeCeldas/2CELDARAUCH/Informe/circu
+ito.png  used on input line 38.
+(pdftex.def)             Requested size: 257.28317pt x 175.25609pt.
+ [3 <../Ejercicio2-DisenoDeCeldas/2CELDARAUCH/Informe/circuito3.png> <../Ejerci
+cio2-DisenoDeCeldas/2CELDARAUCH/Informe/circuito.png>] [4] [5]
+<../Ejercicio2-DisenoDeCeldas/2CELDARAUCH/Informe/monte.PNG, id=123, 779.3115pt
+ x 296.307pt>
+File: ../Ejercicio2-DisenoDeCeldas/2CELDARAUCH/Informe/monte.PNG Graphic file (
+type png)
+<use ../Ejercicio2-DisenoDeCeldas/2CELDARAUCH/Informe/monte.PNG>
+Package pdftex.def Info: ../Ejercicio2-DisenoDeCeldas/2CELDARAUCH/Informe/monte
+.PNG  used on input line 206.
+(pdftex.def)             Requested size: 506.54646pt x 192.59726pt.
+<../Ejercicio2-DisenoDeCeldas/2CELDARAUCH/Informe/disp1.png, id=124, 642.4pt x 
+481.8pt>
+File: ../Ejercicio2-DisenoDeCeldas/2CELDARAUCH/Informe/disp1.png Graphic file (
+type png)
+<use ../Ejercicio2-DisenoDeCeldas/2CELDARAUCH/Informe/disp1.png>
+Package pdftex.def Info: ../Ejercicio2-DisenoDeCeldas/2CELDARAUCH/Informe/disp1
+.png  used on input line 215.
+(pdftex.def)             Requested size: 321.19922pt x 240.8994pt.
+<../Ejercicio2-DisenoDeCeldas/2CELDARAUCH/Informe/disp2.png, id=125, 642.4pt x 
+481.8pt>
+File: ../Ejercicio2-DisenoDeCeldas/2CELDARAUCH/Informe/disp2.png Graphic file (
+type png)
+<use ../Ejercicio2-DisenoDeCeldas/2CELDARAUCH/Informe/disp2.png>
+Package pdftex.def Info: ../Ejercicio2-DisenoDeCeldas/2CELDARAUCH/Informe/disp2
+.png  used on input line 222.
+(pdftex.def)             Requested size: 321.19922pt x 240.8994pt.
+ [6 <../Ejercicio2-DisenoDeCeldas/2CELDARAUCH/Informe/monte.PNG> <../Ejercicio2
+-DisenoDeCeldas/2CELDARAUCH/Informe/disp1.png (PNG copy)>]
+<../Ejercicio2-DisenoDeCeldas/2CELDARAUCH/Informe/bodemag.png, id=134, 741.5203
+1pt x 395.22656pt>
+File: ../Ejercicio2-DisenoDeCeldas/2CELDARAUCH/Informe/bodemag.png Graphic file
+ (type png)
+<use ../Ejercicio2-DisenoDeCeldas/2CELDARAUCH/Informe/bodemag.png>
+Package pdftex.def Info: ../Ejercicio2-DisenoDeCeldas/2CELDARAUCH/Informe/bodem
+ag.png  used on input line 236.
+(pdftex.def)             Requested size: 444.91562pt x 237.13776pt.
+<../Ejercicio2-DisenoDeCeldas/2CELDARAUCH/Informe/bodepha.png, id=135, 741.5203
+1pt x 395.22656pt>
+File: ../Ejercicio2-DisenoDeCeldas/2CELDARAUCH/Informe/bodepha.png Graphic file
+ (type png)
+<use ../Ejercicio2-DisenoDeCeldas/2CELDARAUCH/Informe/bodepha.png>
+Package pdftex.def Info: ../Ejercicio2-DisenoDeCeldas/2CELDARAUCH/Informe/bodep
+ha.png  used on input line 243.
+(pdftex.def)             Requested size: 444.91562pt x 237.13776pt.
+ [7 <../Ejercicio2-DisenoDeCeldas/2CELDARAUCH/Informe/disp2.png (PNG copy)> <..
+/Ejercicio2-DisenoDeCeldas/2CELDARAUCH/Informe/bodemag.png (PNG copy)>]
+<../Ejercicio2-DisenoDeCeldas/2CELDARAUCH/Informe/zin.png, id=142, 675.27281pt 
+x 395.22656pt>
+File: ../Ejercicio2-DisenoDeCeldas/2CELDARAUCH/Informe/zin.png Graphic file (ty
+pe png)
+<use ../Ejercicio2-DisenoDeCeldas/2CELDARAUCH/Informe/zin.png>
+Package pdftex.def Info: ../Ejercicio2-DisenoDeCeldas/2CELDARAUCH/Informe/zin.p
+ng  used on input line 257.
+(pdftex.def)             Requested size: 337.63557pt x 197.6128pt.
 
-! LaTeX Error: File `../Ejercicio2-DiseñoDeCeldas/Ejercicio-2.tex' not found.
+[8 <../Ejercicio2-DisenoDeCeldas/2CELDARAUCH/Informe/bodepha.png (PNG copy)> <.
+./Ejercicio2-DisenoDeCeldas/2CELDARAUCH/Informe/zin.png (PNG copy)>]) [9]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 20.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 20.
+
+(main.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 20.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 20.
 
 
-Type X to quit or <RETURN> to proceed,
-or enter new name. (Default extension: tex)
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
 
-Enter file name: 
-! Emergency stop.
-<read *> 
-         
-l.19 ...ercicio2-DiseñoDeCeldas/Ejercicio-2.tex}
-                                                  
-*** (cannot \read from terminal in nonstop modes)
+Package rerunfilecheck Info: Checksums for `main.out':
+(rerunfilecheck)             Before: E53EB11DFF38FAC024150FB296B26ED3;739
+(rerunfilecheck)             After:  79E5FFEF58F1AA4FC90E0E23C69695C9;914.
 
- 
+LaTeX Warning: There were multiply-defined labels.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 20.
+ ) 
 Here is how much of TeX's memory you used:
- 35232 strings out of 480790
- 822144 string characters out of 2907055
- 1229040 words of memory out of 3000000
- 50708 multiletter control sequences out of 15000+200000
- 544265 words of font info for 71 fonts, out of 3000000 for 9000
+ 35369 strings out of 480790
+ 826253 string characters out of 2907055
+ 1241154 words of memory out of 3000000
+ 50785 multiletter control sequences out of 15000+200000
+ 544880 words of font info for 73 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 71i,12n,73p,452b,801s stack positions out of 5000i,500n,10000p,200000b,50000s
-!  ==> Fatal error occurred, no output PDF file produced!
+ 71i,17n,73p,790b,801s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Progra
+m Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKT
+eX/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Program Files/MiKTeX/fonts/ty
+pe1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/a
+msfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/c
+mmi12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:
+/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program File
+s/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX/font
+s/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX/fonts/type1/publi
+c/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm
+/cmr5.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/
+Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/
+MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX/fonts
+/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files/MiKTeX/fonts/type1/public
+/amsfonts/cm/cmti12.pfb>
+Output written on main.pdf (10 pages, 477506 bytes).
+PDF statistics:
+ 223 PDF objects out of 1000 (max. 8388607)
+ 48 named destinations out of 1000 (max. 500000)
+ 133 words of extra memory for PDF output out of 10000 (max. 10000000)
+
