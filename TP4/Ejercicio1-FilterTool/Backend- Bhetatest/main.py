@@ -31,13 +31,6 @@ def plot(template):
         plt.ylabel('Amplitude [dB]')
         plt.margins(0, 0.1)
         plt.grid(which='both', axis='both')
-        # plt.axvline(fc, color='green')  # cutoff frequency
-        # plt.axvline(w_a, color='red')  # cutoff frequency
-        # plt.axvline(w_p, color='red')  # cutoff frequency
-
-        # plt.axhline(-A_a, color='green')  # rs
-        # plt.axhline(-A_p, color='green')  # rp
-        # plt.plot([0, fc], [-A_p, -A_p], color='green', alpha=0.8)
         plt.tight_layout()
 
         if template.should_draw_template():
@@ -128,6 +121,8 @@ if __name__ == '__main__':
     plot(temp_legen_3)
     temp_legen_3.type = Type.BR
     plot(temp_legen_3)
+    #temp_legen_3.type = Type.BR
+    #plot(temp_legen_3)
 
 
 
