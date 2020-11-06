@@ -64,22 +64,24 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
         msgWrongInput = QMessageBox()
         msgWrongInput.setIcon(QMessageBox.Warning)
         msgWrongInput.setWindowTitle('Error')
+
+        if (self.approxTypeOption.currentText()) == "Legendre":
+            self.approxTypeSelected = Approximation.Legendre
+        elif (self.approxTypeOption.currentText()) == "Cauer":
+            self.approxTypeSelected = Approximation.Cauer
+        elif (self.approxTypeOption.currentText()) == "Gauss":
+            self.approxTypeSelected = Approximation.Gauss
+        elif (self.approxTypeOption.currentText()) == "Butterworth":
+            self.approxTypeSelected = Approximation.Butterworth
+        elif (self.approxTypeOption.currentText()) == "Cheby1":
+            self.approxTypeSelected = Approximation.Cheby1
+        elif (self.approxTypeOption.currentText()) == "Cheby2":
+            self.approxTypeSelected = Approximation.Cheby2
+        elif (self.approxTypeOption.currentText()) == "Bessel":
+            self.approxTypeSelected = Approximation.Bessel
+
         if str (self.filterTypeOption.currentText()) == "Low-Pass":
             self.filterTypeSelected=Type.LP
-            if (self.approxTypeOption.currentText()) == "Legendre":
-                self.filterTypeInput = Approximation.Legendre
-            elif (self.approxTypeOption.currentText()) == "Cauer":
-                self.filterTypeInput = Approximation.Cauer
-            elif (self.approxTypeOption.currentText()) == "Gauss":
-                self.filterTypeInput = Approximation.Gauss
-            elif (self.approxTypeOption.currentText()) == "Butterworth":
-                self.filterTypeInput = Approximation.Butterworth
-            elif (self.approxTypeOption.currentText()) == "Cheby1":
-                self.filterTypeInput = Approximation.Cheby1
-            elif (self.approxTypeOption.currentText()) == "Cheby2":
-                self.filterTypeInput = Approximation.Cheby2
-            elif (self.approxTypeOption.currentText()) == "Bessel":
-                self.filterTypeInput = Approximation.Bessel
             ErrorMessage = ""
             try:
                 self.data["A_a"] = float (self.aaInput.text())
@@ -101,20 +103,6 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
 
         elif str(self.filterTypeOption.currentText()) == "High-Pass":
             self.filterTypeSelected = Type.HP
-            if (self.approxTypeOption.currentText()) == "Legendre":
-                self.filterTypeInput = Approximation.Legendre
-            elif (self.approxTypeOption.currentText()) == "Cauer":
-                self.filterTypeInput = Approximation.Cauer
-            elif (self.approxTypeOption.currentText()) == "Gauss":
-                self.filterTypeInput = Approximation.Gauss
-            elif (self.approxTypeOption.currentText()) == "Butterworth":
-                self.filterTypeInput = Approximation.Butterworth
-            elif (self.approxTypeOption.currentText()) == "Cheby1":
-                self.filterTypeInput = Approximation.Cheby1
-            elif (self.approxTypeOption.currentText()) == "Cheby2":
-                self.filterTypeInput = Approximation.Cheby2
-            elif (self.approxTypeOption.currentText()) == "Bessel":
-                self.filterTypeInput = Approximation.Bessel
             ErrorMessage = ""
             try:
                 self.data["A_a"] = float(self.aaInput.text())
@@ -134,20 +122,6 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
                 ErrorMessage = ErrorMessage + "Fp must be a valid number \n"
         elif str(self.filterTypeOption.currentText()) == "Band-Pass":
             self.filterTypeSelected = Type.BP
-            if (self.approxTypeOption.currentText()) == "Legendre":
-                self.filterTypeInput = Approximation.Legendre
-            elif (self.approxTypeOption.currentText()) == "Cauer":
-                self.filterTypeInput = Approximation.Cauer
-            elif (self.approxTypeOption.currentText()) == "Gauss":
-                self.filterTypeInput = Approximation.Gauss
-            elif (self.approxTypeOption.currentText()) == "Butterworth":
-                self.filterTypeInput = Approximation.Butterworth
-            elif (self.approxTypeOption.currentText()) == "Cheby1":
-                self.filterTypeInput = Approximation.Cheby1
-            elif (self.approxTypeOption.currentText()) == "Cheby2":
-                self.filterTypeInput = Approximation.Cheby2
-            elif (self.approxTypeOption.currentText()) == "Bessel":
-                self.filterTypeInput = Approximation.Bessel
             ErrorMessage = ""
             try:
                 self.data["A_a"] = float(self.aaInput.text())
@@ -168,14 +142,40 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
             try:
                 self.data["w_a_m"] = float(self.famInput.text())
             except:
-                ErrorMessage = ErrorMessage + "Fp must be a valid number \n"
+                ErrorMessage = ErrorMessage + "WaM must be a valid number \n"
             try:
                 self.data["w_p_m"] = float(self.fpmInput.text())
             except:
-                ErrorMessage = ErrorMessage + "Fp must be a valid number \n"
+                ErrorMessage = ErrorMessage + "WpM must be a valid number \n"
 
             print ("Estoy en BP")
         elif str(self.filterTypeOption.currentText()) == "Band-Rejection":
+            self.filterTypeSelected = Type.BR
+            ErrorMessage = ""
+            try:
+                self.data["A_a"] = float(self.aaInput.text())
+            except:
+                ErrorMessage = ErrorMessage + "Aa must be a valid number\n"
+            try:
+                self.data["A_p"] = float(self.apInput.text())
+            except:
+                ErrorMessage = ErrorMessage + "Ap must be a valid number \n"
+            try:
+                self.data["w_a"] = float(self.faInput.text())
+            except:
+                ErrorMessage = ErrorMessage + "Fa must be a valid number \n"
+            try:
+                self.data["w_p"] = float(self.fpInput.text())
+            except:
+                ErrorMessage = ErrorMessage + "Fp must be a valid number \n"
+            try:
+                self.data["w_a_m"] = float(self.famInput.text())
+            except:
+                ErrorMessage = ErrorMessage + "WaM must be a valid number \n"
+            try:
+                self.data["w_p_m"] = float(self.fpmInput.text())
+            except:
+                ErrorMessage = ErrorMessage + "WpM must be a valid number \n"
             print ("Estoy en BR")
         elif str(self.filterTypeOption.currentText()) == "Group Delay":
             print ("Estoy en GD")
@@ -203,21 +203,12 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
         else:
 
             print ("Aca voy a la funcion que calcula el filtro")
-            self.data = {
-                "A_a": 10,
-                "A_p": 3,
-                "w_p": 300e3,
-                "w_a_m": 100e3,
-                "w_a": 200e3,
-                "w_p_m": 20e3,
-                "n": 0,  # poner valor != 0 para harcodear
-                "Q_max": 0,  # poner valor != 0 para harcodear
-                "d": 1  # coeficiente de desnormalización,  0<d<1   , por defecto 0
-            }
-            print(self.data)
-            self.appTemplates.append(template(Type.BR, Approximation.Cheby2, self.data))
-            print (self.appTemplates[len(self.appTemplates)-1].data)
-            print (len(self.appTemplates))
+            #print(self.data)
+            #print (self.filterTypeSelected)
+            #print (self.approxTypeSelected)
+            self.appTemplates.append(template(self.filterTypeSelected, self.approxTypeSelected, self.data))
+            #print (self.appTemplates[len(self.appTemplates)-1].data)
+            #print (len(self.appTemplates))
 
 
             # self.filterOption = str(self.filterTypeOption.currentText())
@@ -252,23 +243,83 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
             print("Voy a Funcion:" + myPlotGraphicType)
 
     def plotMagnitude (self):
-        print ("ploteador")
-        self.numerator = [1]
-        self.denominator = [1,1]
-        self.system = signal.TransferFunction(self.numerator,self.denominator)
-        self.w,self.mag,self.phase = signal.bode(self.system)
 
-        self.filterToolPlotTable.canvas.axes.clear()
-        self.filterToolPlotTable.canvas.axes.semilogx(self.w,self.mag)
-        self.filterToolPlotTable.canvas.axes.grid(True,linestyle='-', which="both")
-        self.filterToolPlotTable.canvas.axes.minorticks_on()
-        self.filterToolPlotTable.canvas.figure.tight_layout()
 
-        self.filterToolPlotTable.canvas.axes.axes.set_xlabel("Frequency [Hz]")
-        self.filterToolPlotTable.canvas.axes.axes.set_ylabel("Gain [DB]")
-        self.filterToolPlotTable.canvas.axes.title.set_text('Frequency Response - Amplitude')
-        self.filterToolPlotTable.canvas.figure.tight_layout()
-        self.filterToolPlotTable.canvas.draw()
+        if len(self.appTemplates) != 0:
+            print ("toy aca")
+
+            self.filterToolPlotTable.canvas.axes.clear()
+
+            if self.appTemplates[0].should_be_drawn():
+
+                if self.appTemplates[0].type == Type.LPN:
+                    w, h = signal.freqs(self.appTemplates[0].normalized_num, self.appTemplates[0].normalized_den, worN=np.linspace(0, 1e2, 1000))
+                else:
+                    w, h = signal.freqs(self.appTemplates[0].actual_num, self.appTemplates[0].actual_den, worN=np.linspace(1e4, 1e6, 1000))
+
+                self.filterToolPlotTable.canvas.axes.semilogx(w, 20 * np.log10(abs(h)), label='n')
+                self.filterToolPlotTable.canvas.axes.grid(which='both', axis='both')
+                self.filterToolPlotTable.canvas.axes.margins(0, 0.1)
+                self.filterToolPlotTable.canvas.figure.tight_layout()
+
+
+                if self.appTemplates[0].should_draw_template():
+                    if self.appTemplates[0].type == Type.LP:
+                        rectangle_p = plt.Rectangle((0, -self.appTemplates[0].data["A_p"]), self.appTemplates[0].data["w_p"],
+                                                    -self.appTemplates[0].data["A_a"] - 100, fc='violet', alpha=0.8)
+                        rectangle_a = plt.Rectangle((self.appTemplates[0].data["w_a"], -self.appTemplates[0].data["A_a"]),
+                                                    1e6 - self.appTemplates[0].data["w_p"], self.appTemplates[0].data["A_a"] + 30, fc='violet',
+                                                    alpha=0.8)
+
+                    if self.appTemplates[0].type == Type.LPN:
+                        rectangle_p = plt.Rectangle((0, -self.appTemplates[0].data["A_p"]), 1, -self.appTemplates[0].data["A_a"] - 100, fc='violet',
+                                                    alpha=0.8)
+                        rectangle_a = plt.Rectangle((self.appTemplates[0].w_a_n, -self.appTemplates[0].data["A_a"]), 1e6 - 1,
+                                                    self.appTemplates[0].data["A_a"] + 30, fc='violet', alpha=0.8)
+
+                    if self.appTemplates[0].type == Type.HP:
+                        rectangle_p = plt.Rectangle((0, 0), self.appTemplates[0].data["w_a"], -self.appTemplates[0].data["A_a"], fc='violet',
+                                                    alpha=0.8)
+                        rectangle_a = plt.Rectangle((self.appTemplates[0].data["w_p"], -self.appTemplates[0].data["A_p"]),
+                                                    1e6 - self.appTemplates[0].data["w_p"], -self.appTemplates[0].data["A_a"] - 200, fc='violet',
+                                                    alpha=0.8)
+
+                    if self.appTemplates[0].type == Type.BP:
+                        rectangle_p = plt.Rectangle((0, -self.appTemplates[0].data["A_a"]), self.appTemplates[0].data["w_a_m"],
+                                                    self.appTemplates[0].data["A_a"], fc='violet', alpha=0.8)
+                        rectangle_p1 = plt.Rectangle((self.appTemplates[0].data["w_a"], -self.appTemplates[0].data["A_a"]),
+                                                     self.appTemplates[0].data["w_a"] + 10e6, self.appTemplates[0].data["A_a"], fc='violet',
+                                                     alpha=0.8)
+                        rectangle_a = plt.Rectangle((self.appTemplates[0].data["w_p_m"], -self.appTemplates[0].data["A_p"]), self.appTemplates[0].bw,
+                                                    -self.appTemplates[0].data["A_a"] - 200, fc='violet', alpha=0.8)
+
+                        self.filterToolPlotTable.canvas.figure.gca().add_patch(rectangle_p1)
+
+                    if self.appTemplates[0].type == Type.BR:
+                        rectangle_p = plt.Rectangle((0, -self.appTemplates[0].data["A_p"]), self.appTemplates[0].data["w_p_m"],
+                                                    self.appTemplates[0].data["A_a"] - 300, fc='violet', alpha=0.8)
+                        rectangle_p1 = plt.Rectangle((self.appTemplates[0].data["w_p"], -self.appTemplates[0].data["A_p"]),
+                                                     self.appTemplates[0].data["w_a"] + 10e6, self.appTemplates[0].data["A_a"] - 300, fc='violet',
+                                                     alpha=0.8)
+                        rectangle_a = plt.Rectangle((self.appTemplates[0].data["w_a_m"], 0),
+                                                    self.appTemplates[0].data["w_a"] - self.appTemplates[0].data["w_a_m"], -self.appTemplates[0].data["A_a"],
+                                                    fc='violet', alpha=0.8)
+
+                        self.filterToolPlotTable.canvas.figure.gca().add_patch(rectangle_p1)
+
+                    self.filterToolPlotTable.canvas.figure.gca().add_patch(rectangle_p)
+                    self.filterToolPlotTable.canvas.figure.gca().add_patch(rectangle_a)
+
+                self.filterToolPlotTable.canvas.axes.axes.set_xlabel("Frequency [Hz]")
+                self.filterToolPlotTable.canvas.axes.axes.set_ylabel("Gain [DB]")
+                self.filterToolPlotTable.canvas.axes.title.set_text('Frequency Response - Amplitude')
+
+                self.filterToolPlotTable.canvas.figure.tight_layout()
+                self.filterToolPlotTable.canvas.draw()
+
+
+
+
 
     def plotPhase (self):
         self.numerator = [1]
@@ -376,11 +427,6 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
         self.filterToolPlotTable.canvas.figure.tight_layout()
         self.filterToolPlotTable.canvas.draw()
 
-
-
-
-
-    #Una vez procesado los inputs y aceptados, este metodo crea y apendea ese nuevo filtro a la lista de filtros. Lo crea convenientemente dependiendo el tipo#
 
 
 

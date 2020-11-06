@@ -46,7 +46,7 @@ class template():
         self.actual_p=0
         self.actual_k=0
         #design stages
-        self.stages_list= []
+        self.stages_list=[]
         #flags
         self.__template_flag=True      #template squares on or off
         self.__visible=True            #if its going to be displayed
