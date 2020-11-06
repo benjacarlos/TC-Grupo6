@@ -228,13 +228,11 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
         numerators= []
         denominators=[]
 
-        for numerator in self.appTemplates[self.indexForTemplate].actual_num:
-            numerators.append (round(numerator,2))
-        for denominator in self.appTemplates[self.indexForTemplate].actual_den:
-            denominators.append ( round(denominator,2))
+        print (self.appTemplates[self.indexForTemplate].actual_num)
+        print(self.appTemplates[self.indexForTemplate].actual_den)
 
-        numToPrint = extra.printTransferFunctionInput(numerators)
-        denToPrint = extra.printTransferFunctionInput(denominators)
+        numToPrint = extra.printTransferFunctionInput(self.appTemplates[self.indexForTemplate].actual_num)
+        denToPrint = extra.printTransferFunctionInput(self.appTemplates[self.indexForTemplate].actual_den)
         self.hsLabelNum.setText(numToPrint)
         self.hsLabelDen.setText(denToPrint)
 
