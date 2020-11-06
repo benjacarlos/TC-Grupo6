@@ -1,4 +1,7 @@
 from enum import Enum
+
+import control as control
+
 import legendre as legendre
 import butterworth as butterworth
 import cauer as cauer
@@ -52,6 +55,14 @@ class template():
         self.__visible=True            #if its going to be displayed
         self.actual_displayed=Type.LP   #what is actually being displayed
         self.__att_mode=False
+        #self.singularidades = np.array([[1],[1],[1]])
+        self.singularidades = {
+            "polos": list(),
+            "ceros": list(),
+            "ganancias": list(),
+            "sos": list(),
+
+        }
 
         self.init_approx()
 
@@ -142,6 +153,91 @@ class template():
 
         self.k=1/self.w_a_n
 
+    def split_list(self,alist, wanted_parts=1):
+        length = len(alist)
+        return [alist[i * length // wanted_parts: (i + 1) * length // wanted_parts]
+                for i in range(wanted_parts)]
+
+    def get_sos(self):
+        #me fijo la cantidad de secciones para el filtro desnormalizado buscado
+        self.number_of_sections=int(np.floor(self.actual_n/2)+self.actual_n%2)
+
+
+        index=0
+        #si la ganancia es unitaria, asigno ganancia unitaria a todas las etapas
+        if self.actual_k==1:
+            while self.number_of_sections>index:
+                self.singularidades["ganancias"].append({1})
+                index+=1
+        # si la ganancia no es unitaria se la asigno a la ultima etapa
+        else:
+            while self.number_of_sections>index:
+                if index+1 == self.number_of_sections:
+                    self.singularidades["ganancias"].append({self.actual_k})
+                    break
+                self.singularidades["ganancias"].append({1})
+                index += 1
+        #estas ganancias individuales se podrían editar más adelante de manera inidividual
+
+        #cargo una lista de polos conjugados y el posible polo simple(si aplica)
+        index=0
+        auxiliar_p=list(self.actual_p)
+        while len(auxiliar_p) > 0:
+            aux=auxiliar_p.pop(0) #saco un polo de la lista de polos
+            if aux.imag == 0:
+                self.singularidades["polos"].append({aux})  # appendeo polo simple
+            for x in auxiliar_p: #busco su conjugado
+                if x==np.conjugate(aux):
+                    self.singularidades["polos"].append({aux,x}) #appendeo polos conjugados
+                    auxiliar_p.remove(x) #remuevo el conjugado de la lista
+                    break
+
+        index = 0
+        auxiliar_z=list(self.actual_z)
+        while len(auxiliar_z) > 0:
+            aux=auxiliar_z.pop(0) #saco un cero de la lista de ceros
+            for x in auxiliar_z: #busco su conjugado
+                if x==np.conjugate(aux):
+                    self.singularidades["ceros"].append({aux,x}) #appendeo ceros conjugados
+                    auxiliar_z.remove(x) #remuevo el conjugado de la lista
+                    break
+
+
+        index=0
+        while self.number_of_sections > index:
+            if not self.singularidades["ceros"]:
+                sos_to_be_append=signal.zpk2tf(1,np.asarray(self.singularidades["polos"][index]),np.asarray(self.singularidades["ganancias"][index]))
+                self.singularidades["sos"].append({sos_to_be_append})
+            else:
+                num,den=signal.zpk2tf(np.array(list(self.singularidades["ceros"][index]),dtype=np.complex128),np.array(list(self.singularidades["polos"][index]),dtype=np.complex128),np.asarray(list(self.singularidades["ganancias"][index])))
+                d1,damp_coef,d2=control.damp(control.TransferFunction(num,den))
+                Q=1/2*damp_coef
+                self.singularidades["sos"].append(list([num,den,Q]))
+            index+=1
+
+        self.check_for_q()
+
+    def check_for_q(self):
+        recalculate=False
+        if self.data["Q_max"] !=0:
+            for x in self.singularidades["sos"]:
+                if x[2][0] >= self.data["Q_max"] :  #Q mayor al permitido
+                    recalculate=True
+
+        if recalculate:
+            self.data["n"]=self.n-1 #hardcodeo el n por uno menos restrictivo
+            self.init_approx() #vuelvo a realizar la aproximacion
+            print('Hay que recalcular el filtro')
+        else: #ordeno de Q menor a mayor
+            self.singularidades["sos"].sort(key=lambda q: q[2][0])
+
+
+
+
+
+
+    def recalculate_filter(self):
+        print('dummy')
 
     def init_approx(self):
         self.get_w_a_n()
@@ -267,21 +363,8 @@ class template():
                                                                 self.bw)
                 self.actual_z, self.actual_p, self.actual_k = signal.lp2bs_zpk(self.normalized_z, self.normalized_p,
                                                                                self.normalized_k, self.wo, self.bw)
-
-        # if self.approximation==Approximation.Gauss:
-        #     legendre.legendre(self.A_p,self.A_a,self.w_p,self.w_a,1e6) #dummy wmax
-        #
-        # if self.approximation==Approximation.Cheby1:
-        #     legendre.legendre(self.A_p,self.A_a,self.w_p,self.w_a,1e6) #dummy wmax
-        #
-        # if self.approximation==Approximation.Cheby2:
-        #     legendre.legendre(self.A_p,self.A_a,self.w_p,self.w_a,1e6) #dummy wmax
-        #
-        # if self.approximation == Approximation.Butterworth:
-        #     legendre.legendre(self.A_p, self.A_a, self.w_p, self.w_a, 1e6)  # dummy wmax
-        #
-        # if self.approximation == Approximation.Bessel:
-        #     legendre.legendre(self.A_p, self.A_a, self.w_p, self.w_a, 1e6)  # dummy wmax
+        self.actual_n=len(self.actual_p)
+        self.get_sos()
 
     def make_me_a_LP(self):
         self.actual_num, self.actual_dem, =signal.lp2lp(self.normalized_num,self.normalized_den,self.w_p)
@@ -312,6 +395,10 @@ class Type(Enum):
     BR=3
     PT=4
     LPN=5
+class Singularidad(Enum):
+    ganancia = 0
+    polos = 1
+    ceros = 2
 
 class Approximation(Enum):
     Legendre = 0
