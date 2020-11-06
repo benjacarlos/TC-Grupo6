@@ -15,6 +15,7 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
         self.filters=[]
 
         self.appTemplates = []
+        self.indexForTemplate = 0
 
 
     # Mapeo de botones interactivos y sus respectivas funciones #
@@ -203,18 +204,19 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
         else:
 
             print ("Aca voy a la funcion que calcula el filtro")
-            #print(self.data)
-            #print (self.filterTypeSelected)
-            #print (self.approxTypeSelected)
-            self.appTemplates.append(template(self.filterTypeSelected, self.approxTypeSelected, self.data))
-            #print (self.appTemplates[len(self.appTemplates)-1].data)
-            #print (len(self.appTemplates))
+            try:
+                self.appTemplates.append(template(self.filterTypeSelected, self.approxTypeSelected, self.data))
+                self.addNewItemToFilterList()
+                self.indexForTemplate = (self.indexForTemplate + 1)
+                self.plotGraphic()
+            except:
+                msgWrongInput.setText("Sorry, but it was not possible to calculate the filter based on your parameters. \n I am not smart enough or there is no possible filter. \n Please try with different values. ")
+                msgWrongInput.exec()
 
 
-            # self.filterOption = str(self.filterTypeOption.currentText())
-            #self.approxOption = str(self.approxTypeOption.currentText())
-            #self.filters.append(self.defineFilter())
-            #self.plotGraphic()
+
+    def addNewItemToFilterList (self):
+        self.filterDesignedLabelCombo.addItem(self.appTemplates[self.indexForTemplate].tag)
 
 
     # Funciones que grafican#
@@ -244,144 +246,149 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
 
     def plotMagnitude (self):
 
-
         if len(self.appTemplates) != 0:
-            print ("toy aca")
-
+            print ("MAGNITUD")
             self.filterToolPlotTable.canvas.axes.clear()
 
-            if self.appTemplates[0].should_be_drawn():
+            for template in self.appTemplates:
 
-                if self.appTemplates[0].type == Type.LPN:
-                    w, h = signal.freqs(self.appTemplates[0].normalized_num, self.appTemplates[0].normalized_den, worN=np.linspace(0, 1e2, 1000))
-                else:
-                    w, h = signal.freqs(self.appTemplates[0].actual_num, self.appTemplates[0].actual_den, worN=np.linspace(1e4, 1e6, 1000))
+                if template.should_be_drawn():
+                    if template.type == Type.LPN:
+                        w, h = signal.freqs(template.normalized_num, template.normalized_den)#, worN=np.linspace(0, 1e2, 1000))
+                    else:
+                        w, h = signal.freqs(template.actual_num, template.actual_den)#, worN=np.linspace(1e4, 1e6, 1000))
 
-                self.filterToolPlotTable.canvas.axes.semilogx(w, 20 * np.log10(abs(h)), label='n')
-                self.filterToolPlotTable.canvas.axes.grid(which='both', axis='both')
-                self.filterToolPlotTable.canvas.axes.margins(0, 0.1)
-                self.filterToolPlotTable.canvas.figure.tight_layout()
+                    self.filterToolPlotTable.canvas.axes.semilogx(w, 20 * np.log10(abs(h)), label='n')
+                    self.filterToolPlotTable.canvas.axes.grid(which='both', axis='both')
+                    self.filterToolPlotTable.canvas.axes.margins(0, 0.1)
+                    self.filterToolPlotTable.canvas.figure.tight_layout()
 
+                    if template.should_draw_template():
+                        if template.type == Type.LP:
+                            rectangle_p = plt.Rectangle((0, -template.data["A_p"]), template.data["w_p"],
+                                                        -template.data["A_a"] - 100, fc='violet', alpha=0.8)
+                            rectangle_a = plt.Rectangle((template.data["w_a"], -template.data["A_a"]),
+                                                        1e6 - template.data["w_p"], template.data["A_a"] + 30, fc='violet',
+                                                        alpha=0.8)
 
-                if self.appTemplates[0].should_draw_template():
-                    if self.appTemplates[0].type == Type.LP:
-                        rectangle_p = plt.Rectangle((0, -self.appTemplates[0].data["A_p"]), self.appTemplates[0].data["w_p"],
-                                                    -self.appTemplates[0].data["A_a"] - 100, fc='violet', alpha=0.8)
-                        rectangle_a = plt.Rectangle((self.appTemplates[0].data["w_a"], -self.appTemplates[0].data["A_a"]),
-                                                    1e6 - self.appTemplates[0].data["w_p"], self.appTemplates[0].data["A_a"] + 30, fc='violet',
-                                                    alpha=0.8)
+                        if template.type == Type.LPN:
+                            rectangle_p = plt.Rectangle((0, -template.data["A_p"]), 1, -template.data["A_a"] - 100,
+                                                        fc='violet', alpha=0.8)
+                            rectangle_a = plt.Rectangle((template.w_a_n, -template.data["A_a"]), 1e6 - 1,
+                                                        template.data["A_a"] + 30, fc='violet', alpha=0.8)
 
-                    if self.appTemplates[0].type == Type.LPN:
-                        rectangle_p = plt.Rectangle((0, -self.appTemplates[0].data["A_p"]), 1, -self.appTemplates[0].data["A_a"] - 100, fc='violet',
-                                                    alpha=0.8)
-                        rectangle_a = plt.Rectangle((self.appTemplates[0].w_a_n, -self.appTemplates[0].data["A_a"]), 1e6 - 1,
-                                                    self.appTemplates[0].data["A_a"] + 30, fc='violet', alpha=0.8)
+                        if template.type == Type.HP:
+                            rectangle_p = plt.Rectangle((0, 0), template.data["w_a"], -template.data["A_a"], fc='violet',
+                                                        alpha=0.8)
+                            rectangle_a = plt.Rectangle((template.data["w_p"], -template.data["A_p"]),
+                                                        1e6 - template.data["w_p"], -template.data["A_a"] - 200,
+                                                        fc='violet', alpha=0.8)
 
-                    if self.appTemplates[0].type == Type.HP:
-                        rectangle_p = plt.Rectangle((0, 0), self.appTemplates[0].data["w_a"], -self.appTemplates[0].data["A_a"], fc='violet',
-                                                    alpha=0.8)
-                        rectangle_a = plt.Rectangle((self.appTemplates[0].data["w_p"], -self.appTemplates[0].data["A_p"]),
-                                                    1e6 - self.appTemplates[0].data["w_p"], -self.appTemplates[0].data["A_a"] - 200, fc='violet',
-                                                    alpha=0.8)
+                        if template.type == Type.BP:
+                            rectangle_p = plt.Rectangle((0, -template.data["A_a"]), template.data["w_a_m"],
+                                                        template.data["A_a"], fc='violet', alpha=0.8)
+                            rectangle_p1 = plt.Rectangle((template.data["w_a"], -template.data["A_a"]),
+                                                         template.data["w_a"] + 10e6, template.data["A_a"], fc='violet',
+                                                         alpha=0.8)
+                            rectangle_a = plt.Rectangle((template.data["w_p_m"], -template.data["A_p"]), template.bw,
+                                                        -template.data["A_a"] - 200, fc='violet', alpha=0.8)
 
-                    if self.appTemplates[0].type == Type.BP:
-                        rectangle_p = plt.Rectangle((0, -self.appTemplates[0].data["A_a"]), self.appTemplates[0].data["w_a_m"],
-                                                    self.appTemplates[0].data["A_a"], fc='violet', alpha=0.8)
-                        rectangle_p1 = plt.Rectangle((self.appTemplates[0].data["w_a"], -self.appTemplates[0].data["A_a"]),
-                                                     self.appTemplates[0].data["w_a"] + 10e6, self.appTemplates[0].data["A_a"], fc='violet',
-                                                     alpha=0.8)
-                        rectangle_a = plt.Rectangle((self.appTemplates[0].data["w_p_m"], -self.appTemplates[0].data["A_p"]), self.appTemplates[0].bw,
-                                                    -self.appTemplates[0].data["A_a"] - 200, fc='violet', alpha=0.8)
+                            self.filterToolPlotTable.canvas.figure.gca().add_patch(rectangle_p1)
 
-                        self.filterToolPlotTable.canvas.figure.gca().add_patch(rectangle_p1)
+                        if template.type == Type.BR:
+                            rectangle_p = plt.Rectangle((0, -template.data["A_p"]), template.data["w_p_m"],
+                                                        template.data["A_a"] - 300, fc='violet', alpha=0.8)
+                            rectangle_p1 = plt.Rectangle((template.data["w_p"], -template.data["A_p"]),
+                                                         template.data["w_a"] + 10e6, template.data["A_a"] - 300,
+                                                         fc='violet', alpha=0.8)
+                            rectangle_a = plt.Rectangle((template.data["w_a_m"], 0),
+                                                        template.data["w_a"] - template.data["w_a_m"],
+                                                        -template.data["A_a"], fc='violet', alpha=0.8)
 
-                    if self.appTemplates[0].type == Type.BR:
-                        rectangle_p = plt.Rectangle((0, -self.appTemplates[0].data["A_p"]), self.appTemplates[0].data["w_p_m"],
-                                                    self.appTemplates[0].data["A_a"] - 300, fc='violet', alpha=0.8)
-                        rectangle_p1 = plt.Rectangle((self.appTemplates[0].data["w_p"], -self.appTemplates[0].data["A_p"]),
-                                                     self.appTemplates[0].data["w_a"] + 10e6, self.appTemplates[0].data["A_a"] - 300, fc='violet',
-                                                     alpha=0.8)
-                        rectangle_a = plt.Rectangle((self.appTemplates[0].data["w_a_m"], 0),
-                                                    self.appTemplates[0].data["w_a"] - self.appTemplates[0].data["w_a_m"], -self.appTemplates[0].data["A_a"],
-                                                    fc='violet', alpha=0.8)
+                            self.filterToolPlotTable.canvas.figure.gca().add_patch(rectangle_p1)
 
-                        self.filterToolPlotTable.canvas.figure.gca().add_patch(rectangle_p1)
+                        self.filterToolPlotTable.canvas.figure.gca().add_patch(rectangle_p)
+                        self.filterToolPlotTable.canvas.figure.gca().add_patch(rectangle_a)
 
-                    self.filterToolPlotTable.canvas.figure.gca().add_patch(rectangle_p)
-                    self.filterToolPlotTable.canvas.figure.gca().add_patch(rectangle_a)
+            self.filterToolPlotTable.canvas.axes.axes.set_xlabel("Frequency [Hz]")
+            self.filterToolPlotTable.canvas.axes.axes.set_ylabel("Gain [DB]")
+            self.filterToolPlotTable.canvas.axes.title.set_text('Frequency Response - Amplitude')
 
-                self.filterToolPlotTable.canvas.axes.axes.set_xlabel("Frequency [Hz]")
-                self.filterToolPlotTable.canvas.axes.axes.set_ylabel("Gain [DB]")
-                self.filterToolPlotTable.canvas.axes.title.set_text('Frequency Response - Amplitude')
-
-                self.filterToolPlotTable.canvas.figure.tight_layout()
-                self.filterToolPlotTable.canvas.draw()
-
-
+            self.filterToolPlotTable.canvas.figure.tight_layout()
+            self.filterToolPlotTable.canvas.draw()
 
 
 
     def plotPhase (self):
-        self.numerator = [1]
-        self.denominator = [1,1]
-        self.system = signal.TransferFunction(self.numerator,self.denominator)
-        self.w,self.mag,self.phase = signal.bode(self.system)
+
+        if len(self.appTemplates) != 0:
+            print ("FASE")
+
+            self.filterToolPlotTable.canvas.axes.clear()
+
+            for template in self.appTemplates:
+
+                if template.should_be_drawn():
+
+                    system = signal.TransferFunction(template.actual_num, template.actual_den)
+
+                    w,mag,phase = signal.bode(system)
 
 
-        self.filterToolPlotTable.canvas.axes.clear()
-        self.filterToolPlotTable.canvas.axes.semilogx(self.w,self.phase)
-        self.filterToolPlotTable.canvas.axes.grid(True,linestyle='-', which="both")
-        self.filterToolPlotTable.canvas.axes.minorticks_on()
-        self.filterToolPlotTable.canvas.figure.tight_layout()
-        self.filterToolPlotTable.canvas.axes.axes.set_xlabel("Frequency [Hz]")
-        self.filterToolPlotTable.canvas.axes.axes.set_ylabel("Phase [°]")
-        self.filterToolPlotTable.canvas.axes.title.set_text('Frequency Response - Phase')
-        self.filterToolPlotTable.canvas.figure.tight_layout()
-        self.filterToolPlotTable.canvas.draw()
+                    self.filterToolPlotTable.canvas.axes.semilogx(w, phase)
+                    self.filterToolPlotTable.canvas.axes.grid(which='both', axis='both')
+                    self.filterToolPlotTable.canvas.axes.margins(0, 0.1)
+                    self.filterToolPlotTable.canvas.figure.tight_layout()
+
+            self.filterToolPlotTable.canvas.axes.axes.set_xlabel("Frequency [Hz]")
+            self.filterToolPlotTable.canvas.axes.axes.set_ylabel("Phase [°]")
+            self.filterToolPlotTable.canvas.axes.title.set_text('Frequency Response - Phase')
+            self.filterToolPlotTable.canvas.figure.tight_layout()
+            self.filterToolPlotTable.canvas.draw()
 
     def plotZerosAndPoles (self):
-        self.numerator = [1,1]
-        self.denominator = [1, 1,1]
-        self.system = signal.TransferFunction(self.numerator, self.denominator)
-        print(self.system.zeros)
-        print(self.system.poles)
-        myZeros=[[],[]]
-        myPoles= [[],[]]
-        for zero in self.system.zeros:
-            myZeros[0].append(zero.real)
-            myZeros[1].append(zero.imag)
-        for pole in self.system.poles:
-            myPoles[0].append(pole.real)
-            myPoles[1].append(pole.imag)
-        myMaxX = [max(myZeros[0],key=abs),max(myPoles[0],key=abs)]
-        myMaxY = [max(myZeros[1],key=abs),max(myPoles[1],key=abs)]
+        if len(self.appTemplates) != 0:
+            print ("POLES AND ZEROS")
+            myZeros = [[], []]
+            myPoles = [[], []]
+            self.filterToolPlotTable.canvas.axes.clear()
 
-        print (max(myMaxX,key=abs))
-        print (max(myMaxY, key=abs))
+            for template in self.appTemplates:
+                if template.should_be_drawn():
+                    for zero in template.actual_z:
+                        myZeros[0].append(zero.real)
+                        myZeros[1].append(zero.imag)
+                    for pole in template.actual_p:
+                        myPoles[0].append(pole.real)
+                        myPoles[1].append(pole.imag)
 
-        self.filterToolPlotTable.canvas.axes.clear()
-        self.filterToolPlotTable.canvas.axes.set_axisbelow(True)
-        self.filterToolPlotTable.canvas.axes.grid(True,linestyle='-',which="both")
+            myMaxX = [max(myZeros[0], key=abs), max(myPoles[0], key=abs)]
+            myMaxY = [max(myZeros[1], key=abs), max(myPoles[1], key=abs)]
 
-        self.filterToolPlotTable.canvas.axes.scatter(myZeros[0],myZeros[1],marker="o",label="Zeros")
-        self.filterToolPlotTable.canvas.axes.scatter(myPoles[0],myPoles[1],marker="x",label = "Poles")
+            self.filterToolPlotTable.canvas.axes.clear()
+            self.filterToolPlotTable.canvas.axes.set_axisbelow(True)
+            self.filterToolPlotTable.canvas.axes.grid(True, linestyle='-', which="both")
 
-        self.filterToolPlotTable.canvas.axes.spines['left'].set_position('zero')
-        self.filterToolPlotTable.canvas.axes.spines['left'].set_linewidth(1)
-        self.filterToolPlotTable.canvas.axes.spines['right'].set_color('none')
-        self.filterToolPlotTable.canvas.axes.spines['bottom'].set_position('zero')
-        self.filterToolPlotTable.canvas.axes.spines['bottom'].set_linewidth(1)
-        self.filterToolPlotTable.canvas.axes.spines['top'].set_color('none')
+            self.filterToolPlotTable.canvas.axes.scatter(myZeros[0], myZeros[1], marker="o", label="Zeros")
+            self.filterToolPlotTable.canvas.axes.scatter(myPoles[0], myPoles[1], marker="x", label="Poles")
 
-        self.filterToolPlotTable.canvas.axes.set_xlim(-1.2*abs(max(myMaxX,key=abs)),1.2*abs(max(myMaxX,key=abs)))
-        self.filterToolPlotTable.canvas.axes.set_ylim(-1.2 * abs(max(myMaxY, key=abs)), 1.2 * abs(max(myMaxY, key=abs)))
-        self.filterToolPlotTable.canvas.axes.minorticks_on()
+            self.filterToolPlotTable.canvas.axes.spines['left'].set_position('zero')
+            self.filterToolPlotTable.canvas.axes.spines['left'].set_linewidth(1)
+            self.filterToolPlotTable.canvas.axes.spines['right'].set_color('none')
+            self.filterToolPlotTable.canvas.axes.spines['bottom'].set_position('zero')
+            self.filterToolPlotTable.canvas.axes.spines['bottom'].set_linewidth(1)
+            self.filterToolPlotTable.canvas.axes.spines['top'].set_color('none')
 
-        self.filterToolPlotTable.canvas.axes.title.set_text('Zeros and Poles Diagram')
+            self.filterToolPlotTable.canvas.axes.set_xlim(-1.2 * abs(max(myMaxX, key=abs)),
+                                                          1.2 * abs(max(myMaxX, key=abs)))
+            self.filterToolPlotTable.canvas.axes.set_ylim(-1.2 * abs(max(myMaxY, key=abs)),
+                                                          1.2 * abs(max(myMaxY, key=abs)))
+            self.filterToolPlotTable.canvas.axes.minorticks_on()
 
+            self.filterToolPlotTable.canvas.axes.title.set_text('Zeros and Poles Diagram')
 
-        self.filterToolPlotTable.canvas.figure.tight_layout()
-        self.filterToolPlotTable.canvas.draw()
+            self.filterToolPlotTable.canvas.figure.tight_layout()
+            self.filterToolPlotTable.canvas.draw()
 
 
     def plotGroupDelay (self):
@@ -394,38 +401,17 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
         self.filterToolPlotTable.canvas.axes.grid(True,linestyle='-', which="both")
         self.filterToolPlotTable.canvas.axes.minorticks_on()
         self.filterToolPlotTable.canvas.figure.tight_layout()
-        self.filterToolPlotTable.canvas.axes.axes.set_xlabel("Frequency [rad/sample]")
-        self.filterToolPlotTable.canvas.axes.axes.set_ylabel("Group delay [samples]")
+        self.filterToolPlotTable.canvas.axes.axes.set_xlabel("Frequency [rad/s]")
+        self.filterToolPlotTable.canvas.axes.axes.set_ylabel("Group delay [s]")
         self.filterToolPlotTable.canvas.axes.title.set_text('Group Delay')
         self.filterToolPlotTable.canvas.figure.tight_layout()
         self.filterToolPlotTable.canvas.draw()
 
     def plotAttenuation (self):
 
-        print (self.filters[0].thisFilter)
-
-        self.filterToolPlotTable.canvas.axes.clear()
-
-        self.filterToolPlotTable.canvas.axes.semilogx(self.filters[0].thisFilter.w,self.filters[0].thisFilter.magnitudeh,label = self.filters[0].label)
-
-        self.filterToolPlotTable.canvas.axes.grid(True, linestyle='-', which="both")
-        self.filterToolPlotTable.canvas.figure.tight_layout()
+        print ("Estoy aca")
 
 
-        self.rectangle_p = plt.Rectangle((0, -1*self.filters[0].Ap), self.filters[0].thisFilter.fc, -1*self.filters[0].Aa - 100, fc='violet', alpha=0.8)
-        self.rectangle_a = plt.Rectangle((self.filters[0].Fa, -1*self.filters[0].Aa), self.filters[0].thisFilter.w_max - self.filters[0].thisFilter.fc, self.filters[0].Aa + 30, fc='violet', alpha=0.8)
-
-
-        self.filterToolPlotTable.canvas.figure.gca().add_patch(self.rectangle_p)
-        self.filterToolPlotTable.canvas.figure.gca().add_patch(self.rectangle_a)
-
-        #self.filterToolPlottable.canvas.axes.legend(fancybox=True, framealpha=0.5)
-        self.filterToolPlotTable.canvas.axes.axes.set_xlabel("Frequency [Hz]")
-        self.filterToolPlotTable.canvas.axes.axes.set_ylabel("Phase [°]")
-        self.filterToolPlotTable.canvas.axes.title.set_text('Frequency Response - Phase')
-
-        self.filterToolPlotTable.canvas.figure.tight_layout()
-        self.filterToolPlotTable.canvas.draw()
 
 
 

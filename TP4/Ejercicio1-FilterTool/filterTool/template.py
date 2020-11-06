@@ -52,6 +52,8 @@ class template():
         self.__visible=True            #if its going to be displayed
         self.actual_displayed=Type.LP   #what is actually being displayed
         self.__att_mode=False
+        #
+        self.tag = ""
 
         self.init_approx()
 
@@ -268,6 +270,34 @@ class template():
                                                                     self.bw)
                     self.actual_z, self.actual_p, self.actual_k = signal.lp2bs_zpk(self.normalized_z, self.normalized_p,
                                                                                    self.normalized_k, self.wo, self.bw)
+
+        #### DESPUES AGREGAMOS LOS TAGS ADICIONALES#
+        if self.type == Type.LP:
+            filterString = "Low-Pass"
+        elif self.type == Type.HP:
+            filterString = "High-Pass"
+        elif self.type == Type.BP:
+            filterString = "Band-Pass"
+        elif self.type == Type.BR:
+            filterString = "Band-Rejection"
+
+        if self.approximation == Approximation.Legendre:
+            approxString = "Legendre"
+        elif self.approximation == Approximation.Cauer:
+            approxString = "Cauer"
+        elif self.approximation == Approximation.Gauss:
+            approxString = "Gauss"
+        elif self.approximation == Approximation.Butterworth:
+            approxString = "Butterworth"
+        elif self.approximation == Approximation.Cheby1:
+            approxString = "Cheby 1"
+        elif self.approximation == Approximation.Cheby2:
+            approxString = "Cheby 2"
+        elif self.approximation == Approximation.Bessel:
+            approxString = "Bessel"
+
+
+        self.tag = filterString + " N: "+ str(self.n) + " Apr: " + approxString + " Den: " + str(self.data["d"])
 
             # if self.approximation==Approximation.Gauss:
             #     legendre.legendre(self.A_p,self.A_a,self.w_p,self.w_a,1e6) #dummy wmax

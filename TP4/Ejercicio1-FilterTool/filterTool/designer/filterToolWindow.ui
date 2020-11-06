@@ -517,7 +517,7 @@
        <rect>
         <x>490</x>
         <y>440</y>
-        <width>221</width>
+        <width>301</width>
         <height>21</height>
        </rect>
       </property>
@@ -611,9 +611,22 @@
        <rect>
         <x>490</x>
         <y>480</y>
-        <width>221</width>
+        <width>301</width>
         <height>21</height>
        </rect>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="plotAllCheckBox">
+      <property name="geometry">
+       <rect>
+        <x>600</x>
+        <y>520</y>
+        <width>70</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Plot All</string>
       </property>
      </widget>
     </widget>
