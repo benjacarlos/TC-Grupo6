@@ -133,12 +133,12 @@ class template():
                 self.data["w_a_m"] = (self.wo ** 2) / self.data["w_a"]
 
 
-            print(self.bw)
-            print(self.wo)
-            print(self.data["w_a_m"])
-            print(self.data["w_a"])
-            print(self.data["w_p_m"])
-            print(self.data["w_p"])
+            #print(self.bw)
+            #print(self.wo)
+            #print(self.data["w_a_m"])
+            #print(self.data["w_a"])
+            #print(self.data["w_p_m"])
+            #print(self.data["w_p"])
 
             self.w_a_n = (self.data["w_a"] - self.data["w_a_m"]) / (self.data["w_p"]-self.data["w_p_m"])
 

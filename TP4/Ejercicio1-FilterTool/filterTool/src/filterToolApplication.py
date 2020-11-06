@@ -13,13 +13,24 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
         super(myFilterToolApplication, self).__init__()
         self.setupUi(self)
 
+        self.data = 0
         self.filters=[]
 
         self.appTemplates = []
         self.indexForTemplate = 0
+        self.absAa = 0
+        self.absAp = 0
+        self.absFa = 0
+        self.absFp = 0
+        self.absFaM = 0
+        self.absFpM = 0
+        self.Wpm = 0
+        self.Wam=0
 
+        self.filterTypeSelected = 0
+        self.currentIndex = 0
 
-    # Mapeo de botones interactivos y sus respectivas funciones #
+    #Mapeo de botones interactivos y sus respectivas funciones #
 
         self.goStageTwoButton.clicked.connect(self.goStageTwo)
         self.returnStageOneButton.clicked.connect(self.goStageOne)
@@ -27,15 +38,43 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
         self.filterTypeOption.currentTextChanged.connect(self.showMoreOptions)
         self.plotTypeOptionInput.currentTextChanged.connect(self.plotGraphic)
         self.plotAllCheckBox.stateChanged.connect(lambda: self.checkboxPlotAllResponse())
+        self.okToRemove.clicked.connect(self.acceptToRemove)
+        self.noOkToRemove.clicked.connect(self.dontAcceptToRemove)
+        self.filterDesignedLabelCombo.currentTextChanged.connect(self.verityFilter)
+
+    def verityFilter(self):
+        if len(self.appTemplates) != 0:
+            if not self.plotAllCheckBox.isChecked():
+                for template in self.appTemplates:
+                    if template.tag != self.filterDesignedLabelCombo.currentText():
+                        template.turn_the_approx_invisible()
+                    else:
+                        template.turn_the_approx_visible()
+
+            myIndex = -1
+            for template in self.appTemplates:
+                myIndex = myIndex + 1
+                if template.tag != self.filterDesignedLabelCombo.currentText():
+                    self.currentIndex = len (self.appTemplates) - myIndex - 1
+
+            self.printTransferFunction(self.currentIndex)
+            self.plotGraphic()
 
 
     def checkboxPlotAllResponse(self):
-        print("LLego aca")
         if len(self.appTemplates) != 0:
-            for template in self.appTemplates:
-                if template.tag != self.filterDesignedLabelCombo.currentText():
-                    print ("entro aqui")
-                    template.__visible = False
+            if not self.plotAllCheckBox.isChecked():
+                for template in self.appTemplates:
+
+                    if template.tag != self.filterDesignedLabelCombo.currentText():
+                        template.turn_the_approx_invisible()
+
+            else:
+                for template in self.appTemplates:
+                        template.turn_the_approx_visible()
+
+
+        self.plotGraphic()
 
     def showMoreOptions (self):
         if str((self.filterTypeOption.currentText())) != "Group Delay":
@@ -57,6 +96,11 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
     # Funciones que administrar INPUTS#
 
     def stageOneGetFilterInputs(self):
+
+        self.previousData = self.data
+        self.previousFilterTypeSelected = self.filterTypeSelected
+        self.previousWpm = self.Wpm
+        self.previousWam = self.Wam
 
 
         self.data = {
@@ -151,10 +195,12 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
                 ErrorMessage = ErrorMessage + "Fp must be a valid number \n"
             try:
                 self.data["w_a_m"] = float(self.famInput.text())
+                self.Wam = float(self.famInput.text())
             except:
                 ErrorMessage = ErrorMessage + "WaM must be a valid number \n"
             try:
                 self.data["w_p_m"] = float(self.fpmInput.text())
+                self.Wpm = float(self.fpmInput.text())
             except:
                 ErrorMessage = ErrorMessage + "WpM must be a valid number \n"
 
@@ -180,10 +226,12 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
                 ErrorMessage = ErrorMessage + "Fp must be a valid number \n"
             try:
                 self.data["w_a_m"] = float(self.famInput.text())
+                self.Wam = float(self.famInput.text())
             except:
                 ErrorMessage = ErrorMessage + "WaM must be a valid number \n"
             try:
                 self.data["w_p_m"] = float(self.fpmInput.text())
+                self.Wpm = float(self.fpmInput.text())
             except:
                 ErrorMessage = ErrorMessage + "WpM must be a valid number \n"
             print ("Estoy en BR")
@@ -211,28 +259,64 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
             msgWrongInput.setText(ErrorMessage)
             msgWrongInput.exec()
         else:
-
             print ("Aca voy a la funcion que calcula el filtro")
             try:
-                self.appTemplates.append(template(self.filterTypeSelected, self.approxTypeSelected, self.data))
-                self.addNewItemToFilterList()
-                self.printTransferFunction()
-                self.indexForTemplate = (self.indexForTemplate + 1)
-                self.plotGraphic()
+                if self.validateParametersNotChanged()==True:
+                    self.appTemplates.append(template(self.filterTypeSelected, self.approxTypeSelected, self.data))
+                    self.addNewItemToFilterList()
+                    self.printTransferFunction(self.indexForTemplate)
+                    self.indexForTemplate = (self.indexForTemplate + 1)
+                    self.plotGraphic()
+                else:
+                    self.hiddenWarning.setCurrentWidget(self.warningNotHidden)
+
             except:
                 msgWrongInput.setText("Sorry, but it was not possible to calculate the filter based on your parameters. \n I am not smart enough or there is no possible filter. \n Please try with different values. ")
                 msgWrongInput.exec()
 
-    def printTransferFunction (self):
-        print ("ENTRO ACAAAAAAA")
+    def acceptToRemove (self):
+        self.removeAllFilters()
+        self.appTemplates.append(template(self.filterTypeSelected, self.approxTypeSelected, self.data))
+        self.addNewItemToFilterList()
+        self.indexForTemplate = 0
+        self.printTransferFunction(self.indexForTemplate)
+        self.indexForTemplate = 1
+        self.plotGraphic()
+        self.hiddenWarning.setCurrentWidget(self.warningIsHidden)
+
+
+    def dontAcceptToRemove(self):
+        self.data = self.previousData
+        self.hiddenWarning.setCurrentWidget(self.warningNotHidden)
+
+    def removeAllFilters(self):
+        self.appTemplates =[]
+
+    def validateParametersNotChanged (self):
+        print ("VALIDANDO")
+        print (self.previousData)
+        print (self.data)
+        print (self.previousWam)
+        print (self.Wam)
+        print (self.previousWpm)
+        print (self.Wpm)
+
+
+        goodParameters = True
+        if self.indexForTemplate != 0:
+            if (self.previousData["A_a"] != self.data["A_a"]) or (self.previousData["A_p"] != self.data["A_p"]) or (self.previousData["w_p"] != self.data["w_p"]) or (self.previousData["w_a"] != self.data["w_a"]) or (self.previousWam != self.Wam) or (self.previousWpm != self.Wpm) or (self.previousFilterTypeSelected != self.filterTypeSelected):
+                goodParameters = False
+        return goodParameters
+
+
+
+
+    def printTransferFunction (self,theIndex):
         numerators= []
         denominators=[]
 
-        print (self.appTemplates[self.indexForTemplate].actual_num)
-        print(self.appTemplates[self.indexForTemplate].actual_den)
-
-        numToPrint = extra.printTransferFunctionInput(self.appTemplates[self.indexForTemplate].actual_num)
-        denToPrint = extra.printTransferFunctionInput(self.appTemplates[self.indexForTemplate].actual_den)
+        numToPrint = extra.printTransferFunctionInput(self.appTemplates[theIndex].actual_num)
+        denToPrint = extra.printTransferFunctionInput(self.appTemplates[theIndex].actual_den)
         self.hsLabelNum.setText(numToPrint)
         self.hsLabelDen.setText(denToPrint)
 
@@ -240,7 +324,10 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
 
 
     def addNewItemToFilterList (self):
-        self.filterDesignedLabelCombo.addItem(self.appTemplates[self.indexForTemplate].tag)
+
+        self.filterDesignedLabelCombo.clear()
+        for line in self.appTemplates:
+            self.filterDesignedLabelCombo.addItem(line.tag)
 
 
     # Funciones que grafican#
@@ -262,21 +349,21 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
         elif myPlotGraphicType == "Poles and Zeros":
             self.plotZerosAndPoles()
         elif myPlotGraphicType == "Impulse Response":
-            print("Voy a Funcion:" + myPlotGraphicType)
+            self.plotImpulseResponse()
         elif myPlotGraphicType == "Step Response":
-            print("Voy a Funcion:" + myPlotGraphicType)
+            self.plotStepResponse()
         elif myPlotGraphicType == "Maximum Q":
             print("Voy a Funcion:" + myPlotGraphicType)
+
+
 
     def plotMagnitude (self):
 
         if len(self.appTemplates) != 0:
-            print ("MAGNITUD")
             self.filterToolPlotTable.canvas.axes.clear()
 
             for template in self.appTemplates:
-
-                if template.should_be_drawn():
+                if template.should_be_drawn() == True:
                     if template.type == Type.LPN:
                         w, h = signal.freqs(template.normalized_num, template.normalized_den)#, worN=np.linspace(0, 1e2, 1000))
                     else:
@@ -434,6 +521,62 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
     def plotAttenuation (self):
 
         print ("Estoy aca")
+
+    def plotGroupDelay(self):
+        print("Estoy aca")
+
+    def plotImpulseResponse(self):
+
+        if len(self.appTemplates) != 0:
+            print ("IMPULSO")
+
+            self.filterToolPlotTable.canvas.axes.clear()
+
+            for template in self.appTemplates:
+
+                if template.should_be_drawn() == True:
+                    system = (template.actual_num,template.actual_den)
+                    t,y = signal.impulse(system)
+
+                    self.filterToolPlotTable.canvas.axes.plot(t, y)
+                    self.filterToolPlotTable.canvas.axes.grid(which='both', axis='both')
+                    self.filterToolPlotTable.canvas.axes.margins(0, 0.1)
+                    self.filterToolPlotTable.canvas.figure.tight_layout()
+
+            self.filterToolPlotTable.canvas.axes.axes.set_xlabel("Time [s]")
+            self.filterToolPlotTable.canvas.axes.axes.set_ylabel("Amplitude")
+            self.filterToolPlotTable.canvas.axes.title.set_text('Impulse Response')
+
+            self.filterToolPlotTable.canvas.figure.tight_layout()
+            self.filterToolPlotTable.canvas.draw()
+
+
+    def plotStepResponse(self):
+
+        if len(self.appTemplates) != 0:
+            print ("ESCALON")
+
+            self.filterToolPlotTable.canvas.axes.clear()
+
+            for template in self.appTemplates:
+
+                if template.should_be_drawn() == True:
+                    lti = signal.lti(template.actual_num,template.actual_den)
+                    t,y = signal.step(lti)
+
+                    self.filterToolPlotTable.canvas.axes.plot(t, y)
+                    self.filterToolPlotTable.canvas.axes.grid(which='both', axis='both')
+                    self.filterToolPlotTable.canvas.axes.margins(0, 0.1)
+                    self.filterToolPlotTable.canvas.figure.tight_layout()
+
+            self.filterToolPlotTable.canvas.axes.axes.set_xlabel("Time [s]")
+            self.filterToolPlotTable.canvas.axes.axes.set_ylabel("Amplitude")
+            self.filterToolPlotTable.canvas.axes.title.set_text('Step Response')
+
+            self.filterToolPlotTable.canvas.figure.tight_layout()
+            self.filterToolPlotTable.canvas.draw()
+
+
 
 
 

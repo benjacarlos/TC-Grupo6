@@ -1,6 +1,5 @@
 def printTransferFunctionInput(numberList):
     myNumString = ""
-    print ("IMPRIMO ACUIQ")
 
     # Representación en unicode para potencias de 2,3,4,5,6,7,8,9 #
 
@@ -18,5 +17,4 @@ def printTransferFunctionInput(numberList):
             myNumString += ("+" + (f"{(numberList[i]):.3}") + "S" + str(unicodes[len(numberList) - i - 1]))
         elif numberList[i] < 0:
             myNumString += ((f"{(numberList[i]):.3}") + "S" + str(unicodes[len(numberList) - i - 1]))
-    print (myNumString)
     return str(myNumString)
