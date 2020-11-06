@@ -3,6 +3,7 @@ from src.ui.filterToolWindow import Ui_filterToolWindow
 from scipy import signal
 from scipy import signal
 import matplotlib.pyplot as plt
+import extra
 
 from template import *
 
@@ -215,11 +216,23 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
             try:
                 self.appTemplates.append(template(self.filterTypeSelected, self.approxTypeSelected, self.data))
                 self.addNewItemToFilterList()
+                self.printTransferFunction()
                 self.indexForTemplate = (self.indexForTemplate + 1)
                 self.plotGraphic()
             except:
                 msgWrongInput.setText("Sorry, but it was not possible to calculate the filter based on your parameters. \n I am not smart enough or there is no possible filter. \n Please try with different values. ")
                 msgWrongInput.exec()
+
+    def printTransferFunction (self):
+        print ("ENTRO ACAAAAAAA")
+
+        print (self.appTemplates[self.indexForTemplate].actual_num)
+        print (self.appTemplates[self.indexForTemplate].actual_den)
+        numToPrint = extra.printTransferFunctionInput(self.appTemplates[self.indexForTemplate].actual_num)
+        denToPrint = extra.printTransferFunctionInput(self.appTemplates[self.indexForTemplate].actual_den)
+        self.hsLabelNum.setText(numToPrint)
+        self.hsLabelDen.setText(denToPrint)
+
 
 
 
