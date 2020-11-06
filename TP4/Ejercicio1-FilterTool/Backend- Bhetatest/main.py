@@ -107,16 +107,19 @@ if __name__ == '__main__':
     data = {
         "A_a" : 10,
         "A_p" : 3,
-        "w_p" : 300e3,
-        "w_a_m" : 100e3,
+        "w_p" : 210e3,
+        "w_a_m" : 150e3,
         "w_a" : 200e3,
         "w_p_m" : 20e3,
         "n" : 0,     #poner valor != 0 para harcodear
-        "Q_max": 0, #poner valor != 0 para harcodear
-        "d": 1 #coeficiente de desnormalización,  0<d<1   , por defecto 0
+        "Q_max": 1, #poner valor != 0 para harcodear
+        "d": 0 #coeficiente de desnormalización,  0<d<1   , por defecto 0
     }
-    temp_legen_3 = template(Type.BR, Approximation.Cheby2, data)
-    #temp_legen_3.type = Type.LPN
+
+    temp_legen_3 = template(Type.BR, Approximation.Legendre, data)
+    temp_legen_3.type = Type.LPN
+    plot(temp_legen_3)
+    temp_legen_3.type = Type.BR
     plot(temp_legen_3)
     #temp_legen_3.type = Type.BR
     #plot(temp_legen_3)
