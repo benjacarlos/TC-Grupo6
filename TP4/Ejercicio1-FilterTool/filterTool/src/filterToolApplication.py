@@ -25,8 +25,16 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
         self.acceptParametersStageOne.clicked.connect(self.stageOneGetFilterInputs)
         self.filterTypeOption.currentTextChanged.connect(self.showMoreOptions)
         self.plotTypeOptionInput.currentTextChanged.connect(self.plotGraphic)
+        self.plotAllCheckBox.stateChanged.connect(lambda: self.checkboxPlotAllResponse())
 
 
+    def checkboxPlotAllResponse(self):
+        print("LLego aca")
+        if len(self.appTemplates) != 0:
+            for template in self.appTemplates:
+                if template.tag != self.filterDesignedLabelCombo.currentText():
+                    print ("entro aqui")
+                    template.__visible = False
 
     def showMoreOptions (self):
         if str((self.filterTypeOption.currentText())) != "Group Delay":
