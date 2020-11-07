@@ -73,6 +73,7 @@ class template():
 
     def eliminate_sos(self,number):
         self.singularidades["sos"].pop(number)
+        self.number_of_sections =- 1
 
     def change_posc_sos(self,pos_a,pos_b):
         aux=self.singularidades["sos"][pos_b]
@@ -84,11 +85,13 @@ class template():
         d1, damp_coef, d2 = control.damp(control.TransferFunction(num, den))
         Q = 1 / 2 * damp_coef
         self.singularidades["sos"].insert(posc,list([num, den, Q]))
+        self.number_of_sections =+ 1
 
     def append_new_sos_tf(self,num,den,posc):
         d1, damp_coef, d2 = control.damp(control.TransferFunction(num, den))
         Q = 1 / 2 * damp_coef
         self.singularidades["sos"].insert(posc,list([num, den, Q]))
+        self.number_of_sections =+ 1
 
     def edit_sos_zpk(self,z,p,k,posc):
         num, den = signal.zpk2tf(np.array(list(z), dtype=np.complex128), np.array(list(p), dtype=np.complex128),np.asarray(list(k)))
