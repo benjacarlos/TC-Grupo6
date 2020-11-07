@@ -108,12 +108,12 @@ class template():
 
     def get_sos_data_zpk(self,posc):
         num =self.singularidades["sos"][posc][0]
-        den =self.singularidades["sos"][posc][0]
+        den =self.singularidades["sos"][posc][1]
         return signal.tf2zpk(num,den)
 
     def get_sos_data_tf(self,posc):
         num =self.singularidades["sos"][posc][0]
-        den =self.singularidades["sos"][posc][0]
+        den =self.singularidades["sos"][posc][1]
         return num, den
 
     def get_sos_q(self,posc):
@@ -302,7 +302,7 @@ class template():
 
             if self.approximation !=Approximation.Gauss:
                 self.get_w_a_n()
-                
+
             if self.type==Type.BR or self.type==Type.BP:
                 if self.data["n"] !=0:
                     self.data["n"]=self.data["n"]/2
