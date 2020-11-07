@@ -78,6 +78,10 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
 
     def showMoreOptions (self):
         if str((self.filterTypeOption.currentText())) != "Group Delay":
+            self.approxTypeOption.clear()
+            elementsToBeAdded = ["Bessel","Butterworth","Cauer","Cheby1","Cheby2","Legendre"]
+            for myElement in elementsToBeAdded:
+                self.approxTypeOption.addItem(myElement)
             self.filterParameters.setCurrentWidget(self.freqParameters)
             if str((self.filterTypeOption.currentText())) =="Low-Pass" or str((self.filterTypeOption.currentText()))=="High-Pass":
                 self.hiddenWidget.setCurrentWidget(self.dontShowHidden)
@@ -85,6 +89,12 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
                 self.hiddenWidget.setCurrentWidget(self.showHiddenWidget)
         elif str((self.filterTypeOption.currentText())) == "Group Delay":
                 self.filterParameters.setCurrentWidget(self.groupDelayParameters)
+                self.showJustGroupDelayOptions()
+
+    def showJustGroupDelayOptions(self):
+        self.approxTypeOption.clear()
+        self.approxTypeOption.addItem("Gauss")
+
 
     # Funciones que redirigen a pantallas#
     def goStageTwo (self):

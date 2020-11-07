@@ -98,11 +98,6 @@
       </item>
       <item>
        <property name="text">
-        <string>Gauss</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
         <string>Legendre</string>
        </property>
       </item>
