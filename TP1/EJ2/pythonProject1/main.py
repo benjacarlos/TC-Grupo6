@@ -221,7 +221,9 @@ class myPlot(QMainWindow, Ui_bodePlotterWindow):
                     self.plotTablePhase.canvas.axes.semilogx(myBode.w, myBode.phase, color=myBode.color, label=myBode.label)
 
                 self.plotTableGain.canvas.axes.grid(True,which="both")
-                self.plotTablePhase.canvas.axes.grid(True,which="both")
+
+
+
                 self.plotTableGain.canvas.axes.minorticks_on()  # Necesitamos esto para usar los ticks menores!
                 self.plotTablePhase.canvas.axes.minorticks_on()  # Necesitamos esto para usar los ticks menores!
                 self.plotTablePhase.canvas.figure.tight_layout()

@@ -197,6 +197,8 @@ if __name__ == '__main__':
 
     system = signal.TransferFunction (num,den)
 
+    print (num,den)
+    print (myZeros,myPoles)
     w,mag,phase = signal.bode(system)
 
 

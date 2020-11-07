@@ -1,5 +1,4 @@
 import sympy
-from sympy import atan,im,re
 import math
 from scipy import signal
 import numpy as np
@@ -15,10 +14,11 @@ from numpy import pi, log10, abs, logspace, diff, unwrap, angle
 # en polos y zeros, H(S) y H(jw)             #
 ##############################################
 
-def gaussFilter(A_p, A_a, w_p, w_a, w_max,wrg,tol,tau,n=0):
+def gauss(wrg,tol,tau,n=0):
 
+    tau = tau/1000
     tol = tol / 100
-    idealN=False
+    idealN = False
 
     if n != 0:
         nMax = n + 1
@@ -69,8 +69,8 @@ def gaussFilter(A_p, A_a, w_p, w_a, w_max,wrg,tol,tau,n=0):
         den = myDenominator.real[::-1]
 
         # Reemplazo s por tau.s para obtener el tau que quiero en el group_delay
-        for i in range(len(den)):
-            den[i] = (den[i] * (tau) ** (len(den) - i - 1))
+        #for i in range(len(den)):
+        #    den[i] = (den[i] * (tau) ** (len(den) - i - 1))
 
         # Obtengo retardo de grupo
         w, h = signal.freqs(num, den)
@@ -139,8 +139,8 @@ def gaussFilter(A_p, A_a, w_p, w_a, w_max,wrg,tol,tau,n=0):
             den = myDenominator.real[::-1]
 
             # Reemplazo s por tau.s para obtener el tau que quiero en el group_delay
-            for i in range(len(den)):
-                den[i] = (den[i] * (tau) ** (len(den) - i - 1))
+            #for i in range(len(den)):
+            #    den[i] = (den[i] * (tau) ** (len(den) - i - 1))
 
             # Obtengo retardo de grupo
             w, h = signal.freqs(num, den,(logspace(log10(wrg/1000), log10(wrg*100), 10000)))
@@ -166,7 +166,7 @@ def gaussFilter(A_p, A_a, w_p, w_a, w_max,wrg,tol,tau,n=0):
 
 
 
-    return [1],den,[],gaussFilterPoles,group_delay,w[1:],nMax
+    return [1],den,[],gaussFilterPoles,nMax#group_delay,w[1:],nMax
 
     #########################################
 
