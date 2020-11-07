@@ -282,3 +282,194 @@ Entonces obtenemos el rango dinámico como:
 \subsection{Conclusión}
 
 Si bien los resultados resultaron ser similares a la esperado, es indispensable mencionar que no es filtro preciso ya que los componentes utilizados fueron con tolerancias mayores a $5\%$ y no se utilizo prestes debido a la falta de un milímetro para conocer el valor utilizado. Por otro lado, se debe destacar la cualidad de esta celda de Rauch que se pudo obtener un elevado valor de factor de calidad debido a la realimentación positiva y negativa, pero se debe también tener cuidado ya que si los valores del ciclo de realimentación positiva no están bien diseñados, el circuito podría oscilar.
+
+
+\section{Introducción}
+
+En este apartado se realiza un análisis de la celda denominada Sedra-Ghorab-Martin para posteriormente diseñar, sintetizar y analizar un filtro activo empleando dicha celda con valores recomendados por la cátedra. La principal fuente de información será el paper denominado Optimum configurations for Single-Amplifier Biquadratic Filters.
+
+\section{Celda Sedra-Ghorab-Martin}
+
+La celda Sedra-Ghorab-Martin (en adelante, celda SGB) es un circuito creado en el año 1980 por los miembros de IEEE cuyos nombres se reflejan en el nombre de la celda. Dicho circuito se basa en el circuito pasabanda de Deliyannis, que se reproduce a continuación. Los miembros propusieron dos circuitos bicuadráticos (con funciones transferencia de denominador y numerador de orden dos) que hacen uso del circuito pasabanda de Deliyannis, que se reproduce a continuación:
+
+\begin{figure}[h]
+	\includegraphics[width=0.8\textwidth]{../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/Celda Deliyannis.png}
+	\centering
+	\caption{Celda Pasabanda de Deliyannis}
+	\label{Deliyannis pasabanda}
+\end{figure}
+
+Este circuito es posteriormente generalizado por Friend para poder construir cualquier tipo de configuración de filtro. El mismo se caracteriza por poseer una alta selectividad, empleando tanto realimentación positiva como negativa. Sin embargo, para poder sintetizar cualquier tipo de filtro es necesario cargar la red RC que se observa en la realimientación negativa del circuito, lo que hace poco realizable el diseño del mismo. Por otro lado, se encontró que realizando una transformación complementaria sobre el circuito de Deliyannis (esto es, intercambiando la salida del amplificador operacional por masa, y procediendo análogamente con la entrada inversora y no inversora del mismo) se deriva en el circuito de Sallen-Key manteniendo una realimentación positiva. Cabe destacar que esta transformación conserva la sensibilidad de los polos del circuito, pero no así con los ceros de transmisión del mismo. Aún así, se llegó a la conclusión de que es más ventajoso implementar las configuraciones de filtros en una celda Sallen-Key con realimentación positiva (exceptuando el caso de un filtro pasabanda).
+En la siguiente figura se muestra como aplicando transformación complementaria y cambios en la red RC se obtienen los distintos circuitos:
+
+\begin{figure}[h]
+	\includegraphics[width=0.8\textwidth]{../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/Transformaciones SGB.png}
+	\centering
+	\caption{Transformaciones de los circuitos }
+	\label{transSGM}
+\end{figure}
+
+Los circuitos de la figura \ref{transSGM} (b) y \ref{transSGM} (d) son llamados EPF (Enhanced positive feedback), y son la base de la celda SGB. Esta característica esta dada por un coeficiente K $>$ 1. La ecuación que describe el comportamiento de los cuatro circuitos mostrado anteriormente es:
+
+\begin{equation}
+	\frac{C}{G} = \frac{2Q_0}{\omega_0}
+	\label{eq C/G}
+\end{equation}
+
+\begin{equation}
+	K - 1 = \frac{1}{2Q_0^2} (1-\frac{Q_0}{Q})
+	\label{eq K-1}
+\end{equation}
+
+Donde $Q_0$ es un parámetro de diseño que cumple $Q>Q_0$. De esta forma, los circuitos del tipo EPF permiten
+implementar filtros con la siguiente función transferencia de segundo orden:
+
+\begin{equation}
+	H(s) = \frac{n_2 s^2 + n_1 s + n_0}{s^2 + s (\frac{\omega_0}{Q}) + \omega_0^2}
+	\label{eq transferencia general}
+\end{equation}
+
+Siendo los coeficientes $n_i$ los ceros de transmision que determinan el tipo de filtro que se implementa. Para poder lograr esto sin afectar la ubicacion de los polos se necesita que aquellos componentes que se encuentren conectados a masa sean desconectados de la misma, total o parcialmente. De esta forma se obtienen los circcuitos HPB(High-Pass Biquad) y LPB(Low-Pass Biquad) que se mostrarán a continuación:
+
+\begin{figure}[h]
+	\includegraphics[width=0.6\textwidth]{../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/HP biquad.png}
+	\centering
+	\caption{High-pass biquad}
+	\label{HPB}
+\end{figure}
+
+\begin{figure}[h]
+	\includegraphics[width=0.6\textwidth]{../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/LP biquad.png}
+	\centering
+	\caption{Low-pass biquad}
+	\label{LPB}
+\end{figure}
+
+\section{Análisis matemático}
+
+A partir de la ecuacion \ref{eq transferencia general} se puede ver que se deben hallar los coeficientes $n_i$, los cuales están determinados por el tipo de circuito que se desea implementar. En nuestro caso se trata de un HPB por lo que las ecuaciones serán las siguientes:
+
+\subsubsection*{Caso HPB}
+\begin{equation}
+	n_0= \frac{G_1(G_{41}+G_{42} )}{C_3 ( C_{21} + C_{22} )} \left( \frac{G_{42}}{G_{41}+G_{42}} . \frac{G_{a1}+G_{a2}+G_{b}}{G_b} - \frac{G_{a2}}{G_b} \right)
+	\label{coef n0 HPB}
+\end{equation}
+
+\begin{equation}
+	n_1 = \frac{G_{a1}+G_{a2}+G_b}{G_b} . G_{42}. \left( \frac{1}{C_{21} + C_{22}} + \frac{1}{C_3} \right) - \frac{G_{a2}}{G_b} \left[ \frac{G_1}{C_{21} + C_{22}} + (G_{41}+G_{42}) \left( \frac{1}{C_{21} + C_{22}} + \frac{1}{C_3} \right) \right]
+	\label{coef n1 HPB}
+\end{equation}
+
+\begin{equation}
+	n_2 = \frac{G_{a1}+G_{a2}+G_b}{G_b} . \frac{C_{22}}{C_{21} + C_{22}} - \frac{G_{a2}}{G_b}
+	\label{coef n2 HPB}
+\end{equation}
+
+
+\subsubsection*{Caso LPB}
+
+\begin{equation}
+	n_0= \frac{G_3(G_{21}+G_{22} )}{C_1 ( C_{41} + C_{42} )} \left( \frac{G_{22}}{G_{21}+G_{22}} . \frac{G_{a1}+G_{a2}+G_{b}}{G_b} - \frac{G_{a2}}{G_b} \right)
+	\label{coef n0 LPB}
+\end{equation}
+
+\begin{equation}
+	n_1 = \frac{G_{a1}+G_{a2}+G_b}{G_b}. G_{42}. \frac{C_{42}}{C_{41}+C_{42}} . \frac{G_{21} + G_{22} + G_3}{C_1} - \frac{G_{a2}}{G_b} . \left( \frac{G_3}{C_{41} + C_{42}} + \frac{G_{21}+G_{22} + G_3}{C_1}\right)
+	\label{coef n1 LPB}
+\end{equation}
+
+\begin{equation}
+	n_2 = \frac{G_{a1}+G_{a2}+G_b}{G_b} . \frac{C_{22}}{C_{21} + C_{22}} - \frac{G_{a2}}{G_b}
+	\label{coef n2 LPB}
+\end{equation}
+
+En pocas palabras hay que tenes en cuenta los sub-índices en las ecuaciones ya que son complementarias entre si. Para los  denominadores se toman las siguientes ecuaciones características:
+
+\subsubsection*{Caso HPB}
+
+\begin{equation}
+\omega_0 = \frac{G_1 ( G_{41} + G_{42} )}{C_3 ( C_{21} + C_{22} ) }
+\label{w0 HPB}
+\end{equation}
+
+\begin{equation}
+\frac{\omega_0}{Q} = (G_{41}+G_{42}). \left( \frac{1}{C_{21} + C_{22}} + \frac{1}{C_3} \right) - \frac{G_1}{C_{21} + C_{22}} . \frac{G_{a1}+G_{a2}}{G_b}
+\label{w/Q HPB}
+\end{equation}
+
+\subsubsection*{Caso LPB}
+
+\begin{equation}
+\omega_0 = \frac{G_3 ( G_{21} + G_{22} )}{C_1 ( C_{41} + C_{42} ) }
+\label{w0 LPB}
+\end{equation}
+
+\begin{equation}
+\frac{\omega_0}{Q} = \frac{G_{21} + G_{22} + G_3}{C_1} - \frac{G_3}{G_{41}+G_{42}} . \frac{G_{a1}+G_{a2}}{G_b}
+\label{w/Q LPB}
+\end{equation}
+
+\subsection{Sensibilidades}
+
+La sensibilidades del circuito se pueden diferenciar a grandes rasgos por dos muy importantes, las que corresponden a componentes pasivos (resistores y capacitores) y las que corresponden a componentes activos (amplificadores operacionales). El valor de $Q_0$ determina el balance entre los dos tipos de sensibilidades, por lo que su elección debe ser llevada a cabo considerando los valores de dispersión de ambos grupos de componentes. La ecuación que caracteriza $Q_0$ es la siguiente:
+
+\begin{equation}
+Q_0 = \left[ |A(s_0)| ^2 . \frac{8\sigma_R^2 + \sigma_C^2}{8\sigma
+_A^2} \right] ^\frac{1}{4}
+\label{eq Q0}
+\end{equation}
+Donde $\sigma_R$ es la variación de los resistores, $\sigma_C$ es la variación de los capacitores y $\sigma_A$ es la variación de la ganancia del Op-Amp. Mientras que $A(s_0)$ es la ganancia del amplificador operacional en la frecuencia nominal del polo s0, siendo esta
+última:
+
+\begin{equation}
+s_0 = -\frac{\omega_0}{2Q} + j\omega_0 \sqrt{1-\frac{1}{4Q^2}}
+\label{eq s0}
+\end{equation}
+
+A partir de estas ecuaciones es posible determinar las sensibilidades con respecto a cada componente en ambos casos, siendo las sensibilidades correspondientes las mostradas en la siguiente tabla:
+
+\begin{table}[h]
+\begin{tabular}{@{}|c|c|c|c|c|c|@{}}
+\toprule
+\textbf{HPB} & \textbf{$\omega_0$} & \textbf{Q}                         & \textbf{LPB} & \textbf{$\omega_0$} & \textbf{Q}                         \\ 
+\midrule
+$R_1$         & $-\frac{1}{2}$                      & $-(\frac{Q}{Q_0} - \frac{1}{2})$    & $C_1$         & $-\frac{1}{2}$                      & $-(\frac{Q}{Q_0} - \frac{1}{2})$    \\
+$C_2$         & $-\frac{1}{2}$                      & $-\frac{1}{2} (\frac{Q}{Q_0} - 1)$ & $R_2$         & $-\frac{1}{2}$                      & $-\frac{1}{2} (\frac{Q}{Q_0} - 1)$ \\
+$C_3$         & $-\frac{1}{2}$                      & $\frac{1}{2} (\frac{Q}{Q_0} - 1)$  & $R_3$          & $-\frac{1}{2}$                      & $\frac{1}{2} (\frac{Q}{Q_0} - 1)$  \\
+$R_4$         & $-\frac{1}{2}$                      & $(\frac{Q}{Q_0} - \frac{1}{2})$     & $C_4$         & $-\frac{1}{2}$                      & $(\frac{Q}{Q_0} - \frac{1}{2})$     \\
+$R_a$         & 0                                   & $- (\frac{Q}{Q_0} - 1)$            & $R_a$         & 0                                   & $- (\frac{Q}{Q_0} - 1)$            \\
+$R_b$         & 0                                   & $ (\frac{Q}{Q_0} - 1)$             & $R_b$         & 0                                   & $ (\frac{Q}{Q_0} - 1)$            
+\end{tabular}
+\centering
+\caption{Tabla de sensibilidades}
+\label{tabla sensibilidades}
+\end{table}
+
+\subsection{Aproximación del filtro}
+
+La cátedra nos dispuso de una plantilla para implementar un filtro pasa-altos activo. Para tener un margen de tolerancia se usaron valores más restrictivos mostrados en la siguiente tabla:
+
+\begin{table}[h]
+\begin{tabular}{@{}|c|c|c|@{}}
+\toprule
+\textbf{Parámetro} & \textbf{Valor propuesto} & \textbf{Valor elegido} \\ \midrule
+$f_a$              & $13,3k\Omega$              & $13,5k\Omega$            \\
+$f_p$              & $26,6k\Omega$              & $27k\Omega$              \\
+$A_a$              & $40dB$                     & $45dB$      			   \\
+$A_p$              & $2dB$                      & $1,5dB$				   \\
+$Z_{in}$           & $\geq50k\Omega$            & $\geq50k\Omega$           
+\end{tabular}
+\centering
+\caption{Valores propuesto por la cátedra y elegido por nosotros}
+\label{tabla componentes}
+\end{table}
+
+El primer paso para el diseño del mismo es normalizar la plantilla a una de un pasa-altos, con frecuencia angular pasante unitaria ($\omega_p =1$). Una vez hecho esto se procede a aplicar la aproximación de Cauer sobre dicha plantilla.
+La aproximación de Cauer es una aproximación por funciones elípticas, con riple constante tanto en la banda de paso como la de atenuación. 
+
+
+
+\subsection{Etapa I}
+
+\subsection{Etapa II}
+
