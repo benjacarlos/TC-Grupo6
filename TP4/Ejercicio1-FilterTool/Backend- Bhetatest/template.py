@@ -56,6 +56,7 @@ class template():
         self.actual_displayed=Type.LP   #what is actually being displayed
         self.__att_mode=False
         #self.singularidades = np.array([[1],[1],[1]])
+
         self.singularidades = {
             "polos": list(),
             "ceros": list(),
@@ -253,13 +254,6 @@ class template():
             self.singularidades["sos"].sort(key=lambda q: q[2][0])
 
 
-
-
-
-
-    def recalculate_filter(self):
-        print('dummy')
-
     def init_approx(self):
         self.get_w_a_n()
 
@@ -384,8 +378,19 @@ class template():
                                                                 self.bw)
                 self.actual_z, self.actual_p, self.actual_k = signal.lp2bs_zpk(self.normalized_z, self.normalized_p,
                                                                                self.normalized_k, self.wo, self.bw)
+
         self.actual_n=len(self.actual_p)
-        self.get_sos()
+        print(self.actual_n)
+        need_recalc=False
+        if self.data["n_max"] !=0: #Me fijo si hay una restricción
+            if self.actual_n>self.data["n_max"]: #Me fijo si con el filtro final violo la restriccion
+                self.data["n"]=self.n #Guardo como dato de input el ultimo n usado para el normalizado
+                self.data["n"]-=1 #Bajo n en uno
+                need_recalc = True #para la recursividad
+                self.init_approx() #vuelvo a correr la simulación con un n hardcodeado
+
+        if not need_recalc:
+            self.get_sos()
 
     def make_me_a_LP(self):
         self.actual_num, self.actual_dem, =signal.lp2lp(self.normalized_num,self.normalized_den,self.w_p)

@@ -123,16 +123,17 @@ if __name__ == '__main__':
     data = {
         "A_a" : 40,
         "A_p" : 3,
-        "w_a" : 210e3,
+        "w_a" : 220e3,
         "w_p_m" : 150e3,
         "w_p" : 200e3,
         "w_a_m" : 20e3,
         "n" : 0,     #poner valor != 0 para harcodear
+        "n_max": 9, #lo implementé aparte porque sino se pisa con el hardcodeado
         "Q_max": 0, #poner valor != 0 para harcodear
         "d": 0 #coeficiente de desnormalización,  0<d<1   , por defecto 0
     }
 
-    temp_legen_3 = template(Type.BP, Approximation.Cheby2, data)
+    temp_legen_3 = template(Type.BP, Approximation.Legendre, data)
     temp_legen_3.type = Type.LPN
     plot(temp_legen_3)
     temp_legen_3.type = Type.BP
