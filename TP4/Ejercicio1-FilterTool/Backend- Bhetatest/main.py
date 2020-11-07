@@ -191,7 +191,8 @@ if __name__ == '__main__':
         "n" : 0,     #poner valor != 0 para harcodear
         "n_max": 0, #lo implementé aparte porque sino se pisa con el hardcodeado
         "Q_max": 0, #poner valor != 0 para harcodear
-        "d": 0 #coeficiente de desnormalización,  0<d<1   , por defecto 0
+        "d": 0, #coeficiente de desnormalización,  0<d<1   , por defecto 0
+        "n_min":0
     }
 
     temp_legen_3 = template(Type.BR, Approximation.Butterworth, data)

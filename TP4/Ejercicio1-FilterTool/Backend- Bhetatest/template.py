@@ -54,6 +54,7 @@ class template():
         self.__visible=True            #if its going to be displayed
         self.actual_displayed=Type.LP   #what is actually being displayed
         self.__att_mode=False
+        self.first_calculation=True
         #self.singularidades = np.array([[1],[1],[1]])
 
         self.singularidades = {
@@ -284,8 +285,9 @@ class template():
         recalculate=False
         if self.data["Q_max"] !=0:
             for x in self.singularidades["sos"]:
-                if x[2][0] >= self.data["Q_max"] :  #Q mayor al permitido
+                if x[2][0] > self.data["Q_max"] :  #Q mayor al permitido
                     recalculate=True
+                    break
 
         if recalculate:
             self.data["n"]=self.n-1 #hardcodeo el n por uno menos restrictivo
@@ -442,13 +444,21 @@ class template():
         print(self.actual_n)
 
         need_recalc=False
+        if self.first_calculation == True and self.data["n"] != 0:
+            if self.data["n_max"] !=0: #Me fijo si hay una restricción
+                if self.actual_n>self.data["n_max"]: #Me fijo si con el filtro final violo la restriccion
+                    self.data["n"]=self.n #Guardo como dato de input el ultimo n usado para el normalizado
+                    self.data["n"]-=1 #Bajo n en uno
+                    need_recalc = True #para la recursividad
+                    self.first_calculation=False
+                    self.init_approx() #vuelvo a correr la simulación con un n hardcodeado
 
-        if self.data["n_max"] !=0: #Me fijo si hay una restricción
-            if self.actual_n>self.data["n_max"]: #Me fijo si con el filtro final violo la restriccion
-                self.data["n"]=self.n #Guardo como dato de input el ultimo n usado para el normalizado
-                self.data["n"]-=1 #Bajo n en uno
-                need_recalc = True #para la recursividad
-                self.init_approx() #vuelvo a correr la simulación con un n hardcodeado
+            if self.data["n_min"] !=0: #Me fijo si hay una restricción
+                if self.actual_n<self.data["n_min"]: #Me fijo si con el filtro final violo la restriccion
+                    self.data["n"]=self.data["n_min"] #Guardo como dato de input el ultimo n usado para el normalizado
+                    need_recalc = True #para la recursividad
+                    self.first_calculation = False
+                    self.init_approx() #vuelvo a correr la simulación con un n hardcodeado
 
         if not need_recalc:
             self.get_sos() #calculo sos para n valido
