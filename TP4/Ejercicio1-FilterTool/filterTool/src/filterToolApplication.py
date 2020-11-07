@@ -122,7 +122,10 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
             "w_p_m": 0,
             "n": 0,  # poner valor != 0 para harcodear
             "Q_max": 0,  # poner valor != 0 para harcodear
-            "d": 0  # coeficiente de desnormalización,  0<d<1   , por defecto 0
+            "d": 0,  # coeficiente de desnormalización,  0<d<1   , por defecto 0
+            "tau":0,
+            "wrg":0,
+            "tol":0
         }
 
         msgWrongInput = QMessageBox()
@@ -246,7 +249,20 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
                 ErrorMessage = ErrorMessage + "WpM must be a valid number \n"
             print ("Estoy en BR")
         elif str(self.filterTypeOption.currentText()) == "Group Delay":
-            print ("Estoy en GD")
+            self.filterTypeSelected = Type.LPGD
+            ErrorMessage = ""
+            try:
+                self.data["tau"] = float(self.tauInput.text())
+            except:
+                ErrorMessage = ErrorMessage + "Tau must be a valid number\n"
+            try:
+                self.data["wrg"] = float(self.wrgInput.text())
+            except:
+                ErrorMessage = ErrorMessage + "Wrg must be a valid number \n"
+            try:
+                self.data["tol"] = float(self.tolInput.text())
+            except:
+                ErrorMessage = ErrorMessage + "Tol must be a valid number \n"
 
         try:
             self.data["n"] = int (self.filterOrderInput.text())
@@ -276,6 +292,7 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
                     self.addNewItemToFilterList()
                     self.printTransferFunction(self.indexForTemplate)
                     self.indexForTemplate = (self.indexForTemplate + 1)
+                    print ("LLEGUE BIEN MA")
                     self.plotGraphic()
                 else:
                     self.hiddenWarning.setCurrentWidget(self.warningNotHidden)
@@ -303,7 +320,7 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
         self.appTemplates =[]
 
     def validateParametersNotChanged (self):
-        print ("VALIDANDO")
+
         print (self.previousData)
         print (self.data)
         print (self.previousWam)
@@ -375,16 +392,17 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
             for template in self.appTemplates:
                 if template.should_be_drawn() == True:
                     if template.type == Type.LPN:
-                        w, h = signal.freqs(template.normalized_num, template.normalized_den)#, worN=np.linspace(0, 1e2, 1000))
+                        w, h = signal.freqs(template.normalized_num, template.normalized_den)
                     else:
-                        w, h = signal.freqs(template.actual_num, template.actual_den)#, worN=np.linspace(1e4, 1e6, 1000))
+                        w, h = signal.freqs(template.actual_num, template.actual_den)
 
                     self.filterToolPlotTable.canvas.axes.semilogx(w, 20 * np.log10(abs(h)), label='n')
-                    self.filterToolPlotTable.canvas.axes.grid(which='both', axis='both')
-                    self.filterToolPlotTable.canvas.axes.margins(0, 0.1)
+                    self.filterToolPlotTable.canvas.axes.grid(True, which='both')
+                    #self.filterToolPlotTable.canvas.axes.minoticks_on()
+                    #self.filterToolPlotTable.canvas.axes.margins(0, 0.1)
                     self.filterToolPlotTable.canvas.figure.tight_layout()
 
-                    if template.should_draw_template():
+                    if template.should_draw_template() and template.approximation != Approximation.Gauss:
                         if template.type == Type.LP:
                             rectangle_p = plt.Rectangle((0, -template.data["A_p"]), template.data["w_p"],
                                                         -template.data["A_a"] - 100, fc='violet', alpha=0.8)
@@ -416,6 +434,7 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
 
                             self.filterToolPlotTable.canvas.figure.gca().add_patch(rectangle_p1)
 
+
                         if template.type == Type.BR:
                             rectangle_p = plt.Rectangle((0, -template.data["A_p"]), template.data["w_p_m"],
                                                         template.data["A_a"] - 300, fc='violet', alpha=0.8)
@@ -431,11 +450,12 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
                         self.filterToolPlotTable.canvas.figure.gca().add_patch(rectangle_p)
                         self.filterToolPlotTable.canvas.figure.gca().add_patch(rectangle_a)
 
+
             self.filterToolPlotTable.canvas.axes.axes.set_xlabel("Frequency [Hz]")
             self.filterToolPlotTable.canvas.axes.axes.set_ylabel("Gain [DB]")
             self.filterToolPlotTable.canvas.axes.title.set_text('Frequency Response - Amplitude')
 
-            self.filterToolPlotTable.canvas.figure.tight_layout()
+            #self.filterToolPlotTable.canvas.figure.tight_layout()
             self.filterToolPlotTable.canvas.draw()
 
 
@@ -461,6 +481,7 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
                     self.filterToolPlotTable.canvas.axes.margins(0, 0.1)
                     self.filterToolPlotTable.canvas.figure.tight_layout()
 
+            #self.filterToolPlotTable.canvas.axes.grid(which='both', axis='both')
             self.filterToolPlotTable.canvas.axes.axes.set_xlabel("Frequency [Hz]")
             self.filterToolPlotTable.canvas.axes.axes.set_ylabel("Phase [°]")
             self.filterToolPlotTable.canvas.axes.title.set_text('Frequency Response - Phase')
@@ -552,7 +573,7 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
                     self.filterToolPlotTable.canvas.axes.grid(which='both', axis='both')
                     self.filterToolPlotTable.canvas.axes.margins(0, 0.1)
                     self.filterToolPlotTable.canvas.figure.tight_layout()
-
+            self.filterToolPlotTable.canvas.axes.grid(which='both', axis='both')
             self.filterToolPlotTable.canvas.axes.axes.set_xlabel("Time [s]")
             self.filterToolPlotTable.canvas.axes.axes.set_ylabel("Amplitude")
             self.filterToolPlotTable.canvas.axes.title.set_text('Impulse Response')
@@ -579,6 +600,7 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
                     self.filterToolPlotTable.canvas.axes.margins(0, 0.1)
                     self.filterToolPlotTable.canvas.figure.tight_layout()
 
+            self.filterToolPlotTable.canvas.axes.grid(which='both', axis='both')
             self.filterToolPlotTable.canvas.axes.axes.set_xlabel("Time [s]")
             self.filterToolPlotTable.canvas.axes.axes.set_ylabel("Amplitude")
             self.filterToolPlotTable.canvas.axes.title.set_text('Step Response')

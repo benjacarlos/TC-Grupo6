@@ -147,7 +147,9 @@ class template():
 
     def init_approx(self):
         if self.data != 0:
-            self.get_w_a_n()
+
+            if self.approximation !=Approximation.Gauss:
+                self.get_w_a_n()
 
             if self.approximation==Approximation.Legendre:
                 self.normalized_z, self.normalized_p, self.normalized_k,self.n=legendre.legendre(self.data["A_p"],self.data["A_a"],1,self.w_a_n,self.data["n"],self.data["d"]) #dummy wmax
@@ -271,6 +273,15 @@ class template():
                     self.actual_z, self.actual_p, self.actual_k = signal.lp2bs_zpk(self.normalized_z, self.normalized_p,
                                                                                    self.normalized_k, self.wo, self.bw)
 
+            if self.approximation == Approximation.Gauss:
+                print ("VOY A INICIALIZAR GAUSS")
+                self.actual_num, self.actual_den, self.actual_z, self.actual_p, self.n = gauss.gauss(self.data["wrg"],self.data["tol"],self.data["tau"])
+                print(self.actual_num, self.actual_den, self.actual_z, self.actual_p, self.n)
+
+                print ("INICIALICE OK")
+
+
+
         #### DESPUES AGREGAMOS LOS TAGS ADICIONALES#
         if self.type == Type.LP:
             filterString = "Low-Pass"
@@ -280,6 +291,8 @@ class template():
             filterString = "Band-Pass"
         elif self.type == Type.BR:
             filterString = "Band-Rejection"
+        elif self.type ==Type.LPGD:
+            filterString = "Low-Pass (GD)"
 
         if self.approximation == Approximation.Legendre:
             approxString = "Legendre"
@@ -340,6 +353,7 @@ class Type(Enum):
     BR=3
     PT=4
     LPN=5
+    LPGD=6
 
 class Approximation(Enum):
     Legendre = 0
