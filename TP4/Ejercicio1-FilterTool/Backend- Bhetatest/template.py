@@ -61,7 +61,6 @@ class template():
             "ceros": list(),
             "ganancias": list(),
             "sos": list(),
-
         }
 
         self.init_approx()
@@ -197,17 +196,39 @@ class template():
         while len(auxiliar_z) > 0:
             aux=auxiliar_z.pop(0) #saco un cero de la lista de ceros
             for x in auxiliar_z: #busco su conjugado
+                if x==aux:
+                    self.singularidades["ceros"].append([aux]*2) #appendeo ceros conjugados
+                    #self.singularidades["ceros"].insert(self.singularidades["ceros"].index(x),x)
+                    auxiliar_z.remove(x) #remuevo el conjugado de la lista
+                    break
                 if x==np.conjugate(aux):
                     self.singularidades["ceros"].append({aux,x}) #appendeo ceros conjugados
                     auxiliar_z.remove(x) #remuevo el conjugado de la lista
                     break
+            if len(auxiliar_z)==0 and len(self.actual_z)%2==1:
+                self.singularidades["ceros"].append({aux})
+
+        #Hago modificaciones para que me queden las listas que contienen los polos y ceros de igual longitud
+        if len(self.singularidades["ceros"]) != len(self.singularidades["polos"]):
+            delta=len(self.singularidades["polos"]) - len(self.singularidades["ceros"])
+            if delta>0:
+                while delta:
+                    self.singularidades["ceros"].append({})
+                    delta-=1
+            else:
+                delta=abs(delta)
+                while delta:
+                    self.singularidades["polos"].append({})
+                    delta-=1
 
 
         index=0
         while self.number_of_sections > index:
             if not self.singularidades["ceros"]:
-                sos_to_be_append=signal.zpk2tf(1,np.asarray(self.singularidades["polos"][index]),np.asarray(self.singularidades["ganancias"][index]))
-                self.singularidades["sos"].append({sos_to_be_append})
+                num,den=signal.zpk2tf(1,np.array(list(self.singularidades["polos"][index]),dtype=np.complex128),np.asarray(list(self.singularidades["ganancias"][index])))
+                d1,damp_coef,d2=control.damp(control.TransferFunction(num,den))
+                Q=1/2*damp_coef
+                self.singularidades["sos"].append(list([num,den,Q]))
             else:
                 num,den=signal.zpk2tf(np.array(list(self.singularidades["ceros"][index]),dtype=np.complex128),np.array(list(self.singularidades["polos"][index]),dtype=np.complex128),np.asarray(list(self.singularidades["ganancias"][index])))
                 d1,damp_coef,d2=control.damp(control.TransferFunction(num,den))

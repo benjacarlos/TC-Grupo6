@@ -16,6 +16,24 @@ import cauer as cauer
 import gauss as gauss
 
 #dummy functions
+def plot_sos(template):
+    hs=list()
+    for x in range(template.number_of_sections):
+        hs.append(signal.freqs(template.singularidades["sos"][x][0], template.singularidades["sos"][x][1],worN=np.linspace(1e4, 1e6, 1000)))
+        #hs.append({signal.freqs(template.singularidades["sos"][0], template.singularidades["sos"][1], worN=np.linspace(1e4, 1e6, 1000))})
+
+    index=1
+    if template.number_of_sections > 1:
+        h = np.multiply(hs[0][1],hs[1][1])
+        while template.number_of_sections > index+1:
+            h=np.multiply(h,hs[index+1][1])
+            index +=1
+    else:
+        h=hs[0][1]
+
+    plt.semilogx(hs[0][0], 20 * np.log10(abs(h)), label='n1',linestyle='--',color='red')
+
+
 def plot(template):
     if template.should_be_drawn():
 
@@ -24,7 +42,12 @@ def plot(template):
         else:
             w, h = signal.freqs(template.actual_num, template.actual_den, worN=np.linspace(1e4, 1e6, 1000))
 
+
         plt.semilogx(w, 20 * np.log10(abs(h)), label='n')
+
+        if not template.type == Type.LPN: #para poder ver si usando sos cumplo plantilla
+            plot_sos(template)
+
 
         plt.title('Elliptic filter frequency response (rp=5, rs=40)')
         plt.xlabel('Frequency [radians / second]')
@@ -96,30 +119,23 @@ if __name__ == '__main__':
     # plot(temp_legen_2)
     # data.clear()
 
-    # data = {
-    #     "A_a" : 30,
-    #     "A_p" : 3,
-    #     "w_a" : 120e3,
-    #     "w_a_m" : 80e3,
-    #     "w_p" : 150e3,
-    #     "w_p_m" : 50e3
-    # }
+
     data = {
-        "A_a" : 10,
+        "A_a" : 40,
         "A_p" : 3,
-        "w_p" : 210e3,
-        "w_a_m" : 150e3,
-        "w_a" : 200e3,
-        "w_p_m" : 20e3,
+        "w_a" : 210e3,
+        "w_p_m" : 150e3,
+        "w_p" : 200e3,
+        "w_a_m" : 20e3,
         "n" : 0,     #poner valor != 0 para harcodear
-        "Q_max": 1, #poner valor != 0 para harcodear
+        "Q_max": 0, #poner valor != 0 para harcodear
         "d": 0 #coeficiente de desnormalización,  0<d<1   , por defecto 0
     }
 
-    temp_legen_3 = template(Type.BR, Approximation.Legendre, data)
+    temp_legen_3 = template(Type.BP, Approximation.Cheby2, data)
     temp_legen_3.type = Type.LPN
     plot(temp_legen_3)
-    temp_legen_3.type = Type.BR
+    temp_legen_3.type = Type.BP
     plot(temp_legen_3)
     #temp_legen_3.type = Type.BR
     #plot(temp_legen_3)
