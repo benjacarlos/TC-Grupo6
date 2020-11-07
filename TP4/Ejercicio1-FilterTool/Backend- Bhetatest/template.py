@@ -12,8 +12,6 @@ from scipy import signal
 import numpy as np
 
 
-#implementar un diccionario
-##vamos a tener que usar un container para mandar todos los datos
 class template():
     def __init__(self,type,approximation,data=0):
         #type
@@ -56,6 +54,7 @@ class template():
         self.actual_displayed=Type.LP   #what is actually being displayed
         self.__att_mode=False
         #self.singularidades = np.array([[1],[1],[1]])
+
         self.singularidades = {
             "polos": list(),
             "ceros": list(),
@@ -71,6 +70,50 @@ class template():
         return self.__visible
     def should_be_att(self):
         return self.__att_mode
+
+    def eliminate_sos(self,number):
+        self.singularidades["sos"].pop(number)
+
+    def change_posc_sos(self,pos_a,pos_b):
+        aux=self.singularidades["sos"][pos_b]
+        self.singularidades["sos"][pos_b]=self.singularidades["sos"][pos_a]
+        self.singularidades["sos"][pos_a]=aux
+
+    def append_new_sos_zpk(self,z,p,k,posc):
+        num, den = signal.zpk2tf(np.array(list(z), dtype=np.complex128), np.array(list(p), dtype=np.complex128), np.asarray(list(k)))
+        d1, damp_coef, d2 = control.damp(control.TransferFunction(num, den))
+        Q = 1 / 2 * damp_coef
+        self.singularidades["sos"].insert(posc,list([num, den, Q]))
+
+    def append_new_sos_tf(self,num,den,posc):
+        d1, damp_coef, d2 = control.damp(control.TransferFunction(num, den))
+        Q = 1 / 2 * damp_coef
+        self.singularidades["sos"].insert(posc,list([num, den, Q]))
+
+    def edit_sos_zpk(self,z,p,k,posc):
+        num, den = signal.zpk2tf(np.array(list(z), dtype=np.complex128), np.array(list(p), dtype=np.complex128),np.asarray(list(k)))
+        d1, damp_coef, d2 = control.damp(control.TransferFunction(num, den))
+        Q = 1 / 2 * damp_coef
+        self.singularidades["sos"][posc]=list([num, den, Q])
+
+    def edit_sos_tf(self, num, den,posc):
+        d1, damp_coef, d2 = control.damp(control.TransferFunction(num, den))
+        Q = 1 / 2 * damp_coef
+        self.singularidades["sos"][posc]=list([num, den, Q])
+
+    def get_sos_data_zpk(self,posc):
+        num =self.singularidades["sos"][posc][0]
+        den =self.singularidades["sos"][posc][0]
+        return signal.tf2zpk(num,den)
+
+    def get_sos_data_tf(self,posc):
+        num =self.singularidades["sos"][posc][0]
+        den =self.singularidades["sos"][posc][0]
+        return num, den
+
+    def get_sos_q(self,posc):
+        return self.singularidades["sos"][posc][2][0]
+
 
     def change_template_visibility(self,bool):
          self.__template_flag=bool
@@ -152,11 +195,6 @@ class template():
 
         self.k=1/self.w_a_n
 
-    def split_list(self,alist, wanted_parts=1):
-        length = len(alist)
-        return [alist[i * length // wanted_parts: (i + 1) * length // wanted_parts]
-                for i in range(wanted_parts)]
-
     def get_sos(self):
         #me fijo la cantidad de secciones para el filtro desnormalizado buscado
         self.number_of_sections=int(np.floor(self.actual_n/2)+self.actual_n%2)
@@ -197,15 +235,14 @@ class template():
             aux=auxiliar_z.pop(0) #saco un cero de la lista de ceros
             for x in auxiliar_z: #busco su conjugado
                 if x==aux:
-                    self.singularidades["ceros"].append([aux]*2) #appendeo ceros conjugados
-                    #self.singularidades["ceros"].insert(self.singularidades["ceros"].index(x),x)
-                    auxiliar_z.remove(x) #remuevo el conjugado de la lista
+                    self.singularidades["ceros"].append([aux]*2) #appendeo ceros dobles
+                    auxiliar_z.remove(x) #remuevo el cero de la lista
                     break
                 if x==np.conjugate(aux):
                     self.singularidades["ceros"].append({aux,x}) #appendeo ceros conjugados
                     auxiliar_z.remove(x) #remuevo el conjugado de la lista
                     break
-            if len(auxiliar_z)==0 and len(self.actual_z)%2==1:
+            if len(auxiliar_z)==0 and len(self.actual_z)%2==1: #appendeo el cero suelto
                 self.singularidades["ceros"].append({aux})
 
         #Hago modificaciones para que me queden las listas que contienen los polos y ceros de igual longitud
@@ -224,12 +261,12 @@ class template():
 
         index=0
         while self.number_of_sections > index:
-            if not self.singularidades["ceros"]:
+            if not self.singularidades["ceros"]: #Para casos donde no hay ceros
                 num,den=signal.zpk2tf(1,np.array(list(self.singularidades["polos"][index]),dtype=np.complex128),np.asarray(list(self.singularidades["ganancias"][index])))
                 d1,damp_coef,d2=control.damp(control.TransferFunction(num,den))
                 Q=1/2*damp_coef
                 self.singularidades["sos"].append(list([num,den,Q]))
-            else:
+            else: #Para casos donde si hay ceros
                 num,den=signal.zpk2tf(np.array(list(self.singularidades["ceros"][index]),dtype=np.complex128),np.array(list(self.singularidades["polos"][index]),dtype=np.complex128),np.asarray(list(self.singularidades["ganancias"][index])))
                 d1,damp_coef,d2=control.damp(control.TransferFunction(num,den))
                 Q=1/2*damp_coef
@@ -239,6 +276,7 @@ class template():
         self.check_for_q()
 
     def check_for_q(self):
+
         recalculate=False
         if self.data["Q_max"] !=0:
             for x in self.singularidades["sos"]:
@@ -253,14 +291,8 @@ class template():
             self.singularidades["sos"].sort(key=lambda q: q[2][0])
 
 
-
-
-
-
-    def recalculate_filter(self):
-        print('dummy')
-
     def init_approx(self):
+
         self.get_w_a_n()
 
         if self.approximation==Approximation.Legendre:
@@ -384,27 +416,22 @@ class template():
                                                                 self.bw)
                 self.actual_z, self.actual_p, self.actual_k = signal.lp2bs_zpk(self.normalized_z, self.normalized_p,
                                                                                self.normalized_k, self.wo, self.bw)
+
         self.actual_n=len(self.actual_p)
-        self.get_sos()
 
-    def make_me_a_LP(self):
-        self.actual_num, self.actual_dem, =signal.lp2lp(self.normalized_num,self.normalized_den,self.w_p)
-        self.actual_z,self.actual_p,self.actual_k=signal.lp2lp_zpk(self.normalized_z,self.normalized_p,self.normalized_k,self.w_p)
+        print(self.actual_n)
 
-    def make_me_a_HP(self):
-        self.actual_num, self.actual_dem, =signal.lp2hp(self.normalized_num,self.normalized_den,self.w_p)
-        self.actual_z,self.actual_p,self.actual_k=signal.lp2hp_zpk(self.normalized_z,self.normalized_p,self.normalized_k,self.w_p)
+        need_recalc=False
 
-    def make_me_a_BP(self):
-        self.actual_num, self.actual_dem, =signal.lp2bp(self.normalized_num,self.normalized_den,self.wo,self.bw)
-        self.actual_z,self.actual_p,self.actual_k=signal.lp2bp_zpk(self.normalized_z,self.normalized_p,self.normalized_k,self.w_p,self.wo,self.bw)
+        if self.data["n_max"] !=0: #Me fijo si hay una restricción
+            if self.actual_n>self.data["n_max"]: #Me fijo si con el filtro final violo la restriccion
+                self.data["n"]=self.n #Guardo como dato de input el ultimo n usado para el normalizado
+                self.data["n"]-=1 #Bajo n en uno
+                need_recalc = True #para la recursividad
+                self.init_approx() #vuelvo a correr la simulación con un n hardcodeado
 
-    def make_me_a_BR(self):
-        self.actual_num, self.actual_dem, =signal.lp2bs(self.normalized_num,self.normalized_den,self.wo,self.bw)
-        self.actual_z,self.actual_p,self.actual_k=signal.lp2bs_zpk(self.normalized_z,self.normalized_p,self.normalized_k,self.w_p,self.wo,self.bw)
-
-
-
+        if not need_recalc:
+            self.get_sos() #calculo sos para n valido
 
 
 
