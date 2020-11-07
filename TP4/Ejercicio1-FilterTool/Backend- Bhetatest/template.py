@@ -302,14 +302,13 @@ class template():
 
             if self.approximation !=Approximation.Gauss:
                 self.get_w_a_n()
-
+                
+            if self.type==Type.BR or self.type==Type.BP:
+                if self.data["n"] !=0:
+                    self.data["n"]=self.data["n"]/2
 
 
             if self.approximation==Approximation.Legendre:
-                if self.type==Type.BR or self.type==Type.BP:
-                    if self.data["n"] !=0:
-                        self.data["n"]=self.data["n"]/2
-
                 self.normalized_z, self.normalized_p, self.normalized_k,self.n=legendre.legendre(self.data["A_p"],self.data["A_a"],1,self.w_a_n,self.data["n"],self.data["d"]) #dummy wmax
                 self.normalized_num, self.normalized_den = signal.zpk2tf(self.normalized_z, self.normalized_p, self.normalized_k)
 
