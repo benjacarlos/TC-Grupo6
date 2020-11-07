@@ -46,10 +46,8 @@ def legendre (A_p,A_a,w_p,w_a,n_hardcodeado,cte_des):
         print(serie)
 
         p = np.roots(serie)
-        # print(p)
+        # Me quedo con los polos de H(s)
         p = p[p.real < 0]
-
-        #z = [element * cte_des for element in z]
 
         print(p)
 
@@ -63,6 +61,7 @@ def legendre (A_p,A_a,w_p,w_a,n_hardcodeado,cte_des):
         print(n)
         print(abs(current_att))
 
+        #Itero para ver si cumplo plantilla
         if np.abs(current_att) >= A_a or n_hardcodeado != 0:
             break
         else:
@@ -87,6 +86,7 @@ def legendre (A_p,A_a,w_p,w_a,n_hardcodeado,cte_des):
 
     return z, p, gain, n
 
+#Funcion para obtener el polinomio de legrende asociado
 def get_equation(n):
 
     if (n % 2 == 1):
@@ -129,28 +129,19 @@ def get_equation(n):
                         else:
                             a.append(0)
 
-    #print(a)
     domain = [F(-1), F(1)]
 
     serie = legen.Legendre(a,domain)
-    #print(serie)
     serie = serie.convert(domain, polynomial.Polynomial)
 
     if n % 2:  # impar n
-        # sum(a_n * P_n(x))**2
         integrand = serie ** 2
-    else:  # even N
-        # (x + 1) * sum(a_n * P_n(x))**2
+    else:
         integrand = P([F(1), F(1)]) * serie ** 2
 
-    # Integrate (using fractions; indefint.integ() returns floats)
     indefint = P(polynomial.polynomial.polyint(integrand.coef), domain)
-
-    # Evaluate integral from -1 to 2*omega**2 - 1
     defint = indefint(P([F(-1), F(0), F(2)])) - indefint(-1)
     #print(defint)
-    # Fractions have been cancelled; outputs are all integers
-    # Return in order of decreasing powers of omega
-    #return defint
+
     return [int(round(x,0)) for x in defint.coef[::1]]
 
