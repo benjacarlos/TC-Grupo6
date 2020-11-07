@@ -54,6 +54,7 @@ class template():
         self.__visible=True            #if its going to be displayed
         self.actual_displayed=Type.LP   #what is actually being displayed
         self.__att_mode=False
+        self.first_calculation = True
         #self.singularidades = np.array([[1],[1],[1]])
 
         self.singularidades = {
@@ -72,44 +73,49 @@ class template():
     def should_be_att(self):
         return self.__att_mode
 
-    def eliminate_sos(self,number):
+    def eliminate_sos(self, number):
         self.singularidades["sos"].pop(number)
+        self.number_of_sections = - 1
 
     def change_posc_sos(self,pos_a,pos_b):
         aux=self.singularidades["sos"][pos_b]
         self.singularidades["sos"][pos_b]=self.singularidades["sos"][pos_a]
         self.singularidades["sos"][pos_a]=aux
 
-    def append_new_sos_zpk(self,z,p,k,posc):
-        num, den = signal.zpk2tf(np.array(list(z), dtype=np.complex128), np.array(list(p), dtype=np.complex128), np.asarray(list(k)))
+    def append_new_sos_zpk(self, z, p, k, posc):
+        num, den = signal.zpk2tf(np.array(list(z), dtype=np.complex128), np.array(list(p), dtype=np.complex128),
+                                 np.asarray(list(k)))
         d1, damp_coef, d2 = control.damp(control.TransferFunction(num, den))
         Q = 1 / 2 * damp_coef
-        self.singularidades["sos"].insert(posc,list([num, den, Q]))
+        self.singularidades["sos"].insert(posc, list([num, den, Q]))
+        self.number_of_sections = + 1
 
-    def append_new_sos_tf(self,num,den,posc):
+    def append_new_sos_tf(self, num, den, posc):
         d1, damp_coef, d2 = control.damp(control.TransferFunction(num, den))
         Q = 1 / 2 * damp_coef
-        self.singularidades["sos"].insert(posc,list([num, den, Q]))
+        self.singularidades["sos"].insert(posc, list([num, den, Q]))
+        self.number_of_sections = + 1
 
-    def edit_sos_zpk(self,z,p,k,posc):
-        num, den = signal.zpk2tf(np.array(list(z), dtype=np.complex128), np.array(list(p), dtype=np.complex128),np.asarray(list(k)))
+    def edit_sos_zpk(self, z, p, k, posc):
+        num, den = signal.zpk2tf(np.array(list(z), dtype=np.complex128), np.array(list(p), dtype=np.complex128),
+                                 np.asarray(list(k)))
         d1, damp_coef, d2 = control.damp(control.TransferFunction(num, den))
         Q = 1 / 2 * damp_coef
-        self.singularidades["sos"][posc]=list([num, den, Q])
+        self.singularidades["sos"][posc] = list([num, den, Q])
 
-    def edit_sos_tf(self, num, den,posc):
+    def edit_sos_tf(self, num, den, posc):
         d1, damp_coef, d2 = control.damp(control.TransferFunction(num, den))
         Q = 1 / 2 * damp_coef
-        self.singularidades["sos"][posc]=list([num, den, Q])
+        self.singularidades["sos"][posc] = list([num, den, Q])
 
-    def get_sos_data_zpk(self,posc):
-        num =self.singularidades["sos"][posc][0]
-        den =self.singularidades["sos"][posc][0]
-        return signal.tf2zpk(num,den)
+    def get_sos_data_zpk(self, posc):
+        num = self.singularidades["sos"][posc][0]
+        den = self.singularidades["sos"][posc][0]
+        return signal.tf2zpk(num, den)
 
-    def get_sos_data_tf(self,posc):
-        num =self.singularidades["sos"][posc][0]
-        den =self.singularidades["sos"][posc][0]
+    def get_sos_data_tf(self, posc):
+        num = self.singularidades["sos"][posc][0]
+        den = self.singularidades["sos"][posc][0]
         return num, den
 
     def get_sos_q(self,posc):
@@ -197,98 +203,100 @@ class template():
         self.k=1/self.w_a_n
 
     def get_sos(self):
-        #me fijo la cantidad de secciones para el filtro desnormalizado buscado
-        self.number_of_sections=int(np.floor(self.actual_n/2)+self.actual_n%2)
+        # me fijo la cantidad de secciones para el filtro desnormalizado buscado
+        self.number_of_sections = int(np.floor(self.actual_n / 2) + self.actual_n % 2)
 
-
-        index=0
-        #si la ganancia es unitaria, asigno ganancia unitaria a todas las etapas
-        if self.actual_k==1:
-            while self.number_of_sections>index:
+        index = 0
+        # si la ganancia es unitaria, asigno ganancia unitaria a todas las etapas
+        if self.actual_k == 1:
+            while self.number_of_sections > index:
                 self.singularidades["ganancias"].append({1})
-                index+=1
+                index += 1
         # si la ganancia no es unitaria se la asigno a la ultima etapa
         else:
-            while self.number_of_sections>index:
-                if index+1 == self.number_of_sections:
+            while self.number_of_sections > index:
+                if index + 1 == self.number_of_sections:
                     self.singularidades["ganancias"].append({self.actual_k})
                     break
                 self.singularidades["ganancias"].append({1})
                 index += 1
-        #estas ganancias individuales se podrían editar más adelante de manera inidividual
+        # estas ganancias individuales se podrían editar más adelante de manera inidividual
 
-        #cargo una lista de polos conjugados y el posible polo simple(si aplica)
-        index=0
-        auxiliar_p=list(self.actual_p)
+        # cargo una lista de polos conjugados y el posible polo simple(si aplica)
+        index = 0
+        auxiliar_p = list(self.actual_p)
         while len(auxiliar_p) > 0:
-            aux=auxiliar_p.pop(0) #saco un polo de la lista de polos
+            aux = auxiliar_p.pop(0)  # saco un polo de la lista de polos
             if aux.imag == 0:
                 self.singularidades["polos"].append({aux})  # appendeo polo simple
-            for x in auxiliar_p: #busco su conjugado
-                if x==np.conjugate(aux):
-                    self.singularidades["polos"].append({aux,x}) #appendeo polos conjugados
-                    auxiliar_p.remove(x) #remuevo el conjugado de la lista
+            for x in auxiliar_p:  # busco su conjugado
+                if x == np.conjugate(aux):
+                    self.singularidades["polos"].append({aux, x})  # appendeo polos conjugados
+                    auxiliar_p.remove(x)  # remuevo el conjugado de la lista
                     break
 
         index = 0
-        auxiliar_z=list(self.actual_z)
+        auxiliar_z = list(self.actual_z)
         while len(auxiliar_z) > 0:
-            aux=auxiliar_z.pop(0) #saco un cero de la lista de ceros
-            for x in auxiliar_z: #busco su conjugado
-                if x==aux:
-                    self.singularidades["ceros"].append([aux]*2) #appendeo ceros dobles
-                    auxiliar_z.remove(x) #remuevo el cero de la lista
+            aux = auxiliar_z.pop(0)  # saco un cero de la lista de ceros
+            for x in auxiliar_z:  # busco su conjugado
+                if x == aux:
+                    self.singularidades["ceros"].append([aux] * 2)  # appendeo ceros dobles
+                    auxiliar_z.remove(x)  # remuevo el cero de la lista
                     break
-                if x==np.conjugate(aux):
-                    self.singularidades["ceros"].append({aux,x}) #appendeo ceros conjugados
-                    auxiliar_z.remove(x) #remuevo el conjugado de la lista
+                if x == np.conjugate(aux):
+                    self.singularidades["ceros"].append({aux, x})  # appendeo ceros conjugados
+                    auxiliar_z.remove(x)  # remuevo el conjugado de la lista
                     break
-            if len(auxiliar_z)==0 and len(self.actual_z)%2==1: #appendeo el cero suelto
+            if len(auxiliar_z) == 0 and len(self.actual_z) % 2 == 1:  # appendeo el cero suelto
                 self.singularidades["ceros"].append({aux})
 
-        #Hago modificaciones para que me queden las listas que contienen los polos y ceros de igual longitud
+        # Hago modificaciones para que me queden las listas que contienen los polos y ceros de igual longitud
         if len(self.singularidades["ceros"]) != len(self.singularidades["polos"]):
-            delta=len(self.singularidades["polos"]) - len(self.singularidades["ceros"])
-            if delta>0:
+            delta = len(self.singularidades["polos"]) - len(self.singularidades["ceros"])
+            if delta > 0:
                 while delta:
                     self.singularidades["ceros"].append({})
-                    delta-=1
+                    delta -= 1
             else:
-                delta=abs(delta)
+                delta = abs(delta)
                 while delta:
                     self.singularidades["polos"].append({})
-                    delta-=1
+                    delta -= 1
 
-
-        index=0
+        index = 0
         while self.number_of_sections > index:
-            if not self.singularidades["ceros"]: #Para casos donde no hay ceros
-                num,den=signal.zpk2tf(1,np.array(list(self.singularidades["polos"][index]),dtype=np.complex128),np.asarray(list(self.singularidades["ganancias"][index])))
-                d1,damp_coef,d2=control.damp(control.TransferFunction(num,den))
-                Q=1/2*damp_coef
-                self.singularidades["sos"].append(list([num,den,Q]))
-            else: #Para casos donde si hay ceros
-                num,den=signal.zpk2tf(np.array(list(self.singularidades["ceros"][index]),dtype=np.complex128),np.array(list(self.singularidades["polos"][index]),dtype=np.complex128),np.asarray(list(self.singularidades["ganancias"][index])))
-                d1,damp_coef,d2=control.damp(control.TransferFunction(num,den))
-                Q=1/2*damp_coef
-                self.singularidades["sos"].append(list([num,den,Q]))
-            index+=1
+            if not self.singularidades["ceros"]:  # Para casos donde no hay ceros
+                num, den = signal.zpk2tf(1, np.array(list(self.singularidades["polos"][index]), dtype=np.complex128),
+                                         np.asarray(list(self.singularidades["ganancias"][index])))
+                d1, damp_coef, d2 = control.damp(control.TransferFunction(num, den))
+                Q = 1 / 2 * damp_coef
+                self.singularidades["sos"].append(list([num, den, Q]))
+            else:  # Para casos donde si hay ceros
+                num, den = signal.zpk2tf(np.array(list(self.singularidades["ceros"][index]), dtype=np.complex128),
+                                         np.array(list(self.singularidades["polos"][index]), dtype=np.complex128),
+                                         np.asarray(list(self.singularidades["ganancias"][index])))
+                d1, damp_coef, d2 = control.damp(control.TransferFunction(num, den))
+                Q = 1 / 2 * damp_coef
+                self.singularidades["sos"].append(list([num, den, Q]))
+            index += 1
 
         self.check_for_q()
 
     def check_for_q(self):
 
-        recalculate=False
-        if self.data["Q_max"] !=0:
+        recalculate = False
+        if self.data["Q_max"] != 0:
             for x in self.singularidades["sos"]:
-                if x[2][0] >= self.data["Q_max"] :  #Q mayor al permitido
-                    recalculate=True
+                if x[2][0] > self.data["Q_max"]:  # Q mayor al permitido
+                    recalculate = True
+                    break
 
         if recalculate:
-            self.data["n"]=self.n-1 #hardcodeo el n por uno menos restrictivo
-            self.init_approx() #vuelvo a realizar la aproximacion
+            self.data["n"] = self.n - 1  # hardcodeo el n por uno menos restrictivo
+            self.init_approx()  # vuelvo a realizar la aproximacion
             print('Hay que recalcular el filtro')
-        else: #ordeno de Q menor a mayor
+        else:  # ordeno de Q menor a mayor
             self.singularidades["sos"].sort(key=lambda q: q[2][0])
 
 
@@ -297,6 +305,10 @@ class template():
 
             if self.approximation !=Approximation.Gauss:
                 self.get_w_a_n()
+
+            if self.type==Type.BR or self.type==Type.BP:
+                if self.data["n"] !=0:
+                    self.data["n"]=self.data["n"]/2
 
 
 
@@ -424,31 +436,38 @@ class template():
 
             if self.approximation == Approximation.Gauss:
                 print ("VOY A INICIALIZAR GAUSS")
-                self.actual_num, self.actual_den, self.actual_z, self.actual_p, self.n = gauss.gauss(self.data["wrg"],self.data["tol"],self.data["tau"])
+                self.actual_num, self.actual_den, self.actual_z, self.actual_p, self.n = gauss.gauss(self.data["wrg"],self.data["tol"],self.data["tau"],self.data["n"])
                 print(self.actual_num, self.actual_den, self.actual_z, self.actual_p, self.n)
 
                 print ("INICIALICE OK")
 
 
 
+        self.actual_n=len(self.actual_p)
 
+        print(self.actual_n)
 
+        need_recalc=False
 
-        #self.actual_n=len(self.actual_p)
+        if self.first_calculation == True and self.data["n"] != 0:
+            if self.data["n_max"] != 0:  # Me fijo si hay una restricción
+                if self.actual_n > self.data["n_max"]:  # Me fijo si con el filtro final violo la restriccion
+                    self.data["n"] = self.n  # Guardo como dato de input el ultimo n usado para el normalizado
+                    self.data["n"] -= 1  # Bajo n en uno
+                    need_recalc = True  # para la recursividad
+                    self.first_calculation = False
+                    self.init_approx()  # vuelvo a correr la simulación con un n hardcodeado
 
-        #print(self.actual_n)
+            if self.data["n_min"] != 0:  # Me fijo si hay una restricción
+                if self.actual_n < self.data["n_min"]:  # Me fijo si con el filtro final violo la restriccion
+                    self.data["n"] = self.data[
+                        "n_min"]  # Guardo como dato de input el ultimo n usado para el normalizado
+                    need_recalc = True  # para la recursividad
+                    self.first_calculation = False
+                    self.init_approx()  # vuelvo a correr la simulación con un n hardcodeado
 
-        #need_recalc=False
-
-        #if self.data["n_max"] !=0: #Me fijo si hay una restricción
-        #    if self.actual_n>self.data["n_max"]: #Me fijo si con el filtro final violo la restriccion
-        #        self.data["n"]=self.n #Guardo como dato de input el ultimo n usado para el normalizado
-        #        self.data["n"]-=1 #Bajo n en uno
-        #        need_recalc = True #para la recursividad
-        #        self.init_approx() #vuelvo a correr la simulación con un n hardcodeado
-
-        #if not need_recalc:
-        #    self.get_sos() #calculo sos para n valido
+        if not need_recalc:
+            self.get_sos()  # calculo sos para n valido
 
         #### DESPUES AGREGAMOS LOS TAGS ADICIONALES#
         if self.type == Type.LP:
