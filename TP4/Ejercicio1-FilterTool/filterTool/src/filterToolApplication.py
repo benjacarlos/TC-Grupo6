@@ -606,27 +606,35 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
 
 
     def plotGroupDelay (self):
-        self.numerator = [1]
-        self.denominator = [10000,23123123]
-        self.system = signal.TransferFunction(self.numerator,self.denominator)
-        self.w,self.gd= signal.group_delay((self.numerator,self.denominator))
-        self.filterToolPlotTable.canvas.axes.clear()
-        self.filterToolPlotTable.canvas.axes.plot(self.w,self.gd)
-        self.filterToolPlotTable.canvas.axes.grid(True,linestyle='-', which="both")
-        self.filterToolPlotTable.canvas.axes.minorticks_on()
-        self.filterToolPlotTable.canvas.figure.tight_layout()
-        self.filterToolPlotTable.canvas.axes.axes.set_xlabel("Frequency [rad/s]")
-        self.filterToolPlotTable.canvas.axes.axes.set_ylabel("Group delay [s]")
-        self.filterToolPlotTable.canvas.axes.title.set_text('Group Delay')
-        self.filterToolPlotTable.canvas.figure.tight_layout()
-        self.filterToolPlotTable.canvas.draw()
+        if len(self.appTemplates) != 0:
+
+            self.filterToolPlotTable.canvas.axes.clear()
+
+            for template in self.appTemplates:
+
+                if template.should_be_drawn():
+                    w, h = signal.freqs(template.actual_num, template.actual_den)
+                    group_delay = -np.diff(np.unwrap(np.angle(h))) / np.diff(w)
+
+                    self.filterToolPlotTable.canvas.axes.semilogx(w[1:], group_delay, label=template.printTag)
+                    self.filterToolPlotTable.canvas.axes.grid(True, which='both')
+
+                    self.filterToolPlotTable.canvas.figure.tight_layout()
+                theLegend = self.filterToolPlotTable.canvas.axes.legend(fancybox=True, framealpha=0.5, fontsize=6)
+
+            self.filterToolPlotTable.canvas.axes.axes.set_xlabel("Frequency [rad/s]")
+            self.filterToolPlotTable.canvas.axes.axes.set_ylabel("Group delay [s]")
+            self.filterToolPlotTable.canvas.axes.title.set_text('Group Delay')
+            self.filterToolPlotTable.canvas.figure.tight_layout()
+            self.filterToolPlotTable.canvas.draw()
+
+
+
 
     def plotAttenuation (self):
 
         print ("Estoy aca")
 
-    def plotGroupDelay(self):
-        print("Estoy aca")
 
     def plotImpulseResponse(self):
 
