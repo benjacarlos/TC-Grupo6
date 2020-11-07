@@ -73,11 +73,6 @@
       </property>
       <item>
        <property name="text">
-        <string>Bessel</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
         <string>Butterworth</string>
        </property>
       </item>
@@ -240,7 +235,7 @@
          </rect>
         </property>
         <property name="text">
-         <string>Aa [DB] </string>
+         <string>Aa [Db] </string>
         </property>
        </widget>
        <widget class="QLineEdit" name="aaInput">
@@ -263,7 +258,7 @@
          </rect>
         </property>
         <property name="text">
-         <string>Ap [DB] </string>
+         <string>Ap [Db] </string>
         </property>
        </widget>
        <widget class="QLineEdit" name="apInput">
@@ -479,8 +474,8 @@
      <widget class="QPushButton" name="goStageTwoButton">
       <property name="geometry">
        <rect>
-        <x>60</x>
-        <y>670</y>
+        <x>810</x>
+        <y>680</y>
         <width>91</width>
         <height>23</height>
        </rect>
@@ -556,11 +551,6 @@
         <string>Step Response</string>
        </property>
       </item>
-      <item>
-       <property name="text">
-        <string>Maximum Q</string>
-       </property>
-      </item>
      </widget>
      <widget class="QLabel" name="plotTypeOptionLabel">
       <property name="geometry">
@@ -585,7 +575,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>Enter Parameters</string>
+       <string>Add Filter</string>
       </property>
      </widget>
      <widget class="QLabel" name="filterDesignedLabel">
@@ -1055,8 +1045,8 @@
      <widget class="QPushButton" name="returnStageOneButton">
       <property name="geometry">
        <rect>
-        <x>60</x>
-        <y>670</y>
+        <x>800</x>
+        <y>680</y>
         <width>101</width>
         <height>23</height>
        </rect>
@@ -1065,17 +1055,7 @@
        <string>Return to Stage 1</string>
       </property>
      </widget>
-     <widget class="QWidget" name="parametersInfo" native="true">
-      <property name="geometry">
-       <rect>
-        <x>450</x>
-        <y>470</y>
-        <width>351</width>
-        <height>201</height>
-       </rect>
-      </property>
-     </widget>
-     <widget class="filterToolPlotStage2" name="widget_2" native="true">
+     <widget class="filterToolPlotStage2" name="filterToolPlotTable_2" native="true">
       <property name="geometry">
        <rect>
         <x>330</x>
@@ -1088,8 +1068,8 @@
      <widget class="QLabel" name="parametersInfoLabel">
       <property name="geometry">
        <rect>
-        <x>510</x>
-        <y>440</y>
+        <x>450</x>
+        <y>480</y>
         <width>211</width>
         <height>31</height>
        </rect>
@@ -1106,8 +1086,8 @@
      <widget class="QLabel" name="parametersInfoLabel_2">
       <property name="geometry">
        <rect>
-        <x>40</x>
-        <y>50</y>
+        <x>50</x>
+        <y>60</y>
         <width>231</width>
         <height>31</height>
        </rect>
@@ -1125,76 +1105,139 @@
       <property name="geometry">
        <rect>
         <x>10</x>
-        <y>80</y>
+        <y>90</y>
         <width>301</width>
         <height>301</height>
        </rect>
       </property>
      </widget>
-     <widget class="QComboBox" name="zeroTransferFunctionOrder">
+     <widget class="QComboBox" name="plotTypeOptionInput_2">
       <property name="geometry">
        <rect>
-        <x>90</x>
-        <y>390</y>
-        <width>141</width>
-        <height>22</height>
+        <x>490</x>
+        <y>440</y>
+        <width>301</width>
+        <height>21</height>
        </rect>
       </property>
       <item>
        <property name="text">
-        <string>First Order</string>
+        <string>Magnitude</string>
        </property>
       </item>
       <item>
        <property name="text">
-        <string>Second Order</string>
-       </property>
-      </item>
-     </widget>
-     <widget class="QComboBox" name="poleTransferFunctionOrder">
-      <property name="geometry">
-       <rect>
-        <x>90</x>
-        <y>430</y>
-        <width>141</width>
-        <height>22</height>
-       </rect>
-      </property>
-      <item>
-       <property name="text">
-        <string>First Order</string>
+        <string>Phase</string>
        </property>
       </item>
       <item>
        <property name="text">
-        <string>Second Order</string>
+        <string>Poles and Zeros</string>
        </property>
       </item>
      </widget>
-     <widget class="QLabel" name="zeroLabel">
+     <widget class="QLabel" name="plotTypeOptionLabel_2">
       <property name="geometry">
        <rect>
-        <x>50</x>
-        <y>390</y>
-        <width>41</width>
-        <height>16</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Zeros</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="poleLabel">
-      <property name="geometry">
-       <rect>
-        <x>50</x>
-        <y>430</y>
+        <x>450</x>
+        <y>440</y>
         <width>31</width>
         <height>16</height>
        </rect>
       </property>
       <property name="text">
-       <string>Poles</string>
+       <string>Plot</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="hsLabelNum_4">
+      <property name="geometry">
+       <rect>
+        <x>420</x>
+        <y>620</y>
+        <width>461</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>4</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>______________________________________________________________________________________________________________________________________________________</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="hsLabel_2">
+      <property name="geometry">
+       <rect>
+        <x>360</x>
+        <y>610</y>
+        <width>51</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>H(S)=</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="hsLabelDen_2">
+      <property name="geometry">
+       <rect>
+        <x>420</x>
+        <y>630</y>
+        <width>451</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>8</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="hsLabelNum_2">
+      <property name="geometry">
+       <rect>
+        <x>420</x>
+        <y>610</y>
+        <width>441</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>8</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="splitInSos">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>400</y>
+        <width>171</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Split in Second Orden System</string>
       </property>
      </widget>
     </widget>

@@ -41,6 +41,7 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
         self.okToRemove.clicked.connect(self.acceptToRemove)
         self.noOkToRemove.clicked.connect(self.dontAcceptToRemove)
         self.filterDesignedLabelCombo.currentTextChanged.connect(self.verityFilter)
+        self.plotTypeOptionInput_2.currentTextChanged.connect(self.plotGraphicStageTwo)
 
     def verityFilter(self):
         if len(self.appTemplates) != 0:
@@ -54,8 +55,8 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
             myIndex = -1
             for template in self.appTemplates:
                 myIndex = myIndex + 1
-                if template.tag != self.filterDesignedLabelCombo.currentText():
-                    self.currentIndex = len (self.appTemplates) - myIndex - 1
+                if template.tag == self.filterDesignedLabelCombo.currentText():
+                    self.currentIndex = myIndex
 
             self.printTransferFunction(self.currentIndex)
             self.plotGraphic()
@@ -79,7 +80,7 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
     def showMoreOptions (self):
         if str((self.filterTypeOption.currentText())) != "Group Delay":
             self.approxTypeOption.clear()
-            elementsToBeAdded = ["Bessel","Butterworth","Cauer","Cheby1","Cheby2","Legendre"]
+            elementsToBeAdded = ["Butterworth","Cauer","Cheby1","Cheby2","Legendre"]
             for myElement in elementsToBeAdded:
                 self.approxTypeOption.addItem(myElement)
             self.filterParameters.setCurrentWidget(self.freqParameters)
@@ -98,7 +99,71 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
 
     # Funciones que redirigen a pantallas#
     def goStageTwo (self):
-        self.stages.setCurrentWidget(self.stageTwo)
+        if len(self.appTemplates) != 0:
+            self.stages.setCurrentWidget(self.stageTwo)
+            self.plotGraphicStageTwo()
+            self.printTransferFunctionStageTwo()
+        else:
+            msgWrongInput = QMessageBox()
+            msgWrongInput.setIcon(QMessageBox.Warning)
+            msgWrongInput.setWindowTitle('Error')
+            msgWrongInput.setText(
+                "In order to proceed to Stage 2, at least one Filter must be added to this Stage")
+            msgWrongInput.exec()
+
+    def printTransferFunctionStageTwo (self):
+        numerators= []
+        denominators=[]
+
+
+        numToPrint = extra.printTransferFunctionInput(self.appTemplates[self.currentIndex].actual_num)
+        denToPrint = extra.printTransferFunctionInput(self.appTemplates[self.currentIndex].actual_den)
+        self.hsLabelNum_2.setText(numToPrint)
+        self.hsLabelDen_2.setText(denToPrint)
+
+    def plotGraphicStageTwo(self):
+        myPlotGraphicType = str(self.plotTypeOptionInput_2.currentText())
+
+        print (str(self.plotTypeOptionInput_2.currentText()))
+        if myPlotGraphicType == "Magnitude":
+            self.plotMagnitudeStageTwo()
+        elif myPlotGraphicType == "Phase":
+            self.plotPhaseStageTwo()
+        elif myPlotGraphicType == "Poles and Zeros":
+            self.plotZerosAndPolesStageTwo()
+
+    def plotMagnitudeStageTwo(self):
+        if len(self.appTemplates) != 0:
+            self.filterToolPlotTable_2.canvas.axes.clear()
+            self.filterToolPlotTable_2.canvas.axes.axes.set_xlabel("Frequency [Hz]")
+            self.filterToolPlotTable_2.canvas.axes.axes.set_ylabel("Gain [Db]")
+            self.filterToolPlotTable_2.canvas.axes.title.set_text('Frequency Response - Amplitude')
+            w, h = signal.freqs(self.appTemplates[self.currentIndex].actual_num, self.appTemplates[self.currentIndex].actual_den)
+
+            self.filterToolPlotTable_2.canvas.axes.semilogx(w, 20 * np.log10(abs(h)), label='n')
+            self.filterToolPlotTable_2.canvas.axes.grid(True, which='both')
+            self.filterToolPlotTable_2.canvas.figure.tight_layout()
+
+            self.filterToolPlotTable_2.canvas.draw()
+
+    def plotPhaseStageTwo(self):
+        if len(self.appTemplates) != 0:
+
+            self.filterToolPlotTable_2.canvas.axes.clear()
+            self.filterToolPlotTable_2.canvas.axes.axes.set_xlabel("Frequency [Hz]")
+            self.filterToolPlotTable_2.canvas.axes.axes.set_ylabel("Phase [°]")
+            self.filterToolPlotTable_2.canvas.axes.title.set_text('Frequency Response - Phase')
+            system = signal.TransferFunction(self.appTemplates[self.currentIndex].actual_num, self.appTemplates[self.currentIndex].actual_den)
+            w,mag,phase = signal.bode(system)
+            self.filterToolPlotTable_2.canvas.axes.semilogx(w, phase)
+            self.filterToolPlotTable_2.canvas.axes.grid(which='both', axis='both')
+            self.filterToolPlotTable_2.canvas.figure.tight_layout()
+            self.filterToolPlotTable_2.canvas.draw()
+
+
+    def plotZerosAndPolesStageTwo(self):
+        print ("xD")
+
 
     def goStageOne (self):
         self.stages.setCurrentWidget(self.stageOne)
@@ -292,7 +357,6 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
                     self.addNewItemToFilterList()
                     self.printTransferFunction(self.indexForTemplate)
                     self.indexForTemplate = (self.indexForTemplate + 1)
-                    print ("LLEGUE BIEN MA")
                     self.plotGraphic()
                 else:
                     self.hiddenWarning.setCurrentWidget(self.warningNotHidden)
@@ -356,8 +420,15 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
         for line in self.appTemplates:
             self.filterDesignedLabelCombo.addItem(line.tag)
 
+        tempIndex= len(self.appTemplates)-1
+        print (tempIndex)
+
+        self.filterDesignedLabelCombo.setCurrentText(self.appTemplates[tempIndex].tag)
+
 
     # Funciones que grafican#
+
+
 
     def plotGraphic(self):
         myPlotGraphicType = str(self.plotTypeOptionInput.currentText())
@@ -388,6 +459,9 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
 
         if len(self.appTemplates) != 0:
             self.filterToolPlotTable.canvas.axes.clear()
+            self.filterToolPlotTable.canvas.axes.axes.set_xlabel("Frequency [Hz]")
+            self.filterToolPlotTable.canvas.axes.axes.set_ylabel("Gain [Db]")
+            self.filterToolPlotTable.canvas.axes.title.set_text('Frequency Response - Amplitude')
 
             for template in self.appTemplates:
                 if template.should_be_drawn() == True:
@@ -396,66 +470,64 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
                     else:
                         w, h = signal.freqs(template.actual_num, template.actual_den)
 
-                    self.filterToolPlotTable.canvas.axes.semilogx(w, 20 * np.log10(abs(h)), label='n')
+                    self.filterToolPlotTable.canvas.axes.semilogx(w, 20 * np.log10(abs(h)), label=template.printTag)
                     self.filterToolPlotTable.canvas.axes.grid(True, which='both')
                     #self.filterToolPlotTable.canvas.axes.minoticks_on()
                     #self.filterToolPlotTable.canvas.axes.margins(0, 0.1)
                     self.filterToolPlotTable.canvas.figure.tight_layout()
+                theLegend = self.filterToolPlotTable.canvas.axes.legend(fancybox=True, framealpha=0.5, fontsize = 6)
 
-                    if template.should_draw_template() and template.approximation != Approximation.Gauss:
-                        if template.type == Type.LP:
-                            rectangle_p = plt.Rectangle((0, -template.data["A_p"]), template.data["w_p"],
-                                                        -template.data["A_a"] - 100, fc='violet', alpha=0.8)
-                            rectangle_a = plt.Rectangle((template.data["w_a"], -template.data["A_a"]),
-                                                        1e6 - template.data["w_p"], template.data["A_a"] + 30, fc='violet',
+            if self.appTemplates[0].should_draw_template() and self.appTemplates[0].approximation != Approximation.Gauss:
+                if self.appTemplates[0].type == Type.LP:
+                    rectangle_p = plt.Rectangle((0, -self.appTemplates[0].data["A_p"]), self.appTemplates[0].data["w_p"],
+                                                        -self.appTemplates[0].data["A_a"] - 100, fc='violet', alpha=0.8)
+                    rectangle_a = plt.Rectangle((template.data["w_a"], -template.data["A_a"]),
+                                                        1e6 - self.appTemplates[0].data["w_p"], self.appTemplates[0].data["A_a"] + 30, fc='violet',
                                                         alpha=0.8)
 
-                        if template.type == Type.LPN:
-                            rectangle_p = plt.Rectangle((0, -template.data["A_p"]), 1, -template.data["A_a"] - 100,
+                if self.appTemplates[0].type == Type.LPN:
+                    rectangle_p = plt.Rectangle((0, -self.appTemplates[0].data["A_p"]), 1, -self.appTemplates[0].data["A_a"] - 100,
                                                         fc='violet', alpha=0.8)
-                            rectangle_a = plt.Rectangle((template.w_a_n, -template.data["A_a"]), 1e6 - 1,
-                                                        template.data["A_a"] + 30, fc='violet', alpha=0.8)
+                    rectangle_a = plt.Rectangle((self.appTemplates[0].w_a_n, -self.appTemplates[0].data["A_a"]), 1e6 - 1,
+                                                        self.appTemplates[0].data["A_a"] + 30, fc='violet', alpha=0.8)
 
-                        if template.type == Type.HP:
-                            rectangle_p = plt.Rectangle((0, 0), template.data["w_a"], -template.data["A_a"], fc='violet',
+                if self.appTemplates[0].type == Type.HP:
+                    rectangle_p = plt.Rectangle((0, 0), self.appTemplates[0].data["w_a"], -self.appTemplates[0].data["A_a"], fc='violet',
                                                         alpha=0.8)
-                            rectangle_a = plt.Rectangle((template.data["w_p"], -template.data["A_p"]),
-                                                        1e6 - template.data["w_p"], -template.data["A_a"] - 200,
+                    rectangle_a = plt.Rectangle((self.appTemplates[0].data["w_p"], -self.appTemplates[0].data["A_p"]),
+                                                        1e6 - self.appTemplates[0].data["w_p"], -self.appTemplates[0].data["A_a"] - 200,
                                                         fc='violet', alpha=0.8)
 
-                        if template.type == Type.BP:
-                            rectangle_p = plt.Rectangle((0, -template.data["A_a"]), template.data["w_a_m"],
-                                                        template.data["A_a"], fc='violet', alpha=0.8)
-                            rectangle_p1 = plt.Rectangle((template.data["w_a"], -template.data["A_a"]),
-                                                         template.data["w_a"] + 10e6, template.data["A_a"], fc='violet',
+                if self.appTemplates[0].type == Type.BP:
+                    rectangle_p = plt.Rectangle((0, -self.appTemplates[0].data["A_a"]), self.appTemplates[0].data["w_a_m"],
+                                                        self.appTemplates[0].data["A_a"], fc='violet', alpha=0.8)
+                    rectangle_p1 = plt.Rectangle((self.appTemplates[0].data["w_a"], -self.appTemplates[0].data["A_a"]),
+                                                         self.appTemplates[0].data["w_a"] + 10e6, self.appTemplates[0].data["A_a"], fc='violet',
                                                          alpha=0.8)
-                            rectangle_a = plt.Rectangle((template.data["w_p_m"], -template.data["A_p"]), template.bw,
-                                                        -template.data["A_a"] - 200, fc='violet', alpha=0.8)
+                    rectangle_a = plt.Rectangle((self.appTemplates[0].data["w_p_m"], -self.appTemplates[0].data["A_p"]), template.bw,
+                                                        -self.appTemplates[0].data["A_a"] - 200, fc='violet', alpha=0.8)
 
-                            self.filterToolPlotTable.canvas.figure.gca().add_patch(rectangle_p1)
+                    self.filterToolPlotTable.canvas.figure.gca().add_patch(rectangle_p1)
 
 
-                        if template.type == Type.BR:
-                            rectangle_p = plt.Rectangle((0, -template.data["A_p"]), template.data["w_p_m"],
-                                                        template.data["A_a"] - 300, fc='violet', alpha=0.8)
-                            rectangle_p1 = plt.Rectangle((template.data["w_p"], -template.data["A_p"]),
-                                                         template.data["w_a"] + 10e6, template.data["A_a"] - 300,
+                if self.appTemplates[0].type == Type.BR:
+                    rectangle_p = plt.Rectangle((0, -self.appTemplates[0].data["A_p"]), self.appTemplates[0].data["w_p_m"],
+                                                        self.appTemplates[0].data["A_a"] - 300, fc='violet', alpha=0.8)
+                    rectangle_p1 = plt.Rectangle((self.appTemplates[0].data["w_p"], -self.appTemplates[0].data["A_p"]),
+                                                         self.appTemplates[0].data["w_a"] + 10e6, self.appTemplates[0].data["A_a"] - 300,
                                                          fc='violet', alpha=0.8)
-                            rectangle_a = plt.Rectangle((template.data["w_a_m"], 0),
-                                                        template.data["w_a"] - template.data["w_a_m"],
-                                                        -template.data["A_a"], fc='violet', alpha=0.8)
+                    rectangle_a = plt.Rectangle((self.appTemplates[0].data["w_a_m"], 0),
+                                                        self.appTemplates[0].data["w_a"] - self.appTemplates[0].data["w_a_m"],
+                                                        -self.appTemplates[0].data["A_a"], fc='violet', alpha=0.8)
 
-                            self.filterToolPlotTable.canvas.figure.gca().add_patch(rectangle_p1)
+                    self.filterToolPlotTable.canvas.figure.gca().add_patch(rectangle_p1)
 
-                        self.filterToolPlotTable.canvas.figure.gca().add_patch(rectangle_p)
-                        self.filterToolPlotTable.canvas.figure.gca().add_patch(rectangle_a)
+                self.filterToolPlotTable.canvas.figure.gca().add_patch(rectangle_p)
+                self.filterToolPlotTable.canvas.figure.gca().add_patch(rectangle_a)
 
 
-            self.filterToolPlotTable.canvas.axes.axes.set_xlabel("Frequency [Hz]")
-            self.filterToolPlotTable.canvas.axes.axes.set_ylabel("Gain [DB]")
-            self.filterToolPlotTable.canvas.axes.title.set_text('Frequency Response - Amplitude')
 
-            #self.filterToolPlotTable.canvas.figure.tight_layout()
+
             self.filterToolPlotTable.canvas.draw()
 
 
@@ -463,7 +535,6 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
     def plotPhase (self):
 
         if len(self.appTemplates) != 0:
-            print ("FASE")
 
             self.filterToolPlotTable.canvas.axes.clear()
 
@@ -476,10 +547,11 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
                     w,mag,phase = signal.bode(system)
 
 
-                    self.filterToolPlotTable.canvas.axes.semilogx(w, phase)
-                    self.filterToolPlotTable.canvas.axes.grid(which='both', axis='both')
-                    self.filterToolPlotTable.canvas.axes.margins(0, 0.1)
+                    self.filterToolPlotTable.canvas.axes.semilogx(w, phase,label=template.printTag)
+                    self.filterToolPlotTable.canvas.axes.grid(True, which='both')
+                    #self.filterToolPlotTable.canvas.axes.margins(0, 0.1)
                     self.filterToolPlotTable.canvas.figure.tight_layout()
+                theLegend = self.filterToolPlotTable.canvas.axes.legend(fancybox=True, framealpha=0.5, fontsize=6)
 
             #self.filterToolPlotTable.canvas.axes.grid(which='both', axis='both')
             self.filterToolPlotTable.canvas.axes.axes.set_xlabel("Frequency [Hz]")
@@ -534,27 +606,35 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
 
 
     def plotGroupDelay (self):
-        self.numerator = [1]
-        self.denominator = [10000,23123123]
-        self.system = signal.TransferFunction(self.numerator,self.denominator)
-        self.w,self.gd= signal.group_delay((self.numerator,self.denominator))
-        self.filterToolPlotTable.canvas.axes.clear()
-        self.filterToolPlotTable.canvas.axes.plot(self.w,self.gd)
-        self.filterToolPlotTable.canvas.axes.grid(True,linestyle='-', which="both")
-        self.filterToolPlotTable.canvas.axes.minorticks_on()
-        self.filterToolPlotTable.canvas.figure.tight_layout()
-        self.filterToolPlotTable.canvas.axes.axes.set_xlabel("Frequency [rad/s]")
-        self.filterToolPlotTable.canvas.axes.axes.set_ylabel("Group delay [s]")
-        self.filterToolPlotTable.canvas.axes.title.set_text('Group Delay')
-        self.filterToolPlotTable.canvas.figure.tight_layout()
-        self.filterToolPlotTable.canvas.draw()
+        if len(self.appTemplates) != 0:
+
+            self.filterToolPlotTable.canvas.axes.clear()
+
+            for template in self.appTemplates:
+
+                if template.should_be_drawn():
+                    w, h = signal.freqs(template.actual_num, template.actual_den)
+                    group_delay = -np.diff(np.unwrap(np.angle(h))) / np.diff(w)
+
+                    self.filterToolPlotTable.canvas.axes.semilogx(w[1:], group_delay, label=template.printTag)
+                    self.filterToolPlotTable.canvas.axes.grid(True, which='both')
+
+                    self.filterToolPlotTable.canvas.figure.tight_layout()
+                theLegend = self.filterToolPlotTable.canvas.axes.legend(fancybox=True, framealpha=0.5, fontsize=6)
+
+            self.filterToolPlotTable.canvas.axes.axes.set_xlabel("Frequency [rad/s]")
+            self.filterToolPlotTable.canvas.axes.axes.set_ylabel("Group delay [s]")
+            self.filterToolPlotTable.canvas.axes.title.set_text('Group Delay')
+            self.filterToolPlotTable.canvas.figure.tight_layout()
+            self.filterToolPlotTable.canvas.draw()
+
+
+
 
     def plotAttenuation (self):
 
         print ("Estoy aca")
 
-    def plotGroupDelay(self):
-        print("Estoy aca")
 
     def plotImpulseResponse(self):
 
@@ -569,10 +649,12 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
                     system = (template.actual_num,template.actual_den)
                     t,y = signal.impulse(system)
 
-                    self.filterToolPlotTable.canvas.axes.plot(t, y)
-                    self.filterToolPlotTable.canvas.axes.grid(which='both', axis='both')
+                    self.filterToolPlotTable.canvas.axes.plot(t, y,label=template.printTag)
+                    #self.filterToolPlotTable.canvas.axes.grid(which='both', axis='both')
                     self.filterToolPlotTable.canvas.axes.margins(0, 0.1)
                     self.filterToolPlotTable.canvas.figure.tight_layout()
+                theLegend = self.filterToolPlotTable.canvas.axes.legend(fancybox=True, framealpha=0.5, fontsize=6)
+
             self.filterToolPlotTable.canvas.axes.grid(which='both', axis='both')
             self.filterToolPlotTable.canvas.axes.axes.set_xlabel("Time [s]")
             self.filterToolPlotTable.canvas.axes.axes.set_ylabel("Amplitude")
@@ -595,10 +677,11 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
                     lti = signal.lti(template.actual_num,template.actual_den)
                     t,y = signal.step(lti)
 
-                    self.filterToolPlotTable.canvas.axes.plot(t, y)
-                    self.filterToolPlotTable.canvas.axes.grid(which='both', axis='both')
+                    self.filterToolPlotTable.canvas.axes.plot(t, y,label=template.printTag)
+                    #self.filterToolPlotTable.canvas.axes.grid(which='both', axis='both')
                     self.filterToolPlotTable.canvas.axes.margins(0, 0.1)
                     self.filterToolPlotTable.canvas.figure.tight_layout()
+                theLegend = self.filterToolPlotTable.canvas.axes.legend(fancybox=True, framealpha=0.5, fontsize=6)
 
             self.filterToolPlotTable.canvas.axes.grid(which='both', axis='both')
             self.filterToolPlotTable.canvas.axes.axes.set_xlabel("Time [s]")
