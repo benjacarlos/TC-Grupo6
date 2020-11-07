@@ -56,7 +56,7 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
             for template in self.appTemplates:
                 myIndex = myIndex + 1
                 if template.tag == self.filterDesignedLabelCombo.currentText():
-                    self.currentIndex = len (self.appTemplates) - myIndex - 1
+                    self.currentIndex = myIndex
 
             self.printTransferFunction(self.currentIndex)
             self.plotGraphic()
@@ -102,6 +102,7 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
         if len(self.appTemplates) != 0:
             self.stages.setCurrentWidget(self.stageTwo)
             self.plotGraphicStageTwo()
+            self.printTransferFunctionStageTwo()
         else:
             msgWrongInput = QMessageBox()
             msgWrongInput.setIcon(QMessageBox.Warning)
@@ -110,25 +111,32 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
                 "In order to proceed to Stage 2, at least one Filter must be added to this Stage")
             msgWrongInput.exec()
 
+    def printTransferFunctionStageTwo (self):
+        numerators= []
+        denominators=[]
+
+
+        numToPrint = extra.printTransferFunctionInput(self.appTemplates[self.currentIndex].actual_num)
+        denToPrint = extra.printTransferFunctionInput(self.appTemplates[self.currentIndex].actual_den)
+        self.hsLabelNum_2.setText(numToPrint)
+        self.hsLabelDen_2.setText(denToPrint)
+
     def plotGraphicStageTwo(self):
         myPlotGraphicType = str(self.plotTypeOptionInput_2.currentText())
 
         print (str(self.plotTypeOptionInput_2.currentText()))
         if myPlotGraphicType == "Magnitude":
             self.plotMagnitudeStageTwo()
-            print ("MAGNITUDE 2")
         elif myPlotGraphicType == "Phase":
             self.plotPhaseStageTwo()
-            print("PHASE 2")
         elif myPlotGraphicType == "Poles and Zeros":
             self.plotZerosAndPolesStageTwo()
-            print("POLES AND ZEROS 2")
 
     def plotMagnitudeStageTwo(self):
         if len(self.appTemplates) != 0:
             self.filterToolPlotTable_2.canvas.axes.clear()
             self.filterToolPlotTable_2.canvas.axes.axes.set_xlabel("Frequency [Hz]")
-            self.filterToolPlotTable_2.canvas.axes.axes.set_ylabel("Gain [DB]")
+            self.filterToolPlotTable_2.canvas.axes.axes.set_ylabel("Gain [Db]")
             self.filterToolPlotTable_2.canvas.axes.title.set_text('Frequency Response - Amplitude')
             w, h = signal.freqs(self.appTemplates[self.currentIndex].actual_num, self.appTemplates[self.currentIndex].actual_den)
 
@@ -452,7 +460,7 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
         if len(self.appTemplates) != 0:
             self.filterToolPlotTable.canvas.axes.clear()
             self.filterToolPlotTable.canvas.axes.axes.set_xlabel("Frequency [Hz]")
-            self.filterToolPlotTable.canvas.axes.axes.set_ylabel("Gain [DB]")
+            self.filterToolPlotTable.canvas.axes.axes.set_ylabel("Gain [Db]")
             self.filterToolPlotTable.canvas.axes.title.set_text('Frequency Response - Amplitude')
 
             for template in self.appTemplates:
@@ -526,7 +534,6 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
     def plotPhase (self):
 
         if len(self.appTemplates) != 0:
-            print ("FASE")
 
             self.filterToolPlotTable.canvas.axes.clear()
 
@@ -633,9 +640,10 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
                     t,y = signal.impulse(system)
 
                     self.filterToolPlotTable.canvas.axes.plot(t, y)
-                    self.filterToolPlotTable.canvas.axes.grid(which='both', axis='both')
+                    #self.filterToolPlotTable.canvas.axes.grid(which='both', axis='both')
                     self.filterToolPlotTable.canvas.axes.margins(0, 0.1)
                     self.filterToolPlotTable.canvas.figure.tight_layout()
+
             self.filterToolPlotTable.canvas.axes.grid(which='both', axis='both')
             self.filterToolPlotTable.canvas.axes.axes.set_xlabel("Time [s]")
             self.filterToolPlotTable.canvas.axes.axes.set_ylabel("Amplitude")
@@ -659,7 +667,7 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
                     t,y = signal.step(lti)
 
                     self.filterToolPlotTable.canvas.axes.plot(t, y)
-                    self.filterToolPlotTable.canvas.axes.grid(which='both', axis='both')
+                    #self.filterToolPlotTable.canvas.axes.grid(which='both', axis='both')
                     self.filterToolPlotTable.canvas.axes.margins(0, 0.1)
                     self.filterToolPlotTable.canvas.figure.tight_layout()
 

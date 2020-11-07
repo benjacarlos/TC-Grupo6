@@ -235,7 +235,7 @@
          </rect>
         </property>
         <property name="text">
-         <string>Aa [DB] </string>
+         <string>Aa [Db] </string>
         </property>
        </widget>
        <widget class="QLineEdit" name="aaInput">
@@ -258,7 +258,7 @@
          </rect>
         </property>
         <property name="text">
-         <string>Ap [DB] </string>
+         <string>Ap [Db] </string>
         </property>
        </widget>
        <widget class="QLineEdit" name="apInput">
@@ -474,8 +474,8 @@
      <widget class="QPushButton" name="goStageTwoButton">
       <property name="geometry">
        <rect>
-        <x>60</x>
-        <y>670</y>
+        <x>810</x>
+        <y>680</y>
         <width>91</width>
         <height>23</height>
        </rect>
@@ -575,7 +575,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>Enter Parameters</string>
+       <string>Add Filter</string>
       </property>
      </widget>
      <widget class="QLabel" name="filterDesignedLabel">
@@ -1045,8 +1045,8 @@
      <widget class="QPushButton" name="returnStageOneButton">
       <property name="geometry">
        <rect>
-        <x>60</x>
-        <y>670</y>
+        <x>800</x>
+        <y>680</y>
         <width>101</width>
         <height>23</height>
        </rect>
