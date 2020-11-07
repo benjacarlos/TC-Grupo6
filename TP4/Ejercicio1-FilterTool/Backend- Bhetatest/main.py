@@ -22,7 +22,7 @@ def plot_sos(template):
         for x in range(template.number_of_sections): #Cargo cada den y num  en la lista
             hs.append(signal.freqs(template.singularidades["sos"][x][1], template.singularidades["sos"][x][0],worN=np.linspace(1e4, 1e6, 1000)))
     else:
-        for x in range(template.number_of_sections): #Cargo cada den y num  en la lista
+        for x in range(template.number_of_sections): #Cargo cada num y den  en la lista
             hs.append(signal.freqs(template.singularidades["sos"][x][0], template.singularidades["sos"][x][1],worN=np.linspace(1e4, 1e6, 1000)))
 
     index=1

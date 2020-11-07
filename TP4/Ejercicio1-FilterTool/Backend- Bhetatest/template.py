@@ -71,6 +71,50 @@ class template():
     def should_be_att(self):
         return self.__att_mode
 
+    def eliminate_sos(self,number):
+        self.singularidades["sos"].pop(number)
+
+    def change_posc_sos(self,pos_a,pos_b):
+        aux=self.singularidades["sos"][pos_b]
+        self.singularidades["sos"][pos_b]=self.singularidades["sos"][pos_a]
+        self.singularidades["sos"][pos_a]=aux
+
+    def append_new_sos_zpk(self,z,p,k,posc):
+        num, den = signal.zpk2tf(np.array(list(z), dtype=np.complex128), np.array(list(p), dtype=np.complex128), np.asarray(list(k)))
+        d1, damp_coef, d2 = control.damp(control.TransferFunction(num, den))
+        Q = 1 / 2 * damp_coef
+        self.singularidades["sos"].insert(posc,list([num, den, Q]))
+
+    def append_new_sos_tf(self,num,den,posc):
+        d1, damp_coef, d2 = control.damp(control.TransferFunction(num, den))
+        Q = 1 / 2 * damp_coef
+        self.singularidades["sos"].insert(posc,list([num, den, Q]))
+
+    def edit_sos_zpk(self,z,p,k,posc):
+        num, den = signal.zpk2tf(np.array(list(z), dtype=np.complex128), np.array(list(p), dtype=np.complex128),np.asarray(list(k)))
+        d1, damp_coef, d2 = control.damp(control.TransferFunction(num, den))
+        Q = 1 / 2 * damp_coef
+        self.singularidades["sos"][posc]=list([num, den, Q])
+
+    def edit_sos_tf(self, num, den,posc):
+        d1, damp_coef, d2 = control.damp(control.TransferFunction(num, den))
+        Q = 1 / 2 * damp_coef
+        self.singularidades["sos"][posc]=list([num, den, Q])
+
+    def get_sos_data_zpk(self,posc):
+        num =self.singularidades["sos"][posc][0]
+        den =self.singularidades["sos"][posc][0]
+        return signal.tf2zpk(num,den)
+
+    def get_sos_data_tf(self,posc):
+        num =self.singularidades["sos"][posc][0]
+        den =self.singularidades["sos"][posc][0]
+        return num, den
+
+    def get_sos_q(self,posc):
+        return self.singularidades["sos"][posc][2][0]
+
+
     def change_template_visibility(self,bool):
          self.__template_flag=bool
 
