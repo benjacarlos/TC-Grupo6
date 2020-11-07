@@ -463,21 +463,29 @@ class template():
             filterString = "Low-Pass (GD)"
 
         if self.approximation == Approximation.Legendre:
+            shortApproxString = "Leg"
             approxString = "Legendre"
         elif self.approximation == Approximation.Cauer:
+            shortApproxString = "Cau"
             approxString = "Cauer"
         elif self.approximation == Approximation.Gauss:
+            shortApproxString = "Gau"
             approxString = "Gauss"
         elif self.approximation == Approximation.Butterworth:
+            shortApproxString = "But"
             approxString = "Butterworth"
         elif self.approximation == Approximation.Cheby1:
+            shortApproxString = "Ch1"
             approxString = "Cheby 1"
         elif self.approximation == Approximation.Cheby2:
+            shortApproxString = "Ch2"
             approxString = "Cheby 2"
         elif self.approximation == Approximation.Bessel:
+            shortApproxString = "Bes"
             approxString = "Bessel"
 
 
+        self.printTag = "N:" + str(self.n) + " | A:" + shortApproxString + " | D:" + str(self.data["d"])
         self.tag = filterString + " N: "+ str(self.n) + " Apr: " + approxString + " Den: " + str(self.data["d"])
         print (self.tag)
 

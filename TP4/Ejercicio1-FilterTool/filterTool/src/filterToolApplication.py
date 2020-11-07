@@ -470,11 +470,12 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
                     else:
                         w, h = signal.freqs(template.actual_num, template.actual_den)
 
-                    self.filterToolPlotTable.canvas.axes.semilogx(w, 20 * np.log10(abs(h)), label='n')
+                    self.filterToolPlotTable.canvas.axes.semilogx(w, 20 * np.log10(abs(h)), label=template.printTag)
                     self.filterToolPlotTable.canvas.axes.grid(True, which='both')
                     #self.filterToolPlotTable.canvas.axes.minoticks_on()
                     #self.filterToolPlotTable.canvas.axes.margins(0, 0.1)
                     self.filterToolPlotTable.canvas.figure.tight_layout()
+                theLegend = self.filterToolPlotTable.canvas.axes.legend(fancybox=True, framealpha=0.5, fontsize = 6)
 
             if self.appTemplates[0].should_draw_template() and self.appTemplates[0].approximation != Approximation.Gauss:
                 if self.appTemplates[0].type == Type.LP:
@@ -546,10 +547,11 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
                     w,mag,phase = signal.bode(system)
 
 
-                    self.filterToolPlotTable.canvas.axes.semilogx(w, phase)
-                    self.filterToolPlotTable.canvas.axes.grid(which='both', axis='both')
-                    self.filterToolPlotTable.canvas.axes.margins(0, 0.1)
+                    self.filterToolPlotTable.canvas.axes.semilogx(w, phase,label=template.printTag)
+                    self.filterToolPlotTable.canvas.axes.grid(True, which='both')
+                    #self.filterToolPlotTable.canvas.axes.margins(0, 0.1)
                     self.filterToolPlotTable.canvas.figure.tight_layout()
+                theLegend = self.filterToolPlotTable.canvas.axes.legend(fancybox=True, framealpha=0.5, fontsize=6)
 
             #self.filterToolPlotTable.canvas.axes.grid(which='both', axis='both')
             self.filterToolPlotTable.canvas.axes.axes.set_xlabel("Frequency [Hz]")
@@ -639,10 +641,11 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
                     system = (template.actual_num,template.actual_den)
                     t,y = signal.impulse(system)
 
-                    self.filterToolPlotTable.canvas.axes.plot(t, y)
+                    self.filterToolPlotTable.canvas.axes.plot(t, y,label=template.printTag)
                     #self.filterToolPlotTable.canvas.axes.grid(which='both', axis='both')
                     self.filterToolPlotTable.canvas.axes.margins(0, 0.1)
                     self.filterToolPlotTable.canvas.figure.tight_layout()
+                theLegend = self.filterToolPlotTable.canvas.axes.legend(fancybox=True, framealpha=0.5, fontsize=6)
 
             self.filterToolPlotTable.canvas.axes.grid(which='both', axis='both')
             self.filterToolPlotTable.canvas.axes.axes.set_xlabel("Time [s]")
@@ -666,10 +669,11 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
                     lti = signal.lti(template.actual_num,template.actual_den)
                     t,y = signal.step(lti)
 
-                    self.filterToolPlotTable.canvas.axes.plot(t, y)
+                    self.filterToolPlotTable.canvas.axes.plot(t, y,label=template.printTag)
                     #self.filterToolPlotTable.canvas.axes.grid(which='both', axis='both')
                     self.filterToolPlotTable.canvas.axes.margins(0, 0.1)
                     self.filterToolPlotTable.canvas.figure.tight_layout()
+                theLegend = self.filterToolPlotTable.canvas.axes.legend(fancybox=True, framealpha=0.5, fontsize=6)
 
             self.filterToolPlotTable.canvas.axes.grid(which='both', axis='both')
             self.filterToolPlotTable.canvas.axes.axes.set_xlabel("Time [s]")
