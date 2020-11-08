@@ -110,12 +110,12 @@ class template():
 
     def get_sos_data_zpk(self, posc):
         num = self.singularidades["sos"][posc][0]
-        den = self.singularidades["sos"][posc][0]
+        den = self.singularidades["sos"][posc][1]
         return signal.tf2zpk(num, den)
 
     def get_sos_data_tf(self, posc):
         num = self.singularidades["sos"][posc][0]
-        den = self.singularidades["sos"][posc][0]
+        den = self.singularidades["sos"][posc][1]
         return num, den
 
     def get_sos_q(self,posc):
@@ -469,6 +469,9 @@ class template():
         if not need_recalc:
             self.get_sos()  # calculo sos para n valido
 
+
+        print ("SINGULARIDADES")
+        print (self.singularidades)
         #### DESPUES AGREGAMOS LOS TAGS ADICIONALES#
         if self.type == Type.LP:
             filterString = "Low-Pass"
