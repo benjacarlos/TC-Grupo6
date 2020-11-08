@@ -952,9 +952,8 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
             self.plotPhase()
         elif myPlotGraphicType == "Attenuation":
             self.plotAttenuation()
-            print("Voy a Funcion:" + myPlotGraphicType)
         elif myPlotGraphicType == "Attenuation - Normalized":
-            print("Voy a Funcion:" + myPlotGraphicType)
+            self.plotAttenuationNormalized()
         elif myPlotGraphicType == "Group Delay":
             self.plotGroupDelay()
         elif myPlotGraphicType == "Poles and Zeros":
@@ -1116,6 +1115,36 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
                 self.filterToolPlotTable.canvas.figure.gca().add_patch(rectangle_a)
 
         self.filterToolPlotTable.canvas.draw()
+
+    def plotAttenuationNormalized(self):
+        self.filterToolPlotTable.canvas.axes.clear()
+        if len(self.appTemplates) != 0:
+            self.filterToolPlotTable.canvas.axes.axes.set_xlabel("Frequency [Hz]")
+            self.filterToolPlotTable.canvas.axes.axes.set_ylabel("Gain [Db]")
+            self.filterToolPlotTable.canvas.axes.title.set_text('Attenuation - Normalized - LP')
+            for template in self.appTemplates:
+                if template.should_be_drawn() == True:
+                    w, h = signal.freqs(template.normalized_den, template.normalized_num,worN=np.linspace(0, 1e2, 1000))
+                    self.filterToolPlotTable.canvas.axes.semilogx(w, 20 * np.log10(abs(h)), label=template.printTag)
+                    self.filterToolPlotTable.canvas.axes.grid(True, which='both')
+                    self.filterToolPlotTable.canvas.figure.tight_layout()
+                theLegend = self.filterToolPlotTable.canvas.axes.legend(fancybox=True, framealpha=0.5, fontsize=6)
+
+            rectangle_p = plt.Rectangle((0, self.appTemplates[0].data["A_p"]), 1,
+                                        self.appTemplates[0].data["A_a"] + 100, fc='violet',
+                                        alpha=0.8)
+            rectangle_a = plt.Rectangle((self.appTemplates[0].w_a_n, 0), 1e4,
+                                        self.appTemplates[0].data["A_a"], fc='violet', alpha=0.8)
+
+            self.filterToolPlotTable.canvas.figure.gca().add_patch(rectangle_p)
+            self.filterToolPlotTable.canvas.figure.gca().add_patch(rectangle_a)
+
+        self.filterToolPlotTable.canvas.draw()
+
+
+
+
+
 
 
 

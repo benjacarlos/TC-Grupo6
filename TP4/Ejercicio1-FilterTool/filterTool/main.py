@@ -18,9 +18,9 @@ if __name__ == "__main__":
     # Se aplican estilos según CSS StyleSheet   #
     #############################################
 
-    #with open ("src/style/style.qss", "r") as f:
-    #    stylesheet = f.read()
-    #app.setStyleSheet(stylesheet)
+    with open ("src/style/style.qss", "r") as f:
+        stylesheet = f.read()
+    app.setStyleSheet(stylesheet)
 
     #############################################
 
