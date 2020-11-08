@@ -1338,6 +1338,12 @@
            <height>13</height>
           </rect>
          </property>
+         <property name="font">
+          <font>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
          <property name="text">
           <string> H(S) =</string>
          </property>
@@ -1395,11 +1401,17 @@
         <widget class="QLabel" name="label_17">
          <property name="geometry">
           <rect>
-           <x>50</x>
+           <x>30</x>
            <y>50</y>
            <width>21</width>
            <height>16</height>
           </rect>
+         </property>
+         <property name="font">
+          <font>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
          </property>
          <property name="text">
           <string>Q =</string>
@@ -1408,7 +1420,7 @@
         <widget class="QLabel" name="q1">
          <property name="geometry">
           <rect>
-           <x>70</x>
+           <x>60</x>
            <y>50</y>
            <width>201</width>
            <height>16</height>
@@ -1576,6 +1588,22 @@
           <string>X</string>
          </property>
         </widget>
+        <widget class="QCheckBox" name="plotF1">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>285</x>
+           <y>60</y>
+           <width>16</width>
+           <height>17</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
        </widget>
       </widget>
       <widget class="QStackedWidget" name="Function2">
@@ -1600,6 +1628,12 @@
            <width>47</width>
            <height>13</height>
           </rect>
+         </property>
+         <property name="font">
+          <font>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
          </property>
          <property name="text">
           <string> H(S) =</string>
@@ -1658,11 +1692,17 @@
         <widget class="QLabel" name="label_18">
          <property name="geometry">
           <rect>
-           <x>50</x>
-           <y>60</y>
+           <x>30</x>
+           <y>50</y>
            <width>21</width>
            <height>16</height>
           </rect>
+         </property>
+         <property name="font">
+          <font>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
          </property>
          <property name="text">
           <string>Q =</string>
@@ -1671,8 +1711,8 @@
         <widget class="QLabel" name="q2">
          <property name="geometry">
           <rect>
-           <x>70</x>
-           <y>60</y>
+           <x>60</x>
+           <y>50</y>
            <width>201</width>
            <height>16</height>
           </rect>
@@ -1839,13 +1879,26 @@
           <string>X</string>
          </property>
         </widget>
+        <widget class="QCheckBox" name="plotF2">
+         <property name="geometry">
+          <rect>
+           <x>285</x>
+           <y>60</y>
+           <width>16</width>
+           <height>17</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
        </widget>
       </widget>
       <widget class="QStackedWidget" name="Function3">
        <property name="geometry">
         <rect>
          <x>10</x>
-         <y>190</y>
+         <y>205</y>
          <width>301</width>
          <height>90</height>
         </rect>
@@ -1863,6 +1916,12 @@
            <width>47</width>
            <height>13</height>
           </rect>
+         </property>
+         <property name="font">
+          <font>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
          </property>
          <property name="text">
           <string> H(S) =</string>
@@ -1921,11 +1980,17 @@
         <widget class="QLabel" name="label_19">
          <property name="geometry">
           <rect>
-           <x>50</x>
+           <x>30</x>
            <y>50</y>
            <width>21</width>
            <height>16</height>
           </rect>
+         </property>
+         <property name="font">
+          <font>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
          </property>
          <property name="text">
           <string>Q =</string>
@@ -1934,7 +1999,7 @@
         <widget class="QLabel" name="q3">
          <property name="geometry">
           <rect>
-           <x>80</x>
+           <x>60</x>
            <y>50</y>
            <width>201</width>
            <height>16</height>
@@ -2102,13 +2167,29 @@
           <string>X</string>
          </property>
         </widget>
+        <widget class="QCheckBox" name="plotF3">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>285</x>
+           <y>60</y>
+           <width>16</width>
+           <height>17</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
        </widget>
       </widget>
       <widget class="QStackedWidget" name="Function4">
        <property name="geometry">
         <rect>
          <x>10</x>
-         <y>290</y>
+         <y>300</y>
          <width>301</width>
          <height>90</height>
         </rect>
@@ -2126,6 +2207,12 @@
            <width>47</width>
            <height>13</height>
           </rect>
+         </property>
+         <property name="font">
+          <font>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
          </property>
          <property name="text">
           <string> H(S) =</string>
@@ -2184,11 +2271,17 @@
         <widget class="QLabel" name="label_20">
          <property name="geometry">
           <rect>
-           <x>50</x>
+           <x>30</x>
            <y>50</y>
            <width>21</width>
            <height>16</height>
           </rect>
+         </property>
+         <property name="font">
+          <font>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
          </property>
          <property name="text">
           <string>Q =</string>
@@ -2197,7 +2290,7 @@
         <widget class="QLabel" name="q4">
          <property name="geometry">
           <rect>
-           <x>80</x>
+           <x>60</x>
            <y>50</y>
            <width>191</width>
            <height>16</height>
@@ -2365,13 +2458,29 @@
           <string>X</string>
          </property>
         </widget>
+        <widget class="QCheckBox" name="plotF4">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>285</x>
+           <y>60</y>
+           <width>16</width>
+           <height>17</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
        </widget>
       </widget>
       <widget class="QStackedWidget" name="Function5">
        <property name="geometry">
         <rect>
          <x>10</x>
-         <y>380</y>
+         <y>400</y>
          <width>301</width>
          <height>90</height>
         </rect>
@@ -2389,6 +2498,12 @@
            <width>47</width>
            <height>13</height>
           </rect>
+         </property>
+         <property name="font">
+          <font>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
          </property>
          <property name="text">
           <string> H(S) =</string>
@@ -2447,11 +2562,17 @@
         <widget class="QLabel" name="label_21">
          <property name="geometry">
           <rect>
-           <x>50</x>
+           <x>30</x>
            <y>50</y>
            <width>21</width>
            <height>16</height>
           </rect>
+         </property>
+         <property name="font">
+          <font>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
          </property>
          <property name="text">
           <string>Q =</string>
@@ -2460,7 +2581,7 @@
         <widget class="QLabel" name="q5">
          <property name="geometry">
           <rect>
-           <x>70</x>
+           <x>60</x>
            <y>50</y>
            <width>201</width>
            <height>16</height>
@@ -2628,38 +2749,70 @@
           <string>X</string>
          </property>
         </widget>
+        <widget class="QCheckBox" name="plotF5">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>285</x>
+           <y>60</y>
+           <width>16</width>
+           <height>17</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
        </widget>
       </widget>
       <widget class="QLabel" name="parametersInfoLabel_2">
        <property name="geometry">
         <rect>
-         <x>60</x>
+         <x>70</x>
          <y>0</y>
-         <width>201</width>
-         <height>31</height>
+         <width>191</width>
+         <height>21</height>
         </rect>
        </property>
        <property name="font">
         <font>
-         <pointsize>16</pointsize>
+         <pointsize>14</pointsize>
         </font>
        </property>
        <property name="text">
         <string>Second Order Stages</string>
        </property>
       </widget>
-      <widget class="QCheckBox" name="plotEachStage">
+      <widget class="QStackedWidget" name="plotStageWidget">
        <property name="geometry">
         <rect>
-         <x>120</x>
-         <y>490</y>
-         <width>81</width>
-         <height>17</height>
+         <x>100</x>
+         <y>500</y>
+         <width>120</width>
+         <height>41</height>
         </rect>
        </property>
-       <property name="text">
-        <string>Plot Stages</string>
+       <property name="currentIndex">
+        <number>1</number>
        </property>
+       <widget class="QWidget" name="showPlotEach">
+        <widget class="QCheckBox" name="plotEachStage">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>10</y>
+           <width>81</width>
+           <height>17</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Plot Stages</string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="noShowPlotEach"/>
       </widget>
      </widget>
      <widget class="QComboBox" name="plotTypeOptionInput_2">
@@ -2783,12 +2936,12 @@
        <rect>
         <x>800</x>
         <y>430</y>
-        <width>71</width>
-        <height>61</height>
+        <width>81</width>
+        <height>31</height>
        </rect>
       </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>1</number>
       </property>
       <widget class="QWidget" name="yesPlot">
        <widget class="QCheckBox" name="plotAllSos">
@@ -2804,19 +2957,6 @@
          <string>Compare</string>
         </property>
        </widget>
-       <widget class="QCheckBox" name="plotTemplate">
-        <property name="geometry">
-         <rect>
-          <x>10</x>
-          <y>30</y>
-          <width>61</width>
-          <height>21</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Template</string>
-        </property>
-       </widget>
       </widget>
       <widget class="QWidget" name="noPlot"/>
      </widget>
@@ -2824,7 +2964,7 @@
       <property name="geometry">
        <rect>
         <x>20</x>
-        <y>570</y>
+        <y>590</y>
         <width>301</width>
         <height>131</height>
        </rect>
@@ -3157,6 +3297,35 @@
       <property name="text">
        <string>Split in Second Orden System</string>
       </property>
+     </widget>
+     <widget class="QStackedWidget" name="showPlotTemplate">
+      <property name="geometry">
+       <rect>
+        <x>810</x>
+        <y>460</y>
+        <width>71</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="noShowPlotTemplate"/>
+      <widget class="QWidget" name="yesShowPlotTemplate">
+       <widget class="QCheckBox" name="plotTemplate">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>61</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Template</string>
+        </property>
+       </widget>
+      </widget>
      </widget>
     </widget>
    </widget>
