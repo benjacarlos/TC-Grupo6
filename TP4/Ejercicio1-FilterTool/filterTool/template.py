@@ -150,6 +150,7 @@ class template():
     def draw_in_trans_mode(self):
         self.__att_mode = False
 
+
     def draw_my_approximation(self):
         print('to do')
 
@@ -171,12 +172,12 @@ class template():
                 self.data["w_p_m"] = (self.wo ** 2) / self.data["w_p"]
 
             self.bw = self.data["w_p"] - self.data["w_p_m"]
-            print(self.bw)
-            print(self.wo)
-            print(self.data["w_a_m"])
-            print(self.data["w_a"])
-            print(self.data["w_p_m"])
-            print(self.data["w_p"])
+            #print(self.bw)
+            #print(self.wo)
+            #print(self.data["w_a_m"])
+            #print(self.data["w_a"])
+            #print(self.data["w_p_m"])
+            #print(self.data["w_p"])
 
             self.w_a_n=(self.data["w_p"]-self.data["w_p_m"])/(self.data["w_a"]-self.data["w_a_m"])
 
@@ -191,12 +192,12 @@ class template():
                 self.data["w_a_m"] = (self.wo ** 2) / self.data["w_a"]
 
 
-            print(self.bw)
-            print(self.wo)
-            print(self.data["w_a_m"])
-            print(self.data["w_a"])
-            print(self.data["w_p_m"])
-            print(self.data["w_p"])
+            #print(self.bw)
+            #print(self.wo)
+            #print(self.data["w_a_m"])
+            #print(self.data["w_a"])
+            #print(self.data["w_p_m"])
+            #print(self.data["w_p"])
 
             self.w_a_n = (self.data["w_a"] - self.data["w_a_m"]) / (self.data["w_p"]-self.data["w_p_m"])
 
@@ -314,7 +315,7 @@ class template():
         if recalculate:
             self.data["n"] = self.n - 1  # hardcodeo el n por uno menos restrictivo
             self.init_approx()  # vuelvo a realizar la aproximacion
-            print('Hay que recalcular el filtro')
+            #print('Hay que recalcular el filtro')
         else:  # ordeno de Q menor a mayor
             self.singularidades["sos"].sort(key=lambda q: q[2][0])
 
@@ -454,17 +455,15 @@ class template():
                                                                                    self.normalized_k, self.wo, self.bw)
 
             if self.approximation == Approximation.Gauss:
-                print ("VOY A INICIALIZAR GAUSS")
-                self.actual_num, self.actual_den, self.actual_z, self.actual_p, self.n = gauss.gauss(self.data["wrg"],self.data["tol"],self.data["tau"],self.data["n"])
-                print(self.actual_num, self.actual_den, self.actual_z, self.actual_p, self.n)
 
-                print ("INICIALICE OK")
+                self.actual_num, self.actual_den, self.actual_z, self.actual_p, self.n = gauss.gauss(self.data["wrg"],self.data["tol"],self.data["tau"],self.data["n"])
+
 
 
 
         self.actual_n=len(self.actual_p)
 
-        print(self.actual_n)
+        #print(self.actual_n)
 
         need_recalc=False
 

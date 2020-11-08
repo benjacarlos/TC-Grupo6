@@ -982,8 +982,7 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
             self.plotImpulseResponse()
         elif myPlotGraphicType == "Step Response":
             self.plotStepResponse()
-        elif myPlotGraphicType == "Maximum Q":
-            print("Voy a Funcion:" + myPlotGraphicType)
+
 
 
 
@@ -1203,7 +1202,7 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
 
         self.filterToolPlotTable.canvas.axes.clear()
         if len(self.appTemplates) != 0:
-            print("POLES AND ZEROS")
+
 
 
 

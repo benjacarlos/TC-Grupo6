@@ -76,10 +76,7 @@ def gauss(wrg,tol,tau,n=0):
         w, h = signal.freqs(num, den)
 
 
-        # NUEVO
 
-        #########################
-        # Normalizo             #
         group_delay = -np.diff(np.unwrap(np.angle(h))) / np.diff(w)
         group_delay = group_delay / group_delay[0] * tau
 
@@ -139,16 +136,12 @@ def gauss(wrg,tol,tau,n=0):
             den = myDenominator.real[::-1]
 
             # Reemplazo s por tau.s para obtener el tau que quiero en el group_delay
-            #for i in range(len(den)):
-            #    den[i] = (den[i] * (tau) ** (len(den) - i - 1))
+            for i in range(len(den)):
+                den[i] = (den[i] * (tau) ** (len(den) - i - 1))
 
             # Obtengo retardo de grupo
             w, h = signal.freqs(num, den,(logspace(log10(wrg/1000), log10(wrg*100), 10000)))
 
-            # NUEVO
-
-            #########################
-            # Normalizo             #
             group_delay = -np.diff(np.unwrap(np.angle(h))) / np.diff(w)
 
             temp_gd = group_delay / group_delay[0]
@@ -156,7 +149,6 @@ def gauss(wrg,tol,tau,n=0):
             group_delay = group_delay / group_delay[0] * tau
 
             myIndex = [m for m, i in enumerate(w) if i > wrg][0]
-
 
             if temp_gd[myIndex] > (1 - tol):
                 idealN = True
@@ -166,7 +158,7 @@ def gauss(wrg,tol,tau,n=0):
 
 
 
-    return [1],den,[],gaussFilterPoles,nMax#group_delay,w[1:],nMax
+    return [1],den,[],gaussFilterPoles,group_delay,w[1:],nMax
 
     #########################################
 
@@ -189,11 +181,9 @@ if __name__ == '__main__':
     tol = 1
     tau = 1e-3
 
-    num,den,myZeros,myPoles,gd,wd,n = gaussFilter(A_p,A_a,w_p,w_a,w_max,wrg,tol,tau)
-    print (n)
-    #num2, den2, myZeros2, myPoles2, gd2, wd2 = gaussFilter(A_p, A_a, w_p, w_a, w_max, wrg, tol, tau, 6)
-    #num3, den3, myZeros3, myPoles3, gd3, wd3 = gaussFilter(A_p, A_a, w_p, w_a, w_max, wrg, tol, tau, 9)
-    #print (myPoles)
+    num,den,myZeros,myPoles,gd,wd,n = gauss(A_p,A_a,w_p,w_a,w_max,wrg,tol,tau)
+
+
 
     system = signal.TransferFunction (num,den)
 
@@ -201,15 +191,11 @@ if __name__ == '__main__':
 
 
     plt.figure()
-
     plt.semilogx(w, phase)
-
     plt.show()
 
-    plt.figure()
-    plt.semilogx (wd,gd,label="n=2")
-    #plt.semilogx(2*pi*wd2, gd2,label="n=3")
-    #plt.semilogx(2*pi*wd3, gd3,label="n=4")
-    plt.legend()
 
+    plt.figure()
+    plt.semilogx (wd,gd)
+    plt.legend()
     plt.show()
