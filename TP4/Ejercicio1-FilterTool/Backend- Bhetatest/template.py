@@ -55,6 +55,7 @@ class template():
         self.actual_displayed=Type.LP   #what is actually being displayed
         self.__att_mode=False
         self.first_calculation=True
+        self.DistribuiteGainBetweenAllSections=False
         #self.singularidades = np.array([[1],[1],[1]])
 
         self.singularidades = {
@@ -214,10 +215,22 @@ class template():
         # si la ganancia no es unitaria se la asigno a la ultima etapa
         else:
             while self.number_of_sections>index:
-                if index+1 == self.number_of_sections:
-                    self.singularidades["ganancias"].append({self.actual_k})
-                    break
-                self.singularidades["ganancias"].append({1})
+                if self.DistribuiteGainBetweenAllSections:
+                    gain_per_section=abs(self.actual_k)**(1./self.number_of_sections)
+                    contrafase=False
+
+                    if self.actual_k<0:
+                        contrafase=True
+
+                    if index+1 == self.number_of_sections and contrafase:
+                        self.singularidades["ganancias"].append({-gain_per_section})
+                        break
+                    self.singularidades["ganancias"].append({gain_per_section})
+                else:
+                    if index+1 == self.number_of_sections:
+                        self.singularidades["ganancias"].append({self.actual_k})
+                        break
+                    self.singularidades["ganancias"].append({1})
                 index += 1
         #estas ganancias individuales se podrían editar más adelante de manera inidividual
 
