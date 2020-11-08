@@ -488,8 +488,8 @@ class template():
             self.get_sos()  # calculo sos para n valido
 
 
-        print ("SINGULARIDADES")
-        print (self.singularidades)
+        #print ("SINGULARIDADES")
+        #print (self.singularidades)
         #### DESPUES AGREGAMOS LOS TAGS ADICIONALES#
         if self.type == Type.LP:
             filterString = "Low-Pass"
@@ -527,7 +527,7 @@ class template():
 
         self.printTag = "N:" + str(self.n) + " | A:" + shortApproxString + " | D:" + str(self.data["d"])
         self.tag = filterString + " N: "+ str(self.n) + " Apr: " + approxString + " Den: " + str(self.data["d"])
-        print (self.tag)
+        #print (self.tag)
 
 
 

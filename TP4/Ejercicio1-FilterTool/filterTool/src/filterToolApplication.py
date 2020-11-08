@@ -540,7 +540,42 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
 
             self.filterToolPlotTable_2.canvas.axes.grid(which='both', axis='both')
             self.filterToolPlotTable_2.canvas.figure.tight_layout()
-            self.filterToolPlotTable_2.canvas.draw()
+
+
+        if self.plotAllSos.isChecked():
+
+            for i in range((self.appTemplates[self.currentIndex].number_of_sections)-1):
+                print ("NUMBER OF SECTIONS:")
+                print (self.appTemplates[self.currentIndex].number_of_sections)
+                print("INDEX VALUE:")
+                print (i)
+
+                if i == 0:
+                    num, den = self.appTemplates[self.currentIndex].get_sos_data_tf(i)
+                    num2,den2 = self.appTemplates[self.currentIndex].get_sos_data_tf(i + 1)
+                    tempnum = np.polymul(num,num2)
+                    tempden = np.polymul(den,den2)
+                    print (tempnum)
+                    print(tempden)
+                if i != 0:
+                    print("ENTRO AUI")
+                    num,den = self.appTemplates[self.currentIndex].get_sos_data_tf(i+1)
+                    tempnum = np.polymul(num,tempnum)
+                    tempden = np.polymul(den,tempden)
+
+            system = signal.TransferFunction(tempnum, tempden)
+            print ("FALLA ACA")
+            w, mag, phase = signal.bode(system)
+
+            self.filterToolPlotTable_2.canvas.axes.semilogx(w, phase, label="CACA")
+            self.filterToolPlotTable_2.canvas.axes.grid(True, which='both')
+            # self.filterToolPlotTable.canvas.axes.margins(0, 0.1)
+            self.filterToolPlotTable.canvas.figure.tight_layout()
+            
+        theLegend = self.filterToolPlotTable.canvas.axes.legend(fancybox=True, framealpha=0.5, fontsize=6)
+
+        self.filterToolPlotTable_2.canvas.draw()
+
 
 
     def plotZerosAndPolesStageTwo(self):
@@ -735,7 +770,7 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
             except:
                 ErrorMessage = ErrorMessage + "WpM must be a valid number \n"
 
-            print ("Estoy en BP")
+
         elif str(self.filterTypeOption.currentText()) == "Band-Rejection":
             self.filterTypeSelected = Type.BR
             ErrorMessage = ""
@@ -765,7 +800,7 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
                 self.Wpm = float(self.fpmInput.text())
             except:
                 ErrorMessage = ErrorMessage + "WpM must be a valid number \n"
-            print ("Estoy en BR")
+
         elif str(self.filterTypeOption.currentText()) == "Group Delay":
             self.filterTypeSelected = Type.LPGD
             ErrorMessage = ""
@@ -819,7 +854,7 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
             msgWrongInput.setText(ErrorMessage)
             msgWrongInput.exec()
         else:
-            print ("Aca voy a la funcion que calcula el filtro")
+
             try:
                 if self.validateParametersNotChanged()==True:
                     self.appTemplates.append(template(self.filterTypeSelected, self.approxTypeSelected, self.data))
@@ -911,12 +946,7 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
 
     def validateParametersNotChanged (self):
 
-        print (self.previousData)
-        print (self.data)
-        print (self.previousWam)
-        print (self.Wam)
-        print (self.previousWpm)
-        print (self.Wpm)
+
 
 
         goodParameters = True
@@ -950,7 +980,7 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
                 self.filterDesignedLabelCombo.addItem(line.tag)
 
             tempIndex= len(self.appTemplates)-1
-            print (tempIndex)
+
 
             self.filterDesignedLabelCombo.setCurrentText(self.appTemplates[tempIndex].tag)
         else:
@@ -1297,7 +1327,7 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
         self.filterToolPlotTable.canvas.axes.clear()
 
         if len(self.appTemplates) != 0:
-            print ("IMPULSO")
+
 
 
 
@@ -1326,7 +1356,7 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
 
         self.filterToolPlotTable.canvas.axes.clear()
         if len(self.appTemplates) != 0:
-            print ("ESCALON")
+
 
 
 
