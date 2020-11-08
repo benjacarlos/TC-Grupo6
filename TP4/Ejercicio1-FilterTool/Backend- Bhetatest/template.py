@@ -216,7 +216,7 @@ class template():
         else:
             while self.number_of_sections>index:
                 if self.DistribuiteGainBetweenAllSections:
-                    gain_per_section=self.actual_k**(1./self.number_of_sections)
+                    gain_per_section=abs(self.actual_k)**(1./self.number_of_sections)
                     contrafase=False
 
                     if self.actual_k<0:
