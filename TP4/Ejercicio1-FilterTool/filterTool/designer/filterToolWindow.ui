@@ -2840,19 +2840,6 @@
        </property>
       </item>
      </widget>
-     <widget class="QLabel" name="plotTypeOptionLabel_2">
-      <property name="geometry">
-       <rect>
-        <x>450</x>
-        <y>440</y>
-        <width>31</width>
-        <height>16</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Plot</string>
-      </property>
-     </widget>
      <widget class="QLabel" name="hsLabelNum_4">
       <property name="geometry">
        <rect>
@@ -3295,7 +3282,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>Split in Second Orden System</string>
+       <string>Show Second Order Stages</string>
       </property>
      </widget>
      <widget class="QStackedWidget" name="showPlotTemplate">
@@ -3323,6 +3310,49 @@
         </property>
         <property name="text">
          <string>Template</string>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+     <widget class="QStackedWidget" name="showTypeOfOptions">
+      <property name="geometry">
+       <rect>
+        <x>350</x>
+        <y>440</y>
+        <width>120</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="showForAll">
+       <widget class="QLabel" name="plotTypeOptionLabel_2">
+        <property name="geometry">
+         <rect>
+          <x>100</x>
+          <y>0</y>
+          <width>21</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Plot</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="showForSome">
+       <widget class="QLabel" name="label_26">
+        <property name="geometry">
+         <rect>
+          <x>50</x>
+          <y>-2</y>
+          <width>71</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Plot for Stages</string>
         </property>
        </widget>
       </widget>

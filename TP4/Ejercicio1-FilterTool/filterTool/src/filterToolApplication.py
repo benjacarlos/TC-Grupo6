@@ -133,22 +133,100 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
     def plotGraphicEachStage(self):
 
         if self.plotEachStage.isChecked():
-            self.filterToolPlotTable_2.canvas.axes.clear()
-            self.filterToolPlotTable_2.canvas.axes.axes.set_xlabel("Frequency [Hz]")
-            self.filterToolPlotTable_2.canvas.axes.axes.set_ylabel("Gain [Db]")
-            self.filterToolPlotTable_2.canvas.axes.title.set_text('Frequency Response - Amplitude')
-            for i in range(self.appTemplates[self.currentIndex].number_of_sections):
-                if self.stageToBePlotted[i] == True:
-                    sectionLabel = "Stage: " + str(i+1) + " " + self.appTemplates[self.currentIndex].printTag
-                    num, den = self.appTemplates[self.currentIndex].get_sos_data_tf(i)
-                    w, h = signal.freqs(num, den)
-                    self.filterToolPlotTable_2.canvas.axes.semilogx(w, 20 * np.log10(abs(h)), label= sectionLabel)
-                    self.filterToolPlotTable_2.canvas.axes.grid(True, which='both')
-                    self.filterToolPlotTable_2.canvas.figure.tight_layout()
-                    theLegend = self.filterToolPlotTable_2.canvas.axes.legend(fancybox=True, framealpha=0.5, fontsize=6)
-            self.filterToolPlotTable_2.canvas.draw()
+            self.showPlotSos.setCurrentWidget(self.noPlot)
+            self.showPlotTemplate.setCurrentWidget(self.noShowPlotTemplate)
+            print ("BUENARDOOOOO")
+            #self.plotAllSos.setChecked(False)
+            #self.plotTemplate.setChecked(False)
+            self.showTypeOfOptions.setCurrentWidget(self.showForSome)
+            self.plotTypeOptionInput_2.clear()
+            elementsToBeAdded = ["Magnitude", "Phase"]
+            for line in elementsToBeAdded:
+                self.plotTypeOptionInput_2.addItem(line)
+            self.plotGraphicStageTwoByStage()
+
         else:
+            self.plotTypeOptionInput_2.clear()
+            self.showTypeOfOptions.setCurrentWidget(self.showForAll)
+            elementsToBeAdded = ["Magnitude", "Phase","Poles and Zeros"]
+            for line in elementsToBeAdded:
+                self.plotTypeOptionInput_2.addItem(line)
             self.plotGraphicStageTwo()
+
+    def plotGraphicStageTwoByStage(self):
+        if self.plotTypeOptionInput_2.currentText() == "Magnitude":
+            self.plotMagnitudeEachStage()
+        elif self.plotTypeOptionInput_2.currentText() == "Phase":
+            self.plotPhaseEachStage()
+
+
+    def plotGraphicStageTwo(self):
+
+        myPlotGraphicType = str(self.plotTypeOptionInput_2.currentText())
+
+        if self.plotEachStage.isChecked():
+            if myPlotGraphicType == "Magnitude":
+                self.showPlotSos.setCurrentWidget(self.noPlot)
+                self.showPlotTemplate.setCurrentWidget(self.noShowPlotTemplate)
+                self.plotMagnitudeEachStage()
+            elif myPlotGraphicType == "Phase":
+                self.showPlotSos.setCurrentWidget(self.noPlot)
+                self.showPlotTemplate.setCurrentWidget(self.noShowPlotTemplate)
+                self.plotPhaseEachStage()
+
+        else:
+            if myPlotGraphicType == "Magnitude":
+                self.showPlotSos.setCurrentWidget(self.yesPlot)
+                self.showPlotTemplate.setCurrentWidget(self.yesShowPlotTemplate)
+                self.plotMagnitudeStageTwo()
+            elif myPlotGraphicType == "Phase":
+                self.showPlotSos.setCurrentWidget(self.yesPlot)
+                self.showPlotTemplate.setCurrentWidget(self.noShowPlotTemplate)
+                self.plotPhaseStageTwo()
+            elif myPlotGraphicType == "Poles and Zeros":
+                self.showPlotSos.setCurrentWidget(self.noPlot)
+                self.showPlotTemplate.setCurrentWidget(self.noShowPlotTemplate)
+                self.plotZerosAndPolesStageTwo()
+
+
+
+
+    def plotMagnitudeEachStage (self):
+        ("ESTOY PLOTEANDOOOOOO")
+        self.filterToolPlotTable_2.canvas.axes.clear()
+        self.filterToolPlotTable_2.canvas.axes.axes.set_xlabel("Frequency [Hz]")
+        self.filterToolPlotTable_2.canvas.axes.axes.set_ylabel("Gain [Db]")
+        self.filterToolPlotTable_2.canvas.axes.title.set_text('Frequency Response - Amplitude')
+        for i in range(self.appTemplates[self.currentIndex].number_of_sections):
+            if self.stageToBePlotted[i] == True:
+                sectionLabel = "Stage: " + str(i + 1) + " " + self.appTemplates[self.currentIndex].printTag
+                num, den = self.appTemplates[self.currentIndex].get_sos_data_tf(i)
+                w, h = signal.freqs(num, den)
+                self.filterToolPlotTable_2.canvas.axes.semilogx(w, 20 * np.log10(abs(h)), label=sectionLabel)
+                self.filterToolPlotTable_2.canvas.axes.grid(True, which='both')
+                self.filterToolPlotTable_2.canvas.figure.tight_layout()
+                theLegend = self.filterToolPlotTable_2.canvas.axes.legend(fancybox=True, framealpha=0.5, fontsize=6)
+        self.filterToolPlotTable_2.canvas.draw()
+
+    def plotPhaseEachStage(self):
+        self.filterToolPlotTable_2.canvas.axes.clear()
+        self.filterToolPlotTable_2.canvas.axes.axes.set_xlabel("Frequency [Hz]")
+        self.filterToolPlotTable_2.canvas.axes.axes.set_ylabel("Phase [°]")
+        self.filterToolPlotTable_2.canvas.axes.title.set_text('Frequency Response - Phase')
+        for i in range(self.appTemplates[self.currentIndex].number_of_sections):
+            if self.stageToBePlotted[i] == True:
+                sectionLabel = "Stage: " + str(i + 1) + " " + self.appTemplates[self.currentIndex].printTag
+                num, den = self.appTemplates[self.currentIndex].get_sos_data_tf(i)
+                system = signal.TransferFunction(num,den)
+                w, mag, phase = signal.bode(system)
+                self.filterToolPlotTable_2.canvas.axes.semilogx(w, phase, label=sectionLabel)
+                self.filterToolPlotTable_2.canvas.axes.grid(True, which='both')
+                self.filterToolPlotTable_2.canvas.figure.tight_layout()
+                theLegend = self.filterToolPlotTable_2.canvas.axes.legend(fancybox=True, framealpha=0.5, fontsize=6)
+        self.filterToolPlotTable_2.canvas.draw()
+
+
+
 
 
 
@@ -219,6 +297,7 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
             tempDenominator = [float(x) for x in self.denToEdit.text().split(',')]
             self.appTemplates[self.currentIndex].edit_sos_tf(tempNumerator, tempDenominator, self.stageThatWillBeEdited)
             self.printSecondOrderSystems()
+            self.editStagePage.setCurrentWidget(self.dontShowMeEdit)
         except:
             msgWrongInput.setText("Something went wrong. \n Complete the numerator and denominator with , separated values")
             msgWrongInput.exec()
@@ -349,24 +428,7 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
         self.hsLabelNum_2.setText(numToPrint)
         self.hsLabelDen_2.setText(denToPrint)
 
-    def plotGraphicStageTwo(self):
 
-        myPlotGraphicType = str(self.plotTypeOptionInput_2.currentText())
-
-        
-        print (str(self.plotTypeOptionInput_2.currentText()))
-        if myPlotGraphicType == "Magnitude":
-            self.showPlotSos.setCurrentWidget(self.yesPlot)
-            self.showPlotTemplate.setCurrentWidget(self.yesShowPlotTemplate)
-            self.plotMagnitudeStageTwo()
-        elif myPlotGraphicType == "Phase":
-            self.showPlotSos.setCurrentWidget(self.yesPlot)
-            self.showPlotTemplate.setCurrentWidget(self.noShowPlotTemplate)
-            self.plotPhaseStageTwo()
-        elif myPlotGraphicType == "Poles and Zeros":
-            self.showPlotSos.setCurrentWidget(self.noPlot)
-            self.showPlotTemplate.setCurrentWidget(self.noShowPlotTemplate)
-            self.plotZerosAndPolesStageTwo()
 
     def plotMagnitudeStageTwo(self):
 
@@ -722,8 +784,7 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
     def printSecondOrderSystems(self):
         if len(self.appTemplates)!=0:
             if self.splitInSos.isChecked():
-                self.showPlotSos.setCurrentWidget(self.noPlot)
-                self.showPlotTemplate.setCurrentWidget(self.noShowPlotTemplate)
+
                 self.plotStageWidget.setCurrentWidget(self.showPlotEach)
                 for i in range (self.appTemplates[self.currentIndex].number_of_sections):
                     num,den = self.appTemplates[self.currentIndex].get_sos_data_tf(i)
@@ -765,6 +826,9 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
                 self.Function4.setCurrentWidget(self.noF4)
                 self.Function5.setCurrentWidget(self.noF5)
                 self.showPlotSos.setCurrentWidget(self.noPlot)
+                self.plotStageWidget.setCurrentWidget(self.noShowPlotEach)
+                self.plotGraphicStageTwo()
+
 
 
 
