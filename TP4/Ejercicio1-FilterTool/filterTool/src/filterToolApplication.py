@@ -8,6 +8,7 @@ import extra
 from template import *
 
 
+
 class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
     def __init__(self):
         super(myFilterToolApplication, self).__init__()
@@ -429,7 +430,7 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
     def plotMagnitudeStageTwo(self):
 
         self.filterToolPlotTable_2.canvas.axes.clear()
-        self.filterToolPlotTable_2.canvas.axes.axes.set_xlabel("Frequency [Hz]")
+        self.filterToolPlotTable_2.canvas.axes.axes.set_xlabel("Frequency [rad/s]")
         self.filterToolPlotTable_2.canvas.axes.axes.set_ylabel("Gain [Db]")
         self.filterToolPlotTable_2.canvas.axes.title.set_text('Frequency Response - Amplitude')
 
@@ -530,7 +531,7 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
         if len(self.appTemplates) != 0:
 
             self.filterToolPlotTable_2.canvas.axes.clear()
-            self.filterToolPlotTable_2.canvas.axes.axes.set_xlabel("Frequency [Hz]")
+            self.filterToolPlotTable_2.canvas.axes.axes.set_xlabel("Frequency [rad/s]")
             self.filterToolPlotTable_2.canvas.axes.axes.set_ylabel("Phase [°]")
             self.filterToolPlotTable_2.canvas.axes.title.set_text('Frequency Response - Phase')
             system = signal.TransferFunction(self.appTemplates[self.currentIndex].actual_num, self.appTemplates[self.currentIndex].actual_den)
@@ -781,22 +782,38 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
             except:
                 ErrorMessage = ErrorMessage + "Tol must be a valid number \n"
 
-        try:
-            self.data["n"] = int (self.filterOrderInput.text())
-            if self.data["n"] < 0:
-                raise Exception("Exception")
-        except:
-            ErrorMessage = ErrorMessage + "The filter order must be a valid number \n"
-        try:
-            self.data["d"] = float (self.denormInput.text())
-            if self.data["d"] < 0 or self.data["d"] > 1:
-                raise Exception("Exception")
-        except:
-            ErrorMessage = ErrorMessage + "The Denormalization must be a valid number (0 to 1) \n"
-        try:
-            self.data["Q_max"] = float (self.qmaxInput.text())
-        except:
-            ErrorMessage = ErrorMessage + "The QMax must be a valid number \n"
+        if self.filterOrderInput.text():
+            try:
+                self.data["n"] = int (self.filterOrderInput.text())
+                if self.data["n"] < 0:
+                    raise Exception("Exception")
+            except:
+                ErrorMessage = ErrorMessage + "The filter order must be a valid number \n"
+
+        if self.denormInput.text():
+            try:
+                self.data["d"] = float (self.denormInput.text())
+                if self.data["d"] < 0 or self.data["d"] > 1:
+                    raise Exception("Exception")
+            except:
+                ErrorMessage = ErrorMessage + "The Denormalization must be a valid number (0 to 1) \n"
+
+        if self.qmaxInput.text():
+            try:
+                self.data["Q_max"] = float (self.qmaxInput.text())
+            except:
+                ErrorMessage = ErrorMessage + "The QMax must be a valid number \n"
+        if self.minFilterOrderInput.text():
+            try:
+                self.data["n_min"] = float (self.minFilterOrderInput.text())
+            except:
+                ErrorMessage = ErrorMessage + "The NMin must be a valid number \n"
+
+        if self.maxFilterOrderInput.text():
+            try:
+                self.data["n_max"] = float(self.maxFilterOrderInput.text())
+            except:
+                ErrorMessage = ErrorMessage + "The NMax must be a valid number \n"
 
         if ErrorMessage != "":
             msgWrongInput.setText(ErrorMessage)
@@ -807,8 +824,6 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
                 if self.validateParametersNotChanged()==True:
                     self.appTemplates.append(template(self.filterTypeSelected, self.approxTypeSelected, self.data))
                     self.addNewItemToFilterList()
-
-
                     self.printTransferFunction(self.indexForTemplate)
                     self.indexForTemplate = (self.indexForTemplate + 1)
                     self.plotGraphic()
@@ -818,6 +833,11 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
             except:
                 msgWrongInput.setText("Sorry, but it was not possible to calculate the filter based on your parameters. \n I am not smart enough or there is no possible filter. \n Please try with different values. ")
                 msgWrongInput.exec()
+                self.data = self.previousData
+                self.filterTypeSelected = self.previousFilterTypeSelected
+                self.Wpm = self.previousWpm
+                self.Wam = self.previousWam
+
 
     def acceptToRemove (self):
         self.removeAllFilters()
@@ -971,7 +991,7 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
 
         self.filterToolPlotTable.canvas.axes.clear()
         if len(self.appTemplates) != 0:
-            self.filterToolPlotTable.canvas.axes.axes.set_xlabel("Frequency [Hz]")
+            self.filterToolPlotTable.canvas.axes.axes.set_xlabel("Frequency [rad/s]")
             self.filterToolPlotTable.canvas.axes.axes.set_ylabel("Gain [Db]")
             self.filterToolPlotTable.canvas.axes.title.set_text('Frequency Response - Amplitude')
 
@@ -1047,7 +1067,7 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
         self.filterToolPlotTable.canvas.axes.clear()
         if len(self.appTemplates) != 0:
 
-            self.filterToolPlotTable.canvas.axes.axes.set_xlabel("Frequency [Hz]")
+            self.filterToolPlotTable.canvas.axes.axes.set_xlabel("Frequency [rad/s]")
             self.filterToolPlotTable.canvas.axes.axes.set_ylabel("Gain [Db]")
             self.filterToolPlotTable.canvas.axes.title.set_text('Attenuation')
 
@@ -1119,7 +1139,7 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
     def plotAttenuationNormalized(self):
         self.filterToolPlotTable.canvas.axes.clear()
         if len(self.appTemplates) != 0:
-            self.filterToolPlotTable.canvas.axes.axes.set_xlabel("Frequency [Hz]")
+            self.filterToolPlotTable.canvas.axes.axes.set_xlabel("Frequency [rad/s]")
             self.filterToolPlotTable.canvas.axes.axes.set_ylabel("Gain [Db]")
             self.filterToolPlotTable.canvas.axes.title.set_text('Attenuation - Normalized - LP')
             for template in self.appTemplates:
@@ -1173,7 +1193,7 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
                 theLegend = self.filterToolPlotTable.canvas.axes.legend(fancybox=True, framealpha=0.5, fontsize=6)
 
             #self.filterToolPlotTable.canvas.axes.grid(which='both', axis='both')
-            self.filterToolPlotTable.canvas.axes.axes.set_xlabel("Frequency [Hz]")
+            self.filterToolPlotTable.canvas.axes.axes.set_xlabel("Frequency [rad/s]")
             self.filterToolPlotTable.canvas.axes.axes.set_ylabel("Phase [°]")
             self.filterToolPlotTable.canvas.axes.title.set_text('Frequency Response - Phase')
             self.filterToolPlotTable.canvas.figure.tight_layout()

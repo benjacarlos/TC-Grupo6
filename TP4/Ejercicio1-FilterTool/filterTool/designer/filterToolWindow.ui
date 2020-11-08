@@ -284,7 +284,7 @@
          </rect>
         </property>
         <property name="text">
-         <string>fa [Hz] </string>
+         <string>Wa [rad/s] </string>
         </property>
        </widget>
        <widget class="QLineEdit" name="faInput">
@@ -307,7 +307,7 @@
          </rect>
         </property>
         <property name="text">
-         <string>fp [Hz] </string>
+         <string>Wp [rad/s] </string>
         </property>
        </widget>
        <widget class="QLineEdit" name="fpInput">
@@ -344,7 +344,7 @@
            </rect>
           </property>
           <property name="text">
-           <string> faM[Hz] </string>
+           <string> WaM[rad/s] </string>
           </property>
          </widget>
          <widget class="QLineEdit" name="famInput">
@@ -367,7 +367,7 @@
            </rect>
           </property>
           <property name="text">
-           <string>fpM [HZ] </string>
+           <string>WpM [rad/s] </string>
           </property>
          </widget>
          <widget class="QLineEdit" name="fpmInput">
