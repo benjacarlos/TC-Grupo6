@@ -15,6 +15,7 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
 
         self.data = 0
         self.filters=[]
+        self.stageToBePlotted = [False,False,False,False,False]
 
         self.appTemplates = []
         self.indexForTemplate = 0
@@ -33,7 +34,9 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
     #Mapeo de botones interactivos y sus respectivas funciones #
 
         self.goStageTwoButton.clicked.connect(self.goStageTwo)
-        self.returnStageOneButton.clicked.connect(self.goStageOne)
+        self.acceptGoStageOne.clicked.connect(self.goStageOne)
+        self.denyGoStageOne.clicked.connect(self.doNotReturnStageOne)
+        self.returnStageOneButton.clicked.connect(self.showAcceptGoStageOne)
         self.acceptParametersStageOne.clicked.connect(self.stageOneGetFilterInputs)
         self.filterTypeOption.currentTextChanged.connect(self.showMoreOptions)
         self.plotTypeOptionInput.currentTextChanged.connect(self.plotGraphic)
@@ -42,6 +45,228 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
         self.noOkToRemove.clicked.connect(self.dontAcceptToRemove)
         self.filterDesignedLabelCombo.currentTextChanged.connect(self.verityFilter)
         self.plotTypeOptionInput_2.currentTextChanged.connect(self.plotGraphicStageTwo)
+        self.removeAllStageOne.clicked.connect(self.removeAll)
+        self.splitInSos.stateChanged.connect(lambda: self.printSecondOrderSystems())
+        self.plotAllSos.stateChanged.connect(lambda:self.plotGraphicStageTwo())
+        self.editF1.clicked.connect(self.editF1Stage)
+        self.editF2.clicked.connect(self.editF2Stage)
+        self.editF3.clicked.connect(self.editF3Stage)
+        self.editF4.clicked.connect(self.editF4Stage)
+        self.editF5.clicked.connect(self.editF5Stage)
+        self.acceptEditingStage.clicked.connect(self.acceptEditingStageOption)
+        self.removeF1.clicked.connect(self.removeStage1)
+        self.removeF2.clicked.connect(self.removeStage2)
+        self.removeF3.clicked.connect(self.removeStage3)
+        self.removeF4.clicked.connect(self.removeStage4)
+        self.removeF5.clicked.connect(self.removeStage5)
+        self.returnEditingStage.clicked.connect(self.returnEditingStageAction)
+        self.plotEachStage.stateChanged.connect(lambda: self.plotGraphicEachStage())
+        self.plotF1.stateChanged.connect(lambda: self.includeInPlotF1())
+        self.plotF2.stateChanged.connect(lambda: self.includeInPlotF2())
+        self.plotF3.stateChanged.connect(lambda: self.includeInPlotF3())
+        self.plotF4.stateChanged.connect(lambda: self.includeInPlotF4())
+        self.plotF5.stateChanged.connect(lambda: self.includeInPlotF5())
+
+    def includeInPlotF1(self):
+        if self.plotF1.isChecked():
+            self.stageToBePlotted[0]=True
+        else:
+            self.stageToBePlotted[0]=False
+
+        if self.plotEachStage.isChecked():
+            self.plotGraphicEachStage()
+        else:
+            self.plotGraphicStageTwo()
+
+    def includeInPlotF2(self):
+        if self.plotF2.isChecked():
+            self.stageToBePlotted[1]=True
+        else:
+            self.stageToBePlotted[1]=False
+        self.plotGraphicEachStage()
+
+        if self.plotEachStage.isChecked():
+            self.plotGraphicEachStage()
+        else:
+            self.plotGraphicStageTwo()
+
+    def includeInPlotF3(self):
+        if self.plotF3.isChecked():
+            self.stageToBePlotted[2]=True
+        else:
+            self.stageToBePlotted[2]=False
+        self.plotGraphicEachStage()
+
+        if self.plotEachStage.isChecked():
+            self.plotGraphicEachStage()
+        else:
+            self.plotGraphicStageTwo()
+
+    def includeInPlotF4(self):
+        if self.plotF4.isChecked():
+            self.stageToBePlotted[3]=True
+        else:
+            self.stageToBePlotted[3]=False
+        self.plotGraphicEachStage()
+
+        if self.plotEachStage.isChecked():
+            self.plotGraphicEachStage()
+        else:
+            self.plotGraphicStageTwo()
+
+    def includeInPlotF5(self):
+        if self.plotF5.isChecked():
+            self.stageToBePlotted[4]=True
+        else:
+            self.stageToBePlotted[4]=False
+        self.plotGraphicEachStage()
+
+        if self.plotEachStage.isChecked():
+            self.plotGraphicEachStage()
+        else:
+            self.plotGraphicStageTwo()
+
+
+
+
+
+    def plotGraphicEachStage(self):
+
+        if self.plotEachStage.isChecked():
+            self.filterToolPlotTable_2.canvas.axes.clear()
+            self.filterToolPlotTable_2.canvas.axes.axes.set_xlabel("Frequency [Hz]")
+            self.filterToolPlotTable_2.canvas.axes.axes.set_ylabel("Gain [Db]")
+            self.filterToolPlotTable_2.canvas.axes.title.set_text('Frequency Response - Amplitude')
+            for i in range(self.appTemplates[self.currentIndex].number_of_sections):
+                if self.stageToBePlotted[i] == True:
+                    sectionLabel = "Stage: " + str(i+1) + " " + self.appTemplates[self.currentIndex].printTag
+                    num, den = self.appTemplates[self.currentIndex].get_sos_data_tf(i)
+                    w, h = signal.freqs(num, den)
+                    self.filterToolPlotTable_2.canvas.axes.semilogx(w, 20 * np.log10(abs(h)), label= sectionLabel)
+                    self.filterToolPlotTable_2.canvas.axes.grid(True, which='both')
+                    self.filterToolPlotTable_2.canvas.figure.tight_layout()
+                    theLegend = self.filterToolPlotTable_2.canvas.axes.legend(fancybox=True, framealpha=0.5, fontsize=6)
+            self.filterToolPlotTable_2.canvas.draw()
+        else:
+            self.plotGraphicStageTwo()
+
+
+
+    def hideAllFunctionStage(self):
+        self.Function1.setCurrentWidget(self.noF1)
+        self.Function2.setCurrentWidget(self.noF2)
+        self.Function3.setCurrentWidget(self.noF3)
+        self.Function4.setCurrentWidget(self.noF4)
+        self.Function5.setCurrentWidget(self.noF5)
+
+    def removeStage1(self):
+        self.appTemplates[self.currentIndex].eliminate_sos(0)
+        self.hideAllFunctionStage()
+        self.printSecondOrderSystems()
+        if self.plotEachStage.isChecked():
+            self.plotGraphicEachStage()
+        else:
+            self.plotGraphicStageTwo()
+
+    def removeStage2(self):
+        self.appTemplates[self.currentIndex].eliminate_sos(1)
+        self.hideAllFunctionStage()
+        self.printSecondOrderSystems()
+        if self.plotEachStage.isChecked():
+            self.plotGraphicEachStage()
+        else:
+            self.plotGraphicStageTwo()
+    def removeStage3(self):
+        self.appTemplates[self.currentIndex].eliminate_sos(2)
+        self.hideAllFunctionStage()
+        self.printSecondOrderSystems()
+        if self.plotEachStage.isChecked():
+            self.plotGraphicEachStage()
+        else:
+            self.plotGraphicStageTwo()
+    def removeStage4(self):
+        self.appTemplates[self.currentIndex].eliminate_sos(3)
+        self.hideAllFunctionStage()
+        self.printSecondOrderSystems()
+        if self.plotEachStage.isChecked():
+            self.plotGraphicEachStage()
+        else:
+            self.plotGraphicStageTwo()
+    def removeStage5(self):
+        self.appTemplates[self.currentIndex].eliminate_sos(4)
+        self.hideAllFunctionStage()
+        self.printSecondOrderSystems()
+        if self.plotEachStage.isChecked():
+            self.plotGraphicEachStage()
+        else:
+            self.plotGraphicStageTwo()
+
+    def showAcceptGoStageOne(self):
+        self.returnButton.setCurrentWidget(self.returnOrNot)
+
+    def doNotReturnStageOne(self):
+        self.returnButton.setCurrentWidget(self.showingReturnButton)
+
+    def acceptEditingStageOption(self):
+        self.numToEdit.text().lower()
+        self.denToEdit.text().lower()
+        msgWrongInput = QMessageBox()
+        msgWrongInput.setIcon(QMessageBox.Warning)
+        msgWrongInput.setWindowTitle('Error')
+
+        try:
+            tempNumerator = [float(x) for x in self.numToEdit.text().split(',')]
+            tempDenominator = [float(x) for x in self.denToEdit.text().split(',')]
+            self.appTemplates[self.currentIndex].edit_sos_tf(tempNumerator, tempDenominator, self.stageThatWillBeEdited)
+            self.printSecondOrderSystems()
+        except:
+            msgWrongInput.setText("Something went wrong. \n Complete the numerator and denominator with , separated values")
+            msgWrongInput.exec()
+
+
+
+
+
+
+    def returnEditingStageAction(self):
+        self.editStagePage.setCurrentWidget(self.dontShowMeEdit)
+
+
+    def editF1Stage(self):
+        self.editStagePage.setCurrentWidget(self.showMeEdit)
+        self.stageEdited.setText("Stage 1")
+        self.stageThatWillBeEdited = 0
+
+    def editF2Stage(self):
+        self.editStagePage.setCurrentWidget(self.showMeEdit)
+        self.stageEdited.setText("Stage 2")
+        self.stageThatWillBeEdited = 1
+
+    def editF3Stage(self):
+        self.editStagePage.setCurrentWidget(self.showMeEdit)
+        self.stageEdited.setText("Stage 3")
+        self.stageThatWillBeEdited = 2
+
+    def editF4Stage(self):
+        self.editStagePage.setCurrentWidget(self.showMeEdit)
+        self.stageEdited.setText("Stage 4")
+        self.stageThatWillBeEdited = 3
+
+    def editF5Stage(self):
+        self.editStagePage.setCurrentWidget(self.showMeEdit)
+        self.stageEdited.setText("Stage 5")
+        self.stageThatWillBeEdited = 4
+
+    def removeAll (self):
+        self.removeAllFilters()
+        self.addNewItemToFilterList()
+        self.plotGraphic()
+        self.data = 0
+        self.filterTypeSelected = 0
+        self.Wpm = 0
+        self.Wam = 0
+        self.indexForTemplate = 0
+
 
     def verityFilter(self):
         if len(self.appTemplates) != 0:
@@ -101,8 +326,11 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
     def goStageTwo (self):
         if len(self.appTemplates) != 0:
             self.stages.setCurrentWidget(self.stageTwo)
+            self.plotTypeOptionInput_2.setCurrentText("Magnitude")
             self.plotGraphicStageTwo()
             self.printTransferFunctionStageTwo()
+
+
         else:
             msgWrongInput = QMessageBox()
             msgWrongInput.setIcon(QMessageBox.Warning)
@@ -122,29 +350,66 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
         self.hsLabelDen_2.setText(denToPrint)
 
     def plotGraphicStageTwo(self):
+
         myPlotGraphicType = str(self.plotTypeOptionInput_2.currentText())
 
+        
         print (str(self.plotTypeOptionInput_2.currentText()))
         if myPlotGraphicType == "Magnitude":
+            self.showPlotSos.setCurrentWidget(self.yesPlot)
+            self.showPlotTemplate.setCurrentWidget(self.yesShowPlotTemplate)
             self.plotMagnitudeStageTwo()
         elif myPlotGraphicType == "Phase":
+            self.showPlotSos.setCurrentWidget(self.yesPlot)
+            self.showPlotTemplate.setCurrentWidget(self.noShowPlotTemplate)
             self.plotPhaseStageTwo()
         elif myPlotGraphicType == "Poles and Zeros":
+            self.showPlotSos.setCurrentWidget(self.noPlot)
+            self.showPlotTemplate.setCurrentWidget(self.noShowPlotTemplate)
             self.plotZerosAndPolesStageTwo()
 
     def plotMagnitudeStageTwo(self):
-        if len(self.appTemplates) != 0:
-            self.filterToolPlotTable_2.canvas.axes.clear()
-            self.filterToolPlotTable_2.canvas.axes.axes.set_xlabel("Frequency [Hz]")
-            self.filterToolPlotTable_2.canvas.axes.axes.set_ylabel("Gain [Db]")
-            self.filterToolPlotTable_2.canvas.axes.title.set_text('Frequency Response - Amplitude')
-            w, h = signal.freqs(self.appTemplates[self.currentIndex].actual_num, self.appTemplates[self.currentIndex].actual_den)
 
-            self.filterToolPlotTable_2.canvas.axes.semilogx(w, 20 * np.log10(abs(h)), label='n')
-            self.filterToolPlotTable_2.canvas.axes.grid(True, which='both')
-            self.filterToolPlotTable_2.canvas.figure.tight_layout()
+        self.filterToolPlotTable_2.canvas.axes.clear()
+        self.filterToolPlotTable_2.canvas.axes.axes.set_xlabel("Frequency [Hz]")
+        self.filterToolPlotTable_2.canvas.axes.axes.set_ylabel("Gain [Db]")
+        self.filterToolPlotTable_2.canvas.axes.title.set_text('Frequency Response - Amplitude')
 
-            self.filterToolPlotTable_2.canvas.draw()
+
+
+        w, h = signal.freqs(self.appTemplates[self.currentIndex].actual_num, self.appTemplates[self.currentIndex].actual_den)
+
+        self.filterToolPlotTable_2.canvas.axes.semilogx(w, 20 * np.log10(abs(h)), label='n')
+
+        if self.plotAllSos.isChecked():
+            hs = list()
+            if self.appTemplates[self.currentIndex].should_be_att():
+                for x in range(self.appTemplates[self.currentIndex].number_of_sections):  # Cargo cada den y num  en la lista
+                    hs.append(signal.freqs(self.appTemplates[self.currentIndex].singularidades["sos"][x][1], self.appTemplates[self.currentIndex].singularidades["sos"][x][0]))
+            else:
+                for x in range(self.appTemplates[self.currentIndex].number_of_sections):  # Cargo cada num y den  en la lista
+                    hs.append(signal.freqs(self.appTemplates[self.currentIndex].singularidades["sos"][x][0], self.appTemplates[self.currentIndex].singularidades["sos"][x][1]
+                                           ))
+
+            index = 1
+            if self.appTemplates[self.currentIndex].number_of_sections > 1:
+                h = np.multiply(hs[0][1], hs[1][1])
+                while self.appTemplates[self.currentIndex].number_of_sections > index + 1:
+                    h = np.multiply(h, hs[index + 1][1])
+                    index += 1
+            else:
+                h = hs[0][1]
+            # en h queda guardado el producto de todas las transferencias evaluadas en el mismo rango de frecs
+            # en hs[0][0] está guardado dicho rango
+            if self.appTemplates[self.currentIndex].should_be_att():
+                self.filterToolPlotTable_2.canvas.axes.semilogx(hs[0][0], abs(20 * np.log10(abs(h))), label='n1', linestyle='--', color='red')
+            else:
+                self.filterToolPlotTable_2.canvas.axes.semilogx(hs[0][0], 20 * np.log10(abs(h)), label='n1', linestyle='--', color='red')
+
+        self.filterToolPlotTable_2.canvas.axes.grid(True, which='both')
+        self.filterToolPlotTable_2.canvas.figure.tight_layout()
+
+        self.filterToolPlotTable_2.canvas.draw()
 
     def plotPhaseStageTwo(self):
         if len(self.appTemplates) != 0:
@@ -156,17 +421,90 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
             system = signal.TransferFunction(self.appTemplates[self.currentIndex].actual_num, self.appTemplates[self.currentIndex].actual_den)
             w,mag,phase = signal.bode(system)
             self.filterToolPlotTable_2.canvas.axes.semilogx(w, phase)
+
+
+
             self.filterToolPlotTable_2.canvas.axes.grid(which='both', axis='both')
             self.filterToolPlotTable_2.canvas.figure.tight_layout()
             self.filterToolPlotTable_2.canvas.draw()
 
 
     def plotZerosAndPolesStageTwo(self):
-        print ("xD")
+
+        self.filterToolPlotTable_2.canvas.axes.clear()
+        if len(self.appTemplates) != 0:
+
+
+
+            if self.appTemplates[self.currentIndex].should_be_drawn():
+                myZeros = [[], []]
+                myPoles = [[], []]
+
+                if len(self.appTemplates[self.currentIndex].actual_z) != 0:
+                    for zero in self.appTemplates[self.currentIndex].actual_z:
+                        myZeros[0].append(zero.real)
+                        myZeros[1].append(zero.imag)
+                    myZeroLabel = "Zeros " + self.appTemplates[self.currentIndex].printTag
+                    self.filterToolPlotTable_2.canvas.axes.scatter(myZeros[0], myZeros[1], marker="o",
+                                                                     label=myZeroLabel)
+                else:
+                    myZeros = [[0], [0]]
+
+                if len(self.appTemplates[self.currentIndex].actual_p) != 0:
+                    for pole in self.appTemplates[self.currentIndex].actual_p:
+                        myPoles[0].append(pole.real)
+                        myPoles[1].append(pole.imag)
+                    myPoleLabel = "Poles " + self.appTemplates[self.currentIndex].printTag
+                    self.filterToolPlotTable_2.canvas.axes.scatter(myPoles[0], myPoles[1], marker="x",
+                                                                     label=myPoleLabel)
+                else:
+                    myPoles = [[0], [0]]
+
+            myMaxX = [max(myZeros[0], key=abs), max(myPoles[0], key=abs)]
+            myMaxY = [max(myZeros[1], key=abs), max(myPoles[1], key=abs)]
+
+            self.filterToolPlotTable_2.canvas.axes.set_axisbelow(True)
+            self.filterToolPlotTable_2.canvas.axes.grid(True, linestyle='-', which="both")
+
+            self.filterToolPlotTable_2.canvas.axes.spines['left'].set_position('zero')
+            self.filterToolPlotTable_2.canvas.axes.spines['left'].set_linewidth(1)
+            self.filterToolPlotTable_2.canvas.axes.spines['right'].set_color('none')
+            self.filterToolPlotTable_2.canvas.axes.spines['bottom'].set_position('zero')
+            self.filterToolPlotTable_2.canvas.axes.spines['bottom'].set_linewidth(1)
+            self.filterToolPlotTable_2.canvas.axes.spines['top'].set_color('none')
+
+            self.filterToolPlotTable_2.canvas.axes.set_xlim(-1.2 * abs(max(myMaxX, key=abs)),
+                                                          1.2 * abs(max(myMaxX, key=abs)))
+            self.filterToolPlotTable_2.canvas.axes.set_ylim(-1.2 * abs(max(myMaxY, key=abs)),
+                                                          1.2 * abs(max(myMaxY, key=abs)))
+            self.filterToolPlotTable_2.canvas.axes.minorticks_on()
+            theLegend = self.filterToolPlotTable_2.canvas.axes.legend(fancybox=True, framealpha=0.5, fontsize=6)
+            self.filterToolPlotTable_2.canvas.axes.title.set_text('Zeros and Poles Diagram')
+
+            self.filterToolPlotTable_2.canvas.figure.tight_layout()
+        self.filterToolPlotTable_2.canvas.draw()
 
 
     def goStageOne (self):
         self.stages.setCurrentWidget(self.stageOne)
+        self.Function1.setCurrentWidget(self.noF1)
+        self.Function2.setCurrentWidget(self.noF2)
+        self.Function3.setCurrentWidget(self.noF3)
+        self.Function4.setCurrentWidget(self.noF4)
+        self.Function5.setCurrentWidget(self.noF5)
+        self.splitInSos.setChecked(False)
+        self.plotAllSos.setChecked(False)
+        self.plotTemplate.setChecked(False)
+        self.editStagePage.setCurrentWidget(self.dontShowMeEdit)
+        self.returnButton.setCurrentWidget(self.showingReturnButton)
+        self.plotStageWidget.setCurrentWidget(self.noShowPlotEach)
+        self.plotEachStage.setChecked(False)
+        self.plotF1.setChecked(False)
+        self.plotF2.setChecked(False)
+        self.plotF3.setChecked(False)
+        self.plotF4.setChecked(False)
+        self.plotF5.setChecked(False)
+        self.appTemplates[self.currentIndex].get_sos()
 
     # Funciones que administrar INPUTS#
 
@@ -381,12 +719,62 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
         self.hiddenWarning.setCurrentWidget(self.warningIsHidden)
 
 
+    def printSecondOrderSystems(self):
+        if len(self.appTemplates)!=0:
+            if self.splitInSos.isChecked():
+                self.showPlotSos.setCurrentWidget(self.noPlot)
+                self.showPlotTemplate.setCurrentWidget(self.noShowPlotTemplate)
+                self.plotStageWidget.setCurrentWidget(self.showPlotEach)
+                for i in range (self.appTemplates[self.currentIndex].number_of_sections):
+                    num,den = self.appTemplates[self.currentIndex].get_sos_data_tf(i)
+                    q = str(self.appTemplates[self.currentIndex].get_sos_q(i))
+                    numToPrint = extra.printTransferFunctionInput(num)
+                    denToPrint = extra.printTransferFunctionInput(den)
+                    if i == 0:
+                      self.Function1.setCurrentWidget(self.F1)
+                      self.f1Num.setText(numToPrint)
+                      self.f1Den.setText(denToPrint)
+                      self.q1.setText(q)
+                    elif i ==1:
+                        self.Function2.setCurrentWidget(self.F2)
+                        self.f2Num.setText(numToPrint)
+                        self.f2Den.setText(denToPrint)
+                        self.q2.setText(q)
+
+                    elif i == 2:
+                        self.Function3.setCurrentWidget(self.F3)
+                        self.f3Num.setText(numToPrint)
+                        self.f3Den.setText(denToPrint)
+                        self.q3.setText(q)
+
+                    elif i == 3:
+                        self.Function4.setCurrentWidget(self.F4)
+                        self.f4Num.setText(numToPrint)
+                        self.f4Den.setText(denToPrint)
+                        self.q4.setText(q)
+
+                    elif i == 4:
+                        self.Function5.setCurrentWidget(self.F5)
+                        self.f5Num.setText(numToPrint)
+                        self.f5Den.setText(denToPrint)
+                        self.q5.setText(q)
+            else:
+                self.Function1.setCurrentWidget(self.noF1)
+                self.Function2.setCurrentWidget(self.noF2)
+                self.Function3.setCurrentWidget(self.noF3)
+                self.Function4.setCurrentWidget(self.noF4)
+                self.Function5.setCurrentWidget(self.noF5)
+                self.showPlotSos.setCurrentWidget(self.noPlot)
+
+
+
+
     def dontAcceptToRemove(self):
         self.data = self.previousData
         self.hiddenWarning.setCurrentWidget(self.warningNotHidden)
 
     def removeAllFilters(self):
-        self.appTemplates =[]
+        self.appTemplates.clear()
 
     def validateParametersNotChanged (self):
 
@@ -421,14 +809,21 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
 
     def addNewItemToFilterList (self):
 
-        self.filterDesignedLabelCombo.clear()
-        for line in self.appTemplates:
-            self.filterDesignedLabelCombo.addItem(line.tag)
 
-        tempIndex= len(self.appTemplates)-1
-        print (tempIndex)
+        if len(self.appTemplates)!=0:
 
-        self.filterDesignedLabelCombo.setCurrentText(self.appTemplates[tempIndex].tag)
+            self.filterDesignedLabelCombo.clear()
+            for line in self.appTemplates:
+                self.filterDesignedLabelCombo.addItem(line.tag)
+
+            tempIndex= len(self.appTemplates)-1
+            print (tempIndex)
+
+            self.filterDesignedLabelCombo.setCurrentText(self.appTemplates[tempIndex].tag)
+        else:
+            self.filterDesignedLabelCombo.clear()
+            self.hsLabelNum.setText("")
+            self.hsLabelDen.setText("")
 
 
     # Funciones que grafican#
@@ -462,8 +857,8 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
 
     def plotMagnitude (self):
 
+        self.filterToolPlotTable.canvas.axes.clear()
         if len(self.appTemplates) != 0:
-            self.filterToolPlotTable.canvas.axes.clear()
             self.filterToolPlotTable.canvas.axes.axes.set_xlabel("Frequency [Hz]")
             self.filterToolPlotTable.canvas.axes.axes.set_ylabel("Gain [Db]")
             self.filterToolPlotTable.canvas.axes.title.set_text('Frequency Response - Amplitude')
@@ -533,12 +928,13 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
 
 
 
-            self.filterToolPlotTable.canvas.draw()
+        self.filterToolPlotTable.canvas.draw()
 
     def plotAttenuation (self):
 
+        self.filterToolPlotTable.canvas.axes.clear()
         if len(self.appTemplates) != 0:
-            self.filterToolPlotTable.canvas.axes.clear()
+
             self.filterToolPlotTable.canvas.axes.axes.set_xlabel("Frequency [Hz]")
             self.filterToolPlotTable.canvas.axes.axes.set_ylabel("Gain [Db]")
             self.filterToolPlotTable.canvas.axes.title.set_text('Attenuation')
@@ -606,8 +1002,7 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
                 self.filterToolPlotTable.canvas.figure.gca().add_patch(rectangle_p)
                 self.filterToolPlotTable.canvas.figure.gca().add_patch(rectangle_a)
 
-            self.filterToolPlotTable.canvas.figure.tight_layout()
-            self.filterToolPlotTable.canvas.draw()
+        self.filterToolPlotTable.canvas.draw()
 
 
 
@@ -615,9 +1010,10 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
 
     def plotPhase (self):
 
+        self.filterToolPlotTable.canvas.axes.clear()
         if len(self.appTemplates) != 0:
 
-            self.filterToolPlotTable.canvas.axes.clear()
+
 
             for template in self.appTemplates:
 
@@ -639,33 +1035,53 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
             self.filterToolPlotTable.canvas.axes.axes.set_ylabel("Phase [°]")
             self.filterToolPlotTable.canvas.axes.title.set_text('Frequency Response - Phase')
             self.filterToolPlotTable.canvas.figure.tight_layout()
-            self.filterToolPlotTable.canvas.draw()
+        self.filterToolPlotTable.canvas.draw()
 
     def plotZerosAndPoles (self):
+
+        self.filterToolPlotTable.canvas.axes.clear()
         if len(self.appTemplates) != 0:
-            print ("POLES AND ZEROS")
-            myZeros = [[], []]
-            myPoles = [[], []]
-            self.filterToolPlotTable.canvas.axes.clear()
+            print("POLES AND ZEROS")
+
+
 
             for template in self.appTemplates:
                 if template.should_be_drawn():
-                    for zero in template.actual_z:
-                        myZeros[0].append(zero.real)
-                        myZeros[1].append(zero.imag)
-                    for pole in template.actual_p:
-                        myPoles[0].append(pole.real)
-                        myPoles[1].append(pole.imag)
+                    myZeros = [[], []]
+                    myPoles = [[], []]
+
+                    if len(template.actual_z) != 0:
+                        for zero in template.actual_z:
+
+
+                            myZeros[0].append(zero.real)
+                            myZeros[1].append(zero.imag)
+                        myZeroLabel = "Zeros " + template.printTag
+                        self.filterToolPlotTable.canvas.axes.scatter(myZeros[0], myZeros[1], marker="o",
+                                                                     label=myZeroLabel)
+
+                    else:
+                        myZeros = [[0], [0]]
+
+                    if len(template.actual_p) != 0:
+                        for pole in template.actual_p:
+
+
+                            myPoles[0].append(pole.real)
+                            myPoles[1].append(pole.imag)
+                        myPoleLabel = "Poles " + template.printTag
+                        self.filterToolPlotTable.canvas.axes.scatter(myPoles[0], myPoles[1], marker="x",
+                                                                     label=myPoleLabel)
+                    else:
+                        myPoles = [[0], [0]]
+
 
             myMaxX = [max(myZeros[0], key=abs), max(myPoles[0], key=abs)]
             myMaxY = [max(myZeros[1], key=abs), max(myPoles[1], key=abs)]
 
-            self.filterToolPlotTable.canvas.axes.clear()
+
             self.filterToolPlotTable.canvas.axes.set_axisbelow(True)
             self.filterToolPlotTable.canvas.axes.grid(True, linestyle='-', which="both")
-
-            self.filterToolPlotTable.canvas.axes.scatter(myZeros[0], myZeros[1], marker="o", label="Zeros")
-            self.filterToolPlotTable.canvas.axes.scatter(myPoles[0], myPoles[1], marker="x", label="Poles")
 
             self.filterToolPlotTable.canvas.axes.spines['left'].set_position('zero')
             self.filterToolPlotTable.canvas.axes.spines['left'].set_linewidth(1)
@@ -679,17 +1095,18 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
             self.filterToolPlotTable.canvas.axes.set_ylim(-1.2 * abs(max(myMaxY, key=abs)),
                                                           1.2 * abs(max(myMaxY, key=abs)))
             self.filterToolPlotTable.canvas.axes.minorticks_on()
-
+            theLegend = self.filterToolPlotTable.canvas.axes.legend(fancybox=True, framealpha=0.5, fontsize=6)
             self.filterToolPlotTable.canvas.axes.title.set_text('Zeros and Poles Diagram')
 
             self.filterToolPlotTable.canvas.figure.tight_layout()
-            self.filterToolPlotTable.canvas.draw()
+        self.filterToolPlotTable.canvas.draw()
 
 
     def plotGroupDelay (self):
+        self.filterToolPlotTable.canvas.axes.clear()
         if len(self.appTemplates) != 0:
 
-            self.filterToolPlotTable.canvas.axes.clear()
+
 
             for template in self.appTemplates:
 
@@ -707,7 +1124,7 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
             self.filterToolPlotTable.canvas.axes.axes.set_ylabel("Group delay [s]")
             self.filterToolPlotTable.canvas.axes.title.set_text('Group Delay')
             self.filterToolPlotTable.canvas.figure.tight_layout()
-            self.filterToolPlotTable.canvas.draw()
+        self.filterToolPlotTable.canvas.draw()
 
 
 
@@ -716,11 +1133,12 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
 
 
     def plotImpulseResponse(self):
+        self.filterToolPlotTable.canvas.axes.clear()
 
         if len(self.appTemplates) != 0:
             print ("IMPULSO")
 
-            self.filterToolPlotTable.canvas.axes.clear()
+
 
             for template in self.appTemplates:
 
@@ -740,15 +1158,16 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
             self.filterToolPlotTable.canvas.axes.title.set_text('Impulse Response')
 
             self.filterToolPlotTable.canvas.figure.tight_layout()
-            self.filterToolPlotTable.canvas.draw()
+        self.filterToolPlotTable.canvas.draw()
 
 
     def plotStepResponse(self):
 
+        self.filterToolPlotTable.canvas.axes.clear()
         if len(self.appTemplates) != 0:
             print ("ESCALON")
 
-            self.filterToolPlotTable.canvas.axes.clear()
+
 
             for template in self.appTemplates:
 
@@ -768,7 +1187,7 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
             self.filterToolPlotTable.canvas.axes.title.set_text('Step Response')
 
             self.filterToolPlotTable.canvas.figure.tight_layout()
-            self.filterToolPlotTable.canvas.draw()
+        self.filterToolPlotTable.canvas.draw()
 
 
 

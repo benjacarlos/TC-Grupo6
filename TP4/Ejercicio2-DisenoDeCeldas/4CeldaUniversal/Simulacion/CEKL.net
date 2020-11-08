@@ -1,51 +1,53 @@
 * E:\WK\Google Drive - ITBA\ITBA - Me\2020B\Teoria de Circuitos\TP\git\TC-Grupo6\TP4\Ejercicio2-DisenoDeCeldas\4CeldaUniversal\Simulacion\CEKL.asc
 XU1 0 N001 VCC -VCC N007 TL084
-V1 0 -VCC 15
-V2 VCC 0 15
+V1 0 -VCC 9
+V2 VCC 0 9
 V3 vin 0 0 AC 1
 XU2 0 N010 VCC -VCC v01 TL084
 XU3 0 N008 VCC -VCC N002 TL084
 R1 N007 N001 {mc(1.96k,tolr)}
 R2 N008 v01 {mc(1k,tolr)}
 R3 N002 N001 {mc(1k,tolr)}
-R4 N001 vo {mc(1.9k,tolr)}
-R5 vo N010 {mc(1.9k,tolr)}
-R6 vo N008 {mc(1k,tolr)}
+R4 N001 vooo {mc(1.9k,tolr)}
+R5 vooo N010 {mc(1.9k,tolr)}
+R6 vooo N008 {mc(1k,tolr)}
 R7 N007 N010 {mc(1.96k,tolr)}
-R8 N010 v01 {mc(1.8kk,tolr)}
+R8 N010 v01 {mc(1.8k,tolr)}
 C1 N007 N001 {mc(10n,tolc)}
 C2 N002 N008 {mc(10n,tolc)}
 XU4 0 N003 VCC -VCC N009 TL084
-XU5 0 N014 VCC -VCC vo TL084
+XU5 0 N013 VCC -VCC vo TL084
 XU6 0 N011 VCC -VCC N004 TL084
-R9 N009 N003 {mc(8.913k,tolr)}
+R9 N009 N003 {mc(8.9k,tolr)}
 R10 N011 vo {mc(1k,tolr)}
 R11 N004 N003 {mc(1k,tolr)}
-R12 N003 N013 {mc(9k,tolr)}
-R13 N013 N014 {mc(9k,tolr)}
-R14 N013 N011 {mc(1k,tolr)}
-R15 N009 N014 {mc(8.913kk,tolr)}
-R16 N014 vo {mc(9k,tolr)}
+R12 N003 vinn {mc(9k,tolr)}
+R13 vinn N013 {mc(9k,tolr)}
+R14 vinn N011 {mc(1k,tolr)}
+R15 N009 N013 {mc(8.9kk,tolr)}
+R16 N013 vo {mc(9k,tolr)}
 C3 N009 N003 {mc(10n,tolc)}
 C4 N004 N011 {mc(10n,tolc)}
 XU7 0 N005 VCC -VCC N012 TL084
-XU8 0 N016 VCC -VCC vout TL084
-XU9 0 N015 VCC -VCC N006 TL084
+XU8 0 N015 VCC -VCC vout TL084
+XU9 0 N014 VCC -VCC N006 TL084
 R17 N012 N005 {mc(1768,tolr)}
-R18 N015 vout {mc(1k,tolr)}
+R18 N014 vout {mc(1k,tolr)}
 R19 N006 N005 {mc(1k,tolr)}
-R20 N005 v01 {mc(1863,tolr)}
-R21 v01 N016 {mc(1863k,tolr)}
-R22 v01 N015 {mc(1k,tolr)}
-R23 N012 N016 {mc(1768k,tolr)}
-R24 N016 vout {mc(1981k,tolr)}
+R20 N005 v011 {mc(1863,tolr)}
+R21 v011 N015 {mc(1863k,tolr)}
+R22 v011 N014 {mc(1k,tolr)}
+R23 N012 N015 {mc(1768k,tolr)}
+R24 N015 vout {mc(1981k,tolr)}
 C5 N012 N005 {mc(10n,tolc)}
-C6 N006 N015 {mc(10n,tolc)}
-XU10 vin N013 VCC -VCC N013 TL084
+C6 N006 N014 {mc(10n,tolc)}
+XU10 vin vinn VCC -VCC vinn TL084
+XU11 vo vooo VCC -VCC vooo TL084
+XU12 v01 v011 VCC -VCC v011 TL084
 .lib TL084.301
 .param tolr=0.05
 .param tolc=0.2
-.step param run 1 100 1
+* .step param run 1 100 1
 .ac dec 100 3000 100000
 .backanno
 .end

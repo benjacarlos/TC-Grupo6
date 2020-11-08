@@ -75,7 +75,7 @@ class template():
 
     def eliminate_sos(self, number):
         self.singularidades["sos"].pop(number)
-        self.number_of_sections = - 1
+        self.number_of_sections -= 1
 
     def change_posc_sos(self,pos_a,pos_b):
         aux=self.singularidades["sos"][pos_b]
@@ -110,12 +110,12 @@ class template():
 
     def get_sos_data_zpk(self, posc):
         num = self.singularidades["sos"][posc][0]
-        den = self.singularidades["sos"][posc][0]
+        den = self.singularidades["sos"][posc][1]
         return signal.tf2zpk(num, den)
 
     def get_sos_data_tf(self, posc):
         num = self.singularidades["sos"][posc][0]
-        den = self.singularidades["sos"][posc][0]
+        den = self.singularidades["sos"][posc][1]
         return num, den
 
     def get_sos_q(self,posc):
@@ -203,6 +203,12 @@ class template():
         self.k=1/self.w_a_n
 
     def get_sos(self):
+        self.singularidades = {
+            "polos": list(),
+            "ceros": list(),
+            "ganancias": list(),
+            "sos": list(),
+        }
         # me fijo la cantidad de secciones para el filtro desnormalizado buscado
         self.number_of_sections = int(np.floor(self.actual_n / 2) + self.actual_n % 2)
 
@@ -469,6 +475,9 @@ class template():
         if not need_recalc:
             self.get_sos()  # calculo sos para n valido
 
+
+        print ("SINGULARIDADES")
+        print (self.singularidades)
         #### DESPUES AGREGAMOS LOS TAGS ADICIONALES#
         if self.type == Type.LP:
             filterString = "Low-Pass"
