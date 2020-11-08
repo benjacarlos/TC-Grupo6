@@ -2127,7 +2127,7 @@
          <string>Compare</string>
         </property>
        </widget>
-       <widget class="QCheckBox" name="plotAllSos_2">
+       <widget class="QCheckBox" name="plotTemplate">
         <property name="geometry">
          <rect>
           <x>10</x>

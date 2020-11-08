@@ -293,6 +293,18 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
 
     def goStageOne (self):
         self.stages.setCurrentWidget(self.stageOne)
+        self.Function1.setCurrentWidget(self.noF1)
+        self.Function2.setCurrentWidget(self.noF2)
+        self.Function3.setCurrentWidget(self.noF3)
+        self.Function4.setCurrentWidget(self.noF4)
+        self.Function5.setCurrentWidget(self.noF5)
+        self.splitInSos.setChecked(False)
+        self.plotAllSos.setChecked(False)
+        self.plotTemplate.setChecked(False)
+        self.editStagePage.setCurrentWidget(self.dontShowMeEdit)
+
+
+        
 
     # Funciones que administrar INPUTS#
 
