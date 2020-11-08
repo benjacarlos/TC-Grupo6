@@ -48,6 +48,7 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
         self.removeAllStageOne.clicked.connect(self.removeAll)
         self.splitInSos.stateChanged.connect(lambda: self.printSecondOrderSystems())
         self.plotAllSos.stateChanged.connect(lambda:self.plotGraphicStageTwo())
+        self.plotTemplate.stateChanged.connect(lambda:self.plotGraphicStageTwo())
         self.editF1.clicked.connect(self.editF1Stage)
         self.editF2.clicked.connect(self.editF2Stage)
         self.editF3.clicked.connect(self.editF3Stage)
@@ -135,7 +136,6 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
         if self.plotEachStage.isChecked():
             self.showPlotSos.setCurrentWidget(self.noPlot)
             self.showPlotTemplate.setCurrentWidget(self.noShowPlotTemplate)
-            print ("BUENARDOOOOO")
             #self.plotAllSos.setChecked(False)
             #self.plotTemplate.setChecked(False)
             self.showTypeOfOptions.setCurrentWidget(self.showForSome)
@@ -192,7 +192,7 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
 
 
     def plotMagnitudeEachStage (self):
-        ("ESTOY PLOTEANDOOOOOO")
+
         self.filterToolPlotTable_2.canvas.axes.clear()
         self.filterToolPlotTable_2.canvas.axes.axes.set_xlabel("Frequency [Hz]")
         self.filterToolPlotTable_2.canvas.axes.axes.set_ylabel("Gain [Db]")
@@ -301,10 +301,6 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
         except:
             msgWrongInput.setText("Something went wrong. \n Complete the numerator and denominator with , separated values")
             msgWrongInput.exec()
-
-
-
-
 
 
     def returnEditingStageAction(self):
@@ -439,18 +435,18 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
 
 
 
-        w, h = signal.freqs(self.appTemplates[self.currentIndex].actual_num, self.appTemplates[self.currentIndex].actual_den)
+        w, h = signal.freqs(self.appTemplates[self.currentIndex].actual_num, self.appTemplates[self.currentIndex].actual_den,worN=np.linspace(1e4, 1e6, 1000))
 
-        self.filterToolPlotTable_2.canvas.axes.semilogx(w, 20 * np.log10(abs(h)), label='n')
+        self.filterToolPlotTable_2.canvas.axes.semilogx(w, 20 * np.log10(abs(h)), label=self.appTemplates[self.currentIndex].printTag)
 
         if self.plotAllSos.isChecked():
             hs = list()
             if self.appTemplates[self.currentIndex].should_be_att():
                 for x in range(self.appTemplates[self.currentIndex].number_of_sections):  # Cargo cada den y num  en la lista
-                    hs.append(signal.freqs(self.appTemplates[self.currentIndex].singularidades["sos"][x][1], self.appTemplates[self.currentIndex].singularidades["sos"][x][0]))
+                    hs.append(signal.freqs(self.appTemplates[self.currentIndex].singularidades["sos"][x][1], self.appTemplates[self.currentIndex].singularidades["sos"][x][0],worN=np.linspace(1e4, 1e6, 1000)))
             else:
                 for x in range(self.appTemplates[self.currentIndex].number_of_sections):  # Cargo cada num y den  en la lista
-                    hs.append(signal.freqs(self.appTemplates[self.currentIndex].singularidades["sos"][x][0], self.appTemplates[self.currentIndex].singularidades["sos"][x][1]
+                    hs.append(signal.freqs(self.appTemplates[self.currentIndex].singularidades["sos"][x][0], self.appTemplates[self.currentIndex].singularidades["sos"][x][1],worN=np.linspace(1e4, 1e6, 1000)
                                            ))
 
             index = 1
@@ -463,13 +459,70 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
                 h = hs[0][1]
             # en h queda guardado el producto de todas las transferencias evaluadas en el mismo rango de frecs
             # en hs[0][0] está guardado dicho rango
+
+            tempLabel = "Total SOS | " + self.appTemplates[self.currentIndex].printTag
             if self.appTemplates[self.currentIndex].should_be_att():
-                self.filterToolPlotTable_2.canvas.axes.semilogx(hs[0][0], abs(20 * np.log10(abs(h))), label='n1', linestyle='--', color='red')
+                self.filterToolPlotTable_2.canvas.axes.semilogx(hs[0][0], abs(20 * np.log10(abs(h))), label=tempLabel, linestyle='--', color='red')
             else:
-                self.filterToolPlotTable_2.canvas.axes.semilogx(hs[0][0], 20 * np.log10(abs(h)), label='n1', linestyle='--', color='red')
+                self.filterToolPlotTable_2.canvas.axes.semilogx(hs[0][0], 20 * np.log10(abs(h)), label=tempLabel, linestyle='--', color='red')
 
         self.filterToolPlotTable_2.canvas.axes.grid(True, which='both')
         self.filterToolPlotTable_2.canvas.figure.tight_layout()
+
+        if self.plotTemplate.isChecked():
+
+            if self.appTemplates[0].should_draw_template() and self.appTemplates[0].approximation != Approximation.Gauss:
+
+                if self.appTemplates[0].type == Type.LP:
+
+                    rectangle_p = plt.Rectangle((0, -self.appTemplates[self.currentIndex].data["A_p"]), self.appTemplates[self.currentIndex].data["w_p"],
+                                                        -self.appTemplates[self.currentIndex].data["A_a"] - 100, fc='violet', alpha=0.8)
+                    rectangle_a = plt.Rectangle((self.appTemplates[self.currentIndex].data["w_a"], -self.appTemplates[self.currentIndex].data["A_a"]),
+                                                        1e6 - self.appTemplates[self.currentIndex].data["w_p"], self.appTemplates[self.currentIndex].data["A_a"] + 30, fc='violet',
+                                                        alpha=0.8)
+
+
+                if self.appTemplates[0].type == Type.LPN:
+                    rectangle_p = plt.Rectangle((0, -self.appTemplates[0].data["A_p"]), 1, -self.appTemplates[0].data["A_a"] - 100,
+                                                        fc='violet', alpha=0.8)
+                    rectangle_a = plt.Rectangle((self.appTemplates[0].w_a_n, -self.appTemplates[0].data["A_a"]), 1e6 - 1,
+                                                        self.appTemplates[0].data["A_a"] + 30, fc='violet', alpha=0.8)
+
+                if self.appTemplates[0].type == Type.HP:
+                    rectangle_p = plt.Rectangle((0, 0), self.appTemplates[0].data["w_a"], -self.appTemplates[0].data["A_a"], fc='violet',
+                                                        alpha=0.8)
+                    rectangle_a = plt.Rectangle((self.appTemplates[0].data["w_p"], -self.appTemplates[0].data["A_p"]),
+                                                        1e6 - self.appTemplates[0].data["w_p"], -self.appTemplates[0].data["A_a"] - 200,
+                                                        fc='violet', alpha=0.8)
+
+                if self.appTemplates[0].type == Type.BP:
+                    rectangle_p = plt.Rectangle((0, -self.appTemplates[0].data["A_a"]), self.appTemplates[0].data["w_a_m"],
+                                                        self.appTemplates[0].data["A_a"], fc='violet', alpha=0.8)
+                    rectangle_p1 = plt.Rectangle((self.appTemplates[0].data["w_a"], -self.appTemplates[0].data["A_a"]),
+                                                         self.appTemplates[0].data["w_a"] + 10e6, self.appTemplates[0].data["A_a"], fc='violet',
+                                                         alpha=0.8)
+                    rectangle_a = plt.Rectangle((self.appTemplates[0].data["w_p_m"], -self.appTemplates[0].data["A_p"]), template.bw,
+                                                        -self.appTemplates[0].data["A_a"] - 200, fc='violet', alpha=0.8)
+
+                    self.filterToolPlotTable_2.canvas.figure.gca().add_patch(rectangle_p1)
+
+
+                if self.appTemplates[0].type == Type.BR:
+                    rectangle_p = plt.Rectangle((0, -self.appTemplates[0].data["A_p"]), self.appTemplates[0].data["w_p_m"],
+                                                        self.appTemplates[0].data["A_a"] - 300, fc='violet', alpha=0.8)
+                    rectangle_p1 = plt.Rectangle((self.appTemplates[0].data["w_p"], -self.appTemplates[0].data["A_p"]),
+                                                         self.appTemplates[0].data["w_a"] + 10e6, self.appTemplates[0].data["A_a"] - 300,
+                                                         fc='violet', alpha=0.8)
+                    rectangle_a = plt.Rectangle((self.appTemplates[0].data["w_a_m"], 0),
+                                                        self.appTemplates[0].data["w_a"] - self.appTemplates[0].data["w_a_m"],
+                                                        -self.appTemplates[0].data["A_a"], fc='violet', alpha=0.8)
+
+                    self.filterToolPlotTable_2.canvas.figure.gca().add_patch(rectangle_p1)
+
+                self.filterToolPlotTable_2.canvas.figure.gca().add_patch(rectangle_p)
+                self.filterToolPlotTable_2.canvas.figure.gca().add_patch(rectangle_a)
+
+        theLegend = self.filterToolPlotTable_2.canvas.axes.legend(fancybox=True, framealpha=0.5, fontsize=6)
 
         self.filterToolPlotTable_2.canvas.draw()
 
@@ -484,8 +537,6 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
             w,mag,phase = signal.bode(system)
             self.filterToolPlotTable_2.canvas.axes.semilogx(w, phase)
 
-
-
             self.filterToolPlotTable_2.canvas.axes.grid(which='both', axis='both')
             self.filterToolPlotTable_2.canvas.figure.tight_layout()
             self.filterToolPlotTable_2.canvas.draw()
@@ -495,8 +546,6 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
 
         self.filterToolPlotTable_2.canvas.axes.clear()
         if len(self.appTemplates) != 0:
-
-
 
             if self.appTemplates[self.currentIndex].should_be_drawn():
                 myZeros = [[], []]
@@ -932,7 +981,7 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
                     if template.type == Type.LPN:
                         w, h = signal.freqs(template.normalized_num, template.normalized_den)
                     else:
-                        w, h = signal.freqs(template.actual_num, template.actual_den)
+                        w, h = signal.freqs(template.actual_num, template.actual_den,worN=np.linspace(1e4, 1e6, 1000))
 
                     self.filterToolPlotTable.canvas.axes.semilogx(w, 20 * np.log10(abs(h)), label=template.printTag)
                     self.filterToolPlotTable.canvas.axes.grid(True, which='both')
@@ -1008,7 +1057,7 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
                     if template.type == Type.LPN:
                         w, h = signal.freqs(template.normalized_den, template.normalized_num)
                     else:
-                        w, h = signal.freqs(template.actual_den, template.actual_num)
+                        w, h = signal.freqs(template.actual_den, template.actual_num,worN=np.linspace(1e4, 1e6, 1000))
 
                     self.filterToolPlotTable.canvas.axes.semilogx(w, 20 * np.log10(abs(h)), label=template.printTag)
                     self.filterToolPlotTable.canvas.axes.grid(True, which='both')
@@ -1018,9 +1067,9 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
                 theLegend = self.filterToolPlotTable.canvas.axes.legend(fancybox=True, framealpha=0.5, fontsize=6)
 
             if self.appTemplates[0].should_draw_template() and self.appTemplates[0].approximation != Approximation.Gauss:
-                print ("HACER CUADRADITOS")
+
                 if self.appTemplates[0].type == Type.LP:
-                    print ("ESTOY EN LP")
+
                     rectangle_p = plt.Rectangle((0, self.appTemplates[0].data["A_p"]), self.appTemplates[0].data["w_p"],
                                                 self.appTemplates[0].data["A_a"] + 100, fc='violet', alpha=0.8)
                     rectangle_a = plt.Rectangle((self.appTemplates[0].data["w_a"], 0),
