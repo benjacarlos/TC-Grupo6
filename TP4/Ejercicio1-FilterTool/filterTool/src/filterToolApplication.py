@@ -302,6 +302,7 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
         self.plotAllSos.setChecked(False)
         self.plotTemplate.setChecked(False)
         self.editStagePage.setCurrentWidget(self.dontShowMeEdit)
+        self.appTemplates[self.currentIndex].get_sos()
 
 
         

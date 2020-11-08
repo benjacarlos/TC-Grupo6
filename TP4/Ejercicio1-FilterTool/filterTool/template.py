@@ -203,6 +203,12 @@ class template():
         self.k=1/self.w_a_n
 
     def get_sos(self):
+        self.singularidades = {
+            "polos": list(),
+            "ceros": list(),
+            "ganancias": list(),
+            "sos": list(),
+        }
         # me fijo la cantidad de secciones para el filtro desnormalizado buscado
         self.number_of_sections = int(np.floor(self.actual_n / 2) + self.actual_n % 2)
 
