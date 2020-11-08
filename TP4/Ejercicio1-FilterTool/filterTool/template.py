@@ -75,7 +75,7 @@ class template():
 
     def eliminate_sos(self, number):
         self.singularidades["sos"].pop(number)
-        self.number_of_sections = - 1
+        self.number_of_sections -= 1
 
     def change_posc_sos(self,pos_a,pos_b):
         aux=self.singularidades["sos"][pos_b]

@@ -33,7 +33,9 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
     #Mapeo de botones interactivos y sus respectivas funciones #
 
         self.goStageTwoButton.clicked.connect(self.goStageTwo)
-        self.returnStageOneButton.clicked.connect(self.goStageOne)
+        self.acceptGoStageOne.clicked.connect(self.goStageOne)
+        self.denyGoStageOne.clicked.connect(self.doNotReturnStageOne)
+        self.returnStageOneButton.clicked.connect(self.showAcceptGoStageOne)
         self.acceptParametersStageOne.clicked.connect(self.stageOneGetFilterInputs)
         self.filterTypeOption.currentTextChanged.connect(self.showMoreOptions)
         self.plotTypeOptionInput.currentTextChanged.connect(self.plotGraphic)
@@ -51,9 +53,52 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
         self.editF4.clicked.connect(self.editF4Stage)
         self.editF5.clicked.connect(self.editF5Stage)
         self.acceptEditingStage.clicked.connect(self.acceptEditingStageOption)
-
-
+        self.removeF1.clicked.connect(self.removeStage1)
+        self.removeF2.clicked.connect(self.removeStage2)
+        self.removeF3.clicked.connect(self.removeStage3)
+        self.removeF4.clicked.connect(self.removeStage4)
+        self.removeF5.clicked.connect(self.removeStage5)
         self.returnEditingStage.clicked.connect(self.returnEditingStageAction)
+
+    def hideAllFunctionStage(self):
+        self.Function1.setCurrentWidget(self.noF1)
+        self.Function2.setCurrentWidget(self.noF2)
+        self.Function3.setCurrentWidget(self.noF3)
+        self.Function4.setCurrentWidget(self.noF4)
+        self.Function5.setCurrentWidget(self.noF5)
+
+    def removeStage1(self):
+        self.appTemplates[self.currentIndex].eliminate_sos(0)
+        self.hideAllFunctionStage()
+        self.printSecondOrderSystems()
+        self.plotGraphicStageTwo()
+
+    def removeStage2(self):
+        self.appTemplates[self.currentIndex].eliminate_sos(1)
+        self.hideAllFunctionStage()
+        self.printSecondOrderSystems()
+        self.plotGraphicStageTwo()
+    def removeStage3(self):
+        self.appTemplates[self.currentIndex].eliminate_sos(2)
+        self.hideAllFunctionStage()
+        self.printSecondOrderSystems()
+        self.plotGraphicStageTwo()
+    def removeStage4(self):
+        self.appTemplates[self.currentIndex].eliminate_sos(3)
+        self.hideAllFunctionStage()
+        self.printSecondOrderSystems()
+        self.plotGraphicStageTwo()
+    def removeStage5(self):
+        self.appTemplates[self.currentIndex].eliminate_sos(4)
+        self.hideAllFunctionStage()
+        self.printSecondOrderSystems()
+        self.plotGraphicStageTwo()
+
+    def showAcceptGoStageOne(self):
+        self.returnButton.setCurrentWidget(self.returnOrNot)
+
+    def doNotReturnStageOne(self):
+        self.returnButton.setCurrentWidget(self.showingReturnButton)
 
     def acceptEditingStageOption(self):
         self.numToEdit.text().lower()
@@ -61,21 +106,6 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
         msgWrongInput = QMessageBox()
         msgWrongInput.setIcon(QMessageBox.Warning)
         msgWrongInput.setWindowTitle('Error')
-
-        # Se analiza que el input este en el formato num,num,num,...,n #
-        # Caso contrario se muestra un mensaje de error pertinente     #
-
-        # if self.transferFunctionNumInput.text() == "" or self.transferFunctionDenInput.text() == "":
-        #     msgWrongInput.setText("Complete el numerador y denominador con números separados por \" ,\" ")
-        #     msgWrongInput.exec()
-        # elif self.transferFunctionNumInput.text() == "0" or self.transferFunctionDenInput.text() == "0":
-        #     msgWrongInput.setText("No está permitido agregar solo \" 0\" ")
-        #     msgWrongInput.exec()
-        # elif (self.transferFunctionNumInput.text().islower() or self.transferFunctionDenInput.text().islower()) and ("e-" not in self.transferFunctionNumInput.text() or "e-" not in self.transferFunctionDenInput.text()):
-        #     msgWrongInput.setText("Solo están permitidos números separados por \" ,\" ")
-        #     msgWrongInput.exec()
-        #
-        # else:
 
         try:
             tempNumerator = [float(x) for x in self.numToEdit.text().split(',')]
@@ -87,14 +117,10 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
             msgWrongInput.exec()
 
 
-        # Se procesa el input para graficarlo en formato de cociente de polinomios #
 
-        #printedNumerator = printTransferFunctionInput(self.numerator)
-        #printedDenominator = printTransferFunctionInput(self.denominator)
-        #self.transferFunction.setCurrentWidget(self.transferFunctionDisplay)
-        #self.transferFunctionNumDisplay.setText(printedNumerator)
-        #self.transferFunctionDenDisplay.setText(printedDenominator)
 
+    def plotEachStage(self):
+        print ("HOLUCHI")
 
     def returnEditingStageAction(self):
         self.editStagePage.setCurrentWidget(self.dontShowMeEdit)
@@ -302,10 +328,11 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
         self.plotAllSos.setChecked(False)
         self.plotTemplate.setChecked(False)
         self.editStagePage.setCurrentWidget(self.dontShowMeEdit)
+        self.returnButton.setCurrentWidget(self.showingReturnButton)
         self.appTemplates[self.currentIndex].get_sos()
 
 
-        
+
 
     # Funciones que administrar INPUTS#
 
@@ -851,22 +878,42 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
 
             for template in self.appTemplates:
                 if template.should_be_drawn():
-                    for zero in template.actual_z:
-                        myZeros[0].append(zero.real)
-                        myZeros[1].append(zero.imag)
-                    for pole in template.actual_p:
-                        myPoles[0].append(pole.real)
-                        myPoles[1].append(pole.imag)
+                    print(template.actual_z)
+
+                    if len(template.actual_z) != 0:
+                        for zero in template.actual_z:
+
+                            print ("ACA VAN LOS CEROS:")
+
+                            myZeros[0].append(zero.real)
+                            myZeros[1].append(zero.imag)
+                            self.filterToolPlotTable.canvas.axes.scatter(myZeros[0], myZeros[1], marker="o", label="Zeros")
+
+                    else:
+                        myZeros=[0.000000001,0.000000001]
+                    if len(template.actual_p) != 0:
+                        for pole in template.actual_p:
+                            print("ACA VAN LOS POLOS:")
+                            print(pole)
+                            myPoles[0].append(pole.real)
+                            myPoles[1].append(pole.imag)
+                            self.filterToolPlotTable.canvas.axes.scatter(myPoles[0], myPoles[1], marker="x", label="Poles")
+                    else:
+                        myPoles=[0.0000001,0.00000001]
+
+                    print (myZeros)
+                    print (myPoles)
+
 
             myMaxX = [max(myZeros[0], key=abs), max(myPoles[0], key=abs)]
             myMaxY = [max(myZeros[1], key=abs), max(myPoles[1], key=abs)]
 
-            self.filterToolPlotTable.canvas.axes.clear()
+            print (myMaxX)
+            print(myMaxY)
+
+            #self.filterToolPlotTable.canvas.axes.clear()
             self.filterToolPlotTable.canvas.axes.set_axisbelow(True)
             self.filterToolPlotTable.canvas.axes.grid(True, linestyle='-', which="both")
-
-            self.filterToolPlotTable.canvas.axes.scatter(myZeros[0], myZeros[1], marker="o", label="Zeros")
-            self.filterToolPlotTable.canvas.axes.scatter(myPoles[0], myPoles[1], marker="x", label="Poles")
 
             self.filterToolPlotTable.canvas.axes.spines['left'].set_position('zero')
             self.filterToolPlotTable.canvas.axes.spines['left'].set_linewidth(1)
