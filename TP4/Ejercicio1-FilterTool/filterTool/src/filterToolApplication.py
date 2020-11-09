@@ -536,43 +536,44 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
             self.filterToolPlotTable_2.canvas.axes.title.set_text('Frequency Response - Phase')
             system = signal.TransferFunction(self.appTemplates[self.currentIndex].actual_num, self.appTemplates[self.currentIndex].actual_den)
             w,mag,phase = signal.bode(system)
-            self.filterToolPlotTable_2.canvas.axes.semilogx(w, phase)
+            self.filterToolPlotTable_2.canvas.axes.semilogx(w, phase,label=self.appTemplates[self.currentIndex].printTag)
 
             self.filterToolPlotTable_2.canvas.axes.grid(which='both', axis='both')
             self.filterToolPlotTable_2.canvas.figure.tight_layout()
 
 
         if self.plotAllSos.isChecked():
+            if (self.appTemplates[self.currentIndex].number_of_sections) == 1:
+                num, den = self.appTemplates[self.currentIndex].get_sos_data_tf(0)
+                system = signal.TransferFunction(num, den)
+                w, mag, phase = signal.bode(system)
+                tempLabel = "Total SOS | " + self.appTemplates[self.currentIndex].printTag
+                self.filterToolPlotTable_2.canvas.axes.semilogx(w, phase, label=tempLabel)
+                self.filterToolPlotTable_2.canvas.axes.grid(True, which='both')
+                self.filterToolPlotTable.canvas.figure.tight_layout()
+            else:
+                for i in range((self.appTemplates[self.currentIndex].number_of_sections)-1):
+                    if i == 0:
+                        num, den = self.appTemplates[self.currentIndex].get_sos_data_tf(i)
+                        num2,den2 = self.appTemplates[self.currentIndex].get_sos_data_tf(i + 1)
+                        tempnum = np.polymul(num,num2)
+                        tempden = np.polymul(den,den2)
+                        print (tempnum)
+                        print(tempden)
+                    if i != 0:
+                        num,den = self.appTemplates[self.currentIndex].get_sos_data_tf(i+1)
+                        tempnum = np.polymul(num,tempnum)
+                        tempden = np.polymul(den,tempden)
 
-            for i in range((self.appTemplates[self.currentIndex].number_of_sections)-1):
-                print ("NUMBER OF SECTIONS:")
-                print (self.appTemplates[self.currentIndex].number_of_sections)
-                print("INDEX VALUE:")
-                print (i)
+                system = signal.TransferFunction(tempnum, tempden)
 
-                if i == 0:
-                    num, den = self.appTemplates[self.currentIndex].get_sos_data_tf(i)
-                    num2,den2 = self.appTemplates[self.currentIndex].get_sos_data_tf(i + 1)
-                    tempnum = np.polymul(num,num2)
-                    tempden = np.polymul(den,den2)
-                    print (tempnum)
-                    print(tempden)
-                if i != 0:
-                    print("ENTRO AUI")
-                    num,den = self.appTemplates[self.currentIndex].get_sos_data_tf(i+1)
-                    tempnum = np.polymul(num,tempnum)
-                    tempden = np.polymul(den,tempden)
+                w, mag, phase = signal.bode(system)
+                tempLabel = "Total SOS | " + self.appTemplates[self.currentIndex].printTag
+                self.filterToolPlotTable_2.canvas.axes.semilogx(w, phase, label=tempLabel)
+                self.filterToolPlotTable_2.canvas.axes.grid(True, which='both')
+                self.filterToolPlotTable.canvas.figure.tight_layout()
 
-            system = signal.TransferFunction(tempnum, tempden)
-            print ("FALLA ACA")
-            w, mag, phase = signal.bode(system)
-
-            self.filterToolPlotTable_2.canvas.axes.semilogx(w, phase, label="CACA")
-            self.filterToolPlotTable_2.canvas.axes.grid(True, which='both')
-            # self.filterToolPlotTable.canvas.axes.margins(0, 0.1)
-            self.filterToolPlotTable.canvas.figure.tight_layout()
-            
-        theLegend = self.filterToolPlotTable.canvas.axes.legend(fancybox=True, framealpha=0.5, fontsize=6)
+        theLegend = self.filterToolPlotTable_2.canvas.axes.legend(fancybox=True, framealpha=0.5, fontsize=6)
 
         self.filterToolPlotTable_2.canvas.draw()
 
