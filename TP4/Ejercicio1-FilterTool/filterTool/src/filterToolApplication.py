@@ -436,7 +436,7 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
 
 
 
-        w, h = signal.freqs(self.appTemplates[self.currentIndex].actual_num, self.appTemplates[self.currentIndex].actual_den,worN=np.linspace(1e4, 1e6, 1000))
+        w, h = signal.freqs(self.appTemplates[self.currentIndex].actual_num, self.appTemplates[self.currentIndex].actual_den)#,worN=np.linspace(1e4, 1e6, 1000))
 
         self.filterToolPlotTable_2.canvas.axes.semilogx(w, 20 * np.log10(abs(h)), label=self.appTemplates[self.currentIndex].printTag)
 
@@ -444,11 +444,11 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
             hs = list()
             if self.appTemplates[self.currentIndex].should_be_att():
                 for x in range(self.appTemplates[self.currentIndex].number_of_sections):  # Cargo cada den y num  en la lista
-                    hs.append(signal.freqs(self.appTemplates[self.currentIndex].singularidades["sos"][x][1], self.appTemplates[self.currentIndex].singularidades["sos"][x][0],worN=np.linspace(1e4, 1e6, 1000)))
+                    hs.append(signal.freqs(self.appTemplates[self.currentIndex].singularidades["sos"][x][1], self.appTemplates[self.currentIndex].singularidades["sos"][x][0]))#,worN=np.linspace(1e4, 1e6, 1000)))
             else:
                 for x in range(self.appTemplates[self.currentIndex].number_of_sections):  # Cargo cada num y den  en la lista
-                    hs.append(signal.freqs(self.appTemplates[self.currentIndex].singularidades["sos"][x][0], self.appTemplates[self.currentIndex].singularidades["sos"][x][1],worN=np.linspace(1e4, 1e6, 1000)
-                                           ))
+                    hs.append(signal.freqs(self.appTemplates[self.currentIndex].singularidades["sos"][x][0], self.appTemplates[self.currentIndex].singularidades["sos"][x][1]))#,worN=np.linspace(1e4, 1e6, 1000)
+
 
             index = 1
             if self.appTemplates[self.currentIndex].number_of_sections > 1:
@@ -1031,7 +1031,7 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
                     if template.type == Type.LPN:
                         w, h = signal.freqs(template.normalized_num, template.normalized_den)
                     else:
-                        w, h = signal.freqs(template.actual_num, template.actual_den,worN=np.linspace(1e4, 1e6, 1000))
+                        w, h = signal.freqs(template.actual_num, template.actual_den)#,worN=np.linspace(1e4, 1e6, 1000))
 
                     self.filterToolPlotTable.canvas.axes.semilogx(w, 20 * np.log10(abs(h)), label=template.printTag)
                     self.filterToolPlotTable.canvas.axes.grid(True, which='both')
@@ -1107,7 +1107,7 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
                     if template.type == Type.LPN:
                         w, h = signal.freqs(template.normalized_den, template.normalized_num)
                     else:
-                        w, h = signal.freqs(template.actual_den, template.actual_num,worN=np.linspace(1e4, 1e6, 1000))
+                        w, h = signal.freqs(template.actual_den, template.actual_num)#,worN=np.linspace(1e4, 1e6, 1000))
 
                     self.filterToolPlotTable.canvas.axes.semilogx(w, 20 * np.log10(abs(h)), label=template.printTag)
                     self.filterToolPlotTable.canvas.axes.grid(True, which='both')
@@ -1175,7 +1175,7 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
             self.filterToolPlotTable.canvas.axes.title.set_text('Attenuation - Normalized - LP')
             for template in self.appTemplates:
                 if template.should_be_drawn() == True:
-                    w, h = signal.freqs(template.normalized_den, template.normalized_num,worN=np.linspace(0, 1e2, 1000))
+                    w, h = signal.freqs(template.normalized_den, template.normalized_num)#,worN=np.linspace(0, 1e2, 1000))
                     self.filterToolPlotTable.canvas.axes.semilogx(w, 20 * np.log10(abs(h)), label=template.printTag)
                     self.filterToolPlotTable.canvas.axes.grid(True, which='both')
                     self.filterToolPlotTable.canvas.figure.tight_layout()
