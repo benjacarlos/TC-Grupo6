@@ -11,8 +11,11 @@ from numpy import pi, log10, abs, logspace, diff, unwrap, angle
 
 ##############################################
 # Esta funcion devuelve el filtro Gaussiano  #
-# en polos y zeros, H(S) y H(jw)             #
+# en polos y zeros, H(S), group_delay y w    #
+# para group_delay asi como N                #
 ##############################################
+
+
 
 def gauss(wrg,tol,tau,n=0):
 
@@ -69,8 +72,8 @@ def gauss(wrg,tol,tau,n=0):
         den = myDenominator.real[::-1]
 
         # Reemplazo s por tau.s para obtener el tau que quiero en el group_delay
-        #for i in range(len(den)):
-        #    den[i] = (den[i] * (tau) ** (len(den) - i - 1))
+        for i in range(len(den)):
+            den[i] = (den[i] * (tau) ** (len(den) - i - 1))
 
         # Obtengo retardo de grupo
         w, h = signal.freqs(num, den)
@@ -177,13 +180,13 @@ if __name__ == '__main__':
     w_p=100e3
     w_a=150e3
     w_max=1e6
+
+
     wrg = 400
     tol = 1
     tau = 1e-3
 
     num,den,myZeros,myPoles,gd,wd,n = gauss(A_p,A_a,w_p,w_a,w_max,wrg,tol,tau)
-
-
 
     system = signal.TransferFunction (num,den)
 
