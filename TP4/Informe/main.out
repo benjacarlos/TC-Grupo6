@@ -1,12 +1,35 @@
-\BOOKMARK [1][-]{section.1}{Filter Tool}{}% 1
-\BOOKMARK [1][-]{section.2}{Celda Rauch \(Deliyannis-Friend modificada\)}{}% 2
-\BOOKMARK [2][-]{subsection.2.1}{Introducci\363n}{section.2}% 3
-\BOOKMARK [2][-]{subsection.2.2}{Dise\361o del Filtro con Chebyshev}{section.2}% 4
-\BOOKMARK [2][-]{subsection.2.3}{Selecci\363n de Componentes}{section.2}% 5
-\BOOKMARK [3][-]{subsubsection.2.3.1}{Sensibilidad de los Componentes}{subsection.2.3}% 6
-\BOOKMARK [3][-]{subsubsection.2.3.2}{Selecci\363n de Componentes a Utilizar}{subsection.2.3}% 7
-\BOOKMARK [2][-]{subsection.2.4}{An\341lisis de Experimental}{section.2}% 8
-\BOOKMARK [3][-]{subsubsection.2.4.1}{Respuesta en Frecuencia}{subsection.2.4}% 9
-\BOOKMARK [3][-]{subsubsection.2.4.2}{Impedancia de Entrada}{subsection.2.4}% 10
-\BOOKMARK [3][-]{subsubsection.2.4.3}{Rango Din\341mico}{subsection.2.4}% 11
-\BOOKMARK [2][-]{subsection.2.5}{Conclusi\363n}{section.2}% 12
+\BOOKMARK [1][-]{section.1}{Filter Tool - Manual de Usuario}{}% 1
+\BOOKMARK [2][-]{subsection.1.1}{Etapa 1}{section.1}% 2
+\BOOKMARK [3][-]{subsubsection.1.1.1}{Tipos de Filtro}{subsection.1.1}% 3
+\BOOKMARK [3][-]{subsubsection.1.1.2}{Tipos de Aproximaci\363n}{subsection.1.1}% 4
+\BOOKMARK [3][-]{subsubsection.1.1.3}{Par\341metros de Plantilla}{subsection.1.1}% 5
+\BOOKMARK [3][-]{subsubsection.1.1.4}{Par\341metros de Filtro}{subsection.1.1}% 6
+\BOOKMARK [3][-]{subsubsection.1.1.5}{Agregar Filtro}{subsection.1.1}% 7
+\BOOKMARK [3][-]{subsubsection.1.1.6}{Remover todos los filtros}{subsection.1.1}% 8
+\BOOKMARK [3][-]{subsubsection.1.1.7}{Funci\363n Transferencia}{subsection.1.1}% 9
+\BOOKMARK [3][-]{subsubsection.1.1.8}{Tipo de Plot}{subsection.1.1}% 10
+\BOOKMARK [3][-]{subsubsection.1.1.9}{Filtros Dise\361ados}{subsection.1.1}% 11
+\BOOKMARK [3][-]{subsubsection.1.1.10}{Ir a Etapa 2}{subsection.1.1}% 12
+\BOOKMARK [2][-]{subsection.1.2}{Etapa 2}{section.1}% 13
+\BOOKMARK [3][-]{subsubsection.1.2.1}{Trabajar con etapas de Segundo y Primer Orden}{subsection.1.2}% 14
+\BOOKMARK [3][-]{subsubsection.1.2.2}{Tipo de Plot}{subsection.1.2}% 15
+\BOOKMARK [3][-]{subsubsection.1.2.3}{Tipo de Plot - Etapas individuales}{subsection.1.2}% 16
+\BOOKMARK [2][-]{subsection.1.3}{Resumen de Workflow de Dise\361o}{section.1}% 17
+\BOOKMARK [1][-]{section.2}{Celda Rauch \(Deliyannis-Friend modificada\)}{}% 18
+\BOOKMARK [2][-]{subsection.2.1}{Introducci\363n}{section.2}% 19
+\BOOKMARK [2][-]{subsection.2.2}{Dise\361o del Filtro con Chebyshev}{section.2}% 20
+\BOOKMARK [2][-]{subsection.2.3}{Selecci\363n de Componentes}{section.2}% 21
+\BOOKMARK [3][-]{subsubsection.2.3.1}{Sensibilidad de los Componentes}{subsection.2.3}% 22
+\BOOKMARK [3][-]{subsubsection.2.3.2}{Selecci\363n de Componentes a Utilizar}{subsection.2.3}% 23
+\BOOKMARK [2][-]{subsection.2.4}{An\341lisis de Experimental}{section.2}% 24
+\BOOKMARK [3][-]{subsubsection.2.4.1}{Respuesta en Frecuencia}{subsection.2.4}% 25
+\BOOKMARK [3][-]{subsubsection.2.4.2}{Impedancia de Entrada}{subsection.2.4}% 26
+\BOOKMARK [3][-]{subsubsection.2.4.3}{Rango Din\341mico}{subsection.2.4}% 27
+\BOOKMARK [2][-]{subsection.2.5}{Conclusi\363n}{section.2}% 28
+\BOOKMARK [1][-]{section.3}{Introducci\363n}{}% 29
+\BOOKMARK [1][-]{section.4}{Celda Sedra-Ghorab-Martin}{}% 30
+\BOOKMARK [1][-]{section.5}{An\341lisis matem\341tico}{}% 31
+\BOOKMARK [2][-]{subsection.5.1}{Sensibilidades}{section.5}% 32
+\BOOKMARK [2][-]{subsection.5.2}{Aproximaci\363n del filtro}{section.5}% 33
+\BOOKMARK [2][-]{subsection.5.3}{Etapa I}{section.5}% 34
+\BOOKMARK [2][-]{subsection.5.4}{Etapa II}{section.5}% 35
