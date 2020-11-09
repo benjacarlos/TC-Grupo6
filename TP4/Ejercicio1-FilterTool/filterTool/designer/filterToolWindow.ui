@@ -663,7 +663,7 @@
      <widget class="QLabel" name="hsLabel">
       <property name="geometry">
        <rect>
-        <x>360</x>
+        <x>330</x>
         <y>610</y>
         <width>51</width>
         <height>41</height>
@@ -681,9 +681,9 @@
      <widget class="QLabel" name="hsLabelNum">
       <property name="geometry">
        <rect>
-        <x>420</x>
+        <x>390</x>
         <y>604</y>
-        <width>441</width>
+        <width>491</width>
         <height>21</height>
        </rect>
       </property>
@@ -702,9 +702,9 @@
      <widget class="QLabel" name="hsLabelDen">
       <property name="geometry">
        <rect>
-        <x>420</x>
+        <x>390</x>
         <y>634</y>
-        <width>451</width>
+        <width>501</width>
         <height>21</height>
        </rect>
       </property>
@@ -723,10 +723,10 @@
      <widget class="QLabel" name="hsLabelNum_3">
       <property name="geometry">
        <rect>
-        <x>420</x>
+        <x>390</x>
         <y>620</y>
-        <width>461</width>
-        <height>18</height>
+        <width>491</width>
+        <height>20</height>
        </rect>
       </property>
       <property name="font">
@@ -735,16 +735,16 @@
        </font>
       </property>
       <property name="text">
-       <string>______________________________________________________________________________________________________________________________________________________</string>
+       <string>______________________________________________________________________________________________________________________________________________________________________________________________</string>
       </property>
      </widget>
      <widget class="QStackedWidget" name="hiddenWarning">
       <property name="geometry">
        <rect>
-        <x>190</x>
-        <y>500</y>
+        <x>160</x>
+        <y>480</y>
         <width>171</width>
-        <height>141</height>
+        <height>131</height>
        </rect>
       </property>
       <property name="currentIndex">
@@ -2843,9 +2843,9 @@
      <widget class="QLabel" name="hsLabelNum_4">
       <property name="geometry">
        <rect>
-        <x>420</x>
+        <x>390</x>
         <y>620</y>
-        <width>461</width>
+        <width>490</width>
         <height>18</height>
        </rect>
       </property>
@@ -2855,13 +2855,13 @@
        </font>
       </property>
       <property name="text">
-       <string>______________________________________________________________________________________________________________________________________________________</string>
+       <string>___________________________________________________________________________________________________________________________________________________________________________________________</string>
       </property>
      </widget>
      <widget class="QLabel" name="hsLabel_2">
       <property name="geometry">
        <rect>
-        <x>360</x>
+        <x>330</x>
         <y>610</y>
         <width>51</width>
         <height>41</height>
@@ -2879,9 +2879,9 @@
      <widget class="QLabel" name="hsLabelDen_2">
       <property name="geometry">
        <rect>
-        <x>420</x>
+        <x>390</x>
         <y>634</y>
-        <width>451</width>
+        <width>501</width>
         <height>21</height>
        </rect>
       </property>
@@ -2900,9 +2900,9 @@
      <widget class="QLabel" name="hsLabelNum_2">
       <property name="geometry">
        <rect>
-        <x>420</x>
+        <x>390</x>
         <y>604</y>
-        <width>441</width>
+        <width>491</width>
         <height>21</height>
        </rect>
       </property>

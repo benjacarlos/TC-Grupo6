@@ -1020,6 +1020,7 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
     def plotMagnitude (self):
 
         self.filterToolPlotTable.canvas.axes.clear()
+
         if len(self.appTemplates) != 0:
             self.filterToolPlotTable.canvas.axes.axes.set_xlabel("Frequency [rad/s]")
             self.filterToolPlotTable.canvas.axes.axes.set_ylabel("Gain [Db]")
@@ -1273,7 +1274,7 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
 
 
             self.filterToolPlotTable.canvas.axes.set_axisbelow(True)
-            self.filterToolPlotTable.canvas.axes.grid(True, linestyle='-', which="both")
+            self.filterToolPlotTable.canvas.axes.grid(True, which='both')
 
             self.filterToolPlotTable.canvas.axes.spines['left'].set_position('zero')
             self.filterToolPlotTable.canvas.axes.spines['left'].set_linewidth(1)
@@ -1292,6 +1293,7 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
 
             self.filterToolPlotTable.canvas.figure.tight_layout()
         self.filterToolPlotTable.canvas.draw()
+
 
 
     def plotGroupDelay (self):
