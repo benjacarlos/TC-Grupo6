@@ -826,10 +826,10 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
         if self.filterOrderInput.text():
             try:
                 self.data["n"] = int (self.filterOrderInput.text())
-                if self.data["n"] < 0:
+                if (self.data["n"] < 0) or (self.data["n"] > 10) :
                     raise Exception("Exception")
             except:
-                ErrorMessage = ErrorMessage + "The filter order must be a valid number \n"
+                ErrorMessage = ErrorMessage + "The filter order must be a valid number (1 to 10) \n"
 
         if self.denormInput.text():
             try:
@@ -847,14 +847,17 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
         if self.minFilterOrderInput.text():
             try:
                 self.data["n_min"] = float (self.minFilterOrderInput.text())
+                if self.data["n_min"] < 0 or self.data["n_min"] > 10:
+                    raise Exception("Exception")
+
             except:
-                ErrorMessage = ErrorMessage + "The NMin must be a valid number \n"
+                ErrorMessage = ErrorMessage + "The NMin must be a valid number (1 to 10) \n"
 
         if self.maxFilterOrderInput.text():
             try:
                 self.data["n_max"] = float(self.maxFilterOrderInput.text())
             except:
-                ErrorMessage = ErrorMessage + "The NMax must be a valid number \n"
+                ErrorMessage = ErrorMessage + "The NMax must be a valid number (1 to 10) \n"
 
         if ErrorMessage != "":
             msgWrongInput.setText(ErrorMessage)
