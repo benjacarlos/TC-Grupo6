@@ -1,0 +1,36 @@
+\babel@toc {english}{}
+\contentsline {section}{\numberline {1}Filter Tool - Manual de Usuario}{2}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Etapa 1}{2}{subsection.1.1}%
+\contentsline {subsubsection}{\numberline {1.1.1}Tipos de Filtro}{2}{subsubsection.1.1.1}%
+\contentsline {subsubsection}{\numberline {1.1.2}Tipos de Aproximación}{3}{subsubsection.1.1.2}%
+\contentsline {subsubsection}{\numberline {1.1.3}Parámetros de Plantilla}{3}{subsubsection.1.1.3}%
+\contentsline {subsubsection}{\numberline {1.1.4}Parámetros de Filtro}{4}{subsubsection.1.1.4}%
+\contentsline {subsubsection}{\numberline {1.1.5}Agregar Filtro}{4}{subsubsection.1.1.5}%
+\contentsline {subsubsection}{\numberline {1.1.6}Remover todos los filtros}{4}{subsubsection.1.1.6}%
+\contentsline {subsubsection}{\numberline {1.1.7}Función Transferencia}{4}{subsubsection.1.1.7}%
+\contentsline {subsubsection}{\numberline {1.1.8}Tipo de Plot}{4}{subsubsection.1.1.8}%
+\contentsline {subsubsection}{\numberline {1.1.9}Filtros Diseñados}{5}{subsubsection.1.1.9}%
+\contentsline {subsubsection}{\numberline {1.1.10}Ir a Etapa 2}{5}{subsubsection.1.1.10}%
+\contentsline {subsection}{\numberline {1.2}Etapa 2}{6}{subsection.1.2}%
+\contentsline {subsubsection}{\numberline {1.2.1}Trabajar con etapas de Segundo y Primer Orden}{6}{subsubsection.1.2.1}%
+\contentsline {subsubsection}{\numberline {1.2.2}Tipo de Plot}{8}{subsubsection.1.2.2}%
+\contentsline {subsubsection}{\numberline {1.2.3}Tipo de Plot - Etapas individuales}{9}{subsubsection.1.2.3}%
+\contentsline {subsection}{\numberline {1.3}Resumen de Workflow de Diseño}{9}{subsection.1.3}%
+\contentsline {section}{\numberline {2}Celda Rauch (Deliyannis-Friend modificada)}{11}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Introducción}{11}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Dise\~no del Filtro con Chebyshev}{12}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Selección de Componentes}{13}{subsection.2.3}%
+\contentsline {subsubsection}{\numberline {2.3.1}Sensibilidad de los Componentes}{13}{subsubsection.2.3.1}%
+\contentsline {subsubsection}{\numberline {2.3.2}Selección de Componentes a Utilizar}{13}{subsubsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.4}Análisis de Experimental}{15}{subsection.2.4}%
+\contentsline {subsubsection}{\numberline {2.4.1}Respuesta en Frecuencia}{15}{subsubsection.2.4.1}%
+\contentsline {subsubsection}{\numberline {2.4.2}Impedancia de Entrada}{16}{subsubsection.2.4.2}%
+\contentsline {subsubsection}{\numberline {2.4.3}Rango Dinámico}{16}{subsubsection.2.4.3}%
+\contentsline {subsection}{\numberline {2.5}Conclusión}{17}{subsection.2.5}%
+\contentsline {section}{\numberline {3}Introducción}{17}{section.3}%
+\contentsline {section}{\numberline {4}Celda Sedra-Ghorab-Martin}{17}{section.4}%
+\contentsline {section}{\numberline {5}Análisis matemático}{18}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Sensibilidades}{20}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Aproximación del filtro}{21}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Etapa I}{21}{subsection.5.3}%
+\contentsline {subsection}{\numberline {5.4}Etapa II}{21}{subsection.5.4}%
