@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.8.20)  9 NOV 2020 11:08
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.8.20)  9 NOV 2020 12:40
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -870,71 +870,77 @@ Package pdftex.def Info: ../Ejercicio1-FilterTool/Imagenes/con-plantilla.png  us
 <../Ejercicio1-FilterTool/Imagenes/SOS.png, id=238, 273.02pt x 279.0425pt>
 File: ../Ejercicio1-FilterTool/Imagenes/SOS.png Graphic file (type png)
 <use ../Ejercicio1-FilterTool/Imagenes/SOS.png>
-Package pdftex.def Info: ../Ejercicio1-FilterTool/Imagenes/SOS.png  used on input line 177.
+Package pdftex.def Info: ../Ejercicio1-FilterTool/Imagenes/SOS.png  used on input line 178.
 (pdftex.def)             Requested size: 136.50966pt x 139.5209pt.
  [6 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP4/Informe/../Ejercicio1-FilterTool/Imagenes/con-plantilla.png>]
 <../Ejercicio1-FilterTool/Imagenes/sosEdit.png, id=246, 276.03125pt x 428.60126pt>
 File: ../Ejercicio1-FilterTool/Imagenes/sosEdit.png Graphic file (type png)
 <use ../Ejercicio1-FilterTool/Imagenes/sosEdit.png>
-Package pdftex.def Info: ../Ejercicio1-FilterTool/Imagenes/sosEdit.png  used on input line 201.
+Package pdftex.def Info: ../Ejercicio1-FilterTool/Imagenes/sosEdit.png  used on input line 202.
 (pdftex.def)             Requested size: 138.01527pt x 214.3001pt.
  [7 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP4/Informe/../Ejercicio1-FilterTool/Imagenes/SOS.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP4/Informe/../Ejercicio1-FilterTool/Imagenes/sosEdit.png>]
 <../Ejercicio1-FilterTool/Imagenes/comparame-com-plantilla.png, id=260, 691.08188pt x 621.07031pt>
 File: ../Ejercicio1-FilterTool/Imagenes/comparame-com-plantilla.png Graphic file (type png)
 <use ../Ejercicio1-FilterTool/Imagenes/comparame-com-plantilla.png>
-Package pdftex.def Info: ../Ejercicio1-FilterTool/Imagenes/comparame-com-plantilla.png  used on input line 232.
+Package pdftex.def Info: ../Ejercicio1-FilterTool/Imagenes/comparame-com-plantilla.png  used on input line 233.
 (pdftex.def)             Requested size: 435.33028pt x 391.22897pt.
 <../Ejercicio1-FilterTool/Imagenes/comparacion.png, id=261, 697.10437pt x 650.43pt>
 File: ../Ejercicio1-FilterTool/Imagenes/comparacion.png Graphic file (type png)
 <use ../Ejercicio1-FilterTool/Imagenes/comparacion.png>
-Package pdftex.def Info: ../Ejercicio1-FilterTool/Imagenes/comparacion.png  used on input line 240.
+Package pdftex.def Info: ../Ejercicio1-FilterTool/Imagenes/comparacion.png  used on input line 241.
 (pdftex.def)             Requested size: 435.33028pt x 406.1803pt.
- [8 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP4/Informe/../Ejercicio1-FilterTool/Imagenes/comparame-com-plantilla.png>] [9 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP4/Informe/../Ejercicio1-FilterTool/Imagenes/comparacion.png>]) [10] (/Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP4/Informe/../Ejercicio2-DisenoDeCeldas/Ejercicio-2.tex
-<../Ejercicio2-DisenoDeCeldas/2CELDARAUCH/Informe/circuito3.png, id=278, 428.802pt x 292.09125pt>
+ [8 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP4/Informe/../Ejercicio1-FilterTool/Imagenes/comparame-com-plantilla.png>]
+<../Ejercicio1-FilterTool/Imagenes/stage-plot.png, id=268, 700.11563pt x 621.82312pt>
+File: ../Ejercicio1-FilterTool/Imagenes/stage-plot.png Graphic file (type png)
+<use ../Ejercicio1-FilterTool/Imagenes/stage-plot.png>
+Package pdftex.def Info: ../Ejercicio1-FilterTool/Imagenes/stage-plot.png  used on input line 256.
+(pdftex.def)             Requested size: 435.33028pt x 386.65544pt.
+ [9 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP4/Informe/../Ejercicio1-FilterTool/Imagenes/comparacion.png>]) [10 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP4/Informe/../Ejercicio1-FilterTool/Imagenes/stage-plot.png>] (/Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP4/Informe/../Ejercicio2-DisenoDeCeldas/Ejercicio-2.tex
+<../Ejercicio2-DisenoDeCeldas/2CELDARAUCH/Informe/circuito3.png, id=281, 428.802pt x 292.09125pt>
 File: ../Ejercicio2-DisenoDeCeldas/2CELDARAUCH/Informe/circuito3.png Graphic file (type png)
 <use ../Ejercicio2-DisenoDeCeldas/2CELDARAUCH/Informe/circuito3.png>
 Package pdftex.def Info: ../Ejercicio2-DisenoDeCeldas/2CELDARAUCH/Informe/circuito3.png  used on input line 29.
 (pdftex.def)             Requested size: 257.28317pt x 175.25609pt.
-<../Ejercicio2-DisenoDeCeldas/2CELDARAUCH/Informe/circuito.png, id=279, 428.802pt x 292.09125pt>
+<../Ejercicio2-DisenoDeCeldas/2CELDARAUCH/Informe/circuito.png, id=282, 428.802pt x 292.09125pt>
 File: ../Ejercicio2-DisenoDeCeldas/2CELDARAUCH/Informe/circuito.png Graphic file (type png)
 <use ../Ejercicio2-DisenoDeCeldas/2CELDARAUCH/Informe/circuito.png>
 Package pdftex.def Info: ../Ejercicio2-DisenoDeCeldas/2CELDARAUCH/Informe/circuito.png  used on input line 38.
 (pdftex.def)             Requested size: 257.28317pt x 175.25609pt.
  [11 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP4/Informe/../Ejercicio2-DisenoDeCeldas/2CELDARAUCH/Informe/circuito3.png> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP4/Informe/../Ejercicio2-DisenoDeCeldas/2CELDARAUCH/Informe/circuito.png>] [12] [13]
-<../Ejercicio2-DisenoDeCeldas/2CELDARAUCH/Informe/monte.PNG, id=318, 779.3115pt x 296.307pt>
+<../Ejercicio2-DisenoDeCeldas/2CELDARAUCH/Informe/monte.PNG, id=321, 779.3115pt x 296.307pt>
 File: ../Ejercicio2-DisenoDeCeldas/2CELDARAUCH/Informe/monte.PNG Graphic file (type png)
 <use ../Ejercicio2-DisenoDeCeldas/2CELDARAUCH/Informe/monte.PNG>
 Package pdftex.def Info: ../Ejercicio2-DisenoDeCeldas/2CELDARAUCH/Informe/monte.PNG  used on input line 206.
 (pdftex.def)             Requested size: 506.54646pt x 192.59726pt.
-<../Ejercicio2-DisenoDeCeldas/2CELDARAUCH/Informe/disp1.png, id=319, 642.4pt x 481.8pt>
+<../Ejercicio2-DisenoDeCeldas/2CELDARAUCH/Informe/disp1.png, id=322, 642.4pt x 481.8pt>
 File: ../Ejercicio2-DisenoDeCeldas/2CELDARAUCH/Informe/disp1.png Graphic file (type png)
 <use ../Ejercicio2-DisenoDeCeldas/2CELDARAUCH/Informe/disp1.png>
 Package pdftex.def Info: ../Ejercicio2-DisenoDeCeldas/2CELDARAUCH/Informe/disp1.png  used on input line 215.
 (pdftex.def)             Requested size: 321.19922pt x 240.8994pt.
-<../Ejercicio2-DisenoDeCeldas/2CELDARAUCH/Informe/disp2.png, id=320, 642.4pt x 481.8pt>
+<../Ejercicio2-DisenoDeCeldas/2CELDARAUCH/Informe/disp2.png, id=323, 642.4pt x 481.8pt>
 File: ../Ejercicio2-DisenoDeCeldas/2CELDARAUCH/Informe/disp2.png Graphic file (type png)
 <use ../Ejercicio2-DisenoDeCeldas/2CELDARAUCH/Informe/disp2.png>
 Package pdftex.def Info: ../Ejercicio2-DisenoDeCeldas/2CELDARAUCH/Informe/disp2.png  used on input line 222.
 (pdftex.def)             Requested size: 321.19922pt x 240.8994pt.
  [14 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP4/Informe/../Ejercicio2-DisenoDeCeldas/2CELDARAUCH/Informe/monte.PNG> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP4/Informe/../Ejercicio2-DisenoDeCeldas/2CELDARAUCH/Informe/disp1.png (PNG copy)>]
-<../Ejercicio2-DisenoDeCeldas/2CELDARAUCH/Informe/bodemag.png, id=328, 741.52031pt x 395.22656pt>
+<../Ejercicio2-DisenoDeCeldas/2CELDARAUCH/Informe/bodemag.png, id=331, 741.52031pt x 395.22656pt>
 File: ../Ejercicio2-DisenoDeCeldas/2CELDARAUCH/Informe/bodemag.png Graphic file (type png)
 <use ../Ejercicio2-DisenoDeCeldas/2CELDARAUCH/Informe/bodemag.png>
 Package pdftex.def Info: ../Ejercicio2-DisenoDeCeldas/2CELDARAUCH/Informe/bodemag.png  used on input line 236.
 (pdftex.def)             Requested size: 444.91562pt x 237.13776pt.
-<../Ejercicio2-DisenoDeCeldas/2CELDARAUCH/Informe/bodepha.png, id=329, 741.52031pt x 395.22656pt>
+<../Ejercicio2-DisenoDeCeldas/2CELDARAUCH/Informe/bodepha.png, id=332, 741.52031pt x 395.22656pt>
 File: ../Ejercicio2-DisenoDeCeldas/2CELDARAUCH/Informe/bodepha.png Graphic file (type png)
 <use ../Ejercicio2-DisenoDeCeldas/2CELDARAUCH/Informe/bodepha.png>
 Package pdftex.def Info: ../Ejercicio2-DisenoDeCeldas/2CELDARAUCH/Informe/bodepha.png  used on input line 243.
 (pdftex.def)             Requested size: 444.91562pt x 237.13776pt.
  [15 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP4/Informe/../Ejercicio2-DisenoDeCeldas/2CELDARAUCH/Informe/disp2.png (PNG copy)> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP4/Informe/../Ejercicio2-DisenoDeCeldas/2CELDARAUCH/Informe/bodemag.png (PNG copy)>]
-<../Ejercicio2-DisenoDeCeldas/2CELDARAUCH/Informe/zin.png, id=336, 675.27281pt x 395.22656pt>
+<../Ejercicio2-DisenoDeCeldas/2CELDARAUCH/Informe/zin.png, id=339, 675.27281pt x 395.22656pt>
 File: ../Ejercicio2-DisenoDeCeldas/2CELDARAUCH/Informe/zin.png Graphic file (type png)
 <use ../Ejercicio2-DisenoDeCeldas/2CELDARAUCH/Informe/zin.png>
 Package pdftex.def Info: ../Ejercicio2-DisenoDeCeldas/2CELDARAUCH/Informe/zin.png  used on input line 257.
 (pdftex.def)             Requested size: 337.63557pt x 197.6128pt.
  [16 </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP4/Informe/../Ejercicio2-DisenoDeCeldas/2CELDARAUCH/Informe/bodepha.png (PNG copy)> </Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP4/Informe/../Ejercicio2-DisenoDeCeldas/2CELDARAUCH/Informe/zin.png (PNG copy)>]
-<../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/Celda Deliyannis.png, id=343, 264.08662pt x 246.32025pt>
+<../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/Celda Deliyannis.png, id=346, 264.08662pt x 246.32025pt>
 File: ../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/Celda Deliyannis.png Graphic file (type png)
 <use ../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/Celda Deliyannis.png>
 Package pdftex.def Info: ../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/Celda Deliyannis.png  used on input line 296.
@@ -943,7 +949,7 @@ Package pdftex.def Info: ../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/Celda
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/Transformaciones SGB.png, id=344, 307.1475pt x 334.851pt>
+<../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/Transformaciones SGB.png, id=347, 307.1475pt x 334.851pt>
 File: ../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/Transformaciones SGB.png Graphic file (type png)
 <use ../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/Transformaciones SGB.png>
 Package pdftex.def Info: ../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/Transformaciones SGB.png  used on input line 306.
@@ -952,7 +958,7 @@ Package pdftex.def Info: ../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/Trans
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [17]
-<../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/HP biquad.png, id=357, 343.58362pt x 231.86626pt>
+<../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/HP biquad.png, id=360, 343.58362pt x 231.86626pt>
 File: ../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/HP biquad.png Graphic file (type png)
 <use ../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/HP biquad.png>
 Package pdftex.def Info: ../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/HP biquad.png  used on input line 335.
@@ -961,7 +967,7 @@ Package pdftex.def Info: ../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/HP bi
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/LP biquad.png, id=358, 353.52075pt x 235.17862pt>
+<../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/LP biquad.png, id=361, 353.52075pt x 235.17862pt>
 File: ../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/LP biquad.png Graphic file (type png)
 <use ../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/LP biquad.png>
 Package pdftex.def Info: ../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/LP biquad.png  used on input line 342.
@@ -984,18 +990,18 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 20.
  ) 
 Here is how much of TeX's memory you used:
- 34393 strings out of 480608
- 802325 string characters out of 5903630
+ 34400 strings out of 480608
+ 802615 string characters out of 5903630
  1186110 words of memory out of 5000000
- 49610 multiletter control sequences out of 15000+600000
+ 49615 multiletter control sequences out of 15000+600000
  545215 words of font info for 74 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  71i,17n,73p,1267b,801s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on /Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP4/Informe/main.pdf (22 pages, 1044520 bytes).
+Output written on /Users/nicolasmestanza/Documents/GitHub/TC-Grupo6/TP4/Informe/main.pdf (22 pages, 1091530 bytes).
 PDF statistics:
- 490 PDF objects out of 1000 (max. 8388607)
- 408 compressed objects within 5 object streams
- 116 named destinations out of 1000 (max. 500000)
- 393 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 493 PDF objects out of 1000 (max. 8388607)
+ 409 compressed objects within 5 object streams
+ 117 named destinations out of 1000 (max. 500000)
+ 398 words of extra memory for PDF output out of 10000 (max. 10000000)
 
