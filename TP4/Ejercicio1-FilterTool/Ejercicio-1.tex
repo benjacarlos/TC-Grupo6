@@ -141,7 +141,7 @@ el gráfico o función transferencia deseada.
 
 \subsubsection{Ir a Etapa 2}
 
-Si se cuenta mínimamente con un filtro añadido, se podrá proceder a la etapa 2, seleccionado $10$ 
+Si se cuenta mínimamente con un filtro añadido, se podrá proceder a la etapa 2, seleccionando $10$ 
 de la figura $\ref{ImagenGeneral}$.
 
 En dicha etapa se trabajará sobre un filtro únicamente. Para seleccionar qué filtro de los diseñados será
@@ -168,7 +168,8 @@ conforman al filtro total diseñado.
 
 Obviamente si el orden de los filtros es impar, se empleará un filtro de primer orden y el resto de segundo orden.
 Si el orden es par, todas las etapas serán de segundo orden. Es importante notar que para el diseño de cada etapa,
-se planteó en el código desarrollado que la ganancia del filtro total se distribuya equitativamente.
+se planteó en el código desarrollado que la ganancia del filtro total se distribuya equitativamente. Ese es el comportamiento default, aunque para un desarrollo posterior,
+se puede cambiar la variable $DistribuiteGainBetweenAllSections$ a un valor de $False$ y la ganancia será absorbida por la última etapa.
 
 A continuación se puede ver el comportamiento de dicha funcionalidad para un sistema de octavo orden de tipo Low-Pass.
 
@@ -250,7 +251,11 @@ Si se selecciona $Plot$ $Stages$ en la pantalla donde se encuentran los sistemas
 Para cada etapa que se desee obtener su gráfico bastará con seleccionarla con el checkbox debajo de "X". Ello hará que se la incluya dentro de los gráficos o non. Para volver al modo anterior donde se puede comparar el filtro total con el filtro total editado,
 bastará con no seleccionar $Plot$ $Stage$.
 
-INSERTAR IMAGEN CON TODAS LAS ETAPAS
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{../Ejercicio1-FilterTool/Imagenes/stage-plot.png}
+    \caption{Etapa 2 - Ploteo de cada Etapa de Segundo Orden}
+\end{figure}
 
 \subsection{Resumen de Workflow de Diseño}
 
