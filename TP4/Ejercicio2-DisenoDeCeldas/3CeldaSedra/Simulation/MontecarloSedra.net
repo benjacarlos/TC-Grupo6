@@ -1,0 +1,32 @@
+* C:\Users\Paulo\Documents\GitHub\TC\TP4\Ejercicio2-DisenoDeCeldas\3CeldaSedra\Simulation\MontecarloSedra.asc
+R§G82 N005 Vi {mc(18k,tola)}
+R§G81 0 N005 {mc(560,tola)}
+R§Ga3 Vi N002 {mc(1200k,tola)}
+R§Ga4 0 N002 {mc(56k,tola)}
+R§Gb2 N002 Vm {mc(47k,tola)}
+R§G5 Vm N006 {mc(560,tola)}
+XU2 N005 N002 V+ V- Vm TL082
+C7 N006 N005 {mc(22n,tolb)}
+C62 Vi N006 {mc(10n,tolb)}
+C61 0 N006 {mc(10n,tolb)}
+R§G42 N003 Vm {mc(1.2k,tola)}
+R§G41 0 N003 {mc(2.7k,tola)}
+R§Ga1 Vm N001 {mc(180k,tola)}
+R§Ga2 0 N001 {mc(330k,tola)}
+R§Gb1 N001 Vo {mc(10k,tola)}
+R§G1 Vo N004 {mc(330,tola)}
+C3 N004 N003 {mc(10n,tolb)}
+C22 Vm N004 {mc(10n,tolb)}
+C21 0 N004 {mc(1n,tolb)}
+V1 Vi 0 AC 1 0
+V2 V+ 0 9
+V3 0 V- 9
+XU3 N003 N001 V+ V- Vo LM833 Avol=316.2K GBW=15Meg Slew=5Meg ilimit=25m rail=0 Vos=0 phimargin=60 en=0 enk=0 in=0 ink=0 Rin=175K
+.param tola=0.01
+.param tolb=0.1
+.step param run 1 100 1
+.ac dec 100 1 1000k
+.lib PAULOsub\LM833.sub
+.lib PAULOsub\TL082.lib
+.backanno
+.end

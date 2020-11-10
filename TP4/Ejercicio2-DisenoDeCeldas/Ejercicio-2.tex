@@ -30,7 +30,7 @@ $\left | Z_{in}(f) \right |$ & $\geq 50k \Omega $      \\ \hline
     \label{fig:Plantilla}
 \end{figure}
 
-Partiendo de la expresión del cuadrado del módulo de la función transferencia \ref{eq:SK1}, se busca cumplir que las que las primeras $2n − 1$ derivadas del módulo de la transferencia se anulen en $w=0$. Para ello, se determinan los parámetros $\varepsilon$ y el orden del filtro. 
+Partiendo de la expresión del cuadrado del módulo de la función transferencia \ref{eq:SK1}, se busca cumplir que las que las primeras $2n - 1$ derivadas del módulo de la transferencia se anulen en $w=0$. Para ello, se determinan los parámetros $\varepsilon$ y el orden del filtro. 
 
 \begin{equation}
         \left | H(jw_{n}) \right |^{2} = \frac{1}{1+\varepsilon ^{2}w_{n}^{2}}
@@ -352,7 +352,7 @@ Con los valores de los componentes fijados, se realizaron simulaciones en LTspic
     \label{fig:SKphase}
 \end{figure}
 
-Se observa en la figura \ref{fig:SKGain} que las ganancias de las transferencias obtenidas por la aproximación de Butterworth, la implementada en el diseño del filtro y la simulación coinciden en gran medida para el rango de frecuencia de transición de banda de paso a banda atenuada. Por lo tanto, el filtro implementado cumple la plantilla. El salto en la fase en la simulación frente a los teóricos se puede deber a que la función implementada en el $Plot Tool$ toma la fase en otro intervalo respecto a la simulada. Desde la simulación, como se verá seguidamente, se observa que desde el panel de simulación la fase continúa descendiendo mas allá de los -180\circ.
+Se observa en la figura \ref{fig:SKGain} que las ganancias de las transferencias obtenidas por la aproximación de Butterworth, la implementada en el diseño del filtro y la simulación coinciden en gran medida para el rango de frecuencia de transición de banda de paso a banda atenuada. Por lo tanto, el filtro implementado cumple la plantilla. El salto en la fase en la simulación frente a los teóricos se puede deber a que la función implementada en el $Plot Tool$ toma la fase en otro intervalo respecto a la simulada. Desde la simulación, como se verá seguidamente, se observa que desde el panel de simulación la fase continúa descendiendo mas allá de los -180$\circ$.
 
 Para estudiar el impacto de la tolerancia de los componentes en la respuesta en frecuencia, se realizó un análisis Monte Carlo. Como se mencionó anteriormente, se emplearon resistores con tolerancia de 1\% y capacitores con tolerancia del 10\%. Para el análisis se fijaron los componentes a los valores comerciales. Primeramente se observó el impacto de las variaciones de los componentes en el comportamiento del filtro en su totalidad y luego se vio el caso individual de cada celda. 
 
@@ -1145,7 +1145,7 @@ Viendo el comportamiento del circuito entero se puede ver cuanto afectó el mal 
 
 \subsection{Conclusión}
 
-Aunque las simulaciones no fueron optimas se pudo ver el funcionamiento de las celdas SGM. Se pudo notar la importancia de la elección de los componentes en algunos casos.
+Aunque las simulaciones no fueron optimas se pudo ver el funcionamiento de las celdas SGM, se pudo notar la importancia de la elección de los componentes en algunos casos. Se cree que la mala elección del amplificador sería el principal problema para el diseño.
 
 
 \section{Celda universal}
