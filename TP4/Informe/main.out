@@ -15,21 +15,31 @@
 \BOOKMARK [3][-]{subsubsection.1.2.2}{Tipo de Plot}{subsection.1.2}% 15
 \BOOKMARK [3][-]{subsubsection.1.2.3}{Tipo de Plot - Etapas individuales}{subsection.1.2}% 16
 \BOOKMARK [2][-]{subsection.1.3}{Resumen de Workflow de Dise\361o}{section.1}% 17
-\BOOKMARK [1][-]{section.2}{Celda Rauch \(Deliyannis-Friend modificada\)}{}% 18
-\BOOKMARK [2][-]{subsection.2.1}{Introducci\363n}{section.2}% 19
-\BOOKMARK [2][-]{subsection.2.2}{Dise\361o del Filtro con Chebyshev}{section.2}% 20
-\BOOKMARK [2][-]{subsection.2.3}{Selecci\363n de Componentes}{section.2}% 21
-\BOOKMARK [3][-]{subsubsection.2.3.1}{Sensibilidad de los Componentes}{subsection.2.3}% 22
-\BOOKMARK [3][-]{subsubsection.2.3.2}{Selecci\363n de Componentes a Utilizar}{subsection.2.3}% 23
-\BOOKMARK [2][-]{subsection.2.4}{An\341lisis de Experimental}{section.2}% 24
-\BOOKMARK [3][-]{subsubsection.2.4.1}{Respuesta en Frecuencia}{subsection.2.4}% 25
-\BOOKMARK [3][-]{subsubsection.2.4.2}{Impedancia de Entrada}{subsection.2.4}% 26
-\BOOKMARK [3][-]{subsubsection.2.4.3}{Rango Din\341mico}{subsection.2.4}% 27
-\BOOKMARK [2][-]{subsection.2.5}{Conclusi\363n}{section.2}% 28
-\BOOKMARK [1][-]{section.3}{Introducci\363n}{}% 29
-\BOOKMARK [1][-]{section.4}{Celda Sedra-Ghorab-Martin}{}% 30
-\BOOKMARK [1][-]{section.5}{An\341lisis matem\341tico}{}% 31
-\BOOKMARK [2][-]{subsection.5.1}{Sensibilidades}{section.5}% 32
-\BOOKMARK [2][-]{subsection.5.2}{Aproximaci\363n del filtro}{section.5}% 33
-\BOOKMARK [2][-]{subsection.5.3}{Etapa I}{section.5}% 34
-\BOOKMARK [2][-]{subsection.5.4}{Etapa II}{section.5}% 35
+\BOOKMARK [1][-]{section.2}{Sallen-Key}{}% 18
+\BOOKMARK [2][-]{subsection.2.1}{C\341lculo de funci\363n transferencia por aproximaci\363n de Butterworth}{section.2}% 19
+\BOOKMARK [2][-]{subsection.2.2}{Circuito a implementar}{section.2}% 20
+\BOOKMARK [2][-]{subsection.2.3}{Celda de primer orden: An\341lisis}{section.2}% 21
+\BOOKMARK [2][-]{subsection.2.4}{Celda de segundo orden Sallen Key: An\341lisis}{section.2}% 22
+\BOOKMARK [2][-]{subsection.2.5}{Sensibilidades}{section.2}% 23
+\BOOKMARK [2][-]{subsection.2.6}{Dise\361o de filtro}{section.2}% 24
+\BOOKMARK [2][-]{subsection.2.7}{Respuesta en frecuencia y an\341lisis Monte Carlo}{section.2}% 25
+\BOOKMARK [2][-]{subsection.2.8}{Restricciones por ganancia y factor de calidad}{section.2}% 26
+\BOOKMARK [2][-]{subsection.2.9}{Conclusiones}{section.2}% 27
+\BOOKMARK [1][-]{section.3}{Celda Rauch \(Deliyannis-Friend modificada\)}{}% 28
+\BOOKMARK [2][-]{subsection.3.1}{Introducci\363n}{section.3}% 29
+\BOOKMARK [2][-]{subsection.3.2}{Dise\361o del Filtro con Chebyshev}{section.3}% 30
+\BOOKMARK [2][-]{subsection.3.3}{Selecci\363n de Componentes}{section.3}% 31
+\BOOKMARK [3][-]{subsubsection.3.3.1}{Sensibilidad de los Componentes}{subsection.3.3}% 32
+\BOOKMARK [3][-]{subsubsection.3.3.2}{Selecci\363n de Componentes a Utilizar}{subsection.3.3}% 33
+\BOOKMARK [2][-]{subsection.3.4}{An\341lisis de Experimental}{section.3}% 34
+\BOOKMARK [3][-]{subsubsection.3.4.1}{Respuesta en Frecuencia}{subsection.3.4}% 35
+\BOOKMARK [3][-]{subsubsection.3.4.2}{Impedancia de Entrada}{subsection.3.4}% 36
+\BOOKMARK [3][-]{subsubsection.3.4.3}{Rango Din\341mico}{subsection.3.4}% 37
+\BOOKMARK [2][-]{subsection.3.5}{Conclusi\363n}{section.3}% 38
+\BOOKMARK [1][-]{section.4}{Introducci\363n}{}% 39
+\BOOKMARK [1][-]{section.5}{Celda Sedra-Ghorab-Martin}{}% 40
+\BOOKMARK [1][-]{section.6}{An\341lisis matem\341tico}{}% 41
+\BOOKMARK [2][-]{subsection.6.1}{Sensibilidades}{section.6}% 42
+\BOOKMARK [2][-]{subsection.6.2}{Aproximaci\363n del filtro}{section.6}% 43
+\BOOKMARK [2][-]{subsection.6.3}{Etapa I}{section.6}% 44
+\BOOKMARK [2][-]{subsection.6.4}{Etapa II}{section.6}% 45

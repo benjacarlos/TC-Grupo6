@@ -1,0 +1,124 @@
+%% Created by Maple 2020.1, Windows 10
+%% Source Worksheet: TransferenciaAvol
+%% Generated: Fri Nov 06 00:52:18 ART 2020
+\documentclass{article}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{maplestd2e}
+\usepackage[utf8]{inputenc}
+\begin{document}
+\lstset{basicstyle=\ttfamily,breaklines=true,columns=flexible}
+\pagestyle{empty}
+\DefineParaStyle{Maple Bullet Item}
+\DefineParaStyle{Maple Heading 1}
+\DefineParaStyle{Maple Warning}
+\DefineParaStyle{Maple Heading 4}
+\DefineParaStyle{Maple Heading 2}
+\DefineParaStyle{Maple Heading 3}
+\DefineParaStyle{Maple Dash Item}
+\DefineParaStyle{Maple Error}
+\DefineParaStyle{Maple Title}
+\DefineParaStyle{Maple Text Output}
+\DefineParaStyle{Maple Normal}
+\DefineCharStyle{Maple 2D Output}
+\DefineCharStyle{Maple 2D Input}
+\DefineCharStyle{Maple Maple Input}
+\DefineCharStyle{Maple 2D Math}
+\DefineCharStyle{Maple Hyperlink}
+\mapleinline{active}{2d}{eq1 := (Vi-V1)/R1 = V1/(R2+1/(s*C2))+(V1-Vo)*s*C1}{${\it eq1}\, := \,{\frac {{\it Vi}-{\it V1}}{{\it R1}}}={{\it V1} \left( {\it R2}+{\frac {1}{s{\it C2}}} \right) ^{-1}}\\
+\mbox{}+ \left( {\it V1}-{\it Vo} \right) s{\it C1}$}
+\mapleinline{active}{2d}{}{$$}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{eq1 := (Vi-V1)/R1 = V1/(R2+1/(s*C2))+(V1-Vo)*s*C1}{\[{\it eq1}\, := \,{\frac {{\it Vi}-{\it V1}}{{\it R1}}}={{\it V1} \left( {\it R2}+{\frac {1}{s{\it C2}}} \right) ^{-1}}\\
+\mbox{}+ \left( {\it V1}-{\it Vo} \right) s{\it C1}\]}
+\end{maplelatex}
+\mapleinline{active}{2d}{eq2 := Vp = V1/(s*C2*(R2+1/(s*C2)))}{\[{\it eq2}\, := \,{\it Vp}={\frac {{\it V1}}{s{\it C2}} \left( {\it R2}+{\frac {1}{s{\it C2}}} \right) ^{-1}}\]}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{eq2 := Vp = V1/(s*C2*(R2+1/(s*C2)))}{\[{\it eq2}\, := \,{\it Vp}={\frac {{\it V1}}{s{\it C2}} \left( {\it R2}+{\frac {1}{s{\it C2}}} \right) ^{-1}}\]}
+\end{maplelatex}
+\mapleinline{active}{2d}{eq3 := Vn = Vo*R3/(R3+R4)}{\[{\it eq3}\, := \,{\it Vn}={\frac {{\it Vo}\,{\it R3}}{{\it R3}+{\it R4}}}\]}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{eq3 := Vn = Vo*R3/(R3+R4)}{\[{\it eq3}\, := \,{\it Vn}={\frac {{\it Vo}\,{\it R3}}{{\it R3}+{\it R4}}}\]}
+\end{maplelatex}
+\mapleinline{active}{2d}{eq4 := Vo = (Vp-Vn)*Avol}{\[{\it eq4}\, := \,{\it Vo}= \left( {\it Vp}-{\it Vn} \right) {\it Avol}\]}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{eq4 := Vo = (Vp-Vn)*Avol}{\[{\it eq4}\, := \,{\it Vo}= \left( {\it Vp}-{\it Vn} \right) {\it Avol}\]}
+\end{maplelatex}
+\mapleinline{active}{2d}{solve({eq1, eq2, eq3, eq4}, {V1, Vn, Vo, Vp})}{${\it solve} \left(  \left\{ {\it eq1},{\it eq2},{\it eq3},{\it eq4}\\
+\mbox{} \right\} , \left\{ {\it V1},{\it Vn},{\it Vo},{\it Vp} \right\}  \right) $}
+\mapleinline{active}{2d}{}{$$}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{{V1 = (Avol*R3+R3+R4)*Vi*(C2*R2*s+1)/(Avol*C1*C2*R1*R2*R3*s^2+C1*C2*R1*R2*R3*s^2+C1*C2*R1*R2*R4*s^2-Avol*C1*R1*R4*s+Avol*C2*R1*R3*s+Avol*C2*R2*R3*s+C1*R1*R3*s+C1*R1*R4*s+C2*R1*R3*s+C2*R1*R4*s+C2*R2*R3*s+C2*R2*R4*s+Avol*R3+R3+R4), Vn = Avol*R3*Vi/(Avol*C1*C2*R1*R2*R3*s^2+C1*C2*R1*R2*R3*s^2+C1*C2*R1*R2*R4*s^2-Avol*C1*R1*R4*s+Avol*C2*R1*R3*s+Avol*C2*R2*R3*s+C1*R1*R3*s+C1*R1*R4*s+C2*R1*R3*s+C2*R1*R4*s+C2*R2*R3*s+C2*R2*R4*s+Avol*R3+R3+R4), Vo = Avol*Vi*(R3+R4)/(Avol*C1*C2*R1*R2*R3*s^2+C1*C2*R1*R2*R3*s^2+C1*C2*R1*R2*R4*s^2-Avol*C1*R1*R4*s+Avol*C2*R1*R3*s+Avol*C2*R2*R3*s+C1*R1*R3*s+C1*R1*R4*s+C2*R1*R3*s+C2*R1*R4*s+C2*R2*R3*s+C2*R2*R4*s+Avol*R3+R3+R4), Vp = (Avol*R3+R3+R4)*Vi/(Avol*C1*C2*R1*R2*R3*s^2+C1*C2*R1*R2*R3*s^2+C1*C2*R1*R2*R4*s^2-Avol*C1*R1*R4*s+Avol*C2*R1*R3*s+Avol*C2*R2*R3*s+C1*R1*R3*s+C1*R1*R4*s+C2*R1*R3*s+C2*R1*R4*s+C2*R2*R3*s+C2*R2*R4*s+Avol*R3+R3+R4)}}{\[ \left\{ {\it V1}={\frac { \left( {\it Avol}\,{\it R3}+{\it R3}+{\it R4} \right) {\it Vi}\,\\
+\mbox{} \left( {\it R2}\,s{\it C2}+1 \right) }{{\it Avol}\,{\it C1}\,{\it C2}\,{\it R1}\,{\it R2}\,{\it R3}\,{s}^{2}+{\it C1}\,{\it C2}\,{\it R1}\,{\it R2}\,{\it R3}\,{s}^{2}+{\it C1}\,{\it C2}\,{\it R1}\,{\it R2}\,{\it R4}\,{s}^{2}-{\it Avol}\,{\it C1}\,{\it R1}\,{\it R4}\,s+{\it Avol}\,{\it C2}\,{\it R1}\,{\it R3}\,s+{\it Avol}\,{\it C2}\,{\it R2}\,{\it R3}\,s+s{\it C1}\,{\it R1}\,{\it R3}+s{\it C1}\,{\it R1}\,{\it R4}+{\it C2}\,{\it R1}\,{\it R3}\,s+{\it C2}\,{\it R1}\,{\it R4}\,s\\
+\mbox{}+{\it C2}\,{\it R2}\,{\it R3}\,s+{\it C2}\,{\it R2}\,{\it R4}\,s+{\it Avol}\,{\it R3}+{\it R3}+{\it R4}}},{\it Vn}={\frac {{\it Avol}\,{\it R3}\,{\it Vi}}{{\it Avol}\,{\it C1}\,{\it C2}\,{\it R1}\,{\it R2}\,{\it R3}\,{s}^{2}+{\it C1}\,{\it C2}\,{\it R1}\,{\it R2}\,{\it R3}\,{s}^{2}+{\it C1}\,{\it C2}\,{\it R1}\,{\it R2}\,{\it R4}\,{s}^{2}-{\it Avol}\,{\it C1}\,{\it R1}\,{\it R4}\,s+{\it Avol}\,{\it C2}\,{\it R1}\,{\it R3}\,s+{\it Avol}\,{\it C2}\,{\it R2}\,{\it R3}\,s+s{\it C1}\,{\it R1}\,{\it R3}+s{\it C1}\,{\it R1}\,{\it R4}+{\it C2}\,{\it R1}\,{\it R3}\,s+{\it C2}\,{\it R1}\,{\it R4}\,s+{\it C2}\,{\it R2}\,{\it R3}\,s+{\it C2}\,{\it R2}\,{\it R4}\,s+{\it Avol}\,{\it R3}+{\it R3}+{\it R4}}},{\it Vo}={\frac {{\it Avol}\,{\it Vi}\, \left( {\it R3}+{\it R4} \right) }{{\it Avol}\,{\it C1}\,{\it C2}\,{\it R1}\,{\it R2}\,{\it R3}\,{s}^{2}+{\it C1}\,{\it C2}\,{\it R1}\,{\it R2}\,{\it R3}\,{s}^{2}+{\it C1}\,{\it C2}\,{\it R1}\,{\it R2}\,{\it R4}\,{s}^{2}\\
+\mbox{}-{\it Avol}\,{\it C1}\,{\it R1}\,{\it R4}\,s+{\it Avol}\,{\it C2}\,{\it R1}\,{\it R3}\,s+{\it Avol}\,{\it C2}\,{\it R2}\,{\it R3}\,s+s{\it C1}\,{\it R1}\,{\it R3}+s{\it C1}\,{\it R1}\,{\it R4}+{\it C2}\,{\it R1}\,{\it R3}\,s+{\it C2}\,{\it R1}\,{\it R4}\,s+{\it C2}\,{\it R2}\,{\it R3}\,s+{\it C2}\,{\it R2}\,{\it R4}\,s+{\it Avol}\,{\it R3}+{\it R3}+{\it R4}}},{\it Vp}={\frac { \left( {\it Avol}\,{\it R3}+{\it R3}+{\it R4} \right) {\it Vi}}{{\it Avol}\,{\it C1}\,{\it C2}\,{\it R1}\,{\it R2}\,{\it R3}\,{s}^{2}+{\it C1}\,{\it C2}\,{\it R1}\,{\it R2}\,{\it R3}\,{s}^{2}+{\it C1}\,{\it C2}\,{\it R1}\,{\it R2}\,{\it R4}\,{s}^{2}-{\it Avol}\,{\it C1}\,{\it R1}\,{\it R4}\,s+{\it Avol}\,{\it C2}\,{\it R1}\,{\it R3}\,s+{\it Avol}\,{\it C2}\,{\it R2}\,{\it R3}\,s+s{\it C1}\,{\it R1}\,{\it R3}+s{\it C1}\,{\it R1}\,{\it R4}+{\it C2}\,{\it R1}\,{\it R3}\,s+{\it C2}\,{\it R1}\,{\it R4}\,s+{\it C2}\,{\it R2}\,{\it R3}\,s+{\it C2}\,{\it R2}\,{\it R4}\,s+{\it Avol}\,{\it R3}+{\it R3}+{\it R4}}} \right\} \]}
+\end{maplelatex}
+\mapleinline{active}{2d}{{V1 = (Avol*R3+R3+R4)*Vi*(C2*R2*s+1)/(Avol*C1*C2*R1*R2*R3*s^2+C1*C2*R1*R2*R3*s^2+C1*C2*R1*R2*R4*s^2-Avol*C1*R1*R4*s+Avol*C2*R1*R3*s+Avol*C2*R2*R3*s+C1*R1*R3*s+C1*R1*R4*s+C2*R1*R3*s+C2*R1*R4*s+C2*R2*R3*s+C2*R2*R4*s+Avol*R3+R3+R4), Vn = Avol*R3*Vi/(Avol*C1*C2*R1*R2*R3*s^2+C1*C2*R1*R2*R3*s^2+C1*C2*R1*R2*R4*s^2-Avol*C1*R1*R4*s+Avol*C2*R1*R3*s+Avol*C2*R2*R3*s+C1*R1*R3*s+C1*R1*R4*s+C2*R1*R3*s+C2*R1*R4*s+C2*R2*R3*s+C2*R2*R4*s+Avol*R3+R3+R4), Vo = Avol*Vi*(R3+R4)/(Avol*C1*C2*R1*R2*R3*s^2+C1*C2*R1*R2*R3*s^2+C1*C2*R1*R2*R4*s^2-Avol*C1*R1*R4*s+Avol*C2*R1*R3*s+Avol*C2*R2*R3*s+C1*R1*R3*s+C1*R1*R4*s+C2*R1*R3*s+C2*R1*R4*s+C2*R2*R3*s+C2*R2*R4*s+Avol*R3+R3+R4), Vp = (Avol*R3+R3+R4)*Vi/(Avol*C1*C2*R1*R2*R3*s^2+C1*C2*R1*R2*R3*s^2+C1*C2*R1*R2*R4*s^2-Avol*C1*R1*R4*s+Avol*C2*R1*R3*s+Avol*C2*R2*R3*s+C1*R1*R3*s+C1*R1*R4*s+C2*R1*R3*s+C2*R1*R4*s+C2*R2*R3*s+C2*R2*R4*s+Avol*R3+R3+R4)}[3]}{\[ \left\{ {\it V1}={\frac { \left( {\it Avol}\,{\it R3}+{\it R3}+{\it R4} \right) {\it Vi}\,\\
+\mbox{} \left( {\it R2}\,s{\it C2}+1 \right) }{{\it Avol}\,{\it C1}\,{\it C2}\,{\it R1}\,{\it R2}\,{\it R3}\,{s}^{2}+{\it C1}\,{\it C2}\,{\it R1}\,{\it R2}\,{\it R3}\,{s}^{2}+{\it C1}\,{\it C2}\,{\it R1}\,{\it R2}\,{\it R4}\,{s}^{2}-{\it Avol}\,{\it C1}\,{\it R1}\,{\it R4}\,s+{\it Avol}\,{\it C2}\,{\it R1}\,{\it R3}\,s+{\it Avol}\,{\it C2}\,{\it R2}\,{\it R3}\,s+s{\it C1}\,{\it R1}\,{\it R3}+s{\it C1}\,{\it R1}\,{\it R4}+{\it C2}\,{\it R1}\,{\it R3}\,s+{\it C2}\,{\it R1}\,{\it R4}\,s\\
+\mbox{}+{\it C2}\,{\it R2}\,{\it R3}\,s+{\it C2}\,{\it R2}\,{\it R4}\,s+{\it Avol}\,{\it R3}+{\it R3}+{\it R4}}},{\it Vn}={\frac {{\it Avol}\,{\it R3}\,{\it Vi}}{{\it Avol}\,{\it C1}\,{\it C2}\,{\it R1}\,{\it R2}\,{\it R3}\,{s}^{2}+{\it C1}\,{\it C2}\,{\it R1}\,{\it R2}\,{\it R3}\,{s}^{2}+{\it C1}\,{\it C2}\,{\it R1}\,{\it R2}\,{\it R4}\,{s}^{2}-{\it Avol}\,{\it C1}\,{\it R1}\,{\it R4}\,s+{\it Avol}\,{\it C2}\,{\it R1}\,{\it R3}\,s+{\it Avol}\,{\it C2}\,{\it R2}\,{\it R3}\,s+s{\it C1}\,{\it R1}\,{\it R3}+s{\it C1}\,{\it R1}\,{\it R4}+{\it C2}\,{\it R1}\,{\it R3}\,s+{\it C2}\,{\it R1}\,{\it R4}\,s+{\it C2}\,{\it R2}\,{\it R3}\,s+{\it C2}\,{\it R2}\,{\it R4}\,s+{\it Avol}\,{\it R3}+{\it R3}+{\it R4}}},{\it Vo}={\frac {{\it Avol}\,{\it Vi}\, \left( {\it R3}+{\it R4} \right) }{{\it Avol}\,{\it C1}\,{\it C2}\,{\it R1}\,{\it R2}\,{\it R3}\,{s}^{2}+{\it C1}\,{\it C2}\,{\it R1}\,{\it R2}\,{\it R3}\,{s}^{2}+{\it C1}\,{\it C2}\,{\it R1}\,{\it R2}\,{\it R4}\,{s}^{2}\\
+\mbox{}-{\it Avol}\,{\it C1}\,{\it R1}\,{\it R4}\,s+{\it Avol}\,{\it C2}\,{\it R1}\,{\it R3}\,s+{\it Avol}\,{\it C2}\,{\it R2}\,{\it R3}\,s+s{\it C1}\,{\it R1}\,{\it R3}+s{\it C1}\,{\it R1}\,{\it R4}+{\it C2}\,{\it R1}\,{\it R3}\,s+{\it C2}\,{\it R1}\,{\it R4}\,s+{\it C2}\,{\it R2}\,{\it R3}\,s+{\it C2}\,{\it R2}\,{\it R4}\,s+{\it Avol}\,{\it R3}+{\it R3}+{\it R4}}},{\it Vp}={\frac { \left( {\it Avol}\,{\it R3}+{\it R3}+{\it R4} \right) {\it Vi}}{{\it Avol}\,{\it C1}\,{\it C2}\,{\it R1}\,{\it R2}\,{\it R3}\,{s}^{2}+{\it C1}\,{\it C2}\,{\it R1}\,{\it R2}\,{\it R3}\,{s}^{2}+{\it C1}\,{\it C2}\,{\it R1}\,{\it R2}\,{\it R4}\,{s}^{2}-{\it Avol}\,{\it C1}\,{\it R1}\,{\it R4}\,s+{\it Avol}\,{\it C2}\,{\it R1}\,{\it R3}\,s+{\it Avol}\,{\it C2}\,{\it R2}\,{\it R3}\,s+s{\it C1}\,{\it R1}\,{\it R3}+s{\it C1}\,{\it R1}\,{\it R4}+{\it C2}\,{\it R1}\,{\it R3}\,s+{\it C2}\,{\it R1}\,{\it R4}\,s+{\it C2}\,{\it R2}\,{\it R3}\,s+{\it C2}\,{\it R2}\,{\it R4}\,s+{\it Avol}\,{\it R3}+{\it R3}+{\it R4}}} \right\} _{{3}}\]}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{Vo = Avol*Vi*(R3+R4)/(Avol*C1*C2*R1*R2*R3*s^2+C1*C2*R1*R2*R3*s^2+C1*C2*R1*R2*R4*s^2-Avol*C1*R1*R4*s+Avol*C2*R1*R3*s+Avol*C2*R2*R3*s+C1*R1*R3*s+C1*R1*R4*s+C2*R1*R3*s+C2*R1*R4*s+C2*R2*R3*s+C2*R2*R4*s+Avol*R3+R3+R4)}{\[{\it Vo}={\frac {{\it Avol}\,{\it Vi}\, \left( {\it R3}+{\it R4} \right) }{{\it Avol}\,{\it C1}\,{\it C2}\,{\it R1}\,{\it R2}\,{\it R3}\,{s}^{2}\\
+\mbox{}+{\it C1}\,{\it C2}\,{\it R1}\,{\it R2}\,{\it R3}\,{s}^{2}+{\it C1}\,{\it C2}\,{\it R1}\,{\it R2}\,{\it R4}\,{s}^{2}-{\it Avol}\,{\it C1}\,{\it R1}\,{\it R4}\,s+{\it Avol}\,{\it C2}\,{\it R1}\,{\it R3}\,s+{\it Avol}\,{\it C2}\,{\it R2}\,{\it R3}\,s+s{\it C1}\,{\it R1}\,{\it R3}+s{\it C1}\,{\it R1}\,{\it R4}+{\it C2}\,{\it R1}\,{\it R3}\,s+{\it C2}\,{\it R1}\,{\it R4}\,s+{\it C2}\,{\it R2}\,{\it R3}\,s+{\it C2}\,{\it R2}\,{\it R4}\,s+{\it Avol}\,{\it R3}+{\it R3}+{\it R4}}}\]}
+\end{maplelatex}
+\begin{lstlisting}
+> \end{lstlisting}
+\mapleinline{active}{2d}{Vout := Vo = Avol*Vi*(R3+R4)/(Avol*C1*C2*R1*R2*R3*s^2+C1*C2*R1*R2*R3*s^2+C1*C2*R1*R2*R4*s^2-Avol*C1*R1*R4*s+Avol*C2*R1*R3*s+Avol*C2*R2*R3*s+C1*R1*R3*s+C1*R1*R4*s+C2*R1*R3*s+C2*R1*R4*s+C2*R2*R3*s+C2*R2*R4*s+Avol*R3+R3+R4); -1; 'Vout'}{$$}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{Vout}{\[{\it Vout}\]}
+\end{maplelatex}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{Vo}{\[{\it Vo}\]}
+\end{maplelatex}
+\begin{Maple Normal}{
+\mapleinline{inert}{2d}{simplify(Vout)}{\[{\it simplify} \left( {\it Vout} \right) \]}
+}\end{Maple Normal}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{Vo = Avol*Vi*(R3+R4)/(C2*R2*((Avol+1)*R3+R4)*C1*R1*s^2+((R1+R2)*((Avol+1)*R3+R4)*C2+C1*(R3+(-Avol+1)*R4)*R1)*s+(Avol+1)*R3+R4)}{\[{\it Vo}={\frac {{\it Avol}\,{\it Vi}\, \left( {\it R3}+{\it R4} \right) }{{\it C2}\,{\it R2}\, \left(  \left( {\it Avol}+1 \right) {\it R3}+{\it R4} \right) {\it C1}\,{\it R1}\,{s}^{2}\\
+\mbox{}+ \left(  \left( {\it R1}+{\it R2} \right)  \left(  \left( {\it Avol}+1 \right) {\it R3}+{\it R4} \right) {\it C2}+{\it C1}\, \left( {\it R3}+ \left( -{\it Avol}+1 \right) {\it R4} \right) {\it R1} \right) s\\
+\mbox{}+ \left( {\it Avol}+1 \right) {\it R3}+{\it R4}}}\]}
+\end{maplelatex}
+\begin{Maple Normal}{
+\mapleinline{inert}{2d}{collect(Vout, s)}{\[{\it collect} \left( {\it Vout},s \right) \]}
+}\end{Maple Normal}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{Vo = Avol*Vi*(R3+R4)/((Avol*C1*C2*R1*R2*R3+C1*C2*R1*R2*R3+C1*C2*R1*R2*R4)*s^2+(-Avol*C1*R1*R4+Avol*C2*R1*R3+Avol*C2*R2*R3+C1*R1*R3+C1*R1*R4+C2*R1*R3+C2*R1*R4+C2*R2*R3+C2*R2*R4)*s+Avol*R3+R3+R4)}{\[{\it Vo}={\frac {{\it Avol}\,{\it Vi}\, \left( {\it R3}+{\it R4} \right) }{ \left( {\it Avol}\,{\it C1}\,{\it C2}\,{\it R1}\,{\it R2}\,{\it R3}+{\it C1}\,{\it C2}\,{\it R1}\,{\it R2}\,{\it R3}+{\it C1}\,{\it C2}\,{\it R1}\,{\it R2}\,{\it R4} \right) {s}^{2}\\
+\mbox{}+ \left( -{\it Avol}\,{\it C1}\,{\it R1}\,{\it R4}+{\it Avol}\,{\it C2}\,{\it R1}\,{\it R3}+{\it Avol}\,{\it C2}\,{\it R2}\,{\it R3}+{\it C1}\,{\it R1}\,{\it R3}+{\it C1}\,{\it R1}\,{\it R4}+{\it C2}\,{\it R1}\,{\it R3}+{\it C2}\,{\it R1}\,{\it R4}+{\it C2}\,{\it R2}\,{\it R3}+{\it C2}\,{\it R2}\,{\it R4} \right) s+{\it Avol}\,{\it R3}+{\it R3}+{\it R4}}}\]}
+\end{maplelatex}
+\begin{Maple Normal}{
+\mapleinline{inert}{2d}{H := Avol*(R3+R4)/((Avol*C1*C2*R1*R2*R3+C1*C2*R1*R2*R3+C1*C2*R1*R2*R4)*s^2+(-Avol*C1*R1*R4+Avol*C2*R1*R3+Avol*C2*R2*R3+C1*R1*R3+C1*R1*R4+C2*R1*R3+C2*R1*R4+C2*R2*R3+C2*R2*R4)*s+Avol*R3+R3+R4)}{\[H\, := \,{\frac {{\it Avol}\, \left( {\it R3}+{\it R4} \right) }{ \left( {\it Avol}\,{\it C1}\,{\it C2}\,{\it R1}\,{\it R2}\,{\it R3}+{\it C1}\,{\it C2}\,{\it R1}\,{\it R2}\,{\it R3}+{\it C1}\,{\it C2}\,{\it R1}\,{\it R2}\,{\it R4} \right) {s}^{2}\\
+\mbox{}+ \left( -{\it Avol}\,{\it C1}\,{\it R1}\,{\it R4}+{\it Avol}\,{\it C2}\,{\it R1}\,{\it R3}+{\it Avol}\,{\it C2}\,{\it R2}\,{\it R3}+{\it C1}\,{\it R1}\,{\it R3}+{\it C1}\,{\it R1}\,{\it R4}+{\it C2}\,{\it R1}\,{\it R3}+{\it C2}\,{\it R1}\,{\it R4}+{\it C2}\,{\it R2}\,{\it R3}+{\it C2}\,{\it R2}\,{\it R4} \right) s+{\it Avol}\,{\it R3}+{\it R3}+{\it R4}}}\]}
+}\end{Maple Normal}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{H := Avol*(R3+R4)/((Avol*C1*C2*R1*R2*R3+C1*C2*R1*R2*R3+C1*C2*R1*R2*R4)*s^2+(-Avol*C1*R1*R4+Avol*C2*R1*R3+Avol*C2*R2*R3+C1*R1*R3+C1*R1*R4+C2*R1*R3+C2*R1*R4+C2*R2*R3+C2*R2*R4)*s+Avol*R3+R3+R4)}{\[H\, := \,{\frac {{\it Avol}\, \left( {\it R3}+{\it R4} \right) }{ \left( {\it Avol}\,{\it C1}\,{\it C2}\,{\it R1}\,{\it R2}\,{\it R3}+{\it C1}\,{\it C2}\,{\it R1}\,{\it R2}\,{\it R3}+{\it C1}\,{\it C2}\,{\it R1}\,{\it R2}\,{\it R4} \right) {s}^{2}\\
+\mbox{}+ \left( -{\it Avol}\,{\it C1}\,{\it R1}\,{\it R4}+{\it Avol}\,{\it C2}\,{\it R1}\,{\it R3}+{\it Avol}\,{\it C2}\,{\it R2}\,{\it R3}+{\it C1}\,{\it R1}\,{\it R3}+{\it C1}\,{\it R1}\,{\it R4}+{\it C2}\,{\it R1}\,{\it R3}+{\it C2}\,{\it R1}\,{\it R4}+{\it C2}\,{\it R2}\,{\it R3}+{\it C2}\,{\it R2}\,{\it R4} \right) s+{\it Avol}\,{\it R3}+{\it R3}+{\it R4}}}\]}
+\end{maplelatex}
+\begin{Maple Normal}{
+\mapleinline{inert}{2d}{eq5 := K = (R3+R4)/R3}{\[{\it eq5}\, := \,K={\frac {{\it R3}+{\it R4}}{{\it R3}}}\]}
+}\end{Maple Normal}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{eq5 := K = (R3+R4)/R3}{$\displaystyle {\it eq5}\, := \,K={\frac {{\it R3}+{\it R4}}{{\it R3}}}$}
+\end{maplelatex}
+\begin{maplelatex}
+\mapleinline{inert}{2d}{}{$\displaystyle $}
+\end{maplelatex}
+\begin{Maple Normal}{
+\mapleinline{inert}{2d}{H2 := proc (s) options operator, arrow; H/(Avol*R3+R3+R4) end proc}{\[{\it H2}\, := \,s\mapsto {\frac {{\it Avol}\, \left( {\it R3}+{\it R4} \right) }{ \left(  \left( {\it Avol}\,{\it C1}\,{\it C2}\,{\it R1}\,{\it R2}\,{\it R3}+{\it C1}\,{\it C2}\,{\it R1}\,{\it R2}\,{\it R3}+{\it C1}\,{\it C2}\,{\it R1}\,{\it R2}\,{\it R4} \right) {s}^{2}+ \left( -{\it Avol}\,{\it C1}\,{\it R1}\,{\it R4}+{\it Avol}\,{\it C2}\,{\it R1}\,{\it R3}+{\it Avol}\,{\it C2}\,{\it R2}\,{\it R3}+{\it C1}\,{\it R1}\,{\it R3}+{\it C1}\,{\it R1}\,{\it R4}+{\it C2}\,{\it R1}\,{\it R3}+{\it C2}\,{\it R1}\,{\it R4}+{\it C2}\,{\it R2}\,{\it R3}+{\it C2}\,{\it R2}\,{\it R4} \right) s\\
+\mbox{}+{\it Avol}\,{\it R3}+{\it R3}+{\it R4} \right) \\
+\mbox{} \left( {\it Avol}\,{\it R3}+{\it R3}+{\it R4} \right) }}\]}
+}\end{Maple Normal}
+\end{document}
