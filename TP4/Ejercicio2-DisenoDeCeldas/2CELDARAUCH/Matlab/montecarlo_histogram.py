@@ -1,10 +1,10 @@
 import matplotlib.pyplot as plt
-import seaborn as snspackage control: inst
+import seaborn as sns
 from matplotlib import rc
 rc('text', usetex=True)
 
 
-path = "ej22monte2.txt"
+path = "D:\Documents\GitHub\TC-Grupo6\TP4\Ejercicio2-DisenoDeCeldas\2CELDARAUCH\Matlab\ej22monte2.txt"
 f = []
 mag = []
 

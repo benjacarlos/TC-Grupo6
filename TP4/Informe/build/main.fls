@@ -1,7 +1,7 @@
-PWD d:\Documents\GitHub\TC-Grupo6\TP3\Informe
+PWD d:\Documents\GitHub\TC-Grupo6\TP4\Informe
 INPUT C:\Users\Facu Molina\AppData\Local\MiKTeX\miktex\data\le\pdftex\pdflatex.fmt
-INPUT d:\Documents\GitHub\TC-Grupo6\TP3\Informe\main.tex
-OUTPUT d:\Documents\GitHub\TC-Grupo6\TP3\Informe\build\main.log
+INPUT d:\Documents\GitHub\TC-Grupo6\TP4\Informe\main.tex
+OUTPUT d:\Documents\GitHub\TC-Grupo6\TP4\Informe\build\main.log
 INPUT preamble.tex
 INPUT preamble.tex
 INPUT C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex\latex\base\article.cls
@@ -273,9 +273,9 @@ INPUT C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex\latex\booktabs\book
 INPUT C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex\latex\booktabs\booktabs.sty
 INPUT C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibrarybabel.code.tex
 INPUT C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibrarybabel.code.tex
-INPUT d:\Documents\GitHub\TC-Grupo6\TP3\Informe\build\main.aux
-INPUT d:\Documents\GitHub\TC-Grupo6\TP3\Informe\build\main.aux
-OUTPUT d:\Documents\GitHub\TC-Grupo6\TP3\Informe\build\main.aux
+INPUT d:\Documents\GitHub\TC-Grupo6\TP4\Informe\build\main.aux
+INPUT d:\Documents\GitHub\TC-Grupo6\TP4\Informe\build\main.aux
+OUTPUT d:\Documents\GitHub\TC-Grupo6\TP4\Informe\build\main.aux
 INPUT C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
 INPUT C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
 INPUT C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex\latex\epstopdf-pkg\epstopdf-base.sty
@@ -294,10 +294,10 @@ INPUT main.out
 INPUT main.out
 INPUT main.out
 INPUT main.out
-OUTPUT d:\Documents\GitHub\TC-Grupo6\TP3\Informe\build\main.pdf
+OUTPUT d:\Documents\GitHub\TC-Grupo6\TP4\Informe\build\main.pdf
 INPUT .\main.out
 INPUT .\main.out
-OUTPUT d:\Documents\GitHub\TC-Grupo6\TP3\Informe\build\main.out
+OUTPUT d:\Documents\GitHub\TC-Grupo6\TP4\Informe\build\main.out
 INPUT C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
 INPUT C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
 INPUT C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex\latex\amsfonts\umsa.fd
@@ -353,347 +353,211 @@ INPUT C:\Users\Facu Molina\AppData\Local\MiKTeX\pdftex\config\pdftex.map
 INPUT C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr12.tfm
 INPUT C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx12.tfm
 INPUT main.toc
-OUTPUT d:\Documents\GitHub\TC-Grupo6\TP3\Informe\build\main.toc
-INPUT ..\Ejercicio1-FiltroConGIC\Ejercicio-1.tex
-INPUT ..\Ejercicio1-FiltroConGIC\Ejercicio-1.tex
+OUTPUT d:\Documents\GitHub\TC-Grupo6\TP4\Informe\build\main.toc
+INPUT ..\Ejercicio1-FilterTool\Ejercicio-1.tex
+INPUT ..\Ejercicio1-FilterTool\Ejercicio-1.tex
 INPUT C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx12.tfm
-INPUT ..\Ejercicio1-FiltroConGIC\Informe\giccir.jpg
-INPUT ..\Ejercicio1-FiltroConGIC\Informe\giccir.jpg
-INPUT ..\Ejercicio1-FiltroConGIC\Informe\giccir.jpg
-INPUT ..\Ejercicio1-FiltroConGIC\Informe\giccir.jpg
-INPUT ..\Ejercicio1-FiltroConGIC\Informe\giccir.jpg
-INPUT ..\Ejercicio1-FiltroConGIC\Informe\circuito.png
-INPUT ..\Ejercicio1-FiltroConGIC\Informe\circuito.png
-INPUT ..\Ejercicio1-FiltroConGIC\Informe\circuito.png
-INPUT ..\Ejercicio1-FiltroConGIC\Informe\circuito.png
-INPUT ..\Ejercicio1-FiltroConGIC\Informe\circuito.png
+INPUT ..\Ejercicio1-FilterTool\Imagenes\imagen-general-1.png
+INPUT ..\Ejercicio1-FilterTool\Imagenes\imagen-general-1.png
+INPUT ..\Ejercicio1-FilterTool\Imagenes\imagen-general-1.png
+INPUT ..\Ejercicio1-FilterTool\Imagenes\imagen-general-1.png
+INPUT ..\Ejercicio1-FilterTool\Imagenes\imagen-general-1.png
 INPUT C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx10.tfm
 INPUT C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\tcrm1000.tfm
-INPUT ..\Ejercicio1-FiltroConGIC\Informe\polor6.png
-INPUT ..\Ejercicio1-FiltroConGIC\Informe\polor6.png
-INPUT ..\Ejercicio1-FiltroConGIC\Informe\polor6.png
-INPUT ..\Ejercicio1-FiltroConGIC\Informe\polor6.png
-INPUT ..\Ejercicio1-FiltroConGIC\Informe\polor6.png
-INPUT ..\Ejercicio1-FiltroConGIC\Informe\polor6-1.png
-INPUT ..\Ejercicio1-FiltroConGIC\Informe\polor6-1.png
-INPUT ..\Ejercicio1-FiltroConGIC\Informe\polor6-1.png
-INPUT ..\Ejercicio1-FiltroConGIC\Informe\polor6-1.png
-INPUT ..\Ejercicio1-FiltroConGIC\Informe\polor6-1.png
-INPUT ..\Ejercicio1-FiltroConGIC\Informe\rfmag.png
-INPUT ..\Ejercicio1-FiltroConGIC\Informe\rfmag.png
-INPUT ..\Ejercicio1-FiltroConGIC\Informe\rfmag.png
-INPUT ..\Ejercicio1-FiltroConGIC\Informe\rfmag.png
-INPUT ..\Ejercicio1-FiltroConGIC\Informe\rfmag.png
-INPUT ..\Ejercicio1-FiltroConGIC\Informe\rfpha.png
-INPUT ..\Ejercicio1-FiltroConGIC\Informe\rfpha.png
-INPUT ..\Ejercicio1-FiltroConGIC\Informe\rfpha.png
-INPUT ..\Ejercicio1-FiltroConGIC\Informe\rfpha.png
-INPUT ..\Ejercicio1-FiltroConGIC\Informe\rfpha.png
-INPUT ..\Ejercicio1-FiltroConGIC\Informe\desphaOsc.png
-INPUT ..\Ejercicio1-FiltroConGIC\Informe\desphaOsc.png
-INPUT ..\Ejercicio1-FiltroConGIC\Informe\desphaOsc.png
-INPUT ..\Ejercicio1-FiltroConGIC\Informe\desphaOsc.png
-INPUT ..\Ejercicio1-FiltroConGIC\Informe\desphaOsc.png
-INPUT ..\Ejercicio1-FiltroConGIC\Informe\zin.png
-INPUT ..\Ejercicio1-FiltroConGIC\Informe\zin.png
-INPUT ..\Ejercicio1-FiltroConGIC\Informe\zin.png
-INPUT ..\Ejercicio1-FiltroConGIC\Informe\zin.png
-INPUT ..\Ejercicio1-FiltroConGIC\Informe\zin.png
-INPUT ..\Ejercicio1-FiltroConGIC\Informe\zout.png
-INPUT ..\Ejercicio1-FiltroConGIC\Informe\zout.png
-INPUT ..\Ejercicio1-FiltroConGIC\Informe\zout.png
-INPUT ..\Ejercicio1-FiltroConGIC\Informe\zout.png
-INPUT ..\Ejercicio1-FiltroConGIC\Informe\zout.png
-INPUT ..\Ejercicio1-FiltroConGIC\Informe\re.png
-INPUT ..\Ejercicio1-FiltroConGIC\Informe\re.png
-INPUT ..\Ejercicio1-FiltroConGIC\Informe\re.png
-INPUT ..\Ejercicio1-FiltroConGIC\Informe\re.png
-INPUT ..\Ejercicio1-FiltroConGIC\Informe\re.png
-INPUT ..\Ejercicio1-FiltroConGIC\Informe\re1.png
-INPUT ..\Ejercicio1-FiltroConGIC\Informe\re1.png
-INPUT ..\Ejercicio1-FiltroConGIC\Informe\re1.png
-INPUT ..\Ejercicio1-FiltroConGIC\Informe\re1.png
-INPUT ..\Ejercicio1-FiltroConGIC\Informe\re1.png
-INPUT ..\Ejercicio1-FiltroConGIC\Informe\re1k.png
-INPUT ..\Ejercicio1-FiltroConGIC\Informe\re1k.png
-INPUT ..\Ejercicio1-FiltroConGIC\Informe\re1k.png
-INPUT ..\Ejercicio1-FiltroConGIC\Informe\re1k.png
-INPUT ..\Ejercicio1-FiltroConGIC\Informe\re1k.png
-INPUT ..\Ejercicio1-FiltroConGIC\Informe\limtensionpng.png
-INPUT ..\Ejercicio1-FiltroConGIC\Informe\limtensionpng.png
-INPUT ..\Ejercicio1-FiltroConGIC\Informe\limtensionpng.png
-INPUT ..\Ejercicio1-FiltroConGIC\Informe\limtensionpng.png
-INPUT ..\Ejercicio1-FiltroConGIC\Informe\limtensionpng.png
-INPUT ..\Ejercicio2-DiseñoDeFiltros\Ejercicio-2.tex
-INPUT ..\Ejercicio2-DiseñoDeFiltros\Ejercicio-2.tex
+INPUT C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx7.tfm
+INPUT C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx5.tfm
+INPUT ..\Ejercicio1-FilterTool\Imagenes\opciones.png
+INPUT ..\Ejercicio1-FilterTool\Imagenes\opciones.png
+INPUT ..\Ejercicio1-FilterTool\Imagenes\opciones.png
+INPUT ..\Ejercicio1-FilterTool\Imagenes\opciones.png
+INPUT ..\Ejercicio1-FilterTool\Imagenes\opciones.png
+INPUT ..\Ejercicio1-FilterTool\Imagenes\imagen-general-2-varias funciones.png
+INPUT ..\Ejercicio1-FilterTool\Imagenes\imagen-general-2-varias funciones.png
+INPUT ..\Ejercicio1-FilterTool\Imagenes\imagen-general-2-varias funciones.png
+INPUT ..\Ejercicio1-FilterTool\Imagenes\imagen-general-2-varias funciones.png
+INPUT ..\Ejercicio1-FilterTool\Imagenes\imagen-general-2-varias funciones.png
+INPUT ..\Ejercicio1-FilterTool\Imagenes\con-plantilla.png
+INPUT ..\Ejercicio1-FilterTool\Imagenes\con-plantilla.png
+INPUT ..\Ejercicio1-FilterTool\Imagenes\con-plantilla.png
+INPUT ..\Ejercicio1-FilterTool\Imagenes\con-plantilla.png
+INPUT ..\Ejercicio1-FilterTool\Imagenes\con-plantilla.png
+INPUT ..\Ejercicio1-FilterTool\Imagenes\SOS.png
+INPUT ..\Ejercicio1-FilterTool\Imagenes\SOS.png
+INPUT ..\Ejercicio1-FilterTool\Imagenes\SOS.png
+INPUT ..\Ejercicio1-FilterTool\Imagenes\SOS.png
+INPUT ..\Ejercicio1-FilterTool\Imagenes\SOS.png
+INPUT ..\Ejercicio1-FilterTool\Imagenes\sosEdit.png
+INPUT ..\Ejercicio1-FilterTool\Imagenes\sosEdit.png
+INPUT ..\Ejercicio1-FilterTool\Imagenes\sosEdit.png
+INPUT ..\Ejercicio1-FilterTool\Imagenes\sosEdit.png
+INPUT ..\Ejercicio1-FilterTool\Imagenes\sosEdit.png
+INPUT ..\Ejercicio1-FilterTool\Imagenes\comparame-com-plantilla.png
+INPUT ..\Ejercicio1-FilterTool\Imagenes\comparame-com-plantilla.png
+INPUT ..\Ejercicio1-FilterTool\Imagenes\comparame-com-plantilla.png
+INPUT ..\Ejercicio1-FilterTool\Imagenes\comparame-com-plantilla.png
+INPUT ..\Ejercicio1-FilterTool\Imagenes\comparame-com-plantilla.png
+INPUT ..\Ejercicio1-FilterTool\Imagenes\comparacion.png
+INPUT ..\Ejercicio1-FilterTool\Imagenes\comparacion.png
+INPUT ..\Ejercicio1-FilterTool\Imagenes\comparacion.png
+INPUT ..\Ejercicio1-FilterTool\Imagenes\comparacion.png
+INPUT ..\Ejercicio1-FilterTool\Imagenes\comparacion.png
+INPUT ..\Ejercicio1-FilterTool\Imagenes\stage-plot.png
+INPUT ..\Ejercicio1-FilterTool\Imagenes\stage-plot.png
+INPUT ..\Ejercicio1-FilterTool\Imagenes\stage-plot.png
+INPUT ..\Ejercicio1-FilterTool\Imagenes\stage-plot.png
+INPUT ..\Ejercicio1-FilterTool\Imagenes\stage-plot.png
+INPUT ..\Ejercicio2-DisenoDeCeldas\Ejercicio-2.tex
+INPUT ..\Ejercicio2-DisenoDeCeldas\Ejercicio-2.tex
 INPUT C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmti10.tfm
-INPUT ..\Ejercicio3-AmplificadorDeInstrumentacion\Ejercicio-3.tex
-INPUT ..\Ejercicio3-AmplificadorDeInstrumentacion\Ejercicio-3.tex
-INPUT ..\Ejercicio3-AmplificadorDeInstrumentacion\Imagenes\InAmpWiki.png
-INPUT ..\Ejercicio3-AmplificadorDeInstrumentacion\Imagenes\InAmpWiki.png
-INPUT ..\Ejercicio3-AmplificadorDeInstrumentacion\Imagenes\InAmpWiki.png
-INPUT ..\Ejercicio3-AmplificadorDeInstrumentacion\Imagenes\InAmpWiki.png
-INPUT ..\Ejercicio3-AmplificadorDeInstrumentacion\Imagenes\InAmpWiki.png
-INPUT ..\Ejercicio3-AmplificadorDeInstrumentacion\Imagenes\CM\CMVariacionR5Gain.png
-INPUT ..\Ejercicio3-AmplificadorDeInstrumentacion\Imagenes\CM\CMVariacionR5Gain.png
-INPUT ..\Ejercicio3-AmplificadorDeInstrumentacion\Imagenes\CM\CMVariacionR5Gain.png
-INPUT ..\Ejercicio3-AmplificadorDeInstrumentacion\Imagenes\CM\CMVariacionR5Gain.png
-INPUT ..\Ejercicio3-AmplificadorDeInstrumentacion\Imagenes\CM\CMVariacionR5Gain.png
-INPUT ..\Ejercicio3-AmplificadorDeInstrumentacion\Imagenes\CM\CMVariacionR5Phase.png
-INPUT ..\Ejercicio3-AmplificadorDeInstrumentacion\Imagenes\CM\CMVariacionR5Phase.png
-INPUT ..\Ejercicio3-AmplificadorDeInstrumentacion\Imagenes\CM\CMVariacionR5Phase.png
-INPUT ..\Ejercicio3-AmplificadorDeInstrumentacion\Imagenes\CM\CMVariacionR5Phase.png
-INPUT ..\Ejercicio3-AmplificadorDeInstrumentacion\Imagenes\CM\CMVariacionR5Phase.png
-INPUT ..\Ejercicio3-AmplificadorDeInstrumentacion\Imagenes\DM\VariacionR5Gain.png
-INPUT ..\Ejercicio3-AmplificadorDeInstrumentacion\Imagenes\DM\VariacionR5Gain.png
-INPUT ..\Ejercicio3-AmplificadorDeInstrumentacion\Imagenes\DM\VariacionR5Gain.png
-INPUT ..\Ejercicio3-AmplificadorDeInstrumentacion\Imagenes\DM\VariacionR5Gain.png
-INPUT ..\Ejercicio3-AmplificadorDeInstrumentacion\Imagenes\DM\VariacionR5Gain.png
-INPUT ..\Ejercicio3-AmplificadorDeInstrumentacion\Imagenes\DM\VariacionR5Phase.png
-INPUT ..\Ejercicio3-AmplificadorDeInstrumentacion\Imagenes\DM\VariacionR5Phase.png
-INPUT ..\Ejercicio3-AmplificadorDeInstrumentacion\Imagenes\DM\VariacionR5Phase.png
-INPUT ..\Ejercicio3-AmplificadorDeInstrumentacion\Imagenes\DM\VariacionR5Phase.png
-INPUT ..\Ejercicio3-AmplificadorDeInstrumentacion\Imagenes\DM\VariacionR5Phase.png
-INPUT ..\Ejercicio3-AmplificadorDeInstrumentacion\Imagenes\CM\MonteCarloGain.png
-INPUT ..\Ejercicio3-AmplificadorDeInstrumentacion\Imagenes\CM\MonteCarloGain.png
-INPUT ..\Ejercicio3-AmplificadorDeInstrumentacion\Imagenes\CM\MonteCarloGain.png
-INPUT ..\Ejercicio3-AmplificadorDeInstrumentacion\Imagenes\CM\MonteCarloGain.png
-INPUT ..\Ejercicio3-AmplificadorDeInstrumentacion\Imagenes\CM\MonteCarloGain.png
-INPUT ..\Ejercicio3-AmplificadorDeInstrumentacion\Imagenes\CM\MonteCarloPhase.png
-INPUT ..\Ejercicio3-AmplificadorDeInstrumentacion\Imagenes\CM\MonteCarloPhase.png
-INPUT ..\Ejercicio3-AmplificadorDeInstrumentacion\Imagenes\CM\MonteCarloPhase.png
-INPUT ..\Ejercicio3-AmplificadorDeInstrumentacion\Imagenes\CM\MonteCarloPhase.png
-INPUT ..\Ejercicio3-AmplificadorDeInstrumentacion\Imagenes\CM\MonteCarloPhase.png
-INPUT ..\Ejercicio3-AmplificadorDeInstrumentacion\Imagenes\DM\MonteCarloGain.png
-INPUT ..\Ejercicio3-AmplificadorDeInstrumentacion\Imagenes\DM\MonteCarloGain.png
-INPUT ..\Ejercicio3-AmplificadorDeInstrumentacion\Imagenes\DM\MonteCarloGain.png
-INPUT ..\Ejercicio3-AmplificadorDeInstrumentacion\Imagenes\DM\MonteCarloGain.png
-INPUT ..\Ejercicio3-AmplificadorDeInstrumentacion\Imagenes\DM\MonteCarloGain.png
-INPUT ..\Ejercicio3-AmplificadorDeInstrumentacion\Imagenes\DM\MonteCarloPhase.png
-INPUT ..\Ejercicio3-AmplificadorDeInstrumentacion\Imagenes\DM\MonteCarloPhase.png
-INPUT ..\Ejercicio3-AmplificadorDeInstrumentacion\Imagenes\DM\MonteCarloPhase.png
-INPUT ..\Ejercicio3-AmplificadorDeInstrumentacion\Imagenes\DM\MonteCarloPhase.png
-INPUT ..\Ejercicio3-AmplificadorDeInstrumentacion\Imagenes\DM\MonteCarloPhase.png
-INPUT ..\Ejercicio3-AmplificadorDeInstrumentacion\Imagenes\DM\AolvariableDMGain.png
-INPUT ..\Ejercicio3-AmplificadorDeInstrumentacion\Imagenes\DM\AolvariableDMGain.png
-INPUT ..\Ejercicio3-AmplificadorDeInstrumentacion\Imagenes\DM\AolvariableDMGain.png
-INPUT ..\Ejercicio3-AmplificadorDeInstrumentacion\Imagenes\DM\AolvariableDMGain.png
-INPUT ..\Ejercicio3-AmplificadorDeInstrumentacion\Imagenes\DM\AolvariableDMGain.png
-INPUT ..\Ejercicio3-AmplificadorDeInstrumentacion\Imagenes\DM\AolvariableDMPhase.png
-INPUT ..\Ejercicio3-AmplificadorDeInstrumentacion\Imagenes\DM\AolvariableDMPhase.png
-INPUT ..\Ejercicio3-AmplificadorDeInstrumentacion\Imagenes\DM\AolvariableDMPhase.png
-INPUT ..\Ejercicio3-AmplificadorDeInstrumentacion\Imagenes\DM\AolvariableDMPhase.png
-INPUT ..\Ejercicio3-AmplificadorDeInstrumentacion\Imagenes\DM\AolvariableDMPhase.png
-INPUT ..\Ejercicio3-AmplificadorDeInstrumentacion\Imagenes\CM\Gain50k.png
-INPUT ..\Ejercicio3-AmplificadorDeInstrumentacion\Imagenes\CM\Gain50k.png
-INPUT ..\Ejercicio3-AmplificadorDeInstrumentacion\Imagenes\CM\Gain50k.png
-INPUT ..\Ejercicio3-AmplificadorDeInstrumentacion\Imagenes\CM\Gain50k.png
-INPUT ..\Ejercicio3-AmplificadorDeInstrumentacion\Imagenes\CM\Gain50k.png
-INPUT ..\Ejercicio3-AmplificadorDeInstrumentacion\Imagenes\CM\Phase50k.png
-INPUT ..\Ejercicio3-AmplificadorDeInstrumentacion\Imagenes\CM\Phase50k.png
-INPUT ..\Ejercicio3-AmplificadorDeInstrumentacion\Imagenes\CM\Phase50k.png
-INPUT ..\Ejercicio3-AmplificadorDeInstrumentacion\Imagenes\CM\Phase50k.png
-INPUT ..\Ejercicio3-AmplificadorDeInstrumentacion\Imagenes\CM\Phase50k.png
-INPUT ..\Ejercicio3-AmplificadorDeInstrumentacion\Imagenes\CM\Gain30k.png
-INPUT ..\Ejercicio3-AmplificadorDeInstrumentacion\Imagenes\CM\Gain30k.png
-INPUT ..\Ejercicio3-AmplificadorDeInstrumentacion\Imagenes\CM\Gain30k.png
-INPUT ..\Ejercicio3-AmplificadorDeInstrumentacion\Imagenes\CM\Gain30k.png
-INPUT ..\Ejercicio3-AmplificadorDeInstrumentacion\Imagenes\CM\Gain30k.png
-INPUT ..\Ejercicio3-AmplificadorDeInstrumentacion\Imagenes\CM\Phase30k.png
-INPUT ..\Ejercicio3-AmplificadorDeInstrumentacion\Imagenes\CM\Phase30k.png
-INPUT ..\Ejercicio3-AmplificadorDeInstrumentacion\Imagenes\CM\Phase30k.png
-INPUT ..\Ejercicio3-AmplificadorDeInstrumentacion\Imagenes\CM\Phase30k.png
-INPUT ..\Ejercicio3-AmplificadorDeInstrumentacion\Imagenes\CM\Phase30k.png
-INPUT ..\Ejercicio3-AmplificadorDeInstrumentacion\Imagenes\CM\Gain10k.png
-INPUT ..\Ejercicio3-AmplificadorDeInstrumentacion\Imagenes\CM\Gain10k.png
-INPUT ..\Ejercicio3-AmplificadorDeInstrumentacion\Imagenes\CM\Gain10k.png
-INPUT ..\Ejercicio3-AmplificadorDeInstrumentacion\Imagenes\CM\Gain10k.png
-INPUT ..\Ejercicio3-AmplificadorDeInstrumentacion\Imagenes\CM\Gain10k.png
-INPUT ..\Ejercicio3-AmplificadorDeInstrumentacion\Imagenes\CM\Phase10k.png
-INPUT ..\Ejercicio3-AmplificadorDeInstrumentacion\Imagenes\CM\Phase10k.png
-INPUT ..\Ejercicio3-AmplificadorDeInstrumentacion\Imagenes\CM\Phase10k.png
-INPUT ..\Ejercicio3-AmplificadorDeInstrumentacion\Imagenes\CM\Phase10k.png
-INPUT ..\Ejercicio3-AmplificadorDeInstrumentacion\Imagenes\CM\Phase10k.png
-INPUT ..\Ejercicio3-AmplificadorDeInstrumentacion\Imagenes\CM\Gain5k.png
-INPUT ..\Ejercicio3-AmplificadorDeInstrumentacion\Imagenes\CM\Gain5k.png
-INPUT ..\Ejercicio3-AmplificadorDeInstrumentacion\Imagenes\CM\Gain5k.png
-INPUT ..\Ejercicio3-AmplificadorDeInstrumentacion\Imagenes\CM\Gain5k.png
-INPUT ..\Ejercicio3-AmplificadorDeInstrumentacion\Imagenes\CM\Gain5k.png
-INPUT ..\Ejercicio3-AmplificadorDeInstrumentacion\Imagenes\CM\Phase5k.png
-INPUT ..\Ejercicio3-AmplificadorDeInstrumentacion\Imagenes\CM\Phase5k.png
-INPUT ..\Ejercicio3-AmplificadorDeInstrumentacion\Imagenes\CM\Phase5k.png
-INPUT ..\Ejercicio3-AmplificadorDeInstrumentacion\Imagenes\CM\Phase5k.png
-INPUT ..\Ejercicio3-AmplificadorDeInstrumentacion\Imagenes\CM\Phase5k.png
-INPUT ..\Ejercicio3-AmplificadorDeInstrumentacion\Imagenes\CM\Gain100.png
-INPUT ..\Ejercicio3-AmplificadorDeInstrumentacion\Imagenes\CM\Gain100.png
-INPUT ..\Ejercicio3-AmplificadorDeInstrumentacion\Imagenes\CM\Gain100.png
-INPUT ..\Ejercicio3-AmplificadorDeInstrumentacion\Imagenes\CM\Gain100.png
-INPUT ..\Ejercicio3-AmplificadorDeInstrumentacion\Imagenes\CM\Gain100.png
-INPUT ..\Ejercicio3-AmplificadorDeInstrumentacion\Imagenes\CM\Phase100.png
-INPUT ..\Ejercicio3-AmplificadorDeInstrumentacion\Imagenes\CM\Phase100.png
-INPUT ..\Ejercicio3-AmplificadorDeInstrumentacion\Imagenes\CM\Phase100.png
-INPUT ..\Ejercicio3-AmplificadorDeInstrumentacion\Imagenes\CM\Phase100.png
-INPUT ..\Ejercicio3-AmplificadorDeInstrumentacion\Imagenes\CM\Phase100.png
-INPUT ..\Ejercicio3-AmplificadorDeInstrumentacion\Imagenes\CM\CMAllGain.png
-INPUT ..\Ejercicio3-AmplificadorDeInstrumentacion\Imagenes\CM\CMAllGain.png
-INPUT ..\Ejercicio3-AmplificadorDeInstrumentacion\Imagenes\CM\CMAllGain.png
-INPUT ..\Ejercicio3-AmplificadorDeInstrumentacion\Imagenes\CM\CMAllGain.png
-INPUT ..\Ejercicio3-AmplificadorDeInstrumentacion\Imagenes\CM\CMAllGain.png
-INPUT ..\Ejercicio3-AmplificadorDeInstrumentacion\Imagenes\CM\CMAllPhase.png
-INPUT ..\Ejercicio3-AmplificadorDeInstrumentacion\Imagenes\CM\CMAllPhase.png
-INPUT ..\Ejercicio3-AmplificadorDeInstrumentacion\Imagenes\CM\CMAllPhase.png
-INPUT ..\Ejercicio3-AmplificadorDeInstrumentacion\Imagenes\CM\CMAllPhase.png
-INPUT ..\Ejercicio3-AmplificadorDeInstrumentacion\Imagenes\CM\CMAllPhase.png
-INPUT ..\Ejercicio3-AmplificadorDeInstrumentacion\Imagenes\DM\DM50kGain.png
-INPUT ..\Ejercicio3-AmplificadorDeInstrumentacion\Imagenes\DM\DM50kGain.png
-INPUT ..\Ejercicio3-AmplificadorDeInstrumentacion\Imagenes\DM\DM50kGain.png
-INPUT ..\Ejercicio3-AmplificadorDeInstrumentacion\Imagenes\DM\DM50kGain.png
-INPUT ..\Ejercicio3-AmplificadorDeInstrumentacion\Imagenes\DM\DM50kGain.png
-INPUT ..\Ejercicio3-AmplificadorDeInstrumentacion\Imagenes\DM\DM50kPhase.png
-INPUT ..\Ejercicio3-AmplificadorDeInstrumentacion\Imagenes\DM\DM50kPhase.png
-INPUT ..\Ejercicio3-AmplificadorDeInstrumentacion\Imagenes\DM\DM50kPhase.png
-INPUT ..\Ejercicio3-AmplificadorDeInstrumentacion\Imagenes\DM\DM50kPhase.png
-INPUT ..\Ejercicio3-AmplificadorDeInstrumentacion\Imagenes\DM\DM50kPhase.png
-INPUT ..\Ejercicio3-AmplificadorDeInstrumentacion\Imagenes\DM\DM5kGain.png
-INPUT ..\Ejercicio3-AmplificadorDeInstrumentacion\Imagenes\DM\DM5kGain.png
-INPUT ..\Ejercicio3-AmplificadorDeInstrumentacion\Imagenes\DM\DM5kGain.png
-INPUT ..\Ejercicio3-AmplificadorDeInstrumentacion\Imagenes\DM\DM5kGain.png
-INPUT ..\Ejercicio3-AmplificadorDeInstrumentacion\Imagenes\DM\DM5kGain.png
-INPUT ..\Ejercicio3-AmplificadorDeInstrumentacion\Imagenes\DM\DM5kPhase.png
-INPUT ..\Ejercicio3-AmplificadorDeInstrumentacion\Imagenes\DM\DM5kPhase.png
-INPUT ..\Ejercicio3-AmplificadorDeInstrumentacion\Imagenes\DM\DM5kPhase.png
-INPUT ..\Ejercicio3-AmplificadorDeInstrumentacion\Imagenes\DM\DM5kPhase.png
-INPUT ..\Ejercicio3-AmplificadorDeInstrumentacion\Imagenes\DM\DM5kPhase.png
-INPUT ..\Ejercicio4-EcualizadorDeFase\Ejercicio-4.tex
-INPUT ..\Ejercicio4-EcualizadorDeFase\Ejercicio-4.tex
-INPUT ..\Ejercicio4-EcualizadorDeFase\Informe\Ecualizador_de_Fase.png
-INPUT ..\Ejercicio4-EcualizadorDeFase\Informe\Ecualizador_de_Fase.png
-INPUT ..\Ejercicio4-EcualizadorDeFase\Informe\Ecualizador_de_Fase.png
-INPUT ..\Ejercicio4-EcualizadorDeFase\Informe\Ecualizador_de_Fase.png
-INPUT ..\Ejercicio4-EcualizadorDeFase\Informe\Ecualizador_de_Fase.png
-INPUT ..\Ejercicio4-EcualizadorDeFase\Informe\EcSinPot.png
-INPUT ..\Ejercicio4-EcualizadorDeFase\Informe\EcSinPot.png
-INPUT ..\Ejercicio4-EcualizadorDeFase\Informe\EcSinPot.png
-INPUT ..\Ejercicio4-EcualizadorDeFase\Informe\EcSinPot.png
-INPUT ..\Ejercicio4-EcualizadorDeFase\Informe\EcSinPot.png
-INPUT ..\Ejercicio4-EcualizadorDeFase\Informe\1cambioEstrella.png
-INPUT ..\Ejercicio4-EcualizadorDeFase\Informe\1cambioEstrella.png
-INPUT ..\Ejercicio4-EcualizadorDeFase\Informe\1cambioEstrella.png
-INPUT ..\Ejercicio4-EcualizadorDeFase\Informe\1cambioEstrella.png
-INPUT ..\Ejercicio4-EcualizadorDeFase\Informe\1cambioEstrella.png
-INPUT C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\tcrm0800.tfm
-INPUT ..\Ejercicio4-EcualizadorDeFase\Informe\2cambioTriangulo.png
-INPUT ..\Ejercicio4-EcualizadorDeFase\Informe\2cambioTriangulo.png
-INPUT ..\Ejercicio4-EcualizadorDeFase\Informe\2cambioTriangulo.png
-INPUT ..\Ejercicio4-EcualizadorDeFase\Informe\2cambioTriangulo.png
-INPUT ..\Ejercicio4-EcualizadorDeFase\Informe\2cambioTriangulo.png
-INPUT ..\Ejercicio4-EcualizadorDeFase\Informe\EcFinal.png
-INPUT ..\Ejercicio4-EcualizadorDeFase\Informe\EcFinal.png
-INPUT ..\Ejercicio4-EcualizadorDeFase\Informe\EcFinal.png
-INPUT ..\Ejercicio4-EcualizadorDeFase\Informe\EcFinal.png
-INPUT ..\Ejercicio4-EcualizadorDeFase\Informe\EcFinal.png
-INPUT ..\Ejercicio4-EcualizadorDeFase\Informe\circuito_no_ideal.png
-INPUT ..\Ejercicio4-EcualizadorDeFase\Informe\circuito_no_ideal.png
-INPUT ..\Ejercicio4-EcualizadorDeFase\Informe\circuito_no_ideal.png
-INPUT ..\Ejercicio4-EcualizadorDeFase\Informe\circuito_no_ideal.png
-INPUT ..\Ejercicio4-EcualizadorDeFase\Informe\circuito_no_ideal.png
-INPUT ..\Ejercicio4-EcualizadorDeFase\Informe\lowFrecL000Mag.png
-INPUT ..\Ejercicio4-EcualizadorDeFase\Informe\lowFrecL000Mag.png
-INPUT ..\Ejercicio4-EcualizadorDeFase\Informe\lowFrecL000Mag.png
-INPUT ..\Ejercicio4-EcualizadorDeFase\Informe\lowFrecL000Mag.png
-INPUT ..\Ejercicio4-EcualizadorDeFase\Informe\lowFrecL000Mag.png
-INPUT ..\Ejercicio4-EcualizadorDeFase\Informe\lowFrecL050Mag.png
-INPUT ..\Ejercicio4-EcualizadorDeFase\Informe\lowFrecL050Mag.png
-INPUT ..\Ejercicio4-EcualizadorDeFase\Informe\lowFrecL050Mag.png
-INPUT ..\Ejercicio4-EcualizadorDeFase\Informe\lowFrecL050Mag.png
-INPUT ..\Ejercicio4-EcualizadorDeFase\Informe\lowFrecL050Mag.png
-INPUT ..\Ejercicio4-EcualizadorDeFase\Informe\lowFrecL100Mag.png
-INPUT ..\Ejercicio4-EcualizadorDeFase\Informe\lowFrecL100Mag.png
-INPUT ..\Ejercicio4-EcualizadorDeFase\Informe\lowFrecL100Mag.png
-INPUT ..\Ejercicio4-EcualizadorDeFase\Informe\lowFrecL100Mag.png
-INPUT ..\Ejercicio4-EcualizadorDeFase\Informe\lowFrecL100Mag.png
-INPUT ..\Ejercicio4-EcualizadorDeFase\Informe\lowFrecL000Fase.png
-INPUT ..\Ejercicio4-EcualizadorDeFase\Informe\lowFrecL000Fase.png
-INPUT ..\Ejercicio4-EcualizadorDeFase\Informe\lowFrecL000Fase.png
-INPUT ..\Ejercicio4-EcualizadorDeFase\Informe\lowFrecL000Fase.png
-INPUT ..\Ejercicio4-EcualizadorDeFase\Informe\lowFrecL000Fase.png
-INPUT ..\Ejercicio4-EcualizadorDeFase\Informe\lowFrecL050Fase.png
-INPUT ..\Ejercicio4-EcualizadorDeFase\Informe\lowFrecL050Fase.png
-INPUT ..\Ejercicio4-EcualizadorDeFase\Informe\lowFrecL050Fase.png
-INPUT ..\Ejercicio4-EcualizadorDeFase\Informe\lowFrecL050Fase.png
-INPUT ..\Ejercicio4-EcualizadorDeFase\Informe\lowFrecL050Fase.png
-INPUT ..\Ejercicio4-EcualizadorDeFase\Informe\lowFrecL100Fase.png
-INPUT ..\Ejercicio4-EcualizadorDeFase\Informe\lowFrecL100Fase.png
-INPUT ..\Ejercicio4-EcualizadorDeFase\Informe\lowFrecL100Fase.png
-INPUT ..\Ejercicio4-EcualizadorDeFase\Informe\lowFrecL100Fase.png
-INPUT ..\Ejercicio4-EcualizadorDeFase\Informe\lowFrecL100Fase.png
-INPUT ..\Ejercicio4-EcualizadorDeFase\Informe\medFrecL000Mag.png
-INPUT ..\Ejercicio4-EcualizadorDeFase\Informe\medFrecL000Mag.png
-INPUT ..\Ejercicio4-EcualizadorDeFase\Informe\medFrecL000Mag.png
-INPUT ..\Ejercicio4-EcualizadorDeFase\Informe\medFrecL000Mag.png
-INPUT ..\Ejercicio4-EcualizadorDeFase\Informe\medFrecL000Mag.png
-INPUT ..\Ejercicio4-EcualizadorDeFase\Informe\medFrecL050Mag.png
-INPUT ..\Ejercicio4-EcualizadorDeFase\Informe\medFrecL050Mag.png
-INPUT ..\Ejercicio4-EcualizadorDeFase\Informe\medFrecL050Mag.png
-INPUT ..\Ejercicio4-EcualizadorDeFase\Informe\medFrecL050Mag.png
-INPUT ..\Ejercicio4-EcualizadorDeFase\Informe\medFrecL050Mag.png
-INPUT ..\Ejercicio4-EcualizadorDeFase\Informe\medFrecL100Mag.png
-INPUT ..\Ejercicio4-EcualizadorDeFase\Informe\medFrecL100Mag.png
-INPUT ..\Ejercicio4-EcualizadorDeFase\Informe\medFrecL100Mag.png
-INPUT ..\Ejercicio4-EcualizadorDeFase\Informe\medFrecL100Mag.png
-INPUT ..\Ejercicio4-EcualizadorDeFase\Informe\medFrecL100Mag.png
-INPUT ..\Ejercicio4-EcualizadorDeFase\Informe\medFrecL000Fase.png
-INPUT ..\Ejercicio4-EcualizadorDeFase\Informe\medFrecL000Fase.png
-INPUT ..\Ejercicio4-EcualizadorDeFase\Informe\medFrecL000Fase.png
-INPUT ..\Ejercicio4-EcualizadorDeFase\Informe\medFrecL000Fase.png
-INPUT ..\Ejercicio4-EcualizadorDeFase\Informe\medFrecL000Fase.png
-INPUT ..\Ejercicio4-EcualizadorDeFase\Informe\medFrecL050Fase.png
-INPUT ..\Ejercicio4-EcualizadorDeFase\Informe\medFrecL050Fase.png
-INPUT ..\Ejercicio4-EcualizadorDeFase\Informe\medFrecL050Fase.png
-INPUT ..\Ejercicio4-EcualizadorDeFase\Informe\medFrecL050Fase.png
-INPUT ..\Ejercicio4-EcualizadorDeFase\Informe\medFrecL050Fase.png
-INPUT ..\Ejercicio4-EcualizadorDeFase\Informe\medFrecL100Fase.png
-INPUT ..\Ejercicio4-EcualizadorDeFase\Informe\medFrecL100Fase.png
-INPUT ..\Ejercicio4-EcualizadorDeFase\Informe\medFrecL100Fase.png
-INPUT ..\Ejercicio4-EcualizadorDeFase\Informe\medFrecL100Fase.png
-INPUT ..\Ejercicio4-EcualizadorDeFase\Informe\medFrecL100Fase.png
-INPUT ..\Ejercicio4-EcualizadorDeFase\Informe\highFrecL000Mag.png
-INPUT ..\Ejercicio4-EcualizadorDeFase\Informe\highFrecL000Mag.png
-INPUT ..\Ejercicio4-EcualizadorDeFase\Informe\highFrecL000Mag.png
-INPUT ..\Ejercicio4-EcualizadorDeFase\Informe\highFrecL000Mag.png
-INPUT ..\Ejercicio4-EcualizadorDeFase\Informe\highFrecL000Mag.png
-INPUT ..\Ejercicio4-EcualizadorDeFase\Informe\highFrecL050Mag.png
-INPUT ..\Ejercicio4-EcualizadorDeFase\Informe\highFrecL050Mag.png
-INPUT ..\Ejercicio4-EcualizadorDeFase\Informe\highFrecL050Mag.png
-INPUT ..\Ejercicio4-EcualizadorDeFase\Informe\highFrecL050Mag.png
-INPUT ..\Ejercicio4-EcualizadorDeFase\Informe\highFrecL050Mag.png
-INPUT ..\Ejercicio4-EcualizadorDeFase\Informe\highFrecL100Mag.png
-INPUT ..\Ejercicio4-EcualizadorDeFase\Informe\highFrecL100Mag.png
-INPUT ..\Ejercicio4-EcualizadorDeFase\Informe\highFrecL100Mag.png
-INPUT ..\Ejercicio4-EcualizadorDeFase\Informe\highFrecL100Mag.png
-INPUT ..\Ejercicio4-EcualizadorDeFase\Informe\highFrecL100Mag.png
-INPUT ..\Ejercicio4-EcualizadorDeFase\Informe\highFrecL000Fase.png
-INPUT ..\Ejercicio4-EcualizadorDeFase\Informe\highFrecL000Fase.png
-INPUT ..\Ejercicio4-EcualizadorDeFase\Informe\highFrecL000Fase.png
-INPUT ..\Ejercicio4-EcualizadorDeFase\Informe\highFrecL000Fase.png
-INPUT ..\Ejercicio4-EcualizadorDeFase\Informe\highFrecL000Fase.png
-INPUT ..\Ejercicio4-EcualizadorDeFase\Informe\highFrecL050Fase.png
-INPUT ..\Ejercicio4-EcualizadorDeFase\Informe\highFrecL050Fase.png
-INPUT ..\Ejercicio4-EcualizadorDeFase\Informe\highFrecL050Fase.png
-INPUT ..\Ejercicio4-EcualizadorDeFase\Informe\highFrecL050Fase.png
-INPUT ..\Ejercicio4-EcualizadorDeFase\Informe\highFrecL050Fase.png
-INPUT ..\Ejercicio4-EcualizadorDeFase\Informe\highFrecL100Fase.png
-INPUT ..\Ejercicio4-EcualizadorDeFase\Informe\highFrecL100Fase.png
-INPUT ..\Ejercicio4-EcualizadorDeFase\Informe\highFrecL100Fase.png
-INPUT ..\Ejercicio4-EcualizadorDeFase\Informe\highFrecL100Fase.png
-INPUT ..\Ejercicio4-EcualizadorDeFase\Informe\highFrecL100Fase.png
-INPUT d:\Documents\GitHub\TC-Grupo6\TP3\Informe\build\main.aux
-INPUT d:\Documents\GitHub\TC-Grupo6\TP3\Informe\build\main.out
-INPUT d:\Documents\GitHub\TC-Grupo6\TP3\Informe\build\main.out
-INPUT C:\Users\Facu Molina\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm0800.pk
-INPUT C:\Users\Facu Molina\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm0800.pk
-INPUT C:\Users\Facu Molina\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1000.pk
-INPUT C:\Users\Facu Molina\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1000.pk
+INPUT ..\Ejercicio2-DisenoDeCeldas\1CeldaSallenKey\images\plantilla.png
+INPUT ..\Ejercicio2-DisenoDeCeldas\1CeldaSallenKey\images\plantilla.png
+INPUT ..\Ejercicio2-DisenoDeCeldas\1CeldaSallenKey\images\plantilla.png
+INPUT ..\Ejercicio2-DisenoDeCeldas\1CeldaSallenKey\images\plantilla.png
+INPUT ..\Ejercicio2-DisenoDeCeldas\1CeldaSallenKey\images\plantilla.png
+INPUT ..\Ejercicio2-DisenoDeCeldas\1CeldaSallenKey\images\AtenuacionButter.png
+INPUT ..\Ejercicio2-DisenoDeCeldas\1CeldaSallenKey\images\AtenuacionButter.png
+INPUT ..\Ejercicio2-DisenoDeCeldas\1CeldaSallenKey\images\AtenuacionButter.png
+INPUT ..\Ejercicio2-DisenoDeCeldas\1CeldaSallenKey\images\AtenuacionButter.png
+INPUT ..\Ejercicio2-DisenoDeCeldas\1CeldaSallenKey\images\AtenuacionButter.png
+INPUT ..\Ejercicio2-DisenoDeCeldas\1CeldaSallenKey\images\PolesButter.png
+INPUT ..\Ejercicio2-DisenoDeCeldas\1CeldaSallenKey\images\PolesButter.png
+INPUT ..\Ejercicio2-DisenoDeCeldas\1CeldaSallenKey\images\PolesButter.png
+INPUT ..\Ejercicio2-DisenoDeCeldas\1CeldaSallenKey\images\PolesButter.png
+INPUT ..\Ejercicio2-DisenoDeCeldas\1CeldaSallenKey\images\PolesButter.png
+INPUT ..\Ejercicio2-DisenoDeCeldas\1CeldaSallenKey\images\Etapas.png
+INPUT ..\Ejercicio2-DisenoDeCeldas\1CeldaSallenKey\images\Etapas.png
+INPUT ..\Ejercicio2-DisenoDeCeldas\1CeldaSallenKey\images\Etapas.png
+INPUT ..\Ejercicio2-DisenoDeCeldas\1CeldaSallenKey\images\Etapas.png
+INPUT ..\Ejercicio2-DisenoDeCeldas\1CeldaSallenKey\images\Etapas.png
+INPUT ..\Ejercicio2-DisenoDeCeldas\1CeldaSallenKey\images\LowPassRC.png
+INPUT ..\Ejercicio2-DisenoDeCeldas\1CeldaSallenKey\images\LowPassRC.png
+INPUT ..\Ejercicio2-DisenoDeCeldas\1CeldaSallenKey\images\LowPassRC.png
+INPUT ..\Ejercicio2-DisenoDeCeldas\1CeldaSallenKey\images\LowPassRC.png
+INPUT ..\Ejercicio2-DisenoDeCeldas\1CeldaSallenKey\images\LowPassRC.png
+INPUT ..\Ejercicio2-DisenoDeCeldas\1CeldaSallenKey\images\SallenKeyH.png
+INPUT ..\Ejercicio2-DisenoDeCeldas\1CeldaSallenKey\images\SallenKeyH.png
+INPUT ..\Ejercicio2-DisenoDeCeldas\1CeldaSallenKey\images\SallenKeyH.png
+INPUT ..\Ejercicio2-DisenoDeCeldas\1CeldaSallenKey\images\SallenKeyH.png
+INPUT ..\Ejercicio2-DisenoDeCeldas\1CeldaSallenKey\images\SallenKeyH.png
+INPUT ..\Ejercicio2-DisenoDeCeldas\1CeldaSallenKey\images\circLTspiceSK.png
+INPUT ..\Ejercicio2-DisenoDeCeldas\1CeldaSallenKey\images\circLTspiceSK.png
+INPUT ..\Ejercicio2-DisenoDeCeldas\1CeldaSallenKey\images\circLTspiceSK.png
+INPUT ..\Ejercicio2-DisenoDeCeldas\1CeldaSallenKey\images\circLTspiceSK.png
+INPUT ..\Ejercicio2-DisenoDeCeldas\1CeldaSallenKey\images\circLTspiceSK.png
+INPUT ..\Ejercicio2-DisenoDeCeldas\1CeldaSallenKey\images\SKGain.png
+INPUT ..\Ejercicio2-DisenoDeCeldas\1CeldaSallenKey\images\SKGain.png
+INPUT ..\Ejercicio2-DisenoDeCeldas\1CeldaSallenKey\images\SKGain.png
+INPUT ..\Ejercicio2-DisenoDeCeldas\1CeldaSallenKey\images\SKGain.png
+INPUT ..\Ejercicio2-DisenoDeCeldas\1CeldaSallenKey\images\SKGain.png
+INPUT ..\Ejercicio2-DisenoDeCeldas\1CeldaSallenKey\images\SKphase.png
+INPUT ..\Ejercicio2-DisenoDeCeldas\1CeldaSallenKey\images\SKphase.png
+INPUT ..\Ejercicio2-DisenoDeCeldas\1CeldaSallenKey\images\SKphase.png
+INPUT ..\Ejercicio2-DisenoDeCeldas\1CeldaSallenKey\images\SKphase.png
+INPUT ..\Ejercicio2-DisenoDeCeldas\1CeldaSallenKey\images\SKphase.png
+INPUT ..\Ejercicio2-DisenoDeCeldas\1CeldaSallenKey\images\simuMagNormalizados.png
+INPUT ..\Ejercicio2-DisenoDeCeldas\1CeldaSallenKey\images\simuMagNormalizados.png
+INPUT ..\Ejercicio2-DisenoDeCeldas\1CeldaSallenKey\images\simuMagNormalizados.png
+INPUT ..\Ejercicio2-DisenoDeCeldas\1CeldaSallenKey\images\simuMagNormalizados.png
+INPUT ..\Ejercicio2-DisenoDeCeldas\1CeldaSallenKey\images\simuMagNormalizados.png
+INPUT ..\Ejercicio2-DisenoDeCeldas\1CeldaSallenKey\images\simuFaseNormalizados.png
+INPUT ..\Ejercicio2-DisenoDeCeldas\1CeldaSallenKey\images\simuFaseNormalizados.png
+INPUT ..\Ejercicio2-DisenoDeCeldas\1CeldaSallenKey\images\simuFaseNormalizados.png
+INPUT ..\Ejercicio2-DisenoDeCeldas\1CeldaSallenKey\images\simuFaseNormalizados.png
+INPUT ..\Ejercicio2-DisenoDeCeldas\1CeldaSallenKey\images\simuFaseNormalizados.png
+INPUT ..\Ejercicio2-DisenoDeCeldas\1CeldaSallenKey\images\MCSinPreset.png
+INPUT ..\Ejercicio2-DisenoDeCeldas\1CeldaSallenKey\images\MCSinPreset.png
+INPUT ..\Ejercicio2-DisenoDeCeldas\1CeldaSallenKey\images\MCSinPreset.png
+INPUT ..\Ejercicio2-DisenoDeCeldas\1CeldaSallenKey\images\MCSinPreset.png
+INPUT ..\Ejercicio2-DisenoDeCeldas\1CeldaSallenKey\images\MCSinPreset.png
+INPUT ..\Ejercicio2-DisenoDeCeldas\1CeldaSallenKey\images\MAG1stOrder.png
+INPUT ..\Ejercicio2-DisenoDeCeldas\1CeldaSallenKey\images\MAG1stOrder.png
+INPUT ..\Ejercicio2-DisenoDeCeldas\1CeldaSallenKey\images\MAG1stOrder.png
+INPUT ..\Ejercicio2-DisenoDeCeldas\1CeldaSallenKey\images\MAG1stOrder.png
+INPUT ..\Ejercicio2-DisenoDeCeldas\1CeldaSallenKey\images\MAG1stOrder.png
+INPUT ..\Ejercicio2-DisenoDeCeldas\1CeldaSallenKey\images\SKsimu.png
+INPUT ..\Ejercicio2-DisenoDeCeldas\1CeldaSallenKey\images\SKsimu.png
+INPUT ..\Ejercicio2-DisenoDeCeldas\1CeldaSallenKey\images\SKsimu.png
+INPUT ..\Ejercicio2-DisenoDeCeldas\1CeldaSallenKey\images\SKsimu.png
+INPUT ..\Ejercicio2-DisenoDeCeldas\1CeldaSallenKey\images\SKsimu.png
+INPUT ..\Ejercicio2-DisenoDeCeldas\1CeldaSallenKey\images\MCE24.png
+INPUT ..\Ejercicio2-DisenoDeCeldas\1CeldaSallenKey\images\MCE24.png
+INPUT ..\Ejercicio2-DisenoDeCeldas\1CeldaSallenKey\images\MCE24.png
+INPUT ..\Ejercicio2-DisenoDeCeldas\1CeldaSallenKey\images\MCE24.png
+INPUT ..\Ejercicio2-DisenoDeCeldas\1CeldaSallenKey\images\MCE24.png
+INPUT ..\Ejercicio2-DisenoDeCeldas\1CeldaSallenKey\images\Zin.png
+INPUT ..\Ejercicio2-DisenoDeCeldas\1CeldaSallenKey\images\Zin.png
+INPUT ..\Ejercicio2-DisenoDeCeldas\1CeldaSallenKey\images\Zin.png
+INPUT ..\Ejercicio2-DisenoDeCeldas\1CeldaSallenKey\images\Zin.png
+INPUT ..\Ejercicio2-DisenoDeCeldas\1CeldaSallenKey\images\Zin.png
+INPUT ..\Ejercicio2-DisenoDeCeldas\1CeldaSallenKey\images\SallenKeyGain.png
+INPUT ..\Ejercicio2-DisenoDeCeldas\1CeldaSallenKey\images\SallenKeyGain.png
+INPUT ..\Ejercicio2-DisenoDeCeldas\1CeldaSallenKey\images\SallenKeyGain.png
+INPUT ..\Ejercicio2-DisenoDeCeldas\1CeldaSallenKey\images\SallenKeyGain.png
+INPUT ..\Ejercicio2-DisenoDeCeldas\1CeldaSallenKey\images\SallenKeyGain.png
+INPUT ..\Ejercicio2-DisenoDeCeldas\2CELDARAUCH\Informe\circuito3.png
+INPUT ..\Ejercicio2-DisenoDeCeldas\2CELDARAUCH\Informe\circuito3.png
+INPUT ..\Ejercicio2-DisenoDeCeldas\2CELDARAUCH\Informe\circuito3.png
+INPUT ..\Ejercicio2-DisenoDeCeldas\2CELDARAUCH\Informe\circuito3.png
+INPUT ..\Ejercicio2-DisenoDeCeldas\2CELDARAUCH\Informe\circuito3.png
+INPUT ..\Ejercicio2-DisenoDeCeldas\2CELDARAUCH\Informe\circuito.png
+INPUT ..\Ejercicio2-DisenoDeCeldas\2CELDARAUCH\Informe\circuito.png
+INPUT ..\Ejercicio2-DisenoDeCeldas\2CELDARAUCH\Informe\circuito.png
+INPUT ..\Ejercicio2-DisenoDeCeldas\2CELDARAUCH\Informe\circuito.png
+INPUT ..\Ejercicio2-DisenoDeCeldas\2CELDARAUCH\Informe\circuito.png
+INPUT ..\Ejercicio2-DisenoDeCeldas\2CELDARAUCH\Informe\monte.PNG
+INPUT ..\Ejercicio2-DisenoDeCeldas\2CELDARAUCH\Informe\monte.PNG
+INPUT ..\Ejercicio2-DisenoDeCeldas\2CELDARAUCH\Informe\monte.PNG
+INPUT ..\Ejercicio2-DisenoDeCeldas\2CELDARAUCH\Informe\monte.PNG
+INPUT ..\Ejercicio2-DisenoDeCeldas\2CELDARAUCH\Informe\monte.PNG
+INPUT ..\Ejercicio2-DisenoDeCeldas\2CELDARAUCH\Informe\disp1.png
+INPUT ..\Ejercicio2-DisenoDeCeldas\2CELDARAUCH\Informe\disp1.png
+INPUT ..\Ejercicio2-DisenoDeCeldas\2CELDARAUCH\Informe\disp1.png
+INPUT ..\Ejercicio2-DisenoDeCeldas\2CELDARAUCH\Informe\disp1.png
+INPUT ..\Ejercicio2-DisenoDeCeldas\2CELDARAUCH\Informe\disp1.png
+INPUT ..\Ejercicio2-DisenoDeCeldas\2CELDARAUCH\Informe\disp2.png
+INPUT ..\Ejercicio2-DisenoDeCeldas\2CELDARAUCH\Informe\disp2.png
+INPUT ..\Ejercicio2-DisenoDeCeldas\2CELDARAUCH\Informe\disp2.png
+INPUT ..\Ejercicio2-DisenoDeCeldas\2CELDARAUCH\Informe\disp2.png
+INPUT ..\Ejercicio2-DisenoDeCeldas\2CELDARAUCH\Informe\disp2.png
+INPUT ..\Ejercicio2-DisenoDeCeldas\2CELDARAUCH\Informe\bodemag.png
+INPUT ..\Ejercicio2-DisenoDeCeldas\2CELDARAUCH\Informe\bodemag.png
+INPUT ..\Ejercicio2-DisenoDeCeldas\2CELDARAUCH\Informe\bodemag.png
+INPUT ..\Ejercicio2-DisenoDeCeldas\2CELDARAUCH\Informe\bodemag.png
+INPUT ..\Ejercicio2-DisenoDeCeldas\2CELDARAUCH\Informe\bodemag.png
+INPUT ..\Ejercicio2-DisenoDeCeldas\2CELDARAUCH\Informe\bodepha.png
+INPUT ..\Ejercicio2-DisenoDeCeldas\2CELDARAUCH\Informe\bodepha.png
+INPUT ..\Ejercicio2-DisenoDeCeldas\2CELDARAUCH\Informe\bodepha.png
+INPUT ..\Ejercicio2-DisenoDeCeldas\2CELDARAUCH\Informe\bodepha.png
+INPUT ..\Ejercicio2-DisenoDeCeldas\2CELDARAUCH\Informe\bodepha.png
+INPUT ..\Ejercicio2-DisenoDeCeldas\2CELDARAUCH\Informe\zin.png
+INPUT ..\Ejercicio2-DisenoDeCeldas\2CELDARAUCH\Informe\zin.png
+INPUT ..\Ejercicio2-DisenoDeCeldas\2CELDARAUCH\Informe\zin.png
+INPUT ..\Ejercicio2-DisenoDeCeldas\2CELDARAUCH\Informe\zin.png
+INPUT ..\Ejercicio2-DisenoDeCeldas\2CELDARAUCH\Informe\zin.png
+INPUT ..\Ejercicio2-DisenoDeCeldas\3CeldaSedra\Imagenes\Celda Deliyannis.png
+INPUT ..\Ejercicio2-DisenoDeCeldas\3CeldaSedra\Imagenes\Celda Deliyannis.png
+INPUT ..\Ejercicio2-DisenoDeCeldas\3CeldaSedra\Imagenes\Celda Deliyannis.png
+INPUT ..\Ejercicio2-DisenoDeCeldas\3CeldaSedra\Imagenes\Celda Deliyannis.png
+INPUT ..\Ejercicio2-DisenoDeCeldas\3CeldaSedra\Imagenes\Celda Deliyannis.png
+INPUT ..\Ejercicio2-DisenoDeCeldas\3CeldaSedra\Imagenes\Transformaciones SGB.png
+INPUT ..\Ejercicio2-DisenoDeCeldas\3CeldaSedra\Imagenes\Transformaciones SGB.png
+INPUT ..\Ejercicio2-DisenoDeCeldas\3CeldaSedra\Imagenes\Transformaciones SGB.png
+INPUT ..\Ejercicio2-DisenoDeCeldas\3CeldaSedra\Imagenes\Transformaciones SGB.png
+INPUT ..\Ejercicio2-DisenoDeCeldas\3CeldaSedra\Imagenes\Transformaciones SGB.png
+INPUT ..\Ejercicio2-DisenoDeCeldas\3CeldaSedra\Imagenes\HP biquad.png
+INPUT ..\Ejercicio2-DisenoDeCeldas\3CeldaSedra\Imagenes\HP biquad.png
+INPUT ..\Ejercicio2-DisenoDeCeldas\3CeldaSedra\Imagenes\HP biquad.png
+INPUT ..\Ejercicio2-DisenoDeCeldas\3CeldaSedra\Imagenes\HP biquad.png
+INPUT ..\Ejercicio2-DisenoDeCeldas\3CeldaSedra\Imagenes\HP biquad.png
+INPUT ..\Ejercicio2-DisenoDeCeldas\3CeldaSedra\Imagenes\LP biquad.png
+INPUT ..\Ejercicio2-DisenoDeCeldas\3CeldaSedra\Imagenes\LP biquad.png
+INPUT ..\Ejercicio2-DisenoDeCeldas\3CeldaSedra\Imagenes\LP biquad.png
+INPUT ..\Ejercicio2-DisenoDeCeldas\3CeldaSedra\Imagenes\LP biquad.png
+INPUT ..\Ejercicio2-DisenoDeCeldas\3CeldaSedra\Imagenes\LP biquad.png
+INPUT d:\Documents\GitHub\TC-Grupo6\TP4\Informe\build\main.aux
+INPUT d:\Documents\GitHub\TC-Grupo6\TP4\Informe\build\main.out
+INPUT d:\Documents\GitHub\TC-Grupo6\TP4\Informe\build\main.out
+INPUT C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\cm-super\cm-super-ts1.enc
 INPUT C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx10.pfb
 INPUT C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx10.pfb
 INPUT C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx12.pfb
@@ -702,16 +566,12 @@ INPUT C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsf
 INPUT C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmcsc10.pfb
 INPUT C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmex10.pfb
 INPUT C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmex10.pfb
-INPUT C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cmextra\cmex7.pfb
-INPUT C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cmextra\cmex7.pfb
 INPUT C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi10.pfb
 INPUT C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi10.pfb
 INPUT C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi12.pfb
 INPUT C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi12.pfb
 INPUT C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi5.pfb
 INPUT C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi5.pfb
-INPUT C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi6.pfb
-INPUT C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi6.pfb
 INPUT C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi7.pfb
 INPUT C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi7.pfb
 INPUT C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi8.pfb
@@ -722,23 +582,17 @@ INPUT C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsf
 INPUT C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr12.pfb
 INPUT C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr5.pfb
 INPUT C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr5.pfb
-INPUT C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr6.pfb
-INPUT C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr6.pfb
 INPUT C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr7.pfb
 INPUT C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr7.pfb
 INPUT C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr8.pfb
 INPUT C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr8.pfb
 INPUT C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy10.pfb
 INPUT C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy10.pfb
-INPUT C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy5.pfb
-INPUT C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy5.pfb
 INPUT C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy7.pfb
 INPUT C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy7.pfb
 INPUT C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmti10.pfb
 INPUT C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmti10.pfb
 INPUT C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmti12.pfb
 INPUT C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmti12.pfb
-INPUT C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmtt10.pfb
-INPUT C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmtt10.pfb
-INPUT C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\symbols\msam10.pfb
-INPUT C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\symbols\msam10.pfb
+INPUT C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\fonts\type1\public\cm-super\sfrm1000.pfb
+INPUT C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\fonts\type1\public\cm-super\sfrm1000.pfb

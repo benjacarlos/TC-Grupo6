@@ -1,3 +1,441 @@
+\section{Sallen-Key}
+
+Se iniciará el estudio y diseño de celdas con la implementación mediante una celda de tipo \emph{Sallen Key} de un filtro pasa-bajos aproximado con Butterworth. Se realizará un análisis teórico de la celda y sus características, el diseño de la misma para cumplir con los parámetros calculados previamente usando la aproximación, y simulaciones en LTSpice para observar el cumplimiento del filtro y el efecto de las variaciones de los componentes pasivos. 
+
+\subsection{Cálculo de función transferencia por aproximación de Butterworth}
+
+A partir de las características especificadas por la plantilla de la tabla \ref{table:Plantilla} y representadas en la figura \ref{fig:Plantilla}, se calculó la función transferencia mediante la aproximación de Butterworth. Observando las frecuencias límite para la banda de paso y la de atenuación, se denota que se trata de un filtro \emph{pasa-bajos}. La aproximación empleada resulta conveniente cuando se quiere asegurar la mayor planicie posible en la banda de paso y que la transferencia sea monótonamente decreciente. 
+
+% Please add the following required packages to your document preamble:
+% \usepackage[table,xcdraw]{xcolor}
+% If you use beamer only pass "xcolor=table" option, i.e. \documentclass[xcolor=table]{beamer}
+\begin{table}[H]
+\centering
+\begin{tabular}{|
+>{\columncolor[HTML]{C0C0C0}}c |c|}
+\hline
+$f_{p}$  & 3300Hz  \\ \hline
+$f_{a}$  & 15600Hz \\ \hline
+$A_{p}$  & 3dB      \\ \hline
+$A_{a}$  & 40dB     \\ \hline
+$\left | Z_{in}(f) \right |$ & $\geq 50k \Omega $      \\ \hline
+\end{tabular}
+    \label{table:Plantilla}
+\end{table}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width= 0.5\textwidth]{../Ejercicio2-DisenoDeCeldas/1CeldaSallenKey/images/plantilla.png}
+    \caption{Plantilla desnormalizada}
+    \label{fig:Plantilla}
+\end{figure}
+
+Partiendo de la expresión del cuadrado del módulo de la función transferencia \ref{eq:SK1}, se busca cumplir que las que las primeras $2n − 1$ derivadas del módulo de la transferencia se anulen en $w=0$. Para ello, se determinan los parámetros $\varepsilon$ y el orden del filtro. 
+
+\begin{equation}
+        \left | H(jw_{n}) \right |^{2} = \frac{1}{1+\varepsilon ^{2}w_{n}^{2}}
+    \label{eq:SK1}
+\end{equation}
+
+\begin{equation}
+        \varepsilon = \sqrt{10^{\frac{A_{p}(dB)}{10}}-1} \Rightarrow \varepsilon = 1
+    \label{eq:SK2}
+\end{equation}
+
+\begin{equation}
+        n = \left \lceil  \frac{\log \left ( \frac{10^{\frac{A_{a}(dB)}{10}}-1}{\varepsilon ^{2}} \right )}{2\cdot \log \left (\frac{w_{a}}{w_{p}} \right )} \right \rceil \Rightarrow n = \left \lceil  \frac{\log \left ( 10^{4}-1 \right )}{2\cdot \log \left (4,7272 \right )} \right \rceil = \left \lceil 2.964664 \right \rceil \Rightarrow n = 3 
+    \label{eq:SK3}
+\end{equation}
+
+
+A partir del orden del filtro, se obtiene el polinomio de Butterworth que fija la ubicación normalizada de los polos. Se obtiene así la función transferencia normalizada correspondiente a un filtro pasa-bajos a implementar luego con un filtro activo. 
+
+
+\begin{equation}
+        H_{N}(s) = \frac{1}{(s+1)(s^{2}+s+1)}
+    \label{eq:SK4}
+\end{equation}
+
+Donde la función transferencia desnormalizada se obtiene reemplazando $s\rightarrow \frac{s}{w_{p}}$. Se observa de \ref{eq:SK4} que el factor de calidad de la función de segundo orden es Q=1.
+
+$$w_{p} = 2 \pi 3300 Hz = 20734.5 \frac{rad}{s}$$
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width= 0.5\textwidth]{../Ejercicio2-DisenoDeCeldas/1CeldaSallenKey/images/AtenuacionButter.png}
+    \caption{Butterworth orden 3}
+    \label{fig:butter3}
+\end{figure}
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width= 0.5\textwidth]{../Ejercicio2-DisenoDeCeldas/1CeldaSallenKey/images/PolesButter.png}
+    \caption{Ubicación de polos polinomio de Butterworth}
+    \label{fig:Plantilla}
+\end{figure}
+
+\subsection{Circuito a implementar}
+
+Para la implementación de la función transferencia calculada, se segmentará el filtro en etapas que conectadas en cascada permitirán obtener el comportamiento deseado. Esto es posibilitado con la utilización de filtros activos, los cuales cuentan con una impedancia de salida muy baja que evita cargar la etapa siguiente, de modo que cada etapa puede considerarse prácticamente aislada de las demás, pudiendo calibrarse independientemente de ser necesario. Este enfoque de diseño proyecta un atractivo sobre las llamadas \textbf{celdas}, ya que proveen una forma casi estandarizada de implementar etapas de un filtro de segundo orden de determinadas características. 
+
+Al implementar un diseño en cascada es importante cuidar el orden de conexión de las celdas. Si bien matemáticamente el orden de implementación es irrelevante, la conexión de las celdas puede tener algunas limitaciones. Por un lado, para evitar pérdida en el rango dinámico del filtro y la posibilidad de saturación de la señal en las etapas con un Q mas alto (y por lo tanto posibilidad de amplificación), se recomienda conectar las etapas de menor a mayor Q. Sin embargo, si se desea proteger del ruido interno del filtro, el cual puede causar inconvenientes con las etapas de Q alto, es conveniente ubicar las etapas de mayor Q al principio de la conexión. Vale destacar que, sin embargo, no se espera ninguno de estos inconvenientes en la implementación del filtro calculado ya que se cuenta con una única instancia de segundo orden.
+
+Siguiendo el enfoque de diseño en cascada, se implementará el filtro pasa-bajos de tercer orden separándolo en dos etapas: la inicial de primer orden empleando un \textbf{circuito RC con buffer} a su salida y la segunda mediante una \textbf{celda Sallen-Key Low Pass}. Se realizará el análisis y diseño de cada instancia. 
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale = 0.4]{../Ejercicio2-DisenoDeCeldas/1CeldaSallenKey/images/Etapas.png}
+    \caption{Diagrama de etapas en cascada.}
+    \label{fig:etapas}
+\end{figure}
+
+
+\subsection{Celda de primer orden: Análisis}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width= 0.5\textwidth]{../Ejercicio2-DisenoDeCeldas/1CeldaSallenKey/images/LowPassRC.png}
+    \caption{Circuito Low Pass primer orden.}
+    \label{fig:1LPGain}
+\end{figure}
+
+Analizando el circuito de la figura \ref{fig:1LPGain} se plantea rápidamente el siguiente sistema. Se considera $A_{Vol}$ constante y $Z_{IN_{OpAmp}}\rightarrow \infty$, de modo que la corriente hacia el amplificador operacional resulta nula. Se obtiene su función transferencia e impedancia de entrada.
+
+\begin{equation}
+\left\{\begin{matrix}
+        I_{in} = \frac{V^{+}-0}{\frac{1}{sC}}
+        \\
+        I_{in} = \frac{V_{in} - V^{+} }{R}
+        \\
+        V_{o} = V^{-}
+        \\
+        V_{o}=A_{Vol} (V^{+} - V^{-})
+\end{matrix}\right.
+    \label{eq:SK5}
+\end{equation}
+
+
+\begin{equation}
+        H(s) = \frac{A_{Vol}}{(A_{Vol}+1)(sCR + 1)} \approx \frac{1}{sCR + 1}
+    \label{eq:SK6}
+\end{equation}
+
+\begin{equation}
+        Z_{in} = R + \frac{1}{sC} 
+    \label{eq:SK7}
+\end{equation}
+
+Donde si $s = j0 \Rightarrow Z_{in} \rightarrow  \infty$, la impedancia de entrada ideal de un amplificador operacional, y con $s = j0 \rightarrow \infty \Rightarrow Z_{in} = R$
+
+Otra opción para implementar esta etapa sería el \textbf{integrador inversor compensado}, el cual permite incrementar la atenuación en banda pasante del filtro. No obstante, a los fines de la transferencia solicitada, basta con utilizar el circuito descripto arriba, el cual a su vez no invierte la fase. 
+
+\subsection{Celda de segundo orden Sallen Key: Análisis}
+
+La figura \ref{fig:SK_H} muestra la configuración pasa-bajos de la celda Sallen Key. Para su análisis se consideró nuevamente $A_{Vol}$ constante y $Z_{IN_{OpAmp}}\rightarrow \infty$. A partir de la relación de corrientes en el nodo $V_{1}$ se obtiene la función transferencia y la impedancia de entrada.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width= 0.75\textwidth]{../Ejercicio2-DisenoDeCeldas/1CeldaSallenKey/images/SallenKeyH.png}
+    \caption{Análisis de Sallen Key Low Pass}
+    \label{fig:SK_H}
+\end{figure}
+
+\begin{equation}
+\left\{\begin{matrix}
+       V_{o} = A_{Vol} \cdot (V^{+}-V^{-})
+        \\
+        V^{-} = V_{o} \cdot \frac{R_{3}}{R_{3}+R_{4}} = V_{o} \cdot \frac{1}{K}
+        \\
+        V^{+} = V_{1} \cdot \frac{\frac{1}{sC_{2}}}{R_{2}+\frac{1}{sC_{2}}} = \frac{V_{1}}{sC_{2}R_{2} + 1}
+        \\
+        \frac{V_{i}-V_{1}}{R_{1}} - \frac{V_{1}-0}{R_{2}+\frac{1}{sC_{2}}} - \frac{V_{1}-V_{o}}{\frac{1}{sC_{1}}} = 0
+\end{matrix}\right.
+    \label{eq:SK8}
+\end{equation}
+
+\begin{equation}
+    H(s)=\frac{A_{Vol}\cdot K}{(A_{Vol}+K)\cdot(s^{2}\cdot R_{1}C_{1}R_{2}C_{2} + s\cdot \frac{A_{Vol}((R_{2}+R_{1})C_{2}+R_{1}C_{1}(1-K))+K(R_{1}C_{1}+(R_{2}+R_{1})C_{2})}{A_{Vol}+K} + 1)}
+    \label{eq:SK9}
+\end{equation}
+
+Para la cual:
+
+
+$$ w_{0} = \frac{1}{\sqrt{R_{1}C_{1}R_{2}C_{2}}} $$
+
+
+$$Q = \frac{(A_{Vol}+K)\sqrt{R_{1}C_{1}R_{2}C_{2}}}{A_{Vol}((R_{2}+R_{1})C_{2}+R_{1}C_{1}(1-K))+K(R_{1}C_{1}+(R_{2}+R_{1})C_{2})} $$
+
+$$G = \frac{A_{Vol}(R_{3} + R_{4})}{A_{Vol}R_{3} + R_{3} + R_{4}}$$
+
+$$K = \frac{R_{3}+R_{4}}{R_{3}}$$
+
+Empleando el caso mas ideal, para el que $A_{Vol} \rightarrow \infty$, se obtiene la siguiente función transferencia:
+
+\begin{equation}
+    H(s) = \frac{K}{\frac{s^{2}}{(\frac{1}{\sqrt{R_{1}C_{1}R_{2}C_{2}}})^{2}} + s\cdot [R_{1}C_{1}(1-K)+(R_{2}+R_{1})C_{2}] + 1} 
+    \label{eq:SK11}
+\end{equation}
+
+$$w_{0} = \frac{1}{\sqrt{R_{1}C_{1}R_{2}C_{2}}}$$
+
+$$Q = \frac{\sqrt{R_{1}C_{1}R_{2}C_{2}}}{R_{1}C_{1}(1-K)+(R_{2}+R_{1})C_{2}}$$
+
+Teniendo que la impedancia de entrada se define como $Z_{in} = \frac{V_{in}}{I_{1}}$, a partir del mismo sistema \ref{eq:SK8} resulta:
+
+
+\begin{equation}
+Z_{in} = \frac{C_{1}C_{2}R_{1}R_{2}(A_{Vol} + K)s^{2} + (A_{Vol}C_{1}R_{1}(1-K) + A_{Vol}C_{2}(R_{1} + R_{2}) + K(C_{1}R_{1} + C_{2}R_{1} + C_{2}R_{2}))s + A_{Vol} + K}{(C_{1}C_{2}R_{2}(A_{Vol} + K))s^{2} + s(A_{Vol}C_{1}(1-K) + K(C_{1} + C_{2}) + A_{Vol}C_{2})}
+    \label{eq:SK11}
+\end{equation}
+
+En el caso mas ideal con $A_{Vol} \rightarrow \infty$, la impedancia de entrada obtiene la siguiente expresión:
+
+\begin{equation}
+Z_{in}(s)=\frac{s^{2}\cdot C_{1}C_{2}R_{1}R_{2} + s \cdot (C_{2}R_{1} + C_{2}R_{2} + C_{1}R_{1} (1-K)) + 1}{s^{2}\cdot C_{1}C_{2}R_{2} + s\cdot (C_{2} + C_{1}(1-K))}
+    \label{eq:SK12}
+\end{equation}
+
+\subsection{Sensibilidades}
+
+La sensibilidad relativa de una función y respecto a una variable x está dada por $S^{y}_{x} = \frac{x}{y}\frac{\partial y}{\partial x}$. Se analizan las sensibilidades para el factor de calidad Q, la frecuencia de corte $w_{0}$ y la ganancia G considerando $A_{Vol}$ constante. Recordando que $K = \frac{R_{3}+R_{4}}{R_{3}}$ es la ganancia ideal de la celda, se calculan las sensibilidades respecto a las variables involucradas en cada uno. 
+
+$$Q = \frac{(A_{Vol}+K)\sqrt{R_{1}C_{1}R_{2}C_{2}}}{A_{Vol}((R_{2}+R_{1})C_{2}+R_{1}C_{1}(1-K))+K(R_{1}C_{1}+(R_{2}+R_{1})C_{2})} $$
+
+\begin{table}[H]
+\centering
+\begin{tabular}{c|c}
+x         & $S^{Q}_{x}$                                                                                                                                             \\ \hline
+\\
+$R_{1}$   & $\frac{1}{2} - \frac{QR_{1}((R_{2}+R_{1})C_{2}+R_{1}C_{1}(1-K))}{(A_{Vol}+K)\sqrt{R_{1}C_{1}R_{2}C_{2}}}$           
+\\
+\\
+$R_{2}$   & $\frac{1}{2} - \frac{QR_{2}(A_{Vol}C_{2}+KC_{2}))}{(A_{Vol}+K)\sqrt{R_{1}C_{1}R_{2}C_{2}}}$                                                  
+\\
+\\
+$R_{3}$   & $\frac{A_{Vol}+1}{A_{Vol}+K} - \frac{Q(A_{Vol}(R_{2}+R_{1})C_{2}+R_{1}C_{1}+(R_{2}+R_{1})C_{2})}{(A_{Vol}+K)\sqrt{R_{1}C_{1}R_{2}C_{2}}}$
+\\
+\\
+$R_{4}$   & $\frac{R_{4}}{A_{Vol}R_{3}+R_{3}+R_{4}} - \frac{QR_{4}((R_{2}+R_{1})C_{2}+R_{1}C_{1}-A_{Vol}R_{1}C_{1})}{(A_{Vol}R_{3}+R_{3}+R_{4})\sqrt{R_{1}C_{1}R_{2}C_{2}}}$
+\\
+\\
+$C_{1}$   & $\frac{1}{2} - \frac{QC_{1}((KR_{1})+A_{Vol}R_{1}(1-K))}{(A_{Vol}+K)\sqrt{R_{1}C_{1}R_{2}C_{2}}}$
+\\
+\\
+$C_{2}$   & $\frac{1}{2} - \frac{QC_{2}(A_{Vol}(R_{2}+R_{1})+K(R_{2}+R_{1})))}{(A_{Vol}+K)\sqrt{R_{1}C_{1}R_{2}C_{2}}}$
+\\
+\\
+$A_{Vol}$ & $\frac{A_{Vol}}{A_{Vol}+K}\left [ 1 - \frac{Q((R_{2}+R_{1})C_{2}+R_{1}C_{1}(1-K))}{(A_{Vol}+K)\sqrt{R_{1}C_{1}R_{2}C_{2}}} \right ]$
+\\
+\\
+K         & $\frac{K}{A_{Vol}+K} - \frac{QK((R_{2}+R_{1})C_{2}+R_{1}C_{1}-A_{Vol}R_{1}C_{1})}{(A_{Vol}+K)\sqrt{R_{1}C_{1}R_{2}C_{2}}}$  
+\\
+\end{tabular}
+    \label{table:SQ}
+\end{table}
+
+$$ w_{0} = \frac{1}{\sqrt{R_{1}C_{1}R_{2}C_{2}}} $$
+
+\begin{table}[H]
+\centering
+\begin{tabular}{c|c}
+x       & $S^{w_{0}}_{x}$ \\ \hline
+\\
+$R_{1}$ & $-\frac{1}{2}$
+\\
+\\
+$R_{2}$ & $-\frac{1}{2}$
+\\
+\\
+$C_{1}$ & $-\frac{1}{2}$
+\\
+\\
+$C_{2}$ & $-\frac{1}{2}$
+\\
+\end{tabular}
+\label{table:SW}
+\end{table}
+
+$$G = \frac{A_{Vol}(R_{3} + R_{4})}{A_{Vol}R_{3} + R_{3} + R_{4}}$$
+
+\begin{table}[H]
+\centering
+\begin{tabular}{c|c}
+x         & $S^{G}_{x}$                                                                 \\ \hline
+\\
+$A_{Vol}$ & $1 - \frac{1}{K}$                                                           \\
+\\
+$R_{3}$   & $\frac{R_{3}}{R_{3}+R_{4}} - \frac{R_{3}(A_{Vol}+1)}{A_{Vol}(R_{3}+R_{4})}$ \\
+\\
+$R_{4}$   & $\frac{R_{4}}{R_{3}+R_{4}} - \frac{R_{4}(A_{Vol}+1)}{A_{Vol}(R_{3}+R_{4})}$
+\\
+\end{tabular}
+\label{table:SG}
+\end{table}
+
+Resulta de interés recalcar que a medida que $A_{Vol} \rightarrow \infty$, la sensibilidad de Q respecto a $A_{Vol}$ tiende a cero, lo esperado en el caso mas ideal. 
+
+\subsection{Diseño de filtro}
+
+
+Se procederá a diseñar las etapas del filtro pasa-bajos solicitado mediante las celdas analizadas. Para facilidad del diseño, se aproximará $A_{Vol}$ A infinito a modo de emplear las ecuaciones transferencias mas ideales. Ambas etapas cuentan con $w_{0} = w_{p} = 20 \pi 3300 Hz = 20734.5 \frac{rad}{s}$. 
+
+Para la implementación de la celda se decidió emplear los amplificadores operacionales del integrado TL084, el cual presenta buenos parámetros de ganancia, GBP y alto slew rate. Para los resistores, se considerarán los valores de las series E24 y E96 de 1\% de tolerancia. Se emplearán capacitores cerámicos multicapa de 10 \% tolerancia. 
+
+
+\textbf{Primera etapa: filtro pasa-bajos orden uno con seguidor de tensión.} Planteando la expresión de la frecuencia de corte, se puede obtener la relación entre R y C. En esta etapa, se busca cumplir con la condición de impedancia de entrada del filtro $Z_{in}$ mayor igual que $50k \Omega$; se verá luego que la impedancia de entrada del filtro se mantiene por encima de ese valor para todo el rango de frecuencias analizada. Debido que los valores de capacitores son menos abundantes, se plantea un capacitor de $470 pF$. Con esto, se calcula la resistencia de la primera etapa:
+
+$$w_{0} = \frac{1}{RC}$$
+
+Proponiendo $C = 470pF \Rightarrow R = 102616,9 \Omega \approx 102k \Omega + 1k \Omega$ Preset.
+
+Por lo tanto, se plantea implementar la primera etapa con un capacitor $C = 470 pf$ y $R = 102000 \Omega$ + Preset $1k\Omega$ para ajuste fino. 
+
+
+\textbf{Segunda etapa: celda Sallen Key pasa-bajos.} Para implementar la celda Sallen Key estudiada es conveniente adoptar un criterio de diseño, tanto para facilitar el calculo de los componentes como para imponer condiciones. Se busca asegurar el cumplimiento de Q = 1 y K = 1. Una forma óptima de encarar el diseño es plantear el diseño con ganancia unitaria y componentes proporcionales. De este modo, se tiene que:
+
+\begin{equation}
+\begin{matrix}
+R_{1} = mR_{2} = mR & ; & C_{2} = nC_{2} = nC
+\end{matrix}
+    \label{eq:SK13}
+\end{equation}
+
+\begin{equation}
+\begin{matrix}
+w_{0} = \frac{1}{\sqrt{mn}RC} & ; & Q = \frac{\sqrt{mn}}{1+m} \Rightarrow  1 + 2m + m^{2} = \frac{mn}{Q^{2}}
+\end{matrix}
+    \label{eq:SK14}
+\end{equation}
+
+Imponiendo la condición que $m > 0$:
+
+\begin{equation}
+\begin{matrix}
+m = \frac{n}{Q^{2}} - 1 + \sqrt{(\frac{n}{Q^{2}} - 1)^{2} - 1} & ; & m > 4Q^{2}
+\end{matrix}
+    \label{eq:SK14}
+\end{equation}
+
+Intentando asegurar esta ultima condición entre m y Q y asegurando Q = 1, se plantearon distintos valores de C a modo de cumplir la relación para luego calcular los valores de n, R2 y R1. Se iteró este procedimiento hasta obtener valores convenientes y cercanos a los normalizados de las series E24 o E96. Finalmente, se impuso que $C_{2} = C = 4.7nF$ y $C_{1} = 22nF$.se tiene que $n = 4.681$ y $m = 2.232$. De este modo, se obtienen $R_{2} = 3175 \Omega$ y $R_{1} = 7086 \Omega$. Normalizando a valores de la serie E96:
+
+$$R_{2} = 3160 \Omega$$
+$$R_{1} = 6980 \Omega + Preset 500 \Omega$$
+
+Para lograr K = 1, se conecta directamente la entrada inversora del OpAmp con su salida. Lo cual otorga una frecuencia de corte idealmente de w0 = tanto y Q = 1.0019. 
+
+
+
+\subsection{Respuesta en frecuencia y análisis Monte Carlo}
+
+Con los valores de los componentes fijados, se realizaron simulaciones en LTspice para observar el comportamiento en frecuencia del filtro y comparar la respuesta obtenida con respecto a la función transferencia teórica con los componentes normalizados y a la aproximación calculada por Butterworth. Se decidió realizar la simulación considerando las resistencias implementadas con presets con los valores resultantes de los calculos y no directamente los normalizados. 
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width= 0.7\textwidth]{../Ejercicio2-DisenoDeCeldas/1CeldaSallenKey/images/circLTspiceSK.png}
+    \caption{Circuito simulado en LTspice.}
+    \label{fig:simuSK}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width= 0.7\textwidth]{../Ejercicio2-DisenoDeCeldas/1CeldaSallenKey/images/SKGain.png}
+    \caption{Respuesta en frecuencia de filtro implementado con resistores serie E96 sin ajuste de preset: Ganancia}
+    \label{fig:SKGain}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width= 0.7\textwidth]{../Ejercicio2-DisenoDeCeldas/1CeldaSallenKey/images/SKphase.png}
+    \caption{Respuesta en frecuencia de filtro implementado con resistores serie E96 sin ajuste de preset: diferencia de fase}
+    \label{fig:SKphase}
+\end{figure}
+
+Se observa en la figura \ref{fig:SKGain} que las ganancias de las transferencias obtenidas por la aproximación de Butterworth, la implementada en el diseño del filtro y la simulación coinciden en gran medida para el rango de frecuencia de transición de banda de paso a banda atenuada. Por lo tanto, el filtro implementado cumple la plantilla. El salto en la fase en la simulación frente a los teóricos se puede deber a que la función implementada en el $Plot Tool$ toma la fase en otro intervalo respecto a la simulada. Desde la simulación, como se verá seguidamente, se observa que desde el panel de simulación la fase continúa descendiendo mas allá de los -180\circ.
+
+Para estudiar el impacto de la tolerancia de los componentes en la respuesta en frecuencia, se realizó un análisis Monte Carlo. Como se mencionó anteriormente, se emplearon resistores con tolerancia de 1\% y capacitores con tolerancia del 10\%. Para el análisis se fijaron los componentes a los valores comerciales. Primeramente se observó el impacto de las variaciones de los componentes en el comportamiento del filtro en su totalidad y luego se vio el caso individual de cada celda. 
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width= 0.7\textwidth]{../Ejercicio2-DisenoDeCeldas/1CeldaSallenKey/images/simuMagNormalizados.png}
+    \caption{Simulación respuesta en frecuencia con tolerancias: Ganancia.}
+    \label{fig:simugain}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width= 0.7\textwidth]{../Ejercicio2-DisenoDeCeldas/1CeldaSallenKey/images/simuFaseNormalizados.png}
+    \caption{Simulación respuesta en frecuencia con tolerancias: Ganancia.}
+    \label{fig:simuphase}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width= 0.7\textwidth]{../Ejercicio2-DisenoDeCeldas/1CeldaSallenKey/images/MCSinPreset.png}
+    \caption{Histograma análisis Monte Carlo con resistores serie E96.}
+    \label{fig:MCE96}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width= 0.7\textwidth]{../Ejercicio2-DisenoDeCeldas/1CeldaSallenKey/images/MAG1stOrder.png}
+    \caption{Celda primer orden. Simulación de respuesta en frecuencia con tolerancias: Ganancia.}
+    \label{fig:1LPsimugain}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+        \includegraphics[width= 0.7\textwidth]{../Ejercicio2-DisenoDeCeldas/1CeldaSallenKey/images/SKsimu.png}
+    \caption{Celda Sallen Key. Simulación de respuesta en frecuencia con tolerancias: Ganancia.}
+    \label{fig:SKsimugain}
+\end{figure}
+
+Con el histograma del filtro \ref{fig:MCE96} se puede observar que la mayoría de las curvas pasan a $-3dB$ alrededor de la frecuencia de corte planteada de 3.3KHz. Sin embargo, un aspecto importante de la plantilla solicitada es que a esa frecuencia se buscaba una atenuación como máximo de $-3dB$. Para cumplir con esa condición, es deseable que la mayoría de las curvas sufran esa atenuación para una frecuencia igual o mayor que la $f_{p} = 3300Hz$. Por ello, se analizó la opción de implementar el filtro con valores de resistencias menores y correspondientes a la serie E24, ya que son valores normalizados mas comunes para construir luego el filtro. Con esto en mente, se plantea implementar $R=100k\Omega$ + preset $25k\Omega$, $R_{2}3k\Omega$ y $R_{1}=6,8kOmega$ + preset $500\Omega$. Simulando con estos valores, se observó el corrimiento de las curvas a frecuencias un poco mayores. Asimismo, se obtendría una $Q = 0.9970$ para la celda Sallen Key, por lo que no se afectaría el comportamiento buscado. Por otro lado, puede ser conveniente ser mas conservadores en cuanto a plantear primeramente una frecuencia de corte mayor, ya que con los presets en serie a R y a $R_{1}$ se puede "correr" la frecuencia de corte a valores menores. 
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width= 0.7\textwidth]{../Ejercicio2-DisenoDeCeldas/1CeldaSallenKey/images/MCE24.png}
+    \caption{Histograma análisis Monte Carlo con resistores serie E24.}
+    \label{fig:MCE96}
+\end{figure}
+
+Asimismo, se simuló la magnitud de la impedancia de entrada. Se observa que esta se mantiene siempre por encima de los $50k\Omega$. 
+
+\begin{figure}[H]
+    \centering
+        \includegraphics[width= 0.7\textwidth]{../Ejercicio2-DisenoDeCeldas/1CeldaSallenKey/images/Zin.png}
+    \caption{Respuesta en frecuencia de magnitud de impedancia de entrada.}
+    \label{fig:Zin}
+\end{figure}
+
+
+
+En cualquier caso, será necesario calibrar el filtro para cumplir con la plantilla. Emplea los resistores propuestos por último mueven en mayor medida la frecuencia a valores mayores al deseado, pero mediante los presets implementados en cada etapa puede regularse. Para esto, se propone verificar si la frecuencia a la que se da una atenuación de $-3dB$ supera los $3300Hz$; siendo ese el caso, se debe pasar a ajustar el valor de la resistencia $R$ en el filtro pasa bajos de primer orden. Para un ajuste fino de la $f_{p}$ y la Q, se puede regular el preset asociado a la $R_{1}$.
+
+
+
+\subsection{Restricciones por ganancia y factor de calidad}
+
+Si bien la celda Sallen Key resulta versátil para implementar un filtro de segundo orden, presenta restricciones en cuanto a factor de calidad Q y ganancia K. En el circuito implementado en esta sección del informe, tanto la K como la Q de la Sallen Key fueron unitarias, por lo que no se visualizaron las restricciones. Sin embargo, a partir del análisis de sensibilidades se observa que la Q está relacionada con todas las variables del circuito, por lo que se puede ver muy afectado por sus variaciones. En particular, las restricciones se acentúan al momento del diseño. En el caso de imponer condición de componentes iguales, es decir $C_{2} = C_{1} = C$ y $R_{2} = R_{1} = R$, se tiene que la Q queda directamente relacionada con la ganancia con $Q = \frac{1}{3-K}$. Por lo tanto, se pierde independencia del diseño. Por las sensibilidades, este circuito no es recomendable para implementar filtros con $Q<5$. 
+
+En cuanto a la ganancia, es posible agregar una derivación a la entrada con la cual se obtiene una transferencia con ganancia multiplicada por un factor "a".
+
+\begin{figure}[H]
+    \centering
+        \includegraphics[width= 0.7\textwidth]{../Ejercicio2-DisenoDeCeldas/1CeldaSallenKey/images/SallenKeyGain.png}
+    \caption{Celda Sallen Key con derivación de ganancia.}
+    \label{fig:SKGain}
+\end{figure}
+
+
+\subsection{Conclusiones}
+
+Se pudo observar que los resultados simulados se corroboraron de forma excelente respecto a las transferencias calculadas. En pocas palabras, la celda Sallen Key resultó óptima para implementar el filtro solicitado y cumplir con las características de la aproximación de Butterworth; se logra un comportamiento con máxima planicie en banda pasante y una caída monótona en banda atenuada. 
+
+Por otro lado, la celda Sallen Key resulta de sencilla implementación ya que pueden adoptarse distintos criterios de diseño para calcular sus componentes. La adoptada en este informe se debió a las restricciones en ganancia y factor de calidad. Es importante recalcar que además las características solicitadas en la plantilla fueron ideales para emplear una celda Sallen Key ya que otorgaban valores bajos de Q y K. De haber sido mucho mayores alguno de ellos, no se hubiera podido conseguir el comportamiento deseado facilmente con este tipo de celda, siendo esa la principal desventaja que presenta. 
+
+
 \section{Celda Rauch (Deliyannis-Friend modificada)}
 
 \subsection{Introducción}
