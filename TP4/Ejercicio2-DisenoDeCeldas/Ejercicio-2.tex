@@ -1095,7 +1095,7 @@ A la hora de combinar las etapas es importante colocar primero la etapa que teng
 
 La impedancia de entrada depende fuertemente de la resistencia $G_{42}$ de la etapa I, y como se muestra en la siguiente simulación no supera la impedancia pedida por la cátedra, una forma de solucionar esto es colocando un buffer en la entrada elevando la impedancia al ordenes mucho mayores.
 
-\begin{figure}[h]
+\begin{figure}[h!]
 	\includegraphics[width=0.5\textwidth]{../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/MagImpedancia.png}
 	\centering
 	\caption{Impedancia de entrada del circuito}
@@ -1104,7 +1104,7 @@ La impedancia de entrada depende fuertemente de la resistencia $G_{42}$ de la et
 
 Simulando las etapas por separado se puede notar que la etapa I se adapta muy bien a lo esperado mientras que en la etapa II no se ajusta, esto debió pasar por mala elección de componentes ya que se espero tener una tolerancia de 10% en capacitores y resistores.
 
-\begin{figure}[h]
+\begin{figure}[h!]
  \centering
   \subfloat[MagnitudEtapaI]{
    \label{f:etapaImag}
@@ -1116,7 +1116,7 @@ Simulando las etapas por separado se puede notar que la etapa I se adapta muy bi
  \label{f:etapaIbode}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[h!]
  \centering
   \subfloat[MagnitudEtapaII]{
    \label{f:etapaIImag}
@@ -1130,7 +1130,7 @@ Simulando las etapas por separado se puede notar que la etapa I se adapta muy bi
 
 Viendo el comportamiento del circuito entero se puede ver cuanto afectó el mal diseño de la etapa 2 en todo el circuito.
 
-\begin{figure}[h]
+\begin{figure}[h!]
  \centering
   \subfloat[MagnitudEtapaII]{
    \label{f:magSedra}
