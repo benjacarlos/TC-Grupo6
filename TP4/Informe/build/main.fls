@@ -89,8 +89,6 @@ INPUT C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex\latex\wrapfig\wrapf
 INPUT C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex\latex\wrapfig\wrapfig.sty
 INPUT C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex\latex\subfig\subfig.sty
 INPUT C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex\latex\subfig\subfig.sty
-INPUT C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex\latex\caption\subcaption.sty
-INPUT C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex\latex\caption\subcaption.sty
 INPUT C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex\latex\tools\multicol.sty
 INPUT C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex\latex\tools\multicol.sty
 INPUT C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex\latex\multirow\multirow.sty
@@ -292,13 +290,13 @@ INPUT C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex\latex\refcount\refc
 INPUT C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex\latex\refcount\refcount.sty
 INPUT C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex\generic\gettitlestring\gettitlestring.sty
 INPUT C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\tex\generic\gettitlestring\gettitlestring.sty
-INPUT main.out
-INPUT main.out
-INPUT main.out
-INPUT main.out
+INPUT d:\Documents\GitHub\TC-Grupo6\TP4\Informe\build\main.out
+INPUT d:\Documents\GitHub\TC-Grupo6\TP4\Informe\build\main.out
+INPUT d:\Documents\GitHub\TC-Grupo6\TP4\Informe\build\main.out
+INPUT d:\Documents\GitHub\TC-Grupo6\TP4\Informe\build\main.out
 OUTPUT d:\Documents\GitHub\TC-Grupo6\TP4\Informe\build\main.pdf
-INPUT .\main.out
-INPUT .\main.out
+INPUT d:\Documents\GitHub\TC-Grupo6\TP4\Informe\build\main.out
+INPUT d:\Documents\GitHub\TC-Grupo6\TP4\Informe\build\main.out
 OUTPUT d:\Documents\GitHub\TC-Grupo6\TP4\Informe\build\main.out
 INPUT C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
 INPUT C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
@@ -354,7 +352,9 @@ INPUT C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmt
 INPUT C:\Users\Facu Molina\AppData\Local\MiKTeX\pdftex\config\pdftex.map
 INPUT C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr12.tfm
 INPUT C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx12.tfm
-INPUT main.toc
+INPUT d:\Documents\GitHub\TC-Grupo6\TP4\Informe\build\main.toc
+INPUT d:\Documents\GitHub\TC-Grupo6\TP4\Informe\build\main.toc
+INPUT C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx10.tfm
 OUTPUT d:\Documents\GitHub\TC-Grupo6\TP4\Informe\build\main.toc
 INPUT ..\Ejercicio1-FilterTool\Ejercicio-1.tex
 INPUT ..\Ejercicio1-FilterTool\Ejercicio-1.tex
@@ -364,10 +364,7 @@ INPUT ..\Ejercicio1-FilterTool\Imagenes\imagen-general-1.png
 INPUT ..\Ejercicio1-FilterTool\Imagenes\imagen-general-1.png
 INPUT ..\Ejercicio1-FilterTool\Imagenes\imagen-general-1.png
 INPUT ..\Ejercicio1-FilterTool\Imagenes\imagen-general-1.png
-INPUT C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx10.tfm
 INPUT C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\tcrm1000.tfm
-INPUT C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx7.tfm
-INPUT C:\Users\Facu Molina\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx5.tfm
 INPUT ..\Ejercicio1-FilterTool\Imagenes\opciones.png
 INPUT ..\Ejercicio1-FilterTool\Imagenes\opciones.png
 INPUT ..\Ejercicio1-FilterTool\Imagenes\opciones.png
