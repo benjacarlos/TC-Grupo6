@@ -91,7 +91,7 @@ Siguiendo el enfoque de diseño en cascada, se implementará el filtro pasa-bajo
 \end{figure}
 
 
-\subsection{Celda de primer orden: Análisis}
+\subsubsection{Celda de primer orden: Análisis}
 
 \begin{figure}[H]
     \centering
@@ -130,7 +130,7 @@ Donde si $s = j0 \Rightarrow Z_{in} \rightarrow  \infty$, la impedancia de entra
 
 Otra opción para implementar esta etapa sería el \textbf{integrador inversor compensado}, el cual permite incrementar la atenuación en banda pasante del filtro. No obstante, a los fines de la transferencia solicitada, basta con utilizar el circuito descripto arriba, el cual a su vez no invierte la fase. 
 
-\subsection{Celda de segundo orden Sallen Key: Análisis}
+\subsubsection{Celda de segundo orden Sallen Key: Análisis}
 
 La figura \ref{fig:SK_H} muestra la configuración pasa-bajos de la celda Sallen Key. Para su análisis se consideró nuevamente $A_{Vol}$ constante y $Z_{IN_{OpAmp}}\rightarrow \infty$. A partir de la relación de corrientes en el nodo $V_{1}$ se obtiene la función transferencia y la impedancia de entrada.
 
@@ -197,7 +197,7 @@ Z_{in}(s)=\frac{s^{2}\cdot C_{1}C_{2}R_{1}R_{2} + s \cdot (C_{2}R_{1} + C_{2}R_{
     \label{eq:SK12}
 \end{equation}
 
-\subsection{Sensibilidades}
+\subsubsection{Sensibilidades}
 
 La sensibilidad relativa de una función y respecto a una variable x está dada por $S^{y}_{x} = \frac{x}{y}\frac{\partial y}{\partial x}$. Se analizan las sensibilidades para el factor de calidad Q, la frecuencia de corte $w_{0}$ y la ganancia G considerando $A_{Vol}$ constante. Recordando que $K = \frac{R_{3}+R_{4}}{R_{3}}$ es la ganancia ideal de la celda, se calculan las sensibilidades respecto a las variables involucradas en cada uno. 
 
@@ -1150,4 +1150,466 @@ Viendo el comportamiento del circuito entero se puede ver cuanto afectó el mal 
 \subsection{Conclusión}
 
 Aunque las simulaciones no fueron optimas se pudo ver el funcionamiento de las celdas SGM. Se pudo notar la importancia de la elección de los componentes en algunos casos.
+
+
+\section{Celda universal}
+
+En esta sección se analizarán distintas configuraciones de celdas universales a modo de implementar un filtro que cumpla con las características solicitadas por la cátedra, realizando la implementación del mismo y un posterior análisis de su comportamiento. Se iniciará estudiando las características de algunas celdas universales; esto es, que permiten obtener mas de una respuesta en frecuencia característica distinta simultáneamente. Seguidamente se implementará la plantilla dada seleccionando la celda mas conveniente a partir del análisis previo. Se estudiará su respuesta en frecuencia teórica y mediante simulación, deteniéndose en observar los efectos de las tolerancias de los componentes en el comportamiento del filtro. 
+
+\subsection{Análisis de celdas: función transferencia y características}
+
+Se estudiarán las configuraciones \emph{Kerwin-Huelsman-Newcomb}, \emph{Tow-Thomas}, \emph{Ackerberg-Mossberg} y \emph{Fleischer-Tow}, todas celdas \emph{biquad} compuestas por dos integradores y un bloque sumador. Para su realización, típicamente aprovecha la teoría de variables de estado, con la cual se logran bloques de un solo polo conectados en cascada de cuyas salidas se pueden obtener distintos comportamientos. Las salidas de sus etapas son retroalimentadas a la entrada de la celda. 
+Estas celdas permiten implementar etapas con factores de calidad altos y generalmente exhiben una baja sensibilidad a la variación de los componentes pasivos. 
+
+
+
+
+\subsubsection{Celda Kerwin-Huelsman-Newcomb}
+
+La celda KHN fue una de las primeras en identificar la aplicación del método de variables de estado para la obtención de la función transferencia con filtros activos. Como se observa en la figura \ref{fig:KHN}, implementa un amplificador como sumador diferencial y los otros dos como integradores. Provee respuestas de segundo orden pasa bajos (LP), pasa altos (HP) y pasa banda (BP). La figura \ref{fig:KHNblocks} muestra el diagrama en bloques del circuito.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width= 0.7\textwidth]{KHN.png}
+    \caption{Celda Kerwin-Huelsman-Newcomb}
+    \label{fig:KHN}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width= 0.7\textwidth]{KHNblocks.png}
+    \caption{Diagrama en bloques Kerwin-Huelsman-Newcomb}
+    \label{fig:KHNblocks}
+\end{figure}
+
+A partir del diagrama de bloques, y considerando condiciones ideales como $A_{Vol} \rightarrow \infty$ y $Z_{IN_{OpAmp}} \rightarrow \infty$,  se observa que la tensión de salida del sumador resulta:
+
+\begin{equation}
+    \begin{split}
+        V_{1} = -K_{1}V_{3}+K_{2}V_{i}+K_{3}V_{2}
+    \end{split}
+    \label{eq:KHN1}
+\end{equation}
+
+Donde las $K_{i}$ y $\tau _{i}$ son los factores de ganancia y constantes de tiempo de cada bloque, respectivamente.
+
+
+\begin{equation}
+\centering
+\begin{matrix}
+        K_{1} = \frac{R_{6}}{R_{5}} 
+\\ 
+        K_{2} = \frac{R_{4}}{R_{3} + R_{5}}\frac{R_{5}+R_{6}}{R_{5}} 
+\\ 
+        K_{3} = \frac{R_{3}}{R_{3} + R_{4}}\frac{R_{5}+R_{6}}{R_{5}} 
+\\ 
+        \tau _{1} = C_{1}R_{1} 
+\\ 
+        \tau _{2} = C_{2}R_{2} 
+
+\end{matrix}
+\label{eq:KHN2}
+\end{equation}
+
+Considerando las relaciones de salida de los bloques integradores y reemplazando en la ecuación \ref{eq:KHN1}, se obtienen las funciones transferencia para cada salida.
+
+\begin{equation}
+\begin{matrix}
+        V_{2} = -\frac{1}{s\tau_{1}}V_{1}\\
+        V_{3} = -\frac{1}{s\tau_{2}}V_{2} = \frac{1}{s^{2}\tau_{1}\tau_{2}}V_{1}
+\end{matrix}
+    \label{eq:KHN3}
+\end{equation}
+
+\begin{equation}
+    \begin{split}
+        H(s)_{HP} = \frac{V_{1}}{V_{i}} = \frac{s^{2} \tau_{1}\tau_{2} \frac{K_{2}}{K_{1}}}{\frac{s^{2}}{w_{0}^{2}} + \frac{1}{Q} \frac{s}{w_{0}} + 1}
+    \end{split}
+    \label{eq:KHN4}
+\end{equation}
+
+\begin{equation}
+    \begin{split}
+        H(s)_{BP} = \frac{V_{2}}{V_{i}} = \frac{-s \tau_{2} \frac{K_{2}}{K_{1}}}{\frac{s^{2}}{w_{0}^{2}} + \frac{1}{Q} \frac{s}{w_{0}} + 1}
+    \end{split}
+    \label{eq:KHN5}
+\end{equation}
+
+\begin{equation}
+        H(s)_{LP} = \frac{V_{3}}{V_{i}} = \frac{\frac{K_{2}}{K_{1}}}{\frac{s^{2}}{w_{0}^{2}} + \frac{1}{Q} \frac{s}{w_{0}} + 1}
+    \label{eq:KHN6}
+\end{equation}
+
+
+\begin{equation}
+    \begin{matrix}
+            
+        w_{0} = \sqrt{\frac{R_{6}}{R_{5}} \frac{1}{C_{1}R_{1}C_{2}R_{2}}}\\
+
+        Q = \frac{R_{5}}{R_{3}}\frac{R_{3} + R_{4}}{R_{5}+R_{6}}\sqrt{\frac{R_{6}}{R_{5}} \frac{C_{1}R_{1}}{C_{2}R_{2}}}
+    \end{matrix}
+    \label{eq:KHN7}
+\end{equation}
+
+
+Dada la relación entre la respuesta en frecuencia de un rechaza banda (BR) con un pasa bajos y pasa altos, se considera la posibilidad de incorporar un bloque sumador a la salida de estas dos últimas como lo indica la figura \ref{fig:KHN_BR}. Con esto, se obtiene la función transferencia para un filtro rechaza banda. 
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width= 0.8\textwidth]{KHN_BR.png}
+    \caption{Celda Kerwin-Huelsman-Newcomb con sumador.}
+    \label{fig:KHN_BR}
+\end{figure}
+
+\begin{equation}
+        H(s)_{BR} = H(s)_{LP}+H(s)_{HP} = -\frac{R_{f}}{R_{A}}V_{3} - \frac{R_{f}}{R_{B}}V_{2}
+        \Rightarrow 
+        H(s)_{BR} = \frac{\frac{- K_{2}R_{f}}{K_{1}R_{A}}\cdot (1+\frac{R_{A}}{R_{B}}(s^{2}\tau_{1}\tau_{2}))}{\frac{s^{2}}{w_{0}^{2}} + \frac{1}{Q} \frac{s}{w_{0}} + 1} 
+    \label{eq:KHN8}
+\end{equation}
+
+
+Donde $w_{0}$ y $Q$ son las indicadas anteriormente. 
+
+\subsubsection{Celda Tow-Thomas}
+
+La celda Tow-Thomas modifica la KHN al combinar el segundo integrador con el sumador e incluir un inversor a la  salida,  que vuelve a invertir la salida del integrador inversor que queda entre medio. Se describe el circuito en la figura \ref{fig:TowThomas} Con estas modificaciones, se pierde la salida pasa altos, pero cuenta con el beneficio de ser un circuito inmune a limitaciones del modo común dado que todos los amplificadores son inversores. 
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width= 0.8\textwidth]{TowThomas.png}
+    \caption{Celda Tow-Thomas}
+    \label{fig:TowThomas}
+\end{figure}
+
+Procediendo de forma análoga a la celda anterior, se obtienen las siguientes funciones transferencias:
+
+\begin{equation}
+        H(s)_{BP} = \frac{V_{3}}{V_{i}} = \frac{-\frac{s}{w_{0}^{2}}\frac{1}{C_{1}R_{6}}}{\frac{s^{2}}{w_{0}^{2}} + \frac{1}{Q} \frac{s}{w_{0}} + 1}
+    \label{eq:TowThomas1}
+\end{equation}
+
+\begin{equation}
+        H(s)_{LP} = \frac{V_{3}}{V_{i}} = \frac{-\frac{R_{5}}{R_{6}}}{\frac{s^{2}}{w_{0}^{2}} + \frac{1}{Q} \frac{s}{w_{0}} + 1}
+    \label{eq:TowThomas2}
+\end{equation}
+
+
+
+\begin{equation}
+    \begin{matrix}
+        w_{0} = \sqrt{\frac{\frac{R_{4}}{R_{3}}}{C_{1}R_{5}C_{2}R_{2}}}
+        \\
+        Q = R_{1}\sqrt{\frac{C_{1}R_{4}}{C_{1}R_{5}C_{2}R_{2}}}
+    \end{matrix}
+    \label{eq:TowThomas1}
+\end{equation}
+
+Se consultó bibliografía que mencionaba la existencia de una llamada \emph{celda Tow Thomas generalizada} al alimentar los otros dos amplificadores operacionales con la señal de entrada, obteniendo la transferencia de un rechaza banda. Sin embargo, el criterio es prácticamente el mismo que se emplea para obtener la Fleischer-Tow, por lo que realizaremos el análisis directamente sobre la última. 
+
+\subsubsection{Celda Ackerberg-Mossberg}
+
+Las dos celdas mencionadas anteriormente no permiten implementar correctamente filtros con un Q muy alto, ya que con ellas se obtendría un Q incluso mayor debido al retardo de fase que poseen. Este inconveniente es resuelto en la celda Ackerberg-Mossberg, la cual logra compensar el retardo de fase modificando la Tow Thomas con un integrador de Miller en la retroalimentación del segundo integrador. Las señales de cada etapa exhiben el mismo comportamiento que en la Tow-Thomas, por lo que sus funciones transferencia y sensibilidades son iguales. 
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width= 0.9\textwidth]{celdaAM.png}
+    \caption{Celda Ackerberg-Mossberg}
+    \label{fig:celdaAM}
+\end{figure}
+
+
+\subsubsection{Celda Fleischer-Tow}
+
+
+Nuevamente, realizando una modificación sobre la celda Tow-Thomas, es posible obtener una función transferencia numerador de segundo grado sin incorporar otro amplificador operacional a la celda. Para ello, se inyecta la señal de entrada a cada operacional, conocidos como $feedforward paths$, además de intercambiar de posiciones el inversor y el último integrador. El comportamiento deseado se logra mediante la variación de los componentes.  
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width= 0.9\textwidth]{FleischerTow.png}
+    \caption{Celda Fleischer-Tow}
+    \label{fig:FleischerTow}
+\end{figure}
+
+Realizando un análisis sobre el circuito del modo, se obtiene una función transferencia general para celda:
+
+
+\begin{equation}
+        H(s) = \frac{V_{o}}{V_{i}} = -\frac{\frac{R_{8}}{R_{6}}s^{2}+\frac{1}{C_{1}R_{1}}(\frac{R_{8}}{R_{6}}-\frac{R_{8}R_{1}}{R_{4}R_{7}})s + \frac{R_{8}}{C_{1}C_{2}R_{3}R_{5}R_{7}}}{s^{2} + \frac{1}{R_{1}C_{1}} s + \frac{R_{8}}{C_{1}C_{2}R_{2}R_{3}R_{7}}}
+    \label{eq:FT1}
+\end{equation}
+
+\begin{equation}
+    \begin{matrix}
+        w_{p} = \sqrt{\frac{R_{8}}{C_{1}C_{2}R_{2}R_{3}R_{7}}}
+        \\
+        Q = R_{1}\sqrt{\frac{R_{8}C_{1}}{C_{2}R_{2}R_{3}R_{7}}}
+        \\
+        w_{z} = \sqrt{\frac{R_{8}}{C_{1}C_{2}R_{3}R_{5}R_{7}}}
+    \end{matrix}
+    \label{eq:FT2}
+\end{equation}
+
+Imponiendo condiciones sobre los componentes, se obtienen las distintas funciones transferencia:
+
+\begin{table}[H]
+\begin{tabular}{c|cccc}
+                     & \textbf{Pasa bajos (LP)} & \textbf{Pasa altos (HP)} & \textbf{Pasa banda (BP)}           & \textbf{Rechaza banda (BR)}        \\ \cline{2-5} 
+\textbf{Condiciones} & $R_{6} = R_{4} = \infty$ & $R_{6} = R_{5} = \infty$ & $R_{4} = \frac{R_{1}R_{6}}{R_{8}}$ & $R_{4} = \frac{R_{1}R_{6}}{R_{8}}$ \\
+                     &                          &                          & $R_{5} = \infty$                   & $R_{7} = R_{8}$                   
+\end{tabular}
+\end{table}
+
+Analizando la transferencia bajo las condiciones del rechaza banda, se tiene que:
+
+\begin{equation}
+        H(s)_{BR} -\frac{\frac{R_{8}}{R_{6}}s^{2} + \frac{1}{C_{1}C_{2}R_{3}R_{5}}}{s^{2} + \frac{1}{R_{1}C_{1}} s + \frac{1}{C_{1}C_{2}R_{2}R_{3}}}
+    \label{eq:FT3}
+\end{equation}
+
+\begin{equation}
+    \begin{matrix}
+        w_{p} = \sqrt{\frac{1}{C_{1}C_{2}R_{2}R_{3}}}
+        \\
+        Q = R_{1}\sqrt{\frac{C_{1}}{C_{2}R_{2}R_{3}R_{7}}}
+        \\
+        w_{z} = \sqrt{\frac{R_{8}}{C_{1}C_{2}R_{3}R_{5}R_{7}}}
+        \\
+        G_{BR} = -\frac{R_{2}}{R_{5}}
+
+    \end{matrix}
+    \label{eq:FT4}
+\end{equation}
+
+La celda Fleischer-Tow ofrece el beneficio de poder obtener el comportamiento de varios filtros desde una misma salida y sin necesidad de incluir otro amplificador operacional, como fue el caso del KHN. Esto resulta significativo dado que incluir un amplificador operacional puede imponer limitaciones al circuito debidas a la saturación, al efecto del slew rate, entre otros. 
+
+\subsection{Diseño del Filtro a partir de Chebycheb II}
+
+Teniendo la siguiente plantilla:
+
+\begin{table}[H]
+    \centering
+    
+    \begin{tabular}{cc}
+    \hline
+    \multicolumn{2}{c}{Par\'ametros de diseño} \\ \hline
+    Notch Depth & $\geq$ 50dB \\
+    $f_\infty$ & 16KHz \\
+    $\Delta f_a$ & 600Hz \\
+    $\Delta f_p$ & 10kHz \\
+    $A_p$ & 6dB \\
+    $Z_{in}(f)$ & $\geq 50K\Omega$ \\
+    Filtro & Rechaza-Banda\\\hline
+    \end{tabular}%
+    \caption{Par\'ametros de diseño para el filtro a implementar}
+    \label{ej22diseno}
+\end{table}
+
+Se busco primeramente el los valores necesarios para conformar dicho diseño desde las siguientes ecuaciones.
+
+\begin{equation}
+    \begin{split}
+        f_\infty^2 &= f_P^+ \cdot f_P^- = f_a^+ \cdot f_a^-\\
+        &\Delta f_a= f_a^+ - f_a^-\\
+        &\Delta f_p = f_P^+ - f_P^-
+    \end{split}
+    \label{ej4eqf}
+\end{equation}
+
+A partir de las frecuencias de atenuación y de paso $f_a^- = 15.702kHz$, $f_a^+ = 16.303kHz$, $f_P^- = 11.763kHz$ y $f_P^+ = 21.760kHz$ se obtuvo desde un programa de aproximación de Chebychev Inverso, por lo que se obtiene la atenuación del circuito como:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale = 0.5]{att.png}
+    \caption{Aproximación por Chebychev Inverso}
+    \label{fig:my_label}
+\end{figure}
+
+Luego utilizando los polos y ceros dados se los dividió en 3 etapas, agrupando los ceros con los polos mas cercanos, para aumentar el rango dinámicos:
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{c c c c}
+		\hline
+		&Etapa 1 & Etapa 2 & Etapa 3\\
+		\hline
+		Polo & $f_p =16kHz / Q=9.38$ & $f_p=15.74kHz / Q=1.88$&$f_p=16.26kkHz/ Q=1.88$\\ 
+		Cero  & $f_z= 16kHz$ &$f_z= 15.23kHz$ & $f_z= 16.80kHz$\\
+		\hline
+	\end{tabular}
+	\caption{Distribuci\'on de polos y ceros en etapas.}
+	\label{ej4etapas}
+\end{table}
+
+\subsection{Selección de Celda}
+
+Analizando las celdas previamente mencionadas es necesario emplear una celda que tenga una salida de tipo notch o utilizar pasa-bajos y pasa-altos. Por lo que la celda Tow-Thomas y la Ackerberg-Mossberg que presentan únicamente salida pasa-bajos y pasa-banda no serian útiles para este caso. 
+
+Luego celdas posibles para el diseño deseado son Kerwin-Huelsman-Newcomb y la celda Fleischer-Tow. Sin embargo, utilizar la celda de Kerwin-Huelsman-Newcomb implica agregar un cuarto amplificador operacional para hacer un sumador de la salida pasa bajos y una pasa altos. En contraposición, dado que la celda Fleischer-Tow presenta una salida genérica, eligiendo correctamente los componentes se puede lograr la salida necesaria para realizar el filtro requerid.
+
+\subsection{Selección de Componentes}
+
+Estudiando la función de transferencia para un rechaza-banda de celda tipo Fleischer-Tow
+
+
+
+\begin{table}[H] %estas son las del libro!
+	\centering
+	\begin{tabular}{c c c c c c c}
+		Salida & Condiciones & $H(s)$ & $G$ & $\omega_p$ & $Q$ & $\omega_z$\\
+		\hline \\
+		BR &$R_1R_6=R_4R_7$ &\multirow{2}{*}{$- \frac{s^2+\frac{R_6}{R_3R_5R_7C_1C_2}}{s^2+\frac{1}{R_1C_1}s+\frac{R_8}{R_2R_3R_7C_1C_2}}$}&\multirow{2}{*}{$-\frac{R_2}{R_5}$}& \multirow{2}{*}{$\sqrt{\frac{R_8}{R_2R_3R_7C_1C_2}}$}&
+		\multirow{2}{*}{$R_1C_1\sqrt{\frac{R_8}{R_2R_3R_7C_1C_2}}$}
+		&\multirow{2}{*}{$\sqrt{\frac{R_6}{R_3 R_5 R_7 C_1 C_2}}$}\\ \\ \\
+		\hline
+	\end{tabular}
+	\caption{Caracter\'isticas de la celda Fleischer-Tow.}
+	\label{ej4hn}
+\end{table}
+
+Analizando entonces las ecuaciones en conjunto con la tabla \ref{ej4etapas}, se fijo los valores $C_1 = C_2 = 10nF$ y $R_2 = R_3 = R_5 = 1K\Omega$, a su vez la relación entre las resistencias como $R_1 = R_7$ y $R_4 = R_6$. De esta manera se obtuvo los valores teórica para el diseño:
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{c c c c}
+		&Etapa 1& Etapa 2 & Etapa 3 \\
+		\hline \\
+    		$R_1 (\Omega)$ & 8.9k & 1.962k& 1.779k \\
+		$R_2 (\Omega)$ & 1k&1k &1k \\
+		$R_3 (\Omega)$ & 1k & 1k& 1k \\
+		$R_4 (\Omega)$ &8.99k  &1.92k & 1.86k\\
+		$R_5 (\Omega)$ &1k & 1k&1k \\
+		$R_6 (\Omega)$ &8.99k  &1.92k & 1.86k \\
+		$R_7 (\Omega)$ & 8.9k & 1.962k& 1.779k \\
+		$R_8 (\Omega)$ & 9k& 1.797k&1.981k \\
+		$C_1 (F)$ & 10n&10n &10n \\
+		$C_2 (F)$ & 10n&10n &10n \\
+		\hline
+	\end{tabular}
+	\caption{Valores Teóricos por Etapa}
+	\label{ej4valt}
+\end{table}
+
+\subsubsection{Análisis de sensibilidades}
+
+Cabe destacar previamente a la selección de los componente a utilizar la sensibilidad de los componentes de esta manera estar informarse de los valores que causarían incertidumbres al circuito. Estudiando la celda seleccionada, las sensibilidades de los componentes resultan en:
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{c c c c c c c}
+		& $\omega_0$ & $Q$ & $G_{BR}$\\
+		\hline  
+		$R_1$ & $0$ & $1$ & $0$\\ 
+		$R_2$ & $-\frac{1}{2}$ & $-\frac{1}{2}$ & $1$\\ 
+		$R_3$ & $-\frac{1}{2}$ & $-\frac{1}{2}$ & $0$\\ 
+		$R_4$ & $0$ & $0$ & $0$\\ 
+		$R_5$ & $0$ & $0$  & $-1$\\ 
+		$R_6$ & $0$ & $0$ & $0$\\ 
+		$R_7$ & $-\frac{1}{2}$ & $-\frac{1}{2}$ & $0$\\ 
+		$R_8$ & $\frac{1}{2}$ & $\frac{1}{2}$ & $0$\\ 
+		$C_1$ & $-\frac{1}{2}$ & $\frac{1}{2}$  & $0$\\ 
+		$C_2$ & $-\frac{1}{2}$ & $-\frac{1}{2}$ &$0$\\ 
+		\hline
+	\end{tabular}
+	\caption{Sensibilidades de la Celda Fleischer-Tow Rechaza-Banda}
+	\label{ej4sens}
+\end{table}
+
+Se observa que las sensibilidades de la celda son bajas en comparación a las implementadas anteriormente en este informe. Esto permite poder implementar circuitos con un Q mayor. 
+
+\subsubsection{Selección de Componentes a Utilizar}
+
+Como ciertos valores de los componentes no son comerciales se debe adaptar los valores, por lo que teniendo en cuenta sus sensibilidades se selecciono los componentes a implementar como:
+
+% Please add the following required packages to your document preamble:
+% \usepackage{booktabs}
+\begin{table}[H]
+\centering
+\begin{tabular}{@{}ccccccc@{}}
+\toprule
+Componente & Primera Etapa & Implementación & Segunda Etapa & Implementación & Tercera Etapa & Implementación \\ \midrule
+C1 [F]         & 10n           & 10n            & 10n           & 10n            & 10n           & 10n            \\
+C2 [F]         & 10n           & 10n            & 10n           & 10n            & 10n           & 10n            \\
+R1 [$\Omega$]         & 8.9k          & 6.2k+2.7k      & 1.962k        & (1k+1k)//100k  & 1.779k        & 100k//1.8k     \\
+R2 [$\Omega$]        & 1k            & 1k             & 1k            & 1k             & 1k            & 1k             \\
+R3 [$\Omega$]        & 1k            & 1k             & 1k            & 1k             & 1k            & 1k             \\
+R4 [$\Omega$]        & 8.99k         & 6.2k+1.8k+1k   & 1.92k         & 1.8k+100       & 1.86k         & 1.8k           \\
+R5 [$\Omega$]        & 1k            & 1k             & 1k            & 1k             & 1k            & 1k             \\
+R6 [$\Omega$]        & 8.99k         & 6.2k+1.8k+1k   & 1.92k         & 1.8k+100       & 1.86k         & 1.8k           \\
+R7 [$\Omega$]        & 8.9k          & 6.2k+2.7k      & 1.962k        & (1k+1k)//100k  & 1.779k        & 100k//1.8k     \\
+R8 [$\Omega$]        & 9k            & 6.2k+1.8k+1k   & 1.797k        & 1.8k           & 1.981k        & 220k//2k       \\ \bottomrule
+\end{tabular}
+\label{ej4valr}
+\caption{Valores de Componentes a Implementar}
+\end{table}
+
+\subsection{Análisis Montecarlo}
+
+Al conocer los componentes a utilizar se realizo un análisis de montecarlo con resistencia de tolerancia $5\%$ y capacitor de tolerancia $20\%$, se obtuvo los posibles casos que enfrentaríamos en una medición experimental.
+
+\begin{figure}
+    \centering
+    \includegraphics[scale = 0.6]{monte.PNG}
+    \caption{Análisis de Montecarlo del Circuito Diseñado}
+    \label{fig:my_label}
+\end{figure}
+
+A su vez, se analizo el montaje de las respuestas de cada etapa verificando su funcionamiento y se construyo un histograma así conociendo su dispersiones.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale = 0.4]{dis1.png}
+    \caption{Histograma de Dispersión de f0 de la Primera Etapa}
+    \label{ej4dis1}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale = 0.4]{dis2.png}
+    \caption{Histograma de Dispersión de f0 de la Segunda Etapa}
+    \label{ej4dis2}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale = 0.4]{dis3.png}
+    \caption{Histograma de Dispersión de f0 de la Tercera Etapa}
+    \label{ej4dis3}
+\end{figure}
+
+\subsection{Cálculo de impedancia de entrada}
+
+Debido a la complejidad de la celda, aún considerando $A_{Vol}$ constante el cálculo de la impedancia de entrada se hace complejo. Es por esto que se continúo analizando el circuito con el modelo mas ideal para los amplificadores operacionales. Con esto, se tiene que la impedancia de entrada de los Op Amp se consideran infinita, fijando una masa virtual en la entrada inversora dado que la entrada no inversora esta referida a tierra. Con esto, se tienen las siguientes relaciones a la entrada:
+
+$$Z_{in} = \frac{V_{i}}{I_{i}}$$
+
+$$\frac{V_{i}}{R_{4}} + \frac{V_{i}}{R_{6}} + \frac{V_{i}}{R_{5}} = I_{i}$$
+
+De donde se obtiene que, considerando el modelo mas ideal de amplificador operacional, la impedancia de entrada a la celda estará dada por:
+
+$$Z_{in} = \frac{R_{4}R_{5}R_{6}}{R_{5}R_{6}+R_{5}R_{4}+R_{4}R_{6}}$$
+
+Mediante simulación en LTSpice, se pueden obtener los gráficos del módulo de la impedancia de entrada en respuesta a la frecuencia:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale = 0.7]{zin1.PNG}
+    \caption{Impedancia de Entrada}
+    \label{ej4zin1}
+\end{figure}
+
+Sin embargo, esta no cumple con la plantilla pedida, es por ello que para asegurar que la impedancia de entrada de la misma sea $zin \geq 50k\Omega$, se coloca un buffer a la entrada de la misma. Entonces, la impedancia de entrada ahora resulta:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale = 0.7]{zin2.PNG}
+    \caption{Impedancia de Entrada con Buffer a la Entrada}
+    \label{ej4zin2}
+\end{figure}
+
+
+\subsection{Conclusión}
+
+Se estudió hizo un análisis sobre cuatro celdas universales diferentes, dando solo posibles casos de uso Kerwin-Huelsman-Newcomb o la Fleischer-Tow para un filtro notch, y decidiendo cual sera mas conveniente para nuestra aplicación. Luego estudiando la aproximacion por Chebychev se pudo llegar a los componentes para el circuito. Sin embargo al tener solo componentes de tolerancias $5\%$ y $20\%$ a mano, no se pudo utilizar SMD para un análisis preciso del circuito, por lo que se muestra en el montecarlo que es un filtro sensible. 
 
