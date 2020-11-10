@@ -36,29 +36,28 @@
 \BOOKMARK [3][-]{subsubsection.3.4.2}{Impedancia de Entrada}{subsection.3.4}% 36
 \BOOKMARK [3][-]{subsubsection.3.4.3}{Rango Din\341mico}{subsection.3.4}% 37
 \BOOKMARK [2][-]{subsection.3.5}{Conclusi\363n}{section.3}% 38
-\BOOKMARK [1][-]{section.4}{Introducci\363n}{}% 39
-\BOOKMARK [1][-]{section.5}{Celda Sedra-Ghorab-Martin}{}% 40
-\BOOKMARK [2][-]{subsection.5.1}{Introducci\363n}{section.5}% 41
-\BOOKMARK [2][-]{subsection.5.2}{Celda Sedra-Ghorab-Martin}{section.5}% 42
-\BOOKMARK [2][-]{subsection.5.3}{An\341lisis matem\341tico}{section.5}% 43
-\BOOKMARK [2][-]{subsection.5.4}{Sensibilidades}{section.5}% 44
-\BOOKMARK [2][-]{subsection.5.5}{Aproximaci\363n del filtro}{section.5}% 45
-\BOOKMARK [2][-]{subsection.5.6}{Etapa I}{section.5}% 46
-\BOOKMARK [2][-]{subsection.5.7}{Etapa II}{section.5}% 47
-\BOOKMARK [2][-]{subsection.5.8}{Simulaciones}{section.5}% 48
-\BOOKMARK [2][-]{subsection.5.9}{Impedancia de entrada}{section.5}% 49
-\BOOKMARK [2][-]{subsection.5.10}{Conclusi\363n}{section.5}% 50
-\BOOKMARK [1][-]{section.6}{Celda universal}{}% 51
-\BOOKMARK [2][-]{subsection.6.1}{An\341lisis de celdas: funci\363n transferencia y caracter\355sticas}{section.6}% 52
-\BOOKMARK [3][-]{subsubsection.6.1.1}{Celda Kerwin-Huelsman-Newcomb}{subsection.6.1}% 53
-\BOOKMARK [3][-]{subsubsection.6.1.2}{Celda Tow-Thomas}{subsection.6.1}% 54
-\BOOKMARK [3][-]{subsubsection.6.1.3}{Celda Ackerberg-Mossberg}{subsection.6.1}% 55
-\BOOKMARK [3][-]{subsubsection.6.1.4}{Celda Fleischer-Tow}{subsection.6.1}% 56
-\BOOKMARK [2][-]{subsection.6.2}{Dise\361o del Filtro a partir de Chebycheb II}{section.6}% 57
-\BOOKMARK [2][-]{subsection.6.3}{Selecci\363n de Celda}{section.6}% 58
-\BOOKMARK [2][-]{subsection.6.4}{Selecci\363n de Componentes}{section.6}% 59
-\BOOKMARK [3][-]{subsubsection.6.4.1}{An\341lisis de sensibilidades}{subsection.6.4}% 60
-\BOOKMARK [3][-]{subsubsection.6.4.2}{Selecci\363n de Componentes a Utilizar}{subsection.6.4}% 61
-\BOOKMARK [2][-]{subsection.6.5}{An\341lisis Montecarlo}{section.6}% 62
-\BOOKMARK [2][-]{subsection.6.6}{C\341lculo de impedancia de entrada}{section.6}% 63
-\BOOKMARK [2][-]{subsection.6.7}{Conclusi\363n}{section.6}% 64
+\BOOKMARK [1][-]{section.4}{Celda Sedra-Ghorab-Martin}{}% 39
+\BOOKMARK [2][-]{subsection.4.1}{Introducci\363n}{section.4}% 40
+\BOOKMARK [2][-]{subsection.4.2}{Celda Sedra-Ghorab-Martin}{section.4}% 41
+\BOOKMARK [2][-]{subsection.4.3}{An\341lisis matem\341tico}{section.4}% 42
+\BOOKMARK [2][-]{subsection.4.4}{Sensibilidades}{section.4}% 43
+\BOOKMARK [2][-]{subsection.4.5}{Aproximaci\363n del filtro}{section.4}% 44
+\BOOKMARK [2][-]{subsection.4.6}{Etapa I}{section.4}% 45
+\BOOKMARK [2][-]{subsection.4.7}{Etapa II}{section.4}% 46
+\BOOKMARK [2][-]{subsection.4.8}{Simulaciones}{section.4}% 47
+\BOOKMARK [2][-]{subsection.4.9}{Impedancia de entrada}{section.4}% 48
+\BOOKMARK [2][-]{subsection.4.10}{Conclusi\363n}{section.4}% 49
+\BOOKMARK [1][-]{section.5}{Celda universal}{}% 50
+\BOOKMARK [2][-]{subsection.5.1}{An\341lisis de celdas: funci\363n transferencia y caracter\355sticas}{section.5}% 51
+\BOOKMARK [3][-]{subsubsection.5.1.1}{Celda Kerwin-Huelsman-Newcomb}{subsection.5.1}% 52
+\BOOKMARK [3][-]{subsubsection.5.1.2}{Celda Tow-Thomas}{subsection.5.1}% 53
+\BOOKMARK [3][-]{subsubsection.5.1.3}{Celda Ackerberg-Mossberg}{subsection.5.1}% 54
+\BOOKMARK [3][-]{subsubsection.5.1.4}{Celda Fleischer-Tow}{subsection.5.1}% 55
+\BOOKMARK [2][-]{subsection.5.2}{Dise\361o del Filtro a partir de Chebycheb II}{section.5}% 56
+\BOOKMARK [2][-]{subsection.5.3}{Selecci\363n de Celda}{section.5}% 57
+\BOOKMARK [2][-]{subsection.5.4}{Selecci\363n de Componentes}{section.5}% 58
+\BOOKMARK [3][-]{subsubsection.5.4.1}{An\341lisis de sensibilidades}{subsection.5.4}% 59
+\BOOKMARK [3][-]{subsubsection.5.4.2}{Selecci\363n de Componentes a Utilizar}{subsection.5.4}% 60
+\BOOKMARK [2][-]{subsection.5.5}{An\341lisis Montecarlo}{section.5}% 61
+\BOOKMARK [2][-]{subsection.5.6}{C\341lculo de impedancia de entrada}{section.5}% 62
+\BOOKMARK [2][-]{subsection.5.7}{Conclusi\363n}{section.5}% 63

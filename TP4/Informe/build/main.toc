@@ -37,29 +37,28 @@
 \contentsline {subsubsection}{\numberline {3.4.2}Impedancia de Entrada}{27}{subsubsection.3.4.2}%
 \contentsline {subsubsection}{\numberline {3.4.3}Rango Dinámico}{27}{subsubsection.3.4.3}%
 \contentsline {subsection}{\numberline {3.5}Conclusión}{28}{subsection.3.5}%
-\contentsline {section}{\numberline {4}Introducción}{28}{section.4}%
-\contentsline {section}{\numberline {5}Celda Sedra-Ghorab-Martin}{28}{section.5}%
-\contentsline {subsection}{\numberline {5.1}Introducción}{28}{subsection.5.1}%
-\contentsline {subsection}{\numberline {5.2}Celda Sedra-Ghorab-Martin}{28}{subsection.5.2}%
-\contentsline {subsection}{\numberline {5.3}Análisis matemático}{29}{subsection.5.3}%
-\contentsline {subsection}{\numberline {5.4}Sensibilidades}{31}{subsection.5.4}%
-\contentsline {subsection}{\numberline {5.5}Aproximación del filtro}{32}{subsection.5.5}%
-\contentsline {subsection}{\numberline {5.6}Etapa I}{33}{subsection.5.6}%
-\contentsline {subsection}{\numberline {5.7}Etapa II}{33}{subsection.5.7}%
-\contentsline {subsection}{\numberline {5.8}Simulaciones}{34}{subsection.5.8}%
-\contentsline {subsection}{\numberline {5.9}Impedancia de entrada}{34}{subsection.5.9}%
-\contentsline {subsection}{\numberline {5.10}Conclusión}{34}{subsection.5.10}%
-\contentsline {section}{\numberline {6}Celda universal}{35}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Análisis de celdas: función transferencia y características}{35}{subsection.6.1}%
-\contentsline {subsubsection}{\numberline {6.1.1}Celda Kerwin-Huelsman-Newcomb}{35}{subsubsection.6.1.1}%
-\contentsline {subsubsection}{\numberline {6.1.2}Celda Tow-Thomas}{39}{subsubsection.6.1.2}%
-\contentsline {subsubsection}{\numberline {6.1.3}Celda Ackerberg-Mossberg}{40}{subsubsection.6.1.3}%
-\contentsline {subsubsection}{\numberline {6.1.4}Celda Fleischer-Tow}{41}{subsubsection.6.1.4}%
-\contentsline {subsection}{\numberline {6.2}Diseño del Filtro a partir de Chebycheb II}{43}{subsection.6.2}%
-\contentsline {subsection}{\numberline {6.3}Selección de Celda}{44}{subsection.6.3}%
-\contentsline {subsection}{\numberline {6.4}Selección de Componentes}{44}{subsection.6.4}%
-\contentsline {subsubsection}{\numberline {6.4.1}Análisis de sensibilidades}{44}{subsubsection.6.4.1}%
-\contentsline {subsubsection}{\numberline {6.4.2}Selección de Componentes a Utilizar}{45}{subsubsection.6.4.2}%
-\contentsline {subsection}{\numberline {6.5}Análisis Montecarlo}{45}{subsection.6.5}%
-\contentsline {subsection}{\numberline {6.6}Cálculo de impedancia de entrada}{46}{subsection.6.6}%
-\contentsline {subsection}{\numberline {6.7}Conclusión}{46}{subsection.6.7}%
+\contentsline {section}{\numberline {4}Celda Sedra-Ghorab-Martin}{28}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Introducción}{28}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Celda Sedra-Ghorab-Martin}{28}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Análisis matemático}{29}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Sensibilidades}{31}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}Aproximación del filtro}{32}{subsection.4.5}%
+\contentsline {subsection}{\numberline {4.6}Etapa I}{33}{subsection.4.6}%
+\contentsline {subsection}{\numberline {4.7}Etapa II}{34}{subsection.4.7}%
+\contentsline {subsection}{\numberline {4.8}Simulaciones}{35}{subsection.4.8}%
+\contentsline {subsection}{\numberline {4.9}Impedancia de entrada}{35}{subsection.4.9}%
+\contentsline {subsection}{\numberline {4.10}Conclusión}{36}{subsection.4.10}%
+\contentsline {section}{\numberline {5}Celda universal}{36}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Análisis de celdas: función transferencia y características}{36}{subsection.5.1}%
+\contentsline {subsubsection}{\numberline {5.1.1}Celda Kerwin-Huelsman-Newcomb}{36}{subsubsection.5.1.1}%
+\contentsline {subsubsection}{\numberline {5.1.2}Celda Tow-Thomas}{38}{subsubsection.5.1.2}%
+\contentsline {subsubsection}{\numberline {5.1.3}Celda Ackerberg-Mossberg}{39}{subsubsection.5.1.3}%
+\contentsline {subsubsection}{\numberline {5.1.4}Celda Fleischer-Tow}{39}{subsubsection.5.1.4}%
+\contentsline {subsection}{\numberline {5.2}Diseño del Filtro a partir de Chebycheb II}{40}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Selección de Celda}{41}{subsection.5.3}%
+\contentsline {subsection}{\numberline {5.4}Selección de Componentes}{42}{subsection.5.4}%
+\contentsline {subsubsection}{\numberline {5.4.1}Análisis de sensibilidades}{42}{subsubsection.5.4.1}%
+\contentsline {subsubsection}{\numberline {5.4.2}Selección de Componentes a Utilizar}{43}{subsubsection.5.4.2}%
+\contentsline {subsection}{\numberline {5.5}Análisis Montecarlo}{43}{subsection.5.5}%
+\contentsline {subsection}{\numberline {5.6}Cálculo de impedancia de entrada}{45}{subsection.5.6}%
+\contentsline {subsection}{\numberline {5.7}Conclusión}{45}{subsection.5.7}%

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.8.21)  10 NOV 2020 08:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.8.21)  10 NOV 2020 10:25
 entering extended mode
 **d:/Documents/GitHub/TC-Grupo6/TP4/Informe/main.tex
 (d:/Documents/GitHub/TC-Grupo6/TP4/Informe/main.tex
@@ -874,7 +874,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has b
                    \relax 
 l.9 \newpage
              [1] (../Ejercicio1-FilterTool/Ejercicio-1.tex
-<../Ejercicio1-FilterTool/Imagenes/imagen-general-1.png, id=222, 932.48375pt x 862.22125pt>
+<../Ejercicio1-FilterTool/Imagenes/imagen-general-1.png, id=274, 932.48375pt x 862.22125pt>
 File: ../Ejercicio1-FilterTool/Imagenes/imagen-general-1.png Graphic file (type png)
 <use ../Ejercicio1-FilterTool/Imagenes/imagen-general-1.png>
 Package pdftex.def Info: ../Ejercicio1-FilterTool/Imagenes/imagen-general-1.png  used on input line 10.
@@ -890,7 +890,7 @@ LaTeX Warning: Reference `ImagenGeneral' on page 3 undefined on input line 46.
 
 LaTeX Warning: Reference `ImagenGeneral' on page 3 undefined on input line 50.
 
-<../Ejercicio1-FilterTool/Imagenes/opciones.png, id=233, 246.9225pt x 533.74406pt>
+<../Ejercicio1-FilterTool/Imagenes/opciones.png, id=285, 246.9225pt x 533.74406pt>
 File: ../Ejercicio1-FilterTool/Imagenes/opciones.png Graphic file (type png)
 <use ../Ejercicio1-FilterTool/Imagenes/opciones.png>
 Package pdftex.def Info: ../Ejercicio1-FilterTool/Imagenes/opciones.png  used on input line 63.
@@ -903,7 +903,7 @@ LaTeX Warning: Reference `ImagenGeneral' on page 3 undefined on input line 69.
 LaTeX Warning: Reference `ImagenGeneral' on page 4 undefined on input line 84.
 
 [4]
-<../Ejercicio1-FilterTool/Imagenes/imagen-general-2-varias funciones.png, id=246, 696.35156pt x 623.32875pt>
+<../Ejercicio1-FilterTool/Imagenes/imagen-general-2-varias funciones.png, id=298, 696.35156pt x 623.32875pt>
 File: ../Ejercicio1-FilterTool/Imagenes/imagen-general-2-varias funciones.png Graphic file (type png)
 <use ../Ejercicio1-FilterTool/Imagenes/imagen-general-2-varias funciones.png>
 Package pdftex.def Info: ../Ejercicio1-FilterTool/Imagenes/imagen-general-2-varias funciones.png  used on input line 130.
@@ -913,7 +913,7 @@ Package pdftex.def Info: ../Ejercicio1-FilterTool/Imagenes/imagen-general-2-vari
 LaTeX Warning: Reference `ImagenGeneral' on page 5 undefined on input line 145.
 
 [5 <../Ejercicio1-FilterTool/Imagenes/imagen-general-2-varias funciones.png>]
-<../Ejercicio1-FilterTool/Imagenes/con-plantilla.png, id=253, 922.44624pt x 850.17625pt>
+<../Ejercicio1-FilterTool/Imagenes/con-plantilla.png, id=305, 922.44624pt x 850.17625pt>
 File: ../Ejercicio1-FilterTool/Imagenes/con-plantilla.png Graphic file (type png)
 <use ../Ejercicio1-FilterTool/Imagenes/con-plantilla.png>
 Package pdftex.def Info: ../Ejercicio1-FilterTool/Imagenes/con-plantilla.png  used on input line 158.
@@ -922,13 +922,13 @@ Package pdftex.def Info: ../Ejercicio1-FilterTool/Imagenes/con-plantilla.png  us
 
 LaTeX Warning: Reference `Etapa2' on page 6 undefined on input line 166.
 
-<../Ejercicio1-FilterTool/Imagenes/SOS.png, id=254, 273.02pt x 279.0425pt>
+<../Ejercicio1-FilterTool/Imagenes/SOS.png, id=306, 273.02pt x 279.0425pt>
 File: ../Ejercicio1-FilterTool/Imagenes/SOS.png Graphic file (type png)
 <use ../Ejercicio1-FilterTool/Imagenes/SOS.png>
 Package pdftex.def Info: ../Ejercicio1-FilterTool/Imagenes/SOS.png  used on input line 178.
 (pdftex.def)             Requested size: 136.50966pt x 139.5209pt.
 [6 <../Ejercicio1-FilterTool/Imagenes/con-plantilla.png>]
-<../Ejercicio1-FilterTool/Imagenes/sosEdit.png, id=262, 276.03125pt x 428.60126pt>
+<../Ejercicio1-FilterTool/Imagenes/sosEdit.png, id=314, 276.03125pt x 428.60126pt>
 File: ../Ejercicio1-FilterTool/Imagenes/sosEdit.png Graphic file (type png)
 <use ../Ejercicio1-FilterTool/Imagenes/sosEdit.png>
 Package pdftex.def Info: ../Ejercicio1-FilterTool/Imagenes/sosEdit.png  used on input line 202.
@@ -941,18 +941,18 @@ LaTeX Warning: Reference `Etapa2' on page 7 undefined on input line 211.
 
 LaTeX Warning: Reference `Etapa2' on page 8 undefined on input line 220.
 
-<../Ejercicio1-FilterTool/Imagenes/comparame-com-plantilla.png, id=274, 691.08188pt x 621.07031pt>
+<../Ejercicio1-FilterTool/Imagenes/comparame-com-plantilla.png, id=326, 691.08188pt x 621.07031pt>
 File: ../Ejercicio1-FilterTool/Imagenes/comparame-com-plantilla.png Graphic file (type png)
 <use ../Ejercicio1-FilterTool/Imagenes/comparame-com-plantilla.png>
 Package pdftex.def Info: ../Ejercicio1-FilterTool/Imagenes/comparame-com-plantilla.png  used on input line 233.
 (pdftex.def)             Requested size: 435.33028pt x 391.22897pt.
-<../Ejercicio1-FilterTool/Imagenes/comparacion.png, id=275, 697.10437pt x 650.43pt>
+<../Ejercicio1-FilterTool/Imagenes/comparacion.png, id=327, 697.10437pt x 650.43pt>
 File: ../Ejercicio1-FilterTool/Imagenes/comparacion.png Graphic file (type png)
 <use ../Ejercicio1-FilterTool/Imagenes/comparacion.png>
 Package pdftex.def Info: ../Ejercicio1-FilterTool/Imagenes/comparacion.png  used on input line 241.
 (pdftex.def)             Requested size: 435.33028pt x 406.1803pt.
 [8 <../Ejercicio1-FilterTool/Imagenes/comparame-com-plantilla.png>]
-<../Ejercicio1-FilterTool/Imagenes/stage-plot.png, id=282, 700.11563pt x 621.82312pt>
+<../Ejercicio1-FilterTool/Imagenes/stage-plot.png, id=334, 700.11563pt x 621.82312pt>
 File: ../Ejercicio1-FilterTool/Imagenes/stage-plot.png Graphic file (type png)
 <use ../Ejercicio1-FilterTool/Imagenes/stage-plot.png>
 Package pdftex.def Info: ../Ejercicio1-FilterTool/Imagenes/stage-plot.png  used on input line 256.
@@ -964,7 +964,7 @@ LaTeX Warning: Reference `table:Plantilla' on page 11 undefined on input line 7.
 
 LaTeX Warning: Reference `fig:Plantilla' on page 11 undefined on input line 7.
 
-<../Ejercicio2-DisenoDeCeldas/1CeldaSallenKey/images/plantilla.png, id=295, 295.85532pt x 187.45032pt>
+<../Ejercicio2-DisenoDeCeldas/1CeldaSallenKey/images/plantilla.png, id=347, 295.85532pt x 187.45032pt>
 File: ../Ejercicio2-DisenoDeCeldas/1CeldaSallenKey/images/plantilla.png Graphic file (type png)
 <use ../Ejercicio2-DisenoDeCeldas/1CeldaSallenKey/images/plantilla.png>
 Package pdftex.def Info: ../Ejercicio2-DisenoDeCeldas/1CeldaSallenKey/images/plantilla.png  used on input line 28.
@@ -989,12 +989,12 @@ You may provide a definition with
 LaTeX Warning: Reference `eq:SK4' on page 11 undefined on input line 59.
 
 [11 <../Ejercicio2-DisenoDeCeldas/1CeldaSallenKey/images/plantilla.png>]
-<../Ejercicio2-DisenoDeCeldas/1CeldaSallenKey/images/AtenuacionButter.png, id=311, 382.3083pt x 223.3143pt>
+<../Ejercicio2-DisenoDeCeldas/1CeldaSallenKey/images/AtenuacionButter.png, id=363, 382.3083pt x 223.3143pt>
 File: ../Ejercicio2-DisenoDeCeldas/1CeldaSallenKey/images/AtenuacionButter.png Graphic file (type png)
 <use ../Ejercicio2-DisenoDeCeldas/1CeldaSallenKey/images/AtenuacionButter.png>
 Package pdftex.def Info: ../Ejercicio2-DisenoDeCeldas/1CeldaSallenKey/images/AtenuacionButter.png  used on input line 65.
 (pdftex.def)             Requested size: 256.0748pt x 149.58571pt.
-<../Ejercicio2-DisenoDeCeldas/1CeldaSallenKey/images/PolesButter.png, id=312, 382.3083pt x 223.3143pt>
+<../Ejercicio2-DisenoDeCeldas/1CeldaSallenKey/images/PolesButter.png, id=364, 382.3083pt x 223.3143pt>
 File: ../Ejercicio2-DisenoDeCeldas/1CeldaSallenKey/images/PolesButter.png Graphic file (type png)
 <use ../Ejercicio2-DisenoDeCeldas/1CeldaSallenKey/images/PolesButter.png>
 Package pdftex.def Info: ../Ejercicio2-DisenoDeCeldas/1CeldaSallenKey/images/PolesButter.png  used on input line 73.
@@ -1004,13 +1004,13 @@ Overfull \hbox (10.09198pt too wide) in paragraph at lines 82--83
 []\OT1/cmr/m/n/10 Al im-ple-men-tar un dise~no en cas-cada es im-por-tante cuidar el or-den de conexion de las cel-das. Si bien matematicamente
  []
 
-<../Ejercicio2-DisenoDeCeldas/1CeldaSallenKey/images/Etapas.png, id=313, 883.3pt x 260.975pt>
+<../Ejercicio2-DisenoDeCeldas/1CeldaSallenKey/images/Etapas.png, id=365, 883.3pt x 260.975pt>
 File: ../Ejercicio2-DisenoDeCeldas/1CeldaSallenKey/images/Etapas.png Graphic file (type png)
 <use ../Ejercicio2-DisenoDeCeldas/1CeldaSallenKey/images/Etapas.png>
 Package pdftex.def Info: ../Ejercicio2-DisenoDeCeldas/1CeldaSallenKey/images/Etapas.png  used on input line 88.
 (pdftex.def)             Requested size: 353.31374pt x 104.38815pt.
 [12 <../Ejercicio2-DisenoDeCeldas/1CeldaSallenKey/images/AtenuacionButter.png> <../Ejercicio2-DisenoDeCeldas/1CeldaSallenKey/images/PolesButter.png>]
-<../Ejercicio2-DisenoDeCeldas/1CeldaSallenKey/images/LowPassRC.png, id=323, 1613.02625pt x 1176.395pt>
+<../Ejercicio2-DisenoDeCeldas/1CeldaSallenKey/images/LowPassRC.png, id=375, 1613.02625pt x 1176.395pt>
 File: ../Ejercicio2-DisenoDeCeldas/1CeldaSallenKey/images/LowPassRC.png Graphic file (type png)
 <use ../Ejercicio2-DisenoDeCeldas/1CeldaSallenKey/images/LowPassRC.png>
 Package pdftex.def Info: ../Ejercicio2-DisenoDeCeldas/1CeldaSallenKey/images/LowPassRC.png  used on input line 98.
@@ -1022,7 +1022,7 @@ LaTeX Warning: Reference `fig:1LPGain' on page 13 undefined on input line 103.
 
 LaTeX Warning: Reference `fig:SK_H' on page 13 undefined on input line 135.
 
-<../Ejercicio2-DisenoDeCeldas/1CeldaSallenKey/images/SallenKeyH.png, id=324, 2206.2425pt x 1417.295pt>
+<../Ejercicio2-DisenoDeCeldas/1CeldaSallenKey/images/SallenKeyH.png, id=376, 2206.2425pt x 1417.295pt>
 File: ../Ejercicio2-DisenoDeCeldas/1CeldaSallenKey/images/SallenKeyH.png Graphic file (type png)
 <use ../Ejercicio2-DisenoDeCeldas/1CeldaSallenKey/images/SallenKeyH.png>
 Package pdftex.def Info: ../Ejercicio2-DisenoDeCeldas/1CeldaSallenKey/images/SallenKeyH.png  used on input line 139.
@@ -1032,18 +1032,18 @@ Package pdftex.def Info: ../Ejercicio2-DisenoDeCeldas/1CeldaSallenKey/images/Sal
 LaTeX Warning: Reference `eq:SK8' on page 14 undefined on input line 185.
 
 [14 <../Ejercicio2-DisenoDeCeldas/1CeldaSallenKey/images/SallenKeyH.png>] [15]
-<../Ejercicio2-DisenoDeCeldas/1CeldaSallenKey/images/circLTspiceSK.png, id=356, 970.3753pt x 437.38406pt>
+<../Ejercicio2-DisenoDeCeldas/1CeldaSallenKey/images/circLTspiceSK.png, id=405, 970.3753pt x 437.38406pt>
 File: ../Ejercicio2-DisenoDeCeldas/1CeldaSallenKey/images/circLTspiceSK.png Graphic file (type png)
 <use ../Ejercicio2-DisenoDeCeldas/1CeldaSallenKey/images/circLTspiceSK.png>
 Package pdftex.def Info: ../Ejercicio2-DisenoDeCeldas/1CeldaSallenKey/images/circLTspiceSK.png  used on input line 336.
 (pdftex.def)             Requested size: 358.50314pt x 161.5893pt.
  [16]
-<../Ejercicio2-DisenoDeCeldas/1CeldaSallenKey/images/SKGain.png, id=365, 505.1673pt x 237.7683pt>
+<../Ejercicio2-DisenoDeCeldas/1CeldaSallenKey/images/SKGain.png, id=414, 505.1673pt x 237.7683pt>
 File: ../Ejercicio2-DisenoDeCeldas/1CeldaSallenKey/images/SKGain.png Graphic file (type png)
 <use ../Ejercicio2-DisenoDeCeldas/1CeldaSallenKey/images/SKGain.png>
 Package pdftex.def Info: ../Ejercicio2-DisenoDeCeldas/1CeldaSallenKey/images/SKGain.png  used on input line 343.
 (pdftex.def)             Requested size: 358.50314pt x 168.74046pt.
-<../Ejercicio2-DisenoDeCeldas/1CeldaSallenKey/images/SKphase.png, id=366, 505.1673pt x 244.9953pt>
+<../Ejercicio2-DisenoDeCeldas/1CeldaSallenKey/images/SKphase.png, id=415, 505.1673pt x 244.9953pt>
 File: ../Ejercicio2-DisenoDeCeldas/1CeldaSallenKey/images/SKphase.png Graphic file (type png)
 <use ../Ejercicio2-DisenoDeCeldas/1CeldaSallenKey/images/SKphase.png>
 Package pdftex.def Info: ../Ejercicio2-DisenoDeCeldas/1CeldaSallenKey/images/SKphase.png  used on input line 350.
@@ -1069,28 +1069,28 @@ I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 [17 <../Ejercicio2-DisenoDeCeldas/1CeldaSallenKey/images/circLTspiceSK.png> <../Ejercicio2-DisenoDeCeldas/1CeldaSallenKey/images/SKGain.png> <../Ejercicio2-DisenoDeCeldas/1CeldaSallenKey/images/SKphase.png>]
-<../Ejercicio2-DisenoDeCeldas/1CeldaSallenKey/images/simuMagNormalizados.png, id=376, 1395.71437pt x 659.46375pt>
+<../Ejercicio2-DisenoDeCeldas/1CeldaSallenKey/images/simuMagNormalizados.png, id=425, 1395.71437pt x 659.46375pt>
 File: ../Ejercicio2-DisenoDeCeldas/1CeldaSallenKey/images/simuMagNormalizados.png Graphic file (type png)
 <use ../Ejercicio2-DisenoDeCeldas/1CeldaSallenKey/images/simuMagNormalizados.png>
 Package pdftex.def Info: ../Ejercicio2-DisenoDeCeldas/1CeldaSallenKey/images/simuMagNormalizados.png  used on input line 361.
 (pdftex.def)             Requested size: 358.50314pt x 169.38362pt.
-<../Ejercicio2-DisenoDeCeldas/1CeldaSallenKey/images/simuFaseNormalizados.png, id=377, 1424.32124pt x 663.22781pt>
+<../Ejercicio2-DisenoDeCeldas/1CeldaSallenKey/images/simuFaseNormalizados.png, id=426, 1424.32124pt x 663.22781pt>
 File: ../Ejercicio2-DisenoDeCeldas/1CeldaSallenKey/images/simuFaseNormalizados.png Graphic file (type png)
 <use ../Ejercicio2-DisenoDeCeldas/1CeldaSallenKey/images/simuFaseNormalizados.png>
 Package pdftex.def Info: ../Ejercicio2-DisenoDeCeldas/1CeldaSallenKey/images/simuFaseNormalizados.png  used on input line 368.
 (pdftex.def)             Requested size: 358.50314pt x 166.92987pt.
-<../Ejercicio2-DisenoDeCeldas/1CeldaSallenKey/images/MCSinPreset.png, id=378, 462.528pt x 346.896pt>
+<../Ejercicio2-DisenoDeCeldas/1CeldaSallenKey/images/MCSinPreset.png, id=427, 462.528pt x 346.896pt>
 File: ../Ejercicio2-DisenoDeCeldas/1CeldaSallenKey/images/MCSinPreset.png Graphic file (type png)
 <use ../Ejercicio2-DisenoDeCeldas/1CeldaSallenKey/images/MCSinPreset.png>
 Package pdftex.def Info: ../Ejercicio2-DisenoDeCeldas/1CeldaSallenKey/images/MCSinPreset.png  used on input line 375.
 (pdftex.def)             Requested size: 358.50314pt x 268.88925pt.
  [18 <../Ejercicio2-DisenoDeCeldas/1CeldaSallenKey/images/simuMagNormalizados.png> <../Ejercicio2-DisenoDeCeldas/1CeldaSallenKey/images/simuFaseNormalizados.png>]
-<../Ejercicio2-DisenoDeCeldas/1CeldaSallenKey/images/MAG1stOrder.png, id=386, 1410.0178pt x 666.99188pt>
+<../Ejercicio2-DisenoDeCeldas/1CeldaSallenKey/images/MAG1stOrder.png, id=435, 1410.0178pt x 666.99188pt>
 File: ../Ejercicio2-DisenoDeCeldas/1CeldaSallenKey/images/MAG1stOrder.png Graphic file (type png)
 <use ../Ejercicio2-DisenoDeCeldas/1CeldaSallenKey/images/MAG1stOrder.png>
 Package pdftex.def Info: ../Ejercicio2-DisenoDeCeldas/1CeldaSallenKey/images/MAG1stOrder.png  used on input line 382.
 (pdftex.def)             Requested size: 358.50314pt x 169.58707pt.
-<../Ejercicio2-DisenoDeCeldas/1CeldaSallenKey/images/SKsimu.png, id=387, 1422.81563pt x 666.99188pt>
+<../Ejercicio2-DisenoDeCeldas/1CeldaSallenKey/images/SKsimu.png, id=436, 1422.81563pt x 666.99188pt>
 File: ../Ejercicio2-DisenoDeCeldas/1CeldaSallenKey/images/SKsimu.png Graphic file (type png)
 <use ../Ejercicio2-DisenoDeCeldas/1CeldaSallenKey/images/SKsimu.png>
 Package pdftex.def Info: ../Ejercicio2-DisenoDeCeldas/1CeldaSallenKey/images/SKsimu.png  used on input line 389.
@@ -1100,29 +1100,29 @@ Package pdftex.def Info: ../Ejercicio2-DisenoDeCeldas/1CeldaSallenKey/images/SKs
 LaTeX Warning: Reference `fig:MCE96' on page 19 undefined on input line 394.
 
 [19 <../Ejercicio2-DisenoDeCeldas/1CeldaSallenKey/images/MCSinPreset.png> <../Ejercicio2-DisenoDeCeldas/1CeldaSallenKey/images/MAG1stOrder.png> <../Ejercicio2-DisenoDeCeldas/1CeldaSallenKey/images/SKsimu.png>]
-<../Ejercicio2-DisenoDeCeldas/1CeldaSallenKey/images/MCE24.png, id=396, 462.528pt x 346.896pt>
+<../Ejercicio2-DisenoDeCeldas/1CeldaSallenKey/images/MCE24.png, id=445, 462.528pt x 346.896pt>
 File: ../Ejercicio2-DisenoDeCeldas/1CeldaSallenKey/images/MCE24.png Graphic file (type png)
 <use ../Ejercicio2-DisenoDeCeldas/1CeldaSallenKey/images/MCE24.png>
 Package pdftex.def Info: ../Ejercicio2-DisenoDeCeldas/1CeldaSallenKey/images/MCE24.png  used on input line 398.
 (pdftex.def)             Requested size: 358.50314pt x 268.88925pt.
-<../Ejercicio2-DisenoDeCeldas/1CeldaSallenKey/images/Zin.png, id=397, 1444.64719pt x 672.26157pt>
+<../Ejercicio2-DisenoDeCeldas/1CeldaSallenKey/images/Zin.png, id=446, 1444.64719pt x 672.26157pt>
 File: ../Ejercicio2-DisenoDeCeldas/1CeldaSallenKey/images/Zin.png Graphic file (type png)
 <use ../Ejercicio2-DisenoDeCeldas/1CeldaSallenKey/images/Zin.png>
 Package pdftex.def Info: ../Ejercicio2-DisenoDeCeldas/1CeldaSallenKey/images/Zin.png  used on input line 407.
 (pdftex.def)             Requested size: 358.50314pt x 166.82378pt.
  [20 <../Ejercicio2-DisenoDeCeldas/1CeldaSallenKey/images/MCE24.png> <../Ejercicio2-DisenoDeCeldas/1CeldaSallenKey/images/Zin.png>]
-<../Ejercicio2-DisenoDeCeldas/1CeldaSallenKey/images/SallenKeyGain.png, id=405, 2371.86125pt x 1430.34375pt>
+<../Ejercicio2-DisenoDeCeldas/1CeldaSallenKey/images/SallenKeyGain.png, id=454, 2371.86125pt x 1430.34375pt>
 File: ../Ejercicio2-DisenoDeCeldas/1CeldaSallenKey/images/SallenKeyGain.png Graphic file (type png)
 <use ../Ejercicio2-DisenoDeCeldas/1CeldaSallenKey/images/SallenKeyGain.png>
 Package pdftex.def Info: ../Ejercicio2-DisenoDeCeldas/1CeldaSallenKey/images/SallenKeyGain.png  used on input line 426.
 (pdftex.def)             Requested size: 358.50314pt x 216.1792pt.
  [21 <../Ejercicio2-DisenoDeCeldas/1CeldaSallenKey/images/SallenKeyGain.png>]
-<../Ejercicio2-DisenoDeCeldas/2CELDARAUCH/Informe/circuito3.png, id=412, 428.802pt x 292.09125pt>
+<../Ejercicio2-DisenoDeCeldas/2CELDARAUCH/Informe/circuito3.png, id=461, 428.802pt x 292.09125pt>
 File: ../Ejercicio2-DisenoDeCeldas/2CELDARAUCH/Informe/circuito3.png Graphic file (type png)
 <use ../Ejercicio2-DisenoDeCeldas/2CELDARAUCH/Informe/circuito3.png>
 Package pdftex.def Info: ../Ejercicio2-DisenoDeCeldas/2CELDARAUCH/Informe/circuito3.png  used on input line 467.
 (pdftex.def)             Requested size: 257.28317pt x 175.25609pt.
-<../Ejercicio2-DisenoDeCeldas/2CELDARAUCH/Informe/circuito.png, id=413, 428.802pt x 292.09125pt>
+<../Ejercicio2-DisenoDeCeldas/2CELDARAUCH/Informe/circuito.png, id=462, 428.802pt x 292.09125pt>
 File: ../Ejercicio2-DisenoDeCeldas/2CELDARAUCH/Informe/circuito.png Graphic file (type png)
 <use ../Ejercicio2-DisenoDeCeldas/2CELDARAUCH/Informe/circuito.png>
 Package pdftex.def Info: ../Ejercicio2-DisenoDeCeldas/2CELDARAUCH/Informe/circuito.png  used on input line 476.
@@ -1139,459 +1139,298 @@ LaTeX Warning: Reference `ej22eqhf' on page 23 undefined on input line 561.
 LaTeX Warning: Reference `ej22eqvalor' on page 24 undefined on input line 576.
 
 [24]
-<../Ejercicio2-DisenoDeCeldas/2CELDARAUCH/Informe/monte.PNG, id=445, 779.3115pt x 296.307pt>
+<../Ejercicio2-DisenoDeCeldas/2CELDARAUCH/Informe/monte.PNG, id=494, 779.3115pt x 296.307pt>
 File: ../Ejercicio2-DisenoDeCeldas/2CELDARAUCH/Informe/monte.PNG Graphic file (type png)
 <use ../Ejercicio2-DisenoDeCeldas/2CELDARAUCH/Informe/monte.PNG>
 Package pdftex.def Info: ../Ejercicio2-DisenoDeCeldas/2CELDARAUCH/Informe/monte.PNG  used on input line 644.
 (pdftex.def)             Requested size: 506.54646pt x 192.59726pt.
-<../Ejercicio2-DisenoDeCeldas/2CELDARAUCH/Informe/disp1.png, id=446, 642.4pt x 481.8pt>
+<../Ejercicio2-DisenoDeCeldas/2CELDARAUCH/Informe/disp1.png, id=495, 642.4pt x 481.8pt>
 File: ../Ejercicio2-DisenoDeCeldas/2CELDARAUCH/Informe/disp1.png Graphic file (type png)
 <use ../Ejercicio2-DisenoDeCeldas/2CELDARAUCH/Informe/disp1.png>
 Package pdftex.def Info: ../Ejercicio2-DisenoDeCeldas/2CELDARAUCH/Informe/disp1.png  used on input line 653.
 (pdftex.def)             Requested size: 321.19922pt x 240.8994pt.
-<../Ejercicio2-DisenoDeCeldas/2CELDARAUCH/Informe/disp2.png, id=447, 642.4pt x 481.8pt>
+<../Ejercicio2-DisenoDeCeldas/2CELDARAUCH/Informe/disp2.png, id=496, 642.4pt x 481.8pt>
 File: ../Ejercicio2-DisenoDeCeldas/2CELDARAUCH/Informe/disp2.png Graphic file (type png)
 <use ../Ejercicio2-DisenoDeCeldas/2CELDARAUCH/Informe/disp2.png>
 Package pdftex.def Info: ../Ejercicio2-DisenoDeCeldas/2CELDARAUCH/Informe/disp2.png  used on input line 660.
 (pdftex.def)             Requested size: 321.19922pt x 240.8994pt.
  [25 <../Ejercicio2-DisenoDeCeldas/2CELDARAUCH/Informe/monte.PNG> <../Ejercicio2-DisenoDeCeldas/2CELDARAUCH/Informe/disp1.png (PNG copy)>]
-<../Ejercicio2-DisenoDeCeldas/2CELDARAUCH/Informe/bodemag.png, id=455, 741.52031pt x 395.22656pt>
+<../Ejercicio2-DisenoDeCeldas/2CELDARAUCH/Informe/bodemag.png, id=504, 741.52031pt x 395.22656pt>
 File: ../Ejercicio2-DisenoDeCeldas/2CELDARAUCH/Informe/bodemag.png Graphic file (type png)
 <use ../Ejercicio2-DisenoDeCeldas/2CELDARAUCH/Informe/bodemag.png>
 Package pdftex.def Info: ../Ejercicio2-DisenoDeCeldas/2CELDARAUCH/Informe/bodemag.png  used on input line 674.
 (pdftex.def)             Requested size: 444.91562pt x 237.13776pt.
-<../Ejercicio2-DisenoDeCeldas/2CELDARAUCH/Informe/bodepha.png, id=456, 741.52031pt x 395.22656pt>
+<../Ejercicio2-DisenoDeCeldas/2CELDARAUCH/Informe/bodepha.png, id=505, 741.52031pt x 395.22656pt>
 File: ../Ejercicio2-DisenoDeCeldas/2CELDARAUCH/Informe/bodepha.png Graphic file (type png)
 <use ../Ejercicio2-DisenoDeCeldas/2CELDARAUCH/Informe/bodepha.png>
 Package pdftex.def Info: ../Ejercicio2-DisenoDeCeldas/2CELDARAUCH/Informe/bodepha.png  used on input line 681.
 (pdftex.def)             Requested size: 444.91562pt x 237.13776pt.
  [26 <../Ejercicio2-DisenoDeCeldas/2CELDARAUCH/Informe/disp2.png (PNG copy)> <../Ejercicio2-DisenoDeCeldas/2CELDARAUCH/Informe/bodemag.png (PNG copy)>]
-<../Ejercicio2-DisenoDeCeldas/2CELDARAUCH/Informe/zin.png, id=463, 675.27281pt x 395.22656pt>
+<../Ejercicio2-DisenoDeCeldas/2CELDARAUCH/Informe/zin.png, id=512, 675.27281pt x 395.22656pt>
 File: ../Ejercicio2-DisenoDeCeldas/2CELDARAUCH/Informe/zin.png Graphic file (type png)
 <use ../Ejercicio2-DisenoDeCeldas/2CELDARAUCH/Informe/zin.png>
 Package pdftex.def Info: ../Ejercicio2-DisenoDeCeldas/2CELDARAUCH/Informe/zin.png  used on input line 695.
 (pdftex.def)             Requested size: 337.63557pt x 197.6128pt.
  [27 <../Ejercicio2-DisenoDeCeldas/2CELDARAUCH/Informe/bodepha.png (PNG copy)> <../Ejercicio2-DisenoDeCeldas/2CELDARAUCH/Informe/zin.png (PNG copy)>]
-<../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/Celda Deliyannis.png, id=470, 264.08662pt x 246.32025pt>
+<../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/Celda Deliyannis.png, id=519, 264.08662pt x 246.32025pt>
 File: ../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/Celda Deliyannis.png Graphic file (type png)
 <use ../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/Celda Deliyannis.png>
-Package pdftex.def Info: ../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/Celda Deliyannis.png  used on input line 740.
+Package pdftex.def Info: ../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/Celda Deliyannis.png  used on input line 736.
 (pdftex.def)             Requested size: 409.72124pt x 382.19084pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/Transformaciones SGB.png, id=471, 307.1475pt x 334.851pt>
+<../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/Transformaciones SGB.png, id=520, 307.1475pt x 334.851pt>
 File: ../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/Transformaciones SGB.png Graphic file (type png)
 <use ../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/Transformaciones SGB.png>
-Package pdftex.def Info: ../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/Transformaciones SGB.png  used on input line 750.
+Package pdftex.def Info: ../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/Transformaciones SGB.png  used on input line 746.
 (pdftex.def)             Requested size: 409.72124pt x 446.70534pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-LaTeX Warning: Reference `transSGM' on page 28 undefined on input line 756.
+LaTeX Warning: Reference `transSGM' on page 28 undefined on input line 752.
 
 
-LaTeX Warning: Reference `transSGM' on page 28 undefined on input line 756.
+LaTeX Warning: Reference `transSGM' on page 28 undefined on input line 752.
 
 [28]
-<../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/HP biquad.png, id=480, 343.58362pt x 231.86626pt>
+<../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/HP biquad.png, id=530, 343.58362pt x 231.86626pt>
 File: ../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/HP biquad.png Graphic file (type png)
 <use ../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/HP biquad.png>
-Package pdftex.def Info: ../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/HP biquad.png  used on input line 779.
+Package pdftex.def Info: ../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/HP biquad.png  used on input line 775.
 (pdftex.def)             Requested size: 307.29288pt x 207.38632pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/LP biquad.png, id=481, 353.52075pt x 235.17862pt>
+<../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/LP biquad.png, id=531, 353.52075pt x 235.17862pt>
 File: ../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/LP biquad.png Graphic file (type png)
 <use ../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/LP biquad.png>
-Package pdftex.def Info: ../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/LP biquad.png  used on input line 786.
+Package pdftex.def Info: ../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/LP biquad.png  used on input line 782.
 (pdftex.def)             Requested size: 307.29288pt x 204.43507pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-LaTeX Warning: Reference `eq transferencia general' on page 29 undefined on input line 794.
+LaTeX Warning: Reference `eq transferencia general' on page 29 undefined on input line 790.
 
 [29 <../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/Celda Deliyannis.png>] [30 <../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/Transformaciones SGB.png>] [31 <../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/HP biquad.png> <../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/LP biquad.png>]
 
-LaTeX Warning: Reference `BodeSimulado' on page 32 undefined on input line 917.
+LaTeX Warning: Reference `BodeSimulado' on page 32 undefined on input line 913.
 
 
-LaTeX Warning: Reference `FaseSimulado' on page 32 undefined on input line 917.
+LaTeX Warning: Reference `FaseSimulado' on page 32 undefined on input line 913.
 
 
-LaTeX Warning: Reference `PolosSedra' on page 32 undefined on input line 917.
+LaTeX Warning: Reference `PolosSedra' on page 32 undefined on input line 913.
 
-<../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/MagnitudSedra.png, id=519, 364.9635pt x 178.5069pt>
+<../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/MagnitudSedra.png, id=569, 364.9635pt x 178.5069pt>
 File: ../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/MagnitudSedra.png Graphic file (type png)
 <use ../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/MagnitudSedra.png>
-Package pdftex.def Info: ../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/MagnitudSedra.png  used on input line 920.
+Package pdftex.def Info: ../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/MagnitudSedra.png  used on input line 916.
 (pdftex.def)             Requested size: 307.29288pt x 150.30974pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/Fase Sedra.png, id=520, 364.9635pt x 178.5069pt>
+<../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/Fase Sedra.png, id=570, 364.9635pt x 178.5069pt>
 File: ../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/Fase Sedra.png Graphic file (type png)
 <use ../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/Fase Sedra.png>
-Package pdftex.def Info: ../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/Fase Sedra.png  used on input line 927.
+Package pdftex.def Info: ../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/Fase Sedra.png  used on input line 923.
 (pdftex.def)             Requested size: 307.29288pt x 150.30974pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/PolosSedra.png, id=521, 364.9635pt x 178.5069pt>
+<../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/PolosSedra.png, id=571, 364.9635pt x 178.5069pt>
 File: ../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/PolosSedra.png Graphic file (type png)
 <use ../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/PolosSedra.png>
-Package pdftex.def Info: ../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/PolosSedra.png  used on input line 934.
+Package pdftex.def Info: ../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/PolosSedra.png  used on input line 930.
 (pdftex.def)             Requested size: 307.29288pt x 150.30974pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
+[32 <../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/MagnitudSedra.png>]
 
-LaTeX Warning: Reference `HPB' on page 32 undefined on input line 953.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
+LaTeX Warning: Reference `HPB' on page 33 undefined on input line 949.
 
 
-LaTeX Warning: Reference `EcH1sedra' on page 32 undefined on input line 972.
-
-[32]
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-LaTeX Warning: Reference `coef n2 HPB' on page 33 undefined on input line 1012.
+LaTeX Warning: Reference `EcH1sedra' on page 33 undefined on input line 968.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-LaTeX Warning: Reference `EcH2sedra' on page 33 undefined on input line 1040.
-
-
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-LaTeX Warning: Reference `eq Q0' on page 33 undefined on input line 1056.
+LaTeX Warning: Reference `coef n2 HPB' on page 33 undefined on input line 1008.
+
+[33 <../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/Fase Sedra.png> <../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/PolosSedra.png>]
+
+LaTeX Warning: Reference `EcH2sedra' on page 34 undefined on input line 1036.
 
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+LaTeX Warning: Reference `eq Q0' on page 34 undefined on input line 1052.
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[33 <../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/MagnitudSedra.png> <../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/Fase Sedra.png>]
-<../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/MagImpedancia.png, id=543, 346.896pt x 229.15613pt>
+[34]
+<../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/MagImpedancia.png, id=605, 346.896pt x 229.15613pt>
 File: ../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/MagImpedancia.png Graphic file (type png)
 <use ../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/MagImpedancia.png>
-Package pdftex.def Info: ../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/MagImpedancia.png  used on input line 1103.
+Package pdftex.def Info: ../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/MagImpedancia.png  used on input line 1099.
 (pdftex.def)             Requested size: 256.0748pt x 169.16725pt.
-<../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/MagEtapaI.png, id=544, 489.2679pt x 192.9609pt>
+<../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/MagEtapaI.png, id=606, 489.2679pt x 192.9609pt>
 File: ../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/MagEtapaI.png Graphic file (type png)
 <use ../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/MagEtapaI.png>
-Package pdftex.def Info: ../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/MagEtapaI.png  used on input line 1115.
+Package pdftex.def Info: ../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/MagEtapaI.png  used on input line 1111.
 (pdftex.def)             Requested size: 256.0748pt x 100.99388pt.
-<../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/FaseEtapaI.png, id=545, 489.2679pt x 200.1879pt>
+<../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/FaseEtapaI.png, id=607, 489.2679pt x 200.1879pt>
 File: ../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/FaseEtapaI.png Graphic file (type png)
 <use ../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/FaseEtapaI.png>
-Package pdftex.def Info: ../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/FaseEtapaI.png  used on input line 1118.
+Package pdftex.def Info: ../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/FaseEtapaI.png  used on input line 1114.
 (pdftex.def)             Requested size: 256.0748pt x 104.77641pt.
 
-Overfull \hbox (6.66666pt too wide) in paragraph at lines 1115--1119
+Overfull \hbox (6.66666pt too wide) in paragraph at lines 1111--1115
  [][][][] 
  []
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/MagEtapaII.png, id=546, 489.2679pt x 192.9609pt>
+<../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/MagEtapaII.png, id=608, 489.2679pt x 192.9609pt>
 File: ../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/MagEtapaII.png Graphic file (type png)
 <use ../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/MagEtapaII.png>
-Package pdftex.def Info: ../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/MagEtapaII.png  used on input line 1127.
+Package pdftex.def Info: ../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/MagEtapaII.png  used on input line 1123.
 (pdftex.def)             Requested size: 256.0748pt x 100.99388pt.
-<../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/FaseEtapaII.png, id=547, 489.2679pt x 200.1879pt>
+<../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/FaseEtapaII.png, id=609, 489.2679pt x 200.1879pt>
 File: ../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/FaseEtapaII.png Graphic file (type png)
 <use ../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/FaseEtapaII.png>
-Package pdftex.def Info: ../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/FaseEtapaII.png  used on input line 1130.
+Package pdftex.def Info: ../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/FaseEtapaII.png  used on input line 1126.
 (pdftex.def)             Requested size: 256.0748pt x 104.77641pt.
 
-Overfull \hbox (6.66666pt too wide) in paragraph at lines 1127--1131
+Overfull \hbox (6.66666pt too wide) in paragraph at lines 1123--1127
  [][][][] 
  []
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/MagSedra.png, id=548, 489.2679pt x 192.9609pt>
+[35 <../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/MagImpedancia.png> <../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/MagEtapaI.png> <../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/FaseEtapaI.png>]
+<../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/MagSedra.png, id=622, 489.2679pt x 192.9609pt>
 File: ../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/MagSedra.png Graphic file (type png)
 <use ../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/MagSedra.png>
-Package pdftex.def Info: ../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/MagSedra.png  used on input line 1141.
+Package pdftex.def Info: ../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/MagSedra.png  used on input line 1137.
 (pdftex.def)             Requested size: 256.0748pt x 100.99388pt.
-<../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/FaseSedra.png, id=549, 489.2679pt x 200.1879pt>
+<../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/FaseSedra.png, id=623, 489.2679pt x 200.1879pt>
 File: ../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/FaseSedra.png Graphic file (type png)
 <use ../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/FaseSedra.png>
-Package pdftex.def Info: ../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/FaseSedra.png  used on input line 1144.
+Package pdftex.def Info: ../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/FaseSedra.png  used on input line 1140.
 (pdftex.def)             Requested size: 256.0748pt x 104.77641pt.
 
-Overfull \hbox (6.66666pt too wide) in paragraph at lines 1141--1145
+Overfull \hbox (6.66666pt too wide) in paragraph at lines 1137--1141
  [][][][] 
  []
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[34 <../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/PolosSedra.png> <../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/MagImpedancia.png>]
-
-LaTeX Warning: Reference `fig:KHN' on page 35 undefined on input line 1169.
+LaTeX Warning: Reference `fig:KHN' on page 36 undefined on input line 1165.
 
 
-LaTeX Warning: Reference `fig:KHNblocks' on page 35 undefined on input line 1169.
+LaTeX Warning: Reference `fig:KHNblocks' on page 36 undefined on input line 1165.
+
+[36 <../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/MagEtapaII.png> <../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/FaseEtapaII.png> <../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/MagSedra.png> <../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/FaseSedra.png>]
+<../Ejercicio2-DisenoDeCeldas/4CeldaUniversal/Informe/KHN.png, id=639, 1525.7pt x 580.1675pt>
+File: ../Ejercicio2-DisenoDeCeldas/4CeldaUniversal/Informe/KHN.png Graphic file (type png)
+<use ../Ejercicio2-DisenoDeCeldas/4CeldaUniversal/Informe/KHN.png>
+Package pdftex.def Info: ../Ejercicio2-DisenoDeCeldas/4CeldaUniversal/Informe/KHN.png  used on input line 1169.
+(pdftex.def)             Requested size: 358.50314pt x 136.32167pt.
+<../Ejercicio2-DisenoDeCeldas/4CeldaUniversal/Informe/KHNblocks.png, id=640, 1159.33125pt x 351.3125pt>
+File: ../Ejercicio2-DisenoDeCeldas/4CeldaUniversal/Informe/KHNblocks.png Graphic file (type png)
+<use ../Ejercicio2-DisenoDeCeldas/4CeldaUniversal/Informe/KHNblocks.png>
+Package pdftex.def Info: ../Ejercicio2-DisenoDeCeldas/4CeldaUniversal/Informe/KHNblocks.png  used on input line 1176.
+(pdftex.def)             Requested size: 358.50314pt x 108.63771pt.
 
 
-LaTeX Warning: File `KHN.png' not found on input line 1173.
+LaTeX Warning: Reference `eq:KHN1' on page 37 undefined on input line 1210.
+
+[37 <../Ejercicio2-DisenoDeCeldas/4CeldaUniversal/Informe/KHN.png> <../Ejercicio2-DisenoDeCeldas/4CeldaUniversal/Informe/KHNblocks.png>]
+
+LaTeX Warning: Reference `fig:KHN_BR' on page 38 undefined on input line 1251.
+
+<../Ejercicio2-DisenoDeCeldas/4CeldaUniversal/Informe/KHN_BR.png, id=655, 1726.45pt x 843.15pt>
+File: ../Ejercicio2-DisenoDeCeldas/4CeldaUniversal/Informe/KHN_BR.png Graphic file (type png)
+<use ../Ejercicio2-DisenoDeCeldas/4CeldaUniversal/Informe/KHN_BR.png>
+Package pdftex.def Info: ../Ejercicio2-DisenoDeCeldas/4CeldaUniversal/Informe/KHN_BR.png  used on input line 1256.
+(pdftex.def)             Requested size: 409.72124pt x 200.09581pt.
+
+LaTeX Warning: Reference `fig:TowThomas' on page 38 undefined on input line 1273.
+
+<../Ejercicio2-DisenoDeCeldas/4CeldaUniversal/Informe/TowThomas.png, id=656, 1525.7pt x 622.325pt>
+File: ../Ejercicio2-DisenoDeCeldas/4CeldaUniversal/Informe/TowThomas.png Graphic file (type png)
+<use ../Ejercicio2-DisenoDeCeldas/4CeldaUniversal/Informe/TowThomas.png>
+Package pdftex.def Info: ../Ejercicio2-DisenoDeCeldas/4CeldaUniversal/Informe/TowThomas.png  used on input line 1277.
+(pdftex.def)             Requested size: 409.72124pt x 167.11838pt.
+[38 <../Ejercicio2-DisenoDeCeldas/4CeldaUniversal/Informe/KHN_BR.png> <../Ejercicio2-DisenoDeCeldas/4CeldaUniversal/Informe/TowThomas.png>]
+<../Ejercicio2-DisenoDeCeldas/4CeldaUniversal/Informe/celdaAM.png, id=667, 1445.4pt x 622.325pt>
+File: ../Ejercicio2-DisenoDeCeldas/4CeldaUniversal/Informe/celdaAM.png Graphic file (type png)
+<use ../Ejercicio2-DisenoDeCeldas/4CeldaUniversal/Informe/celdaAM.png>
+Package pdftex.def Info: ../Ejercicio2-DisenoDeCeldas/4CeldaUniversal/Informe/celdaAM.png  used on input line 1313.
+(pdftex.def)             Requested size: 460.9315pt x 198.45486pt.
+<../Ejercicio2-DisenoDeCeldas/4CeldaUniversal/Informe/FleischerTow.png, id=668, 1525.7pt x 800.9925pt>
+File: ../Ejercicio2-DisenoDeCeldas/4CeldaUniversal/Informe/FleischerTow.png Graphic file (type png)
+<use ../Ejercicio2-DisenoDeCeldas/4CeldaUniversal/Informe/FleischerTow.png>
+Package pdftex.def Info: ../Ejercicio2-DisenoDeCeldas/4CeldaUniversal/Informe/FleischerTow.png  used on input line 1326.
+(pdftex.def)             Requested size: 460.9315pt x 241.98625pt.
+ [39 <../Ejercicio2-DisenoDeCeldas/4CeldaUniversal/Informe/celdaAM.png>] [40 <../Ejercicio2-DisenoDeCeldas/4CeldaUniversal/Informe/FleischerTow.png>]
+<../Ejercicio2-DisenoDeCeldas/4CeldaUniversal/Informe/att.png, id=689, 601.2864pt x 456.7464pt>
+File: ../Ejercicio2-DisenoDeCeldas/4CeldaUniversal/Informe/att.png Graphic file (type png)
+<use ../Ejercicio2-DisenoDeCeldas/4CeldaUniversal/Informe/att.png>
+Package pdftex.def Info: ../Ejercicio2-DisenoDeCeldas/4CeldaUniversal/Informe/att.png  used on input line 1420.
+(pdftex.def)             Requested size: 300.64246pt x 228.37263pt.
+ [41 <../Ejercicio2-DisenoDeCeldas/4CeldaUniversal/Informe/att.png>]
+
+LaTeX Warning: Reference `ej4etapas' on page 42 undefined on input line 1467.
 
 
-../Ejercicio2-DisenoDeCeldas/Ejercicio-2.tex:1173: Package pdftex.def Error: File `KHN.png' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1173 ...egraphics[width= 0.7\textwidth]{KHN.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[35]
-Overfull \vbox (161.98277pt too high) has occurred while \output is active []
-
- [36]
-
-LaTeX Warning: File `KHNblocks.png' not found on input line 1180.
-
-
-../Ejercicio2-DisenoDeCeldas/Ejercicio-2.tex:1180: Package pdftex.def Error: File `KHNblocks.png' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1180 ...ics[width= 0.7\textwidth]{KHNblocks.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[37 <../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/MagEtapaI.png> <../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/FaseEtapaI.png> <../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/MagEtapaII.png> <../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/FaseEtapaII.png>]
-
-LaTeX Warning: Reference `eq:KHN1' on page 38 undefined on input line 1214.
-
-
-LaTeX Warning: Reference `fig:KHN_BR' on page 38 undefined on input line 1255.
-
-
-LaTeX Warning: File `KHN_BR.png' not found on input line 1260.
-
-
-../Ejercicio2-DisenoDeCeldas/Ejercicio-2.tex:1260: Package pdftex.def Error: File `KHN_BR.png' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1260 ...aphics[width= 0.8\textwidth]{KHN_BR.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[38 <../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/MagSedra.png> <../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/FaseSedra.png>]
-
-LaTeX Warning: Reference `fig:TowThomas' on page 39 undefined on input line 1277.
-
-
-LaTeX Warning: File `TowThomas.png' not found on input line 1281.
-
-
-../Ejercicio2-DisenoDeCeldas/Ejercicio-2.tex:1281: Package pdftex.def Error: File `TowThomas.png' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1281 ...ics[width= 0.8\textwidth]{TowThomas.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[39]
-
-LaTeX Warning: File `celdaAM.png' not found on input line 1317.
-
-
-../Ejercicio2-DisenoDeCeldas/Ejercicio-2.tex:1317: Package pdftex.def Error: File `celdaAM.png' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1317 ...phics[width= 0.9\textwidth]{celdaAM.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[40]
-
-LaTeX Warning: File `FleischerTow.png' not found on input line 1330.
-
-
-../Ejercicio2-DisenoDeCeldas/Ejercicio-2.tex:1330: Package pdftex.def Error: File `FleischerTow.png' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1330 ...[width= 0.9\textwidth]{FleischerTow.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[41] [42]
-
-LaTeX Warning: File `att.png' not found on input line 1424.
-
-
-../Ejercicio2-DisenoDeCeldas/Ejercicio-2.tex:1424: Package pdftex.def Error: File `att.png' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1424     \includegraphics[scale = 0.5]{att.png}
-                                                 
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[43]
-
-LaTeX Warning: Reference `ej4etapas' on page 44 undefined on input line 1471.
-
-[44]
-Overfull \hbox (16.35138pt too wide) in paragraph at lines 1529--1544
+Overfull \hbox (16.35138pt too wide) in paragraph at lines 1525--1540
  [][] 
  []
 
-
-LaTeX Warning: File `monte.PNG' not found on input line 1553.
-
-
-../Ejercicio2-DisenoDeCeldas/Ejercicio-2.tex:1553: Package pdftex.def Error: File `monte.PNG' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1553 ...\includegraphics[scale = 0.6]{monte.PNG}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: File `dis1.png' not found on input line 1562.
-
-
-../Ejercicio2-DisenoDeCeldas/Ejercicio-2.tex:1562: Package pdftex.def Error: File `dis1.png' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1562     \includegraphics[scale = 0.4]{dis1.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: File `dis2.png' not found on input line 1569.
-
-
-../Ejercicio2-DisenoDeCeldas/Ejercicio-2.tex:1569: Package pdftex.def Error: File `dis2.png' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1569     \includegraphics[scale = 0.4]{dis2.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[45]
-
-LaTeX Warning: File `dis3.png' not found on input line 1576.
-
-
-../Ejercicio2-DisenoDeCeldas/Ejercicio-2.tex:1576: Package pdftex.def Error: File `dis3.png' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1576     \includegraphics[scale = 0.4]{dis3.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: File `zin1.PNG' not found on input line 1597.
-
-
-../Ejercicio2-DisenoDeCeldas/Ejercicio-2.tex:1597: Package pdftex.def Error: File `zin1.PNG' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1597     \includegraphics[scale = 0.7]{zin1.PNG}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: File `zin2.PNG' not found on input line 1606.
-
-
-../Ejercicio2-DisenoDeCeldas/Ejercicio-2.tex:1606: Package pdftex.def Error: File `zin2.PNG' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1606     \includegraphics[scale = 0.7]{zin2.PNG}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-) [46]
+[42]
+<../Ejercicio2-DisenoDeCeldas/4CeldaUniversal/Informe/monte.PNG, id=707, 687.16725pt x 290.88675pt>
+File: ../Ejercicio2-DisenoDeCeldas/4CeldaUniversal/Informe/monte.PNG Graphic file (type png)
+<use ../Ejercicio2-DisenoDeCeldas/4CeldaUniversal/Informe/monte.PNG>
+Package pdftex.def Info: ../Ejercicio2-DisenoDeCeldas/4CeldaUniversal/Informe/monte.PNG  used on input line 1549.
+(pdftex.def)             Requested size: 412.30353pt x 174.53339pt.
+<../Ejercicio2-DisenoDeCeldas/4CeldaUniversal/Informe/dis1.png, id=708, 642.4pt x 481.8pt>
+File: ../Ejercicio2-DisenoDeCeldas/4CeldaUniversal/Informe/dis1.png Graphic file (type png)
+<use ../Ejercicio2-DisenoDeCeldas/4CeldaUniversal/Informe/dis1.png>
+Package pdftex.def Info: ../Ejercicio2-DisenoDeCeldas/4CeldaUniversal/Informe/dis1.png  used on input line 1558.
+(pdftex.def)             Requested size: 256.95544pt x 192.71658pt.
+ [43 <../Ejercicio2-DisenoDeCeldas/4CeldaUniversal/Informe/monte.PNG>]
+<../Ejercicio2-DisenoDeCeldas/4CeldaUniversal/Informe/dis2.png, id=716, 642.4pt x 481.8pt>
+File: ../Ejercicio2-DisenoDeCeldas/4CeldaUniversal/Informe/dis2.png Graphic file (type png)
+<use ../Ejercicio2-DisenoDeCeldas/4CeldaUniversal/Informe/dis2.png>
+Package pdftex.def Info: ../Ejercicio2-DisenoDeCeldas/4CeldaUniversal/Informe/dis2.png  used on input line 1565.
+(pdftex.def)             Requested size: 256.95544pt x 192.71658pt.
+<../Ejercicio2-DisenoDeCeldas/4CeldaUniversal/Informe/dis3.png, id=717, 642.4pt x 481.8pt>
+File: ../Ejercicio2-DisenoDeCeldas/4CeldaUniversal/Informe/dis3.png Graphic file (type png)
+<use ../Ejercicio2-DisenoDeCeldas/4CeldaUniversal/Informe/dis3.png>
+Package pdftex.def Info: ../Ejercicio2-DisenoDeCeldas/4CeldaUniversal/Informe/dis3.png  used on input line 1572.
+(pdftex.def)             Requested size: 256.95544pt x 192.71658pt.
+ [44 <../Ejercicio2-DisenoDeCeldas/4CeldaUniversal/Informe/dis1.png (PNG copy)> <../Ejercicio2-DisenoDeCeldas/4CeldaUniversal/Informe/dis2.png (PNG copy)> <../Ejercicio2-DisenoDeCeldas/4CeldaUniversal/Informe/dis3.png (PNG copy)>]
+<../Ejercicio2-DisenoDeCeldas/4CeldaUniversal/Informe/zin1.PNG, id=725, 573.342pt x 216.81pt>
+File: ../Ejercicio2-DisenoDeCeldas/4CeldaUniversal/Informe/zin1.PNG Graphic file (type png)
+<use ../Ejercicio2-DisenoDeCeldas/4CeldaUniversal/Informe/zin1.PNG>
+Package pdftex.def Info: ../Ejercicio2-DisenoDeCeldas/4CeldaUniversal/Informe/zin1.PNG  used on input line 1593.
+(pdftex.def)             Requested size: 401.33665pt x 151.76596pt.
+<../Ejercicio2-DisenoDeCeldas/4CeldaUniversal/Informe/zin2.PNG, id=726, 574.5465pt x 213.79875pt>
+File: ../Ejercicio2-DisenoDeCeldas/4CeldaUniversal/Informe/zin2.PNG Graphic file (type png)
+<use ../Ejercicio2-DisenoDeCeldas/4CeldaUniversal/Informe/zin2.PNG>
+Package pdftex.def Info: ../Ejercicio2-DisenoDeCeldas/4CeldaUniversal/Informe/zin2.PNG  used on input line 1602.
+(pdftex.def)             Requested size: 402.1798pt x 149.6581pt.
+ [45 <../Ejercicio2-DisenoDeCeldas/4CeldaUniversal/Informe/zin1.PNG> <../Ejercicio2-DisenoDeCeldas/4CeldaUniversal/Informe/zin2.PNG>]) [46]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 20.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 20.
  (d:/Documents\GitHub\TC-Grupo6\TP4\Informe\build\main.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 20.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 20.
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: EC6178EFDD8B8AD8415C2BF8D26E4E59;4913.
 
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: 9D57756E1BBDB3DFD4D4039BE636C92F;3837
-(rerunfilecheck)             After:  A856592D37EF86186A95C6C6A807D2BE;4964.
 
 LaTeX Warning: There were undefined references.
 
@@ -1601,23 +1440,17 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 20.
  ) 
 Here is how much of TeX's memory you used:
- 36314 strings out of 480790
- 860948 string characters out of 2894453
- 1252545 words of memory out of 3000000
- 51425 multiletter control sequences out of 15000+200000
+ 36178 strings out of 480790
+ 862750 string characters out of 2894453
+ 1249545 words of memory out of 3000000
+ 51308 multiletter control sequences out of 15000+200000
  546539 words of font info for 78 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  71i,17n,73p,1379b,801s stack positions out of 5000i,500n,10000p,200000b,50000s
-pdfTeX warning (dest): name{subsection.2.9} has been referenced but does not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.2.8} has been referenced but does not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.2.7} has been referenced but does not exist, replaced by a fixed one
-
-{C:/Users/Facu Molina/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<C:/Users/Facu Molina/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/Facu Molina/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Facu Molina/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Users/Facu Molina/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/Facu Molina/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Facu Molina/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Facu Molina/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Facu Molina/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/Facu Molina/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/Facu Molina/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Facu Molina/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Facu Molina/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Facu Molina/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/Facu Molina/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/Facu Molina/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Facu Molina/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Facu Molina/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/Facu Molina/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/Facu Molina/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/Facu Molina/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/Facu Molina/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on d:/Documents\GitHub\TC-Grupo6\TP4\Informe\build\main.pdf (47 pages, 1899410 bytes).
+{C:/Users/Facu Molina/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<C:/Users/Facu Molina/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/Facu Molina/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Facu Molina/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Users/Facu Molina/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/Facu Molina/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Facu Molina/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Facu Molina/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Facu Molina/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/Facu Molina/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/Facu Molina/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Facu Molina/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Facu Molina/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Facu Molina/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/Facu Molina/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/Facu Molina/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Facu Molina/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Facu Molina/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/Facu Molina/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/Facu Molina/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/Facu Molina/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfrm1000.pfb>
+Output written on d:/Documents\GitHub\TC-Grupo6\TP4\Informe\build\main.pdf (47 pages, 2191178 bytes).
 PDF statistics:
- 809 PDF objects out of 1000 (max. 8388607)
- 271 named destinations out of 1000 (max. 500000)
- 653 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 862 PDF objects out of 1000 (max. 8388607)
+ 267 named destinations out of 1000 (max. 500000)
+ 822 words of extra memory for PDF output out of 10000 (max. 10000000)
 

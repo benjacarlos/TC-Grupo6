@@ -722,10 +722,6 @@ Entonces obtenemos el rango dinámico como:
 Si bien los resultados resultaron ser similares a la esperado, es indispensable mencionar que no es filtro preciso ya que los componentes utilizados fueron con tolerancias mayores a $5\%$ y no se utilizo prestes debido a la falta de un milímetro para conocer el valor utilizado. Por otro lado, se debe destacar la cualidad de esta celda de Rauch que se pudo obtener un elevado valor de factor de calidad debido a la realimentación positiva y negativa, pero se debe también tener cuidado ya que si los valores del ciclo de realimentación positiva no están bien diseñados, el circuito podría oscilar.
 
 
-\section{Introducción}
-
-En este apartado se realiza un análisis de la celda denominada Sedra-Ghorab-Martin para posteriormente diseñar, sintetizar y analizar un filtro activo empleando dicha celda con valores recomendados por la cátedra. La principal fuente de información será el paper denominado Optimum configurations for Single-Amplifier Biquadratic Filters.
-
 \section{Celda Sedra-Ghorab-Martin}
 
 \subsection{Introducción}
@@ -1170,14 +1166,14 @@ La celda KHN fue una de las primeras en identificar la aplicación del método d
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width= 0.7\textwidth]{KHN.png}
+    \includegraphics[width= 0.7\textwidth]{../Ejercicio2-DisenoDeCeldas/4CeldaUniversal/Informe/KHN.png}
     \caption{Celda Kerwin-Huelsman-Newcomb}
     \label{fig:KHN}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width= 0.7\textwidth]{KHNblocks.png}
+    \includegraphics[width= 0.7\textwidth]{../Ejercicio2-DisenoDeCeldas/4CeldaUniversal/Informe/KHNblocks.png}
     \caption{Diagrama en bloques Kerwin-Huelsman-Newcomb}
     \label{fig:KHNblocks}
 \end{figure}
@@ -1257,7 +1253,7 @@ Dada la relación entre la respuesta en frecuencia de un rechaza banda (BR) con 
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width= 0.8\textwidth]{KHN_BR.png}
+    \includegraphics[width= 0.8\textwidth]{../Ejercicio2-DisenoDeCeldas/4CeldaUniversal/Informe/KHN_BR.png}
     \caption{Celda Kerwin-Huelsman-Newcomb con sumador.}
     \label{fig:KHN_BR}
 \end{figure}
@@ -1278,7 +1274,7 @@ La celda Tow-Thomas modifica la KHN al combinar el segundo integrador con el sum
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width= 0.8\textwidth]{TowThomas.png}
+    \includegraphics[width= 0.8\textwidth]{../Ejercicio2-DisenoDeCeldas/4CeldaUniversal/Informe/TowThomas.png}
     \caption{Celda Tow-Thomas}
     \label{fig:TowThomas}
 \end{figure}
@@ -1314,7 +1310,7 @@ Las dos celdas mencionadas anteriormente no permiten implementar correctamente f
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width= 0.9\textwidth]{celdaAM.png}
+    \includegraphics[width= 0.9\textwidth]{../Ejercicio2-DisenoDeCeldas/4CeldaUniversal/Informe/celdaAM.png}
     \caption{Celda Ackerberg-Mossberg}
     \label{fig:celdaAM}
 \end{figure}
@@ -1327,7 +1323,7 @@ Nuevamente, realizando una modificación sobre la celda Tow-Thomas, es posible o
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width= 0.9\textwidth]{FleischerTow.png}
+    \includegraphics[width= 0.9\textwidth]{../Ejercicio2-DisenoDeCeldas/4CeldaUniversal/Informe/FleischerTow.png}
     \caption{Celda Fleischer-Tow}
     \label{fig:FleischerTow}
 \end{figure}
@@ -1421,7 +1417,7 @@ A partir de las frecuencias de atenuación y de paso $f_a^- = 15.702kHz$, $f_a^+
 
 \begin{figure}[H]
     \centering
-    \includegraphics[scale = 0.5]{att.png}
+    \includegraphics[scale = 0.5]{../Ejercicio2-DisenoDeCeldas/4CeldaUniversal/Informe/att.png}
     \caption{Aproximación por Chebychev Inverso}
     \label{fig:my_label}
 \end{figure}
@@ -1550,7 +1546,7 @@ Al conocer los componentes a utilizar se realizo un análisis de montecarlo con 
 
 \begin{figure}
     \centering
-    \includegraphics[scale = 0.6]{monte.PNG}
+    \includegraphics[scale = 0.6]{../Ejercicio2-DisenoDeCeldas/4CeldaUniversal/Informe/monte.PNG}
     \caption{Análisis de Montecarlo del Circuito Diseñado}
     \label{fig:my_label}
 \end{figure}
@@ -1559,21 +1555,21 @@ A su vez, se analizo el montaje de las respuestas de cada etapa verificando su f
 
 \begin{figure}[H]
     \centering
-    \includegraphics[scale = 0.4]{dis1.png}
+    \includegraphics[scale = 0.4]{../Ejercicio2-DisenoDeCeldas/4CeldaUniversal/Informe/dis1.png}
     \caption{Histograma de Dispersión de f0 de la Primera Etapa}
     \label{ej4dis1}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[scale = 0.4]{dis2.png}
+    \includegraphics[scale = 0.4]{../Ejercicio2-DisenoDeCeldas/4CeldaUniversal/Informe/dis2.png}
     \caption{Histograma de Dispersión de f0 de la Segunda Etapa}
     \label{ej4dis2}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[scale = 0.4]{dis3.png}
+    \includegraphics[scale = 0.4]{../Ejercicio2-DisenoDeCeldas/4CeldaUniversal/Informe/dis3.png}
     \caption{Histograma de Dispersión de f0 de la Tercera Etapa}
     \label{ej4dis3}
 \end{figure}
@@ -1594,7 +1590,7 @@ Mediante simulación en LTSpice, se pueden obtener los gráficos del módulo de 
 
 \begin{figure}[H]
     \centering
-    \includegraphics[scale = 0.7]{zin1.PNG}
+    \includegraphics[scale = 0.7]{../Ejercicio2-DisenoDeCeldas/4CeldaUniversal/Informe/zin1.PNG}
     \caption{Impedancia de Entrada}
     \label{ej4zin1}
 \end{figure}
@@ -1603,7 +1599,7 @@ Sin embargo, esta no cumple con la plantilla pedida, es por ello que para asegur
 
 \begin{figure}[H]
     \centering
-    \includegraphics[scale = 0.7]{zin2.PNG}
+    \includegraphics[scale = 0.7]{../Ejercicio2-DisenoDeCeldas/4CeldaUniversal/Informe/zin2.PNG}
     \caption{Impedancia de Entrada con Buffer a la Entrada}
     \label{ej4zin2}
 \end{figure}
