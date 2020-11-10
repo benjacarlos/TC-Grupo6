@@ -728,6 +728,12 @@ En este apartado se realiza un análisis de la celda denominada Sedra-Ghorab-Mar
 
 \section{Celda Sedra-Ghorab-Martin}
 
+\subsection{Introducción}
+
+En este apartado se realiza un análisis de la celda denominada Sedra-Ghorab-Martin para posteriormente diseñar, sintetizar y analizar un filtro activo empleando dicha celda con valores recomendados por la cátedra. La principal fuente de información será el paper denominado Optimum configurations for Single-Amplifier Biquadratic Filters.
+
+\subsection{Celda Sedra-Ghorab-Martin}
+
 La celda Sedra-Ghorab-Martin (en adelante, celda SGB) es un circuito creado en el año 1980 por los miembros de IEEE cuyos nombres se reflejan en el nombre de la celda. Dicho circuito se basa en el circuito pasabanda de Deliyannis, que se reproduce a continuación. Los miembros propusieron dos circuitos bicuadráticos (con funciones transferencia de denominador y numerador de orden dos) que hacen uso del circuito pasabanda de Deliyannis, que se reproduce a continuación:
 
 \begin{figure}[h]
@@ -783,7 +789,7 @@ Siendo los coeficientes $n_i$ los ceros de transmision que determinan el tipo de
 	\label{LPB}
 \end{figure}
 
-\section{Análisis matemático}
+\subsection{Análisis matemático}
 
 A partir de la ecuacion \ref{eq transferencia general} se puede ver que se deben hallar los coeficientes $n_i$, los cuales están determinados por el tipo de circuito que se desea implementar. En nuestro caso se trata de un HPB por lo que las ecuaciones serán las siguientes:
 
@@ -902,12 +908,246 @@ $Z_{in}$           & $\geq50k\Omega$            & $\geq50k\Omega$
 \label{tabla componentes}
 \end{table}
 
-El primer paso para el diseño del mismo es normalizar la plantilla a una de un pasa-altos, con frecuencia angular pasante unitaria ($\omega_p =1$). Una vez hecho esto se procede a aplicar la aproximación de Cauer sobre dicha plantilla.
-La aproximación de Cauer es una aproximación por funciones elípticas, con riple constante tanto en la banda de paso como la de atenuación. 
+A partir del software programado para la primer parte de este mismo TP, se obtuvo las funciones transferencias de la celda y cada etapa usando la aproximación de Cauer, obteniendo lo siguiente:
 
+\begin{equation}
+H(s_0) = \frac{0,841 s^4 + 2,48.10^8 s^2 + 1,03.10^{16}}{s^4 + 6,04.10^4 s^3 + 3,47.10^9 s^2 + 5,44.10^{13} s + 1,83.10^{18}}
+\end{equation}
+
+A esta transferencia le corresponde los siguientes diagramas de bode (figura \ref{BodeSimulado} y figura \ref{FaseSimulado}) y el diagrama de polos y ceros (figura \ref{PolosSedra})
+
+\begin{figure}[h]
+	\includegraphics[width=0.6\textwidth]{../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/MagnitudSedra.png}
+	\centering
+	\caption{Magnitud del bode simulado}
+	\label{BodeSimulado}
+\end{figure}
+
+\begin{figure}[h]
+	\includegraphics[width=0.6\textwidth]{../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/Fase Sedra.png}
+	\centering
+	\caption{Fase del bode simulado}
+	\label{FaseSimulado}
+\end{figure}
+
+\begin{figure}[h]
+	\includegraphics[width=0.6\textwidth]{../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/PolosSedra.png}
+	\centering
+	\caption{Polos y ceros de la celda}
+	\label{PolosSedra}
+\end{figure}
+
+Del mismo programa se obtuvieron las 2 etapas en las cuales se dividió la celda, obteniendo así las siguientes funciones transferencias:
+
+
+\begin{equation}
+H_1(s_0) = \frac{0,917 s^2  + 2,25.10^8}{s^2 + 5,32.10^3 s + 7,54.10^8}
+\label{EcH1sedra}
+\end{equation}
+
+\begin{equation}
+H_2(s_0) = \frac{0,917 s^2  + 4,56.10^7}{s^2 + 5,51.10^4 s + 2,42.10^5}
+\label{EcH2sedra}
+\end{equation}
+
+A partir de estas ecuaciones se buscaran los valores de los componentes para obtener el circuito \ref{HPB}. Para esto se deben encontrar las siguientes constantes:
+
+\begin{table}[h]
+\begin{tabular}{|c|c|}
+\hline
+\textbf{Parámetro} & \textbf{Fórmula} 													   \\ \hline
+K                  & $\frac{1}{2Q_0^2} . (1 - \frac{Q_0}{Q}) + 1 $     					        \\ \hline
+k                  & $ \frac{n_2}{(1 - \frac{Q_0}{Q})} . (\frac{\omega_z}{\omega_0})^2$   \\ \hline
+n                  & $k.(1- \frac{Q_0}{K.Q})$             									\\ \hline
+m                  & $k.\frac{K-1}{K}. [1 + 2Q_0^2. (\frac{\omega_0}{\omega_z})^2]$              \\ \hline
+\end{tabular}
+\centering
+\caption{Parámetros intrínsecos de las celdas}
+\label{paramSedra}
+\end{table}
 
 
 \subsection{Etapa I}
 
+A partir de la ecuación \ref{EcH1sedra} se obtienen los siguientes valores:
+
+\begin{table}[h]
+\begin{tabular}{|c|l|}
+\hline
+\textbf{Parámetro} & \textbf{Valor} \\ \hline
+$\omega_0$         & 49,2 krad/s   \\ \hline
+$\omega_z$         & 7,05 krad/s   \\ \hline
+Q                  & 0,893         \\ \hline
+\end{tabular}
+\centering
+\caption{Especificaciones etapa 1}
+\end{table}
+
+Como tenemos un $Q<1$ se opta por aproximar $Q_0$ siendo este de 0,5: 
+
+\begin{table}[h!]
+\begin{tabular}{|c|c|}
+\hline
+\textbf{Parámetro} & \textbf{Fórmula} \\ \hline
+K                  & $1,8799$             \\ \hline
+k                  & $0,0428$             \\ \hline
+n                  & $0,0301$             \\ \hline
+m                  & $0,5078$             \\ \hline
+\end{tabular}
+\centering
+\caption{Parámetros de la etapa 1}
+\end{table}
+
+Con estas constantes se realizan las estimaciones de abajo
+
+\begin{equation}
+\frac{C_{22}}{C_{21}} \approx \frac{m}{1-m} \approx 9,78
+\end{equation}
+
+\begin{equation}
+C_3 \approx C_{21} + C_{22} \approx 10,78 C_{21}
+\end{equation}
+
+
+Fijando $C_{21} = 1nF$ obtengo los valores de $C_{22}$ y de $C_3$. Por otro lado mediante MATLAB usando las ecuaciones del paper se hallo valores para $G_1$, $G_{41}$ y $G_{42}$. Igualando a 0 la ecuación determinada para HPB de $n_2$ (ecuación \ref{coef n2 HPB}) y fijando un valor para $G_b$ se obtuvieron los valores de $G_{a1}$ y $ G_{a2} $. En la siguiente tabla se muestran los valores obtenidos y los valores comerciales que debemos usar en la simulación ya que no se pueden conseguir cualquier valor de componentes.
+
+\begin{table}[h]
+\begin{tabular}{|c|c|c|c|}
+\hline
+\textit{\textbf{Parámetro}} & \textit{\textbf{Valor teórico}} & \textit{\textbf{Valor real}} & \textit{\textbf{Error}} \\ \hline
+$G_b$                       & $47k\omega$                     & $47k \omega$                  & $0\%$                    \\ \hline
+$G_{a1}$                    & $57,3k\omega$                   & $56k \omega$                  & $2,3\%$                  \\ \hline
+$G_{a2}$                    & $1,28M\omega$                   & $1,2M \omega$                 & $6,67\%$                 \\ \hline
+$G_1$                       & $379\omega$                     & $560\omega$                  & $3,63\%$                 \\ \hline
+$C_{21}$                    & $10nF$                          & $10nF$                       & $0\%$                    \\ \hline
+$C_{22}$                    & $10,3nF$                        & \textit{$10nF$}              & $3\%$                    \\ \hline
+$C_3$                       & $20,3nF$                        & \textit{$22nF$}              & $7,73\%$                 \\ \hline
+$G_{41}$                    & $597,5\omega$                   & $560\omega$                  & $6,7\%$                  \\ \hline
+$G_{42}$                    & $19,255k\omega$                 & $18k\omega$                  & $6,97\%$                 \\ \hline
+\end{tabular}
+\centering
+\caption{Componentes de la etapa I}
+\end{table}
+
+
+Para tener mejor rendimiento en los componentes seria mejor usar tecnología SMD aunque para este trabajo no se tuvo en cuenta por no saber las diferencias técnicas que hay en la implementación.
+
+
+
+
 \subsection{Etapa II}
+
+A partir de la ecuación \ref{EcH2sedra} se obtienen los siguientes valores:
+
+\begin{table}[h!]
+\begin{tabular}{|c|l|}
+\hline
+\textbf{Parámetro} & \textbf{Valor} \\ \hline
+$\omega_0$         & 27,46 krad/s   \\ \hline
+$\omega_z$         & 15,66 krad/s   \\ \hline
+Q                  & 5,1617         \\ \hline
+\end{tabular}
+\centering
+\caption{Especificaciones etapa 2}
+\label{etapa2table}
+\end{table}
+
+
+Como tenemos un $Q > 5$ podemos usar la ecuación \ref{eq Q0} dada por el paper mencionado en un principio para calcular $Q_0$ siendo este con un valor de $2,67$.
+
+\begin{table}[h!]
+\begin{tabular}{|c|c|}
+\hline
+\textbf{Parámetro} & \textbf{Fórmula} \\ \hline
+K                  & $1,0337$             \\ \hline
+k                  & $0,6192$             \\ \hline
+n                  & $0,3089$             \\ \hline
+m                  & $0,9073$             \\ \hline
+\end{tabular}
+\centering
+\caption{Parámetros de la etapa 2}
+\end{table}
+
+
+
+Aplicando el mismo método para hallar los valores de los componentes se obtiene la siguiente tabla.
+
+
+\begin{table}[h!]
+\begin{tabular}{|c|c|c|c|}
+\hline
+\textit{\textbf{Parámetro}} & \textit{\textbf{Valor teórico}} & \textit{\textbf{Valor real}} & \textit{\textbf{Error}} \\ \hline
+$G_b$                       & $10k\omega$                     & $10k\omega$                  & $0\%$                    \\ \hline
+$G_{a1}$                    & $307,9k\omega$                  & $330k\omega$                 & $6,7\%$                  \\ \hline
+$G_{a2}$                    & $189,4k\omega$                  & $180k\omega$                 & $5,22\%$                 \\ \hline
+$G_1$                       & $342\omega$                     & $330\omega$                  & $3,63\%$                 \\ \hline
+$C_{21}$                    & $1nF$                           & $1nF$                        & $0\%$                    \\ \hline
+$C_{22}$                    & $9,78nF$                        & $10nF$     			        & $2,2\%$                  \\ \hline
+$C_3$                       & $10,78nF$                       & $10nF$			            & $7,8\%$                  \\ \hline
+$G_{41}$                    & $2,53k\omega$                   & $2,7k\omega$                 & $6,3\%$                  \\ \hline
+$G_{42}$                    & $1,13k\omega$                   & $1,2k\omega$                 & $5,83\%$                 \\ \hline
+\end{tabular}
+\centering
+\caption{Componentes de la etapa II}
+\end{table}
+
+A la hora de combinar las etapas es importante colocar primero la etapa que tenga menor $Q$ aumentando progresivamente.
+
+\subsection{Simulaciones}
+
+\subsection{Impedancia de entrada}
+
+La impedancia de entrada depende fuertemente de la resistencia $G_{42}$ de la etapa I, y como se muestra en la siguiente simulación no supera la impedancia pedida por la cátedra, una forma de solucionar esto es colocando un buffer en la entrada elevando la impedancia al ordenes mucho mayores.
+
+\begin{figure}[h]
+	\includegraphics[width=0.5\textwidth]{../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/MagImpedancia.png}
+	\centering
+	\caption{Impedancia de entrada del circuito}
+\end{figure}
+
+
+Simulando las etapas por separado se puede notar que la etapa I se adapta muy bien a lo esperado mientras que en la etapa II no se ajusta, esto debió pasar por mala elección de componentes ya que se espero tener una tolerancia de 10% en capacitores y resistores.
+
+\begin{figure}[h]
+ \centering
+  \subfloat[MagnitudEtapaI]{
+   \label{f:etapaImag}
+    \includegraphics[width=0.5\textwidth]{../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/MagEtapaI.png}}
+  \subfloat[FaseEtapaI]{
+   \label{f:etapaIfase}
+    \includegraphics[width=0.5\textwidth]{../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/FaseEtapaI.png}}
+ \caption{Bode de la etapa I}
+ \label{f:etapaIbode}
+\end{figure}
+
+\begin{figure}[h]
+ \centering
+  \subfloat[MagnitudEtapaII]{
+   \label{f:etapaIImag}
+    \includegraphics[width=0.5\textwidth]{../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/MagEtapaII.png}}
+  \subfloat[FaseEtapaI]{
+   \label{f:etapaIIfase}
+    \includegraphics[width=0.5\textwidth]{../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/FaseEtapaII.png}}
+ \caption{Bode de la etapa II}
+ \label{f:etapaIIbode}
+\end{figure}
+
+Viendo el comportamiento del circuito entero se puede ver cuanto afectó el mal diseño de la etapa 2 en todo el circuito.
+
+\begin{figure}[h]
+ \centering
+  \subfloat[MagnitudEtapaII]{
+   \label{f:magSedra}
+    \includegraphics[width=0.5\textwidth]{../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/MagSedra.png}}
+  \subfloat[FaseEtapaI]{
+   \label{f:faseSedra}
+    \includegraphics[width=0.5\textwidth]{../Ejercicio2-DisenoDeCeldas/3CeldaSedra/Imagenes/FaseSedra.png}}
+ \caption{Bode de ambas etapas conectadas}
+ \label{f:bodeSedra}
+\end{figure}
+
+
+\subsection{Conclusión}
+
+Aunque las simulaciones no fueron optimas se pudo ver el funcionamiento de las celdas SGM. Se pudo notar la importancia de la elección de los componentes en algunos casos.
 
