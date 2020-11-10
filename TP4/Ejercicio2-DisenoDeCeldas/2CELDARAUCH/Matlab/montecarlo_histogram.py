@@ -4,7 +4,7 @@ from matplotlib import rc
 rc('text', usetex=True)
 
 
-path = "D:\Documents\GitHub\TC-Grupo6\TP4\Ejercicio2-DisenoDeCeldas\2CELDARAUCH\Matlab\ej22monte2.txt"
+path = "D:\Documents\GitHub\TC\TP4\Ejercicio2-DisenoDeCeldas\2CELDARAUCH\Matlab\ej22monte2.txt"
 f = []
 mag = []
 
