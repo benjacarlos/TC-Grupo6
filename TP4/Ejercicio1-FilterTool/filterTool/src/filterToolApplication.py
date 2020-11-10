@@ -439,36 +439,41 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
         w, h = signal.freqs(self.appTemplates[self.currentIndex].actual_num, self.appTemplates[self.currentIndex].actual_den)#,worN=np.linspace(1e4, 1e6, 1000))
 
         self.filterToolPlotTable_2.canvas.axes.semilogx(w, 20 * np.log10(abs(h)), label=self.appTemplates[self.currentIndex].printTag)
-
-        if self.plotAllSos.isChecked():
-            hs = list()
-            if self.appTemplates[self.currentIndex].should_be_att():
-                for x in range(self.appTemplates[self.currentIndex].number_of_sections):  # Cargo cada den y num  en la lista
-                    hs.append(signal.freqs(self.appTemplates[self.currentIndex].singularidades["sos"][x][1], self.appTemplates[self.currentIndex].singularidades["sos"][x][0]))#,worN=np.linspace(1e4, 1e6, 1000)))
-            else:
-                for x in range(self.appTemplates[self.currentIndex].number_of_sections):  # Cargo cada num y den  en la lista
-                    hs.append(signal.freqs(self.appTemplates[self.currentIndex].singularidades["sos"][x][0], self.appTemplates[self.currentIndex].singularidades["sos"][x][1]))#,worN=np.linspace(1e4, 1e6, 1000)
-
-
-            index = 1
-            if self.appTemplates[self.currentIndex].number_of_sections > 1:
-                h = np.multiply(hs[0][1], hs[1][1])
-                while self.appTemplates[self.currentIndex].number_of_sections > index + 1:
-                    h = np.multiply(h, hs[index + 1][1])
-                    index += 1
-            else:
-                h = hs[0][1]
-            # en h queda guardado el producto de todas las transferencias evaluadas en el mismo rango de frecs
-            # en hs[0][0] está guardado dicho rango
-
-            tempLabel = "Total SOS | " + self.appTemplates[self.currentIndex].printTag
-            if self.appTemplates[self.currentIndex].should_be_att():
-                self.filterToolPlotTable_2.canvas.axes.semilogx(hs[0][0], abs(20 * np.log10(abs(h))), label=tempLabel, linestyle='--', color='red')
-            else:
-                self.filterToolPlotTable_2.canvas.axes.semilogx(hs[0][0], 20 * np.log10(abs(h)), label=tempLabel, linestyle='--', color='red')
-
         self.filterToolPlotTable_2.canvas.axes.grid(True, which='both')
         self.filterToolPlotTable_2.canvas.figure.tight_layout()
+
+        if self.plotAllSos.isChecked():
+            if (self.appTemplates[self.currentIndex].number_of_sections) == 1:
+                num, den = self.appTemplates[self.currentIndex].get_sos_data_tf(0)
+                system = signal.TransferFunction(num, den)
+                w, mag, phase = signal.bode(system)
+                tempLabel = "Total SOS | " + self.appTemplates[self.currentIndex].printTag
+                self.filterToolPlotTable_2.canvas.axes.semilogx(w, mag, label=tempLabel)
+                self.filterToolPlotTable_2.canvas.axes.grid(True, which='both')
+                self.filterToolPlotTable.canvas.figure.tight_layout()
+            else:
+                for i in range((self.appTemplates[self.currentIndex].number_of_sections) - 1):
+                    if i == 0:
+                        num, den = self.appTemplates[self.currentIndex].get_sos_data_tf(i)
+                        num2, den2 = self.appTemplates[self.currentIndex].get_sos_data_tf(i + 1)
+                        tempnum = np.polymul(num, num2)
+                        tempden = np.polymul(den, den2)
+                        print(tempnum)
+                        print(tempden)
+                    if i != 0:
+                        num, den = self.appTemplates[self.currentIndex].get_sos_data_tf(i + 1)
+                        tempnum = np.polymul(num, tempnum)
+                        tempden = np.polymul(den, tempden)
+
+                system = signal.TransferFunction(tempnum, tempden)
+
+                w, mag, phase = signal.bode(system)
+                tempLabel = "Total SOS | " + self.appTemplates[self.currentIndex].printTag
+                self.filterToolPlotTable_2.canvas.axes.semilogx(w, mag, label=tempLabel)
+                self.filterToolPlotTable_2.canvas.axes.grid(True, which='both')
+                self.filterToolPlotTable_2.canvas.figure.tight_layout()
+
+        #theLegend = self.filterToolPlotTable_2.canvas.axes.legend(fancybox=True, framealpha=0.5, fontsize=6)
 
         if self.plotTemplate.isChecked():
 
@@ -550,7 +555,7 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
                 tempLabel = "Total SOS | " + self.appTemplates[self.currentIndex].printTag
                 self.filterToolPlotTable_2.canvas.axes.semilogx(w, phase, label=tempLabel)
                 self.filterToolPlotTable_2.canvas.axes.grid(True, which='both')
-                self.filterToolPlotTable.canvas.figure.tight_layout()
+                self.filterToolPlotTable_2.canvas.figure.tight_layout()
             else:
                 for i in range((self.appTemplates[self.currentIndex].number_of_sections)-1):
                     if i == 0:
@@ -571,7 +576,7 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
                 tempLabel = "Total SOS | " + self.appTemplates[self.currentIndex].printTag
                 self.filterToolPlotTable_2.canvas.axes.semilogx(w, phase, label=tempLabel)
                 self.filterToolPlotTable_2.canvas.axes.grid(True, which='both')
-                self.filterToolPlotTable.canvas.figure.tight_layout()
+                self.filterToolPlotTable_2.canvas.figure.tight_layout()
 
         theLegend = self.filterToolPlotTable_2.canvas.axes.legend(fancybox=True, framealpha=0.5, fontsize=6)
 
@@ -821,10 +826,10 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
         if self.filterOrderInput.text():
             try:
                 self.data["n"] = int (self.filterOrderInput.text())
-                if self.data["n"] < 0:
+                if (self.data["n"] < 0) or (self.data["n"] > 10) :
                     raise Exception("Exception")
             except:
-                ErrorMessage = ErrorMessage + "The filter order must be a valid number \n"
+                ErrorMessage = ErrorMessage + "The filter order must be a valid number (1 to 10) \n"
 
         if self.denormInput.text():
             try:
@@ -842,14 +847,17 @@ class myFilterToolApplication(QMainWindow, Ui_filterToolWindow):
         if self.minFilterOrderInput.text():
             try:
                 self.data["n_min"] = float (self.minFilterOrderInput.text())
+                if self.data["n_min"] < 0 or self.data["n_min"] > 10:
+                    raise Exception("Exception")
+
             except:
-                ErrorMessage = ErrorMessage + "The NMin must be a valid number \n"
+                ErrorMessage = ErrorMessage + "The NMin must be a valid number (1 to 10) \n"
 
         if self.maxFilterOrderInput.text():
             try:
                 self.data["n_max"] = float(self.maxFilterOrderInput.text())
             except:
-                ErrorMessage = ErrorMessage + "The NMax must be a valid number \n"
+                ErrorMessage = ErrorMessage + "The NMax must be a valid number (1 to 10) \n"
 
         if ErrorMessage != "":
             msgWrongInput.setText(ErrorMessage)
