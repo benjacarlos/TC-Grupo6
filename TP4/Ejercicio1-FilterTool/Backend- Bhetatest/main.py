@@ -182,12 +182,12 @@ if __name__ == '__main__':
 
 
     data = {
-        "A_a" : 40,
-        "A_p" : 3,
-        "w_p" : 300e3,
-        "w_a_m" : 150e3,
-        "w_a" : 200e3,
-        "w_p_m" : 20e3,
+        "A_a" : 45,
+        "A_p" : 1.5,
+        "w_a" : 86e3,
+        #"w_a_m" : 170e3,
+        "w_p" : 170e3,
+        #"w_p_m" : 20e3,
         "n" : 0,     #poner valor != 0 para harcodear
         "n_max": 0, #lo implementé aparte porque sino se pisa con el hardcodeado
         "Q_max": 0, #poner valor != 0 para harcodear
@@ -195,10 +195,10 @@ if __name__ == '__main__':
         "n_min":0
     }
 
-    temp_legen_3 = template(Type.BR, Approximation.Butterworth, data)
+    temp_legen_3 = template(Type.HP, Approximation.Cauer, data)
     temp_legen_3.type = Type.LPN
     plot(temp_legen_3)
-    temp_legen_3.type = Type.BR
+    temp_legen_3.type = Type.HP
     plot(temp_legen_3)
     #temp_legen_3.type = Type.BR
     #plot(temp_legen_3)

@@ -282,29 +282,38 @@ class template():
             if not self.singularidades["ceros"]: #Para casos donde no hay ceros
                 num,den=signal.zpk2tf(1,np.array(list(self.singularidades["polos"][index]),dtype=np.complex128),np.asarray(list(self.singularidades["ganancias"][index])))
                 #d1,damp_coef,d2=control.damp(control.TransferFunction(num,den))
-                a2=den[0]
-                index=0
-                while len(den)>index:
-                    den[index]=den[index]/a2
-                    index+=1
-                w0=np.sqrt(den[2])
-                damp_coef=den[1]/(2*w0)
-
-                Q=1/2*damp_coef
-                self.singularidades["sos"].append(list([num,den,Q]))
+                den_aux = den
+                a2=den_aux[0]
+                index_aux=0
+                while len(den_aux)>index_aux:
+                    den_aux[index_aux]=den_aux[index_aux]/a2
+                    index_aux+=1
+                index_aux=0
+                if len(den_aux)==3:
+                    w0_aux=np.sqrt(den_aux[2])
+                else:
+                    w0_aux = np.sqrt(den_aux[1])
+                damp_coef=den_aux[1]/(2*w0_aux)
+                Q = 1 / (2 * damp_coef)
+                print(Q)
+                self.singularidades["sos"].append(list([num, den, Q]))
             else: #Para casos donde si hay ceros
                 num,den=signal.zpk2tf(np.array(list(self.singularidades["ceros"][index]),dtype=np.complex128),np.array(list(self.singularidades["polos"][index]),dtype=np.complex128),np.asarray(list(self.singularidades["ganancias"][index])))
-                a2=den[0]
-                index=0
-                while len(den)>index:
-                    den[index]=den[index]/a2
-                    index+=1
-                w0=np.sqrt(den[2])
-                damp_coef=den[1]/(2*w0)
-
-                #d1,damp_coef,d2=control.damp(control.TransferFunction(num,den))
-                Q=1/2*damp_coef
-                self.singularidades["sos"].append(list([num,den,Q]))
+                den_aux = den
+                a2=den_aux[0]
+                index_aux=0
+                while len(den_aux)>index_aux:
+                    den_aux[index_aux]=den_aux[index_aux]/a2
+                    index_aux+=1
+                index_aux=0
+                if len(den_aux)==3:
+                    w0_aux=np.sqrt(den_aux[2])
+                else:
+                    w0_aux = np.sqrt(den_aux[1])
+                damp_coef=den_aux[1]/(2*w0_aux)
+                Q = 1 / (2 * damp_coef)
+                print(Q)
+                self.singularidades["sos"].append(list([num, den, Q]))
             index+=1
 
         self.check_for_q()
@@ -323,7 +332,7 @@ class template():
             self.init_approx() #vuelvo a realizar la aproximacion
             print('Hay que recalcular el filtro')
         else: #ordeno de Q menor a mayor
-            self.singularidades["sos"].sort(key=lambda q: q[2][0])
+            self.singularidades["sos"].sort(key=lambda q: q[2])
 
 
     def init_approx(self):
