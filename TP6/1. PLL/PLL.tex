@@ -5,7 +5,6 @@
 \usepackage[spanish,english, es-tabla, es-noshorthands]{babel}
 
 
-\captionsetup[figure]{font=footnotesize}
 \usepackage{siunitx}
 \usepackage{amsmath}
 \usepackage{amsfonts}
@@ -29,16 +28,109 @@
 \subsection{Introducción}
 
 Un lazo de seguimiento de fase, o phase locked loop, es un sistema de control que genera una señal en su salida cuya fase está relacionada con la fase de la señal en su entrada. En el presente informe, se implementa un PLL mediante el uso de un circuito integrado de bajo consumo, el CD4046B, que consta de un oscilador controlado por voltaje (VCO, por sus siglas en inglés), dos comparadores de fase y un filtro pasa-bajos. Se buscara saber acerca de su funcionamiento y cuales sus limites mientras opera. 
-Se preparó el CD4046 con un setup recomendado por la catedra que se muestra en la figura \ref{Circuito PLL}. Teniendo en cuenta que no se puede colocar una señal negativa en la entrada se procedio a trabajar sobre el circuito armado.
+Se preparó el CD4046 con un setup recomendado por la cátedra que se muestra en la figura \ref{fig:Circuito PLL}. Teniendo en cuenta que no se puede colocar una señal negativa en la entrada se procedió a trabajar sobre el circuito armado.
 
-\begin{figure}
-	\includegraphics[scale=1]{..\PLL\Imagenes\Circuito PLL.png}
+\begin{figure}[h!]
 	\centering
-	\label{Circuito PLL}
+	\includegraphics[width= 0.8\textwidth]{../1. PLL/Imagenes/Circuito PLL.png} 
+	\label{fig:Circuito PLL}
 	\caption{Setup recomendado}
 \end{figure}
 
-\subsection{Transferencia}
+\subsection{Funcionamiento de un PLL}
+
+Lo que se muestra en la Figura \ref{DiagramaBloquePLL} es un diagrama de bloques de un PLL básico. Se asume que hay una señal de entrada que al ingresar, se la multiplica en un comparador de fase por la salida de un VCO cuya frecuencia, seleccionada en el diseño, es de $f_0$. El producto de la multiplicación es filtrado por un filtro pasa-bajos(LPF) de forma tal que se elimina el ripple y el ruido de alta frecuencia, solo quedando en la salida una tensión proporcional a la diferencia de fase instantánea (la integral de la diferencia de frecuencia) entre las señales multiplicadas. Esta tensión controla la frecuencia del VCO. Si no hay señal en la entrada, no hay voltaje de error a la salida del comparador, por lo que tampoco lo hay a la salida del LPF. En esta situación, el VCO está fijo en su frecuencia central, $f_0$.
+
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=1\textwidth]{../1. PLL/Imagenes/Diagrama bloque PLL.png}
+	\caption{Diadrama de bloque de un PLL}
+	\label{DiagramaBloquePLL}
+\end{figure}
+
+La entrada al VCO varía reduciendo la diferencia de frecuencia entre el VCO y la señal de entrada y a su vez es proporcional a esta diferencia, logrando que la frecuencia del VCO tienda a la frecuencia de la señal de entrada, en otras palabras, realiza un seguimiento de la misma. Cuando se llega a esta condición se dice que el sistema está \textit{"amarrado"}.
+
+\subsubsection{Rango de enganche y rango de captura}
+
+Utilizando un comparador de fase cuya salida es proporcional al seno del ángulo de error de fase, la tensión de error ve, tras pasar por el filtro pasa-bajos, será:
+
+\begin{equation}
+	v_e(t) = K_1 f(t)*sin[\phi_i(t)-\phi_o(t)]
+	\label{EqVe}
+\end{equation}
+
+siendo: 
+
+\begin{equation}
+	K_1 = \frac{A_{in}.A_{VCO}}{2}
+\end{equation}
+
+Donde $A_{in}$ es la amplitud de la señal de entrada y $A_{VCO}$ es la amplitud de la salida del VCO. $K_1$ representa aquí la ganancia de conversión del comparador de fase, y $f(t)$ es la respuesta al impulso del filtro pasa-bajos. Asumiendo que la frecuencia del VCO es una función lineal de la tensión de error, esta será:
+
+\begin{equation}
+	\omega_0 = \omega_c + \frac{d\phi_o}{dt}
+\end{equation}
+
+Reemplazando $\frac{d\phi_o}{dt}$ por $K_2.v_e(t)$, donde $K_2$ es la sensibilidadde tensión del VCO(con unidades $\frac{rad}{V.s}$), y reemplazando $v_e$ por \ref{EqVe} se obtiene:
+
+\begin{equation}
+	\frac{d\phi_i(t)}{dt} = \frac{d\phi}{dt} +K.f(t)*sin\phi(t)
+	\label{eq:DerPhi}
+\end{equation}
+
+Donde $K = K_1 K_2 [\frac{rad}{s}]$ y $\frac{d\phi_i(t)}{dt}$ representa la diferencia entre la frecuencia de la señal de entrada y la frecuencia de la portadora, $\Delta\omega_i$. Por lo tanto asumiendo que la ganancia del filtro es 1, la solución de la ecuación \ref{eq:DerPhi} para estado estacionario es:
+
+\begin{equation}
+	sin(\phi) = \frac{\Delta\omega_i}{K}
+	\label{eq:SinPhi}
+\end{equation}
+
+De esta última se deduce que el sistema mantiene el enganche de frecuencias siempre que:
+
+\begin{equation}
+	|\Delta\omega_i|< K
+	\label{eq:DeltaOmega}
+\end{equation}
+
+Esta última ecuación \ref{eq:DeltaOmega} determina el rango del enganche.
+
+El rango de captura es el rango de frecuencias dentro del cual la frecuencia del VCO puede sincronizarse con la
+frecuencia de la señal de entrada, partiendo de una situación de asincronismo. Si se tiene un filtro ideal que filtra solo las componentes de alta frecuencia y no atenúa las componentes de baja frecuencia de la señal, los rangos de captura y enganche coinciden. Cuando el filtro no es ideal y se quiere acotar el rango de enganche, reduciendo el ancho de banda del sistema, es muy probable que se vea restringido el rango de captura. Esto es un problema, ya que se dificulta el enganche fuera de condiciones iniciales. Con un rango de captura reducido, si se perturba el circuito y se produce un desenganche, no necesariamente se alcanzará nuevamente el sincronismo aunque la frecuencia de entrada se encuentre dentro del rango de enganche.
+Si el sistema se encuentra enganchado la transferencia del lazo no se ve afectada por el circuito LPF. Sino que la transfrencia se ve determinada por K, que define el rango del enganche. Sin embargo cuando el sistema no está enganchado, las frecuencias de las señales de entrada del comparador no son las mismas y el VCO se ve controlado por una tensión de error variable, que puede ser atenuada por el LPF. Esto es equivalente a modificar la ganancia del lazo, y es así como se genera la diferencia entre rango de captura y de enganche. Si expresamos la transferencia del LPF como:
+
+\begin{equation}
+F(j\omega) = F_{\omega}e^{j\psi(\omega)}
+\end{equation}
+
+Se obtiene que la tensión de error es:
+
+\begin{equation}
+v_e(t) = K_1F_{\Delta\omega_i}sin(\Delta\omega_i t)
+\end{equation}
+
+El valor pico de la tensión para la frecuencia de captura $\omega_{ic}$ es:
+
+\begin{equation}
+	\hat{v_{ec}} = K_1F_{\Delta\omega_{ic}}
+	\label{eq:VecPico}
+\end{equation}
+
+Por definición al alcanzar la frecuencia de captura el circuito entra en estado estacionario. La tensión de error por estado estacionario es:
+
+\begin{equation}
+	V_{ec} = K_1 sin\psi_c
+	\label{eq:Vec}
+\end{equation}
+
+Igualamos las ecuaciones \ref{eq:VecPico} y \ref{eq:Vec} y reemplazamos en la expresión \ref{eq:DerPhi}, obtuvimos que:
+
+\begin{equation}
+	v_{ec} = K_1 \frac{\Delta\omega_i}{K}
+	\label{eq:finalVec}
+\end{equation}
+
+De esta última expresión se deduce que el rango de captura es $(\omega_i-\omega_c , \omega_i+\omega_c)$, siendo $\omega_c = KF_{\Delta\omega_{ic}}$
 
 
 
