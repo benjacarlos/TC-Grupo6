@@ -1,4 +1,4 @@
-Circuit: * E:\WK\Google Drive - ITBA\ITBA - Me\2020B\Teoria de Circuitos\TP\TP5\2. OscFase\oscfase.asc
+Circuit: * E:\WK\Google Drive - ITBA\ITBA - Me\2020B\Teoria de Circuitos\TP\git\TC-Grupo6\TP6\2. OscFase\Simulacion\oscfase.asc
 
 Direct Newton iteration failed to find .op point.  (Use ".option noopiter" to skip.)
 Starting Gmin stepping
@@ -18,23 +18,30 @@ vernier = 0.000976563
 vernier = 0.000488281
 Gmin = 5.50104
 Gmin = 0
-Gmin stepping succeeded in finding the operating point.
+Gmin stepping failed
+
+Starting source stepping with srcstepmethod=0
+Source Step = 3.0303%
+Source Step = 33.3333%
+Source Step = 63.6364%
+Source Step = 93.9394%
+Source stepping succeeded in finding the operating point.
 
 
-Date: Sat Nov 14 20:33:17 2020
-Total elapsed time: 0.480 seconds.
+Date: Fri Nov 20 20:06:14 2020
+Total elapsed time: 37.753 seconds.
 
 tnom = 27
 temp = 27
 method = modified trap
-totiter = 43362
-traniter = 41866
-tranpoints = 14164
-accept = 9795
-rejected = 4369
+totiter = 4401733
+traniter = 4400040
+tranpoints = 2200021
+accept = 2200021
+rejected = 0
 matrix size = 30
 fillins = 47
 solver = Normal
-Matrix Compiler1: 3.23 KB object code size  1.1/0.8/[0.3]
-Matrix Compiler2: 3.30 KB object code size  0.5/0.6/[0.4]
+Matrix Compiler1: 3.20 KB object code size  0.7/0.4/[0.3]
+Matrix Compiler2: 3.31 KB object code size  0.7/0.9/[0.7]
 
