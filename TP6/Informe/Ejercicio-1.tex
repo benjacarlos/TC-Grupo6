@@ -108,3 +108,84 @@ Igualamos las ecuaciones \ref{eq:VecPico} y \ref{eq:Vec} y reemplazamos en la ex
 \end{equation}
 
 De esta última expresión se deduce que el rango de captura es $(\omega_i-\omega_c , \omega_i+\omega_c)$, siendo $\omega_c = KF_{\Delta\omega_{ic}}$
+
+\subsubsection{Filtros}
+
+El filtro colocado entre la salida del comparador de fase y la entrada del VCO se puede analizar desde diversas perspectivas para entender su necesidad y función.
+En primer lugar, se lo puede ver como un adaptador de la salida del comparador. Dependiendo de la implementación del comparador de fase, se pueden dar dos situaciones, y para ambas un filtro pasa-bajos adecuado es la solución.
+Puede ocurrir que la salida del comparador tenga dos frecuencias, $\omega_o - \omega_i$ y $\omega_o + \omega_i$ , de modo que el filtro no deja pasar a la frecuencia más alta. Para ello, la frecuencia principal del filtro debe ser tal que elimine a la mayor frecuencia sin afectar a la menor. Aquí se ve que la frecuencia de corte del filtro, de ser muy pequeña, limita los rangos de captura y de amarre.
+Otra posibilidad es que la salida del comparador solo tenga como frecuencia , y el pasa-bajos sea necesario para actuar como promediador, ya que un pasa-bajos puede actuar como integrador, utilizando la relación:
+
+\begin{equation}
+	<X> = \frac{1}{T} \int_0^T x(t)dt
+\end{equation}
+
+Por otra parte, el filtro es utilizado para evitar que por la presencia de ruido a la entrada del circuito el VCO cambie su frecuencia de oscilación, para lo cual se busca que su frecuencia de corte sea baja. En cuanto a la implementación del filtro, se puede colocar cualquier filtro de tipo pasa-bajos, se analizan los filtros RC y RRC.
+Para el tipo de filtro RC la transferencia viene dada por:
+
+\begin{equation}
+	F(s)= \frac{1}{1+s\tau_p}
+\end{equation}
+
+Donde $\tau_p=R1.C$ como se muestra en la siguiente figura:
+
+\begin{figure}[hbtp]
+	\centering
+	\includegraphics[scale=1]{../1. PLL/Imagenes/Filtro RC.png}
+	\caption{Filtro pasa-bajos RC}
+	\label{fig:FiltroRC}
+\end{figure}
+
+Por lo tanto la transferencia para todo el circuito está dada por:
+
+\begin{equation}
+	H(s)= \frac{K/\tau_p}{s^2+ s/\tau_p + K/\tau_p}
+	\label{eq:HRC}
+\end{equation}
+
+Los parámetros del sistema sub-amortiguado se obtienen de la transferencia y vienen dados por:
+
+\begin{equation}
+	\omega_n = \sqrt{K}{\tau_p}
+	\label{eq:omeganRC}
+\end{equation}
+
+\begin{equation}
+	Q = \sqrt{\tau_p K}
+	\label{eq:QRC}
+\end{equation}
+
+Por otro lado, para el filtro RRC que se muestra en la figura \ref{fig:RRC} se obtiene una transferencia distinta:
+
+\begin{figure}[hbtp]
+	\centering
+	\includegraphics[scale=1]{Imagenes/Filtro RRC.png}
+	\caption{Filtro pasa-bajos RRC}
+	\label{fig:RRC}
+\end{figure}
+
+\begin{equation}
+	F(s)= \frac{1 + s \tau_z}{1 + s\tau_p}
+	\label{eq:FRRC}
+\end{equation}
+
+Donde $\tau_p=(R1+R2)C $ y $\tau_z=R2C$. Si asumimos $R1<<R2$ se aproxima que $\tau_p \approx R2C$. Viendo todo el sistema del PLL se llega a la siguiente transferencia: 
+
+\begin{equation}
+	H(s) = \frac{K(s\tau_z +1)(\tau_z+\tau_p) }{ s^2 + s(1+K\tau_z)/\tau_p + K/\tau_p }
+	\label{eq:TransRRC}
+\end{equation}
+
+Los parámetros del sistema sub-amortiguado se obtienen de la transferencia y vienen dados por:
+
+\begin{equation}
+	\omega_n = \sqrt[K]{\tau_p}
+	\label{eq:omeganRRC}
+\end{equation}
+
+\begin{equation}
+	Q = \frac{ \sqrt{K\tau_p} }{ 1 + \tau_z K }
+	\label{eq:QRRC}
+\end{equation}
+
+En este caso se puede ver que agregando $R2$ se obtiene independencia entre los valores de $Q$ y $\omega_n$ ya que puedo cambiar $Q$, eligiendo un $\tau_z$ conveniente, sin alterar $\omega_n$.
