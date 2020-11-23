@@ -214,6 +214,158 @@ Los parámetros del sistema sub-amortiguado se obtienen de la transferencia y vi
 
 En este caso se puede ver que agregando $R2$ se obtiene independencia entre los valores de $Q$ y $\omega_n$ ya que puedo cambiar $Q$, eligiendo un $\tau_z$ conveniente, sin alterar $\omega_n$.
 
+\subsection{Medición de $K_{VCO}$}
+Se nos pidió encontrar la transferencia del VCO de forma práctica, para ello se hicieron mediciones del PLL ya enganchado (con los valores estipulados por la cátedra)  y se calculo tanto la variación en la amplitud como en fase. En la figura \ref{fig:KVCO} se midieron los datos necesarios obteniendo que la variación de amplitud es de $|H(1KHz)|=0,59dB$ y en fase es de $1,44^o$.
+
+
+\begin{figure}[h!]
+	\includegraphics[width= 0.8\textwidth]{../1. PLL/Imagenes/KVCO.png}
+	\centering
+	\caption{Medición de entrada y salida del VCO}
+	\label{fig:KVCO}
+\end{figure}
+
+Siendo la señal azul la salida del VCO y la púrpura la entrada.
+\newpage
+
+\subsection{Medición de rango de enganche y captura}
+
+A partir de la configuración propuesta por la cátedra se fue variando la frecuencia de la señal de entrada buscando valores donde el enganche se pierde y cuando se recupera, obteniendo así que el rango de enganche se produce entre los $160Hz$ y $2070Hz$. Mientras que el rango de captura es cuando la señal engancha y aunque haya un pequeño cambio o error en la frecuencia no pierde el enganche, esto pasa entre los $160Hz$ y $2050Hz$. Cabe destacar que el valor mínimo de ambos es el mismo, ya que no presenta un cambio destacable entre ambas mediciones, mientras que en el valor máximo del enganche se ve que puede perder el enganche con una pequeña alteración mientras que por debajo del límite de captura estas variaciones no hacen perder el enganche de la señal.
+En las siguientes imágenes se puede ver el rango de captura de las señales.
+
+\begin{figure}[h!]
+	\includegraphics[width= 0.8\textwidth]{../1. PLL/Imagenes/CapturaMax.png}
+	\centering
+	\caption{Valor de captura máxima ($f_0=2050Hz$)}
+	\label{fig:CapMax}
+\end{figure}
+
+\begin{figure}[h!]
+	\includegraphics[width= 0.8\textwidth]{../1. PLL/Imagenes/CapturaMin.png}
+	\centering
+	\caption{Valor de captura mínima ($f_0=160Hz$)}
+	\label{fig:CapMin}
+\end{figure}
+
+A continuación se pueden ver las mediciones del rango de enganche.
+
+\begin{figure}[h!]
+	\includegraphics[width= 0.8\textwidth]{../1. PLL/Imagenes/EngancheMax.png}
+	\centering
+	\caption{Valor de enganche máximo ($f_0=2070Hz$)}
+	\label{fig:EngancheMax}
+\end{figure}
+
+\begin{figure}[h!]
+	\includegraphics[width= 0.8\textwidth]{../1. PLL/Imagenes/CapturaMin.png}
+	\centering
+	\caption{Valor de captura mínimo ($f_0=160Hz$)}
+	\label{fig:EngancheMin}
+\end{figure}
+
+Se debe recordar que estos valores fueron buscados en el equipo de forma manual, ya que se presentaba muy poca diferencia entre que frecuencias variaban los límites de ambos rangos, notándose así que el valor mínimo de ambos llegaron a ser idénticos. 
+
+\subsection{Demodulación en FM}
+
+Una aplicación del PLL es como demodulador de una señal modulada en frecuencia (FM). En este tipo de de modulación se transmiten una señal de interés, la moduladora, a través de una señal portadora de frecuencia mucho mayor. Esto se utiliza dado que la señal de interés, de baja frecuencia, tiene mucho menor alcance que la portadora de alta frecuencia. En la modulación FM, se debe determinar además la máxima variación de frecuencia $\Delta f$ que se le permite a la señal portadora.
+Para poder demodular con el EE Digilent, se uso dentro de la opción \textit{Wavegen} la opción de \textit{Modulation} pudiendo elegir tal como se pidió en la consigna una señal de carrier sinusoidal de $1KHz$ con una señal a modular también sinusoidal pero de $200Hz$. En la siguiente imagen se muestra la configuración usada:
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width= 0.8\textwidth]{../1. PLL/Imagenes/Config Modulacion.png}
+	\caption{Configuración para modular del EE Digilent}
+	\label{fig:Config Mod}
+\end{figure}
+
+A partir de la configuración anterior se fue variando los parámetros de modulación para poder ver los limites que esta tiene, ya que no es posible modular con cualquier señal. A continuación se puede ver la medición pedida, siendo la señal amarilla la señal de entrada, la azul la salida del VCO, la púrpura la entrada del VCO y la verde lo que ve el capacitor del filtro. 
+
+\begin{figure}[h!]
+	\includegraphics[width= 0.8\textwidth]{../1. PLL/Imagenes/Modulacion030.png}
+	\centering
+	\caption{Modulación con un índice de $30\%$}
+	\label{fig:Mod030}
+\end{figure}
+
+
+En las siguientes mediciones se optó por mostrar solo la señal verde y no púrpura (por los pequeños picos que el capacitor no alcanza a filtrar).
+Variando los parámetros se pudo notar que una señal con menos de 3V en la entrada no logra que el PLL lo detecte por lo que no modula la señal. Con un índice del $30\%$ a penas se puede notar la modulación, mientras que con $10\%$ es casi imperceptible la modulación. A partir de un índice de $40\%$ se empieza a notar la modulación.
+
+\begin{figure}[h!]
+	\includegraphics[width= 0.8\textwidth]{../1. PLL/Imagenes/Modulacion010.png}
+	\centering
+	\caption{Modulación con un índice de $10\%$}
+\end{figure}
+
+\begin{figure}[h!]
+	\includegraphics[width= 0.8\textwidth]{../1. PLL/Imagenes/Modulacion040.png}
+	\centering
+	\caption{Modulación con un índice de $40\%$}
+\end{figure}
+
+Con un índice de $\Delta f_c/f_c =80\%$ la modulación pierde forma haciendo que la medición empiece mostrar pequeños errores en la modulación(señal verde), mientras que con un índice del $90\%$ se puede percibir que la modulación no se esta llevando a cabo ya que la señal que se espera pierde su forma.
+
+
+\begin{figure}[h!]
+	\includegraphics[width= 0.8\textwidth]{../1. PLL/Imagenes/Modulacion080.png}
+	\centering
+	\caption{Modulación con un índice de $80\%$}
+\end{figure}
+
+\begin{figure}[h!]
+	\includegraphics[width= 0.8\textwidth]{../1. PLL/Imagenes/Modulacion090.png}
+	\centering
+	\caption{Modulación con un índice de $90\%$}
+\end{figure}
+
+\newpage
+
+Variando la frecuencia se puede ver como a $500Hz$ también se pierde la modulación al ser muy baja la frecuencia de la portadora, debiendo así elevar esta frecuencia para poder transmitir el mensaje. Por otro lado superando los 1300Hz se empieza a notar error en la modulación, teniendo así un rango para modular que va entre los $700Hz$ y los $1300Hz$. A continuación se pueden ver las mediciones.
+
+\begin{figure}[h!]
+	\includegraphics[width= 0.8\textwidth]{../1. PLL/Imagenes/ModFrec500.png}
+	\centering
+	\caption{Modulación con $f_c=500Hz$}
+\end{figure}
+
+
+\begin{figure}[h!]
+	\includegraphics[width= 0.8\textwidth]{../1. PLL/Imagenes/ModFrec700.png}
+	\centering
+	\caption{Modulación con $f_c=700Hz$}
+\end{figure}
+
+\begin{figure}[h!]
+	\includegraphics[width= 0.8\textwidth]{../1. PLL/Imagenes/ModFrec1300.png}
+	\centering
+	\caption{Modulación con $f_c=1300Hz$}
+\end{figure}
+
+\begin{figure}[h!]
+	\includegraphics[width= 0.8\textwidth]{../1. PLL/Imagenes/ModFrec1400.png}
+	\centering
+	\caption{Modulación con $f_c=1400Hz$}
+\end{figure}
+
+Cabe destacar que la modulación en FM necesita por lo tanto tener una frecuencia aceptable, un índice de modulación que este entre el $30\%$ y $70\%$, y un valor de tensión de $3V_{pp}$ sin que esta señal llegue a ser negativa. Si no se cumplen estas condiciones el PLL no podrá modular la señal de mensaje o directamente no enganchara la señal de entrada.
+
+\newpage
+
+\subsection{Respuesta al escalón}
+Se ingresó un escalón en frecuencia para poder observar la respuesta transitoria que genera el PLL. Para esto se volvió a usar la opción de \textit{modulation} pero en vez de que la señal de mensaje fuera una sinusoidal se cambio por un pulso. Luego se fue variando el índice de modulación hasta poder obtener una medición fácil de leer esperando una respuesta subamortiguada.
+En la medición tomada (figura \ref{fig:REspEscalon}) se puede observar que la señal tarda 12ms en establecerse la señal, un tiempo muy corto ya que estamos usando un filtro RRC, de haber usado un filtro RC hubieramos visto un tiempo mas prolongado.
+
+\begin{figure}[h!]
+	\includegraphics[width= 0.8\textwidth]{../1. PLL/Imagenes/RespEscalonMedicion.png}
+	\centering
+	\caption{Respuesta al escalón}
+	\label{fig:REspEscalon}
+\end{figure}
+
+\subsection{Multiplicador de frecuencia}
+
+
+
+\subsection{Comparador de fase}
 
 
 \end{document}
