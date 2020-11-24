@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.11.21)  23 NOV 2020 23:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.11.21)  23 NOV 2020 23:35
 entering extended mode
 **./main.tex
 (main.tex
@@ -1353,9 +1353,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
 {C:/Users/Paulo/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}])
-
-Package hyperref Warning: old toc file detected, not used; run LaTeX again.
-
+(main.toc)
 \tf@toc=\write5
 \openout5 = `main.toc'.
 
@@ -1366,44 +1364,27 @@ been already used, duplicate ignored
 l.8 \newpage
              [1] (Ejercicio-1.tex
 
-LaTeX Warning: Reference `fig:Circuito PLL' on page 2 undefined on input line 6
-.
-
-
 LaTeX Warning: File `../1. PLL/Imagenes/Circuito PLL.png' not found on input li
 ne 10.
 
-<../1. PLL/Imagenes/Circuito PLL.png, id=86, 417.81094pt x 285.31593pt>
+<../1. PLL/Imagenes/Circuito PLL.png, id=44, 417.81094pt x 285.31593pt>
 File: ../1. PLL/Imagenes/Circuito PLL.png Graphic file (type png)
 <use ../1. PLL/Imagenes/Circuito PLL.png>
 Package pdftex.def Info: ../1. PLL/Imagenes/Circuito PLL.png  used on input lin
 e 10.
 (pdftex.def)             Requested size: 409.72124pt x 279.80797pt.
 
-LaTeX Warning: Reference `DiagramaBloquePLL' on page 2 undefined on input line 
-17.
-
-
 LaTeX Warning: File `../1. PLL/Imagenes/Diagrama bloque PLL.png' not found on i
 nput line 22.
 
-<../1. PLL/Imagenes/Diagrama bloque PLL.png, id=88, 328.22626pt x 128.27925pt>
+<../1. PLL/Imagenes/Diagrama bloque PLL.png, id=47, 328.22626pt x 128.27925pt>
 File: ../1. PLL/Imagenes/Diagrama bloque PLL.png Graphic file (type png)
 <use ../1. PLL/Imagenes/Diagrama bloque PLL.png>
 Package pdftex.def Info: ../1. PLL/Imagenes/Diagrama bloque PLL.png  used on in
 put line 22.
-(pdftex.def)             Requested size: 512.1496pt x 200.18332pt.
-[2 <../1. PLL/Imagenes/Circuito PLL.png>]
-
-LaTeX Warning: Reference `EqVe' on page 3 undefined on input line 50.
-
-
-LaTeX Warning: Reference `eq:DerPhi' on page 3 undefined on input line 57.
-
-
-LaTeX Warning: Reference `eq:DeltaOmega' on page 3 undefined on input line 71.
-
-[3 <../1. PLL/Imagenes/Diagrama bloque PLL.png>]
+(pdftex.def)             Requested size: 409.72124pt x 160.1314pt.
+[2 <../1. PLL/Imagenes/Circuito PLL.png>] [3 <../1. PLL/Imagenes/Diagrama bloqu
+e PLL.png>]
 
 LaTeX Warning: Reference `eq:VecPico' on page 4 undefined on input line 102.
 
@@ -1411,20 +1392,17 @@ LaTeX Warning: Reference `eq:VecPico' on page 4 undefined on input line 102.
 LaTeX Warning: Reference `eq:Vec' on page 4 undefined on input line 102.
 
 
-LaTeX Warning: Reference `eq:DerPhi' on page 4 undefined on input line 102.
-
-
 LaTeX Warning: File `../1. PLL/Imagenes/Filtro RC.png' not found on input line 
 133.
 
-<../1. PLL/Imagenes/Filtro RC.png, id=115, 116.53537pt x 76.78688pt>
+<../1. PLL/Imagenes/Filtro RC.png, id=77, 116.53537pt x 76.78688pt>
 File: ../1. PLL/Imagenes/Filtro RC.png Graphic file (type png)
 <use ../1. PLL/Imagenes/Filtro RC.png>
 Package pdftex.def Info: ../1. PLL/Imagenes/Filtro RC.png  used on input line 1
 33.
-(pdftex.def)             Requested size: 116.53506pt x 76.78668pt.
+(pdftex.def)             Requested size: 69.92174pt x 46.07246pt.
 
-Overfull \hbox (410.72043pt too wide) in paragraph at lines 133--134
+Overfull \hbox (364.1071pt too wide) in paragraph at lines 133--134
  [][] 
  []
 
@@ -1436,14 +1414,14 @@ LaTeX Warning: Reference `fig:RRC' on page 5 undefined on input line 157.
 LaTeX Warning: File `../1. PLL/Imagenes/Filtro RRC.png' not found on input line
  161.
 
-<../1. PLL/Imagenes/Filtro RRC.png, id=128, 120.75113pt x 74.679pt>
+<../1. PLL/Imagenes/Filtro RRC.png, id=92, 120.75113pt x 74.679pt>
 File: ../1. PLL/Imagenes/Filtro RRC.png Graphic file (type png)
 <use ../1. PLL/Imagenes/Filtro RRC.png>
 Package pdftex.def Info: ../1. PLL/Imagenes/Filtro RRC.png  used on input line 
 161.
-(pdftex.def)             Requested size: 120.75081pt x 74.6788pt.
+(pdftex.def)             Requested size: 72.45122pt x 44.80772pt.
 
-Overfull \hbox (459.10286pt too wide) in paragraph at lines 161--162
+Overfull \hbox (410.80327pt too wide) in paragraph at lines 161--162
  [][] 
  []
 
@@ -1465,7 +1443,7 @@ LaTeX Warning: Reference `fig:KVCO' on page 5 undefined on input line 193.
 
 LaTeX Warning: File `../1. PLL/Imagenes/KVCO.png' not found on input line 197.
 
-<../1. PLL/Imagenes/KVCO.png, id=129, 885.3075pt x 424.58624pt>
+<../1. PLL/Imagenes/KVCO.png, id=93, 885.3075pt x 424.58624pt>
 File: ../1. PLL/Imagenes/KVCO.png Graphic file (type png)
 <use ../1. PLL/Imagenes/KVCO.png>
 Package pdftex.def Info: ../1. PLL/Imagenes/KVCO.png  used on input line 197.
@@ -1475,7 +1453,7 @@ Package pdftex.def Info: ../1. PLL/Imagenes/KVCO.png  used on input line 197.
 LaTeX Warning: File `../1. PLL/Imagenes/CapturaMax.png' not found on input line
  211.
 
-<../1. PLL/Imagenes/CapturaMax.png, id=145, 1023.825pt x 478.78876pt>
+<../1. PLL/Imagenes/CapturaMax.png, id=110, 1023.825pt x 478.78876pt>
 File: ../1. PLL/Imagenes/CapturaMax.png Graphic file (type png)
 <use ../1. PLL/Imagenes/CapturaMax.png>
 Package pdftex.def Info: ../1. PLL/Imagenes/CapturaMax.png  used on input line 
@@ -1485,7 +1463,7 @@ Package pdftex.def Info: ../1. PLL/Imagenes/CapturaMax.png  used on input line
 LaTeX Warning: File `../1. PLL/Imagenes/CapturaMin.png' not found on input line
  218.
 
-<../1. PLL/Imagenes/CapturaMin.png, id=146, 885.3075pt x 424.58624pt>
+<../1. PLL/Imagenes/CapturaMin.png, id=111, 885.3075pt x 424.58624pt>
 File: ../1. PLL/Imagenes/CapturaMin.png Graphic file (type png)
 <use ../1. PLL/Imagenes/CapturaMin.png>
 Package pdftex.def Info: ../1. PLL/Imagenes/CapturaMin.png  used on input line 
@@ -1497,7 +1475,7 @@ Package pdftex.def Info: ../1. PLL/Imagenes/CapturaMin.png  used on input line
 LaTeX Warning: File `../1. PLL/Imagenes/EngancheMax.png' not found on input lin
 e 227.
 
-<../1. PLL/Imagenes/EngancheMax.png, id=155, 1023.825pt x 478.78876pt>
+<../1. PLL/Imagenes/EngancheMax.png, id=121, 1023.825pt x 478.78876pt>
 File: ../1. PLL/Imagenes/EngancheMax.png Graphic file (type png)
 <use ../1. PLL/Imagenes/EngancheMax.png>
 Package pdftex.def Info: ../1. PLL/Imagenes/EngancheMax.png  used on input line
@@ -1518,7 +1496,7 @@ ax.png (PNG copy)>]
 LaTeX Warning: File `../1. PLL/Imagenes/Config Modulacion.png' not found on inp
 ut line 249.
 
-<../1. PLL/Imagenes/Config Modulacion.png, id=162, 353.06906pt x 179.92218pt>
+<../1. PLL/Imagenes/Config Modulacion.png, id=128, 353.06906pt x 179.92218pt>
 File: ../1. PLL/Imagenes/Config Modulacion.png Graphic file (type png)
 <use ../1. PLL/Imagenes/Config Modulacion.png>
 Package pdftex.def Info: ../1. PLL/Imagenes/Config Modulacion.png  used on inpu
@@ -1529,7 +1507,7 @@ t line 249.
 LaTeX Warning: File `../1. PLL/Imagenes/Modulacion030.png' not found on input l
 ine 257.
 
-<../1. PLL/Imagenes/Modulacion030.png, id=170, 1023.825pt x 478.78876pt>
+<../1. PLL/Imagenes/Modulacion030.png, id=137, 1023.825pt x 478.78876pt>
 File: ../1. PLL/Imagenes/Modulacion030.png Graphic file (type png)
 <use ../1. PLL/Imagenes/Modulacion030.png>
 Package pdftex.def Info: ../1. PLL/Imagenes/Modulacion030.png  used on input li
@@ -1539,7 +1517,7 @@ ne 257.
 LaTeX Warning: File `../1. PLL/Imagenes/Modulacion010.png' not found on input l
 ine 268.
 
-<../1. PLL/Imagenes/Modulacion010.png, id=171, 1023.825pt x 478.78876pt>
+<../1. PLL/Imagenes/Modulacion010.png, id=138, 1023.825pt x 478.78876pt>
 File: ../1. PLL/Imagenes/Modulacion010.png Graphic file (type png)
 <use ../1. PLL/Imagenes/Modulacion010.png>
 Package pdftex.def Info: ../1. PLL/Imagenes/Modulacion010.png  used on input li
@@ -1549,7 +1527,7 @@ ne 268.
 LaTeX Warning: File `../1. PLL/Imagenes/Modulacion040.png' not found on input l
 ine 274.
 
-<../1. PLL/Imagenes/Modulacion040.png, id=172, 1023.825pt x 478.78876pt>
+<../1. PLL/Imagenes/Modulacion040.png, id=139, 1023.825pt x 478.78876pt>
 File: ../1. PLL/Imagenes/Modulacion040.png Graphic file (type png)
 <use ../1. PLL/Imagenes/Modulacion040.png>
 Package pdftex.def Info: ../1. PLL/Imagenes/Modulacion040.png  used on input li
@@ -1561,7 +1539,7 @@ cion010.png (PNG copy)>]
 LaTeX Warning: File `../1. PLL/Imagenes/Modulacion080.png' not found on input l
 ine 283.
 
-<../1. PLL/Imagenes/Modulacion080.png, id=179, 1023.825pt x 478.78876pt>
+<../1. PLL/Imagenes/Modulacion080.png, id=146, 1023.825pt x 478.78876pt>
 File: ../1. PLL/Imagenes/Modulacion080.png Graphic file (type png)
 <use ../1. PLL/Imagenes/Modulacion080.png>
 Package pdftex.def Info: ../1. PLL/Imagenes/Modulacion080.png  used on input li
@@ -1571,7 +1549,7 @@ ne 283.
 LaTeX Warning: File `../1. PLL/Imagenes/Modulacion090.png' not found on input l
 ine 289.
 
-<../1. PLL/Imagenes/Modulacion090.png, id=180, 1023.825pt x 478.78876pt>
+<../1. PLL/Imagenes/Modulacion090.png, id=147, 1023.825pt x 478.78876pt>
 File: ../1. PLL/Imagenes/Modulacion090.png Graphic file (type png)
 <use ../1. PLL/Imagenes/Modulacion090.png>
 Package pdftex.def Info: ../1. PLL/Imagenes/Modulacion090.png  used on input li
@@ -1583,7 +1561,7 @@ acion080.png (PNG copy)>]
 LaTeX Warning: File `../1. PLL/Imagenes/ModFrec500.png' not found on input line
  298.
 
-<../1. PLL/Imagenes/ModFrec500.png, id=187, 1023.825pt x 478.78876pt>
+<../1. PLL/Imagenes/ModFrec500.png, id=154, 1023.825pt x 478.78876pt>
 File: ../1. PLL/Imagenes/ModFrec500.png Graphic file (type png)
 <use ../1. PLL/Imagenes/ModFrec500.png>
 Package pdftex.def Info: ../1. PLL/Imagenes/ModFrec500.png  used on input line 
@@ -1593,7 +1571,7 @@ Package pdftex.def Info: ../1. PLL/Imagenes/ModFrec500.png  used on input line
 LaTeX Warning: File `../1. PLL/Imagenes/ModFrec700.png' not found on input line
  305.
 
-<../1. PLL/Imagenes/ModFrec700.png, id=188, 885.3075pt x 424.58624pt>
+<../1. PLL/Imagenes/ModFrec700.png, id=155, 885.3075pt x 424.58624pt>
 File: ../1. PLL/Imagenes/ModFrec700.png Graphic file (type png)
 <use ../1. PLL/Imagenes/ModFrec700.png>
 Package pdftex.def Info: ../1. PLL/Imagenes/ModFrec700.png  used on input line 
@@ -1605,7 +1583,7 @@ ec500.png (PNG copy)>]
 LaTeX Warning: File `../1. PLL/Imagenes/ModFrec1300.png' not found on input lin
 e 311.
 
-<../1. PLL/Imagenes/ModFrec1300.png, id=196, 1023.825pt x 478.78876pt>
+<../1. PLL/Imagenes/ModFrec1300.png, id=163, 1023.825pt x 478.78876pt>
 File: ../1. PLL/Imagenes/ModFrec1300.png Graphic file (type png)
 <use ../1. PLL/Imagenes/ModFrec1300.png>
 Package pdftex.def Info: ../1. PLL/Imagenes/ModFrec1300.png  used on input line
@@ -1615,7 +1593,7 @@ Package pdftex.def Info: ../1. PLL/Imagenes/ModFrec1300.png  used on input line
 LaTeX Warning: File `../1. PLL/Imagenes/ModFrec1400.png' not found on input lin
 e 317.
 
-<../1. PLL/Imagenes/ModFrec1400.png, id=197, 1023.825pt x 478.78876pt>
+<../1. PLL/Imagenes/ModFrec1400.png, id=164, 1023.825pt x 478.78876pt>
 File: ../1. PLL/Imagenes/ModFrec1400.png Graphic file (type png)
 <use ../1. PLL/Imagenes/ModFrec1400.png>
 Package pdftex.def Info: ../1. PLL/Imagenes/ModFrec1400.png  used on input line
@@ -1631,7 +1609,7 @@ LaTeX Warning: Reference `fig:REspEscalon' on page 13 undefined on input line 3
 LaTeX Warning: File `../1. PLL/Imagenes/RespEscalonMedicion.png' not found on i
 nput line 330.
 
-<../1. PLL/Imagenes/RespEscalonMedicion.png, id=205, 885.3075pt x 424.58624pt>
+<../1. PLL/Imagenes/RespEscalonMedicion.png, id=172, 885.3075pt x 424.58624pt>
 File: ../1. PLL/Imagenes/RespEscalonMedicion.png Graphic file (type png)
 <use ../1. PLL/Imagenes/RespEscalonMedicion.png>
 Package pdftex.def Info: ../1. PLL/Imagenes/RespEscalonMedicion.png  used on in
@@ -1643,7 +1621,7 @@ alonMedicion.png (PNG copy)>]
 LaTeX Warning: File `../1. PLL/Imagenes/DIV3f680.png' not found on input line 3
 46.
 
-<../1. PLL/Imagenes/DIV3f680.png, id=212, 885.3075pt x 424.58624pt>
+<../1. PLL/Imagenes/DIV3f680.png, id=180, 885.3075pt x 424.58624pt>
 File: ../1. PLL/Imagenes/DIV3f680.png Graphic file (type png)
 <use ../1. PLL/Imagenes/DIV3f680.png>
 Package pdftex.def Info: ../1. PLL/Imagenes/DIV3f680.png  used on input line 34
@@ -1661,7 +1639,7 @@ LaTeX Warning: Reference `fig:Div3Frec700' on page 14 undefined on input line 3
 LaTeX Warning: File `../1. PLL/Imagenes/DIV3f700.png' not found on input line 3
 56.
 
-<../1. PLL/Imagenes/DIV3f700.png, id=213, 1023.825pt x 478.78876pt>
+<../1. PLL/Imagenes/DIV3f700.png, id=181, 1023.825pt x 478.78876pt>
 File: ../1. PLL/Imagenes/DIV3f700.png Graphic file (type png)
 <use ../1. PLL/Imagenes/DIV3f700.png>
 Package pdftex.def Info: ../1. PLL/Imagenes/DIV3f700.png  used on input line 35
@@ -1673,7 +1651,7 @@ ng (PNG copy)>]
 LaTeX Warning: File `../1. PLL/Imagenes/DIV3f300.png' not found on input line 3
 65.
 
-<../1. PLL/Imagenes/DIV3f300.png, id=221, 885.3075pt x 424.58624pt>
+<../1. PLL/Imagenes/DIV3f300.png, id=190, 885.3075pt x 424.58624pt>
 File: ../1. PLL/Imagenes/DIV3f300.png Graphic file (type png)
 <use ../1. PLL/Imagenes/DIV3f300.png>
 Package pdftex.def Info: ../1. PLL/Imagenes/DIV3f300.png  used on input line 36
@@ -1687,7 +1665,7 @@ LaTeX Warning: Reference `fig:Div8Frec250' on page 15 undefined on input line 3
 LaTeX Warning: File `../1. PLL/Imagenes/DIV8f250.png' not found on input line 3
 74.
 
-<../1. PLL/Imagenes/DIV8f250.png, id=222, 885.3075pt x 424.58624pt>
+<../1. PLL/Imagenes/DIV8f250.png, id=191, 885.3075pt x 424.58624pt>
 File: ../1. PLL/Imagenes/DIV8f250.png Graphic file (type png)
 <use ../1. PLL/Imagenes/DIV8f250.png>
 Package pdftex.def Info: ../1. PLL/Imagenes/DIV8f250.png  used on input line 37
@@ -1695,43 +1673,43 @@ Package pdftex.def Info: ../1. PLL/Imagenes/DIV8f250.png  used on input line 37
 (pdftex.def)             Requested size: 409.72124pt x 196.5041pt.
 ) [15 <../1. PLL/Imagenes/DIV3f300.png (PNG copy)> <../1. PLL/Imagenes/DIV8f250
 .png (PNG copy)>] [16] (Ejercicio-2.tex
-<../2-OscFase/Informe/cir.png, id=233, 452.69125pt x 408.52625pt>
+<../2-OscFase/Informe/cir.png, id=203, 452.69125pt x 408.52625pt>
 File: ../2-OscFase/Informe/cir.png Graphic file (type png)
 <use ../2-OscFase/Informe/cir.png>
 Package pdftex.def Info: ../2-OscFase/Informe/cir.png  used on input line 9.
 (pdftex.def)             Requested size: 271.61684pt x 245.11765pt.
-<../2-OscFase/Informe/realim.png, id=234, 1204.5pt x 468.75125pt>
+<../2-OscFase/Informe/realim.png, id=204, 1204.5pt x 468.75125pt>
 File: ../2-OscFase/Informe/realim.png Graphic file (type png)
 <use ../2-OscFase/Informe/realim.png>
 Package pdftex.def Info: ../2-OscFase/Informe/realim.png  used on input line 18
 .
 (pdftex.def)             Requested size: 240.89574pt x 93.74858pt.
  [17 <../2-OscFase/Informe/cir.png> <../2-OscFase/Informe/realim.png>]
-<../2-OscFase/Informe/oscilacion6k.png, id=246, 525.162pt x 233.673pt>
+<../2-OscFase/Informe/oscilacion6k.png, id=218, 525.162pt x 233.673pt>
 File: ../2-OscFase/Informe/oscilacion6k.png Graphic file (type png)
 <use ../2-OscFase/Informe/oscilacion6k.png>
 Package pdftex.def Info: ../2-OscFase/Informe/oscilacion6k.png  used on input l
 ine 50.
 (pdftex.def)             Requested size: 367.6109pt x 163.56998pt.
-<../2-OscFase/Informe/testab.PNG, id=247, 465.53925pt x 184.2885pt>
+<../2-OscFase/Informe/testab.PNG, id=219, 465.53925pt x 184.2885pt>
 File: ../2-OscFase/Informe/testab.PNG Graphic file (type png)
 <use ../2-OscFase/Informe/testab.PNG>
 Package pdftex.def Info: ../2-OscFase/Informe/testab.PNG  used on input line 61
 .
 (pdftex.def)             Requested size: 325.87524pt x 129.00105pt.
-<../2-OscFase/Informe/oscdefa6k.png, id=248, 525.162pt x 233.673pt>
+<../2-OscFase/Informe/oscdefa6k.png, id=220, 525.162pt x 233.673pt>
 File: ../2-OscFase/Informe/oscdefa6k.png Graphic file (type png)
 <use ../2-OscFase/Informe/oscdefa6k.png>
 Package pdftex.def Info: ../2-OscFase/Informe/oscdefa6k.png  used on input line
  62.
 (pdftex.def)             Requested size: 330.8538pt x 147.21477pt.
-<../2-OscFase/Informe/fftsim.PNG, id=249, 650.43pt x 312.56775pt>
+<../2-OscFase/Informe/fftsim.PNG, id=221, 650.43pt x 312.56775pt>
 File: ../2-OscFase/Informe/fftsim.PNG Graphic file (type png)
 <use ../2-OscFase/Informe/fftsim.PNG>
 Package pdftex.def Info: ../2-OscFase/Informe/fftsim.PNG  used on input line 71
 .
 (pdftex.def)             Requested size: 455.2979pt x 218.79591pt.
-<../2-OscFase/Informe/fft6k.png, id=250, 414.348pt x 337.26pt>
+<../2-OscFase/Informe/fft6k.png, id=222, 414.348pt x 337.26pt>
 File: ../2-OscFase/Informe/fft6k.png Graphic file (type png)
 <use ../2-OscFase/Informe/fft6k.png>
 Package pdftex.def Info: ../2-OscFase/Informe/fft6k.png  used on input line 72.
@@ -1745,9 +1723,15 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 19.
  (main.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 19.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 19.
-Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 06B8D1C28181182ABBB5D9C2B780A1C8;1142.
 
+
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `main.out':
+(rerunfilecheck)             Before: 19C8B6F69D94E996B908DCF600EB3FCE;274
+(rerunfilecheck)             After:  06B8D1C28181182ABBB5D9C2B780A1C8;1142.
 
 LaTeX Warning: There were undefined references.
 
@@ -1757,13 +1741,13 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 19.
  ) 
 Here is how much of TeX's memory you used:
- 35880 strings out of 492970
- 757486 string characters out of 3126593
- 891121 words of memory out of 3000000
- 39199 multiletter control sequences out of 15000+200000
+ 35870 strings out of 492970
+ 757356 string characters out of 3126593
+ 891504 words of memory out of 3000000
+ 39187 multiletter control sequences out of 15000+200000
  542405 words of font info for 62 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 64i,16n,63p,900b,411s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 64i,16n,63p,908b,411s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Users/Paulo/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts
 /cm/cmbx10.pfb><C:/Users/Paulo/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pu
 blic/amsfonts/cm/cmbx12.pfb><C:/Users/Paulo/AppData/Local/Programs/MiKTeX 2.9/f
@@ -1785,9 +1769,9 @@ public/amsfonts/cm/cmr8.pfb><C:/Users/Paulo/AppData/Local/Programs/MiKTeX 2.9/f
 onts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Paulo/AppData/Local/Programs
 /MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/Paulo/AppData/L
 ocal/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on main.pdf (20 pages, 1490959 bytes).
+Output written on main.pdf (20 pages, 1490754 bytes).
 PDF statistics:
- 342 PDF objects out of 1000 (max. 8388607)
+ 316 PDF objects out of 1000 (max. 8388607)
  90 named destinations out of 1000 (max. 500000)
- 291 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 195 words of extra memory for PDF output out of 10000 (max. 10000000)
 

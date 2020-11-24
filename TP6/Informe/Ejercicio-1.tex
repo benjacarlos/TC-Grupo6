@@ -8,20 +8,20 @@ Se preparó el CD4046 con un setup recomendado por la cátedra que se muestra en
 \begin{figure}[H]
 	\centering
 	\includegraphics[width= 0.8\textwidth]{../1. PLL/Imagenes/Circuito PLL.png} 
-	\label{fig:Circuito PLL}
 	\caption{Setup recomendado}
+	\label{fig:Circuito PLL}
 \end{figure}
 
 \subsection{Funcionamiento de un PLL}
 
-Lo que se muestra en la Figura \ref{DiagramaBloquePLL} es un diagrama de bloques de un PLL básico. Se asume que hay una señal de entrada que al ingresar, se la multiplica en un comparador de fase por la salida de un VCO cuya frecuencia, seleccionada en el diseño, es de $f_0$. El producto de la multiplicación es filtrado por un filtro pasa-bajos(LPF) de forma tal que se elimina el ripple y el ruido de alta frecuencia, solo quedando en la salida una tensión proporcional a la diferencia de fase instantánea (la integral de la diferencia de frecuencia) entre las señales multiplicadas. Esta tensión controla la frecuencia del VCO. Si no hay señal en la entrada, no hay voltaje de error a la salida del comparador, por lo que tampoco lo hay a la salida del LPF. En esta situación, el VCO está fijo en su frecuencia central, $f_0$.
+Lo que se muestra en la Figura \ref{fig:DiagramaBloquePLL} es un diagrama de bloques de un PLL básico. Se asume que hay una señal de entrada que al ingresar, se la multiplica en un comparador de fase por la salida de un VCO cuya frecuencia, seleccionada en el diseño, es de $f_0$. El producto de la multiplicación es filtrado por un filtro pasa-bajos(LPF) de forma tal que se elimina el ripple y el ruido de alta frecuencia, solo quedando en la salida una tensión proporcional a la diferencia de fase instantánea (la integral de la diferencia de frecuencia) entre las señales multiplicadas. Esta tensión controla la frecuencia del VCO. Si no hay señal en la entrada, no hay voltaje de error a la salida del comparador, por lo que tampoco lo hay a la salida del LPF. En esta situación, el VCO está fijo en su frecuencia central, $f_0$.
 
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=1\textwidth]{../1. PLL/Imagenes/Diagrama bloque PLL.png}
+	\includegraphics[width=0.8\textwidth]{../1. PLL/Imagenes/Diagrama bloque PLL.png}
 	\caption{Diadrama de bloque de un PLL}
-	\label{DiagramaBloquePLL}
+	\label{fig:DiagramaBloquePLL}
 \end{figure}
 
 La entrada al VCO varía reduciendo la diferencia de frecuencia entre el VCO y la señal de entrada y a su vez es proporcional a esta diferencia, logrando que la frecuencia del VCO tienda a la frecuencia de la señal de entrada, en otras palabras, realiza un seguimiento de la misma. Cuando se llega a esta condición se dice que el sistema está \textit{"amarrado"}.
@@ -73,7 +73,7 @@ Esta última ecuación \ref{eq:DeltaOmega} determina el rango del enganche.
 \subsubsection{Rango de captura}
 El rango de captura es el rango de frecuencias dentro del cual la frecuencia del VCO puede sincronizarse con la
 frecuencia de la señal de entrada, partiendo de una situación de asincronismo. Si se tiene un filtro ideal que filtra solo las componentes de alta frecuencia y no atenúa las componentes de baja frecuencia de la señal, los rangos de captura y enganche coinciden. Cuando el filtro no es ideal y se quiere acotar el rango de enganche, reduciendo el ancho de banda del sistema, es muy probable que se vea restringido el rango de captura. Esto es un problema, ya que se dificulta el enganche fuera de condiciones iniciales. Con un rango de captura reducido, si se perturba el circuito y se produce un desenganche, no necesariamente se alcanzará nuevamente el sincronismo aunque la frecuencia de entrada se encuentre dentro del rango de enganche.
-Si el sistema se encuentra enganchado la transferencia del lazo no se ve afectada por el circuito LPF. Sino que la transfrencia se ve determinada por K, que define el rango del enganche. Sin embargo cuando el sistema no está enganchado, las frecuencias de las señales de entrada del comparador no son las mismas y el VCO se ve controlado por una tensión de error variable, que puede ser atenuada por el LPF. Esto es equivalente a modificar la ganancia del lazo, y es así como se genera la diferencia entre rango de captura y de enganche. Si expresamos la transferencia del LPF como:
+Si el sistema se encuentra enganchado la transferencia del lazo no se ve afectada por el circuito LPF. Sino que la transferencia se ve determinada por K, que define el rango del enganche. Sin embargo cuando el sistema no está enganchado, las frecuencias de las señales de entrada del comparador no son las mismas y el VCO se ve controlado por una tensión de error variable, que puede ser atenuada por el LPF. Esto es equivalente a modificar la ganancia del lazo, y es así como se genera la diferencia entre rango de captura y de enganche. Si expresamos la transferencia del LPF como:
 
 \begin{equation}
 F(j\omega) = F_{\omega}e^{j\psi(\omega)}
@@ -130,7 +130,7 @@ Donde $\tau_p=R1.C$ como se muestra en la siguiente figura:
 
 \begin{figure}[hbtp]
 	\centering
-	\includegraphics[scale=1]{../1. PLL/Imagenes/Filtro RC.png}
+	\includegraphics[scale=0.6]{../1. PLL/Imagenes/Filtro RC.png}
 	\caption{Filtro pasa-bajos RC}
 	\label{fig:FiltroRC}
 \end{figure}
@@ -156,9 +156,9 @@ Los parámetros del sistema sub-amortiguado se obtienen de la transferencia y vi
 
 Por otro lado, para el filtro RRC que se muestra en la figura \ref{fig:RRC} se obtiene una transferencia distinta:
 
-\begin{figure}[hbtp]
+\begin{figure}[H]
 	\centering
-	\includegraphics[scale=1]{../1. PLL/Imagenes/Filtro RRC.png}
+	\includegraphics[scale=0.6]{../1. PLL/Imagenes/Filtro RRC.png}
 	\caption{Filtro pasa-bajos RRC}
 	\label{fig:RRC}
 \end{figure}
