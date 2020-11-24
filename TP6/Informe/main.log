@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.11.21)  23 NOV 2020 17:08
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.11.21)  23 NOV 2020 22:59
 entering extended mode
 **./main.tex
 (main.tex
@@ -1375,7 +1375,7 @@ LaTeX Warning: Reference `fig:Circuito PLL' on page 2 undefined on input line 6
 LaTeX Warning: File `../1. PLL/Imagenes/Circuito PLL.png' not found on input li
 ne 10.
 
-<../1. PLL/Imagenes/Circuito PLL.png, id=79, 417.81094pt x 285.31593pt>
+<../1. PLL/Imagenes/Circuito PLL.png, id=106, 417.81094pt x 285.31593pt>
 File: ../1. PLL/Imagenes/Circuito PLL.png Graphic file (type png)
 <use ../1. PLL/Imagenes/Circuito PLL.png>
 Package pdftex.def Info: ../1. PLL/Imagenes/Circuito PLL.png  used on input lin
@@ -1385,360 +1385,339 @@ e 10.
 LaTeX Warning: File `../1. PLL/Imagenes/Diagrama bloque PLL.png' not found on i
 nput line 22.
 
-<../1. PLL/Imagenes/Diagrama bloque PLL.png, id=82, 328.22626pt x 128.27925pt>
+<../1. PLL/Imagenes/Diagrama bloque PLL.png, id=109, 328.22626pt x 128.27925pt>
+
 File: ../1. PLL/Imagenes/Diagrama bloque PLL.png Graphic file (type png)
 <use ../1. PLL/Imagenes/Diagrama bloque PLL.png>
 Package pdftex.def Info: ../1. PLL/Imagenes/Diagrama bloque PLL.png  used on in
 put line 22.
 (pdftex.def)             Requested size: 512.1496pt x 200.18332pt.
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
 [2 <../1. PLL/Imagenes/Circuito PLL.png>] [3 <../1. PLL/Imagenes/Diagrama bloqu
 e PLL.png>]
 
 LaTeX Warning: File `../1. PLL/Imagenes/Filtro RC.png' not found on input line 
-132.
+133.
 
-<../1. PLL/Imagenes/Filtro RC.png, id=114, 116.53537pt x 76.78688pt>
+<../1. PLL/Imagenes/Filtro RC.png, id=139, 116.53537pt x 76.78688pt>
 File: ../1. PLL/Imagenes/Filtro RC.png Graphic file (type png)
 <use ../1. PLL/Imagenes/Filtro RC.png>
 Package pdftex.def Info: ../1. PLL/Imagenes/Filtro RC.png  used on input line 1
-32.
-(pdftex.def)             Requested size: 69.92174pt x 46.07246pt.
+33.
+(pdftex.def)             Requested size: 116.53506pt x 76.78668pt.
 
-Overfull \hbox (364.1071pt too wide) in paragraph at lines 132--133
+Overfull \hbox (410.72043pt too wide) in paragraph at lines 133--134
  [][] 
  []
 
-[4 <../1. PLL/Imagenes/Filtro RC.png>]
+[4]
 
 LaTeX Warning: File `../1. PLL/Imagenes/Filtro RRC.png' not found on input line
- 160.
+ 161.
 
-<../1. PLL/Imagenes/Filtro RRC.png, id=131, 120.75113pt x 74.679pt>
+<../1. PLL/Imagenes/Filtro RRC.png, id=153, 120.75113pt x 74.679pt>
 File: ../1. PLL/Imagenes/Filtro RRC.png Graphic file (type png)
 <use ../1. PLL/Imagenes/Filtro RRC.png>
 Package pdftex.def Info: ../1. PLL/Imagenes/Filtro RRC.png  used on input line 
-160.
-(pdftex.def)             Requested size: 72.45122pt x 44.80772pt.
+161.
+(pdftex.def)             Requested size: 120.75081pt x 74.6788pt.
 
-Overfull \hbox (410.80327pt too wide) in paragraph at lines 160--161
+Overfull \hbox (459.10286pt too wide) in paragraph at lines 161--162
  [][] 
  []
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 191.
+(hyperref)                removing `math shift' on input line 192.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 191.
+(hyperref)                removing `subscript' on input line 192.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 191.
+(hyperref)                removing `math shift' on input line 192.
 
 
-LaTeX Warning: Reference `fig:KVCO' on page 5 undefined on input line 192.
+LaTeX Warning: File `../1. PLL/Imagenes/KVCO.png' not found on input line 197.
 
-
-LaTeX Warning: File `../1. PLL/Imagenes/KVCO.png' not found on input line 196.
-
-<../1. PLL/Imagenes/KVCO.png, id=132, 885.3075pt x 424.58624pt>
+<../1. PLL/Imagenes/KVCO.png, id=155, 885.3075pt x 424.58624pt>
 File: ../1. PLL/Imagenes/KVCO.png Graphic file (type png)
 <use ../1. PLL/Imagenes/KVCO.png>
-Package pdftex.def Info: ../1. PLL/Imagenes/KVCO.png  used on input line 196.
+Package pdftex.def Info: ../1. PLL/Imagenes/KVCO.png  used on input line 197.
 (pdftex.def)             Requested size: 409.72124pt x 196.5041pt.
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[5 <../1. PLL/Imagenes/Filtro RRC.png>]
+[5 <../1. PLL/Imagenes/Filtro RC.png> <../1. PLL/Imagenes/Filtro RRC.png>]
+[6 <../1. PLL/Imagenes/KVCO.png (PNG copy)>]
 
 LaTeX Warning: File `../1. PLL/Imagenes/CapturaMax.png' not found on input line
- 211.
+ 212.
 
-<../1. PLL/Imagenes/CapturaMax.png, id=145, 1023.825pt x 478.78876pt>
+<../1. PLL/Imagenes/CapturaMax.png, id=177, 1023.825pt x 478.78876pt>
 File: ../1. PLL/Imagenes/CapturaMax.png Graphic file (type png)
 <use ../1. PLL/Imagenes/CapturaMax.png>
 Package pdftex.def Info: ../1. PLL/Imagenes/CapturaMax.png  used on input line 
-211.
+212.
 (pdftex.def)             Requested size: 409.72124pt x 191.59978pt.
 
 LaTeX Warning: File `../1. PLL/Imagenes/CapturaMin.png' not found on input line
- 218.
+ 219.
 
-<../1. PLL/Imagenes/CapturaMin.png, id=146, 885.3075pt x 424.58624pt>
+<../1. PLL/Imagenes/CapturaMin.png, id=178, 885.3075pt x 424.58624pt>
 File: ../1. PLL/Imagenes/CapturaMin.png Graphic file (type png)
 <use ../1. PLL/Imagenes/CapturaMin.png>
 Package pdftex.def Info: ../1. PLL/Imagenes/CapturaMin.png  used on input line 
-218.
+219.
 (pdftex.def)             Requested size: 409.72124pt x 196.5041pt.
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
 LaTeX Warning: File `../1. PLL/Imagenes/EngancheMax.png' not found on input lin
-e 227.
+e 228.
 
-<../1. PLL/Imagenes/EngancheMax.png, id=147, 1023.825pt x 478.78876pt>
+<../1. PLL/Imagenes/EngancheMax.png, id=179, 1023.825pt x 478.78876pt>
 File: ../1. PLL/Imagenes/EngancheMax.png Graphic file (type png)
 <use ../1. PLL/Imagenes/EngancheMax.png>
 Package pdftex.def Info: ../1. PLL/Imagenes/EngancheMax.png  used on input line
- 227.
+ 228.
 (pdftex.def)             Requested size: 409.72124pt x 191.59978pt.
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
+[7 <../1. PLL/Imagenes/CapturaMax.png (PNG copy)> <../1. PLL/Imagenes/CapturaMi
+n.png (PNG copy)>]
 
 LaTeX Warning: File `../1. PLL/Imagenes/CapturaMin.png' not found on input line
- 234.
+ 235.
 
 File: ../1. PLL/Imagenes/CapturaMin.png Graphic file (type png)
 <use ../1. PLL/Imagenes/CapturaMin.png>
 Package pdftex.def Info: ../1. PLL/Imagenes/CapturaMin.png  used on input line 
-234.
+235.
 (pdftex.def)             Requested size: 409.72124pt x 196.5041pt.
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[6 <../1. PLL/Imagenes/KVCO.png (PNG copy)> <../1. PLL/Imagenes/CapturaMax.png 
-(PNG copy)>]
-
 LaTeX Warning: File `../1. PLL/Imagenes/Config Modulacion.png' not found on inp
-ut line 249.
+ut line 250.
 
-<../1. PLL/Imagenes/Config Modulacion.png, id=156, 353.06906pt x 179.92218pt>
+<../1. PLL/Imagenes/Config Modulacion.png, id=187, 353.06906pt x 179.92218pt>
 File: ../1. PLL/Imagenes/Config Modulacion.png Graphic file (type png)
 <use ../1. PLL/Imagenes/Config Modulacion.png>
 Package pdftex.def Info: ../1. PLL/Imagenes/Config Modulacion.png  used on inpu
-t line 249.
+t line 250.
 (pdftex.def)             Requested size: 409.72124pt x 208.79497pt.
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
+[8 <../1. PLL/Imagenes/EngancheMax.png (PNG copy)>]
 
 LaTeX Warning: File `../1. PLL/Imagenes/Modulacion030.png' not found on input l
-ine 257.
+ine 258.
 
-<../1. PLL/Imagenes/Modulacion030.png, id=157, 1023.825pt x 478.78876pt>
+<../1. PLL/Imagenes/Modulacion030.png, id=194, 1023.825pt x 478.78876pt>
 File: ../1. PLL/Imagenes/Modulacion030.png Graphic file (type png)
 <use ../1. PLL/Imagenes/Modulacion030.png>
 Package pdftex.def Info: ../1. PLL/Imagenes/Modulacion030.png  used on input li
-ne 257.
+ne 258.
 (pdftex.def)             Requested size: 409.72124pt x 191.59978pt.
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
 LaTeX Warning: File `../1. PLL/Imagenes/Modulacion010.png' not found on input l
-ine 268.
+ine 269.
 
-<../1. PLL/Imagenes/Modulacion010.png, id=158, 1023.825pt x 478.78876pt>
+<../1. PLL/Imagenes/Modulacion010.png, id=195, 1023.825pt x 478.78876pt>
 File: ../1. PLL/Imagenes/Modulacion010.png Graphic file (type png)
 <use ../1. PLL/Imagenes/Modulacion010.png>
 Package pdftex.def Info: ../1. PLL/Imagenes/Modulacion010.png  used on input li
-ne 268.
+ne 269.
 (pdftex.def)             Requested size: 409.72124pt x 191.59978pt.
-[7 <../1. PLL/Imagenes/CapturaMin.png (PNG copy)> <../1. PLL/Imagenes/EngancheM
-ax.png (PNG copy)>]
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
+[9 <../1. PLL/Imagenes/Config Modulacion.png> <../1. PLL/Imagenes/Modulacion030
+.png (PNG copy)>]
 
 LaTeX Warning: File `../1. PLL/Imagenes/Modulacion040.png' not found on input l
-ine 274.
+ine 275.
 
-<../1. PLL/Imagenes/Modulacion040.png, id=166, 1023.825pt x 478.78876pt>
+<../1. PLL/Imagenes/Modulacion040.png, id=203, 1023.825pt x 478.78876pt>
 File: ../1. PLL/Imagenes/Modulacion040.png Graphic file (type png)
 <use ../1. PLL/Imagenes/Modulacion040.png>
 Package pdftex.def Info: ../1. PLL/Imagenes/Modulacion040.png  used on input li
-ne 274.
+ne 275.
 (pdftex.def)             Requested size: 409.72124pt x 191.59978pt.
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
 LaTeX Warning: File `../1. PLL/Imagenes/Modulacion080.png' not found on input l
-ine 283.
+ine 284.
 
-<../1. PLL/Imagenes/Modulacion080.png, id=167, 1023.825pt x 478.78876pt>
+<../1. PLL/Imagenes/Modulacion080.png, id=204, 1023.825pt x 478.78876pt>
 File: ../1. PLL/Imagenes/Modulacion080.png Graphic file (type png)
 <use ../1. PLL/Imagenes/Modulacion080.png>
 Package pdftex.def Info: ../1. PLL/Imagenes/Modulacion080.png  used on input li
-ne 283.
+ne 284.
 (pdftex.def)             Requested size: 409.72124pt x 191.59978pt.
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
+[10 <../1. PLL/Imagenes/Modulacion010.png (PNG copy)> <../1. PLL/Imagenes/Modul
+acion040.png (PNG copy)>]
 
 LaTeX Warning: File `../1. PLL/Imagenes/Modulacion090.png' not found on input l
-ine 289.
+ine 290.
 
-<../1. PLL/Imagenes/Modulacion090.png, id=168, 1023.825pt x 478.78876pt>
+<../1. PLL/Imagenes/Modulacion090.png, id=211, 1023.825pt x 478.78876pt>
 File: ../1. PLL/Imagenes/Modulacion090.png Graphic file (type png)
 <use ../1. PLL/Imagenes/Modulacion090.png>
 Package pdftex.def Info: ../1. PLL/Imagenes/Modulacion090.png  used on input li
-ne 289.
+ne 290.
 (pdftex.def)             Requested size: 409.72124pt x 191.59978pt.
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[8 <../1. PLL/Imagenes/Config Modulacion.png>]
 
 LaTeX Warning: File `../1. PLL/Imagenes/ModFrec500.png' not found on input line
  299.
 
-<../1. PLL/Imagenes/ModFrec500.png, id=176, 1023.825pt x 478.78876pt>
+<../1. PLL/Imagenes/ModFrec500.png, id=212, 1023.825pt x 478.78876pt>
 File: ../1. PLL/Imagenes/ModFrec500.png Graphic file (type png)
 <use ../1. PLL/Imagenes/ModFrec500.png>
 Package pdftex.def Info: ../1. PLL/Imagenes/ModFrec500.png  used on input line 
 299.
 (pdftex.def)             Requested size: 409.72124pt x 191.59978pt.
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
+[11 <../1. PLL/Imagenes/Modulacion080.png (PNG copy)> <../1. PLL/Imagenes/Modul
+acion090.png (PNG copy)>]
 
 LaTeX Warning: File `../1. PLL/Imagenes/ModFrec700.png' not found on input line
  306.
 
-<../1. PLL/Imagenes/ModFrec700.png, id=177, 885.3075pt x 424.58624pt>
+<../1. PLL/Imagenes/ModFrec700.png, id=219, 885.3075pt x 424.58624pt>
 File: ../1. PLL/Imagenes/ModFrec700.png Graphic file (type png)
 <use ../1. PLL/Imagenes/ModFrec700.png>
 Package pdftex.def Info: ../1. PLL/Imagenes/ModFrec700.png  used on input line 
 306.
 (pdftex.def)             Requested size: 409.72124pt x 196.5041pt.
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
 LaTeX Warning: File `../1. PLL/Imagenes/ModFrec1300.png' not found on input lin
 e 312.
 
-<../1. PLL/Imagenes/ModFrec1300.png, id=178, 1023.825pt x 478.78876pt>
+<../1. PLL/Imagenes/ModFrec1300.png, id=220, 1023.825pt x 478.78876pt>
 File: ../1. PLL/Imagenes/ModFrec1300.png Graphic file (type png)
 <use ../1. PLL/Imagenes/ModFrec1300.png>
 Package pdftex.def Info: ../1. PLL/Imagenes/ModFrec1300.png  used on input line
  312.
 (pdftex.def)             Requested size: 409.72124pt x 191.59978pt.
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
+[12 <../1. PLL/Imagenes/ModFrec500.png (PNG copy)> <../1. PLL/Imagenes/ModFrec7
+00.png (PNG copy)>]
 
 LaTeX Warning: File `../1. PLL/Imagenes/ModFrec1400.png' not found on input lin
 e 318.
 
-<../1. PLL/Imagenes/ModFrec1400.png, id=179, 1023.825pt x 478.78876pt>
+<../1. PLL/Imagenes/ModFrec1400.png, id=229, 1023.825pt x 478.78876pt>
 File: ../1. PLL/Imagenes/ModFrec1400.png Graphic file (type png)
 <use ../1. PLL/Imagenes/ModFrec1400.png>
 Package pdftex.def Info: ../1. PLL/Imagenes/ModFrec1400.png  used on input line
  318.
 (pdftex.def)             Requested size: 409.72124pt x 191.59978pt.
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[9 <../1. PLL/Imagenes/Modulacion030.png (PNG copy)> <../1. PLL/Imagenes/Modula
-cion010.png (PNG copy)>]
-
-LaTeX Warning: Reference `fig:REspEscalon' on page 10 undefined on input line 3
-29.
-
-
 LaTeX Warning: File `../1. PLL/Imagenes/RespEscalonMedicion.png' not found on i
-nput line 332.
+nput line 331.
 
-<../1. PLL/Imagenes/RespEscalonMedicion.png, id=186, 885.3075pt x 424.58624pt>
+<../1. PLL/Imagenes/RespEscalonMedicion.png, id=231, 885.3075pt x 424.58624pt>
 File: ../1. PLL/Imagenes/RespEscalonMedicion.png Graphic file (type png)
 <use ../1. PLL/Imagenes/RespEscalonMedicion.png>
 Package pdftex.def Info: ../1. PLL/Imagenes/RespEscalonMedicion.png  used on in
-put line 332.
+put line 331.
+(pdftex.def)             Requested size: 409.72124pt x 196.5041pt.
+[13 <../1. PLL/Imagenes/ModFrec1300.png (PNG copy)> <../1. PLL/Imagenes/ModFrec
+1400.png (PNG copy)>]
+
+LaTeX Warning: File `../1. PLL/Imagenes/DIV3f680.png' not found on input line 3
+47.
+
+<../1. PLL/Imagenes/DIV3f680.png, id=239, 885.3075pt x 424.58624pt>
+File: ../1. PLL/Imagenes/DIV3f680.png Graphic file (type png)
+<use ../1. PLL/Imagenes/DIV3f680.png>
+Package pdftex.def Info: ../1. PLL/Imagenes/DIV3f680.png  used on input line 34
+7.
+(pdftex.def)             Requested size: 409.72124pt x 196.5041pt.
+[14 <../1. PLL/Imagenes/RespEscalonMedicion.png (PNG copy)> <../1. PLL/Imagenes
+/DIV3f680.png (PNG copy)>]
+
+LaTeX Warning: File `../1. PLL/Imagenes/DIV3f700.png' not found on input line 3
+57.
+
+<../1. PLL/Imagenes/DIV3f700.png, id=248, 1023.825pt x 478.78876pt>
+File: ../1. PLL/Imagenes/DIV3f700.png Graphic file (type png)
+<use ../1. PLL/Imagenes/DIV3f700.png>
+Package pdftex.def Info: ../1. PLL/Imagenes/DIV3f700.png  used on input line 35
+7.
+(pdftex.def)             Requested size: 409.72124pt x 191.59978pt.
+
+LaTeX Warning: File `../1. PLL/Imagenes/DIV3f300.png' not found on input line 3
+66.
+
+<../1. PLL/Imagenes/DIV3f300.png, id=249, 885.3075pt x 424.58624pt>
+File: ../1. PLL/Imagenes/DIV3f300.png Graphic file (type png)
+<use ../1. PLL/Imagenes/DIV3f300.png>
+Package pdftex.def Info: ../1. PLL/Imagenes/DIV3f300.png  used on input line 36
+6.
 (pdftex.def)             Requested size: 409.72124pt x 196.5041pt.
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+LaTeX Warning: File `../1. PLL/Imagenes/DIV8f250.png' not found on input line 3
+75.
 
-) [10 <../1. PLL/Imagenes/Modulacion040.png (PNG copy)> <../1. PLL/Imagenes/Mod
-ulacion080.png (PNG copy)>] (Ejercicio-2.tex
-<../2-OscFase/Informe/cir.png, id=194, 452.69125pt x 408.52625pt>
+<../1. PLL/Imagenes/DIV8f250.png, id=251, 885.3075pt x 424.58624pt>
+File: ../1. PLL/Imagenes/DIV8f250.png Graphic file (type png)
+<use ../1. PLL/Imagenes/DIV8f250.png>
+Package pdftex.def Info: ../1. PLL/Imagenes/DIV8f250.png  used on input line 37
+5.
+(pdftex.def)             Requested size: 409.72124pt x 196.5041pt.
+[15 <../1. PLL/Imagenes/DIV3f700.png (PNG copy)> <../1. PLL/Imagenes/DIV3f300.p
+ng (PNG copy)>]) [16 <../1. PLL/Imagenes/DIV8f250.png (PNG copy)>]
+(Ejercicio-2.tex
+<../2-OscFase/Informe/cir.png, id=263, 452.69125pt x 408.52625pt>
 File: ../2-OscFase/Informe/cir.png Graphic file (type png)
 <use ../2-OscFase/Informe/cir.png>
 Package pdftex.def Info: ../2-OscFase/Informe/cir.png  used on input line 9.
 (pdftex.def)             Requested size: 271.61684pt x 245.11765pt.
- [11 <../1. PLL/Imagenes/Modulacion090.png (PNG copy)> <../1. PLL/Imagenes/ModF
-rec500.png (PNG copy)>]
-Overfull \vbox (52.40259pt too high) has occurred while \output is active []
-
-
-[12 <../1. PLL/Imagenes/ModFrec700.png (PNG copy)> <../1. PLL/Imagenes/ModFrec1
-300.png (PNG copy)> <../2-OscFase/Informe/cir.png>]
-<../2-OscFase/Informe/realim.png, id=211, 1204.5pt x 468.75125pt>
+<../2-OscFase/Informe/realim.png, id=264, 1204.5pt x 468.75125pt>
 File: ../2-OscFase/Informe/realim.png Graphic file (type png)
 <use ../2-OscFase/Informe/realim.png>
 Package pdftex.def Info: ../2-OscFase/Informe/realim.png  used on input line 18
 .
 (pdftex.def)             Requested size: 240.89574pt x 93.74858pt.
- [13 <../1. PLL/Imagenes/ModFrec1400.png (PNG copy)> <../1. PLL/Imagenes/RespEs
-calonMedicion.png (PNG copy)> <../2-OscFase/Informe/realim.png>]
-<../2-OscFase/Informe/oscilacion6k.png, id=220, 525.162pt x 233.673pt>
+ [17 <../2-OscFase/Informe/cir.png> <../2-OscFase/Informe/realim.png>]
+<../2-OscFase/Informe/oscilacion6k.png, id=276, 525.162pt x 233.673pt>
 File: ../2-OscFase/Informe/oscilacion6k.png Graphic file (type png)
 <use ../2-OscFase/Informe/oscilacion6k.png>
 Package pdftex.def Info: ../2-OscFase/Informe/oscilacion6k.png  used on input l
 ine 50.
 (pdftex.def)             Requested size: 367.6109pt x 163.56998pt.
-<../2-OscFase/Informe/testab.PNG, id=221, 465.53925pt x 184.2885pt>
+<../2-OscFase/Informe/testab.PNG, id=277, 465.53925pt x 184.2885pt>
 File: ../2-OscFase/Informe/testab.PNG Graphic file (type png)
 <use ../2-OscFase/Informe/testab.PNG>
 Package pdftex.def Info: ../2-OscFase/Informe/testab.PNG  used on input line 61
 .
 (pdftex.def)             Requested size: 325.87524pt x 129.00105pt.
-<../2-OscFase/Informe/oscdefa6k.png, id=222, 525.162pt x 233.673pt>
+<../2-OscFase/Informe/oscdefa6k.png, id=278, 525.162pt x 233.673pt>
 File: ../2-OscFase/Informe/oscdefa6k.png Graphic file (type png)
 <use ../2-OscFase/Informe/oscdefa6k.png>
 Package pdftex.def Info: ../2-OscFase/Informe/oscdefa6k.png  used on input line
  62.
 (pdftex.def)             Requested size: 330.8538pt x 147.21477pt.
- [14 <../2-OscFase/Informe/oscilacion6k.png (PNG copy)>]
-<../2-OscFase/Informe/fftsim.PNG, id=231, 650.43pt x 312.56775pt>
+<../2-OscFase/Informe/fftsim.PNG, id=279, 650.43pt x 312.56775pt>
 File: ../2-OscFase/Informe/fftsim.PNG Graphic file (type png)
 <use ../2-OscFase/Informe/fftsim.PNG>
 Package pdftex.def Info: ../2-OscFase/Informe/fftsim.PNG  used on input line 71
 .
 (pdftex.def)             Requested size: 455.2979pt x 218.79591pt.
-<../2-OscFase/Informe/fft6k.png, id=232, 414.348pt x 337.26pt>
+<../2-OscFase/Informe/fft6k.png, id=280, 414.348pt x 337.26pt>
 File: ../2-OscFase/Informe/fft6k.png Graphic file (type png)
 <use ../2-OscFase/Informe/fft6k.png>
 Package pdftex.def Info: ../2-OscFase/Informe/fft6k.png  used on input line 72.
 
 (pdftex.def)             Requested size: 331.47885pt x 269.80836pt.
- [15 <../2-OscFase/Informe/testab.PNG> <../2-OscFase/Informe/oscdefa6k.png (PNG
- copy)>]) [16 <../2-OscFase/Informe/fftsim.PNG> <../2-OscFase/Informe/fft6k.png
- (PNG copy)>]
+ [18 <../2-OscFase/Informe/oscilacion6k.png (PNG copy)> <../2-OscFase/Informe/t
+estab.PNG> <../2-OscFase/Informe/oscdefa6k.png (PNG copy)>]) [19 <../2-OscFase/
+Informe/fftsim.PNG> <../2-OscFase/Informe/fft6k.png (PNG copy)>]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 19.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 19.
- (main.aux)
+
+(main.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 19.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 19.
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: 06B8D1C28181182ABBB5D9C2B780A1C8;1142.
 
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: 581C83BCC776D842CBAC7395E430CED0;798
-(rerunfilecheck)             After:  2A0BA5242227677853F36AB1E077F4A8;942.
 
 LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 19.
  ) 
 Here is how much of TeX's memory you used:
- 35846 strings out of 492970
- 756659 string characters out of 3126593
- 891503 words of memory out of 3000000
- 39174 multiletter control sequences out of 15000+200000
+ 35882 strings out of 492970
+ 757549 string characters out of 3126593
+ 893152 words of memory out of 3000000
+ 39199 multiletter control sequences out of 15000+200000
  542405 words of font info for 62 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  64i,16n,63p,900b,411s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1763,9 +1742,9 @@ public/amsfonts/cm/cmr8.pfb><C:/Users/Paulo/AppData/Local/Programs/MiKTeX 2.9/f
 onts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Paulo/AppData/Local/Programs
 /MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/Paulo/AppData/L
 ocal/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on main.pdf (17 pages, 1342890 bytes).
+Output written on main.pdf (20 pages, 1498581 bytes).
 PDF statistics:
- 321 PDF objects out of 1000 (max. 8388607)
- 79 named destinations out of 1000 (max. 500000)
- 231 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 372 PDF objects out of 1000 (max. 8388607)
+ 90 named destinations out of 1000 (max. 500000)
+ 291 words of extra memory for PDF output out of 10000 (max. 10000000)
 

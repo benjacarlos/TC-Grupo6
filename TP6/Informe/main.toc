@@ -2,13 +2,16 @@
 \contentsline {section}{\numberline {1}PLL: Phase Locked Loop}{2}{section.1}
 \contentsline {subsection}{\numberline {1.1}Introducci\IeC {\'o}n}{2}{subsection.1.1}
 \contentsline {subsection}{\numberline {1.2}Funcionamiento de un PLL}{2}{subsection.1.2}
-\contentsline {subsubsection}{\numberline {1.2.1}Rango de enganche y rango de captura}{2}{subsubsection.1.2.1}
-\contentsline {subsubsection}{\numberline {1.2.2}Filtros}{4}{subsubsection.1.2.2}
+\contentsline {subsubsection}{\numberline {1.2.1}Rango de enganche}{3}{subsubsection.1.2.1}
+\contentsline {subsubsection}{\numberline {1.2.2}Rango de captura}{4}{subsubsection.1.2.2}
+\contentsline {subsubsection}{\numberline {1.2.3}Filtros}{4}{subsubsection.1.2.3}
 \contentsline {subsection}{\numberline {1.3}Medici\IeC {\'o}n de $K_{VCO}$}{5}{subsection.1.3}
-\contentsline {subsection}{\numberline {1.4}Medici\IeC {\'o}n de rango de enganche y captura}{6}{subsection.1.4}
-\contentsline {subsection}{\numberline {1.5}Demodulaci\IeC {\'o}n en FM}{7}{subsection.1.5}
-\contentsline {subsection}{\numberline {1.6}Respuesta al escal\IeC {\'o}n}{10}{subsection.1.6}
-\contentsline {section}{\numberline {2}Oscilador de desplazamiento de Fase}{11}{section.2}
-\contentsline {subsection}{\numberline {2.1}Introducci\IeC {\'o}n}{11}{subsection.2.1}
-\contentsline {subsection}{\numberline {2.2}An\IeC {\'a}lisis Experimental}{14}{subsection.2.2}
-\contentsline {subsection}{\numberline {2.3}Conclusi\IeC {\'o}n}{16}{subsection.2.3}
+\contentsline {subsection}{\numberline {1.4}Medici\IeC {\'o}n de rango de enganche y captura}{7}{subsection.1.4}
+\contentsline {subsection}{\numberline {1.5}Demodulaci\IeC {\'o}n en FM}{8}{subsection.1.5}
+\contentsline {subsection}{\numberline {1.6}Respuesta al escal\IeC {\'o}n}{13}{subsection.1.6}
+\contentsline {subsection}{\numberline {1.7}Multiplicador de frecuencia}{14}{subsection.1.7}
+\contentsline {subsection}{\numberline {1.8}Conclusi\IeC {\'o}n}{16}{subsection.1.8}
+\contentsline {section}{\numberline {2}Oscilador de desplazamiento de Fase}{17}{section.2}
+\contentsline {subsection}{\numberline {2.1}Introducci\IeC {\'o}n}{17}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.2}An\IeC {\'a}lisis Experimental}{18}{subsection.2.2}
+\contentsline {subsection}{\numberline {2.3}Conclusi\IeC {\'o}n}{19}{subsection.2.3}
